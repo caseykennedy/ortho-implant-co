@@ -45,19 +45,18 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       <S.Headroom style={{ zIndex: 999 }}>
         <S.Header as="header">
           <Link to="/" aria-label="Cahuilla, back to home">
-            <S.Symbol as="span">
+            {/* <S.Symbol as="span">
               <ImgMatch src="logo@4x.png" altText="Cahuilla Band of Indians" />
-            </S.Symbol>
+            </S.Symbol> */}
             <S.Logo>
-              <Box>CAHUILLA</Box>
-              <span>band of indians</span>
+              <Box>OIC</Box>
             </S.Logo>
           </Link>
           <Flex alignItems="center">
             <Navigation />
-            <S.Toggle onClick={toggleModal} aria-label="toggle menu">
+            {/* <S.Toggle onClick={toggleModal} aria-label="toggle menu">
               <Icon name="hamburger" color="black" />
-            </S.Toggle>
+            </S.Toggle> */}
           </Flex>
         </S.Header>
       </S.Headroom>

@@ -7,8 +7,6 @@ import React from 'react'
 import { Text, Heading, Box, Flex } from '../../../elements'
 import HeadingStroked from '../../../elements/HeadingStroked'
 
-import MountainFlat from '../../MountainFlat'
-
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
@@ -21,9 +19,6 @@ const Staff: React.FC<DepartmentShape> = ({ pageContext }) => {
 
   return (
     <S.Sidebar as="aside" width={[1, 1 / 3]}>
-      <Box className="decorator">
-        <MountainFlat />
-      </Box>
       <S.Inner>
         <Box mb={8} color="background">
           <HeadingStroked

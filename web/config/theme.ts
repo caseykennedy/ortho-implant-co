@@ -77,17 +77,12 @@ const theme: ThemeShape = {
 
   colors: {
     text: '#000000',
-    background: '#F6F4EE',
+    background: '#ffffff',
     
-    primary: '#CF9336',
-    secondary: '#3B745F',
-    tertiary: '#E19898',
-    quaternary: '#863640',
-
-    goldenrod: '#CF9336',
-    royaldank: '#3B745F',
-    pinkpuffer: '#E19898',
-    bloodshot: '#863640',
+    primary: '#FFC907',
+    secondary: '#000000',
+    tertiary: '#9D9FA2',
+    quaternary: '#C4C4c4',
 
     black: '#000000',
     white: '#ffffff',
