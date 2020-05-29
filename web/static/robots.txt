@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://core37.agency/sitemap.xml

@@ -1,0 +1,131 @@
+{
+  "name": "ortho-implant-co-marketing-website",
+  "private": true,
+  "description": "Gatsby TypeScript Starter with Styled System",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "cleancache": "gatsby clean",
+    "develop": "gatsby develop",
+    "dev": "gatsby develop -o",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "ssr": "gatsby build && gatsby serve",
+    "lint": "tslint -t stylish -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json -t stylish --fix",
+    "format": "prettier --write content/**/*.yaml",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:ci": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
+    "precommit": "lint-staged",
+    "server:open": "start-server-and-test develop http://localhost:8000 cy:open",
+    "server:run": "start-server-and-test develop http://localhost:8000 cy:run",
+    "server:ci": "start-server-and-test develop http://localhost:8000 cy:run:ci",
+    "test:compile": "tsc --project cypress/tsconfig.json",
+    "test:compile:watch": "tsc --watch --project cypress/tsconfig.json",
+    "test": "cross-env CYPRESS_SUPPORT=y npm-run-all -s test:compile server:run",
+    "test:watch": "cross-env CYPRESS_SUPPORT=y npm-run-all -p test:compile:watch server:open",
+    "test:ci": "cross-env CYPRESS_SUPPORT=y npm-run-all -s test:compile server:ci"
+  },
+  "dependencies": {
+    "@react-spring/parallax": "^9.0.0-canary.808.8.4a87fcb",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@types/auth0-js": "^9.12.4",
+    "@types/google-map-react": "^1.1.7",
+    "@types/lodash": "^4.14.149",
+    "@types/react-headroom": "^2.2.1",
+    "@types/react-slick": "^0.23.4",
+    "@types/react-youtube": "^7.6.2",
+    "@types/rebass": "^3.0.4",
+    "auth0-js": "^9.13.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.20.7",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-create-client-paths": "^2.2.1",
+    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-netlify": "^2.2.1",
+    "gatsby-plugin-nprogress": "^2.2.1",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-plugin-typescript": "^2.3.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-source-instagram": "^0.4.0",
+    "gatsby-source-sanity": "^5.0.6",
+    "gatsby-transformer-sharp": "^2.4.2",
+    "gatsby-transformer-yaml": "^2.3.1",
+    "google-map-react": "^1.1.7",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "polished": "^3.5.1",
+    "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-dom": "^16.13.1",
+    "react-headroom": "^3.0.0",
+    "react-helmet": "^5.2.1",
+    "react-moment": "^0.9.7",
+    "react-slick": "^0.25.2",
+    "react-spring": "^8.0.27",
+    "rebass": "^3.2.2",
+    "slick-carousel": "^1.8.1",
+    "styled-breakpoints": "^6.11.0",
+    "styled-components": "^4.4.1",
+    "styled-css-grid": "^1.2.1",
+    "styled-system": "^4.2.4",
+    "typeface-work-sans": "^0.0.72",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.17",
+    "@types/react": "^16.9.26",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-helmet": "^5.0.15",
+    "@types/styled-components": "^4.4.3",
+    "@types/styled-system": "^4.2.2",
+    "cross-env": "^5.2.1",
+    "cypress": "^3.8.3",
+    "cypress-testing-library": "^2.6.0",
+    "gatsby-cypress": "^0.1.9",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "start-server-and-test": "^1.10.11",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-cypress": "^1.0.4",
+    "tslint-plugin-prettier": "^2.3.0",
+    "tslint-react": "^4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caseykennedy/meno"
+  },
+  "bugs": {
+    "url": "https://github.com/caseykennedy/meco/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.yaml": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "xo --fix",
+      "git add"
+    ]
+  }
+}
