@@ -6,42 +6,80 @@ import { css } from 'styled-components'
 import theme from '../../config/theme'
 import { darken } from 'polished'
 
-// Aeonik Regular
-import MediaSansRegularEot from './fonts/MediaSans-Regular.eot'
-import MediaSansRegularWoff2 from './fonts/MediaSans-Regular.woff2'
-import MediaSansRegularWoff from './fonts/MediaSans-Regular.woff'
-import MediaSansRegularOtf from './fonts/MediaSans-Regular.otf'
+// Helvetica Neue Condensed Regular
+import HelveticaNeueLTStdCnEot from './fonts/HelveticaNeueLTStd-Cn.eot'
+import HelveticaNeueLTStdCnWoff2 from './fonts/HelveticaNeueLTStd-Cn.woff2'
+import HelveticaNeueLTStdCnWoff from './fonts/HelveticaNeueLTStd-Cn.woff'
+import HelveticaNeueLTStdCnOtf from './fonts/HelveticaNeueLTStd-Cn.otf'
 
-// BergenMono Regular
-import BergenMonoRegularEot from './fonts/BergenMono-Regular.eot'
-import BergenMonoRegularWoff2 from './fonts/BergenMono-Regular.woff2'
-import BergenMonoRegularWoff from './fonts/BergenMono-Regular.woff'
-import BergenMonoRegularOtf from './fonts/BergenMono-Regular.otf'
+// Helvetica Neue Condensed Medium
+import HelveticaNeueLTStdMdCnEot from './fonts/HelveticaNeueLTStd-MdCn.eot'
+import HelveticaNeueLTStdMdCnWoff2 from './fonts/HelveticaNeueLTStd-MdCn.woff2'
+import HelveticaNeueLTStdMdCnWoff from './fonts/HelveticaNeueLTStd-MdCn.woff'
+import HelveticaNeueLTStdMdCnOtf from './fonts/HelveticaNeueLTStd-MdCn.otf'
+
+// Helvetica Neue Roman
+import HelveticaNeueLTStdRomanEot from './fonts/HelveticaNeueLTStd-Roman.eot'
+import HelveticaNeueLTStdRomanWoff2 from './fonts/HelveticaNeueLTStd-Roman.woff2'
+import HelveticaNeueLTStdRomanWoff from './fonts/HelveticaNeueLTStd-Roman.woff'
+import HelveticaNeueLTStdRomanOtf from './fonts/HelveticaNeueLTStd-Roman.otf'
+
+// Helvetica Monospace Regular
+import HelveticaMonospacedProRgEot from './fonts/HelveticaMonospacedPro-Rg.eot'
+import HelveticaMonospacedProRgWoff2 from './fonts/HelveticaMonospacedPro-Rg.woff2'
+import HelveticaMonospacedProRgWoff from './fonts/HelveticaMonospacedPro-Rg.woff'
+import HelveticaMonospacedProRgOtf from './fonts/HelveticaMonospacedPro-Rg.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Aeonik Regular */
+  /* Helvetica Neue Condensed Regular */
   @font-face {
-    font-family: 'MediaSans';
-    src: url(${MediaSansRegularEot});
-    src: url(${MediaSansRegularWoff2}) format('woff2'),
-      url(${MediaSansRegularWoff}) format('woff'),
-      url(${MediaSansRegularOtf}) format('opentype'),
-      url(${MediaSansRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'HelveticaCondensed';
+    src: url(${HelveticaNeueLTStdCnEot});
+    src: url(${HelveticaNeueLTStdCnWoff2}) format('woff2'),
+      url(${HelveticaNeueLTStdCnWoff}) format('woff'),
+      url(${HelveticaNeueLTStdCnOtf}) format('opentype'),
+      url(${HelveticaNeueLTStdCnEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* BergenMono Regular */
+  /* Helvetica Neue Condensed Medium */
   @font-face {
-    font-family: 'BergenMono';
-    src: url(${BergenMonoRegularEot});
-    src: url(${BergenMonoRegularWoff2}) format('woff2'),
-      url(${BergenMonoRegularWoff}) format('woff'),
-      url(${BergenMonoRegularOtf}) format('opentype'),
-      url(${BergenMonoRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'HelveticaCondensed';
+    src: url(${HelveticaNeueLTStdMdCnEot});
+    src: url(${HelveticaNeueLTStdMdCnWoff2}) format('woff2'),
+      url(${HelveticaNeueLTStdMdCnWoff}) format('woff'),
+      url(${HelveticaNeueLTStdMdCnOtf}) format('opentype'),
+      url(${HelveticaNeueLTStdMdCnEot}?#iefix) format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Helvetica Neue Roman */
+  @font-face {
+    font-family: 'Helvetica';
+    src: url(${HelveticaNeueLTStdRomanEot});
+    src: url(${HelveticaNeueLTStdRomanWoff2}) format('woff2'),
+      url(${HelveticaNeueLTStdRomanWoff}) format('woff'),
+      url(${HelveticaNeueLTStdRomanOtf}) format('opentype'),
+      url(${HelveticaNeueLTStdRomanEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Helvetica Monospace Regular */
+  @font-face {
+    font-family: 'HelveticaMono';
+    src: url(${HelveticaMonospacedProRgEot});
+    src: url(${HelveticaMonospacedProRgWoff2}) format('woff2'),
+      url(${HelveticaMonospacedProRgWoff}) format('woff'),
+      url(${HelveticaMonospacedProRgOtf}) format('opentype'),
+      url(${HelveticaMonospacedProRgEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -58,7 +96,7 @@ const Typography = css`
   }
 
   html {
-    font-size: 16px;
+    font-size: 18px;
     box-sizing: border-box;
     border: 0;
     margin: 0;
@@ -107,19 +145,16 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.xl});
-    font-weight: ${theme.fontWeights.regular};
-    line-height: calc(${theme.root.font.headingLineHeight} / 1.1);
+    font-size: calc(${theme.root.font.lg});
 
     @media ${theme.mq.small} {
-      font-size: ${theme.root.font.xxl};
+      font-size: ${theme.root.font.xl};
     }
   }
 
   h2,
   .text--xl {
     font-size: ${theme.root.font.lg};
-    font-weight: ${theme.fontWeights.regular};
 
     @media ${theme.mq.small} {
       font-size: ${theme.root.font.xl};
@@ -145,8 +180,7 @@ const Typography = css`
 
   h5,
   .text--sm {
-    font-family: ${theme.fonts.body};
-    font-size: calc(${theme.fontSizes[1]} * 1);
+    font-size: ${theme.fontSizes[1]};
     letter-spacing: 0.5px;
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;

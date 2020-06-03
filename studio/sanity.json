@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "9ckeycmw",
+    "projectId": "i0abzsfe",
     "dataset": "production"
   },
   "project": {
-    "name": "Cahuilla.net",
+    "name": "Ortho Implant Co.",
     "basePath": "/studio"
   },
   "plugins": [

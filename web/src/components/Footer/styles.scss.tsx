@@ -11,24 +11,14 @@ import theme from '../../../config/theme'
 export const Footer = styled(Flex)`
   flex-direction: row;
   position: relative;
-  margin-bottom: calc(${theme.headerHeight} / 1);
-  background: ${theme.colors.black};
+
+  padding: ${theme.space[5]};
   color: ${theme.colors.background};
-  border-top: ${theme.border};
-  border-bottom: ${theme.border};
+  background: ${theme.colors.black};
 `
 
 export const Inner = styled(Flex)`
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  width: 100%;
-  z-index: 99;
-
   @media ${theme.mq.small} {
-    flex-direction: row-reverse;
-    /* width: calc(calc(${theme.siteWidth} - ${theme.headerHeight}) + 2px); */
-    min-width: inherit;
   }
 `
 
@@ -60,45 +50,7 @@ export const Nav = styled(Flex)`
   }
 `
 
-export const Callout = styled(Flex)`
-  flex-direction: column;
-  background: ${theme.colors.background};
-  /* color: ${theme.colors.text}; */
-`
-
 export const Contact = styled(Flex)`
-  justify-content: space-between;
-  padding: ${theme.space[4]};
-
-  background: ${theme.colors.primary};
-  border-top: ${theme.border};
-  border-bottom: ${theme.border};
-  color: ${theme.colors.text};
-  font-size: ${theme.fontSizes[1]};
-
   @media ${theme.mq.small} {
-    border-bottom: none;
-  }
-`
-
-export const Indent = styled(Flex)`
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: calc(${theme.headerHeight} - 2px);
-  max-width: calc(${theme.headerHeight} - 2px);
-  min-width: calc(${theme.headerHeight} - 2px);
-  height: auto;
-  padding: ${theme.space[4]} 0;
-  background: ${theme.colors.primary};
-
-  .marker {
-    color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[1]};
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    text-transform: uppercase;
   }
 `

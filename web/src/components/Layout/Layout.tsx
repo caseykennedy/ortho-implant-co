@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // eslint-disable-next-line no-console
   console.log(
     `%c Site by CaseyKennedy.me `,
-    `background: darkgoldenrod; color: #000000`
+    `background: yellow; color: #000000`
   )
   return (
     <ThemeProvider theme={theme}>

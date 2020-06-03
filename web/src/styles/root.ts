@@ -23,7 +23,7 @@ const RootVariables = css`
     --font-code: ${theme.fonts.code}; */
 
     /* set base values */
-    --text-base-size: 1.1em;
+    --text-base-size: 1em;
     --text-scale-ratio: 1.618;
     --text-base-letter-spacing: -1px;
 
@@ -44,7 +44,7 @@ const RootVariables = css`
   @media ${theme.mq.small} {
     :root {
       --root-size: 8rem;
-      --text-base-size: 1.25em;
+      --text-base-size: 1.15em;
     }
   }
 `

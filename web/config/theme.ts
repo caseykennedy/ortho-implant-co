@@ -55,7 +55,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['900px']
+const breakpoints: string[] = ['400px', '780px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -69,7 +69,7 @@ const theme: ThemeShape = {
   breakpoints,
   mq: {
     small: `(min-width: calc(${breakpoints[0]} + 1px))`,
-    medium: `(min-width: 1100px)`
+    medium: `(min-width: calc(${breakpoints[1]} + 1px))`
   },
 
   // Color palette
@@ -83,6 +83,7 @@ const theme: ThemeShape = {
     secondary: '#000000',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
+    quinary: '#808080',
 
     black: '#000000',
     white: '#ffffff',
@@ -115,9 +116,9 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"BergenMono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"MediaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    code: `"Menlo", Consolas, Liberation Mono, Menlo, Courier, monospace`
+    body: `"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"HelveticaCondensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`
   },
 
   fontSizes: [
@@ -152,7 +153,7 @@ const theme: ThemeShape = {
   indentWidth: '18px',
   sidebarWidth: '50vw',
 
-  headerHeight: '67px',
+  headerHeight: '180px',
 
   grid: {
     gap: '0.5rem'

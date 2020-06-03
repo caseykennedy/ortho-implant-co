@@ -12,7 +12,7 @@ import { AnimatedBox } from '../elements'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Home from '../components/Home'
+import HomePage from '../components/HomePage'
 
 // Theme
 import theme from '../../config/theme'
@@ -31,7 +31,7 @@ const Index = () => {
     <Layout>
       <SEO />
       <AnimatedBox>
-        <Home />
+        <HomePage />
       </AnimatedBox>
     </Layout>
   )

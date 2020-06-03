@@ -6,7 +6,7 @@ const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'proje
 
 export default () =>
   S.list()
-    .title('Cahuilla.net Content')
+    .title('OIC Content')
 
     // Site Settings
     // _________________________________________________________________
@@ -30,14 +30,6 @@ export default () =>
         .schemaType('aboutSection')
         .child(S.documentTypeList('aboutSection').title('About Section')),
 
-      // Announcement
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('Announcements')
-        .schemaType('announcement')
-        .child(S.documentTypeList('announcement').title('Announcement')),
-
       // Homepage
       // _________________________________________________________________
 
@@ -58,30 +50,6 @@ export default () =>
         .title('Departments')
         .schemaType('department')
         .child(S.documentTypeList('department').title('Department')),
-
-      // Person
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('People')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('People')),
-
-      // Job Post
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('Job Posts')
-        .schemaType('jobPost')
-        .child(S.documentTypeList('jobPost').title('Job')),
-
-      // Job Post
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('Forms')
-        .schemaType('form')
-        .child(S.documentTypeList('form').title('Form')),
 
       // End
       // _________________________________________________________________

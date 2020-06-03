@@ -5,15 +5,13 @@
 
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import Headroom from 'react-headroom'
 
-import { Box, Flex, Text } from '../../elements'
+import { Box, Flex, Text, Heading } from '../../elements'
 
-import ImgMatch from '../ImgMatch'
+import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from './Overlay'
-import Icon from '../Icons'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -37,29 +35,18 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         mainRef={mainRef}
         className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
-        <NavLinks
-          handleExit={() => setNavOpen(false)}
-          isNavOpen={isNavOpen}
-        />
+        <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
       </Overlay>
-      <S.Headroom style={{ zIndex: 999 }}>
-        <S.Header as="header">
-          <Link to="/" aria-label="Cahuilla, back to home">
-            {/* <S.Symbol as="span">
-              <ImgMatch src="logo@4x.png" altText="Cahuilla Band of Indians" />
-            </S.Symbol> */}
-            <S.Logo>
-              <Box>OIC</Box>
-            </S.Logo>
+      <S.Header as="header">
+        <S.Logo width={1 / 8}>
+          <Link to="/" aria-label="Ortho Implant Co., back to home">
+            <Logo />
           </Link>
-          <Flex alignItems="center">
-            <Navigation />
-            {/* <S.Toggle onClick={toggleModal} aria-label="toggle menu">
-              <Icon name="hamburger" color="black" />
-            </S.Toggle> */}
-          </Flex>
-        </S.Header>
-      </S.Headroom>
+        </S.Logo>
+        <Box width={7 / 8}>
+          <Navigation />
+        </Box>
+      </S.Header>
     </>
   )
 }

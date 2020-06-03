@@ -15,54 +15,19 @@ import { Box, Flex, AnimatedFlex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const Headroom = styled(AnimatedFlex)`
-  display: block;
-  position: sticky;
-  top: 0;
-`
-
 export const Header = styled(AnimatedFlex)`
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
-
-  background: ${theme.colors.background};
-  border-top: ${theme.border};
-  border-bottom: ${theme.border};
-
   width: 100vw;
-  padding-left: ${theme.space[3]};
-
-  transition: all 0.333s ease-in-out;
 
   @media ${theme.mq.small} {
-    padding-left: ${theme.space[4]};
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      span {
-        background: ${theme.colors.bloodshot};
-      }
-    }
   }
 `
 
-export const Logo = styled(AnimatedFlex)`
-  flex-direction: column;
-  /* margin: ${theme.space[3]} ${theme.space[3]} ${theme.space[3]} 0; */
-
-  color: ${theme.colors.text};
-  font-family: ${theme.fonts.heading};
-  font-size: 1.4rem;
-  line-height: 0;
-  letter-spacing: 2px;
-
-  display: none;
+export const Logo = styled(Box)`
+  background: ${theme.colors.primary};
+  padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
+  height: ${theme.headerHeight};
 
   @media (min-width: 400px) {
     display: flex;
@@ -72,32 +37,10 @@ export const Logo = styled(AnimatedFlex)`
     font-size: 1.4rem;
   }
 
-  span {
-    font-family: ${theme.fonts.body};
-    font-size: calc(${theme.fontSizes[1]} / 1.5);
-    text-transform: uppercase;
-    letter-spacing: 0px;
-
-    margin-top: ${theme.space[4]};
-  }
-`
-
-export const Symbol = styled(AnimatedFlex)`
-  align-items: center;
-  justify-content: center;
-
-  width: calc(${theme.headerHeight} / 1.5);
-  height: calc(${theme.headerHeight} / 1.5);
-  margin-right: ${theme.space[2]};
-
-  background: ${theme.colors.primary};
-  border-radius: 50%;
-  transition: ${theme.transition.all};
-
-  @media ${theme.mq.small} {
-    width: ${theme.headerHeight};
-    height: ${theme.headerHeight};
-    margin-right: ${theme.space[3]};
+  svg {
+    width: 100%;
+    max-width: calc(${theme.space[3]} * 6);
+    min-width: calc(${theme.space[3]} * 4);
   }
 `
 

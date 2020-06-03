@@ -9,27 +9,27 @@ import { Box, Flex, Text } from '../../../elements'
 
 import theme from '../../../../config/theme'
 
-// Begin Styles
 // ___________________________________________________________________
 
 export const Nav = styled.nav`
-  display: none;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   z-index: 999;
 
+  width: 100%;
   height: ${theme.headerHeight};
-  margin-right: ${theme.space[5]};
+  padding: ${theme.space[5]} ${theme.space[5]};
+  background: ${theme.colors.background};
 
   @media ${theme.mq.medium} {
-    display: flex;
   }
 
   .nav-link {
-    font-size: ${theme.fontSizes[1]};
+    font-family: ${theme.fonts.heading};
     text-transform: uppercase;
     letter-spacing: 0.25px;
 
-    margin-left: ${theme.space[4]};
+    margin-left: ${theme.space[5]};
     position: relative;
     cursor: pointer;
 
@@ -50,17 +50,14 @@ export const Nav = styled.nav`
     a {
       &.active,
       &:hover {
-        color: ${theme.colors.primary};
+        /* color: ${theme.colors.primary}; */
       }
     }
 
     &__title {
       display: flex;
       position: relative;
-
       color: ${theme.colors.text};
-      line-height: 3;
-
       transition: ${theme.transition.all};
 
       span {
