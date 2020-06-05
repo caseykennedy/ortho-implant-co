@@ -28,7 +28,7 @@ export const StaffMember = styled(Flex)`
   &:nth-child(odd) {
     border-right: none;
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       border-right: ${theme.border};
     }
   }

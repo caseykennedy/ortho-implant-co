@@ -11,6 +11,8 @@ import Divider from '../../elements/Divider'
 import ImgMatch from '../ImgMatch'
 import Icon from '../Icons'
 
+import Rethink from './Sections/Rethink'
+
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
@@ -20,10 +22,10 @@ const HomePage: React.FC = () => {
   return (
     <S.HomePage>
       <S.Hero>
-        <S.Sideboard width={1 / 8} className="sideboard">
-          <Heading as="h5">orthopaedic implant co.</Heading>
+        <S.Sideboard>
+          {/* <Heading as="h5">orthopaedic implant co.</Heading> */}
         </S.Sideboard>
-        <S.Billboard width={7 / 8} className="billboard">
+        <S.Billboard>
           <Heading as="h1" mb={0}>
             a better kind of
             <br />
@@ -37,7 +39,7 @@ const HomePage: React.FC = () => {
           altText="Man hiking - Orthopaedic Implant Co."
         />
       </Box>
-      {/* <Divider bg="background" py={13} /> */}
+      <Rethink />
     </S.HomePage>
   )
 }

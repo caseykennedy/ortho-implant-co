@@ -15,7 +15,7 @@ export const HomePage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
   }
 
   .hero__img {
@@ -29,7 +29,7 @@ export const Hero = styled(Flex)`
   background: ${theme.colors.secondary};
   position: relative;
   width: 100%;
-  height: calc(80vh - ${theme.headerHeight});
+  height: calc(70vh - ${theme.headerHeight});
   min-height: calc(${theme.space[3]} * 24);
 `
 
@@ -37,14 +37,16 @@ export const Sideboard = styled(Box)`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  padding: ${theme.space[3]};
+  padding: ${theme.space[5]};
+  width: ${theme.logoWidth};
 `
 
 export const Billboard = styled(Flex)`
   align-items: flex-end;
-  padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
+  flex: 1;
   
   background: ${theme.colors.background};
+  padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
   position: relative;
   z-index: 9;
 

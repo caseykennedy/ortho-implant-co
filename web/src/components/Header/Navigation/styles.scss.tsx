@@ -21,13 +21,14 @@ export const Nav = styled.nav`
   padding: ${theme.space[5]} ${theme.space[5]};
   background: ${theme.colors.background};
 
-  @media ${theme.mq.medium} {
+  @media ${theme.mq.desktop} {
   }
 
   .nav-link {
     font-family: ${theme.fonts.heading};
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.5px;
 
     margin-left: ${theme.space[5]};
     position: relative;
@@ -50,7 +51,7 @@ export const Nav = styled.nav`
     a {
       &.active,
       &:hover {
-        /* color: ${theme.colors.primary}; */
+        color: ${theme.colors.tertiary};
       }
     }
 
@@ -121,7 +122,7 @@ export const SignIn = styled(Link)`
   padding: 0 ${theme.space[4]};
   border-left: ${theme.border};
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
     padding: ${theme.space[2]} ${theme.space[4]};
   }
 

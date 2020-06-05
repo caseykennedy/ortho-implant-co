@@ -28,7 +28,7 @@ export const Section = styled(Flex)`
     border-left: 0;
     padding: ${theme.space[4]};
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       border-left: ${theme.border};
     }
 

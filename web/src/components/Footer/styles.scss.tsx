@@ -18,7 +18,7 @@ export const Footer = styled(Flex)`
 `
 
 export const Inner = styled(Flex)`
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
   }
 `
 
@@ -27,7 +27,7 @@ export const Nav = styled(Flex)`
   justify-content: space-between;
   padding: ${theme.space[3]};
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
     padding: ${theme.space[4]};
   }
 
@@ -51,6 +51,6 @@ export const Nav = styled(Flex)`
 `
 
 export const Contact = styled(Flex)`
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
   }
 `

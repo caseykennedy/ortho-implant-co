@@ -12,6 +12,7 @@ import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from './Overlay'
+import Button from '../../elements/Button'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -38,14 +39,17 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
       </Overlay>
       <S.Header as="header">
-        <S.Logo width={1 / 8}>
+        <S.Logo>
           <Link to="/" aria-label="Ortho Implant Co., back to home">
             <Logo />
           </Link>
         </S.Logo>
-        <Box width={7 / 8}>
+        <S.Nav>
           <Navigation />
-        </Box>
+          <Box>
+            <Button to="/contact">Talk to us</Button>
+          </Box>
+        </S.Nav>
       </S.Header>
     </>
   )

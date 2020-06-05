@@ -65,7 +65,7 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   h2 {
     font-size: ${theme.fontSizes[3]};
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[4]};
     }
   }
@@ -82,7 +82,7 @@ export const Carat = styled(Icon)<{ chevronColor: string }>`
   margin-right: ${theme.space[2]};
   transition: transform 0.3s ease;
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
     margin-right: ${theme.space[4]};
   }
 
@@ -90,7 +90,7 @@ export const Carat = styled(Icon)<{ chevronColor: string }>`
     fill: ${p => p.chevronColor};
     width: ${theme.space[4]};
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       width: ${theme.space[6]};
     }
   }

@@ -6,27 +6,31 @@
 import * as React from 'react'
 import Link from 'gatsby'
 
-// Theme
-import theme from '../../../config/theme'
+import Icon from '../../components/Icons'
 
-// Styles
-import { ButtonStyles } from './styles.scss'
+import theme from '../../../config/theme'
+import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
 type Props = {
   children?: React.ReactNode
-  type?: 'reset' | 'button' | 'submit' | undefined
-  value?: string
+} & typeof defaultProps
+
+const defaultProps = {
+  to: '/'
 }
 
-const Button: React.FC<Props> = ({ children, type, value }) => {
+const Button: React.FC<Props> = ({ children, to }) => {
   return (
-    <ButtonStyles type={type} value={value} px={5} py={3}>
+    <S.Button to={to}>
       {children}
-    </ButtonStyles>
+      <Icon name="nextArrow" />
+    </S.Button>
   )
 }
+
+Button.defaultProps = defaultProps
 
 export default Button
 

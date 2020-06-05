@@ -33,11 +33,11 @@ export const Overlay = styled(Flex)`
   transition: all 0.333s ease-in-out;
   z-index: 9999;
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
     top: calc(77px + ${theme.space[2]});
   }
 
-  /* @media ${theme.mq.small} {
+  /* @media ${theme.mq.tablet} {
     width: calc(${overlayWidth} / 2);
     right: calc(-${overlayWidth} / 2);
     border-left: ${theme.border};

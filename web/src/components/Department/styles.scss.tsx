@@ -17,6 +17,6 @@ export const Department = styled(Flex)`
   width: 100%;
   border-left: none;
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
   }
 `

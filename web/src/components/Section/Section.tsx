@@ -52,7 +52,7 @@ const Section: React.FC<Props> = ({
   >
     <Box
       width={1}
-      // maxWidth={theme.maxWidth}
+      maxWidth={theme.maxWidth}
       pr={pr}
       pl={pl}
       m="0 auto"
@@ -67,10 +67,10 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4, 8],
-  pb: [4],
-  pr: [3, 4],
-  pl: [3, 4],
+  pt: [5, 7],
+  pb: [5, 7],
+  pr: [5, 7],
+  pl: [5, 7],
   width: 1,
   border: true
 }

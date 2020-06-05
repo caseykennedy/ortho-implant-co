@@ -31,7 +31,7 @@ export const Button = styled(Link)`
   font-size: ${theme.fontSizes[2]};
   letter-spacing: 2px;
 
-  @media ${theme.mq.small} {
+  @media ${theme.mq.tablet} {
     padding: ${theme.space[8]} ${theme.space[4]};
     width: 50%;
     font-size: ${theme.fontSizes[3]};
@@ -46,7 +46,7 @@ export const Button = styled(Link)`
     border-right: none;
     border-bottom: ${theme.border};
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       border-right: ${theme.border};
       border-bottom: none;
     }

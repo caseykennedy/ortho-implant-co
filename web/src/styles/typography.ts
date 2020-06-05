@@ -138,7 +138,7 @@ const Typography = css`
     font-size: calc(${theme.root.font.xxxl} / 1.25);
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.xxxl} * 1.25);
     }
   }
@@ -147,17 +147,18 @@ const Typography = css`
   .text--xxl {
     font-size: calc(${theme.root.font.lg});
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.xl};
     }
   }
 
   h2,
   .text--xl {
-    font-size: ${theme.root.font.lg};
+    font-size: ${theme.root.font.md};
+    font-weight: 400;
 
-    @media ${theme.mq.small} {
-      font-size: ${theme.root.font.xl};
+    @media ${theme.mq.tablet} {
+      font-size: ${theme.root.font.lg};
     }
   }
 
@@ -167,7 +168,7 @@ const Typography = css`
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 1em;
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
     }
   }
 
@@ -200,7 +201,7 @@ const Typography = css`
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.baseSize} / 1.25);
     }
 
@@ -220,7 +221,7 @@ const Typography = css`
   .t--dual-col {
     column-count: 1;
 
-    @media ${theme.mq.small} {
+    @media ${theme.mq.tablet} {
       column-count: 2;
     }
   }
@@ -287,7 +288,7 @@ const Typography = css`
       font-size: calc(${theme.root.font.baseSize} / 1);
       line-height: ${theme.root.font.bodyLineHeight};
 
-      @media ${theme.mq.small} {
+      @media ${theme.mq.tablet} {
         font-size: calc(${theme.root.font.baseSize} / 1.25);
       }
     }

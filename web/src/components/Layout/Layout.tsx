@@ -8,7 +8,6 @@ import { ThemeProvider } from 'styled-components'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import { Box } from '../../elements'
 
 import theme from '../../../config/theme'
 import GlobalStyles from '../../styles/global'
@@ -28,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // eslint-disable-next-line no-console
   console.log(
     `%c Site by CaseyKennedy.me `,
-    `background: yellow; color: #000000`
+    `background: #FFC907; color: #000000`
   )
   return (
     <ThemeProvider theme={theme}>

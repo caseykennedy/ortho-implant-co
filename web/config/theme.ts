@@ -26,9 +26,8 @@ type ThemeShape = {
   strokeWidth: string
   maxWidth: string
   siteWidth: string
-  indentWidth: string
+  logoWidth: string
   headerHeight: string
-  sidebarWidth: string
   grid: {
     [key: string]: string
   }
@@ -55,7 +54,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['400px', '780px']
+const breakpoints: string[] = ['780px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -68,8 +67,8 @@ const theme: ThemeShape = {
 
   breakpoints,
   mq: {
-    small: `(min-width: calc(${breakpoints[0]} + 1px))`,
-    medium: `(min-width: calc(${breakpoints[1]} + 1px))`
+    tablet: `(min-width: ${breakpoints[0]})`,
+    desktop: `(min-width: ${breakpoints[1]})`
   },
 
   // Color palette
@@ -101,7 +100,7 @@ const theme: ThemeShape = {
     '2rem',       // 5
     '3rem',       // 6
     '4rem',       // 7
-    '8rem',       // 8
+    '6rem',       // 8
     '10rem',      // 9
     '12rem',      // 10
     '14rem',      // 11
@@ -150,9 +149,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '100vw',
-  indentWidth: '18px',
-  sidebarWidth: '50vw',
-
+  logoWidth: '180px',
   headerHeight: '180px',
 
   grid: {
@@ -160,7 +157,7 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.222s ease'
+    all: 'all 0.15s ease-in-out'
   },
 
   transform: {
