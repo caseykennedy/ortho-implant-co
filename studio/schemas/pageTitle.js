@@ -1,8 +1,8 @@
 import { MdContacts } from "react-icons/md";
 
 export default {
-  name: 'contact',
-  title: 'Contact',
+  name: 'pageTitle',
+  title: 'Page Title',
   type: 'document',
   icon: MdContacts,
   liveEdit: false,
@@ -10,24 +10,27 @@ export default {
   // __experimental_actions: ['update', 'publish', /* 'create', 'delete' */],
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string'
     },
     {
-      name: 'email',
-      title: 'Email',
+      name: 'message',
+      title: 'Message',
       type: 'string'
     },
     {
-      name: 'telephone',
-      title: 'Telephone',
-      type: 'number'
+      name: 'link',
+      title: 'Link',
+      type: 'string'
     },
     {
-      name: 'fax',
-      title: 'Fax',
-      type: 'number'
-    }
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
   ]
 }

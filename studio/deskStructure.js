@@ -1,56 +1,78 @@
-import S from '@sanity/desk-tool/structure-builder'
-import { MdBusiness, MdSettings } from 'react-icons/md'
-import { FaFile } from 'react-icons/fa'
+import S from "@sanity/desk-tool/structure-builder";
+import { MdCropLandscape, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
+import { FaFile } from "react-icons/fa";
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'project', 'siteSettings']
+const hiddenTypes = [
+  "category",
+  "companyInfo",
+  "page",
+  "person",
+  "post",
+  "project",
+  "siteSettings"
+];
 
 export default () =>
   S.list()
-    .title('OIC Content')
-
-    // Site Settings
-    // _________________________________________________________________
-
+    .title("OIC Content")
     .items([
+      // Settings
+      // _________________________________________________________________
       S.listItem()
-        .title('Site Settings')
+        .title("Site Settings")
         .child(
           S.editor()
-            .id('siteSettings')
-            .schemaType('siteSettings')
-            .documentId('siteSettings')
+            .id("siteSettings")
+            .schemaType("siteSettings")
+            .documentId("siteSettings")
         )
         .icon(MdSettings),
 
-      // About Page
+      // Home page
       // _________________________________________________________________
 
       S.listItem()
-        .title('About Page')
-        .schemaType('aboutSection')
-        .child(S.documentTypeList('aboutSection').title('About Section')),
-
-      // Homepage
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('Home Page')
+        .title("Home Page")
         .child(
-          S.editor()
-            .id('homePage')
-            .schemaType('homePage')
-            .documentId('homePage')
+          S.list()
+            .title("Sections")
+            .items([
+              // Page Title
+              S.listItem()
+                .title("Page Title")
+                .child(
+                  S.editor()
+                    .id("pageTitle")
+                    .schemaType("pageTitle")
+                    .documentId("pageTitle")
+                )
+                .icon(MdCropLandscape),
+
+              // Rethink
+              S.listItem()
+                .title("Rethink")
+                .child(
+                  S.editor()
+                    .id("homeRethink")
+                    .schemaType("homeRethink")
+                    .documentId("homeRethink")
+                )
+                .icon(MdCropLandscape),
+
+              // Implants
+              S.listItem()
+                .title("Implants")
+                .child(
+                  S.editor()
+                    .id("homeImplants")
+                    .schemaType("homeRethink")
+                    .documentId("homeRethink")
+                )
+                .icon(MdCropLandscape)
+            ])
         )
-        .icon(FaFile),
-
-      // Departments
-      // _________________________________________________________________
-
-      S.listItem()
-        .title('Departments')
-        .schemaType('department')
-        .child(S.documentTypeList('department').title('Department')),
+        .icon(MdFolder)
 
       // End
       // _________________________________________________________________
-    ])
+    ]);

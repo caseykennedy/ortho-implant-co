@@ -15,15 +15,16 @@ import * as S from './styles.scss'
 
 type Props = {
   children?: React.ReactNode
+  invert?: boolean
 } & typeof defaultProps
 
 const defaultProps = {
   to: '/'
 }
 
-const Button: React.FC<Props> = ({ children, to }) => {
+const Button: React.FC<Props> = ({ children, to, invert }) => {
   return (
-    <S.Button to={to}>
+    <S.Button to={to} invert={invert}>
       {children}
       <Icon name="nextArrow" />
     </S.Button>

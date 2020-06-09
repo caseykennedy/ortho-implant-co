@@ -37,7 +37,7 @@ export const Sideboard = styled(Box)`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
 `
 

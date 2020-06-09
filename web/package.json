@@ -29,6 +29,7 @@
     "test:ci": "cross-env CYPRESS_SUPPORT=y npm-run-all -s test:compile server:ci"
   },
   "dependencies": {
+    "@feuer/react-tabs": "^0.1.8",
     "@react-spring/parallax": "^9.0.0-canary.808.8.4a87fcb",
     "@sanity/block-content-to-react": "^2.0.7",
     "@types/auth0-js": "^9.12.4",

@@ -129,7 +129,7 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.headingLineHeight};
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     margin: 0 0 0.25em;
     transition: ${theme.transition.all};
   }
@@ -158,7 +158,7 @@ const Typography = css`
     font-weight: 400;
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.lg};
+      font-size: calc(${theme.root.font.lg} * 1.25);
     }
   }
 
@@ -182,10 +182,10 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: ${theme.fontSizes[1]};
-    letter-spacing: 0.5px;
+    font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;
-    margin: 0 0 0.5em;
+    margin: 0 0 1.5em;
   }
 
   small {
@@ -197,12 +197,12 @@ const Typography = css`
   }
 
   p {
-    font-size: calc(${theme.root.font.baseSize} / 1);
+    font-size: ${theme.fontSizes[1]};
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.baseSize} / 1.25);
+      font-size: ${theme.fontSizes[2]};
     }
 
     &:last-child {

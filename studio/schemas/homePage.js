@@ -21,5 +21,11 @@ export default {
       title: 'Link To',
       type: 'string'
     },
+    {
+      title: 'Tabs',
+      name: 'tabs',
+      type: 'array',
+      of: [{type: 'rethinkTabs'}]
+    }
   ]
 }

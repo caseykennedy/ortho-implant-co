@@ -10,6 +10,7 @@ declare module 'react-anchor-link-smooth-scroll'
 declare module 'smooth-scrollbar-react'
 declare module 'utils/auth'
 declare module '@sanity/block-content-to-react'
+declare module '@feuer/react-tabs'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

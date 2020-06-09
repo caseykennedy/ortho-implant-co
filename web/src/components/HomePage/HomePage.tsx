@@ -23,14 +23,19 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <S.Hero>
         <S.Sideboard>
-          {/* <Heading as="h5">orthopaedic implant co.</Heading> */}
+          <Heading as="h5">orthopaedic implant co.</Heading>
         </S.Sideboard>
         <S.Billboard>
-          <Heading as="h1" mb={0}>
-            a better kind of
-            <br />
-            orthopaedic implant co.
-          </Heading>
+          <Box>
+            <Heading as="h5" color="tertiary">
+              rethink value
+            </Heading>
+            <Heading as="h1" mb={0}>
+              a better kind of
+              <br />
+              orthopaedic implant co.
+            </Heading>
+          </Box>
         </S.Billboard>
       </S.Hero>
       <Box width={1} className="hero__img">

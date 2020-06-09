@@ -9,7 +9,7 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const Button = styled(Link)`
+export const Button = styled(Link)<{ invert?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -17,14 +17,14 @@ export const Button = styled(Link)`
   width: 300px;
   padding: calc(${theme.space[5]}) ${theme.space[3]} ${theme.space[3]};
 
-  color: ${theme.colors.text};
+  color: ${p => p.invert ? theme.colors.white : theme.colors.text};
   font-family: ${theme.fonts.heading};
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 0.5;
   text-transform: uppercase;
 
-  background: ${theme.colors.primary};
+  background: ${p => p.invert ? theme.colors.black : theme.colors.primary};
   transition: ${theme.transition.all};
 
   &:hover {
@@ -46,6 +46,7 @@ export const Button = styled(Link)`
 
     svg {
       width: 24px;
+      fill: ${p => p.invert ? theme.colors.white : theme.colors.black};
     }
   }
 `

@@ -50,13 +50,7 @@ const Section: React.FC<Props> = ({
     width={width}
     border={border}
   >
-    <Box
-      width={1}
-      maxWidth={theme.maxWidth}
-      pr={pr}
-      pl={pl}
-      m="0 auto"
-    >
+    <Box width={1} maxWidth={theme.maxWidth} pr={pr} pl={pl} m="0 auto">
       {children}
     </Box>
   </Container>
@@ -80,5 +74,12 @@ Section.defaultProps = defaultProps
 // ___________________________________________________________________
 
 const Container = styled(Box)<{ border: boolean }>`
-  border-bottom: ${p => !p.border ? 'none' : `${theme.border}`};
+  border-bottom: ${p => (!p.border ? 'none' : `${theme.border}`)};
+  position: relative;
+
+  .cta {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 `
