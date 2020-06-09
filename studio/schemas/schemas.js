@@ -7,11 +7,12 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import figure from './figure'
-import homePage from './homePage'
-import homeRethink from './homeRethink'
 import siteSettings from './siteSettings'
 import rethinkTabs from './rethinkTabs'
 import pageTitle from './pageTitle'
+
+import homeImplants from './home/implants'
+import homeRethink from './home/rethink'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,11 +25,12 @@ export default createSchema({
     // in the studio.
     blockContent,
     figure,
-    homePage,
-    homeRethink,
     pageTitle,
     rethinkTabs,
-    siteSettings
+    siteSettings,
+
+    homeImplants,
+    homeRethink
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

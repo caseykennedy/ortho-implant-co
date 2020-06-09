@@ -4,24 +4,30 @@
 
 import styled from 'styled-components'
 import theme from '../../../../../config/theme'
-import { Box, Flex, AnimatedFlex } from '../../../../elements'
+import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
 export const Learn = styled(Box)`
-  div div ul li button {
-    font-family: ${theme.fonts.heading};
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    text-align: left !important;
-    padding: ${theme.space[3]} ${theme.space[6]} ${theme.space[3]} ${theme.space[3]} !important;
+  div {
+    border-bottom: none !important;
+  }
+  
+  ul {
+    li button {
+      font-family: ${theme.fonts.heading};
+      font-weight: 500 !important;
+      text-transform: uppercase !important;
+      text-align: left !important;
+      padding: ${theme.space[3]} ${theme.space[6]} ${theme.space[3]}
+        ${theme.space[3]} !important;
+    }
   }
 `
 
 export const Panel = styled(Flex)`
   flex-wrap: wrap;
   background: ${theme.colors.primary};
-  
 
   h2 {
     font-weight: 500;

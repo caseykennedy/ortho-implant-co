@@ -46,7 +46,7 @@ export default () =>
                     .schemaType("pageTitle")
                     .documentId("pageTitle")
                 )
-                .icon(MdCropLandscape),
+                .icon(MdViewDay),
 
               // Rethink
               S.listItem()
@@ -57,7 +57,7 @@ export default () =>
                     .schemaType("homeRethink")
                     .documentId("homeRethink")
                 )
-                .icon(MdCropLandscape),
+                .icon(MdViewDay),
 
               // Implants
               S.listItem()
@@ -65,10 +65,10 @@ export default () =>
                 .child(
                   S.editor()
                     .id("homeImplants")
-                    .schemaType("homeRethink")
-                    .documentId("homeRethink")
+                    .schemaType("homeImplants")
+                    .documentId("homeImplants")
                 )
-                .icon(MdCropLandscape)
+                .icon(MdViewDay)
             ])
         )
         .icon(MdFolder)

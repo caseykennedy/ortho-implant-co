@@ -1,8 +1,8 @@
 import { MdDocument } from 'react-icons/md'
 
 export default {
-  name: 'homePage',
-  title: 'Home Page',
+  name: 'homeImplants',
+  title: 'Home Implants',
   type: 'document',
   icon: MdDocument,
   fields: [
@@ -21,11 +21,5 @@ export default {
       title: 'Link To',
       type: 'string'
     },
-    {
-      title: 'Tabs',
-      name: 'tabs',
-      type: 'array',
-      of: [{type: 'rethinkTabs'}]
-    }
   ]
 }

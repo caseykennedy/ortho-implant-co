@@ -1,35 +1,35 @@
-// Rethink:
+// Rethink Section:
 
 // ___________________________________________________________________
 
 import React from 'react'
-
-import { Box, Flex, Text, Heading } from '../../../../elements'
-
-import Section from '../../../Section'
-import Button from '../../../../elements/Button'
-import ImgMatch from '../../../ImgMatch'
-
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image/withIEPolyfill'
 import { Tabs } from '@feuer/react-tabs'
 
+import BlockContent from '../../../BlockContent'
+import Section from '../../../Section'
+import Button from '../../../../elements/Button'
+
+import { Box, Flex, Heading } from '../../../../elements'
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const TabsPanel = () => {
+const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
   return (
     <Tabs
       activeTab={{
-        id: '01'
+        id: 'Doctors'
       }}
     >
-      {TabData.map(panel => (
-        <Tabs.Tab id={panel.id} title={panel.title} key={panel.id}>
+      {panels.map(panel => (
+        <Tabs.Tab id={panel.title} title={panel.title} key={panel.title}>
           <S.Panel>
             <Flex width={1 / 2} p={7} className="content">
               <Box>
-                <Heading as="h5">value</Heading>
+                <Heading as="h5">{panel.tag}</Heading>
                 <Heading as="h2">
                   <Box as="span" color="white">
                     For
@@ -38,16 +38,23 @@ const TabsPanel = () => {
                 </Heading>
               </Box>
               <Box>
-                <Text as="p">
-                  {panel.content}
-                </Text>
-                <Button to="/contact" invert={true}>
-                  Rethink Ortho
+                {panel._rawMessage && (
+                  <BlockContent blocks={panel._rawMessage || []} />
+                )}
+                <Button to={`/${panel.linkTo}`} invert={true}>
+                  {panel.linkTitle}
                 </Button>
               </Box>
             </Flex>
             <Box width={1 / 2}>
-              <ImgMatch src={panel.figure} altText="" />
+              {panel.image && (
+                <Img
+                  fluid={panel.image.asset.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={`Affordable Implants for ${panel.title}`}
+                />
+              )}
             </Box>
           </S.Panel>
         </Tabs.Tab>
@@ -58,47 +65,55 @@ const TabsPanel = () => {
 
 // ___________________________________________________________________
 
-const Rethink: React.FC = () => {
+const Rethink = () => {
+  const data: RethinkSectionQueryShape = useStaticQuery(graphql`
+    query RethinkSectionQuery {
+      allSanityHomeRethink {
+        edges {
+          node {
+            heading
+            title
+            linkTitle
+            linkTo
+            id
+            tabPanels {
+              linkTo
+              linkTitle
+              tag
+              title
+              image {
+                asset {
+                  fluid(maxWidth: 1080) {
+                    ...GatsbySanityImageFluid
+                  }
+                }
+              }
+              _rawMessage
+            }
+          }
+        }
+      }
+    }
+  `)
+  const query = data.allSanityHomeRethink.edges[0].node
+  // console.log('---_- Rethink -_---')
+  // console.log(query)
   return (
     <Section border={true}>
       <Box className="cta">
-        <Button to="/contact">Rethink Ortho</Button>
+        <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
       </Box>
       <Box width={2 / 3}>
         <Heading as="h5" color="tertiary">
-          rethink value
+          {query.title}
         </Heading>
-        <Heading as="h2">
-          We create better value for the implants you already know and use on an
-          everyday basis.
-        </Heading>
+        <Heading as="h2">{query.heading}</Heading>
       </Box>
       <S.Learn width={1} mt={12}>
-        <TabsPanel />
+        <TabsPanel panels={query.tabPanels} />
       </S.Learn>
     </Section>
   )
 }
 
 export default Rethink
-
-const TabData = [
-  {
-    id: '01',
-    title: 'Doctors',
-    content: 'For doctors, it means giving them the right amount of service and time-saving innovations along with better outcomes for their patients.',
-    figure: 'operating-room--bw.jpg'
-  },
-  {
-    id: '02',
-    title: 'Hospitals',
-    content: 'For hospital admins, it\'s giving them the opportunity to cut costs without impacting care or working relationships with their physicians.',
-    figure: 'operating-room--bw.jpg'
-  },
-  {
-    id: '03',
-    title: 'Patients',
-    content: 'For patients',
-    figure: 'operating-room--bw.jpg'
-  }
-]

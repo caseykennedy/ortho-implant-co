@@ -1,10 +1,10 @@
-import { MdContacts } from "react-icons/md";
+import { MdCropLandscape } from "react-icons/md";
 
 export default {
   name: 'rethinkTabs',
   title: 'Rethink Tabs',
   type: 'document',
-  icon: MdContacts,
+  icon: MdCropLandscape,
   liveEdit: false,
   fields: [
     {
