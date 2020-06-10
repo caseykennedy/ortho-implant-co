@@ -37,14 +37,14 @@ export default () =>
           S.list()
             .title("Sections")
             .items([
-              // Page Title
+              // Hero
               S.listItem()
-                .title("Page Title")
+                .title("Hero")
                 .child(
                   S.editor()
-                    .id("pageTitle")
-                    .schemaType("pageTitle")
-                    .documentId("pageTitle")
+                    .id("homeHero")
+                    .schemaType("homeHero")
+                    .documentId("homeHero")
                 )
                 .icon(MdViewDay),
 
@@ -67,6 +67,29 @@ export default () =>
                     .id("homeImplants")
                     .schemaType("homeImplants")
                     .documentId("homeImplants")
+                )
+                .icon(MdViewDay)
+            ])
+        )
+        .icon(MdFolder),
+
+      // Rethink page
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Rethink Page")
+        .child(
+          S.list()
+            .title("Sections")
+            .items([
+              // Page Title
+              S.listItem()
+                .title("Page Title")
+                .child(
+                  S.editor()
+                    .id("pageTitle")
+                    .schemaType("pageTitle")
+                    .documentId("pageTitle")
                 )
                 .icon(MdViewDay)
             ])

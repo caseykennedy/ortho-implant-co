@@ -47,7 +47,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <S.Nav>
           <Navigation />
           <Box>
-            <Button to="/contact">Talk to us</Button>
+            <Button to="/contact" invert={false}>Talk to us</Button>
           </Box>
         </S.Nav>
       </S.Header>

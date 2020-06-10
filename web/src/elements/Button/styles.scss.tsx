@@ -5,11 +5,13 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { lighten } from 'polished'
+
+import { Box, Flex, Heading } from '../'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const Button = styled(Link)<{ invert?: boolean }>`
+export const Button = styled(Box)<{ invert?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -24,11 +26,11 @@ export const Button = styled(Link)<{ invert?: boolean }>`
   line-height: 0.5;
   text-transform: uppercase;
 
-  background: ${p => p.invert ? theme.colors.black : theme.colors.primary};
+  background: ${p => p.invert ? theme.colors.secondary : theme.colors.primary};
   transition: ${theme.transition.all};
 
   &:hover {
-    background: ${theme.colors.black};
+    background: ${theme.colors.secondary};
     color: ${theme.colors.white};
 
     span {
@@ -46,7 +48,7 @@ export const Button = styled(Link)<{ invert?: boolean }>`
 
     svg {
       width: 24px;
-      fill: ${p => p.invert ? theme.colors.white : theme.colors.black};
+      fill: ${p => p.invert ? theme.colors.white : theme.colors.secondary};
     }
   }
 `

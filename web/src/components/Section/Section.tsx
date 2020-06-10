@@ -80,6 +80,10 @@ const Container = styled(Box)<{ border: boolean }>`
   .cta {
     position: absolute;
     top: 0;
-    right: 0;
+    right: ${theme.space[5]};
+
+    @media ${theme.mq.tablet} {
+      right: ${theme.space[7]};
+    }
   }
 `

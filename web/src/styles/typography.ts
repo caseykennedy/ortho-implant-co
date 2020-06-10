@@ -174,9 +174,15 @@ const Typography = css`
 
   h4,
   .text--md {
-    font-size: ${theme.root.font.sm};
+    font-size: ${theme.fontSizes[2]};
+    font-weight: 500;
     line-height: ${theme.root.font.bodyLineHeight};
-    margin: 0 0 1em;
+    text-transform: uppercase;
+    margin: 0 0 0.5em;
+
+    @media ${theme.mq.tablet} {
+      margin: 0 0 1.5em;
+    }
   }
 
   h5,

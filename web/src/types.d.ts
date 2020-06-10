@@ -13,6 +13,34 @@ type ChildImageSharp = {
   }
 }
 
+// Home Hero shape
+// ___________________________________________________________________
+
+type HomeHeroQueryShape = {
+  allSanityHomeHero: {
+    nodes: {
+      hero: {
+        title: string
+        message: string
+        image: {
+          asset: {
+            fluid: {
+              src: string
+              aspectRatio: number
+              base64: string
+              sizes: string
+              srcSet: string
+              srcSetWebp: string
+              srcWebp: string
+            }
+          }
+        }
+        link
+      }
+    }[]
+  }
+}
+
 // Rethink section shape
 // ___________________________________________________________________
 

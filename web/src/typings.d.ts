@@ -7,10 +7,9 @@ declare module '*.woff2'
 
 declare module 'gatsby-image/withIEPolyfill'
 declare module 'react-anchor-link-smooth-scroll'
-declare module 'smooth-scrollbar-react'
-declare module 'utils/auth'
 declare module '@sanity/block-content-to-react'
 declare module '@feuer/react-tabs'
+declare module 'react-id-swiper'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

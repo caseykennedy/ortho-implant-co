@@ -4,7 +4,7 @@
 
 // Core
 import * as React from 'react'
-import Link from 'gatsby'
+import { Link } from 'gatsby'
 
 import Icon from '../../components/Icons'
 
@@ -24,10 +24,12 @@ const defaultProps = {
 
 const Button: React.FC<Props> = ({ children, to, invert }) => {
   return (
-    <S.Button to={to} invert={invert}>
-      {children}
-      <Icon name="nextArrow" />
-    </S.Button>
+    <Link to={to}>
+      <S.Button invert={invert}>
+        {children}
+        <Icon name="nextArrow" />
+      </S.Button>
+    </Link>
   )
 }
 

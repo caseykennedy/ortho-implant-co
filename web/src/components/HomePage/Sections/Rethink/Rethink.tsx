@@ -27,14 +27,11 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
       {panels.map(panel => (
         <Tabs.Tab id={panel.title} title={panel.title} key={panel.title}>
           <S.Panel>
-            <Flex width={1 / 2} p={7} className="content">
+            <Flex width={[1, 1 / 2]} p={[5, 7]} className="content">
               <Box>
-                <Heading as="h5">{panel.tag}</Heading>
+                <Heading as="h5" color="white">{panel.tag}</Heading>
                 <Heading as="h2">
-                  <Box as="span" color="white">
-                    For
-                  </Box>{' '}
-                  {panel.title}
+                  For {panel.title}
                 </Heading>
               </Box>
               <Box>
@@ -46,7 +43,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
                 </Button>
               </Box>
             </Flex>
-            <Box width={1 / 2}>
+            <Box width={[1, 1 / 2]}>
               {panel.image && (
                 <Img
                   fluid={panel.image.asset.fluid}
@@ -84,7 +81,13 @@ const Rethink = () => {
               image {
                 asset {
                   fluid(maxWidth: 1080) {
-                    ...GatsbySanityImageFluid
+                    src
+                    aspectRatio
+                    base64
+                    sizes
+                    srcSet
+                    srcSetWebp
+                    srcWebp
                   }
                 }
               }
@@ -99,7 +102,7 @@ const Rethink = () => {
   // console.log('---_- Rethink -_---')
   // console.log(query)
   return (
-    <Section border={true}>
+    <Section border={false}>
       <Box className="cta">
         <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
       </Box>

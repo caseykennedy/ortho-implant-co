@@ -13,6 +13,7 @@ import pageTitle from './pageTitle'
 
 import homeImplants from './home/implants'
 import homeRethink from './home/rethink'
+import homeHero from './home/hero'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,6 +30,7 @@ export default createSchema({
     rethinkTabs,
     siteSettings,
 
+    homeHero,
     homeImplants,
     homeRethink
 

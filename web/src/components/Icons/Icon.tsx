@@ -13,6 +13,7 @@ import Hamburger from './SVG/Hamburger'
 import Carat from './SVG/Carat'
 import Pin from './SVG/Pin'
 import Facebook from './SVG/Facebook'
+import LinkedIn from './SVG/LinkedIn'
 import Instagram from './SVG/Instagram'
 import Twitter from './SVG/Twitter'
 import NextArrow from './SVG/NextArrow'
@@ -63,6 +64,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className="ico ico-facebook">
           <Facebook />
+        </IconStyle>
+      )
+    case 'linkedin':
+      return (
+        <IconStyle color={color} className="ico ico-linkedin">
+          <LinkedIn />
         </IconStyle>
       )
     case 'twitter':
