@@ -25,7 +25,7 @@ type Props = {
   pl?: number | number[] | string
   id?: string
   width?: number | number[] | string | string[]
-  border: boolean
+  border?: boolean
 }
 
 const Section: React.FC<Props> = ({
@@ -65,15 +65,14 @@ const defaultProps = {
   pb: [5, 7],
   pr: [5, 7],
   pl: [5, 7],
-  width: 1,
-  border: true
+  width: 1
 }
 
 Section.defaultProps = defaultProps
 
 // ___________________________________________________________________
 
-const Container = styled(Box)<{ border: boolean }>`
+const Container = styled(Box)<{ border?: boolean }>`
   border-bottom: ${p => (!p.border ? 'none' : `${theme.border}`)};
   position: relative;
 

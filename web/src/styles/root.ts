@@ -37,8 +37,8 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 1.15;
-    --body-line-height: 1.5;
+    --heading-line-height: 1.1;
+    --body-line-height: 1.35;
   }
 
   @media ${theme.mq.tablet} {

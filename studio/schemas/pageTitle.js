@@ -31,6 +31,6 @@ export default {
       options: {
         hotspot: true
       }
-    },
+    }
   ]
 }

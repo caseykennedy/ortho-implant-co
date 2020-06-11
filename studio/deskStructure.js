@@ -68,7 +68,29 @@ export default () =>
                     .schemaType("homeImplants")
                     .documentId("homeImplants")
                 )
-                .icon(MdViewDay)
+                .icon(MdViewDay),
+              
+              // Reviews
+              S.listItem()
+                .title("Reviews")
+                .child(
+                  S.editor()
+                    .id("homeReviews")
+                    .schemaType("homeReviews")
+                    .documentId("homeReviews")
+                )
+                .icon(MdViewDay),
+
+              // Mantra
+              S.listItem()
+                .title("Mantra")
+                .child(
+                  S.editor()
+                    .id("homeMantra")
+                    .schemaType("homeMantra")
+                    .documentId("homeMantra")
+                )
+                .icon(MdViewDay),
             ])
         )
         .icon(MdFolder),

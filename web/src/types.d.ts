@@ -98,3 +98,64 @@ type RethinkPanelShape = {
   }
   _rawMessage: string
 }[]
+
+// Reviews section shape
+// ___________________________________________________________________
+
+type ReviewsSectionQueryShape = {
+  allSanityHomeReviews: {
+    edges: {
+      node: {
+        image: {
+          asset: {
+            fluid: {
+              src: string
+              aspectRatio: number
+              base64: string
+              sizes: string
+              srcSet: string
+              srcSetWebp: string
+              srcWebp: string
+            }
+          }
+        }
+        reviews: {
+          _rawQuote: string
+          location: string
+          position: string
+        }[]
+        _key: string
+      }
+    }[]
+  }
+}
+
+// Mantra section shape
+// ___________________________________________________________________
+
+type MantraSectionQueryShape = {
+  allSanityHomeMantra: {
+    edges: {
+      node: {
+        image: {
+          asset: {
+            fluid: {
+              src: string
+              aspectRatio: number
+              base64: string
+              sizes: string
+              srcSet: string
+              srcSetWebp: string
+              srcWebp: string
+            }
+          }
+        }
+        heading: string
+        linkTitle: string
+        linkTo: string
+        title: string
+        _rawMessage: string
+      }
+    }[]
+  }
+}

@@ -29,18 +29,20 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
           <S.Panel>
             <Flex width={[1, 1 / 2]} p={[5, 7]} className="content">
               <Box>
-                <Heading as="h5" color="white">{panel.tag}</Heading>
-                <Heading as="h2">
-                  For {panel.title}
+                <Heading as="h5" color="white">
+                  {panel.tag}
                 </Heading>
+                <Heading as="h2">For {panel.title}</Heading>
               </Box>
               <Box>
                 {panel._rawMessage && (
                   <BlockContent blocks={panel._rawMessage || []} />
                 )}
-                <Button to={`/${panel.linkTo}`} invert={true}>
-                  {panel.linkTitle}
-                </Button>
+                <Box mb={[-5, -7]}>
+                  <Button to={`/${panel.linkTo}`} invert={true}>
+                    {panel.linkTitle}
+                  </Button>
+                </Box>
               </Box>
             </Flex>
             <Box width={[1, 1 / 2]}>

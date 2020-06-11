@@ -10,10 +10,13 @@ import figure from './figure'
 import siteSettings from './siteSettings'
 import rethinkTabs from './rethinkTabs'
 import pageTitle from './pageTitle'
+import review from './review'
 
 import homeImplants from './home/implants'
 import homeRethink from './home/rethink'
 import homeHero from './home/hero'
+import homeReviews from './home/reviews'
+import homeMantra from './home/mantra'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,11 +31,14 @@ export default createSchema({
     figure,
     pageTitle,
     rethinkTabs,
+    review,
     siteSettings,
 
     homeHero,
     homeImplants,
-    homeRethink
+    homeRethink,
+    homeReviews,
+    homeMantra
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

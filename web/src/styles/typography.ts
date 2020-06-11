@@ -18,6 +18,12 @@ import HelveticaNeueLTStdMdCnWoff2 from './fonts/HelveticaNeueLTStd-MdCn.woff2'
 import HelveticaNeueLTStdMdCnWoff from './fonts/HelveticaNeueLTStd-MdCn.woff'
 import HelveticaNeueLTStdMdCnOtf from './fonts/HelveticaNeueLTStd-MdCn.otf'
 
+// Helvetica Neue Light
+import HelveticaNeueLTStdLtEot from './fonts/HelveticaNeueLTStd-Lt.eot'
+import HelveticaNeueLTStdLtWoff2 from './fonts/HelveticaNeueLTStd-Lt.woff2'
+import HelveticaNeueLTStdLtWoff from './fonts/HelveticaNeueLTStd-Lt.woff'
+import HelveticaNeueLTStdLtOtf from './fonts/HelveticaNeueLTStd-Lt.otf'
+
 // Helvetica Neue Roman
 import HelveticaNeueLTStdRomanEot from './fonts/HelveticaNeueLTStd-Roman.eot'
 import HelveticaNeueLTStdRomanWoff2 from './fonts/HelveticaNeueLTStd-Roman.woff2'
@@ -55,6 +61,19 @@ const Typography = css`
       url(${HelveticaNeueLTStdMdCnOtf}) format('opentype'),
       url(${HelveticaNeueLTStdMdCnEot}?#iefix) format('embedded-opentype');
     font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Helvetica Neue Light */
+  @font-face {
+    font-family: 'Helvetica';
+    src: url(${HelveticaNeueLTStdLtEot});
+    src: url(${HelveticaNeueLTStdLtWoff2}) format('woff2'),
+      url(${HelveticaNeueLTStdLtWoff}) format('woff'),
+      url(${HelveticaNeueLTStdLtOtf}) format('opentype'),
+      url(${HelveticaNeueLTStdLtEot}?#iefix) format('embedded-opentype');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
@@ -165,6 +184,7 @@ const Typography = css`
   h3,
   .text--lg {
     font-size: ${theme.root.font.md};
+    font-weight: 400;
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 1em;
 
@@ -176,7 +196,7 @@ const Typography = css`
   .text--md {
     font-size: ${theme.fontSizes[2]};
     font-weight: 500;
-    line-height: ${theme.root.font.bodyLineHeight};
+    /* line-height: ${theme.root.font.bodyLineHeight}; */
     text-transform: uppercase;
     margin: 0 0 0.5em;
 

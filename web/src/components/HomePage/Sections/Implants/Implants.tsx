@@ -92,12 +92,12 @@ const Implants = () => {
     )
   }
   return (
-    <Section bg="secondary" color="white" border={false}>
+    <Section bg="secondary" color="white">
       <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box>
       <Box width={1 / 2}>
-        <Heading as="h5" color="yellow">
+        <Heading as="h5" color="primary" fontWeight={500}>
           Implants
         </Heading>
         <Heading as="h3" fontWeight={400}>
