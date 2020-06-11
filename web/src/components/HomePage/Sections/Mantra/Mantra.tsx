@@ -71,10 +71,10 @@ const Mantra = () => {
           >
             <Box>
               <Heading as="h5" color="tertiary" fontWeight={500}>
-                mantra
+                {query.title}
               </Heading>
-              <Heading as="h4" fontSize={`calc(${theme.fontSizes[3]} * 1.25)`}>
-                we make orthopaedic implants that are good for all
+              <Heading as="h3" fontSize={`calc(${theme.fontSizes[3]} * 1.5)`} fontWeight={500}>
+                {query.heading}
               </Heading>
             </Box>
             <Box>

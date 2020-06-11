@@ -11,16 +11,21 @@ import { Box, Flex } from '../../../../elements'
 export const Learn = styled(Box)`
   div {
     border-bottom: none !important;
-  }
-  
-  ul {
-    li button {
-      font-family: ${theme.fonts.heading};
-      font-weight: 500 !important;
-      text-transform: uppercase !important;
-      text-align: left !important;
-      padding: ${theme.space[3]} ${theme.space[6]} ${theme.space[3]}
-        ${theme.space[3]} !important;
+
+    
+
+    ul {
+      li button {
+        font-family: ${theme.fonts.heading};
+        font-size: ${theme.fontSizes[3]};
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        text-align: left !important;
+
+        /* background: ${theme.colors.secondary} !important; */
+        padding: ${theme.space[3]} ${theme.space[6]} ${theme.space[3]}
+          ${theme.space[3]} !important;
+      }
     }
   }
 `

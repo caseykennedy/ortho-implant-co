@@ -16,7 +16,7 @@ export const Panel = styled(Flex)`
 
   h2 {
     font-weight: 500;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 
   img {

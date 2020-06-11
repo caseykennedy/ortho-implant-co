@@ -184,8 +184,7 @@ const Typography = css`
   h3,
   .text--lg {
     font-size: ${theme.root.font.md};
-    font-weight: 400;
-    line-height: ${theme.root.font.bodyLineHeight};
+    /* line-height: ${theme.root.font.bodyLineHeight}; */
     margin: 0 0 1em;
 
     @media ${theme.mq.tablet} {

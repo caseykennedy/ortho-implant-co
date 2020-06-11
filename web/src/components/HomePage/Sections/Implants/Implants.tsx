@@ -107,22 +107,16 @@ const Implants = () => {
       </Box>
       <S.Carousel>
         <Swiper {...params}>
-          <Box p={5} bg="tertiary">
-            <Heading as="h3">Plates and Screws</Heading>
-            <Text as="p" mt={12}>Plates and Screws</Text>
-          </Box>
-          <Box p={5} bg="tertiary">
-            <Heading as="h3">Plates and Screws</Heading>
-            <Text as="p" mt={12}>Plates and Screws</Text>
-          </Box>
-          <Box p={5} bg="tertiary">
-            <Heading as="h3">Plates and Screws</Heading>
-            <Text as="p" mt={12}>Plates and Screws</Text>
-          </Box>
-          <Box p={5} bg="tertiary">
-            <Heading as="h3">Plates and Screws</Heading>
-            <Text as="p" mt={12}>Plates and Screws</Text>
-          </Box>
+          {Products.map(product => (
+            <S.Card key={product.category}>
+              <Heading as="h3" fontSize={4}>
+                {product.category}
+              </Heading>
+              <Text as="h4" mb={0}>
+                VIEW ALL
+              </Text>
+            </S.Card>
+          ))}
         </Swiper>
       </S.Carousel>
     </Section>
@@ -130,3 +124,21 @@ const Implants = () => {
 }
 
 export default Implants
+
+const Products = [
+  {
+    category: 'hip fractures'
+  },
+  {
+    category: 'plates and screws'
+  },
+  {
+    category: 'external fixation'
+  },
+  {
+    category: 'im nails'
+  },
+  {
+    category: 'sports'
+  }
+]
