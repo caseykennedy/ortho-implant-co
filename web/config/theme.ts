@@ -167,7 +167,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #000000',
+  border: '2px solid #000000',
   shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {

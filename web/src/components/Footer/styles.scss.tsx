@@ -15,10 +15,10 @@ export const Footer = styled(Flex)`
 
   background: ${theme.colors.secondary};
   color: ${theme.colors.background};
-  padding: ${theme.space[5]};
+  padding: 0 ${theme.space[5]} ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]};
+    padding: 0 ${theme.space[7]} ${theme.space[7]};
   }
 `
 
@@ -144,7 +144,6 @@ export const Row = styled(Flex)`
     }
 
     &:hover {
-
       span {
         margin-left: calc(${theme.space[5]} * 1.5);
       }
@@ -159,5 +158,53 @@ export const Row = styled(Flex)`
         fill: ${theme.colors.primary};
       }
     }
+  }
+`
+
+export const Digi = styled(Flex)`
+  justify-content: flex-end;
+  overflow: visible;
+  position: relative;
+  z-index: 99;
+
+  .space {
+    flex: 1;
+    margin-top: -40px;
+    background: ${theme.colors.secondary};
+
+    @media ${theme.mq.tablet} {
+      margin-top: -60px;
+    }
+
+    @media ${theme.mq.desktop} {
+      margin-top: -100px;
+    }
+  }
+
+  .pixels {
+    display: flex;
+    justify-content: flex-end;
+    /* flex: 1; */
+  }
+
+  svg {
+    height: 80px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+
+    @media ${theme.mq.tablet} {
+      height: 120px;
+      margin-top: -60px;
+      margin-bottom: -60px;
+    }
+
+    @media ${theme.mq.desktop} {
+      height: 200px;
+      margin-top: -100px;
+      margin-bottom: -100px;
+    }
+  }
+
+  @media ${theme.mq.tablet} {
   }
 `

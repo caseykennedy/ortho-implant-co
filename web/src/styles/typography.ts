@@ -207,7 +207,7 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: ${theme.fontSizes[1]};
-    font-weight: 400;
+    /* font-weight: 400; */
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;
     margin: 0 0 1.5em;
