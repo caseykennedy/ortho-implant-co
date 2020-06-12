@@ -101,7 +101,7 @@ const Implants = () => {
       <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box>
-      <Box width={1 / 2}>
+      <Box width={[1, 2 / 3]} mt={[8, 0]}>
         <Heading as="h5" color="primary" fontWeight={500}>
           Implants
         </Heading>

@@ -108,7 +108,7 @@ const Rethink = () => {
       <Box className="cta">
         <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
       </Box>
-      <Box width={2 / 3}>
+      <Box width={[1, 2 / 3]} mt={[8, 0]}>
         <Heading as="h5" color="tertiary">
           {query.title}
         </Heading>

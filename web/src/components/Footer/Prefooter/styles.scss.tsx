@@ -30,14 +30,14 @@ export const Sideboard = styled(Flex)`
   padding: ${theme.space[7]};
   width: calc(${theme.logoWidth} * 1);
 
-@media ${theme.mq.tablet} {
-  display: block;
-  width: calc(${theme.logoWidth} * 1);
-}
+  @media ${theme.mq.tablet} {
+    display: block;
+    width: calc(${theme.logoWidth} * 1);
+  }
 
-@media ${theme.mq.desktop} {
-  width: calc(${theme.logoWidth} * 2);
-}
+  @media ${theme.mq.desktop} {
+    width: calc(${theme.logoWidth} * 2);
+  }
 
   svg {
     fill: ${theme.colors.white};
