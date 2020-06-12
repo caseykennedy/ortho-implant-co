@@ -97,7 +97,7 @@ const Implants = () => {
     )
   }
   return (
-    <Section bg="secondary" color="white">
+    <Section bg="secondary" color="white" overflow="hidden">
       <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box>

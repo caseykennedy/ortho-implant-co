@@ -51,7 +51,7 @@ const Mantra = () => {
   // console.log(query)
   return (
     <>
-      <Section bg="primary" color="text">
+      <Section bg="primary" color="text" style={{ overflow: 'visible' }}>
         <S.Panel>
           <Box width={[1, 1, 1 / 2]}>
             {query.image && (

@@ -26,6 +26,7 @@ type Props = {
   pl?: number | number[] | string
   id?: string
   width?: number | number[] | string | string[]
+  overflow?: string
 }
 
 const Section: React.FC<Props> = ({
@@ -38,17 +39,19 @@ const Section: React.FC<Props> = ({
   pr,
   pl,
   id,
-  width
+  width,
+  overflow
 }) => (
   <Container
     as="section"
+    border={border}
     bg={bg}
     color={color}
     pt={pt}
     pb={pb}
     id={id}
     width={width}
-    border={border}
+    overflow={overflow}
   >
     <Box width={1} maxWidth={theme.maxWidth} pr={pr} pl={pl} m="0 auto">
       {children}
@@ -72,10 +75,10 @@ Section.defaultProps = defaultProps
 
 // ___________________________________________________________________
 
-const Container = styled(Box)<{ border?: boolean }>`
+const Container = styled(Box)<{ border?: boolean, overflow?: string }>`
   border-bottom: ${p => (!p.border ? 'none' : `${theme.border}`)};
   position: relative;
-  overflow: hidden;
+  overflow: ${p => (!p.overflow ? 'visible' : p.overflow)};
 
   .cta {
     position: absolute;

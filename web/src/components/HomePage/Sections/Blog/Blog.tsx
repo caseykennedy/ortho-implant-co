@@ -61,7 +61,7 @@ const Blog = () => {
             <ImgMatch src="blog.jpg" altText="blog" />
             <Flex className="card__content">
               <Box>
-                <Heading as="h5">value</Heading>
+                <Heading as="h5" color="tertiary">value</Heading>
                 <Text as="p">
                   We create better value for the implants you already know and
                   use on an everyday basis.
