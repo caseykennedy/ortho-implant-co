@@ -51,9 +51,12 @@ const Footer: React.FC = () => {
           </Text>
         </Box>
         <Box width={[1, 1 / 3]} mt={[5, 0]}>
-          <Heading as="h4" color="primary" fontWeight={500}>
-            Schedule a metting
-          </Heading>
+          <Link to="/contact" className="t--link">
+            <Heading as="h4" color="primary" fontWeight={500}>
+              Schedule a metting
+              <Icon name="nextArrow" />
+            </Heading>
+          </Link>
         </Box>
       </S.Row>
       <S.Row>
@@ -68,14 +71,14 @@ const Footer: React.FC = () => {
             <Icon name="twitter" />
           </a>
         </S.Social>
-        <Flex width={[1, 1 / 3]} mt={[5, 0]} justifyContent="space-between" fontSize={2}>
-          <S.Legal as="ul">
+        <S.Legal width={[1, 1 / 3]}>
+          <ul>
             <Link to="/">Terms</Link>
             <Link to="/">Privacy</Link>
             <Link to="/">Disclaimers</Link>
-          </S.Legal>
-          <Box>&copy; 2020</Box>
-        </Flex>
+          </ul>
+          <div className="copyright">&copy; 2020</div>
+        </S.Legal>
       </S.Row>
     </S.Footer>
   )

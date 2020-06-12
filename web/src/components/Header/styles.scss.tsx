@@ -48,6 +48,19 @@ export const Logo = styled(Box)`
 
 export const Nav = styled(Flex)`
   flex: 1;
+  display: none;
+
+  @media ${theme.mq.tablet} {
+    display: flex;
+  }
+
+  .cta {
+    display: none;
+
+    @media ${theme.mq.tablet} {
+      display: initial;
+    }
+  }
 `
 
 export const Toggle = styled.div`

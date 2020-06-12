@@ -9,6 +9,7 @@ import Hero from './Sections/Hero'
 import Implants from './Sections/Implants'
 import Reviews from './Sections/Reviews'
 import Mantra from './Sections/Mantra'
+import Blog from './Sections/Blog'
 
 import * as S from './styles.scss'
 import { Text, Heading, Box, Flex } from '../../elements'
@@ -25,7 +26,8 @@ const HomePage: React.FC = () => {
       <Implants />
       <Reviews />
       <Mantra />
-      <Divider bg="primary" py={12} />
+      <Blog />
+      {/* <Divider bg="primary" py={12} /> */}
     </S.HomePage>
   )
 }

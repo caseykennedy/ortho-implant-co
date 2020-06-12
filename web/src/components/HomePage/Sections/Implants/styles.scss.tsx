@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import Section from '../../../Section'
 import theme from '../../../../../config/theme'
 import { Box, Flex } from '../../../../elements'
 
@@ -16,9 +17,19 @@ export const Carousel = styled(Box)`
   .swiper-container {
     overflow: visible;
 
+    .parallax-bg {
+      background: yellow;
+    }
+
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
+
+        &:hover {
+          background: ${theme.colors.quaternary};
+          /* cursor: pointer; */
+        }
+
         &.swiper-slide-active {
           background: ${theme.colors.primary};
         }
@@ -34,7 +45,7 @@ export const Carousel = styled(Box)`
       .swiper-scrollbar-drag {
         background: ${theme.colors.primary};
         border-radius: 0px !important;
-        min-height: 10px;
+        min-height: 11px;
         position: relative;
         top: -5px;
       }

@@ -53,7 +53,7 @@ const Mantra = () => {
     <>
       <Section bg="primary" color="text">
         <S.Panel>
-          <Box width={[1, 1 / 2]}>
+          <Box width={[1, 1, 1 / 2]}>
             {query.image && (
               <Img
                 fluid={query.image.asset.fluid}
@@ -64,7 +64,7 @@ const Mantra = () => {
             )}
           </Box>
           <Flex
-            width={[1, 1 / 2]}
+            width={[1, 1, 1 / 2]}
             p={[5, 7]}
             flexDirection="column"
             justifyContent="space-between"

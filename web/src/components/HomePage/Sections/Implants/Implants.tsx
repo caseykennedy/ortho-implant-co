@@ -25,42 +25,42 @@ const Product = () => {
 // ___________________________________________________________________
 
 const Implants = () => {
-  const data: RethinkSectionQueryShape = useStaticQuery(graphql`
-    query ImplantsSectionQuery {
-      allSanityHomeRethink {
-        edges {
-          node {
-            heading
-            title
-            linkTitle
-            linkTo
-            id
-            tabPanels {
-              linkTo
-              linkTitle
-              tag
-              title
-              image {
-                asset {
-                  fluid(maxWidth: 1080) {
-                    src
-                    aspectRatio
-                    base64
-                    sizes
-                    srcSet
-                    srcSetWebp
-                    srcWebp
-                  }
-                }
-              }
-              _rawMessage
-            }
-          }
-        }
-      }
-    }
-  `)
-  const query = data.allSanityHomeRethink.edges[0].node
+  // const data: RethinkSectionQueryShape = useStaticQuery(graphql`
+  //   query ImplantsSectionQuery {
+  //     allSanityHomeRethink {
+  //       edges {
+  //         node {
+  //           heading
+  //           title
+  //           linkTitle
+  //           linkTo
+  //           id
+  //           tabPanels {
+  //             linkTo
+  //             linkTitle
+  //             tag
+  //             title
+  //             image {
+  //               asset {
+  //                 fluid(maxWidth: 1080) {
+  //                   src
+  //                   aspectRatio
+  //                   base64
+  //                   sizes
+  //                   srcSet
+  //                   srcSetWebp
+  //                   srcWebp
+  //                 }
+  //               }
+  //             }
+  //             _rawMessage
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // const query = data.allSanityHomeRethink.edges[0].node
   // console.log('---_- Rethink -_---')
   // console.log(query)
   const params = {
@@ -81,6 +81,11 @@ const Implants = () => {
         spaceBetween: 30
       }
     },
+    // parallax: true,
+    // parallaxEl: {
+    //   el: '.parallax-bg',
+    //   value: '-23%'
+    // },
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false

@@ -13,16 +13,26 @@ export const Hero = styled(Flex)`
   background: ${theme.colors.secondary};
   position: relative;
   width: 100%;
-  height: calc(70vh - ${theme.headerHeight});
+  height: calc(20vh - ${theme.headerHeight});
   min-height: calc(${theme.space[3]} * 24);
+
+  @media ${theme.mq.tablet} {
+    height: calc(70vh - ${theme.headerHeight});
+  }
 `
 
 export const Sideboard = styled(Box)`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
+
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
+  display: none;
+
+  @media ${theme.mq.tablet} {
+    display: block;
+  }
 `
 
 export const Billboard = styled(Flex)`
@@ -40,7 +50,11 @@ export const Billboard = styled(Flex)`
 `
 
 export const Figure = styled(Box)`
+  margin-top: -${theme.space[2]};
   position: relative;
-  margin-top: -${theme.space[8]};
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    margin-top: -${theme.space[8]};
+  }
 `

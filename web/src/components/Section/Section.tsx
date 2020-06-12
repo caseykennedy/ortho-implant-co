@@ -16,8 +16,9 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 type Props = {
-  children: React.ReactNode
   bg?: string
+  border?: boolean
+  children: React.ReactNode
   color?: string
   pt?: number | number[] | string
   pb?: number | number[] | string
@@ -25,20 +26,19 @@ type Props = {
   pl?: number | number[] | string
   id?: string
   width?: number | number[] | string | string[]
-  border?: boolean
 }
 
 const Section: React.FC<Props> = ({
-  children,
   bg,
+  border,
+  children,
   color,
   pt,
   pb,
   pr,
   pl,
   id,
-  width,
-  border
+  width
 }) => (
   <Container
     as="section"
@@ -75,6 +75,7 @@ Section.defaultProps = defaultProps
 const Container = styled(Box)<{ border?: boolean }>`
   border-bottom: ${p => (!p.border ? 'none' : `${theme.border}`)};
   position: relative;
+  overflow: hidden;
 
   .cta {
     position: absolute;

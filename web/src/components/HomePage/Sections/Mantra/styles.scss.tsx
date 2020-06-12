@@ -8,11 +8,14 @@ import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
-export const Panel = styled(Flex)`
+export const Panel = styled.div`
+  display: flex;
   flex-wrap: wrap;
+  
   position: relative;
-  top: calc(${theme.space[7]} * -2);
+  margin-top: calc(${theme.space[7]} * -2);
   background: ${theme.colors.white};  
+  z-index: 99;
 
   h2 {
     font-weight: 500;
