@@ -161,7 +161,7 @@ export const Row = styled(Flex)`
   }
 `
 
-export const Digi = styled(Flex)`
+export const Decorator = styled(Flex)`
   justify-content: flex-end;
   overflow: visible;
   position: relative;

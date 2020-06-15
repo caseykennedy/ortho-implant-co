@@ -12,8 +12,6 @@ export const Learn = styled(Box)`
   div {
     border-bottom: none !important;
 
-    
-
     ul {
       li button {
         font-family: ${theme.fonts.heading};
@@ -28,11 +26,48 @@ export const Learn = styled(Box)`
       }
     }
   }
+
+  .swiper-container {
+    overflow: visible;
+
+    .parallax-bg {
+      background: yellow;
+    }
+
+    .swiper-wrapper {
+      .swiper-slide {
+        background: ${theme.colors.quaternary};
+        transition: ${theme.transition.all};
+
+        &:hover {
+          /* background: ${theme.colors.quaternary}; */
+          /* cursor: pointer; */
+        }
+
+        &.swiper-slide-active {
+          background: ${theme.colors.primary};
+        }
+      }
+    }
+
+    .swiper-pagination {
+      background: ${theme.colors.primary};
+      bottom: -2rem;
+
+      .swiper-pagination-bullets {
+        span {
+          cursor: pointer;
+          background: ${theme.colors.primary} !important;
+          padding: ${theme.space[5]};
+        }
+      }
+    }
+  }
 `
 
 export const Panel = styled(Flex)`
   flex-wrap: wrap;
-  background: ${theme.colors.primary};
+  /* background: ${theme.colors.primary}; */
 
   h2 {
     font-weight: 500;

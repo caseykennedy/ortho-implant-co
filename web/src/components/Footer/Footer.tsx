@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
   return (
     <>
       <Prefooter />
-      <S.Digi>
+      <S.Decorator>
         <div className="space" />
         <div className="pixels">
           <Pixels />
         </div>
-      </S.Digi>
+      </S.Decorator>
       <S.Footer>
         <S.Nav as="nav">
           <Link to="/">Rethink</Link>
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               <Link to="/">Privacy</Link>
               <Link to="/">Disclaimers</Link>
             </ul>
-            <div className="copyright">&copy; 2020</div>
+            <div className="copyright">&copy; {Year()}</div>
           </S.Legal>
         </S.Row>
       </S.Footer>

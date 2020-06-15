@@ -65,7 +65,7 @@ const Mantra = () => {
           </Box>
           <Flex
             width={[1, 1, 1 / 2]}
-            p={[5, 7]}
+            p={theme.gutter.axis}
             flexDirection="column"
             justifyContent="space-between"
           >

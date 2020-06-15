@@ -12,7 +12,9 @@ type ThemeShape = {
     [key: string]: string
   }
   space: string[]
-  gutter: number | number[]
+  gutter: {
+    [key: string]: string | number | number[]
+  }
   fonts: {
     [key: string]: string
   }
@@ -82,7 +84,7 @@ const theme: ThemeShape = {
     secondary: '#000000',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
-    quinary: '#808080',
+    quinary: '#ebebeb',
 
     black: '#000000',
     white: '#ffffff',
@@ -108,8 +110,12 @@ const theme: ThemeShape = {
     '18rem'       // 13
   ],
 
-  // Main section x-axis gutter
-  gutter: 3,
+  // Left/Right gutter
+  gutter: {
+    tablet: '2rem',
+    desktop: '4rem',
+    axis: [5, 7],
+  },
 
   // Typography
   // ___________________________________________________________________

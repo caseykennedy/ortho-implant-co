@@ -6,7 +6,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import Swiper from 'react-id-swiper'
-import 'swiper/css/swiper.css'
 
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
@@ -69,16 +68,16 @@ const Implants = () => {
     grabCursor: true,
     slidesPerView: 1,
     spaceBetween: 20,
-    ContainerEl: 'section',
-    WrapperEl: 'section',
+    ContainerEl: 'div',
+    WrapperEl: 'div',
     breakpoints: {
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
       768: {
         slidesPerView: 2,
         spaceBetween: 30
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50
       }
     },
     // parallax: true,
@@ -101,7 +100,7 @@ const Implants = () => {
       <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box>
-      <Box width={[1, 2 / 3]} mt={[8, 0]}>
+      <Box width={[1, 1 / 2]} mt={[8, 0]}>
         <Heading as="h5" color="primary" fontWeight={500}>
           Implants
         </Heading>

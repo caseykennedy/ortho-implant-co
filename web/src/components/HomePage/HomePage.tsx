@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import 'swiper/css/swiper.css'
 
 import Rethink from './Sections/Rethink'
 import Hero from './Sections/Hero'

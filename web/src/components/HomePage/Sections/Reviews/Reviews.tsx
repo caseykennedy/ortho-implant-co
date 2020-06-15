@@ -9,18 +9,13 @@ import Img from 'gatsby-image/withIEPolyfill'
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
 import ImgMatch from '../../../ImgMatch'
+import Pixels from '../../../Pixels'
 
 import Button from '../../../../elements/Button'
 import { Box, Flex, Heading, Text } from '../../../../elements'
 
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
-
-const Product = () => {
-  return
-}
 
 // ___________________________________________________________________
 
@@ -57,8 +52,19 @@ const Reviews = () => {
   const query = data.allSanityHomeReviews.edges[0].node
   // console.log('---_- Reviews -_---')
   // console.log(query)
+  const decoratorProps = {
+    fillA: theme.colors.primary,
+    fillB: theme.colors.secondary,
+    fillC: theme.colors.secondary,
+    fillD: theme.colors.tertiary
+  }
   return (
     <>
+      <S.Decorator>
+        <div className="pixels">
+          <Pixels {...decoratorProps} />
+        </div>
+      </S.Decorator>
       <Box bg="tertiary">
         <Box>
           <Img

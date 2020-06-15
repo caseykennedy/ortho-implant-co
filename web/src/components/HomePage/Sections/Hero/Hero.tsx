@@ -46,7 +46,7 @@ const Hero = () => {
     <>
       <S.Hero>
         <S.Sideboard>
-          <Heading as="h5">{query.title}</Heading>
+          {/* <Heading as="h5">{query.title}</Heading> */}
         </S.Sideboard>
         <S.Billboard>
           <Box>

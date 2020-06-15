@@ -1,19 +1,45 @@
-import * as React from 'react'
+// Pixels
+// Decorator with fill props
 
-const Pixels = () => (
+// ___________________________________________________________________
+
+import * as React from 'react'
+import theme from '../../config/theme'
+
+// ___________________________________________________________________
+
+type Props = {
+  fillA?: string
+  fillB?: string
+  fillC?: string
+  fillD?: string
+}
+
+const defaultProps = {
+  fillA: theme.colors.quinary,
+  fillB: theme.colors.quaternary,
+  fillC: theme.colors.tertiary,
+  fillD: theme.colors.primary
+}
+
+const Pixels: React.FC<Props> = ({ fillA, fillB, fillC, fillD }) => (
   <svg viewBox="0 0 444 222">
     <title>Orthopaedic Implant Co.</title>
-    <rect x="333.328" width="110.671" height="110.671" fill="#9D9FA2" />
-    <rect x="111" width="111" height="111" fill="#C4C4C4" />
+    <rect width="111" height="111" fill={fillA} />
+    <rect x="111" width="111" height="111" fill={fillB} />
+    <rect x="333" width="111" height="111" fill={fillC} />
     <rect
-      x="333.328"
-      y="110.67"
-      width="110.671"
-      height="111.329"
-      fill="#FFC907"
+      x="333"
+      y="111"
+      width="111"
+      height="111"
+      fill={fillD}
     />
-    <rect width="111" height="111" fill="#EBEBEB" />
   </svg>
 )
 
 export default Pixels
+
+// ___________________________________________________________________
+
+Pixels.defaultProps = defaultProps

@@ -26,7 +26,8 @@ export const Nav = styled.nav`
 
   .nav-link {
     font-family: ${theme.fonts.heading};
-    font-weight: 400;
+    font-size: ${theme.fontSizes[2]};
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 

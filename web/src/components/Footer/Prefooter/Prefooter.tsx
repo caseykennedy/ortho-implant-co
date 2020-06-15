@@ -50,7 +50,7 @@ const Prefooter = () => {
     <>
       <S.Prefooter>
         <S.Sideboard>
-          <Logo />
+          {/* <Logo /> */}
         </S.Sideboard>
         <S.Billboard>
           <Box className="cta">
@@ -59,9 +59,9 @@ const Prefooter = () => {
             </Button>
           </Box>
           <Box width={1} mt={9}>
-            <Heading as="h5" color="white">
+            {/* <Heading as="h5">
               Get to know us
-            </Heading>
+            </Heading> */}
             <Heading as="h2" mb={0}>
               Let’s schedule
               <br />a one-to-one
