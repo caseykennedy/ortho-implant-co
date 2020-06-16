@@ -188,6 +188,7 @@ const Typography = css`
     margin: 0 0 1em;
 
     @media ${theme.mq.tablet} {
+      font-size: ${theme.root.font.lg};
     }
   }
 

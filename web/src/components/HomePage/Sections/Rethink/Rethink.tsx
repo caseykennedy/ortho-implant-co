@@ -31,7 +31,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
   const params = {
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
+      clickable: true
       // renderBullet: () => {
       //   return <Titles />
       // }
@@ -43,8 +43,16 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
         <S.Panel key={panel.title}>
           <Flex width={[1, 1 / 2]} p={theme.gutter.axis} className="content">
             <div>
-              <Heading as="h5">{panel.tag}</Heading>
-              <Heading as="h2">For {panel.title}</Heading>
+              <Heading
+                as="h3"
+                fontSize={5}
+                lineHeight={1}
+                mb={0}
+                style={{ textTransform: 'uppercase' }}
+              >
+                {panel.tag}
+              </Heading>
+              <Heading as="h4">For {panel.title}</Heading>
             </div>
             <div>
               {panel._rawMessage && (
@@ -119,11 +127,13 @@ const Rethink = () => {
       <div className="cta">
         <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
       </div>
-      <Box width={[1, 2 / 3]} mt={[8, 0]}>
+      <Box width={[1, 1 / 2]} mt={[8, 0]}>
         <Heading as="h5" color="tertiary">
           {query.title}
         </Heading>
-        <Heading as="h2">{query.heading}</Heading>
+        <Heading as="h2" fontSize={3}>
+          {query.heading}
+        </Heading>
       </Box>
       <S.Learn width={1} mt={12}>
         <TabsPanel panels={query.tabPanels} />

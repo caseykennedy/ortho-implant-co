@@ -13,11 +13,7 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type Props = {}
-
-// ___________________________________________________________________
-
-const Navigation: React.FC = () => {
+const Navigation = () => {
   return (
     <S.Nav>
       {data.map((item, idx) => (

@@ -33,22 +33,11 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
   return (
     <S.NavLink onClick={handleExitOnClick} style={transition}>
-      {!item.subPage ? (
-        <Box className="nav-mobile-sub">
-          <Link to={item.link} className="nav-mobile__link">
-            {item.name}
-          </Link>
-        </Box>
-      ) : (
-        <Box className="nav-mobile-sub">
-          <Text className="nav-mobile__link">{item.name}</Text>
-          {item.subPage.map((subItem, idx) => (
-            <Link to={subItem.link} key={idx} className="nav-mobile-sub__link">
-              {subItem.name}
-            </Link>
-          ))}
-        </Box>
-      )}
+      <Box className="nav-mobile-sub">
+        <Link to={item.link} className="nav-mobile__link">
+          {item.name}
+        </Link>
+      </Box>
     </S.NavLink>
   )
 }
@@ -91,57 +80,23 @@ export default NavLinks
 
 const navData = [
   {
-    name: 'About',
+    name: 'Rethink',
     link: '/about'
   },
   {
-    name: 'Government',
-    subPage: [
-      {
-        name: 'Cahuilla Gaming Agency',
-        link: '/government/cahuilla-gaming-agency'
-      },
-      {
-        name: 'Economic Development',
-        link: '/government/economic-development'
-      },
-      {
-        name: 'Tribal Council',
-        link: '/government/tribal-council'
-      }
-    ]
-  },
-  {
-    name: 'Departments',
-    subPage: [
-      {
-        name: 'Cultural',
-        link: '/departments/cultural'
-      },
-      {
-        name: 'Environmental Protection',
-        link: '/departments/environmental-protection-agency'
-      },
-      {
-        name: 'Family & Social Services',
-        link: '/departments/family-social-services'
-      },
-      {
-        name: 'Public Works',
-        link: '/departments/public-works'
-      },
-      {
-        name: 'Tribal Administration',
-        link: '/departments/tribal-admin'
-      }
-    ]
-  },
-  {
-    name: 'Enterprises',
+    name: 'About OIC',
     link: '/enterprises'
   },
   {
-    name: 'Resources',
+    name: 'Implants',
+    link: '/resources'
+  },
+  {
+    name: 'Blog',
+    link: '/resources'
+  },
+  {
+    name: 'Contact',
     link: '/resources'
   }
 ]

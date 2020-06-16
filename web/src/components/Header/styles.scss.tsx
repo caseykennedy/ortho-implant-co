@@ -26,10 +26,12 @@ export const Header = styled(Flex)`
 `
 
 export const Logo = styled(Box)`
-  background: ${theme.colors.primary};
+  background: ${theme.colors.secondary};
   padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
   height: ${theme.headerHeight};
+
+  /* border-bottom: 4px solid ${theme.colors.primary}; */
 
   @media (min-width: 400px) {
     display: flex;
@@ -40,6 +42,7 @@ export const Logo = styled(Box)`
   }
 
   svg {
+    fill: white;
     width: 100%;
     max-width: calc(${theme.space[3]} * 6);
     min-width: calc(${theme.space[3]} * 4);
@@ -49,6 +52,7 @@ export const Logo = styled(Box)`
 export const Nav = styled(Flex)`
   flex: 1;
   display: none;
+  justify-content: flex-end;
 
   @media ${theme.mq.tablet} {
     display: flex;
@@ -64,26 +68,15 @@ export const Nav = styled(Flex)`
 `
 
 export const Toggle = styled.div`
+  display: flex;
+  align-items: flex-start;
+  box-sizing: content-box;
+  padding: ${theme.space[5]};
+
   color: ${theme.colors.text};
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
   cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  box-sizing: content-box;
-
-  height: ${theme.headerHeight};
-  padding: 0 ${theme.space[4]};
-  border-left: ${theme.border};
-
-  @media ${theme.mq.tablet} {
-    padding: ${theme.space[2]} ${theme.space[4]};
-  }
-
-  @media ${theme.mq.desktop} {
-    display: none;
-  }
 
   span {
     svg {

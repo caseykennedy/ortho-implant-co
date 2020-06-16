@@ -10,19 +10,19 @@ import { Box, Flex } from '../../../../elements'
 
 export const Hero = styled(Flex)`
   flex-wrap: wrap;
-  background: ${theme.colors.quinary};
-  position: relative;
+  background: ${theme.colors.secondary};
+  position: absolute;
   width: 100%;
-  height: calc(20vh - ${theme.headerHeight});
-  min-height: 222px;
+  /* height: calc(20vh - ${theme.headerHeight}); */
+  min-height: calc(${theme.space[3]} * 15);
 
   @media ${theme.mq.tablet} {
-    height: calc(60vh - ${theme.headerHeight});
+    /* height: calc(30vh - ${theme.headerHeight}); */
   }
 `
 
 export const Sideboard = styled(Box)`
-  color: ${theme.colors.tertiary};
+  color: ${theme.colors.text};
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
@@ -50,11 +50,11 @@ export const Billboard = styled(Flex)`
 `
 
 export const Figure = styled(Box)`
-  margin-top: -${theme.space[2]};
+  /* margin-top: -${theme.space[2]}; */
   position: relative;
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    margin-top: -${theme.space[10]};
+    /* margin-top: -${theme.space[11]}; */
   }
 `

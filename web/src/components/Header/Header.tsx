@@ -13,6 +13,7 @@ import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from './Overlay'
 import Button from '../../elements/Button'
+import Icon from '../Icons'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -38,16 +39,25 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       >
         <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
       </Overlay>
+
       <S.Header as="header">
         <S.Logo>
           <Link to="/" aria-label="Ortho Implant Co., back to home">
             <Logo />
           </Link>
         </S.Logo>
+
+        {/* <S.Toggle onClick={toggleModal} aria-label="toggle menu">
+          <Icon name="hamburger" color="black" />
+        </S.Toggle> */}
+
         <S.Nav>
           <Navigation />
-          <Box className="cta" pr={theme.gutter.axis}>
-            <Button to="/contact" invert={false}>Talk to us</Button>
+
+          <Box className="cta">
+            <Button to="/contact" invert={false}>
+              Talk to us
+            </Button>
           </Box>
         </S.Nav>
       </S.Header>

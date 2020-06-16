@@ -30,9 +30,9 @@ const RootVariables = css`
     /* type scale */
     --text-xs: calc(1.5em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
     --text-sm: calc(1.5em / var(--text-scale-ratio));
-    --text-md: calc(1.1em * var(--text-scale-ratio));
-    --text-lg: calc(1.1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xl: calc(1.1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-md: calc(1.25em * var(--text-scale-ratio));
+    --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
     --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 

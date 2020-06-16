@@ -155,7 +155,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '100vw',
-  logoWidth: '180px',
+  logoWidth: '225px',
   headerHeight: '180px',
 
   grid: {
@@ -163,12 +163,12 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.15s ease-in-out'
+    all: 'all 0.1s ease-in-out'
   },
 
   transform: {
     matrix: {
-      from: 'matrix(1, 0, 0.02, 1, 32, 32)',
+      from: 'matrix(1, 0, 0, 1, 24, 0)',
       to: 'matrix(1, 0, 0, 1, 0, 0)'
     }
   },

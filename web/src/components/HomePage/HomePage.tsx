@@ -13,8 +13,6 @@ import Mantra from './Sections/Mantra'
 import Blog from './Sections/Blog'
 
 import * as S from './styles.scss'
-import { Text, Heading, Box, Flex } from '../../elements'
-import Divider from '../../elements/Divider'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
@@ -28,7 +26,6 @@ const HomePage: React.FC = () => {
       <Reviews />
       <Mantra />
       <Blog />
-      {/* <Divider bg="primary" py={12} /> */}
     </S.HomePage>
   )
 }

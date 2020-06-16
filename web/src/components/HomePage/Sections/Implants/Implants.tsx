@@ -104,7 +104,7 @@ const Implants = () => {
         <Heading as="h5" color="primary" fontWeight={500}>
           Implants
         </Heading>
-        <Heading as="h3" fontWeight={400}>
+        <Heading as="h3" fontSize={3} fontWeight={400}>
           We create better value for the implants you already know and use on an
           everyday basis.
         </Heading>

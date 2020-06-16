@@ -17,24 +17,24 @@ export const Overlay = styled(Flex)`
   justify-content: flex-start;
   flex-direction: column;
 
-  position: fixed;
-  overflow: auto;
-
   width: ${overlayWidth};
   height: calc(100vh - ${theme.headerHeight});
+  overflow: auto;
 
-  top: 69px;
+  position: fixed;
+  /* top: 69px; */
   right: 0;
   bottom: 0;
 
-  background: ${theme.colors.background};
+  background: ${theme.colors.secondary};
+  color: ${theme.colors.white};
   visibility: hidden;
   opacity: 0;
   transition: all 0.333s ease-in-out;
   z-index: 9999;
 
   @media ${theme.mq.tablet} {
-    top: calc(77px + ${theme.space[2]});
+    /* top: calc(77px + ${theme.space[2]}); */
   }
 
   /* @media ${theme.mq.tablet} {

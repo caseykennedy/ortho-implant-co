@@ -51,7 +51,7 @@ export const Learn = styled(Box)`
     }
 
     .swiper-pagination {
-      background: ${theme.colors.primary};
+      /* background: ${theme.colors.primary}; */
       bottom: -2rem;
 
       .swiper-pagination-bullets {

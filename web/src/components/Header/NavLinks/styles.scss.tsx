@@ -27,7 +27,7 @@ export const NavLink = styled(AnimatedFlex)`
 
   .nav-mobile {
     &__link {
-      color: ${theme.colors.text};
+      /* color: ${theme.colors.text}; */
       font-size: ${theme.fontSizes[2]};
       text-transform: uppercase;
       padding: ${theme.space[4]};

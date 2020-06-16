@@ -59,7 +59,7 @@ export const Card = styled(Flex)`
 
   background: ${theme.colors.tertiary};
   padding: ${theme.space[5]};
-  min-height: 500px;
+  min-height: 400px;
 
   color: ${theme.colors.text};
   text-transform: uppercase;
