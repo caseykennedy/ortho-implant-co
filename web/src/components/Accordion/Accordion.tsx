@@ -64,11 +64,11 @@ const Accordion: React.FC<AccordionProps> = ({
           colorActive={colorActive}
           bg={bg}
         >
-          <Heading as="h2" fontSize={fontSize} mb={0}>
+          <Heading as="h3" fontSize={fontSize} mb={0}>
             {title}
           </Heading>
           <S.Carat
-            name="carat"
+            name="nextArrow"
             color="white"
             className={setRotate}
             chevronColor={chevronColor}

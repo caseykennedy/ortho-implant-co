@@ -67,6 +67,7 @@ export const Learn = styled(Box)`
 
 export const Panel = styled(Flex)`
   flex-wrap: wrap;
+  cursor: grab;
   /* background: ${theme.colors.primary}; */
 
   h2 {

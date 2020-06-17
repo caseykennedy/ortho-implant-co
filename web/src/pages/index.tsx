@@ -24,8 +24,8 @@ const Index = () => {
   const pageAnimation = useSpring({
     config: config.molasses,
     delay: 0,
-    from: { transform: theme.transform.matrix.from },
-    to: { transform: theme.transform.matrix.to }
+    from: { opacity: 0 },
+    to: { opacity: 1 }
   })
   return (
     <Layout>

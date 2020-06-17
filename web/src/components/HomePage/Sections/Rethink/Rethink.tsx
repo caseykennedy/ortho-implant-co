@@ -30,6 +30,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
   }
   const params = {
     pagination: {
+      speed: 8000,
       el: '.swiper-pagination',
       clickable: true
       // renderBullet: () => {

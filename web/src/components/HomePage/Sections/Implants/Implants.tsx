@@ -110,7 +110,7 @@ const Implants = () => {
         </Heading>
       </Box>
       <S.Carousel>
-        <Swiper {...params}>
+        {/* <Swiper {...params}>
           {Products.map(product => (
             <S.Card key={product.category}>
               <Heading as="h3" fontSize={4}>
@@ -121,7 +121,7 @@ const Implants = () => {
               </Text>
             </S.Card>
           ))}
-        </Swiper>
+        </Swiper> */}
       </S.Carousel>
     </Section>
   )
