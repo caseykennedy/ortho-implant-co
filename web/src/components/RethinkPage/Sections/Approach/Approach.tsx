@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import { Parallax } from 'react-scroll-parallax'
 
 import ImgMatch from '../../../ImgMatch'
 
@@ -70,7 +71,9 @@ const Approach = () => {
           ref={manifestoRef}
           style={manifestoSpring}
         >
-          <ImgMatch src="running-stairs.jpg" altText="Running up stairs" />
+          <Parallax className="custom-class" y={[-25, 15]} tagOuter="figure">
+            <ImgMatch src="running-stairs.jpg" altText="Running up stairs" />
+          </Parallax>
         </AnimatedBox>
 
         <AnimatedBox

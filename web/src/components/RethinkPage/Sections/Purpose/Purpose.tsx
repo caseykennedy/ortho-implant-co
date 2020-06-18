@@ -2,11 +2,12 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import { Parallax } from 'react-scroll-parallax'
 
 import ImgMatch from '../../../ImgMatch'
 
@@ -69,8 +70,14 @@ const Purpose = () => {
         justifyContent="center"
         flexWrap="wrap"
         px={[5, 10]}
+        style={{ position: 'relative' }}
       >
-        <AnimatedBox width={[1, 2 / 3]} pr={[0, 8, 12]} mb={[7, 0]} style={fadeSpring}>
+        <AnimatedBox
+          width={[1, 2 / 3]}
+          pr={[0, 8, 12]}
+          mb={[7, 0]}
+          style={fadeSpring}
+        >
           <Heading as="h4" color="tertiary">
             purpose
           </Heading>

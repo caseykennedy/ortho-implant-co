@@ -5,6 +5,7 @@
 
 import React, { useRef } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from '../Header'
 import Footer from '../Footer'
@@ -32,11 +33,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <S.Wrapper>
-        <Header mainRef={mainRef} />
-        <S.Main ref={mainRef}>{children}</S.Main>
-        <Footer />
-      </S.Wrapper>
+      <ParallaxProvider>
+        <S.Wrapper>
+          <Header mainRef={mainRef} />
+          <S.Main ref={mainRef}>{children}</S.Main>
+          <Footer />
+        </S.Wrapper>
+      </ParallaxProvider>
     </ThemeProvider>
   )
 }

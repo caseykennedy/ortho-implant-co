@@ -68,6 +68,7 @@
     "react-id-swiper": "^3.0.0",
     "react-intersection-observer": "^8.26.2",
     "react-moment": "^0.9.7",
+    "react-scroll-parallax": "^2.3.3",
     "react-spring": "^8.0.27",
     "rebass": "^3.2.2",
     "styled-breakpoints": "^6.11.0",
