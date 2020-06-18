@@ -4,7 +4,7 @@
 
 import React, { useState, useRef } from 'react'
 
-import { Box, Text, Heading } from '../../elements'
+import { Box, Flex, Text, Heading } from '../../elements'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -20,6 +20,7 @@ type AccordionProps = {
   colorActive: string
   bg: string
   fontSize?: number
+  subTitle?: string
 }
 
 // ___________________________________________________________________
@@ -32,7 +33,8 @@ const Accordion: React.FC<AccordionProps> = ({
   borderColor,
   colorActive,
   bg,
-  fontSize
+  fontSize,
+  subTitle
 }) => {
   // Accordion hooks
   const [setActive, setActiveState] = useState('')
@@ -41,8 +43,6 @@ const Accordion: React.FC<AccordionProps> = ({
 
   // Reference the accordion content height
   const content = useRef(null)
-
-  
 
   // Toggle classes / height
   function toggleAccordion() {
@@ -64,9 +64,12 @@ const Accordion: React.FC<AccordionProps> = ({
           colorActive={colorActive}
           bg={bg}
         >
-          <Heading as="h3" fontSize={fontSize} mb={0}>
-            {title}
-          </Heading>
+          <Flex width={2 / 3}>
+            <Heading as="h3" fontSize={fontSize} mb={0} width={1 / 2}>
+              {title}
+            </Heading>
+            <Text as="span" mb={0}>{subTitle}</Text>
+          </Flex>
           <S.Carat
             name="nextArrow"
             color="white"

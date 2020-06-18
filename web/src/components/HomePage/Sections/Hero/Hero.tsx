@@ -5,6 +5,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
+import { Parallax } from 'react-scroll-parallax'
 
 import * as S from './styles.scss'
 import { Box, Flex, Heading } from '../../../../elements'
@@ -59,14 +60,16 @@ const Hero = () => {
           </Box>
         </S.Billboard>
       </S.Hero>
-      <S.Figure>
-        <Img
-          fluid={query.image.asset.fluid}
-          objectFit="cover"
-          objectPosition="50% 50%"
-          alt={query.message}
-        />
-      </S.Figure>
+      <Parallax className="custom-class" y={[-5, 10]} tagOuter="figure">
+        <S.Figure>
+          <Img
+            fluid={query.image.asset.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt={query.message}
+          />
+        </S.Figure>
+      </Parallax>
     </>
   )
 }

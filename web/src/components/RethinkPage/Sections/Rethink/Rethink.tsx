@@ -8,6 +8,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
+import BlockContent from '../../../BlockContent'
 import ImgMatch from '../../../ImgMatch'
 import Accordion from '../../../Accordion'
 
@@ -17,98 +18,148 @@ import theme from '../../../../../config/theme'
 
 // ___________________________________________________________________
 
+type RethinkNotionsQueryShape = {
+  allSanityRethinkNotions: {
+    edges: {
+      node: {
+        id: string
+        title: string
+        heading: string
+        rethinkNotions: RethinkNotion
+      }
+    }[]
+  }
+}
+
+type NotionData = {
+  data: RethinkNotion
+}
+
+type RethinkNotion = {
+  title: string
+  subTitle: string
+  lead: string
+  _rawContent: string
+  image: {
+    asset: {
+      fluid: {
+        src: string
+        aspectRatio: number
+        base64: string
+        sizes: string
+        srcSet: string
+        srcSetWebp: string
+        srcWebp: string
+      }
+    }
+  }
+}
+
+// ___________________________________________________________________
+
 const AccordionProps = {
   chevronColor: theme.colors.text,
   color: theme.colors.text,
   colorActive: theme.colors.text,
-  borderColor: theme.colors.text
+  borderColor: theme.colors.text,
+  fontSize: 4,
+  bg: 'white'
 }
 
-const Rethink = () => {
-  // const data: HomeHeroQueryShape = useStaticQuery(graphql`
-  //   query RethinkHeroQuery {
-  //     allSanityHomeHero {
-  //       nodes {
-  //         hero {
-  //           title
-  //           message
-  //           image {
-  //             asset {
-  //               fluid(maxWidth: 1080) {
-  //                 src
-  //                 aspectRatio
-  //                 base64
-  //                 sizes
-  //                 srcSet
-  //                 srcSetWebp
-  //                 srcWebp
-  //               }
-  //             }
-  //           }
-  //           link
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const query = data.allSanityHomeHero.nodes[0].hero
-  // console.log('---_- Hero -_---')
-  // console.log(query)
+const Notion: React.FC<NotionData> = ({ data }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-360px 0px'
+    rootMargin: '-200px 0px'
   })
   const manifestoSpring = useSpring({
-    config: config.molasses,
-    opacity: !inView ? 0 : 1,
-    transform: !inView ? theme.transform.matrix.from : theme.transform.matrix.to
-  })
-  const fadeSpring = useSpring({
-    config: config.molasses,
-    delay: 160,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
   return (
-    <S.Rethink>
-      <Box width={1}>
-        {data.map((section, idx) => (
-          <Accordion
-            title={section.title}
-            bg="white"
-            key={idx}
-            {...AccordionProps}
-          >
-            <Flex flexDirection="row-reverse" flexWrap="wrap">
-              <Box
-                width={[1, 1, 6 / 8]}
-                p={theme.gutter.axis}
-                className="content"
-              >
-                {section.lead && (
-                  <Text as="p">
-                    {section.lead}
-                  </Text>
-                )}
-                {section.content && <Text as="p">{section.content}</Text>}
-                {/* {section._rawBlockContent && (
-                  <BlockContent blocks={section._rawBlockContent || []} />
-                )} */}
-              </Box>
+    <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
+      <Accordion
+        title={data.title}
+        subTitle={data.subTitle}
+        {...AccordionProps}
+      >
+        <Flex flexDirection="row-reverse" flexWrap="wrap" bg="quinary">
+          <Box width={[1, 1, 6 / 8]} p={theme.gutter.axis} className="content">
+            {data.lead && <Text as="p">{data.lead}</Text>}
+            {data._rawContent && (
+              <BlockContent blocks={data._rawContent || []} />
+            )}
+          </Box>
 
-              <Box bg="quinary" width={[1, 1, 2 / 8]} className="image">
-                {/* {section.image && (
-                <Img
-                  fluid={section.image.asset.fluid}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={section.title}
-                />
-              )} */}
-              </Box>
-            </Flex>
-          </Accordion>
+          <Box bg="quinary" width={[1, 1, 2 / 8]} className="image">
+            {data.image && (
+              <Img
+                fluid={data.image.asset.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={data.title}
+              />
+            )}
+          </Box>
+        </Flex>
+      </Accordion>
+    </AnimatedBox>
+  )
+}
+
+const Rethink = () => {
+  const data: RethinkNotionsQueryShape = useStaticQuery(graphql`
+    query RethinkNotionsQuery {
+      allSanityRethinkNotions {
+        edges {
+          node {
+            id
+            title
+            heading
+            rethinkNotions {
+              title
+              subTitle
+              lead
+              _rawContent
+              image {
+                asset {
+                  fluid(maxWidth: 1080) {
+                    src
+                    aspectRatio
+                    base64
+                    sizes
+                    srcSet
+                    srcSetWebp
+                    srcWebp
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const query = data.allSanityRethinkNotions.edges[0].node
+  // console.log('---_- Notions -_---')
+  // console.log(query)
+  return (
+    <S.Rethink>
+      <Box px={theme.gutter.axis}>
+        <Heading
+          as="h3"
+          fontWeight={400} 
+          fontSize={'1.5rem'}
+          color="primary"
+          style={{ textTransform: 'uppercase' }}
+        >
+          {/* {query.title} */}
+          we need to <Box as="span" color="black">rethink</Box>
+        </Heading>
+      </Box>
+      <Box>
+        {query.rethinkNotions.map((notion, idx) => (
+          <Notion data={notion} key={idx} />
         ))}
       </Box>
     </S.Rethink>
@@ -116,38 +167,3 @@ const Rethink = () => {
 }
 
 export default Rethink
-
-const data = [
-  {
-    title: 'Compromise',
-    subTitle: 'We need to rethink implants',
-    lead:
-      'We need to rethink the way implants are used, sold, and priced. Long-established gold standards in implants should not cost their weight in it.',
-    content:
-      'As a cutting-edge implant company, we have to make more from less to continue raising the bar of the quality care we deliver. By partnering with us, our customers stay ahead of the changes in reimbursement, policy reform, and uncertainty. Join us in moving healthcare forward.'
-  },
-  {
-    title: 'Healthcare',
-    subTitle: 'We need to rethink implants',
-    lead:
-      'We need to rethink the way implants are used, sold, and priced. Long-established gold standards in implants should not cost their weight in it.',
-    content:
-      'As a cutting-edge implant company, we have to make more from less to continue raising the bar of the quality care we deliver. By partnering with us, our customers stay ahead of the changes in reimbursement, policy reform, and uncertainty. Join us in moving healthcare forward.'
-  },
-  {
-    title: 'Price',
-    subTitle: 'We need to rethink implants',
-    lead:
-      'We need to rethink the way implants are used, sold, and priced. Long-established gold standards in implants should not cost their weight in it.',
-    content:
-      'As a cutting-edge implant company, we have to make more from less to continue raising the bar of the quality care we deliver. By partnering with us, our customers stay ahead of the changes in reimbursement, policy reform, and uncertainty. Join us in moving healthcare forward.'
-  },
-  {
-    title: 'Relationships',
-    subTitle: 'We need to rethink implants',
-    lead:
-      'We need to rethink the way implants are used, sold, and priced. Long-established gold standards in implants should not cost their weight in it.',
-    content:
-      'As a cutting-edge implant company, we have to make more from less to continue raising the bar of the quality care we deliver. By partnering with us, our customers stay ahead of the changes in reimbursement, policy reform, and uncertainty. Join us in moving healthcare forward.'
-  }
-]

@@ -124,7 +124,7 @@ const Rethink = () => {
   // console.log('---_- Rethink -_---')
   // console.log(query)
   return (
-    <Section overflow="hidden">
+    <Section overflow="hidden" bg="background">
       <div className="cta">
         <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
       </div>

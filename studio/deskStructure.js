@@ -69,7 +69,7 @@ export default () =>
                     .documentId("homeImplants")
                 )
                 .icon(MdViewDay),
-              
+
               // Reviews
               S.listItem()
                 .title("Reviews")
@@ -90,7 +90,7 @@ export default () =>
                     .schemaType("homeMantra")
                     .documentId("homeMantra")
                 )
-                .icon(MdViewDay),
+                .icon(MdViewDay)
             ])
         )
         .icon(MdFolder),
@@ -112,6 +112,17 @@ export default () =>
                     .id("pageTitle")
                     .schemaType("pageTitle")
                     .documentId("pageTitle")
+                )
+                .icon(MdViewDay),
+
+              // Rethink Notions
+              S.listItem()
+                .title("Rethink Notions")
+                .child(
+                  S.editor()
+                    .id("rethinkNotions")
+                    .schemaType("rethinkNotions")
+                    .documentId("rethinkNotions")
                 )
                 .icon(MdViewDay)
             ])

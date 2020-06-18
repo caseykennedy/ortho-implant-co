@@ -40,17 +40,18 @@ export const AccordionInner = styled.div`
 
 export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, color: string }>`
   align-items: flex-end;
+  justify-content: space-between;
   background: ${p => p.bg};
   color: ${p => p.color};
   cursor: pointer;
 
   border: none;
   outline: none;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[7]} ${theme.space[5]};
   transition: background-color 0.6s ease;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]};
+    padding: ${theme.space[8]} ${theme.space[7]};
   }
 
   &:last-child {
@@ -60,7 +61,7 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   &:hover,
   &.active  {
     color: ${p => p.colorActive};
-    background: ${p => p.bg && darken(.08, p.bg)};
+    background: ${theme.colors.quinary};
   }
 
   /* &.active {
@@ -68,15 +69,9 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   } */
 
   h3 {
-    font-size: ${theme.fontSizes[3]};
-    font-weight: 400;
     line-height: 0.8;
     text-transform: uppercase;
     margin-bottom: 0;
-
-    @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[3]};
-    }
   }
 `
 
@@ -87,7 +82,6 @@ export const AccordionContent = styled(Box)<{ borderColor: string }>`
 `
 
 export const Carat = styled(Icon)<{ chevronColor: string }>`
-  margin-left: auto;
   margin-right: ${theme.space[2]};
   transition: transform 0.3s ease;
 

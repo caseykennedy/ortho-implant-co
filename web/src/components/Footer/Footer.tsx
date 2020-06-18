@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
         </S.Row>
-        <S.Row>
+        <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
             <a href="/" target="__blank">
               <Icon name="facebook" />
