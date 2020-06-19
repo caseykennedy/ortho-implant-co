@@ -55,23 +55,23 @@ const Hero = () => {
     <>
       <S.Hero>
         <S.Sideboard>
-          <Heading as="h5">implants you can trust</Heading>
+          <Heading as="h4" color="tertiary">quality + value</Heading>
         </S.Sideboard>
         <S.Billboard>
           <AnimatedBox style={fadeAnimation}>
-            {/* <Heading as="h5" color="tertiary">
-              {query.title}
-            </Heading> */}
+            <Heading as="h4" color="primary">
+              {/* {query.title} */}
+              quality + value
+            </Heading>
             <Heading
               as="h1"
               mb={0}
               // fontSize={`calc(${theme.root.font.lg} * 1.25)`}
             >
-              Implants
-              <br />
-              <Text as="span" color="tertiary">
-                you can trust
-              </Text>
+              Implants{' '}
+              <Box as="span" color="tertiary">
+                that are<br />good for all
+              </Box>
             </Heading>
           </AnimatedBox>
         </S.Billboard>
