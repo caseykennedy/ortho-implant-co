@@ -6,6 +6,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
+import Parallax from 'react-scroll-parallax'
 
 import ImgMatch from '../../../ImgMatch'
 
@@ -76,6 +77,8 @@ const Hero = () => {
           </AnimatedBox>
         </S.Billboard>
       </S.Hero>
+
+      {/* <Parallax y={[-5, 10]}>asdf</Parallax> */}
       <S.Figure>
         <ImgMatch src="pt-vista.jpg" altText="" />
         {/* <Img

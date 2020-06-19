@@ -10,7 +10,7 @@ import { Box, Flex } from '../../../../elements'
 
 export const Hero = styled(Flex)`
   flex-wrap: wrap;
-  background: ${theme.colors.secondary};
+  /* background: ${theme.colors.secondary}; */
   position: absolute;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */

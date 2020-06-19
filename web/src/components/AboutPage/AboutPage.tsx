@@ -18,8 +18,8 @@ const AboutPage = () => {
   return (
     <S.AboutPage>
       <Hero />
-      <Divider py={10} bg="primary" />
-      <Divider py={10} bg="primary" />
+      <Divider py={10} bg="white" />
+      <Divider py={10} bg="white" />
     </S.AboutPage>
   )
 }

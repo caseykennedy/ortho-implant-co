@@ -18,8 +18,8 @@ const ImplantsPage = () => {
   return (
     <S.ImplantsPage>
       <Hero />
-      <Divider py={10} bg="primary" />
-      <Divider py={10} bg="primary" />
+      <Divider py={10} bg="white" />
+      <Divider py={10} bg="white" />
     </S.ImplantsPage>
   )
 }

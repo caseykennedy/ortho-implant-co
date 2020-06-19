@@ -55,7 +55,7 @@ const Hero = () => {
     <>
       <S.Hero>
         <S.Sideboard>
-          <Heading as="h5">title</Heading>
+          <Heading as="h5">implants you can trust</Heading>
         </S.Sideboard>
         <S.Billboard>
           <AnimatedBox style={fadeAnimation}>
@@ -77,7 +77,7 @@ const Hero = () => {
         </S.Billboard>
       </S.Hero>
       <S.Figure>
-        <ImgMatch src="pt-vista.jpg" altText="" />
+        {/* <ImgMatch src="pt-vista.jpg" altText="" /> */}
         {/* <Img
           fluid={query.image.asset.fluid}
           objectFit="cover"

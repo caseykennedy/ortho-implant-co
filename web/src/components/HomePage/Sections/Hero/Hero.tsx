@@ -60,7 +60,7 @@ const Hero = () => {
           </Box>
         </S.Billboard>
       </S.Hero>
-      <Parallax className="custom-class" y={[-5, 10]} tagOuter="figure">
+      <Parallax y={[-5, 10]}>
         <S.Figure>
           <Img
             fluid={query.image.asset.fluid}
