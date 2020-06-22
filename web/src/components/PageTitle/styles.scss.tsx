@@ -1,14 +1,14 @@
-// Rethink Styles:
+// PageTitle Styles:
 
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../../elements'
+import theme from '../../../config/theme'
+import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const PageTitle = styled(Flex)`
   flex-wrap: wrap;
   background: ${theme.colors.secondary};
   position: absolute;

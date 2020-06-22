@@ -18,35 +18,6 @@ import theme from '../../../../../config/theme'
 // ___________________________________________________________________
 
 const Approach = () => {
-  // const data: HomeHeroQueryShape = useStaticQuery(graphql`
-  //   query RethinkHeroQuery {
-  //     allSanityHomeHero {
-  //       nodes {
-  //         hero {
-  //           title
-  //           message
-  //           image {
-  //             asset {
-  //               fluid(maxWidth: 1080) {
-  //                 src
-  //                 aspectRatio
-  //                 base64
-  //                 sizes
-  //                 srcSet
-  //                 srcSetWebp
-  //                 srcWebp
-  //               }
-  //             }
-  //           }
-  //           link
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const query = data.allSanityHomeHero.nodes[0].hero
-  // console.log('---_- Hero -_---')
-  // console.log(query)
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: '-360px 0px'

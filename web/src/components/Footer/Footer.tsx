@@ -71,13 +71,13 @@ const Footer: React.FC = () => {
         </S.Row>
         <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
-            <a href="/" target="__blank">
+            <a href="/" target="__blank" rel="noopener">
               <Icon name="facebook" />
             </a>
-            <a href="/" target="__blank">
+            <a href="/" target="__blank" rel="noopener">
               <Icon name="linkedin" />
             </a>
-            <a href="/" target="__blank">
+            <a href="/" target="__blank" rel="noopener">
               <Icon name="twitter" />
             </a>
           </S.Social>

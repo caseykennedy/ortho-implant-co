@@ -19,6 +19,7 @@ import homeHero from './home/hero'
 import homeReviews from './home/reviews'
 import homeMantra from './home/mantra'
 
+import rethinkPage from './rethinkPage'
 import rethinkNotions from './rethink/rethink'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -44,6 +45,7 @@ export default createSchema({
     homeReviews,
     homeMantra,
 
+    rethinkPage,
     rethinkNotions
 
     // When added to this list, object types can be used as

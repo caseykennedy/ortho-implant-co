@@ -55,14 +55,18 @@ const Hero = () => {
     <>
       <S.Hero>
         <S.Sideboard>
-          <Heading as="h4" color="tertiary">quality + value</Heading>
+          <Heading as="h4" color="tertiary">
+            quality + value
+          </Heading>
         </S.Sideboard>
+
         <S.Billboard>
           <AnimatedBox style={fadeAnimation}>
             <Heading as="h4" color="primary">
               {/* {query.title} */}
               quality + value
             </Heading>
+
             <Heading
               as="h1"
               mb={0}
@@ -70,7 +74,9 @@ const Hero = () => {
             >
               Implants{' '}
               <Box as="span" color="tertiary">
-                that are<br />good for all
+                that are
+                <br />
+                good for all
               </Box>
             </Heading>
           </AnimatedBox>

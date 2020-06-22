@@ -3,8 +3,8 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import 'swiper/css/swiper.css'
 
+import PageTitle from '../PageTitle'
 import Hero from './Sections/Hero'
 
 import Divider from '../../elements/Divider'
@@ -15,9 +15,15 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 const AboutPage = () => {
+  const pageTitle = {
+    altText: 'alt',
+    // image: 'alt',
+    message: 'Rethink Ortho',
+    title: 'alt'
+  }
   return (
     <S.AboutPage>
-      <Hero />
+    <PageTitle {...pageTitle} />
       <Divider py={10} bg="white" />
       <Divider py={10} bg="white" />
     </S.AboutPage>

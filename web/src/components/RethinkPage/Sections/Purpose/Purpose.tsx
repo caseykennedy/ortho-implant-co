@@ -18,35 +18,6 @@ import theme from '../../../../../config/theme'
 // ___________________________________________________________________
 
 const Purpose = () => {
-  // const data: HomeHeroQueryShape = useStaticQuery(graphql`
-  //   query RethinkHeroQuery {
-  //     allSanityHomeHero {
-  //       nodes {
-  //         hero {
-  //           title
-  //           message
-  //           image {
-  //             asset {
-  //               fluid(maxWidth: 1080) {
-  //                 src
-  //                 aspectRatio
-  //                 base64
-  //                 sizes
-  //                 srcSet
-  //                 srcSetWebp
-  //                 srcWebp
-  //               }
-  //             }
-  //           }
-  //           link
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const query = data.allSanityHomeHero.nodes[0].hero
-  // console.log('---_- Hero -_---')
-  // console.log(query)
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
@@ -69,7 +40,8 @@ const Purpose = () => {
         alignItems="center"
         justifyContent="center"
         flexWrap="wrap"
-        px={[5, 10]}
+        pr={[5, 10]}
+        pl={theme.gutter.axis}
         style={{ position: 'relative' }}
       >
         <AnimatedBox

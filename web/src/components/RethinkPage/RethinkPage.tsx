@@ -3,25 +3,33 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import 'swiper/css/swiper.css'
 
-import Hero from './Sections/Hero'
+import PageTitle from '../PageTitle'
 import Approach from './Sections/Approach'
 import Purpose from './Sections/Purpose'
 import Rethink from './Sections/Rethink'
 
-import Divider from '../../elements/Divider'
+import useRethinkPage from '../../hooks/useRethinkPage'
 
+import Divider from '../../elements/Divider'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
 const RethinkPage = () => {
+  const page = useRethinkPage()
+  // console.log('Rethink Page')
+  // console.log(page)
+  const pageTitle = {
+    altText: page.pageTitle.message,
+    image: page.pageTitle.image.asset.fluid,
+    message: page.pageTitle.message,
+    title: page.pageTitle.title
+  }
   return (
     <S.RethinkPage>
-      <Hero />
-      {/* <Divider py={8} bg="white" /> */}
+      <PageTitle {...pageTitle} />
       <Approach />
       <Purpose />
       <Rethink />

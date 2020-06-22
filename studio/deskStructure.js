@@ -101,31 +101,10 @@ export default () =>
       S.listItem()
         .title("Rethink Page")
         .child(
-          S.list()
-            .title("Sections")
-            .items([
-              // Page Title
-              S.listItem()
-                .title("Page Title")
-                .child(
-                  S.editor()
-                    .id("pageTitle")
-                    .schemaType("pageTitle")
-                    .documentId("pageTitle")
-                )
-                .icon(MdViewDay),
-
-              // Rethink Notions
-              S.listItem()
-                .title("Rethink Notions")
-                .child(
-                  S.editor()
-                    .id("rethinkNotions")
-                    .schemaType("rethinkNotions")
-                    .documentId("rethinkNotions")
-                )
-                .icon(MdViewDay)
-            ])
+          S.editor()
+            .id("rethinkPage")
+            .schemaType("rethinkPage")
+            .documentId("rethinkPage")
         )
         .icon(MdFolder)
 
