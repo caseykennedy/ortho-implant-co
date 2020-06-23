@@ -70,10 +70,10 @@ const Mantra = () => {
             justifyContent="space-between"
           >
             <Box>
-              <Heading as="h5" color="tertiary" fontWeight={500}>
+              <Heading as="h5" color="tertiary">
                 {query.title}
               </Heading>
-              <Heading as="h3" fontSize={`calc(${theme.fontSizes[3]} * 1.5)`} fontWeight={500}>
+              <Heading as="h2" fontSize={3} fontWeight={400}>
                 {query.heading}
               </Heading>
             </Box>

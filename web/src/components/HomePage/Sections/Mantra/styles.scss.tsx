@@ -17,11 +17,6 @@ export const Panel = styled.div`
   background: ${theme.colors.white};  
   z-index: 99;
 
-  h2 {
-    font-weight: 500;
-    /* text-transform: uppercase; */
-  }
-
   img {
     mix-blend-mode: luminosity;
   }

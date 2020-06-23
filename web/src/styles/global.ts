@@ -50,6 +50,28 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     z-index: 100;
   }
+
+  /* hover popup: need to find a new home for this */
+  .popup {
+    color: white;
+    position: absolute;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 3rem;
+    top: 0px;
+    right: -600px;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, 32);
+    transition: ${theme.transition.all};
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  }
 `
 
 export default GlobalStyles
