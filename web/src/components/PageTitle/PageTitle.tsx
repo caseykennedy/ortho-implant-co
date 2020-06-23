@@ -20,7 +20,7 @@ type Props = {
   altText: string
   image?: object
   message: string
-  title: string
+  title?: string
 }
 
 const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
@@ -32,20 +32,20 @@ const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
   })
   return (
     <>
-      <S.PageTitle>
+      <S.PageTitle image={image}>
         <S.Sideboard />
+
         <S.Billboard>
           <AnimatedBox style={fadeAnimation}>
             <Heading as="h5" color="primary">
               {title}
             </Heading>
 
-            <Heading as="h1" mb={0}>
-              {message}
-              {/* <Text as="span" color="tertiary">
-                orthopaedic implants
-              </Text> */}
-            </Heading>
+            <Heading
+              as="h1"
+              mb={0}
+              dangerouslySetInnerHTML={{ __html: message }}
+            />
           </AnimatedBox>
         </S.Billboard>
       </S.PageTitle>

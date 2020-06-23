@@ -53,7 +53,12 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
               >
                 {panel.tag}
               </Heading>
-              <Heading as="h4">For {panel.title}</Heading>
+              <Heading as="h4">
+                <Box as="span" color="white">
+                  For
+                </Box>{' '}
+                {panel.title}
+              </Heading>
             </div>
             <div>
               {panel._rawMessage && (

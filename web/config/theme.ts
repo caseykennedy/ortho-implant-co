@@ -80,7 +80,7 @@ const theme: ThemeShape = {
     text: '#000000',
     background: '#ffffff',
     
-    primary: '#FFC907',
+    primary: '#FFC900',
     secondary: '#000000',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',

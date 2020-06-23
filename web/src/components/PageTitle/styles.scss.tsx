@@ -8,10 +8,9 @@ import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const PageTitle = styled(Flex)`
+export const PageTitle = styled(Flex)<{ image?: object }>`
   flex-wrap: wrap;
-  background: ${theme.colors.secondary};
-  position: absolute;
+  position: ${p => !p.image ? 'relative' : 'absolute'};
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: calc(${theme.space[3]} * 15);

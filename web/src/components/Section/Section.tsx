@@ -76,7 +76,7 @@ Section.defaultProps = defaultProps
 // ___________________________________________________________________
 
 const Container = styled(Box)<{ border?: boolean, overflow?: string }>`
-  border-bottom: ${p => (!p.border ? 'none' : `${theme.border}`)};
+  border-top: ${p => (!p.border ? 'none' : `${theme.border}`)};
   position: relative;
   overflow: ${p => (!p.overflow ? 'visible' : p.overflow)};
 

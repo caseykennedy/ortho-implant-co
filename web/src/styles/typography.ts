@@ -185,7 +185,7 @@ const Typography = css`
   .text--lg {
     font-size: ${theme.root.font.md};
     /* line-height: ${theme.root.font.bodyLineHeight}; */
-    margin: 0 0 1em;
+    margin: 0 0 0.5em;
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.lg};

@@ -18,11 +18,6 @@ export default {
       type: 'string'
     },
     {
-      name: 'seated',
-      title: 'Seated',
-      type: 'string'
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -33,16 +28,16 @@ export default {
       }
     },
     {
-      name: 'image',
-      title: 'Image',
+      name: 'headshot',
+      title: 'Headshot',
       type: 'image',
       options: {
         hotspot: true
       }
     },
     {
-      name: 'bio',
-      title: 'Bio',
+      name: 'lead',
+      title: 'Lead',
       type: 'array',
       of: [
         {
@@ -54,49 +49,9 @@ export default {
       ]
     },
     {
-      name: 'email',
-      title: 'Email',
-      type: 'string'
-    },
-    {
-      name: 'telephone',
-      title: 'Telephone',
-      type: 'string'
-    },
-    {
-      name: 'cell',
-      title: 'Cell Phone',
-      type: 'string'
-    },
-    {
-      name: 'fax',
-      title: 'Fax',
-      type: 'string'
-    },
-    {
-      title: 'Department',
-      name: 'department',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Tribal Council', value: 'Tribal Council'},
-          {title: 'Economic Development', value: 'Economic Development'},
-          {title: 'Cahuilla Gaming Agency', value: 'Cahuilla Gaming Agency'},
-          {title: 'Tribal Administration', value: 'Tribal Administration'},
-          {title: 'Family and Social Services', value: 'Family and Social Services'},
-          {title: 'Environmental Protection Agency', value: 'Environmental Protection Agency'},
-          {title: 'Public Works', value: 'Public Works'},
-          {title: 'Cultural', value: 'Cultural'},
-          {title: 'Public Safety', value: 'Public Safety'},
-        ]
-      }
+      name: 'bio',
+      title: 'Bio',
+      type: 'blockContent',
     },
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image'
-    }
-  }
 }

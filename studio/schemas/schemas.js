@@ -9,6 +9,7 @@ import blockContent from './blockContent'
 import figure from './figure'
 import notion from './notion'
 import pageTitle from './pageTitle'
+import person from './person'
 import rethinkTabs from './rethinkTabs'
 import review from './review'
 import siteSettings from './siteSettings'
@@ -35,6 +36,7 @@ export default createSchema({
     figure,
     notion,
     pageTitle,
+    person,
     rethinkTabs,
     review,
     siteSettings,
@@ -46,6 +48,7 @@ export default createSchema({
     homeMantra,
 
     rethinkPage,
+    //////////////////////// REMOVE
     rethinkNotions
 
     // When added to this list, object types can be used as

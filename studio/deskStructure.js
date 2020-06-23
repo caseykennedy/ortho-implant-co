@@ -106,7 +106,15 @@ export default () =>
             .schemaType("rethinkPage")
             .documentId("rethinkPage")
         )
-        .icon(MdFolder)
+        .icon(MdFolder),
+
+      // Person
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("People")
+        .schemaType("person")
+        .child(S.documentTypeList("person").title("People"))
 
       // End
       // _________________________________________________________________
