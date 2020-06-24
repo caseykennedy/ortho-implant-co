@@ -80,16 +80,16 @@ const TeamSwiper: React.FC = ({ children }) => {
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 70
+        spaceBetween: 40
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 50,
+        spaceBetween: 40,
         grabCursor: true
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 50,
+        spaceBetween: 20,
         grabCursor: true
       },
       320: {
@@ -136,8 +136,17 @@ const Team = () => {
   // console.log(boardMembers)
   return (
     <Section overflow="visible">
+      <Box width={[1, 2 / 3]} mb={[7, 8]}>
+        <Heading as="h5" color="tertiary">
+          Team
+        </Heading>
+        <Heading as="h3" fontSize={3} fontWeight={400}>
+          We may have different departments, but we work together to break
+          conventional organizational boundaries.
+        </Heading>
+      </Box>
       <S.CardHolder width={1}>
-        <Heading as="h4" fontSize={[2, 3]} mb={[5, 7]}>
+        <Heading as="p" mb={[5, 7]}>
           Board of Directors
         </Heading>
 
@@ -155,13 +164,15 @@ const Team = () => {
                   />
                 )}
               </Box>
+
               <div className="card__content">
                 <Box mt={3}>
                   <Heading as="h4">{person.name}</Heading>
-                  <Text as="p" color="tertiary" className="t--small">
+                  <Text as="h5" className="t--small">
                     {person.title}
                   </Text>
                 </Box>
+
                 <Text as="p" mt={8} className="card__meta  t--uppercase">
                   read bio
                   <Icon name="nextArrow" />
@@ -171,7 +182,7 @@ const Team = () => {
           ))}
         </TeamSwiper>
 
-        <Heading as="h4" fontSize={[2, 3]} my={[5, 7]}>
+        <Heading as="p" my={[5, 7]}>
           Team
         </Heading>
 
@@ -188,13 +199,15 @@ const Team = () => {
                   />
                 )}
               </Box>
+
               <div className="card__content">
                 <Box mt={3}>
                   <Heading as="h4">{person.name}</Heading>
-                  <Text as="p" className="t--small">
+                  <Text as="h5" className="t--small">
                     {person.title}
                   </Text>
                 </Box>
+                
                 <Text as="span" mt={8} className="card__meta  t--uppercase">
                   read bio
                   <Icon name="nextArrow" />

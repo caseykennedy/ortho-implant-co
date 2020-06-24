@@ -27,9 +27,9 @@ export const Header = styled(Flex)`
 
 export const Logo = styled(Box)`
   background: ${theme.colors.secondary};
-  padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
-  width: ${theme.logoWidth};
-  height: ${theme.headerHeight};
+  width: calc(${theme.logoWidth} / 1.5);
+  height: calc(${theme.headerHeight} / 1.5);
+  padding: calc(${theme.space[3]} * 3) ${theme.space[5]} ${theme.space[3]};
 
   /* border-bottom: 4px solid ${theme.colors.primary}; */
 
@@ -39,6 +39,9 @@ export const Logo = styled(Box)`
 
   @media ${theme.mq.tablet} {
     font-size: 1.4rem;
+    width: ${theme.logoWidth};
+    height: ${theme.headerHeight};
+  padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
   }
 
   svg {

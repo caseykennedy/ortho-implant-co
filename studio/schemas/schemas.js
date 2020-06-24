@@ -20,6 +20,8 @@ import homeHero from './home/hero'
 import homeReviews from './home/reviews'
 import homeMantra from './home/mantra'
 
+import aboutPage from './aboutPage'
+
 import rethinkPage from './rethinkPage'
 import rethinkNotions from './rethink/rethink'
 
@@ -46,6 +48,8 @@ export default createSchema({
     homeRethink,
     homeReviews,
     homeMantra,
+
+    aboutPage,
 
     rethinkPage,
     //////////////////////// REMOVE

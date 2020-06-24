@@ -58,8 +58,8 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
     z-index: 99999;
     font-size: 3rem;
-    top: 0px;
-    right: calc(${theme.space[3]} * -22);
+    top: -${theme.space[7]};
+    right: calc(${theme.space[3]} * -24);
 
     visibility: hidden;
     opacity: 0;

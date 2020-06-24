@@ -11,20 +11,5 @@ export default {
       title: 'Page Title',
       type: 'pageTitle'
     },
-    {
-      name: 'pageTitle',
-      title: 'Page Title',
-      type: 'pageTitle'
-    },
-    {
-      name: 'pageTitle',
-      title: 'Page Title',
-      type: 'pageTitle'
-    },
-    {
-      name: 'pageTitle',
-      title: 'Page Title',
-      type: 'pageTitle'
-    },
   ]
 }

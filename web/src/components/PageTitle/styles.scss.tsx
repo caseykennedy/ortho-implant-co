@@ -10,13 +10,13 @@ import { Box, Flex } from '../../elements'
 
 export const PageTitle = styled(Flex)<{ image?: object }>`
   flex-wrap: wrap;
-  position: ${p => !p.image ? 'relative' : 'absolute'};
+  position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: calc(${theme.space[3]} * 15);
 
   @media ${theme.mq.tablet} {
-    /* height: calc(30vh - ${theme.headerHeight}); */
+    position: ${p => !p.image ? 'relative' : 'absolute'};
   }
 `
 
@@ -52,8 +52,13 @@ export const Figure = styled(Box)`
   /* margin-top: -${theme.space[2]}; */
   position: relative;
   width: 100%;
+  background: ${theme.colors.tertiary};
 
   @media ${theme.mq.tablet} {
     /* margin-top: -${theme.space[11]}; */
+  }
+
+  img {
+    mix-blend-mode: hard-light;
   }
 `

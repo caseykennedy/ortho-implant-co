@@ -24,7 +24,7 @@ const Year = () => {
 const Footer: React.FC = () => {
   return (
     <>
-      <Prefooter />
+      {/* <Prefooter /> */}
       <S.Decorator>
         <div className="space" />
         <div className="pixels">

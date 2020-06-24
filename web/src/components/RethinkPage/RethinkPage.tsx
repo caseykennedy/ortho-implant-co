@@ -8,6 +8,7 @@ import PageTitle from '../PageTitle'
 import Approach from './Sections/Approach'
 import Purpose from './Sections/Purpose'
 import Rethink from './Sections/Rethink'
+import Billboard from '../Billboard'
 
 import useRethinkPage from '../../hooks/useRethinkPage'
 
@@ -16,6 +17,14 @@ import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
+
+const billboardProps = {
+  bg: 'primary',
+  message: 'Let\'s schedule<br />a one-to-one',
+  title: 'Ready to chat?',
+  src: 'operating-room.jpg',
+  altText: 'Doctors in the operating room.'
+}
 
 const RethinkPage = () => {
   const page = useRethinkPage()
@@ -33,8 +42,7 @@ const RethinkPage = () => {
       <Approach />
       <Purpose />
       <Rethink />
-      <Divider py={10} bg="primary" />
-      <Divider py={10} bg="primary" />
+      <Billboard {...billboardProps} />
     </S.RethinkPage>
   )
 }

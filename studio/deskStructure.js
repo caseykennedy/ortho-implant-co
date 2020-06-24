@@ -108,6 +108,19 @@ export default () =>
         )
         .icon(MdFolder),
 
+      // About page
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("About Page")
+        .child(
+          S.editor()
+            .id("aboutPage")
+            .schemaType("aboutPage")
+            .documentId("aboutPage")
+        )
+        .icon(MdFolder),
+
       // Person
       // _________________________________________________________________
 

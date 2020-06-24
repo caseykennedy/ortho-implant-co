@@ -20,7 +20,7 @@ export const Card = styled(AnimatedBox)<{ border?: boolean }>`
 
   .card {
     &__headshot {
-      width: 70%;
+      width: 50%;
 
       img {
         mix-blend-mode: luminosity;
@@ -38,10 +38,10 @@ export const Card = styled(AnimatedBox)<{ border?: boolean }>`
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 0;
-        font-size: calc(${theme.fontSizes[3]} / 1.1);
+        font-size: calc(${theme.fontSizes[3]} / 1);
       }
 
-      p {
+      h5 {
         color: ${theme.colors.tertiary};
       }
 
@@ -82,7 +82,7 @@ export const CardHolder = styled(Box)`
         transition: ${theme.transition.all};
 
         &:hover {
-          background: ${theme.colors.tertiary};
+          background: ${theme.colors.primary};
           cursor: pointer;
         }
 

@@ -35,7 +35,7 @@ export const Nav = styled(Flex)`
   }
 
   a {
-    color: ${theme.colors.white};
+    color: ${theme.colors.tertiary};
     font-family: ${theme.fonts.heading};
     font-weight: 400;
     font-size: calc(${theme.fontSizes[2]} * 1.25);

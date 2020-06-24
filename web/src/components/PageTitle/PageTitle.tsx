@@ -6,7 +6,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
-import Parallax from 'react-scroll-parallax'
+import { Parallax } from 'react-scroll-parallax'
 
 import ImgMatch from '../ImgMatch'
 
@@ -50,16 +50,18 @@ const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
         </S.Billboard>
       </S.PageTitle>
 
-      <S.Figure>
-        {image && (
-          <Img
-            fluid={image}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt={altText}
-          />
-        )}
-      </S.Figure>
+      <Parallax y={[-9, 10]}>
+        <S.Figure>
+          {image && (
+            <Img
+              fluid={image}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={altText}
+            />
+          )}
+        </S.Figure>
+      </Parallax>
     </>
   )
 }
