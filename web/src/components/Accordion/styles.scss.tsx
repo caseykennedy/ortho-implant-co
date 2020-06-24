@@ -19,10 +19,10 @@ import { Box, Flex } from '../../elements'
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 
-export const AccordionContainer = styled(Box)`
+export const AccordionContainer = styled.div<{ borderColor: string }>`
   width: 100%;
   position: relative;
-  border-top: 2px solid ${theme.colors.quinary};
+  border-bottom: 2px solid ${p => p.borderColor};
 
   /* &:first-child {
     border-top: none;
@@ -47,12 +47,7 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
 
   border: none;
   outline: none;
-  padding: ${theme.space[7]} ${theme.space[5]};
   transition: background-color 0.6s ease;
-
-  @media ${theme.mq.tablet} {
-    padding: ${theme.space[8]} ${theme.space[7]};
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -61,7 +56,6 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   &:hover,
   &.active  {
     color: ${p => p.colorActive};
-    background: ${theme.colors.quinary};
   }
 
   /* &.active {
@@ -69,16 +63,15 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   } */
 
   h3 {
-    line-height: 0.8;
+    line-height: 0.6;
     text-transform: uppercase;
     margin-bottom: 0;
   }
 `
 
-export const AccordionContent = styled(Box)<{ borderColor: string }>`
+export const AccordionContent = styled(Box)`
   overflow: hidden;
   transition: max-height 0.3s ease;
-  /* border-bottom: 2px solid ${p => p.borderColor}; */
 `
 
 export const Carat = styled(Icon)<{ chevronColor: string }>`

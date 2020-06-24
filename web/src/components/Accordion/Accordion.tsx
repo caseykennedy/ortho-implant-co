@@ -11,7 +11,7 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type AccordionProps = {
+type Props = {
   children: React.ReactNode
   title: string
   color: string
@@ -21,11 +21,15 @@ type AccordionProps = {
   bg: string
   fontSize?: number
   subTitle?: string
+  pt?: number | number[] | string
+  pb?: number | number[] | string
+  pr?: number | number[] | string
+  pl?: number | number[] | string
 }
 
 // ___________________________________________________________________
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion: React.FC<Props> = ({
   children,
   title,
   chevronColor,
@@ -34,7 +38,11 @@ const Accordion: React.FC<AccordionProps> = ({
   colorActive,
   bg,
   fontSize,
-  subTitle
+  subTitle,
+  pt,
+  pb,
+  pr,
+  pl
 }) => {
   // Accordion hooks
   const [setActive, setActiveState] = useState('')
@@ -55,7 +63,7 @@ const Accordion: React.FC<AccordionProps> = ({
     )
   }
   return (
-    <S.AccordionContainer bg={bg}>
+    <S.AccordionContainer bg={bg} borderColor={borderColor}>
       <S.AccordionInner>
         <S.AccordionToggle
           className={setActive}
@@ -63,12 +71,18 @@ const Accordion: React.FC<AccordionProps> = ({
           color={color}
           colorActive={colorActive}
           bg={bg}
+          pt={pt}
+          pr={pr}
+          pb={pb}
+          pl={pl}
         >
           <Flex width={2 / 3}>
             <Heading as="h3" fontSize={fontSize} mb={0} width={1 / 2}>
               {title}
             </Heading>
-            <Text as="span" mb={0}>{subTitle}</Text>
+            <Text as="span" mb={0}>
+              {subTitle}
+            </Text>
           </Flex>
           <S.Carat
             name="nextArrow"
@@ -77,11 +91,7 @@ const Accordion: React.FC<AccordionProps> = ({
             chevronColor={chevronColor}
           />
         </S.AccordionToggle>
-        <S.AccordionContent
-          ref={content}
-          style={{ maxHeight: `${setHeight}` }}
-          borderColor={borderColor}
-        >
+        <S.AccordionContent ref={content} style={{ maxHeight: `${setHeight}` }}>
           <Box>{children}</Box>
         </S.AccordionContent>
       </S.AccordionInner>
@@ -92,3 +102,12 @@ const Accordion: React.FC<AccordionProps> = ({
 export default Accordion
 
 // ___________________________________________________________________
+
+const defaultProps = {
+  pt: [7, 8],
+  pb: [7, 8],
+  pr: [5, 7],
+  pl: [5, 7]
+}
+
+Accordion.defaultProps = defaultProps

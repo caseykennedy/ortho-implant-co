@@ -163,7 +163,7 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.1s ease-in-out'
+    all: 'all 0.222s ease-in-out'
   },
 
   transform: {

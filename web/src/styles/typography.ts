@@ -240,6 +240,10 @@ const Typography = css`
     font-weight: 500;
   }
 
+  .t--small {
+    font-size: calc(${theme.fontSizes[1]} / 1.1);
+  }
+
   .t-underline {
     text-decoration: underline;
   }

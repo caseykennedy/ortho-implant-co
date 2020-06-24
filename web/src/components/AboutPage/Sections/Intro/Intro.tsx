@@ -18,30 +18,39 @@ import theme from '../../../../../config/theme'
 
 // ___________________________________________________________________
 
-type TeamMateProps = {
+type PositionProps = {
   item: {
     name: string
     src: string
+    content: string
   }
 }
 
-const TeamMate = ({ item }: TeamMateProps) => {
+const Position = ({ item }: PositionProps) => {
   const [hoverRef, isHovered] = useHover()
+
   const AccordionProps = {
-    chevronColor: theme.colors.white,
-    color: theme.colors.white,
-    colorActive: theme.colors.white,
-    borderColor: theme.colors.tertiary,
-    bg: 'black'
+    chevronColor: theme.colors.secondary,
+    color: theme.colors.secondary,
+    colorActive: theme.colors.secondary,
+    borderColor: theme.colors.secondary,
+    bg: 'transparent',
+    pt: [5, 6],
+    pb: [5, 6],
+    pr: [5],
+    pl: [5, 7]
   }
   return (
     // @ts-ignore: Unreachable code error
     <div ref={hoverRef} style={{ position: 'relative' }}>
       <Accordion title={item.name} {...AccordionProps}>
-        <Box pt={6} pb={2} pr={7}>
-          <Text as="p">content</Text>
+        <Box pt={6} p={[5, 7]}>
+          <Text as="p" color="black">
+            {item.content}
+          </Text>
         </Box>
       </Accordion>
+
       <Box width="460px" p={6} className={`popup  ${isHovered ? 'show' : ''}`}>
         <ImgMatch src={item.src} altText="core37" />
       </Box>
@@ -58,29 +67,27 @@ const Intro = () => {
   })
   return (
     <S.Intro>
-      <S.About>
-        <Box
-          width={[1, 2 / 3]}
-          bg="secondary"
-          p={theme.gutter.axis}
-          mt={[0, -5]}
-        >
-          <Heading as="h5" color="primary">
-            question
-          </Heading>
-          <Heading as="h2" fontSize={3}>
-            We love the sound of rules breaking. It’s what we are trying to do
-            to make ‘value’ a possibility in the orthopaedic implant industry.
-          </Heading>
+      <S.About width={[1, 8 / 10, 2 / 3]}>
+        <Box bg="primary" mt={[0]}>
+          <Box p={theme.gutter.axis} bg="secondary" color="white">
+            <Heading as="h5" color="primary">
+              question
+            </Heading>
 
-          <Text as="p" mt={12} width={1}>
-            We shattered the myth that high value is a result of
-            commoditization. Simply put, we have found a smarter way to create
-            implants.
-          </Text>
+            <Heading as="h2" fontSize={3}>
+              We love the sound of rules breaking. It’s what we are trying to do
+              to make ‘value’ a possibility in the orthopaedic implant industry.
+            </Heading>
 
-          {projectList.map((item, idx) => (
-            <TeamMate key={idx} item={item} />
+            <Text as="p" mt={12} width={1}>
+              We shattered the myth that high value is a result of
+              commoditization. Simply put, we have found a smarter way to create
+              implants.
+            </Text>
+          </Box>
+
+          {positioning.map((item, idx) => (
+            <Position key={idx} item={item} />
           ))}
         </Box>
       </S.About>
@@ -101,17 +108,23 @@ const Intro = () => {
 
 export default Intro
 
-const projectList = [
+const positioning = [
   {
     name: 'purpose',
-    src: 'reading.jpg'
+    src: 'reading.jpg',
+    content:
+      'We believe that the way orthopaedic implants are priced and supplied is flawed to the detriment of everyone. Our purpose is to rethink and change that system.'
   },
   {
     name: 'mission',
-    src: 'drib__neon_4x.png'
+    src: 'drib__neon_4x.png',
+    content:
+      'Our mission is to lower the cost of orthopaedic procedures by developing more affordable implants with the perfect balance of quality, service and price for surgeons, hospitals and patients.'
   },
   {
     name: 'vision',
-    src: 'meeting.jpg'
+    src: 'meeting.jpg',
+    content:
+      'Because of our forward thinking view of the ay healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
   }
 ]

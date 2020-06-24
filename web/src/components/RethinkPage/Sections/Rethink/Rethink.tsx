@@ -25,7 +25,7 @@ type RethinkNotionsQueryShape = {
         id: string
         title: string
         heading: string
-        rethinkNotions: RethinkNotion
+        rethinkNotions: RethinkNotion[]
       }
     }[]
   }
@@ -59,7 +59,7 @@ type RethinkNotion = {
 
 const AccordionProps = {
   chevronColor: theme.colors.text,
-  color: theme.colors.text,
+  color: theme.colors.tertiary,
   colorActive: theme.colors.text,
   borderColor: theme.colors.text,
   fontSize: 4,

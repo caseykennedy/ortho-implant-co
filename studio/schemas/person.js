@@ -18,6 +18,11 @@ export default {
       type: 'string'
     },
     {
+      title: 'Board Member',
+      name: 'boardMember',
+      type: 'boolean'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

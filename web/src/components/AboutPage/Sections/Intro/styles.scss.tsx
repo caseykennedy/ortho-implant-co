@@ -18,7 +18,6 @@ export const Intro = styled(Box)`
 `
 
 export const About = styled(Flex)`
-  width: 100%;
   /* margin-left: ${theme.logoWidth}; */
 
   color: ${theme.colors.white};

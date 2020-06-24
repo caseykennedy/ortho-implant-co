@@ -8,6 +8,7 @@ import useRethinkPage from '../../hooks/useRethinkPage'
 
 import PageTitle from '../PageTitle'
 import Intro from './Sections/Intro'
+import Team from './Sections/Team'
 
 import Divider from '../../elements/Divider'
 
@@ -28,8 +29,9 @@ const AboutPage = () => {
     <S.AboutPage>
       <PageTitle {...pageTitle} />
       <Intro />
-      <Divider py={10} bg="white" />
-      <Divider py={10} bg="white" />
+      <Team />
+      <Divider py={10} bg="quinary" />
+      <Divider py={10} bg="quinary" />
     </S.AboutPage>
   )
 }

@@ -9,6 +9,31 @@ type ImageShape = {
   srcSetWebp: string
 }
 
+type PersonShape = {
+  _rawBio: string
+  _rawLead: string
+  name: string
+  title: string
+  boardMember: boolean
+  slug: {
+    _key: string
+    current: string
+  }
+  headshot: {
+    asset: {
+      fluid: {
+        src: string
+        aspectRatio: number
+        base64: string
+        sizes: string
+        srcSet: string
+        srcSetWebp: string
+        srcWebp: string
+      }
+    }
+  }
+}
+
 // Home Hero shape
 // ___________________________________________________________________
 

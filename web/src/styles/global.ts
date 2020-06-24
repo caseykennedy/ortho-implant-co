@@ -59,7 +59,7 @@ const GlobalStyles = createGlobalStyle`
     z-index: 99999;
     font-size: 3rem;
     top: 0px;
-    right: -600px;
+    right: calc(${theme.space[3]} * -22);
 
     visibility: hidden;
     opacity: 0;
