@@ -15,8 +15,6 @@ export const Billboard = styled(Flex)`
   position: relative;
   padding-bottom: calc(60px - ${theme.space[5]});
 
-  color: ${theme.colors.white};
-
   @media ${theme.mq.desktop} {
     padding-bottom: calc(120px - ${theme.space[5]});
   }
@@ -33,10 +31,6 @@ export const Billboard = styled(Flex)`
     @media ${theme.mq.desktop} {
       margin-top: ${theme.space[13]};
     }
-  }
-
-  h4 {
-    color: ${theme.colors.primary};
   }
 `
 

@@ -20,14 +20,24 @@ import theme from '../../../config/theme'
 type Props = {
   altText?: string
   bg?: string
+  color?: string
+  invert?: boolean
   message?: string
   title?: string
   src?: string
 }
 
-const Intro: React.FC<Props> = ({ altText, bg, message, title, src }) => {
+const Intro: React.FC<Props> = ({
+  altText,
+  bg,
+  color,
+  invert,
+  message,
+  title,
+  src
+}) => {
   return (
-    <Section bg={bg} border={true}>
+    <Section bg={bg} border={true} color={color}>
       {src && altText && (
         <S.Figure>
           <ImgMatch src={src} altText={altText} />
@@ -35,7 +45,9 @@ const Intro: React.FC<Props> = ({ altText, bg, message, title, src }) => {
       )}
 
       <div className="cta">
-        <Button to={`/implants`}>Talk to us</Button>
+        <Button to={`/implants`} invert={!invert ? undefined : invert}>
+          Talk to us
+        </Button>
       </div>
 
       <S.Billboard>
@@ -55,8 +67,7 @@ const defaultProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
-  src: 'operating-room.jpg',
-  altText: 'Doctors in the operating room.'
+  color: 'white'
 }
 
 Intro.defaultProps = defaultProps

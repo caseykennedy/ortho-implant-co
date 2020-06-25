@@ -19,11 +19,13 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: 'primary',
+  bg: theme.colors.primary,
+  color: theme.colors.text,
   message: 'Let\'s schedule<br />a one-to-one',
   title: 'Ready to chat?',
-  src: 'operating-room.jpg',
-  altText: 'Doctors in the operating room.'
+  invert: true
+  // src: 'operating-room.jpg',
+  // altText: 'Doctors in the operating room.'
 }
 
 const RethinkPage = () => {

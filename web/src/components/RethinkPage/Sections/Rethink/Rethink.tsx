@@ -110,7 +110,7 @@ const Notion: React.FC<NotionData> = ({ data }) => {
 
 const Rethink = () => {
   const query = useRethinkPage()
-  console.log(query.rethinkNotions)
+  
   return (
     <S.Rethink>
       <Box px={theme.gutter.axis}>
