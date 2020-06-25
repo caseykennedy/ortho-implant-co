@@ -307,6 +307,25 @@ const Typography = css`
         mix-blend-mode: difference;
       }
     }
+
+    &:hover {
+      span {
+        margin-left: calc(${theme.space[5]} * 1.5);
+      }
+    }
+
+    span {
+      margin-left: ${theme.space[5]};
+      transition: ${theme.transition.all};
+
+      svg {
+        width: 24px;
+      }
+    }
+
+    h4 {
+      display: flex;
+    }
   }
 
   ul {

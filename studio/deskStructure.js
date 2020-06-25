@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdCropLandscape, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
+import { MdAssignment, MdCropLandscape, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
 import { FaFile } from "react-icons/fa";
 
 const hiddenTypes = [
@@ -127,7 +127,17 @@ export default () =>
       S.listItem()
         .title("People")
         .schemaType("person")
-        .child(S.documentTypeList("person").title("People"))
+        .child(S.documentTypeList("person").title("People")),
+
+      // JobPost
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Job Post")
+        .schemaType("jobPost")
+        .child(S.documentTypeList("jobPost").title("Job"))
+
+        .icon(MdAssignment)
 
       // End
       // _________________________________________________________________

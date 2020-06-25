@@ -6,7 +6,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
+import blockText from './blockText'
 import figure from './figure'
+import jobPost from './jobPost'
 import notion from './notion'
 import pageTitle from './pageTitle'
 import person from './person'
@@ -35,7 +37,9 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     blockContent,
+    blockText,
     figure,
+    jobPost,
     notion,
     pageTitle,
     person,

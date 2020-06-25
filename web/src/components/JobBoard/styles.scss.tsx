@@ -10,5 +10,15 @@ import { Box, Flex } from '../../elements'
 // ___________________________________________________________________
 
 export const JobBoard = styled(Flex)`
-  flex-direction: column;
+  background: ${theme.colors.tertiary};
+  border-top: ${theme.border};
+
+  h4 {
+    margin-bottom: 0;
+    margin-top: ${theme.space[4]};
+  }
+
+  img {
+    mix-blend-mode: luminosity;
+  }
 `

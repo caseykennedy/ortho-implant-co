@@ -153,7 +153,7 @@ const Team = () => {
         <TeamSwiper>
           {boardMembers.map(({ node: person }, idx) => (
             // <TeamMate key={idx} person={person} />
-            <S.Card border={true} key={idx}>
+            <S.Card key={idx}>
               <Box width={[7 / 10]} className="card__headshot">
                 {person.headshot && (
                   <Img
@@ -188,7 +188,7 @@ const Team = () => {
 
         <TeamSwiper>
           {staffMembers.map(({ node: person }, idx) => (
-            <S.Card border={true} key={idx}>
+            <S.Card key={idx}>
               <Box width={[7 / 10]} className="card__headshot">
                 {person.headshot && (
                   <Img

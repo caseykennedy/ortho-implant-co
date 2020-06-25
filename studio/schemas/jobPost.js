@@ -1,7 +1,10 @@
+import { MdAssignment } from "react-icons/md";
+
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'jobPost',
+  title: 'Job Post',
   type: 'document',
+  icon: MdAssignment,
   fields: [
     {
       name: 'title',
@@ -30,49 +33,24 @@ export default {
       type: 'blockText'
     },
     {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{ type: 'projectMember' }]
-    },
-    {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage'
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
-    },
-    {
       name: 'body',
       title: 'Body',
       type: 'blockContent'
     },
     {
-      name: 'relatedProjects',
-      title: 'Related projects',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'project' } }]
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     }
   ],
   preview: {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
-      image: 'mainImage'
+      image: 'image'
     },
     prepare ({ title = 'No title', publishedAt, image }) {
       return {

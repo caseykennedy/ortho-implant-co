@@ -10,10 +10,10 @@ import { Box, Flex, AnimatedFlex, AnimatedBox } from '../../../../elements'
 
 export const Team = styled(Box)``
 
-export const Card = styled(AnimatedBox)<{ border?: boolean }>`
+export const Card = styled(AnimatedBox)`
   /* max-width: 333px; */
   /* background: ${theme.colors.white}; */
-  border: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border: 2px solid ${theme.colors.black};
 
   @media ${theme.mq.tablet} {
   }

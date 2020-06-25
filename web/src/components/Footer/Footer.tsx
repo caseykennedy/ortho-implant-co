@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <Link to="/contact" className="t--link">
               <Heading as="h4" color="primary" fontWeight={500}>
                 Schedule a metting
-                <Icon name="nextArrow" />
+                <Icon name="nextArrow" color={theme.colors.primary} />
               </Heading>
             </Link>
           </Box>
