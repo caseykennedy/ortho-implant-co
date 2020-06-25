@@ -33,8 +33,8 @@ const Button: React.FC<Props> = ({ children, to, invert }) => {
   )
 }
 
-Button.defaultProps = defaultProps
-
 export default Button
 
 // ___________________________________________________________________
+
+Button.defaultProps = defaultProps

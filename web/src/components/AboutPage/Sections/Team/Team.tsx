@@ -7,9 +7,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useTransition, useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-
 import Swiper from 'react-id-swiper'
-import 'swiper/css/swiper.css'
 
 import useHover from '../../../../hooks/useHover'
 import Section from '../../../Section'

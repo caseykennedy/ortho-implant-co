@@ -52,13 +52,17 @@ export const Learn = styled(Box)`
 
     .swiper-pagination {
       /* background: ${theme.colors.primary}; */
-      bottom: -2rem;
+      top: -3rem;
+      bottom: initial;
 
-      .swiper-pagination-bullets {
+      text-align: left;
+
+      &.swiper-pagination-bullets {
         span {
           cursor: pointer;
-          background: ${theme.colors.primary} !important;
-          padding: ${theme.space[5]};
+          background: ${theme.colors.secondary} !important;
+          padding: ${theme.space[3]};
+          border-radius: 0;
         }
       }
     }

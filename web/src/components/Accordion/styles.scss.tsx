@@ -56,7 +56,7 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   &:hover,
   &.active  {
     color: ${p => p.colorActive};
-    background: ${theme.colors.tertiary};
+    background: ${theme.colors.white};
   }
 `
 

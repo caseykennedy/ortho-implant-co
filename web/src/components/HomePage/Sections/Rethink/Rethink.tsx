@@ -28,15 +28,19 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
       </span>
     )
   }
+  // Swiper paramaters
   const params = {
     pagination: {
-      speed: 8000,
       el: '.swiper-pagination',
       clickable: true
-      // renderBullet: () => {
-      //   return <Titles />
-      // }
-    }
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    freeMode: true,
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // }
   }
   return (
     <Swiper {...params}>

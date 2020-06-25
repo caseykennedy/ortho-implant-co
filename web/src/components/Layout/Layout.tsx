@@ -9,10 +9,12 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import Cursor from '../Cursor'
 
 import theme from '../../../config/theme'
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
+import 'swiper/css/swiper.css'
 
 // ___________________________________________________________________
 

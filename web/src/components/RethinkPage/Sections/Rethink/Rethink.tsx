@@ -12,44 +12,23 @@ import BlockContent from '../../../BlockContent'
 import ImgMatch from '../../../ImgMatch'
 import Accordion from '../../../Accordion'
 
+import useRethinkPage from '../../../../hooks/useRethinkPage'
+
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
 import theme from '../../../../../config/theme'
 
 // ___________________________________________________________________
 
-type RethinkNotionsQueryShape = {
-  allSanityRethinkNotions: {
-    edges: {
-      node: {
-        id: string
-        title: string
-        heading: string
-        rethinkNotions: RethinkNotion[]
-      }
-    }[]
-  }
-}
-
 type NotionData = {
-  data: RethinkNotion
-}
-
-type RethinkNotion = {
-  title: string
-  subTitle: string
-  lead: string
-  _rawContent: string
-  image: {
-    asset: {
-      fluid: {
-        src: string
-        aspectRatio: number
-        base64: string
-        sizes: string
-        srcSet: string
-        srcSetWebp: string
-        srcWebp: string
+  data: {
+    _rawContent: string
+    lead: string
+    subTitle: string
+    title: string
+    image: {
+      asset: {
+        fluid: ImageShape
       }
     }
   }
@@ -61,9 +40,9 @@ const AccordionProps = {
   chevronColor: theme.colors.text,
   color: theme.colors.text,
   colorActive: theme.colors.text,
-  borderColor: theme.colors.text,
+  borderColor: theme.colors.quaternary,
   fontSize: [3, 3, 4],
-  bg: 'quinary',
+  bg: 'quinary'
 }
 
 const Notion: React.FC<NotionData> = ({ data }) => {
@@ -77,7 +56,7 @@ const Notion: React.FC<NotionData> = ({ data }) => {
     transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
   return (
-    <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
+    <S.Notion ref={manifestoRef} style={manifestoSpring}>
       <Accordion
         title={data.title}
         subTitle={data.subTitle}
@@ -86,19 +65,34 @@ const Notion: React.FC<NotionData> = ({ data }) => {
         <Flex
           flexDirection="row-reverse"
           flexWrap="wrap"
-          bg="quinary"
-          style={{
-            borderTop: theme.border
-          }}
+          // style={{
+          //   borderTop: theme.border
+          // }}
         >
-          <Box width={[1, 1, 6 / 8]} p={theme.gutter.axis} className="content">
-            {data.lead && <Text as="p">{data.lead}</Text>}
+          <Flex
+            flexDirection="column"
+            justifyContent="space-between"
+            p={theme.gutter.axis}
+            width={[1, 1, 6 / 8]}
+            bg="secondary"
+            color="white"
+            className="content"
+          >
+            {data.lead && (
+              <Heading
+                as="h3"
+                fontSize={[`1.75rem`, `2.5rem`]}
+                fontWeight={400}
+              >
+                {data.lead}
+              </Heading>
+            )}
             {data._rawContent && (
               <BlockContent blocks={data._rawContent || []} />
             )}
-          </Box>
+          </Flex>
 
-          <Box bg="quinary" width={[1, 1, 2 / 8]} className="image">
+          <Box width={[1, 1, 2 / 8]} className="image">
             {data.image && (
               <Img
                 fluid={data.image.asset.fluid}
@@ -110,61 +104,24 @@ const Notion: React.FC<NotionData> = ({ data }) => {
           </Box>
         </Flex>
       </Accordion>
-    </AnimatedBox>
+    </S.Notion>
   )
 }
 
 const Rethink = () => {
-  const data: RethinkNotionsQueryShape = useStaticQuery(graphql`
-    query RethinkNotionsQuery {
-      allSanityRethinkNotions {
-        edges {
-          node {
-            id
-            title
-            heading
-            rethinkNotions {
-              title
-              subTitle
-              lead
-              _rawContent
-              image {
-                asset {
-                  fluid(maxWidth: 1080) {
-                    src
-                    aspectRatio
-                    base64
-                    sizes
-                    srcSet
-                    srcSetWebp
-                    srcWebp
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-  const query = data.allSanityRethinkNotions.edges[0].node
-  // console.log('---_- Notions -_---')
-  // console.log(query)
+  const query = useRethinkPage()
+  console.log(query.rethinkNotions)
   return (
     <S.Rethink>
       <Box px={theme.gutter.axis}>
         <Heading
           as="h3"
           fontWeight={400}
-          fontSize={'1.5rem'}
-          color="primary"
-          style={{ textTransform: 'uppercase' }}
+          fontSize={'1.75rem'}
+          className="t--uppercase"
         >
           {/* {query.title} */}
-          we need to{' '}
-          <Box as="span" color="black">
-            rethink
-          </Box>
+          we need to rethink
         </Heading>
       </Box>
       <Box>
