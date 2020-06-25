@@ -59,11 +59,11 @@ type RethinkNotion = {
 
 const AccordionProps = {
   chevronColor: theme.colors.text,
-  color: theme.colors.tertiary,
+  color: theme.colors.text,
   colorActive: theme.colors.text,
   borderColor: theme.colors.text,
-  fontSize: 4,
-  bg: 'white'
+  fontSize: [3, 3, 4],
+  bg: 'quinary',
 }
 
 const Notion: React.FC<NotionData> = ({ data }) => {
@@ -83,7 +83,14 @@ const Notion: React.FC<NotionData> = ({ data }) => {
         subTitle={data.subTitle}
         {...AccordionProps}
       >
-        <Flex flexDirection="row-reverse" flexWrap="wrap" bg="quinary">
+        <Flex
+          flexDirection="row-reverse"
+          flexWrap="wrap"
+          bg="quinary"
+          style={{
+            borderTop: theme.border
+          }}
+        >
           <Box width={[1, 1, 6 / 8]} p={theme.gutter.axis} className="content">
             {data.lead && <Text as="p">{data.lead}</Text>}
             {data._rawContent && (
@@ -148,13 +155,16 @@ const Rethink = () => {
       <Box px={theme.gutter.axis}>
         <Heading
           as="h3"
-          fontWeight={400} 
+          fontWeight={400}
           fontSize={'1.5rem'}
           color="primary"
           style={{ textTransform: 'uppercase' }}
         >
           {/* {query.title} */}
-          we need to <Box as="span" color="black">rethink</Box>
+          we need to{' '}
+          <Box as="span" color="black">
+            rethink
+          </Box>
         </Heading>
       </Box>
       <Box>

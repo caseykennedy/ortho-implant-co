@@ -22,7 +22,7 @@ import { Box, Flex } from '../../elements'
 export const AccordionContainer = styled.div<{ borderColor: string }>`
   width: 100%;
   position: relative;
-  border-bottom: 2px solid ${p => p.borderColor};
+  border-top: 2px solid ${p => p.borderColor};
 
   /* &:first-child {
     border-top: none;
@@ -56,16 +56,25 @@ export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, c
   &:hover,
   &.active  {
     color: ${p => p.colorActive};
+    background: ${theme.colors.tertiary};
   }
+`
 
-  /* &.active {
-    color: ${p => p.colorActive};
-  } */
+export const AccordionToggleInner = styled(Flex)`
+  flex-direction: column;
+
+  @media ${theme.mq.tablet} {
+    flex-direction: row;
+  }
 
   h3 {
     line-height: 0.6;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-bottom: ${theme.space[3]};
+
+    @media ${theme.mq.desktop} {
+      margin-bottom: 0;
+    }
   }
 `
 

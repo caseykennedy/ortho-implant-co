@@ -18,8 +18,7 @@ export const Intro = styled(Box)`
 `
 
 export const About = styled(Flex)`
-  /* margin-left: ${theme.logoWidth}; */
-
+  border-bottom: ${theme.border};
   color: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {

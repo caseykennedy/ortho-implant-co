@@ -19,7 +19,7 @@ type Props = {
   borderColor: string
   colorActive: string
   bg: string
-  fontSize?: number
+  fontSize?: number | number[] | string
   subTitle?: string
   pt?: number | number[] | string
   pb?: number | number[] | string
@@ -76,14 +76,14 @@ const Accordion: React.FC<Props> = ({
           pb={pb}
           pl={pl}
         >
-          <Flex width={2 / 3}>
+          <S.AccordionToggleInner width={2 / 3}>
             <Heading as="h3" fontSize={fontSize} mb={0} width={1 / 2}>
               {title}
             </Heading>
             <Text as="span" mb={0}>
               {subTitle}
             </Text>
-          </Flex>
+          </S.AccordionToggleInner>
           <S.Carat
             name="nextArrow"
             color="white"
