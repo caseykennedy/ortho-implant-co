@@ -7,11 +7,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import blockText from './blockText'
+import category from './category'
 import figure from './figure'
 import jobPost from './jobPost'
 import notion from './notion'
 import pageTitle from './pageTitle'
 import person from './person'
+import product from './product'
 import rethinkTabs from './rethinkTabs'
 import review from './review'
 import siteSettings from './siteSettings'
@@ -38,11 +40,13 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
+    category,
     figure,
     jobPost,
     notion,
     pageTitle,
     person,
+    product,
     rethinkTabs,
     review,
     siteSettings,
@@ -56,6 +60,7 @@ export default createSchema({
     aboutPage,
 
     rethinkPage,
+    
     //////////////////////// REMOVE
     rethinkNotions
 

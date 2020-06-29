@@ -88,3 +88,15 @@ export const Panel = styled(Flex)`
     justify-content: space-between;
   }
 `
+
+export const Decorator = styled(Flex)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  span {
+    svg {
+
+    }
+  }
+`

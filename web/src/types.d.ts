@@ -34,6 +34,75 @@ type PersonShape = {
   }
 }
 
+// Product shape
+// ___________________________________________________________________
+
+type ProductShape = {
+  products: {
+    edges: {
+      node: {
+        _rawAdditionalInfo: string
+        _rawDescription: string
+        _rawExcerpt: string
+        _rawFeatures: string
+        gallery: {
+          _key: string
+          _type: string
+        }
+        publishedAt: string
+        slug: {
+          current: string
+        }
+        name: string
+        shortName: string
+        videoLink: string
+        categories: {
+          title: string
+        }[]
+      }
+    }[]
+  }
+}
+
+type ProductContextShape = {
+  pageContext: {
+    page: {
+      _rawAdditionalInfo: string
+      _rawDescription: string
+      _rawExcerpt: string
+      _rawFeatures: string
+      gallery: {
+        _key: string
+        _type: string
+      }
+      publishedAt: string
+      slug: {
+        current: string
+      }
+      name: string
+      videoLink: string
+      categories: {
+        title: string
+      }[]
+    }
+    prev: {
+      name: string
+      slug: {
+        current: string
+      }
+      _rawExcerpt: string
+    }
+    next: {
+      name: string
+      shortName: string
+      slug: {
+        current: string
+      }
+      _rawExcerpt: string
+    }
+  }
+}
+
 // Home Hero shape
 // ___________________________________________________________________
 

@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
   ${Typography}
   
   body {
-    background: ${theme.colors.background};
+    background: ${theme.colors.secondary};
     color: ${theme.colors.text};
     
     border: 0;

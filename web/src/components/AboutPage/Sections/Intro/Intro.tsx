@@ -44,7 +44,7 @@ const Position = ({ item }: PositionProps) => {
     // @ts-ignore: Unreachable code error
     <div ref={hoverRef} style={{ position: 'relative' }}>
       <Accordion title={item.name} {...AccordionProps}>
-        <Box pt={6} p={[5, 7]}>
+        <Box bg="background" pt={6} p={[5, 7]}>
           <Text as="p" color="black">
             {item.content}
           </Text>
@@ -111,19 +111,19 @@ export default Intro
 const positioning = [
   {
     name: 'purpose',
-    src: 'reading.jpg',
+    src: 'skeleton.jpg',
     content:
       'We believe that the way orthopaedic implants are priced and supplied is flawed to the detriment of everyone. Our purpose is to rethink and change that system.'
   },
   {
     name: 'mission',
-    src: 'drib__neon_4x.png',
+    src: 'microscope.jpg',
     content:
       'Our mission is to lower the cost of orthopaedic procedures by developing more affordable implants with the perfect balance of quality, service and price for surgeons, hospitals and patients.'
   },
   {
     name: 'vision',
-    src: 'meeting.jpg',
+    src: 'ledge-think.jpg',
     content:
       'Because of our forward thinking view of the ay healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
   }

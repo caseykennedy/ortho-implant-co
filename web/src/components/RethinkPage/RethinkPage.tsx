@@ -20,9 +20,10 @@ import theme from '../../../config/theme'
 
 const billboardProps = {
   bg: theme.colors.primary,
+  btnText: 'See our implants',
   color: theme.colors.text,
-  message: 'Let\'s schedule<br />a one-to-one',
-  title: 'Ready to chat?',
+  message: 'we make orthopaedic implants<br />that are good for all.',
+  title: 'Mantra',
   invert: true
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'

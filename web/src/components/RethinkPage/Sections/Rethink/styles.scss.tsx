@@ -30,7 +30,7 @@ export const Notion = styled(AnimatedBox)`
   .image {
     background: ${theme.colors.tertiary};
     border-top: ${theme.border};
-    padding-top: ${theme.space[5]};
+    /* padding-top: ${theme.space[5]}; */
 
     img {
       /* mix-blend-mode: luminosity; */

@@ -84,6 +84,7 @@ const Container = styled(Box)<{ border?: boolean, overflow?: string }>`
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 9;
 
     @media ${theme.mq.tablet} {
       right: ${theme.space[7]};

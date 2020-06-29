@@ -4,9 +4,9 @@
 
 import styled from 'styled-components'
 
-import { Box, Flex } from '../../../elements'
+import { Box, Flex } from '../../elements'
 
-import theme from '../../../../config/theme'
+import theme from '../../../config/theme'
 
 // Begin Styles
 // ___________________________________________________________________

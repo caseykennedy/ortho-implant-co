@@ -17,7 +17,7 @@ export const Hero = styled(Flex)`
   min-height: 222px;
 
   @media ${theme.mq.tablet} {
-    height: calc(60vh - ${theme.headerHeight});
+    height: calc(57vh - ${theme.headerHeight});
   }
 `
 
@@ -26,6 +26,7 @@ export const Sideboard = styled(Box)`
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
+  background: ${theme.colors.secondary};
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
   display: none;
@@ -55,6 +56,6 @@ export const Figure = styled(Box)`
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    margin-top: -${theme.space[10]};
+    margin-top: -${theme.space[7]};
   }
 `

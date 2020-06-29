@@ -14,6 +14,7 @@ export const Wrapper = styled(Flex)`
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
+  background: ${theme.colors.background};
 `
 
 export const Main = styled(animated.main)`

@@ -10,7 +10,7 @@ import Implants from './Sections/Implants'
 import Reviews from './Sections/Reviews'
 import Mantra from './Sections/Mantra'
 import Blog from './Sections/Blog'
-// import PreFooter from '../Footer/PreFooter'
+import Prefooter from '../Footer/Prefooter'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
       <Reviews />
       <Mantra />
       <Blog />
-      {/* <PreFooter /> */}
+      <Prefooter />
     </S.HomePage>
   )
 }

@@ -26,12 +26,14 @@ export const Sideboard = styled(Flex)`
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
+  align-items: flex-start;
+
   display: none;
   padding: ${theme.space[7]};
   width: calc(${theme.logoWidth} * 1);
 
   @media ${theme.mq.tablet} {
-    display: block;
+    display: Flex;
     width: calc(${theme.logoWidth} * 1);
   }
 
@@ -44,6 +46,7 @@ export const Sideboard = styled(Flex)`
     width: 100%;
     max-width: calc(${theme.space[3]} * 6);
     min-width: calc(${theme.space[3]} * 4);
+    padding-bottom: ${theme.space[7]};
   }
 `
 

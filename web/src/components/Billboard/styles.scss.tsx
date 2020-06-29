@@ -14,6 +14,7 @@ export const Billboard = styled(Flex)`
   flex-direction: column;
   position: relative;
   padding-bottom: calc(60px - ${theme.space[5]});
+  z-index: 9;
 
   @media ${theme.mq.desktop} {
     padding-bottom: calc(120px - ${theme.space[5]});
@@ -45,5 +46,21 @@ export const Figure = styled(Box)`
 
   .img {
     height: 100%;
+  }
+`
+
+export const Illustration = styled(Flex)`
+  justify-content: flex-end;
+  position: absolute;
+  z-index: -0;
+  width: 100%;
+  height: 100%;
+  top: ${theme.space[7]};
+  right: -${theme.space[9]};
+  bottom: 0;
+  /* left: 0; */
+
+  svg {
+    width: 900px;
   }
 `

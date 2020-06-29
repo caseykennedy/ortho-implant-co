@@ -11,7 +11,7 @@ import { Box, Flex, Text, Heading } from '../../elements'
 import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
-import Overlay from './Overlay'
+import Overlay from '../Overlay'
 import Button from '../../elements/Button'
 import Icon from '../Icons'
 
@@ -41,7 +41,13 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       </Overlay>
 
       <S.Header as="header">
-        <S.Logo>
+        <S.Logo
+          className={
+            typeof window !== 'undefined' && location.pathname !== '/'
+              ? 'logo--dark'
+              : null
+          }
+        >
           <Link to="/" aria-label="Ortho Implant Co., back to home">
             <Logo />
           </Link>

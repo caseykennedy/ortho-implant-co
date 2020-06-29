@@ -23,31 +23,34 @@ export const Carousel = styled(Box)`
 
     .swiper-wrapper {
       .swiper-slide {
+        background: ${theme.colors.quinary};
         transition: ${theme.transition.all};
 
         &:hover {
-          background: ${theme.colors.quaternary};
+          background: ${theme.colors.primary};
           /* cursor: pointer; */
         }
 
         &.swiper-slide-active {
-          background: ${theme.colors.primary};
+          /* background: ${theme.colors.primary}; */
         }
       }
     }
 
-    .swiper-scrollbar {
-      background: rgba(255, 255, 255, 0.5);
-      bottom: -2rem;
-      max-height: 1px;
-      overflow: visible;
+    .swiper-pagination {
+      /* background: ${theme.colors.primary}; */
+      top: -3rem;
+      bottom: initial;
 
-      .swiper-scrollbar-drag {
-        background: ${theme.colors.primary};
-        border-radius: 0px !important;
-        min-height: 11px;
-        position: relative;
-        top: -5px;
+      text-align: left;
+
+      &.swiper-pagination-bullets {
+        span {
+          cursor: pointer;
+          background: ${theme.colors.white} !important;
+          padding: ${theme.space[3]};
+          border-radius: 0;
+        }
       }
     }
   }

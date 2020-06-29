@@ -19,14 +19,16 @@ export const Header = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
-  width: 100vw;
+  z-index: 99;
+
+  background: ${theme.colors.background};
 
   @media ${theme.mq.tablet} {
   }
 `
 
 export const Logo = styled(Box)`
-  background: ${theme.colors.secondary};
+  background: ${theme.colors.primary};
   width: calc(${theme.logoWidth} / 1.5);
   height: calc(${theme.headerHeight} / 1.5);
   padding: calc(${theme.space[3]} * 3) ${theme.space[5]} ${theme.space[3]};
@@ -41,11 +43,19 @@ export const Logo = styled(Box)`
     font-size: 1.4rem;
     width: ${theme.logoWidth};
     height: ${theme.headerHeight};
-  padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
+    padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
+  }
+
+  &.logo--dark {
+    background: ${theme.colors.secondary};
+
+    svg {
+      fill: ${theme.colors.white};
+    }
   }
 
   svg {
-    fill: white;
+    fill: ${theme.colors.secondary};
     width: 100%;
     max-width: calc(${theme.space[3]} * 6);
     min-width: calc(${theme.space[3]} * 4);
@@ -80,6 +90,10 @@ export const Toggle = styled.div`
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
   cursor: pointer;
+
+  @media ${theme.mq.tablet} {
+    display: none;
+  }
 
   span {
     svg {

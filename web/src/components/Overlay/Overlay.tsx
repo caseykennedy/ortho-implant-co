@@ -9,13 +9,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import theme from '../../../../config/theme'
+import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
 type Props = {
-  mainRef: React.RefObject<HTMLDivElement>
+  mainRef?: React.RefObject<HTMLDivElement>
   className: string
   children: React.ReactNode
   root?: string
@@ -62,21 +62,21 @@ const Overlay: React.FC<Props> = ({
     const rootContainer = document.querySelector(`#${root}`)
     const modalContainer = document.querySelector(`#${id}`)
 
-    const capturePosition = () => {
-      const cachedPosition = window.pageYOffset
-      return {
-        freeze: () => {
-          mainRef.current.style = `position: relative; top: ${cachedPosition *
-            -1}px; width: 100%;`
-        },
-        unfreeze: () => {
-          mainRef.current.removeAttribute('style')
-          window.scrollTo({
-            top: cachedPosition
-          })
-        }
-      }
-    }
+    // const capturePosition = () => {
+    //   const cachedPosition = window.pageYOffset
+    //   return {
+    //     freeze: () => {
+    //       mainRef.current.style = `position: relative; top: ${cachedPosition *
+    //         -1}px; width: 100%;`
+    //     },
+    //     unfreeze: () => {
+    //       mainRef.current.removeAttribute('style')
+    //       window.scrollTo({
+    //         top: cachedPosition
+    //       })
+    //     }
+    //   }
+    // }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
       const focusableElements = container.querySelectorAll(
@@ -97,19 +97,19 @@ const Overlay: React.FC<Props> = ({
       }
     }
 
-    const { freeze, unfreeze } = capturePosition()
+    // const { freeze, unfreeze } = capturePosition()
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
       if (modalContainer) toggleTabIndex('on', modalContainer)
       if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
-      freeze()
+      // freeze()
     } else {
       if (modalContainer) toggleTabIndex('off', modalContainer)
       if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
-      unfreeze()
+      // unfreeze()
       if (focusAfterExit) focusAfterExit.focus()
 
       if (!initialRender.current) {
@@ -123,7 +123,7 @@ const Overlay: React.FC<Props> = ({
     return () => {
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
-        unfreeze()
+        // unfreeze()
       }
     }
   }, [isOpen])

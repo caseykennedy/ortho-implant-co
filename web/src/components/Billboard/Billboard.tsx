@@ -11,6 +11,8 @@ import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Button from '../../elements/Button'
 
+import IllustrationOne from '../IllustrationOne'
+
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../elements'
 import theme from '../../../config/theme'
@@ -20,6 +22,7 @@ import theme from '../../../config/theme'
 type Props = {
   altText?: string
   bg?: string
+  btnText?: string
   color?: string
   invert?: boolean
   message?: string
@@ -30,6 +33,7 @@ type Props = {
 const Intro: React.FC<Props> = ({
   altText,
   bg,
+  btnText,
   color,
   invert,
   message,
@@ -37,7 +41,7 @@ const Intro: React.FC<Props> = ({
   src
 }) => {
   return (
-    <Section bg={bg} border={true} color={color}>
+    <Section bg={bg} border={true} color={color} overflow="hidden">
       {src && altText && (
         <S.Figure>
           <ImgMatch src={src} altText={altText} />
@@ -46,7 +50,7 @@ const Intro: React.FC<Props> = ({
 
       <div className="cta">
         <Button to={`/implants`} invert={!invert ? undefined : invert}>
-          Talk to us
+          {btnText}
         </Button>
       </div>
 
@@ -55,6 +59,10 @@ const Intro: React.FC<Props> = ({
 
         {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
       </S.Billboard>
+
+      <S.Illustration>
+        <IllustrationOne />
+      </S.Illustration>
     </Section>
   )
 }
@@ -65,6 +73,7 @@ export default Intro
 
 const defaultProps = {
   bg: 'primary',
+  btnText: 'Talk to us',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
   color: 'white'

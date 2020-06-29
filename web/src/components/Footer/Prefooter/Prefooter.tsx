@@ -50,7 +50,7 @@ const Prefooter = () => {
     <>
       <S.Prefooter>
         <S.Sideboard>
-          {/* <Logo /> */}
+          <Logo />
         </S.Sideboard>
         <S.Billboard>
           <Box className="cta">

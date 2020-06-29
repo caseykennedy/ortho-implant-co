@@ -18,12 +18,13 @@ import theme from '../../../config/theme'
 
 type Props = {
   altText: string
+  border?: boolean
   image?: object
   message: string
   title?: string
 }
 
-const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
+const PageTitle: React.FC<Props> = ({ altText, border, image, message, title }) => {
   const fadeAnimation = useSpring({
     config: config.molasses,
     delay: 260,
@@ -33,11 +34,11 @@ const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
   return (
     <>
       <S.PageTitle image={image}>
-        <S.Sideboard />
+        <S.Sideboard border={border} />
 
-        <S.Billboard>
+        <S.Billboard border={border}>
           <AnimatedBox style={fadeAnimation}>
-            <Heading as="h5" color="primary">
+            <Heading as="h5" color="tertiary">
               {title}
             </Heading>
 
@@ -50,7 +51,7 @@ const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
         </S.Billboard>
       </S.PageTitle>
 
-      <Parallax y={[-9, 10]}>
+      <Parallax y={[5, 10]}>
         <S.Figure>
           {image && (
             <Img

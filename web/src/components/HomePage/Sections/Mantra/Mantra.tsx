@@ -73,7 +73,7 @@ const Mantra = () => {
               <Heading as="h5" color="tertiary">
                 {query.title}
               </Heading>
-              <Heading as="h2" fontSize={3} fontWeight={400}>
+              <Heading as="h3" fontWeight={400}>
                 {query.heading}
               </Heading>
             </Box>

@@ -21,7 +21,7 @@ import theme from '../../../config/theme'
 
 const billboardProps = {
   bg: 'primary',
-  message: 'Let\'s schedule<br />a one-to-one',
+  message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
   src: 'operating-room.jpg',
   altText: 'Doctors in the operating room.'
@@ -32,7 +32,7 @@ const AboutPage = () => {
   const pageTitle = {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.fluid,
-    message: page.pageTitle.message,
+    message: page.pageTitle.message
     // title: 'Needs title'
   }
   return (

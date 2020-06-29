@@ -41,10 +41,8 @@ type JobPostQuery = {
 const JobPost: React.FC<JobData> = ({ job }) => {
   return (
     <Link to={`/careers/${job.slug.current}`} className="t--link">
-      <Heading as="h4" color="text">
-        {job.title}
-        <Icon name="nextArrow" />
-      </Heading>
+      {job.title}
+      <Icon name="nextArrow" />
     </Link>
   )
 }
@@ -90,7 +88,7 @@ const JobBoard = () => {
           </Text>
         </Box>
 
-        <Box width={1}>
+        <Box width={1} className="postings">
           {jobPosts.map(({ node: job }, idx) => (
             <JobPost job={job} key={idx} />
           ))}

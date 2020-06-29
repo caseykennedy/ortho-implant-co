@@ -22,11 +22,13 @@ type LayoutProps = {
   children: React.ReactNode
   isShowing?: boolean
   toggleOverlay?: () => void
+  // mainRef: React.RefObject<HTMLDivElement>
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
+  
   // eslint-disable-next-line no-console
   console.log(
     `%c Site by CaseyKennedy.me `,

@@ -63,37 +63,34 @@ const Implants = () => {
   // console.log('---_- Rethink -_---')
   // console.log(query)
   const params = {
-    centeredSlides: true,
-    freeMode: true,
-    grabCursor: true,
-    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    freeMode: false,
+    slidesPerView: 4,
     spaceBetween: 20,
-    ContainerEl: 'div',
-    WrapperEl: 'div',
     breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
       768: {
         slidesPerView: 2,
-        spaceBetween: 30
+        spaceBetween: 20,
+        grabCursor: true
       },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 50
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grabCursor: true
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: -2,
+        grabCursor: true
       }
-    },
-    // parallax: true,
-    // parallaxEl: {
-    //   el: '.parallax-bg',
-    //   value: '-23%'
-    // },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: false
-    },
-    renderSrollbar: () => (
-      <Box>
-        <hr />
-      </Box>
-    )
+    }
   }
   return (
     <Section bg="secondary" color="white" overflow="hidden">
