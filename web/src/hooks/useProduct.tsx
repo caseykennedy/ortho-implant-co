@@ -7,57 +7,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
-type Props = {
-  products: {
-    edges: {
-      node: {
-        _rawAdditionalInfo: string
-        _rawDescription: string
-        _rawExcerpt: string
-        _rawFeatures: string
-        gallery: {
-          asset: {
-            fluid: ImageShape
-          }
-        }[]
-        mainImage: {
-          asset: {
-            fluid: ImageShape
-          }
-        }
-        publishedAt: string
-        slug: {
-          current: string
-        }
-        name: string
-        shortName: string
-        videoLink: string
-        categories: {
-          title: string
-        }[]
-      }
-      previous: {
-        name: string
-        slug: {
-          current: string
-        }
-        _rawExcerpt: string
-      }
-      next: {
-        name: string
-        slug: {
-          current: string
-        }
-        _rawExcerpt: string
-      }
-    }[]
-  }
-}
-
 const useProduct = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<ProductShape>(graphql`
     query ProductsQuery {
-      products: allSanityProduct {
+      products: allSanityProduct(sort: {fields: categories___title}) {
         edges {
           node {
             _rawAdditionalInfo

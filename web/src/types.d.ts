@@ -34,57 +34,81 @@ type PersonShape = {
   }
 }
 
+// Category shape
+// ___________________________________________________________________
+
+type CategoryNode = {
+  title: string
+  description: string
+}
+
+type CategoryEdges = {
+  node: CategoryNode
+}
+
+type CategoryShape = {
+  categories: {
+    edges: CategoryEdges[]
+  }
+}
+
 // Product shape
 // ___________________________________________________________________
 
+type ProductNode = {
+  _rawAdditionalInfo: string
+  _rawDescription: string
+  _rawExcerpt: string
+  _rawFeatures: string
+  gallery: {
+    asset: {
+      fluid: ImageShape
+    }
+  }[]
+  mainImage: {
+    asset: {
+      fluid: ImageShape
+    }
+  }
+  publishedAt: string
+  slug: {
+    current: string
+  }
+  name: string
+  shortName: string
+  videoLink: string
+  categories: {
+    title: string
+  }[]
+}
+
+type ProductEdges = {
+  node: ProductNode
+  previous: {
+    name: string
+    slug: {
+      current: string
+    }
+    _rawExcerpt: string
+  }
+  next: {
+    name: string
+    slug: {
+      current: string
+    }
+    _rawExcerpt: string
+  }
+}
+
 type ProductShape = {
   products: {
-    edges: {
-      node: {
-        _rawAdditionalInfo: string
-        _rawDescription: string
-        _rawExcerpt: string
-        _rawFeatures: string
-        gallery: {
-          _key: string
-          _type: string
-        }
-        publishedAt: string
-        slug: {
-          current: string
-        }
-        name: string
-        shortName: string
-        videoLink: string
-        categories: {
-          title: string
-        }[]
-      }
-    }[]
+    edges: ProductEdges[]
   }
 }
 
 type ProductContextShape = {
   pageContext: {
-    page: {
-      _rawAdditionalInfo: string
-      _rawDescription: string
-      _rawExcerpt: string
-      _rawFeatures: string
-      gallery: {
-        _key: string
-        _type: string
-      }
-      publishedAt: string
-      slug: {
-        current: string
-      }
-      name: string
-      videoLink: string
-      categories: {
-        title: string
-      }[]
-    }
+    page: ProductNode
     prev: {
       name: string
       slug: {

@@ -25,7 +25,7 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
-  background: ${theme.colors.quinary};
+  background: ${theme.colors.white};
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
   display: none;

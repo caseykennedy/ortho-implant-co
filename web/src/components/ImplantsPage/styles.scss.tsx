@@ -2,14 +2,17 @@
 
 // ___________________________________________________________________
 
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex, Heading } from '../../elements'
+import { Box, AnimatedBox, Flex, Heading } from '../../elements'
 
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
+
+const cardBorder = `1px solid ${theme.colors.black}`
 
 export const ImplantsPage = styled(Box)`
   flex-wrap: wrap;
@@ -69,20 +72,5 @@ export const ImplantsPage = styled(Box)`
         }
       }
     }
-  }
-`
-
-export const Spacer = styled(Box)`
-  background: ${theme.colors.white};
-  
-  @media ${theme.mq.desktop} {
-    min-width: ${theme.logoWidth};
-  }
-`
-
-export const Decorator = styled(Flex)`
-
-  svg {
-    width: 900px;
   }
 `
