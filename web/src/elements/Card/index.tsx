@@ -23,7 +23,7 @@ export const Card = styled(AnimatedBox)`
     color: ${theme.colors.text};
 
     &__headshot {
-      width: 50%;
+      width: 30%;
 
       img {
         /* mix-blend-mode: luminosity; */

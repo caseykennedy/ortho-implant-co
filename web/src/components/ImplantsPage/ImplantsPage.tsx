@@ -14,6 +14,7 @@ import useProduct from '../../hooks/useProduct'
 import PageTitle from '../PageTitle'
 import Filters from './Sections/Filters'
 import Icon from '../Icons'
+import Implants from '../Implants'
 
 import { Card, CardHolder, CardColumn } from '../../elements/Card'
 import Divider from '../../elements/Divider'
@@ -90,20 +91,20 @@ const TeamSwiper: React.FC = ({ children }) => {
     // },
     freeMode: true,
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: -2,
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20
+        spaceBetween: -2
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: -2,
         grabCursor: true
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: -2,
         grabCursor: true
       },
       320: {

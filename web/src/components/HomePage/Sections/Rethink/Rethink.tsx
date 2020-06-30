@@ -34,7 +34,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
       el: '.swiper-pagination',
       clickable: true
     },
-    // effect: 'fade',
+    effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 0,
     freeMode: true,

@@ -79,3 +79,10 @@ export const Spacer = styled(Box)`
     min-width: ${theme.logoWidth};
   }
 `
+
+export const Decorator = styled(Flex)`
+
+  svg {
+    width: 900px;
+  }
+`
