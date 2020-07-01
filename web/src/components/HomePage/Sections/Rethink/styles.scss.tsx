@@ -91,12 +91,9 @@ export const Panel = styled(Flex)`
 
 export const Decorator = styled(Flex)`
   position: absolute;
-  top: 0;
-  right: 0;
-  
-  span {
-    svg {
+  top: 7rem;
+  right: -2rem;
 
-    }
+  svg {
   }
 `

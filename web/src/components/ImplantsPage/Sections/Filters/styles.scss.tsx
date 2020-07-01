@@ -24,7 +24,7 @@ export const Filter = styled(AnchorLink)`
   position: relative;
   z-index: 999;
 
-  background: ${theme.colors.background};
+  background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
   color: ${theme.colors.text};
   padding: ${theme.space[4]} 0;
@@ -86,13 +86,13 @@ export const Card = styled(Link)`
 
   border-bottom: ${theme.border};
   border-right: ${theme.border};
-  background: ${theme.colors.quinary};
+  background: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
   }
 
   &:hover {
-    background: ${theme.colors.white};
+    background: ${theme.colors.primary};
   }
 
   &.card {
@@ -134,7 +134,7 @@ export const Card = styled(Link)`
       }
 
       h5 {
-        color: ${theme.colors.tertiary};
+        color: ${theme.colors.white};
       }
 
       .card__meta {

@@ -27,6 +27,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   text-transform: uppercase;
 
   background: ${p => !p.invert ? theme.colors.primary : theme.colors.secondary};
+  border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {

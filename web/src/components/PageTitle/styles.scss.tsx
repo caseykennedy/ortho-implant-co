@@ -25,7 +25,7 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
-  background: ${theme.colors.white};
+  background: ${theme.colors.quinary};
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
   display: none;
@@ -43,6 +43,7 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
   ${p => p.border && `border-bottom: ${theme.border};`}
 
   background: ${theme.colors.background};
+  border-bottom: ${theme.border};
   padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
   position: relative;
   z-index: 9;

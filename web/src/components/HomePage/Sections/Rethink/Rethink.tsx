@@ -5,12 +5,13 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
-import { Tabs } from '@feuer/react-tabs'
 import Swiper from 'react-id-swiper'
 
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
 import Button from '../../../../elements/Button'
+import Hexagons from '../../../Hexagons'
+import { Parallax } from 'react-scroll-parallax'
 
 import { Box, Flex, Heading } from '../../../../elements'
 import theme from '../../../../../config/theme'
@@ -38,10 +39,10 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
     slidesPerView: 1,
     spaceBetween: 0,
     freeMode: true,
-    autoplay: {
-      delay: 6000,
-      disableOnInteraction: true
-    },
+    // autoplay: {
+    //   delay: 8000,
+    //   disableOnInteraction: true
+    // }
     // navigation: {
     //   nextEl: '.swiper-button-next',
     //   prevEl: '.swiper-button-prev',
@@ -55,7 +56,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
             <div>
               <Heading
                 as="h3"
-                fontSize={[5, 5, `calc(${theme.fontSizes[5]} * 1.4)`]}
+                fontSize={[5, 5, `calc(${theme.fontSizes[5]} * 1.2)`]}
                 lineHeight={1}
                 mb={0}
                 ml={-1}
@@ -63,11 +64,8 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
               >
                 {panel.tag}
               </Heading>
-              <Heading as="h4" fontSize={3} mt={-3}>
-                <Box as="span">
-                  For
-                </Box>{' '}
-                {panel.title}
+              <Heading as="h4" fontSize={3} mt={-3} mb={0}>
+                <Box as="span">For</Box> {panel.title}
               </Heading>
             </div>
             <div>
@@ -81,7 +79,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
               </Box>
             </div>
           </Flex>
-          <Box width={[1, 1 / 2]} m={[5, 0, 0]}>
+          <Box width={[1, 1 / 2]} m={[5, 0, 0]} style={{ maxHeight: '75vh', overflow: 'hidden' }}>
             {panel.image && (
               <Img
                 fluid={panel.image.asset.fluid}
@@ -118,13 +116,7 @@ const Rethink = () => {
               image {
                 asset {
                   fluid(maxWidth: 1080) {
-                    src
-                    aspectRatio
-                    base64
-                    sizes
-                    srcSet
-                    srcSetWebp
-                    srcWebp
+                    ...GatsbySanityImageFluid
                   }
                 }
               }
@@ -140,9 +132,9 @@ const Rethink = () => {
   // console.log(query)
   return (
     <Section overflow="hidden" bg="background">
-      <div className="cta">
+      <Box className="cta">
         <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
-      </div>
+      </Box>
       <Box width={[1, 1 / 2]} mt={[8, 0]}>
         <Heading as="h5" color="tertiary">
           {query.title}
@@ -154,9 +146,11 @@ const Rethink = () => {
       <S.Learn width={1} mt={12}>
         <TabsPanel panels={query.tabPanels} />
       </S.Learn>
-      <S.Decorator>
-        asdf
-      </S.Decorator>
+      <Parallax y={[-5, 10]}>
+        <S.Decorator>
+          <Hexagons />
+        </S.Decorator>
+      </Parallax>
     </Section>
   )
 }

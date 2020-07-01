@@ -7,8 +7,10 @@ import React, { useState } from 'react'
 import PageTitle from '../PageTitle'
 import Filters from './Sections/Filters'
 import Billboard from '../Billboard'
+import Section from '../Section'
 
 import Divider from '../../elements/Divider'
+import { Box, Text } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -34,6 +36,13 @@ const ImplantsPage = () => {
     <S.ImplantsPage>
       <PageTitle {...pageTitle} />
       <Filters />
+      <Box
+        bg="secondary"
+        mt="-2px"
+        px={theme.gutter.axis}
+        // py="1px"
+        position="relative"
+      />
       <Billboard {...billboardProps} />
     </S.ImplantsPage>
   )
