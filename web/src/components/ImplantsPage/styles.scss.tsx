@@ -18,7 +18,7 @@ export const ImplantsPage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   nav {
     margin-bottom: 1rem;

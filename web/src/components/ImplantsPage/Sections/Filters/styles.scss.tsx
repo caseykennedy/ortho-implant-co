@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import { Link } from 'gatsby'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import styled from 'styled-components'
 import theme from '../../../../../config/theme'
@@ -10,11 +11,56 @@ import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
-export const Filters = styled.div`
+export const ProductGrid = styled.div`
   width: 100%;
   position: relative;
 
   @media ${theme.mq.tablet} {
+  }
+`
+
+export const Filter = styled(AnchorLink)`
+  display: flex;
+  position: relative;
+  z-index: 999;
+
+  background: ${theme.colors.background};
+  border-bottom: ${theme.border};
+  color: ${theme.colors.text};
+  padding: ${theme.space[4]} 0;
+  width: 100%;
+
+  @media ${theme.mq.tablet} {
+    position: sticky;
+    top: 0;
+  }
+
+  .filter {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+
+      @media ${theme.mq.tablet} {
+        flex-direction: row;
+      }
+    }
+
+    &__btn {
+      cursor: pointer;
+      padding: ${theme.space[2]} ${theme.space[3]};
+      font-family: ${theme.fonts.heading};
+      text-transform: uppercase;
+
+      &:first-child {
+        @media ${theme.mq.desktop} {
+          padding-left: 0;
+        }
+      }
+
+      &:hover {
+        color: ${theme.colors.tertiary};
+      }
+    }
   }
 `
 
@@ -76,7 +122,15 @@ export const Card = styled(Link)`
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 0;
-        font-size: calc(${theme.fontSizes[3]} / 1);
+        font-size: calc(${theme.fontSizes[3]} / 1.5);
+
+        @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[3]} / 1.25);
+        }
+
+        @media ${theme.mq.desktop} {
+          font-size: calc(${theme.fontSizes[3]} / 1);
+        }
       }
 
       h5 {
@@ -108,7 +162,6 @@ export const Card = styled(Link)`
 export const CardHolder = styled(Flex)`
   flex-wrap: wrap;
   background: ${theme.colors.quinary};
-  border-top: ${theme.border};
   width: 100%;
 `
 

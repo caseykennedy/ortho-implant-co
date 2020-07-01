@@ -15,28 +15,6 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-type ImplantShape = {
-  implant: {
-    _rawAdditionalInfo: string
-    _rawDescription: string
-    _rawExcerpt: string
-    _rawFeatures: string
-    gallery: {
-      _key: string
-      _type: string
-    }[]
-    publishedAt: string
-    slug: {
-      current: string
-    }
-    name: string
-    videoLink: string
-    categories: {
-      title: string
-    }[]
-  }
-}
-
 const billboardProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-to-one",
@@ -55,10 +33,7 @@ const ImplantsPage = () => {
   return (
     <S.ImplantsPage>
       <PageTitle {...pageTitle} />
-
       <Filters />
-
-      <Divider py={10} bg="quinary" />
       <Billboard {...billboardProps} />
     </S.ImplantsPage>
   )

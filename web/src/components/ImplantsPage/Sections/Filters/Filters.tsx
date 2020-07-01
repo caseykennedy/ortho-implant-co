@@ -2,10 +2,8 @@
 
 // ___________________________________________________________________
 
-import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
-import { useTransition, useSpring, config } from 'react-spring'
-import { useInView } from 'react-intersection-observer'
+import React, { useState } from 'react'
+import { useTransition } from 'react-spring'
 import Img from 'gatsby-image/withIEPolyfill'
 
 import useProduct from '../../../../hooks/useProduct'
@@ -24,16 +22,8 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
   implant,
   transition
 }) => {
-  // Only show item when in view
-  const [manifestoRef, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-200px 0px'
-  })
-  const manifestoSpring = useSpring({
-    opacity: inView ? 1 : 0
-  })
   return (
-    <AnimatedFlex width={[1 / 2, 1 / 4]} style={transition}>
+    <AnimatedFlex width={[1 / 2, 1 / 3, 1 / 4]} style={transition}>
       <S.Card to={`/implants/${implant.node.slug.current}`}>
         <Box width={[7 / 10]} className="card__thumb">
           {!implant.node.mainImage ? (
@@ -55,10 +45,12 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
             <Heading as="h4" mt={5} color="text">
               {implant.node.shortName}
             </Heading>
+            
             <Text as="h5" className="t--small">
               {implant.node.categories[0].title}
             </Text>
           </Box>
+
           <Text as="span" mt={5} className="card__meta  t--uppercase">
             details
             <Icon name="nextArrow" />
@@ -92,7 +84,7 @@ const ProductPanel: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
   return (
     <Box width={1}>
       <S.CardHolder width={1}>
-        <Flex width={1 / 4}>
+        <Flex width={[1 / 2, 1 / 3, 1 / 4]}>
           <S.Card to="/" className="card--title">
             <div className="card__content">
               <Box mt={3}>
@@ -100,6 +92,7 @@ const ProductPanel: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
                   Hip Fractures
                 </Heading>
               </Box>
+
               <Text as="span" mt={5} className="card__meta  t--uppercase">
                 details
               </Text>
@@ -123,32 +116,36 @@ const Filters = () => {
       implants.filter(item => item.node.categories[0].title === category)
     )
   }
-  const setFilteredItemsAll = () => {
+  const resetFilteredItems = () => {
     setItems(implants)
   }
   // console.log('—————|— filterCategory —|—————')
   // console.log(items)
-
-  const btnTitle = 'Hip Fractures'
-
   return (
-    <S.Filters>
-      <Flex py={7}>
-        <Box width={theme.logoWidth} />
-        <Box as="nav">
-          <button onClick={setFilteredItemsAll}>View all</button>
+    <S.ProductGrid id="product-grid">
+      <S.Filter href="#product-grid">
+        <Box width={[0, 0, theme.logoWidth]} />
+        <div className="filter__inner">
+          <Box className="filter__btn" onClick={resetFilteredItems}>
+            View all
+          </Box>
+
           {categories.map(({ node: cat }, idx) => (
-            <button onClick={() => setFilteredItems(cat.title)} key={idx}>
+            <Heading
+              className="filter__btn"
+              onClick={() => setFilteredItems(cat.title)}
+              key={idx}
+            >
               {cat.title}
-            </button>
+            </Heading>
           ))}
-        </Box>
-      </Flex>
+        </div>
+      </S.Filter>
 
       <Flex>
         <ProductPanel items={items} />
       </Flex>
-    </S.Filters>
+    </S.ProductGrid>
   )
 }
 

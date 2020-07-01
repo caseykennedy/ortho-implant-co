@@ -32,7 +32,7 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
 
   ${p => p.border && `border-right: ${theme.border};`}
 
-  @media ${theme.mq.tablet} {
+  @media ${theme.mq.desktop} {
     display: block;
   }
 `
