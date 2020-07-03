@@ -17,7 +17,7 @@ export const JobBoard = styled(Flex)`
     mix-blend-mode: luminosity;
   }
 
-  .postings {
+  .posts {
     padding: ${theme.space[2]} 0 ${theme.space[2]} ${theme.space[5]};
     border-left: 8px solid black;
 

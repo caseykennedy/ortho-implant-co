@@ -1,3 +1,5 @@
+// TODO: More consistent naming / nesting
+
 type ImageShape = {
   aspectRatio: number
   src: string
@@ -271,5 +273,52 @@ type MantraSectionQueryShape = {
         _rawMessage: string
       }
     }[]
+  }
+}
+
+// Job post shape
+// ___________________________________________________________________
+
+type JobPostShape = {
+  jobs: {
+    edges: {
+      node: JobPostQuery
+    }[]
+  }
+}
+
+type JobData = {
+  job: JobPostQuery
+}
+
+type JobPostQuery = {
+  _rawExcerpt: string
+  _rawBody: string
+  publishedAt: string
+  title: string
+  
+  slug: {
+    current: string
+  }
+}
+
+type CareersContextShape = {
+  pageContext: {
+    page: JobPostQuery
+    prev: {
+      name: string
+      slug: {
+        current: string
+      }
+      _rawExcerpt: string
+    }
+    next: {
+      name: string
+      shortName: string
+      slug: {
+        current: string
+      }
+      _rawExcerpt: string
+    }
   }
 }

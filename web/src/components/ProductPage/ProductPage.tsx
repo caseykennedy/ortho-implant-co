@@ -13,7 +13,7 @@ import BlockContent from '../BlockContent'
 import useRethinkPage from '../../hooks/useRethinkPage'
 
 // Elements
-import { AnimatedBox, Box, Heading } from '../../elements'
+import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
 import Divider from '../../elements/Divider'
 
 import * as S from './styles.scss'
@@ -23,12 +23,12 @@ import Prefooter from '../Footer/Prefooter'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: theme.colors.primary,
+  bg: theme.colors.white,
   btnText: 'See our implants',
   color: theme.colors.text,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: true
+  invert: false
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }
@@ -48,35 +48,47 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
   return (
     <S.ProductPage>
       <PageTitle {...pageTitle} />
-      <Section bg="quinary">
-        {implant._rawExcerpt && (
-          <BlockContent blocks={implant._rawExcerpt || []} />
-        )}
-
-        {implant._rawDescription && (
-          <BlockContent blocks={implant._rawDescription || []} />
-        )}
-
-        {implant._rawFeatures && (
-          <BlockContent blocks={implant._rawFeatures || []} />
-        )}
-
-        {implant._rawAdditionalInfo && (
-          <BlockContent blocks={implant._rawAdditionalInfo || []} />
-        )}
-
+      <Flex bg="quinary" py={theme.gutter.axis} pr={theme.gutter.axis}>
+        <Box p={3} style={{ minWidth: theme.logoWidth }} />
         <Box>
-          {next && (
-            <Link to={`implants/${next.slug.current}`}>Next: {next.name}</Link>
-          )}
-          <br />
-          {prev && (
-            <Link to={`implants/${prev.slug.current}`}>Prev: {prev.name}</Link>
-          )}
-        </Box>
-      </Section>
 
-      {/* <Billboard {...billboardProps} /> */}
+          {implant._rawDescription && (
+            <BlockContent blocks={implant._rawDescription || []} />
+          )}
+
+          <Heading as="h4" mt={7}>
+            Features
+          </Heading>
+
+          {implant._rawFeatures && (
+            <BlockContent blocks={implant._rawFeatures || []} />
+          )}
+
+          <Heading as="h4" mt={7}>
+            Additional Info
+          </Heading>
+
+          {implant._rawAdditionalInfo && (
+            <BlockContent blocks={implant._rawAdditionalInfo || []} />
+          )}
+
+          <Box>
+            {next && (
+              <Link to={`implants/${next.slug.current}`}>
+                Next: {next.name}
+              </Link>
+            )}
+            <br />
+            {prev && (
+              <Link to={`implants/${prev.slug.current}`}>
+                Prev: {prev.name}
+              </Link>
+            )}
+          </Box>
+        </Box>
+      </Flex>
+
+      <Billboard {...billboardProps} />
       <Prefooter />
     </S.ProductPage>
   )

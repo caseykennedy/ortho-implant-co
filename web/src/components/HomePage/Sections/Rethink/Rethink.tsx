@@ -38,7 +38,7 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
     effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 0,
-    freeMode: true,
+    freeMode: true
     // autoplay: {
     //   delay: 8000,
     //   disableOnInteraction: true
@@ -79,7 +79,11 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
               </Box>
             </div>
           </Flex>
-          <Box width={[1, 1 / 2]} m={[5, 0, 0]} style={{ maxHeight: '75vh', overflow: 'hidden' }}>
+          <Box
+            width={[1, 1 / 2]}
+            m={[5, 0, 0]}
+            style={{ maxHeight: '75vh', overflow: 'hidden' }}
+          >
             {panel.image && (
               <Img
                 fluid={panel.image.asset.fluid}

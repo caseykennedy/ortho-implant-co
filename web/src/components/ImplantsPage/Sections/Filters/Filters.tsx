@@ -85,7 +85,7 @@ const ProductPanel: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
   return (
     <Box width={1}>
       <S.CardHolder width={1}>
-        <Flex width={[1 / 2, 1 / 3, 1 / 4]}>
+        {/* <Flex width={[1 / 2, 1 / 3, 1 / 4]}>
           <S.Card to="/" className="card--title">
             <div className="card__content">
               <Box mt={3}>
@@ -99,7 +99,7 @@ const ProductPanel: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
               </Text>
             </div>
           </S.Card>
-        </Flex>
+        </Flex> */}
         {implantTransitions.map(({ item, key, props }) => (
           <ProductCard implant={item} transition={props} key={key} />
         ))}

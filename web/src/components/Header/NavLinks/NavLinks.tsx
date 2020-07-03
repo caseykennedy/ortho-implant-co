@@ -80,23 +80,23 @@ export default NavLinks
 
 const navData = [
   {
-    name: 'Rethink',
+    name: 'rethink',
+    link: '/rethink'
+  },
+  {
+    name: 'about oic',
     link: '/about'
   },
   {
-    name: 'About OIC',
-    link: '/enterprises'
+    name: 'implants',
+    link: '/implants'
   },
   {
-    name: 'Implants',
-    link: '/resources'
+    name: 'blog',
+    link: '/blog'
   },
   {
-    name: 'Blog',
-    link: '/resources'
-  },
-  {
-    name: 'Contact',
-    link: '/resources'
+    name: 'contact',
+    link: '/contact'
   }
 ]

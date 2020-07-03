@@ -17,7 +17,7 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 type Props = {
-  altText: string
+  altText?: string
   border?: boolean
   image?: object
   message: string

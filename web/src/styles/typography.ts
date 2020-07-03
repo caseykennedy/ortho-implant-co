@@ -268,7 +268,7 @@ const Typography = css`
 
     transition: ${theme.transition.all};
 
-    color: ${theme.colors.primary};
+    /* color: ${theme.colors.primary}; */
 
     &:hover,
     &:focus {
@@ -329,16 +329,16 @@ const Typography = css`
   }
 
   ul {
-    margin: 0 0 1.5em 1.75rem;
+    margin: 0 0 1.5em 1.15rem;
     list-style-type: disc;
 
     li {
       list-style-position: outside;
-      font-size: calc(${theme.root.font.baseSize} / 1);
+      /* font-size: calc(${theme.root.font.baseSize} / 1); */
       line-height: ${theme.root.font.bodyLineHeight};
 
       @media ${theme.mq.tablet} {
-        font-size: calc(${theme.root.font.baseSize} / 1.25);
+        /* font-size: calc(${theme.root.font.baseSize} / 1.25); */
       }
     }
   }
