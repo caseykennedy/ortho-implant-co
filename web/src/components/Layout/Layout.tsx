@@ -32,8 +32,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
 
-  const { pathname } = location
-  const isHome = pathname === '/'
+  // const { pathname } = location
+  // const isHome = pathname === '/'
 
   // eslint-disable-next-line no-console
   console.log(
