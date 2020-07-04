@@ -14,6 +14,7 @@ import theme from '../../../config/theme'
 export const HomePage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
+  background: ${theme.colors.secondary};
 
   @media ${theme.mq.tablet} {
   }

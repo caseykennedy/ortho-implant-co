@@ -72,11 +72,11 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
               {panel._rawMessage && (
                 <BlockContent blocks={panel._rawMessage || []} />
               )}
-              <Box mb={[-5, -7]}>
+              {/* <Box mb={[-5, -7]}>
                 <Button to={`/${panel.linkTo}`} invert={true}>
                   {panel.linkTitle}
                 </Button>
-              </Box>
+              </Box> */}
             </div>
           </Flex>
           <Box

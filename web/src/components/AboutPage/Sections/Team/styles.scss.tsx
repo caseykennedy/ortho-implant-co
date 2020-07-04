@@ -13,7 +13,7 @@ export const Team = styled(Box)``
 export const Card = styled(AnimatedBox)`
   /* max-width: 333px; */
   /* background: ${theme.colors.white}; */
-  border: 2px solid ${theme.colors.black};
+  border: ${theme.border};
 
   @media ${theme.mq.tablet} {
   }

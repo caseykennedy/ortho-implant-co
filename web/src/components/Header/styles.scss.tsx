@@ -31,7 +31,7 @@ export const Logo = styled(Box)`
   background: ${theme.colors.primary};
   width: calc(${theme.logoWidth} / 1.5);
   height: calc(${theme.headerHeight} / 1.5);
-  padding: calc(${theme.space[3]} * 3) ${theme.space[5]} ${theme.space[3]};
+  padding: calc(${theme.space[3]} * 3) ${theme.space[4]} ${theme.space[3]};
 
   /* border-bottom: 4px solid ${theme.colors.primary}; */
 
@@ -43,7 +43,7 @@ export const Logo = styled(Box)`
     font-size: 1.4rem;
     width: ${theme.logoWidth};
     height: ${theme.headerHeight};
-    padding: calc(${theme.space[3]} * 5) ${theme.space[5]} ${theme.space[3]};
+    padding: calc(${theme.space[3]} * 5) ${theme.space[4]} ${theme.space[3]};
   }
 
   &.logo--dark {
@@ -66,6 +66,7 @@ export const Nav = styled(Flex)`
   flex: 1;
   display: none;
   justify-content: flex-end;
+  border-left: ${theme.border};
 
   @media ${theme.mq.tablet} {
     display: flex;

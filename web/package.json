@@ -66,6 +66,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^3.0.0",
+    "react-image-lightbox": "^5.1.1",
     "react-intersection-observer": "^8.26.2",
     "react-modal-hook": "^3.0.0",
     "react-moment": "^0.9.7",

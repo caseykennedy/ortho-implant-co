@@ -139,6 +139,10 @@ const Typography = css`
     font-variant-ligatures: discretionary-ligatures;
   }
 
+  mark {
+    background-color: ${theme.colors.quinary};
+  }
+
   h1,
   h2,
   h3,

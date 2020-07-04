@@ -2,20 +2,26 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
+// Libraries
+import Img from 'gatsby-image/withIEPolyfill'
+import { Grid, Cell } from 'styled-css-grid'
+
+// Components
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
-import Section from '../Section'
 import BlockContent from '../BlockContent'
 
-import useRethinkPage from '../../hooks/useRethinkPage'
+// Sections
+import Gallery from './Sections/Gallery'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
 import Divider from '../../elements/Divider'
 
+// Styles + theme
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 import Prefooter from '../Footer/Prefooter'
@@ -23,7 +29,7 @@ import Prefooter from '../Footer/Prefooter'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: theme.colors.white,
+  bg: theme.colors.primary,
   btnText: 'See our implants',
   color: theme.colors.text,
   message: 'we make orthopaedic implants<br />that are good for all.',
@@ -34,23 +40,39 @@ const billboardProps = {
 }
 
 const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
+  // Page context
   const implant = pageContext.page
   const prev = pageContext.prev
   const next = pageContext.next
-  // console.log('Rethink Page')
-  // console.log(page)
+
+  // Page title props
   const pageTitle = {
     altText: implant.name,
     // image: page.pageTitle.image.asset.fluid,
     message: implant.name,
-    title: implant.name
+    title: implant.categories[0].title
   }
   return (
     <S.ProductPage>
       <PageTitle {...pageTitle} />
+
       <Flex bg="quinary" py={theme.gutter.axis} pr={theme.gutter.axis}>
         <Box p={3} style={{ minWidth: theme.logoWidth }} />
         <Box>
+          <Gallery implant={implant} />
+          {/* <Grid columns={2} gap="1rem">
+            {implant.gallery &&
+              implant.gallery.map((img, idx) => (
+                <Cell key={idx}>
+                  <Img
+                    fluid={img.asset.fluid}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt={implant.shortName}
+                  />
+                </Cell>
+              ))}
+          </Grid> */}
 
           {implant._rawDescription && (
             <BlockContent blocks={implant._rawDescription || []} />
@@ -88,7 +110,7 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
         </Box>
       </Flex>
 
-      <Billboard {...billboardProps} />
+      {/* <Billboard {...billboardProps} /> */}
       <Prefooter />
     </S.ProductPage>
   )

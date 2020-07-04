@@ -127,10 +127,6 @@ const Filters = () => {
       <S.Filter href="#product-grid">
         <Box width={[0, 0, theme.logoWidth]} />
         <div className="filter__inner">
-          <Box className="filter__btn" onClick={resetFilteredItems}>
-            View all
-          </Box>
-
           {categories.map(({ node: cat }, idx) => (
             <Heading
               className="filter__btn"
@@ -140,6 +136,9 @@ const Filters = () => {
               {cat.title}
             </Heading>
           ))}
+          <Box className="filter__btn filter__btn--all" onClick={resetFilteredItems}>
+            View all
+          </Box>
         </div>
       </S.Filter>
 

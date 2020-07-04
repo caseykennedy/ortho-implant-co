@@ -1,18 +1,20 @@
-// Purpose Styles:
+// Gallery Styles:
 
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { darken } from 'polished'
+
+import { Box, Flex, Heading } from '../../../../elements'
+
 import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
-export const Purpose = styled(Flex)`
+export const Gallery = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    /* height: calc(30vh - ${theme.headerHeight}); */
   }
 `

@@ -51,7 +51,7 @@ const PageTitle: React.FC<Props> = ({ altText, border, image, message, title }) 
         </S.Billboard>
       </S.PageTitle>
 
-      <Parallax y={[5, 10]}>
+      <Parallax y={[-9, 10]}>
         <S.Figure>
           {image && (
             <Img

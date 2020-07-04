@@ -46,10 +46,14 @@ export const Filter = styled(AnchorLink)`
     }
 
     &__btn {
-      cursor: pointer;
-      padding: ${theme.space[2]} ${theme.space[3]};
       font-family: ${theme.fonts.heading};
+      font-size: ${theme.fontSizes[2]};
+      font-weight: 500;
       text-transform: uppercase;
+
+      padding: ${theme.space[2]} ${theme.space[4]};
+      margin-bottom: -2px;
+      cursor: pointer;
 
       &:first-child {
         @media ${theme.mq.desktop} {
@@ -60,6 +64,10 @@ export const Filter = styled(AnchorLink)`
       &:hover {
         color: ${theme.colors.tertiary};
       }
+
+      /* &--all {
+        color: ${theme.colors.primary};
+      } */
     }
   }
 `
@@ -89,6 +97,11 @@ export const Card = styled(Link)`
   background: ${theme.colors.white};
 
   @media ${theme.mq.tablet} {
+  }
+
+  &:nth-child(4n) {
+    border-right: none;
+    background: ${theme.colors.primary};
   }
 
   &:hover {

@@ -17,8 +17,17 @@ exports.createPages = ({ graphql, actions }) => {
             _rawExcerpt
             _rawFeatures
             gallery {
-              _key
-              _type
+              asset {
+                fluid(maxWidth: 1080) {
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                  base64
+                  srcWebp
+                  srcSetWebp
+                }
+              }
             }
             publishedAt(formatString: "MM-DD-YYYY")
             slug {

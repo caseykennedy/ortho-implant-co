@@ -71,7 +71,7 @@ const Intro = () => {
         <Box bg="primary" mt={[0]}>
           <Box p={theme.gutter.axis} bg="secondary" color="white">
             <Heading as="h5" color="primary">
-              question
+              work smarter
             </Heading>
 
             <Heading as="h2" fontSize={3}>

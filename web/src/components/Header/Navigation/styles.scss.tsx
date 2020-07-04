@@ -50,9 +50,28 @@ export const Nav = styled.nav`
     }
 
     a {
+      &::before {
+        content: '';
+        background: ${theme.colors.tertiary};
+        width: 0;
+        height: 2px;
+
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        transition: width 0.222s ease-in-out;
+      }
+
       &.active,
       &:hover {
         color: ${theme.colors.tertiary};
+
+        /* &::before {
+          width: 100%;
+        } */
       }
     }
 

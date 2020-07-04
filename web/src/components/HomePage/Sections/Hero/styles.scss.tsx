@@ -42,6 +42,7 @@ export const Billboard = styled(Flex)`
 
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
+  border-left: ${theme.border};
   padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
   position: relative;
   z-index: 9;

@@ -28,7 +28,7 @@ const billboardProps = {
 const ImplantsPage = () => {
   const pageTitle = {
     altText: 'asdf',
-    message: 'implants that are<br />good for all',
+    message: `implants <span style="color:#9D9FA2;">that are<br />good for all</span>`,
     title: 'quality + value',
     border: true
   }

@@ -30,8 +30,6 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
   width: ${theme.logoWidth};
   display: none;
 
-  ${p => p.border && `border-right: ${theme.border};`}
-
   @media ${theme.mq.desktop} {
     display: block;
   }
@@ -40,10 +38,10 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
 export const Billboard = styled(Flex)<{ border?: boolean }>`
   align-items: flex-end;
   flex: 1;
-  ${p => p.border && `border-bottom: ${theme.border};`}
 
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
+  border-left: ${theme.border};
   padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
   position: relative;
   z-index: 9;
