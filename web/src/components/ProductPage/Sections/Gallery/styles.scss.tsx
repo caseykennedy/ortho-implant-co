@@ -14,6 +14,8 @@ import theme from '../../../../../config/theme'
 export const Gallery = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 
   @media ${theme.mq.tablet} {
   }

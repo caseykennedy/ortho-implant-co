@@ -55,11 +55,19 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
   return (
     <S.ProductPage>
       <PageTitle {...pageTitle} />
-
-      <Flex bg="quinary" py={theme.gutter.axis} pr={theme.gutter.axis}>
+      <Flex width={1}>
+            <Gallery implant={implant} />
+          </Flex>
+      <Flex
+        bg="quinary"
+        py={theme.gutter.axis}
+        pr={theme.gutter.axis}
+        style={{ overflow: 'hidden' }}
+      >
+        
         <Box p={3} style={{ minWidth: theme.logoWidth }} />
-        <Box>
-          <Gallery implant={implant} />
+        <Box width={1}>
+          
           {/* <Grid columns={2} gap="1rem">
             {implant.gallery &&
               implant.gallery.map((img, idx) => (
