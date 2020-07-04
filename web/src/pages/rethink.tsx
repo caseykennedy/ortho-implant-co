@@ -30,7 +30,7 @@ const Rethink = () => {
   return (
     <Layout>
       <SEO />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox>
         <RethinkPage />
       </AnimatedBox>
     </Layout>

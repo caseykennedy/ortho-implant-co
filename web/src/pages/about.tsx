@@ -30,7 +30,7 @@ const About = () => {
   return (
     <Layout>
       <SEO />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox>
         <AboutPage />
       </AnimatedBox>
     </Layout>

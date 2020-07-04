@@ -30,7 +30,7 @@ const ImageSwiper: React.FC = ({ children }) => {
   const params = {
     freeMode: false,
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 2,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -38,21 +38,21 @@ const ImageSwiper: React.FC = ({ children }) => {
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20
+        spaceBetween: 2
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 2,
         grabCursor: true
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 2,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: -2,
+        spaceBetween: 2,
         grabCursor: true
       }
     }

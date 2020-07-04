@@ -10,7 +10,7 @@ import { Box, Flex } from '../../elements'
 
 export const PageTitle = styled(Flex)<{ image?: object }>`
   flex-wrap: wrap;
-  position: relative;
+  position: absolute;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: calc(${theme.space[3]} * 15);
@@ -25,7 +25,7 @@ export const Sideboard = styled(Box)<{ border?: boolean }>`
   writing-mode: vertical-lr;
   text-orientation: mixed;
 
-  background: ${theme.colors.quinary};
+  background: ${theme.colors.black};
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
   display: none;
@@ -52,17 +52,15 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
 `
 
 export const Figure = styled(Box)`
-  /* margin-top: -${theme.space[2]}; */
   position: relative;
   width: 100%;
   background: ${theme.colors.tertiary};
 
   @media ${theme.mq.tablet} {
-    /* margin-top: ${theme.space[5]}; */
+
   }
 
   img {
     mix-blend-mode: hard-light;
-    /* margin-top: ${theme.space[7]}; */
   }
 `

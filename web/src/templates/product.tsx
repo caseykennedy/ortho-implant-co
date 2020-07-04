@@ -41,7 +41,7 @@ const ProductTemplate: React.FC<ProductContextShape> = ({ pageContext }) => {
         desc={`${page.name} | `}
         individual={false}
       />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox>
         <ProductPage pageContext={pageContext} />
       </AnimatedBox>
     </Layout>

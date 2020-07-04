@@ -30,7 +30,7 @@ const Implants = () => {
   return (
     <Layout>
       <SEO />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox>
         <ImplantsPage />
       </AnimatedBox>
     </Layout>
