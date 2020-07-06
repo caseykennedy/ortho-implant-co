@@ -41,7 +41,7 @@ const JobPostTemplate: React.FC<CareersContextShape> = ({ pageContext }) => {
         desc={`${page.title} | `}
         individual={false}
       />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox>
         <JobPost pageContext={pageContext} />
       </AnimatedBox>
     </Layout>

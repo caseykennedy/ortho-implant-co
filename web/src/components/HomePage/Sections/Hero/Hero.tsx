@@ -69,7 +69,7 @@ const Hero = () => {
           </AnimatedBox>
         </S.Billboard>
       </S.Hero>
-      <Parallax y={[-5, 10]}>
+      <Parallax y={[-9, 17]}>
         <S.Figure>
           <Img
             fluid={query.image.asset.fluid}
