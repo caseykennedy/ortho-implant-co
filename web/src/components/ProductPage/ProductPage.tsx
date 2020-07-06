@@ -21,6 +21,7 @@ import PrevNext from './Sections/PrevNext'
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
 import Divider from '../../elements/Divider'
+import HeadingStroked from '../../elements/HeadingStroked'
 
 // Styles + theme
 import * as S from './styles.scss'
@@ -32,12 +33,12 @@ import Prefooter from '../Footer/Prefooter'
 const billboardProps = {
   bg: theme.colors.primary,
   btnText: 'See our implants',
-  color: theme.colors.text,
+  color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: false
-  // src: 'operating-room.jpg',
-  // altText: 'Doctors in the operating room.'
+  invert: false,
+  src: 'operating-room.jpg',
+  altText: 'Doctors in the operating room.'
 }
 
 const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
@@ -64,24 +65,36 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
         <Gallery implant={implant} />
       </Flex>
       <Flex bg="background" flexWrap="wrap" style={{ overflow: 'hidden' }}>
-        <Flex width={1} flexWrap="wrap">
-          <Box p={theme.gutter.axis} width={[1, 1 / 2]}>
-            <Heading as="h3" color="tertiary" className="t--uppercase">
-              {implant.shortName}
-            </Heading>
+        <Flex width={1} flexWrap="wrap" flexDirection="row">
+          <Box width={[1, 1 / 2]}>
+            <Box p={theme.gutter.axis}>
+              <Heading as="h3" color="tertiary" className="t--uppercase">
+                {implant.shortName}
+              </Heading>
 
-            {implant._rawDescription && (
-              <BlockContent blocks={implant._rawDescription || []} />
-            )}
-            <Box>
-              <Heading as="h4" mt={7}>
+              {implant._rawDescription && (
+                <BlockContent blocks={implant._rawDescription || []} />
+              )}
+              {/* <HeadingStroked
+              as="h3"
+              strokeColor={theme.colors.tertiary}
+              strokeWidth="1px"
+              className="t--uppercase"
+              fontSize={6}
+            >
+              {implant.shortName}
+            </HeadingStroked> */}
+            </Box>
+
+            <S.AdditionalInfo>
+              <Heading as="h4">
                 Additional Info
               </Heading>
 
               {implant._rawAdditionalInfo && (
                 <BlockContent blocks={implant._rawAdditionalInfo || []} />
               )}
-            </Box>
+            </S.AdditionalInfo>
           </Box>
 
           <Box

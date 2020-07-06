@@ -32,3 +32,15 @@ export const ProductPage = styled(Box)`
     }
   }
 `
+
+export const AdditionalInfo = styled(Flex)`
+  flex-direction: column;
+  padding: ${theme.space[5]};
+
+  background: ${theme.colors.quinary};
+  border-top: ${theme.border};
+
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[7]};
+  }
+`

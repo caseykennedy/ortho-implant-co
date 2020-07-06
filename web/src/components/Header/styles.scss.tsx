@@ -29,7 +29,7 @@ export const Header = styled(Flex)`
 
 export const Logo = styled(Box)`
   background: ${theme.colors.primary};
-  width: calc(${theme.logoWidth} / 1.5);
+  width: calc(${theme.logoWidth} / 1.75);
   height: calc(${theme.headerHeight} / 1.5);
   padding: calc(${theme.space[3]} * 3) ${theme.space[4]} ${theme.space[3]};
 

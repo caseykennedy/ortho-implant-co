@@ -39,7 +39,7 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.primary};
     color: ${theme.colors.text};
   }
 
@@ -57,7 +57,7 @@ export const Button = styled(Link)`
     &__title {
       /* display: flex; */
       justify-content: space-between;
-      margin-bottom: ${theme.space[9]};
+      margin-bottom: ${theme.space[7]};
       font-size: ${theme.fontSizes[0]};
 
       svg {
@@ -66,7 +66,7 @@ export const Button = styled(Link)`
       }
 
       &--next {
-        margin-top: ${theme.space[9]};
+        margin-top: ${theme.space[7]};
         margin-bottom: 0;
 
         svg {

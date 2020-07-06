@@ -4,15 +4,18 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
+// Libraries
 import Img from 'gatsby-image/withIEPolyfill'
 import Swiper from 'react-id-swiper'
 
+// Components
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
 import Button from '../../../../elements/Button'
 import Hexagons from '../../../Hexagons'
-import { Parallax } from 'react-scroll-parallax'
 
+// Theme
 import { Box, Flex, Heading } from '../../../../elements'
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
@@ -151,8 +154,8 @@ const Rethink = () => {
         <TabsPanel panels={query.tabPanels} />
       </S.Learn>
       <S.Decorator>
-          <Hexagons />
-        </S.Decorator>
+        <Hexagons />
+      </S.Decorator>
     </Section>
   )
 }

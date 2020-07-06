@@ -10,7 +10,9 @@ import { Box, Flex, AnimatedFlex, AnimatedBox } from '../../../../elements'
 
 export const Team = styled(Box)``
 
-export const Card = styled(AnimatedBox)`
+export const Card = styled(AnimatedFlex)`
+  flex-direction: column;
+  justify-content: space-between;
   /* max-width: 333px; */
   /* background: ${theme.colors.white}; */
   border: ${theme.border};
@@ -80,6 +82,7 @@ export const CardHolder = styled(Box)`
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
+        height: auto;
 
         &:hover {
           background: ${theme.colors.primary};
