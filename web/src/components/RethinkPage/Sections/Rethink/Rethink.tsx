@@ -40,7 +40,7 @@ const AccordionProps = {
   chevronColor: theme.colors.text,
   color: theme.colors.text,
   colorActive: theme.colors.text,
-  borderColor: theme.colors.quaternary,
+  borderColor: theme.colors.secondary,
   fontSize: [3, 3, 4],
   bg: 'quinary'
 }

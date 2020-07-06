@@ -23,12 +23,12 @@ import theme from '../../../config/theme'
 const billboardProps = {
   bg: theme.colors.primary,
   btnText: 'See our implants',
-  color: theme.colors.text,
+  color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: true
-  // src: 'operating-room.jpg',
-  // altText: 'Doctors in the operating room.'
+  invert: false,
+  src: 'operating-room-low--bw.jpg',
+  altText: 'Doctors in the operating room.'
 }
 
 const RethinkPage = () => {

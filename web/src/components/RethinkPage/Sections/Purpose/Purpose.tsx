@@ -69,7 +69,7 @@ const Purpose = () => {
 
         <AnimatedBox width={[1, 1 / 3]}>
           <ImgMatch
-            src="girl-climbing-boulder.jpg"
+            src="surf-beach-vert.jpg"
             altText="Lady climbing bouldeer."
           />
         </AnimatedBox>
