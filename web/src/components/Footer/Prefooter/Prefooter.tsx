@@ -54,7 +54,7 @@ const Prefooter = () => {
         </S.Sideboard>
         <S.Billboard>
           <Box className="cta">
-            <Button to="/" invert={true}>
+            <Button to="/contact" invert={true}>
               Talk to us
             </Button>
           </Box>
