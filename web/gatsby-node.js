@@ -34,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
               current
             }
             name
+            shortName
             videoLink
             categories {
               title
@@ -41,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
           previous {
             name
+            shortName
             slug {
               current
             }
@@ -48,6 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
           next {
             name
+            shortName
             slug {
               current
             }

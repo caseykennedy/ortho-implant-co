@@ -28,7 +28,7 @@ type GalleryShape = {
 
 const ImageSwiper: React.FC = ({ children }) => {
   const params = {
-    freeMode: false,
+    freeMode: true,
     slidesPerView: 4,
     spaceBetween: 2,
     pagination: {
@@ -41,7 +41,7 @@ const ImageSwiper: React.FC = ({ children }) => {
         spaceBetween: 2
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 2,
         grabCursor: true
       },

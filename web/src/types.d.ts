@@ -88,6 +88,7 @@ type ProductEdges = {
   node: ProductNode
   previous: {
     name: string
+    shortName: string
     slug: {
       current: string
     }
@@ -95,6 +96,7 @@ type ProductEdges = {
   }
   next: {
     name: string
+    shortName: string
     slug: {
       current: string
     }
@@ -113,6 +115,7 @@ type ProductContextShape = {
     page: ProductNode
     prev: {
       name: string
+      shortName: string
       slug: {
         current: string
       }
@@ -120,6 +123,7 @@ type ProductContextShape = {
     }
     next: {
       name: string
+      shortName: string
       shortName: string
       slug: {
         current: string

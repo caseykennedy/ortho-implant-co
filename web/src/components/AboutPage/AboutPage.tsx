@@ -32,7 +32,7 @@ const AboutPage = () => {
   const pageTitle = {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.fluid,
-    message: page.pageTitle.message
+    message: `<span style="color:#9D9FA2;">We aim to</span><br />change the system`,
     // title: 'Needs title'
   }
   return (

@@ -62,20 +62,25 @@ export const Logo = styled(Box)`
   }
 `
 
+export const Tools = styled(Flex)`
+  justify-content: space-between;
+  flex: 1;
+  border-left: ${theme.border};
+`
+
 export const Nav = styled(Flex)`
   flex: 1;
   display: none;
   justify-content: flex-end;
-  border-left: ${theme.border};
 
-  @media ${theme.mq.tablet} {
+  @media ${theme.mq.desktop} {
     display: flex;
   }
 
   .cta {
-    display: none;
+    /* display: none; */
 
-    @media ${theme.mq.tablet} {
+    @media ${theme.mq.desktop} {
       display: initial;
     }
   }
@@ -92,7 +97,7 @@ export const Toggle = styled.div`
   font-weight: 400;
   cursor: pointer;
 
-  @media ${theme.mq.tablet} {
+  @media ${theme.mq.desktop} {
     display: none;
   }
 
@@ -100,5 +105,13 @@ export const Toggle = styled.div`
     svg {
       width: ${theme.space[5]};
     }
+  }
+`
+
+export const Cta = styled(Box)`
+  display: none;
+
+  @media ${theme.mq.tablet} {
+    display: flex;
   }
 `

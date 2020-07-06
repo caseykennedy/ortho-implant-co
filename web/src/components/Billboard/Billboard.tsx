@@ -60,9 +60,9 @@ const Intro: React.FC<Props> = ({
         {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
       </S.Billboard>
 
-      <S.Illustration>
+      {/* <S.Illustration>
         <IllustrationOne />
-      </S.Illustration>
+      </S.Illustration> */}
     </Section>
   )
 }

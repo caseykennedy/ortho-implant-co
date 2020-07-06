@@ -137,7 +137,7 @@ const Filters = () => {
             </Heading>
           ))}
           <Box className="filter__btn filter__btn--all" onClick={resetFilteredItems}>
-            View all
+            See all
           </Box>
         </div>
       </S.Filter>

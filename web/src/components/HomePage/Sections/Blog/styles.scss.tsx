@@ -16,39 +16,45 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   @media ${theme.mq.tablet} {
   }
 
-  .card__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding:  ${theme.space[5]};
-    height: 14rem;
-
-    @media ${theme.mq.tablet} {
-      height: 20rem;
-    }
-
-    h5 {
-      font-weight: 500;
-    }
-
-    .card__meta {
-      display: flex;
-      justify-content: space-between;
+  .card {
+    &__image {
       
-      font-size: calc(${theme.fontSizes[1]} / 1.15);
-      font-family: ${theme.fonts.code};
+    }
 
-      span {
-        transition: ${theme.transition.all};
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-        svg {
-          width: 24px;
-          /* fill: ${theme.colors.text}; */
+      padding:  ${theme.space[5]};
+      height: 14rem;
+
+      @media ${theme.mq.tablet} {
+        height: 20rem;
+      }
+
+      h5 {
+        font-weight: 500;
+      }
+
+      .card__meta {
+        display: flex;
+        justify-content: space-between;
+        
+        font-size: calc(${theme.fontSizes[1]} / 1.15);
+        font-family: ${theme.fonts.code};
+
+        span {
+          transition: ${theme.transition.all};
+
+          svg {
+            width: 24px;
+            /* fill: ${theme.colors.text}; */
+          }
         }
       }
+      
     }
-    
   }
 `
 

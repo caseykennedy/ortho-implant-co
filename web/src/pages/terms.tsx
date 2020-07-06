@@ -1,4 +1,4 @@
-// Home page
+// Terms page
 
 // ___________________________________________________________________
 
@@ -6,20 +6,20 @@
 import React from 'react'
 import { useSpring, config } from 'react-spring'
 
-// Elements
-import { AnimatedBox } from '../elements'
-
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import HomePage from '../components/HomePage'
+import TermsPage from '../components/TermsPage'
+
+// Elements
+import { AnimatedBox } from '../elements'
 
 // Theme
 import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
-const Index = () => {
+const Terms = () => {
   // Page animation
   const pageAnimation = useSpring({
     config: config.molasses,
@@ -31,12 +31,12 @@ const Index = () => {
     <Layout>
       <SEO />
       <AnimatedBox>
-        <HomePage />
+        <TermsPage />
       </AnimatedBox>
     </Layout>
   )
 }
 
-export default Index
+export default Terms
 
 // ___________________________________________________________________

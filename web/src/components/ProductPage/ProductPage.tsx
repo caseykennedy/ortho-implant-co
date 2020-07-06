@@ -16,6 +16,7 @@ import BlockContent from '../BlockContent'
 
 // Sections
 import Gallery from './Sections/Gallery'
+import PrevNext from './Sections/PrevNext'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
@@ -62,66 +63,48 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
       >
         <Gallery implant={implant} />
       </Flex>
-      <Flex
-        bg="quinary"
-        py={theme.gutter.axis}
-        pr={theme.gutter.axis}
-        style={{ overflow: 'hidden' }}
-      >
-        <Box p={3} style={{ minWidth: theme.logoWidth }} />
-        <Box width={1}>
-          {/* <Grid columns={2} gap="1rem">
-            {implant.gallery &&
-              implant.gallery.map((img, idx) => (
-                <Cell key={idx}>
-                  <Img
-                    fluid={img.asset.fluid}
-                    objectFit="cover"
-                    objectPosition="50% 50%"
-                    alt={implant.shortName}
-                  />
-                </Cell>
-              ))}
-          </Grid> */}
+      <Flex bg="background" flexWrap="wrap" style={{ overflow: 'hidden' }}>
+        <Flex width={1} flexWrap="wrap">
+          <Box p={theme.gutter.axis} width={[1, 1 / 2]}>
+            <Heading as="h3" color="tertiary" className="t--uppercase">
+              {implant.shortName}
+            </Heading>
 
-          {implant._rawDescription && (
-            <BlockContent blocks={implant._rawDescription || []} />
-          )}
-
-          <Heading as="h4" mt={7}>
-            Features
-          </Heading>
-
-          {implant._rawFeatures && (
-            <BlockContent blocks={implant._rawFeatures || []} />
-          )}
-
-          <Heading as="h4" mt={7}>
-            Additional Info
-          </Heading>
-
-          {implant._rawAdditionalInfo && (
-            <BlockContent blocks={implant._rawAdditionalInfo || []} />
-          )}
-
-          <Box>
-            {next && (
-              <Link to={`implants/${next.slug.current}`}>
-                Next: {next.name}
-              </Link>
+            {implant._rawDescription && (
+              <BlockContent blocks={implant._rawDescription || []} />
             )}
-            <br />
-            {prev && (
-              <Link to={`implants/${prev.slug.current}`}>
-                Prev: {prev.name}
-              </Link>
+            <Box>
+              <Heading as="h4" mt={7}>
+                Additional Info
+              </Heading>
+
+              {implant._rawAdditionalInfo && (
+                <BlockContent blocks={implant._rawAdditionalInfo || []} />
+              )}
+            </Box>
+          </Box>
+
+          <Box
+            bg="secondary"
+            color="white"
+            p={theme.gutter.axis}
+            width={[1, 1 / 2]}
+          >
+            <Heading as="h4" color="primary">
+              Features
+            </Heading>
+
+            {implant._rawFeatures && (
+              <BlockContent blocks={implant._rawFeatures || []} />
             )}
           </Box>
-        </Box>
+        </Flex>
       </Flex>
 
-      {/* <Billboard {...billboardProps} /> */}
-      <Prefooter />
+      <PrevNext pageContext={pageContext} />
+
+      <Billboard {...billboardProps} />
+      {/* <Prefooter /> */}
     </S.ProductPage>
   )
 }

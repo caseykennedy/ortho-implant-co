@@ -17,7 +17,6 @@ export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  overflow: auto;
 `
 
 export const NavLink = styled(AnimatedFlex)`
@@ -27,14 +26,14 @@ export const NavLink = styled(AnimatedFlex)`
 
   .nav-mobile {
     &__link {
-      /* color: ${theme.colors.text}; */
+      color: ${theme.colors.white};
       font-size: ${theme.fontSizes[2]};
       text-transform: uppercase;
       padding: ${theme.space[4]};
     }
 
     &-sub {
-      padding: ${theme.fontSizes[3]} 0 ${theme.fontSizes[3]} 0;
+      padding: ${theme.fontSizes[1]} 0 ${theme.fontSizes[1]} 0;
       border-bottom: ${theme.border};
 
       &__link {

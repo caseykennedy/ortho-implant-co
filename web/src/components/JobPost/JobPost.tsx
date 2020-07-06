@@ -1,4 +1,4 @@
-// CareersPage:
+// JobPost:
 
 // ___________________________________________________________________
 
@@ -33,7 +33,7 @@ const billboardProps = {
   // altText: 'Doctors in the operating room.'
 }
 
-const CareersPage: React.FC<CareersContextShape> = ({ pageContext }) => {
+const JobPost: React.FC<CareersContextShape> = ({ pageContext }) => {
   const data = pageContext.page
 
   const pageTitle = {
@@ -43,7 +43,7 @@ const CareersPage: React.FC<CareersContextShape> = ({ pageContext }) => {
     title: data.publishedAt
   }
   return (
-    <S.CareersPage>
+    <S.JobPost>
       <PageTitle {...pageTitle} />
       <Section bg="quinary">
         {data._rawExcerpt && <BlockContent blocks={data._rawExcerpt || []} />}
@@ -52,8 +52,8 @@ const CareersPage: React.FC<CareersContextShape> = ({ pageContext }) => {
       </Section>
 
       <Billboard {...billboardProps} />
-    </S.CareersPage>
+    </S.JobPost>
   )
 }
 
-export default CareersPage
+export default JobPost

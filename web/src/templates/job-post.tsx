@@ -14,7 +14,7 @@ import Divider from '../elements/Divider'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import CareersPage from '../components/CareersPage'
+import JobPost from '../components/JobPost'
 
 // Theme
 import theme from '../../config/theme'
@@ -42,7 +42,7 @@ const JobPostTemplate: React.FC<CareersContextShape> = ({ pageContext }) => {
         individual={false}
       />
       <AnimatedBox style={pageAnimation}>
-        <CareersPage pageContext={pageContext} />
+        <JobPost pageContext={pageContext} />
       </AnimatedBox>
     </Layout>
   )

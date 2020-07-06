@@ -53,15 +53,19 @@ const Blog = () => {
   // console.log('---_- Mantra -_---')
   // console.log(query)
   return (
-    <Section bg="primary" color="text">
+    <Section bg="primary" color="text" border={true}>
       <Heading as="h4">What's Happening</Heading>
       <S.CardHolder width={1}>
         <S.CardColumn width={[1, '47%', '30%']}>
           <S.Card bg={theme.colors.background}>
-            <ImgMatch src="blog.jpg" altText="blog" />
+            <Box className="card__image">
+              <ImgMatch src="blog.jpg" altText="blog" />
+            </Box>
             <Flex className="card__content">
               <Box>
-                <Heading as="h5" color="tertiary">value</Heading>
+                <Heading as="h5" color="tertiary">
+                  value
+                </Heading>
                 <Text as="p">
                   We create better value for the implants you already know and
                   use on an everyday basis.
@@ -77,7 +81,9 @@ const Blog = () => {
 
         <S.CardColumn width={[1, '47%', '30%']}>
           <S.Card bg={theme.colors.black} color={theme.colors.white}>
-            <ImgMatch src="news.jpg" altText="blog" />
+            <Box className="card__image">
+              <ImgMatch src="blog.jpg" altText="blog" />
+            </Box>
             <Flex className="card__content">
               <Box>
                 <Heading as="h5">value</Heading>

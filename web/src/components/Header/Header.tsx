@@ -6,6 +6,8 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
+import { Parallax } from 'react-scroll-parallax'
+
 import { Box, Flex, Text, Heading } from '../../elements'
 
 import Logo from '../Logo'
@@ -49,24 +51,28 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           // }
           className="logo--dark"
         >
-          <Link to="/" aria-label="Ortho Implant Co., back to home">
-            <Logo />
-          </Link>
+          <Parallax y={[5, 10]}>
+            <Link to="/" aria-label="Ortho Implant Co., back to home">
+              <Logo />
+            </Link>
+          </Parallax>
         </S.Logo>
 
-        <S.Toggle onClick={toggleModal} aria-label="toggle menu">
-          <Icon name="hamburger" color="black" />
-        </S.Toggle>
+        <S.Tools>
+          <S.Toggle onClick={toggleModal} aria-label="toggle menu">
+            <Icon name="hamburger" color="black" />
+          </S.Toggle>
 
-        <S.Nav>
-          <Navigation />
+          <S.Nav>
+            <Navigation />
+          </S.Nav>
 
-          <Box className="cta">
+          <S.Cta>
             <Button to="/contact" invert={false}>
               Talk to us
             </Button>
-          </Box>
-        </S.Nav>
+          </S.Cta>
+        </S.Tools>
       </S.Header>
     </>
   )

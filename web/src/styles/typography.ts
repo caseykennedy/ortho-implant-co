@@ -168,7 +168,7 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg});
+    font-size: calc(${theme.root.font.lg} * 1.15);
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.xl};
@@ -215,7 +215,11 @@ const Typography = css`
     /* font-weight: 400; */
     line-height: ${theme.root.font.bodyLineHeight};
     text-transform: uppercase;
-    margin: 0 0 1.5em;
+    margin: 0 0 1em;
+
+    @media ${theme.mq.tablet} {
+      margin: 0 0 1.5em;
+    }
   }
 
   small {
@@ -227,7 +231,7 @@ const Typography = css`
   }
 
   p {
-    font-size: ${theme.fontSizes[1]};
+    font-size: ${theme.root.font.baseSize};
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
 

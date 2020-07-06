@@ -1,4 +1,4 @@
-// RethinkPage Styles:
+// LegalPage Styles:
 
 // ___________________________________________________________________
 
@@ -11,24 +11,10 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const ProductPage = styled(Box)`
+export const LegalPage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 
   @media ${theme.mq.tablet} {
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: ${theme.space[7]} 0 0;
-
-    li {
-      list-style: none;
-      margin-bottom: ${theme.space[7]};
-      width: 46%;
-      color: ${theme.colors.quinary};
-    }
   }
 `

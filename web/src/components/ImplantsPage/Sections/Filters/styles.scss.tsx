@@ -27,7 +27,7 @@ export const Filter = styled(AnchorLink)`
   background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
   color: ${theme.colors.text};
-  padding: ${theme.space[4]} 0;
+  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[5]};
   width: 100%;
 
   @media ${theme.mq.tablet} {

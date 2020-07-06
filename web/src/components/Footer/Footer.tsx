@@ -33,11 +33,11 @@ const Footer: React.FC = () => {
       </S.Decorator>
       <S.Footer>
         <S.Nav as="nav">
-          <Link to="/">Rethink</Link>
-          <Link to="/">About OIC</Link>
-          <Link to="/">Products</Link>
-          <Link to="/">Blog</Link>
-          <Link to="/">Contact</Link>
+          <Link to="/rethink">Rethink</Link>
+          <Link to="/about">About OIC</Link>
+          <Link to="/implants">Implants</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
         </S.Nav>
         <S.Row>
           <Box width={[1, 1 / 4]} mr={[0, 7]}>
@@ -83,9 +83,8 @@ const Footer: React.FC = () => {
           </S.Social>
           <S.Legal width={[1, 1 / 3]}>
             <ul>
-              <Link to="/">Terms</Link>
-              <Link to="/">Privacy</Link>
-              <Link to="/">Disclaimers</Link>
+              <Link to="/terms">Terms</Link>
+              <Link to="/legal">Legal</Link>
             </ul>
             <div className="copyright">&copy; {Year()}</div>
           </S.Legal>

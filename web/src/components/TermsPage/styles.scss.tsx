@@ -1,4 +1,4 @@
-// CareersPage Styles:
+// TermsPage Styles:
 
 // ___________________________________________________________________
 
@@ -11,7 +11,7 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const CareersPage = styled(Box)`
+export const TermsPage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 

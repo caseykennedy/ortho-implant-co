@@ -13,7 +13,7 @@ export const Hero = styled(Flex)`
   background: ${theme.colors.quinary};
   position: relative;
   width: 100%;
-  height: calc(20vh - ${theme.headerHeight});
+  /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: 222px;
 
   @media ${theme.mq.tablet} {
@@ -53,7 +53,7 @@ export const Billboard = styled(Flex)`
 `
 
 export const Figure = styled(Box)`
-  margin-top: -${theme.space[2]};
+  /* margin-top: -${theme.space[2]}; */
   position: relative;
   width: 100%;
 

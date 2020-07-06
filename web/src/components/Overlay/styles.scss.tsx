@@ -18,7 +18,7 @@ export const Overlay = styled(Flex)`
   flex-direction: column;
 
   width: ${overlayWidth};
-  height: calc(100vh - ${theme.headerHeight});
+  height: calc(100vh - ${theme.headerHeight} + 3.45rem);
   overflow: auto;
 
   position: fixed;
@@ -35,6 +35,7 @@ export const Overlay = styled(Flex)`
 
   @media ${theme.mq.tablet} {
     /* top: calc(77px + ${theme.space[2]}); */
+    height: calc(100vh - ${theme.headerHeight});
   }
 
   /* @media ${theme.mq.tablet} {

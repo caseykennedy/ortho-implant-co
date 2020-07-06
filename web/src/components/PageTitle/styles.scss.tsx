@@ -10,12 +10,14 @@ import { Box, Flex } from '../../elements'
 
 export const PageTitle = styled(Flex)<{ image?: object }>`
   flex-wrap: wrap;
-  position: absolute;
+  position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
   min-height: calc(${theme.space[3]} * 15);
+  background: ${theme.colors.secondary};
 
-  @media ${theme.mq.tablet} {
+  @media ${theme.mq.desktop} {
+    padding-left: ${theme.logoWidth};
     position: ${p => (!p.image ? 'relative' : 'absolute')};
   }
 `
@@ -41,10 +43,14 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
 
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
-  border-left: ${theme.border};
+  border-left: none;
   padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
   position: relative;
   z-index: 9;
+
+  @media ${theme.mq.desktop} {
+    border-left: ${theme.border};
+  }
 
   h1 {
     text-transform: uppercase;
@@ -57,7 +63,6 @@ export const Figure = styled(Box)`
   background: ${theme.colors.tertiary};
 
   @media ${theme.mq.tablet} {
-
   }
 
   img {

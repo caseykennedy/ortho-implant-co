@@ -27,7 +27,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   text-transform: uppercase;
 
   background: ${p => !p.invert ? theme.colors.primary : theme.colors.secondary};
-  /* border-bottom: ${theme.border}; */
+  border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
@@ -36,13 +36,13 @@ export const Button = styled(Box)<{ invert?: boolean }>`
 
   &:hover {
     background: ${p => !p.invert ? theme.colors.secondary : theme.colors.quaternary};
-    color: ${theme.colors.white};
+    color: ${p => !p.invert ? theme.colors.white : theme.colors.text};
 
     span {
       margin-right: 0;
 
       svg {
-        fill: ${theme.colors.white};
+        fill: ${p => !p.invert ? theme.colors.white : theme.colors.text};
       }
     }
   }

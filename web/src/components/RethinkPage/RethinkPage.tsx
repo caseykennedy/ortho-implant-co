@@ -38,7 +38,7 @@ const RethinkPage = () => {
   const pageTitle = {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.fluid,
-    message: page.pageTitle.message,
+    message: `Rethink<br /><span style="color:#9D9FA2;">orthopaedic implants</span>`,
     title: page.pageTitle.title
   }
   return (

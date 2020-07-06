@@ -150,11 +150,9 @@ const Rethink = () => {
       <S.Learn width={1} mt={12}>
         <TabsPanel panels={query.tabPanels} />
       </S.Learn>
-      <Parallax y={[-5, 10]}>
-        <S.Decorator>
+      <S.Decorator>
           <Hexagons />
         </S.Decorator>
-      </Parallax>
     </Section>
   )
 }
