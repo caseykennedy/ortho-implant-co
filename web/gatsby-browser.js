@@ -18,7 +18,7 @@ const LoadAnimation = ({ children }) => {
     to: { opacity: 1 }
   })
 
-  return loading === false ? (
+  return !loading ? (
     <AnimatedBox style={pageAnimation}>{children}</AnimatedBox>
   ) : (
     <Loading />
