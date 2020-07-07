@@ -2,14 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 import { useSpring, config } from 'react-spring'
-
-// Components
-import Logo from './src/components/Logo'
-
-// Elements
-import { AnimatedBox, Box } from './src/elements'
-
-import theme from './config/theme'
+import Loading from './src/components/Loading'
+import { AnimatedBox } from './src/elements'
 
 // ___________________________________________________________________
 
@@ -27,13 +21,7 @@ const LoadAnimation = ({ children }) => {
   return loading === false ? (
     <AnimatedBox style={pageAnimation}>{children}</AnimatedBox>
   ) : (
-    <Box>
-      <h1>LOADING ANIMATION HERE...</h1>
-      <br />
-      <Box width="200px">
-        <Logo />
-      </Box>
-    </Box>
+    <Loading />
   )
 }
 
