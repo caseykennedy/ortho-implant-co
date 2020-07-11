@@ -74,7 +74,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             _rawBio
             _rawLead
             name
-            title
+            jobTitle
             boardMember
             slug {
               _key
@@ -147,7 +147,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
               <Box mt={3}>
                 <Heading as="h4">{person.name}</Heading>
                 <Text as="h5" className="t--small">
-                  {person.title}
+                  {person.jobTitle}
                 </Text>
               </Box>
 
@@ -181,7 +181,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
               <Box mt={3}>
                 <Heading as="h4">{person.name}</Heading>
                 <Text as="h5" className="t--small">
-                  {person.title}
+                  {person.jobTitle}
                 </Text>
               </Box>
 

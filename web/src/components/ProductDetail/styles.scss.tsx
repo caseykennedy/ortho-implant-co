@@ -1,4 +1,4 @@
-// RethinkPage Styles:
+// Product Detail Page Styles:
 
 // ___________________________________________________________________
 
@@ -11,7 +11,7 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const ProductPage = styled(Box)`
+export const ProductDetail = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 

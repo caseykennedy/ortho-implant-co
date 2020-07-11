@@ -13,8 +13,8 @@ export default {
       type: 'string'
     },
     {
-      name: 'title',
-      title: 'Title',
+      name: 'jobTitle',
+      title: 'Job Title',
       type: 'string'
     },
     {

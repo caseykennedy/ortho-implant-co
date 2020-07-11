@@ -1,7 +1,7 @@
 import { MdApps } from 'react-icons/md'
 
 export default {
-  name: 'category',
+  name: 'productCategory',
   title: 'Category',
   type: 'document',
   icon: MdApps,

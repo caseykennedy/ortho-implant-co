@@ -82,7 +82,8 @@ export const CardHolder = styled(Box)`
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
-        height: auto;
+        
+        /* height: auto; */ /* For equal slide height */
 
         &:hover {
           background: ${theme.colors.primary};

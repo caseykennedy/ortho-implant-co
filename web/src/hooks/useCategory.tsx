@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useCategory = () => {
   const data = useStaticQuery<CategoryShape>(graphql`
     query CategoryQuery {
-      categories: allSanityCategory(sort: {fields: title, order: ASC}) {
+      categories: allSanityProductCategory(sort: {fields: title, order: ASC}) {
         edges {
           node {
             title

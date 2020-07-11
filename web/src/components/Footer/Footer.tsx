@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           <Pixels />
         </div>
       </S.Decorator>
-      <S.Footer>
+      <S.Footer as="footer">
         <S.Nav as="nav">
           <Link to="/rethink">Rethink</Link>
           <Link to="/about">About OIC</Link>

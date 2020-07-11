@@ -15,7 +15,7 @@ type PersonShape = {
   _rawBio: string
   _rawLead: string
   name: string
-  title: string
+  jobTitle: string
   boardMember: boolean
   slug: {
     _key: string
@@ -323,6 +323,85 @@ type CareersContextShape = {
         current: string
       }
       _rawExcerpt: string
+    }
+  }
+}
+
+// Post shape
+// ___________________________________________________________________
+
+type PostShape = {
+  posts: {
+    edges: {
+      node: PostQuery
+    }[]
+  }
+}
+
+type PostData = {
+  post: PostQuery
+}
+
+type PostQuery = {
+  title: string
+  _rawExcerpt: string
+  _rawBody: string
+  _id: string
+  publishedAt: string
+  slug: {
+    current: string
+  }
+  mainImage: {
+    asset: {
+      fluid: {
+        src: string
+        aspectRatio: number
+        base64: string
+        sizes: string
+        srcSet: string
+        srcSetWebp: string
+        srcWebp: string
+      }
+    }
+  }
+  categories: {
+    title: string
+  }
+  authors: {
+    name: string
+    jobTitle: string
+    headshot: {
+      asset: {
+        fluid: {
+          aspectRatio: number
+          base64: string
+          sizes: string
+          src: string
+          srcSet: string
+          srcSetWebp: string
+          srcWebp: string
+        }
+      }
+    }
+  }
+}
+
+type PostContextShape = {
+  pageContext: {
+    page: PostQuery
+    prev: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+    next: {
+      _rawExcerpt: string
+      title: string
+      slug: {
+        current: string
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
 import React from 'react'
 
 // Components
-import Icon from '../../../../components/Icons'
+import Icon from '../../../Icons'
 
 // Elements
 import { Heading, Box, Flex } from '../../../../elements'

@@ -1,4 +1,4 @@
-// Product template
+// Post template
 
 // ___________________________________________________________________
 
@@ -14,14 +14,14 @@ import Divider from '../elements/Divider'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ProductDetail from '../components/ProductDetail'
+import Post from '../components/Post'
 
 // Theme
 import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
-const ProductTemplate: React.FC<ProductContextShape> = ({ pageContext }) => {
+const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
   const page = pageContext.page
   // console.log('—————|— implants —|—————')
   // console.log(page)
@@ -37,17 +37,17 @@ const ProductTemplate: React.FC<ProductContextShape> = ({ pageContext }) => {
     <Layout>
       <SEO
         pathname={`/implants/${page.slug.current}`}
-        title={`${page.name} | `}
-        desc={`${page.name} | `}
+        title={`${page.title} | `}
+        desc={`${page.title} | `}
         individual={false}
       />
       <AnimatedBox>
-        <ProductDetail pageContext={pageContext} />
+        <Post pageContext={pageContext} />
       </AnimatedBox>
     </Layout>
   )
 }
 
-export default ProductTemplate
+export default PostTemplate
 
 // ___________________________________________________________________

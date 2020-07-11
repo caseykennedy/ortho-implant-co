@@ -1,4 +1,4 @@
-// ProductPage:
+// Product Detail Page:
 
 // ___________________________________________________________________
 
@@ -41,7 +41,7 @@ const billboardProps = {
   altText: 'Doctors in the operating room.'
 }
 
-const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
+const ProductDetail: React.FC<ProductContextShape> = ({ pageContext }) => {
   // Page context
   const implant = pageContext.page
   const prev = pageContext.prev
@@ -55,7 +55,7 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
     title: implant.categories[0].title
   }
   return (
-    <S.ProductPage>
+    <S.ProductDetail>
       <PageTitle {...pageTitle} />
       <Flex
         bg="secondary"
@@ -114,12 +114,12 @@ const ProductPage: React.FC<ProductContextShape> = ({ pageContext }) => {
         </Flex>
       </Flex>
 
-      <PrevNext pageContext={pageContext} />
+      {/* <PrevNext pageContext={pageContext} /> */}
 
       <Billboard {...billboardProps} />
       {/* <Prefooter /> */}
-    </S.ProductPage>
+    </S.ProductDetail>
   )
 }
 
-export default ProductPage
+export default ProductDetail

@@ -1,6 +1,6 @@
 import S from "@sanity/desk-tool/structure-builder";
 import { MdAssignment, MdStop, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
-import { FaFile } from "react-icons/fa";
+import { GoFile } from "react-icons/go";
 
 const hiddenTypes = [
   "category",
@@ -129,6 +129,16 @@ export default () =>
         .schemaType("person")
         .child(S.documentTypeList("person").title("People")),
 
+      // Post
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Posts")
+        .schemaType("post")
+        .child(S.documentTypeList("post").title("Post"))
+
+        .icon(GoFile),
+
       // JobPost
       // _________________________________________________________________
 
@@ -139,13 +149,23 @@ export default () =>
 
         .icon(MdAssignment),
 
+      // Blog Category
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Post Categories")
+        .schemaType("postCategory")
+        .child(S.documentTypeList("postCategory").title("Post Category"))
+
+        .icon(MdStop),
+
       // Product Category
       // _________________________________________________________________
 
       S.listItem()
         .title("Product Categories")
-        .schemaType("category")
-        .child(S.documentTypeList("category").title("Category"))
+        .schemaType("productCategory")
+        .child(S.documentTypeList("productCategory").title("Category"))
 
         .icon(MdStop),
 

@@ -1,17 +1,21 @@
-// BlogPage:
+// Post:
 
 // ___________________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image/withIEPolyfill'
 
+// Components
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import Section from '../Section'
 import BlockContent from '../BlockContent'
+import Prefooter from '../Footer/Prefooter'
+
+import Aside from './Aside'
 
 // Hooks
-import usePost from '../../hooks/usePost'
 import useRethinkPage from '../../hooks/useRethinkPage'
 
 // Elements
@@ -20,7 +24,6 @@ import Divider from '../../elements/Divider'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
@@ -35,31 +38,41 @@ const billboardProps = {
   // altText: 'Doctors in the operating room.'
 }
 
-const BlogPage = () => {
-  const posts = usePost()
+const Post: React.FC<PostContextShape> = ({ pageContext }) => {
+  const data = pageContext.page
+
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: 'Blog',
-    title: 'OIC'
+    message: data.title,
+    title: data.publishedAt
   }
   return (
-    <S.BlogPage>
+    <S.Post>
       <PageTitle {...pageTitle} />
-      <Section bg="quinary">
-        <Heading as="h4" className="t--uppercase">
-          In progress...
-        </Heading>
-        {posts.map(({ node: post }, idx) => (
-          <Link to={`/blog/${post.slug.current}`} key={idx}>
-            {post.title}
-          </Link>
-        ))}
-      </Section>
 
-      <Prefooter />
-    </S.BlogPage>
+      <Aside data={data} />
+
+      <S.Article width={[1, 7 / 10]}>
+        <Img
+          fluid={data.mainImage.asset.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          alt={data.title}
+          className="article__img"
+        />
+        
+        <Section>
+          {/* <Heading as="h3" color="" className="t--uppercase">{data.title}</Heading> */}
+          {data._rawExcerpt && <BlockContent blocks={data._rawExcerpt || []} />}
+
+          {data._rawBody && <BlockContent blocks={data._rawBody || []} />}
+        </Section>
+      </S.Article>
+
+      <Billboard {...billboardProps} />
+    </S.Post>
   )
 }
 
-export default BlogPage
+export default Post

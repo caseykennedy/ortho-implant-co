@@ -125,6 +125,6 @@ const positioning = [
     name: 'vision',
     src: 'ledge-think.jpg',
     content:
-      'Because of our forward thinking view of the ay healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
+      'Because of our forward thinking view of the way healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
   }
 ]

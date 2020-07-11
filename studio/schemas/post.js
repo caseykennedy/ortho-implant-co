@@ -32,8 +32,8 @@ export default {
     {
       name: 'authors',
       title: 'Authors',
-      type: 'array',
-      of: [{ type: 'postAuthor' }]
+      type: 'reference',
+      to: [{ type: 'person' }]
     },
     {
       name: 'mainImage',
@@ -44,7 +44,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
+      of: [{ type: 'reference', to: { type: 'postCategory' } }]
     },
     {
       name: 'body',
