@@ -1,4 +1,4 @@
-# Ortho Implant Co. built with [Gatsby](https://www.gatsbyjs.org/) [Sanity.io](https://www.sanity.io) & [Auth0](https://www.auth0.com)
+# Ortho Implant Co. built with [Gatsby](https://www.gatsbyjs.org/) & [Sanity.io](https://www.sanity.io)
 
 This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with [Sanity](https://www.sanity.io) content management in a neat little company website. Read [the blog post](https://www.sanity.io/blog/get-started-with-gatsby-and-structured-content) and [see the getting started video](https://www.youtube.com/watch?v=qU4lFYp3KiQ).
 
@@ -11,15 +11,6 @@ This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with 
   - [Development workflow](#development-workflow)
 - [Deployment](#deployment)
 - [License](#license)
-
-## Features
-
-**Sanity Studio with a schema for**
-  * 🏢 Company info
-  * 📃 Pages
-  * 👨🏼‍🎨 Projects
-  * 👩🏾‍💻 People
-  * 📰 Blog posts
 
 ## Installation
 
