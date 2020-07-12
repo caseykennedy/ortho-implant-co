@@ -66,7 +66,7 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Facebook />
         </IconStyle>
       )
-    case 'linkedin':
+    case 'linkedIn':
       return (
         <IconStyle color={color} className="ico ico-linkedin">
           <LinkedIn />

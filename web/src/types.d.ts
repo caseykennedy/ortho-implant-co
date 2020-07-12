@@ -300,7 +300,7 @@ type JobPostQuery = {
   _rawBody: string
   publishedAt: string
   title: string
-  
+
   slug: {
     current: string
   }
@@ -366,21 +366,23 @@ type PostQuery = {
   }
   categories: {
     title: string
-  }
-  authors: {
-    name: string
-    jobTitle: string
-    headshot: {
-      asset: {
-        fluid: {
-          aspectRatio: number
-          base64: string
-          sizes: string
-          src: string
-          srcSet: string
-          srcSetWebp: string
-          srcWebp: string
-        }
+  }[]
+  authors: PostAuthor
+}
+
+type PostAuthor = {
+  name: string
+  jobTitle: string
+  headshot: {
+    asset: {
+      fluid: {
+        aspectRatio: number
+        base64: string
+        sizes: string
+        src: string
+        srcSet: string
+        srcSetWebp: string
+        srcWebp: string
       }
     }
   }

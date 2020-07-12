@@ -52,7 +52,7 @@ const BlogPage = () => {
         </Heading>
         {posts.map(({ node: post }, idx) => (
           <Link to={`/blog/${post.slug.current}`} key={idx}>
-            {post.title}
+            <Box>{post.title}</Box>
           </Link>
         ))}
       </Section>

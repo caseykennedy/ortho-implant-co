@@ -9,7 +9,7 @@ module.exports = {
   siteTitleAlt: 'Orthopaedic Implant Co.', // Alternative Site title for SEO
   siteTitleShort: 'Orthopaedic Implant Co.', // short_name for manifest
   siteHeadline: 'Orthopaedic Implant Co.', // Headline for schema.org JSONLD
-  siteUrl: 'https://cahuilla.net', // Domain of your site. No trailing slash!
+  siteUrl: 'http://orthoimplantcompany.com/', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Orthopaedic Implant Co.',

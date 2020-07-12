@@ -7,23 +7,55 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
+import { Card } from '../../../elements/Card'
+import Icon from '../../Icons'
 
 // Hooks
+import usePost from '../../../hooks/usePost'
 
 // Elements
-import { AnimatedBox, Box, Heading, Text } from '../../../elements'
+import { Flex, Box, Heading, Text } from '../../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const Aside: React.FC<{ data: PostQuery }> = ({ data }) => {
+const Aside = () => {
+  const posts = usePost()
+
   return (
-    <S.Aside as="aside" width={[1, 3 / 10]} p={5}>
-      <Heading as="h4" color="text" className="t--uppercase">
+    <S.Aside as="aside" width={[1, 3 / 10]}>
+      <div className="sticky">
+        <Flex className="recent-posts">
+          {/* <Heading as="h4" color="tertiary" className="t--uppercase">
         Recent Posts
-      </Heading>
+      </Heading> */}
+          {posts.map(({ node: post }, idx) => (
+            <S.Post to={`/blog/${post.slug.current}`} key={idx}>
+              <Box width={[7 / 10]} className="post__img">
+                {post.mainImage && (
+                  <Img
+                    fluid={post.mainImage.asset.fluid}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt={post.title}
+                  />
+                )}
+              </Box>
+
+              <Box width={7 / 10} className="post__content">
+                {post.title}
+              </Box>
+
+              <Text as="p" className="post__meta">
+                {post.categories[0].title} — {post.publishedAt}
+                <Icon name="nextArrow" />
+              </Text>
+            </S.Post>
+          ))}
+        </Flex>
+      </div>
     </S.Aside>
   )
 }
