@@ -33,7 +33,7 @@ const Aside = () => {
       </Heading> */}
           {posts.slice(5, 9).map(({ node: post }, idx) => (
             <S.Post to={`/blog/${post.slug.current}`} key={idx}>
-              <Box width={[5 / 10]} className="post__img">
+              <Box className="post__img">
                 {post.mainImage && (
                   <Img
                     fluid={post.mainImage.asset.fluid}

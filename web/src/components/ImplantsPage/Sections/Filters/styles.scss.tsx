@@ -106,7 +106,7 @@ export const Card = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.quinary};
   }
 
   &.card {
@@ -149,7 +149,7 @@ export const Card = styled(Link)`
       }
 
       h5 {
-        color: ${theme.colors.white};
+        color: ${theme.colors.tertiary};
       }
 
       .card__meta {
