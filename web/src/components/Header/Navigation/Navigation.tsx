@@ -22,6 +22,7 @@ const Navigation = () => {
             to={item.link}
             className="nav-link__title"
             activeClassName="active"
+            partiallyActive={true}
           >
             {item.name}
           </Link>

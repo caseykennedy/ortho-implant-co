@@ -17,30 +17,37 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   }
 
   .card {
+
     &__image {
       max-height: 333px;
       overflow: hidden;
-      width: 70%;
-      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
+      width: 75%;
+      /* padding:  ${theme.space[3]} 0 0 ${theme.space[3]}; */
     }
 
     &__content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       padding:  ${theme.space[5]};
 
       @media ${theme.mq.tablet} {
       }
 
       h3 {
-        font-size: calc(${theme.fontSizes[1]} * 1.75);
+        font-size: calc(${theme.fontSizes[1]} * 1.5);
         font-weight: 500;
+        text-transform: uppercase;
+        margin-top: ${theme.space[7]};
+        margin-bottom: ${theme.space[5]};
+      }
+
+      .lead {
+        font-size: calc(${theme.fontSizes[1]} * 1.5);
       }
 
       p {
-        font-size: calc(${theme.fontSizes[1]} / 1);
+        font-size: calc(${theme.fontSizes[1]} * 1);
       }
 
       .card__meta {
@@ -65,14 +72,29 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   }
 `
 
-export const CardHolder = styled(Box)`
-  /* flex-wrap: wrap;
-  justify-content: space-between; */
+export const CardHolder = styled(Flex)`
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   width: 100%;
 
+  a {
+    color: ${theme.colors.text};
+
+    &.card--highlight {
+      &:first-child {
+        background: ${theme.colors.secondary};
+        color: ${theme.colors.white};
+      }
+    }
+  }
+
   .swiper-container {
     overflow: visible;
+
+    @media ${theme.mq.tablet} {
+      overflow: hidden;
+    }
 
     .parallax-bg {
       background: yellow;
@@ -82,7 +104,7 @@ export const CardHolder = styled(Box)`
       .swiper-slide {
         transition: ${theme.transition.all};
         
-        /* height: auto; */ /* For equal slide height */
+        height: auto; /* For equal slide height */
 
         &:hover {
           /* background: ${theme.colors.primary}; */
@@ -94,12 +116,30 @@ export const CardHolder = styled(Box)`
         }
       }
     }
-  }
+
+    .swiper-pagination {
+      /* background: ${theme.colors.primary}; */
+      /* top: -3rem; */
+      /* bottom: initial; */
+
+      text-align: left;
+
+      &.swiper-pagination-bullets {
+        span {
+          cursor: pointer;
+          background: ${theme.colors.secondary} !important;
+          padding: ${theme.space[3]};
+          border-radius: 0;
+        }
+      }
+    }
+  }Î
+
 `
 
 export const CardColumn = styled(Flex)`
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: ${theme.space[5]};
 
   @media ${theme.mq.desktop} {

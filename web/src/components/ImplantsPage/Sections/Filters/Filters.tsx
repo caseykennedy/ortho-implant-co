@@ -26,7 +26,7 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
   return (
     <AnimatedFlex width={[1 / 2, 1 / 3, 1 / 4]} style={transition}>
       <S.Card to={`/implants/${slug}`}>
-        <Box width={[7 / 10]} className="card__thumb">
+        <Box className="card__thumb">
           {!implant.node.mainImage ? (
             <ImgMatch
               src="DRP-3-Hole-Narrow-Left 1.png"

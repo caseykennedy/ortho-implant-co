@@ -19,6 +19,8 @@ export const Aside = styled(Box)`
   background: ${theme.colors.quinary};
   border-top: ${theme.border};
 
+  width: 100%;
+
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
     border-top: none;
@@ -44,7 +46,6 @@ export const Post = styled(Link)`
 
   background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
-  padding: ${theme.space[5]};
 
   &:last-child {
     border-bottom: none;
@@ -58,12 +59,18 @@ export const Post = styled(Link)`
 
   .post {
     &__img {
+      max-height: 200px;
+      height: 200px;
+      width: 50%;
+      overflow: hidden;
       margin-bottom: ${theme.space[5]};
+      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
     }
 
     &__content {
       h4 {
         font-size: calc(${theme.fontSizes[1]} * 1.75);
+        padding: ${theme.space[5]} ${theme.space[5]} 0;
       }
     }
 
@@ -71,6 +78,7 @@ export const Post = styled(Link)`
       display: flex;
       justify-content: space-between;
       margin-top: ${theme.space[7]};
+      padding: 0 ${theme.space[5]} ${theme.space[5]};
       
       font-size: calc(${theme.fontSizes[1]} / 1.15);
       font-family: ${theme.fonts.code};

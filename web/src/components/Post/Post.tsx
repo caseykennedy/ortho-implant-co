@@ -104,7 +104,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
       <Aside />
 
-      {/* <PrevNext pageContext={pageContext} /> */}
+      <PrevNext pageContext={pageContext} />
 
       <Billboard {...billboardProps} />
     </S.Post>

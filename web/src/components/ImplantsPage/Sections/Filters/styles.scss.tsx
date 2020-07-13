@@ -117,7 +117,8 @@ export const Card = styled(Link)`
 
   .card {
     &__thumb {
-      width: 40%;
+      width: 75%;
+      height: 200px;
       padding: ${theme.space[4]} 0 0 ${theme.space[4]};
 
       img {

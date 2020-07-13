@@ -30,22 +30,31 @@ import * as S from './styles.scss'
 
 const Swipe: React.FC = ({ children }) => {
   const params = {
+    // autoplay: {
+    //   delay: 25000,
+    //   disableOnInteraction: false
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
     freeMode: true,
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 2,
+    spaceBetween: 70,
+    // centeredSlides: true,
     breakpoints: {
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 20
+        slidesPerView: 2,
+        spaceBetween: -2,
       },
       768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 50,
         grabCursor: true
       },
       640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 40,
         grabCursor: true
       },
       320: {
@@ -63,13 +72,63 @@ const Blog = () => {
   console.log('-----_- Posts -_-----')
   console.log(posts)
 
+  const newsPosts = posts.filter(
+    ({ node: post }) => 'News' === post.categories[0].title
+  )
+
+  const blogPosts = posts.filter(
+    ({ node: post }) => 'Blog' === post.categories[0].title
+  )
+
+  console.log('-----_- newsPosts -_-----')
+  console.log(newsPosts)
+
   return (
     <Section bg="quinary" color="text" border={true}>
       <Heading as="h4">What's Happening</Heading>
 
       <S.CardHolder width={1}>
-        <Swipe>
-          {posts.map(({ node: post }, idx) => (
+        <Box width={[1, '47%', '65%']}>
+          <Swipe>
+            {posts.slice(4, 9).map(({ node: post }, idx) => (
+              <Link to={`/blog/${post.slug.current}`} key={idx}>
+                <S.Card bg={theme.colors.background} border={true}>
+                  <Box className="card__image">
+                    {post.mainImage && (
+                      <Img
+                        fluid={post.mainImage.asset.fluid}
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                        alt={post.title}
+                        className="article__img"
+                      />
+                    )}
+                  </Box>
+                  <Flex className="card__content">
+                    <Box>
+                      <Heading as="h5">
+                        {post.categories[0].title}
+                      </Heading>
+                      <Heading as="h3">{post.title}</Heading>
+                      {post._rawExcerpt && (
+                        <BlockContent blocks={post._rawExcerpt || []} />
+                      )}
+                    </Box>
+                    <Text as="p" className="card__meta  t--uppercase">
+                      <Text as="span" color="tertiary">
+                        {post.publishedAt}
+                      </Text>
+                      <Icon name="nextArrow" />
+                    </Text>
+                  </Flex>
+                </S.Card>
+              </Link>
+            ))}
+          </Swipe>
+        </Box>
+
+        {/* <S.CardColumn width={[1, '47%', '30%']}>
+          {posts.slice(4, 5).map(({ node: post }, idx) => (
             <Link to={`/blog/${post.slug.current}`} key={idx}>
               <S.Card bg={theme.colors.background}>
                 <Box className="card__image">
@@ -85,75 +144,48 @@ const Blog = () => {
                 </Box>
                 <Flex className="card__content">
                   <Box>
-                    <Heading as="h3" className="t--uppercase">
+                    <Text as="p" className="lead">
                       {post.title}
-                    </Heading>
+                    </Text>
                     {post._rawExcerpt && (
                       <BlockContent blocks={post._rawExcerpt || []} />
                     )}
                   </Box>
                   <Text as="p" className="card__meta  t--uppercase">
-                    {post.categories[0].title} — {post.publishedAt}
+                    {post.categories[0].title} —{' '}
+                    <Text as="span" color="tertiary"></Text>
                     <Icon name="nextArrow" />
                   </Text>
                 </Flex>
               </S.Card>
             </Link>
           ))}
-        </Swipe>
-
-        {/* <S.CardColumn width={[1, '47%', '30%']}>
-          {posts.slice(4, 5).map(({ node: post }, idx) => (
-            <Link to={`/blog/${post.slug.current}`} key={idx}>
-              <S.Card bg={theme.colors.secondary} color="white" key={idx}>
-                <Box className="card__image">
-                  {post.mainImage && (
-                    <Img
-                      fluid={post.mainImage.asset.fluid}
-                      objectFit="cover"
-                      objectPosition="50% 50%"
-                      alt={post.title}
-                      className="article__img"
-                    />
-                  )}
-                </Box>
-                <Flex className="card__content">
-                  <Box>
-                    <Heading as="h3" className="t--uppercase">
-                      {post.title}
-                    </Heading>
-                    {post._rawExcerpt && (
-                      <BlockContent blocks={post._rawExcerpt || []} />
-                    )}
-                  </Box>
-                  <Text as="p" className="card__meta  t--uppercase">
-                    {post.categories[0].title} — {post.publishedAt}
-                    <Icon name="nextArrow" />
-                  </Text>
-                </Flex>
-              </S.Card>
-            </Link>
-          ))}
-        </S.CardColumn>
+        </S.CardColumn> */}
 
         <S.CardColumn width={[1, 1, '30%']}>
-          <S.Card width={[1, 1 / 2, 1]} bg="tertiary">
-            <Flex className="card__content">
-              <Box>
-                <Heading as="h5">value</Heading>
-                <Text as="p" color="white">
-                  We create better value for the implants you already know and
-                  use on an everyday basis.
-                </Text>
-              </Box>
-              <Text as="p" className="card__meta">
-                BLOG — Apr 19, 2020
-                <Icon name="nextArrow" />
-              </Text>
-            </Flex>
-          </S.Card>
+          {newsPosts.map(({ node: post }, idx) => (
+            <Link to={`/blog/${post.slug.current}`} key={idx} className="card--highlight">
+              <S.Card width={[1, 1 / 2, 1]} border={true} mb={'-2px'}>
+                <Flex className="card__content">
+                  <Box>
+                    <Heading as="h5">{post.categories[0].title}</Heading>
+                    {/* <Heading as="h3">{post.title}</Heading> */}
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
+                    )}
+                  </Box>
+                  <Text as="p" className="card__meta  t--uppercase">
+                    <Text as="span" color="tertiary">
+                      {post.publishedAt}
+                    </Text>
+                    <Icon name="nextArrow" />
+                  </Text>
+                </Flex>
+              </S.Card>
+            </Link>
+          ))}
 
-          <S.Card width={[1, 1 / 2, 1]} border={true}>
+          {/* <S.Card width={[1, 1 / 2, 1]} border={true}>
             <Flex className="card__content">
               <Box>
                 <Heading as="h5">value</Heading>
@@ -167,8 +199,8 @@ const Blog = () => {
                 <Icon name="nextArrow" />
               </Text>
             </Flex>
-          </S.Card>
-        </S.CardColumn> */}
+          </S.Card> */}
+        </S.CardColumn>
       </S.CardHolder>
     </Section>
   )
