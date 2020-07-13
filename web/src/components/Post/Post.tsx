@@ -33,13 +33,15 @@ import theme from '../../../config/theme'
 const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
   return (
     <S.Author>
-      <Img
-        fluid={author.headshot.asset.fluid}
-        objectFit="cover"
-        objectPosition="50% 50%"
-        alt={author.name}
-        className="author__img"
-      />
+      {author.headshot.asset.fluid && (
+        <Img
+          fluid={author.headshot.asset.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          alt={author.name}
+          className="author__img"
+        />
+      )}
       <Box className="author__name">
         {author.name}
         <br />
@@ -64,7 +66,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     <S.Post>
       <PageTitle {...pageTitle} />
 
-      <S.Article width={[1, 7 / 10]}>
+      <S.Article width={[1, 6 / 10]}>
         {data.mainImage && (
           <Img
             fluid={data.mainImage.asset.fluid}
@@ -75,35 +77,34 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
           />
         )}
 
-        <Section>
+        <Section bg="background" pb={4}>
           {/* <Heading as="h3" color="" className="t--uppercase">{data.title}</Heading> */}
           <Box className="article__lead">
             {data._rawExcerpt && (
               <BlockContent blocks={data._rawExcerpt || []} />
             )}
           </Box>
+          <Box className="article__meta">
+            <Box width={1 / 2} className="author">
+              {data.authors && <Author author={data.authors} />}
+            </Box>
+            <Flex width={1 / 2} className="social-share">
+              <p>Share:</p>
+              <SocialShare name="facebook" slug={data.slug.current} />
+              <SocialShare name="linkedIn" slug={data.slug.current} />
+              <SocialShare name="twitter" slug={data.slug.current} />
+            </Flex>
+          </Box>
         </Section>
 
-        <Box className="article__meta">
-          <Box width={1 / 2} className="author">
-            <Author author={data.authors} />
-          </Box>
-          <Flex width={1 / 2} className="social-share">
-            <p>Share:</p>
-            <SocialShare name="facebook" slug={data.slug.current} />
-            <SocialShare name="linkedIn" slug={data.slug.current} />
-            <SocialShare name="twitter" slug={data.slug.current} />
-          </Flex>
-        </Box>
-
-        <Section bg="quinary">
+        <Section border={true}>
           {data._rawBody && <BlockContent blocks={data._rawBody || []} />}
         </Section>
       </S.Article>
 
       <Aside />
 
-      <PrevNext pageContext={pageContext} />
+      {/* <PrevNext pageContext={pageContext} /> */}
 
       <Billboard {...billboardProps} />
     </S.Post>

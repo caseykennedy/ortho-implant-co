@@ -27,10 +27,11 @@ export const Filter = styled(AnchorLink)`
   background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
   color: ${theme.colors.text};
-  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[5]};
+  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[2]};
   width: 100%;
 
   @media ${theme.mq.tablet} {
+    padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[5]};
     position: sticky;
     top: 0;
   }
@@ -132,13 +133,13 @@ export const Card = styled(Link)`
       padding:  ${theme.space[4]};
 
       h4 {
-        font-weight: 500;
-        text-transform: uppercase;
+        font-weight: 400;
+        text-transform: capitalize;
         margin-bottom: 0;
-        font-size: calc(${theme.fontSizes[3]} / 1.5);
+        font-size: calc(${theme.fontSizes[3]} / 1.25);
 
         @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[3]} / 1.25);
+          font-size: calc(${theme.fontSizes[3]} / 1.15);
         }
 
         @media ${theme.mq.desktop} {
@@ -157,6 +158,7 @@ export const Card = styled(Link)`
         font-size: calc(${theme.fontSizes[1]} / 1.1);
         font-family: ${theme.fonts.code};
         color: ${theme.colors.text};
+        text-transform: uppercase;
 
         span {
           transition: ${theme.transition.all};

@@ -42,7 +42,7 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
           )}
         </Box>
         <Box className="card__content">
-          <Box mt={3}>
+          <Box mt={3} pr={[5, 7]}>
             <Heading as="h4" mt={5} color="text">
               {implant.node.shortName}
             </Heading>
@@ -52,10 +52,10 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
             </Text>
           </Box>
 
-          <Text as="span" mt={5} className="card__meta  t--uppercase">
+          <span className="card__meta">
             details
             <Icon name="nextArrow" />
-          </Text>
+          </span>
         </Box>
       </S.Card>
     </AnimatedFlex>

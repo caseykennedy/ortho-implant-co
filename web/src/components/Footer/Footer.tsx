@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               <Icon name="facebook" />
             </a>
             <a href="/" target="__blank" rel="noopener">
-              <Icon name="linkedin" />
+              <Icon name="linkedIn" />
             </a>
             <a href="/" target="__blank" rel="noopener">
               <Icon name="twitter" />

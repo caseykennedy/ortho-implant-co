@@ -25,15 +25,15 @@ const Aside = () => {
   const posts = usePost()
 
   return (
-    <S.Aside as="aside" width={[1, 3 / 10]}>
+    <S.Aside as="aside" width={[1, 4 / 10]}>
       <div className="sticky">
         <Flex className="recent-posts">
           {/* <Heading as="h4" color="tertiary" className="t--uppercase">
         Recent Posts
       </Heading> */}
-          {posts.map(({ node: post }, idx) => (
+          {posts.slice(5, 9).map(({ node: post }, idx) => (
             <S.Post to={`/blog/${post.slug.current}`} key={idx}>
-              <Box width={[7 / 10]} className="post__img">
+              <Box width={[5 / 10]} className="post__img">
                 {post.mainImage && (
                   <Img
                     fluid={post.mainImage.asset.fluid}
@@ -45,7 +45,7 @@ const Aside = () => {
               </Box>
 
               <Box width={7 / 10} className="post__content">
-                {post.title}
+                <Heading as="h4">{post.title}</Heading>
               </Box>
 
               <Text as="p" className="post__meta">

@@ -21,7 +21,6 @@ export const Post = styled(Flex)`
 `
 
 export const Article = styled(Box)`
-  flex-wrap: wrap;
   width: 100%;
 
   background: ${theme.colors.background};
@@ -32,7 +31,7 @@ export const Article = styled(Box)`
   .article {
     &__img {
       border-bottom: ${theme.border};
-      max-height: 400px;
+      max-height: 360px;
     }
 
     &__lead {
@@ -44,14 +43,14 @@ export const Article = styled(Box)`
     &__meta {
       display: flex;
       align-items: center;
-      margin: 0;
-      padding: ${theme.space[3]} ${theme.space[5]};
+      margin: ${theme.space[8]} 0 0 0;
+      /* padding: ${theme.space[3]} ${theme.space[5]}; */
 
       /* background: ${theme.colors.quinary}; */
-      border-bottom: ${theme.border};
+      /* border-bottom: ${theme.border}; */
 
       @media ${theme.mq.tablet} {
-        padding: ${theme.space[5]} ${theme.space[7]};
+        /* padding: ${theme.space[5]} ${theme.space[7]}; */
       }
 
       .author {

@@ -18,7 +18,10 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
   .card {
     &__image {
-      
+      max-height: 333px;
+      overflow: hidden;
+      width: 70%;
+      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
     }
 
     &__content {
@@ -27,19 +30,23 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       justify-content: space-between;
 
       padding:  ${theme.space[5]};
-      height: 14rem;
 
       @media ${theme.mq.tablet} {
-        height: 20rem;
       }
 
-      h5 {
+      h3 {
+        font-size: calc(${theme.fontSizes[1]} * 1.75);
         font-weight: 500;
+      }
+
+      p {
+        font-size: calc(${theme.fontSizes[1]} / 1);
       }
 
       .card__meta {
         display: flex;
         justify-content: space-between;
+        margin-top: ${theme.space[5]};
         
         font-size: calc(${theme.fontSizes[1]} / 1.15);
         font-family: ${theme.fonts.code};
@@ -58,11 +65,36 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   }
 `
 
-export const CardHolder = styled(Flex)`
-  flex-wrap: wrap;
-  justify-content: space-between;
+export const CardHolder = styled(Box)`
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
   margin: 0 auto;
   width: 100%;
+
+  .swiper-container {
+    overflow: visible;
+
+    .parallax-bg {
+      background: yellow;
+    }
+
+    .swiper-wrapper {
+      .swiper-slide {
+        transition: ${theme.transition.all};
+        
+        /* height: auto; */ /* For equal slide height */
+
+        &:hover {
+          /* background: ${theme.colors.primary}; */
+          cursor: pointer;
+        }
+
+        &.swiper-slide-active {
+          /* background: ${theme.colors.primary}; */
+        }
+      }
+    }
+  }
 `
 
 export const CardColumn = styled(Flex)`

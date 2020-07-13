@@ -16,7 +16,7 @@ export const Aside = styled(Box)`
   flex-direction: column;
   position: relative;
 
-  background: ${theme.colors.white};
+  background: ${theme.colors.quinary};
   border-top: ${theme.border};
 
   @media ${theme.mq.tablet} {
@@ -26,7 +26,7 @@ export const Aside = styled(Box)`
   }
 
   .sticky {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
   }
 
@@ -42,16 +42,16 @@ export const Post = styled(Link)`
   text-transform: uppercase;
   line-height: 1.25;
 
+  background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
   padding: ${theme.space[5]};
-  min-height: 400px;
 
   &:last-child {
     border-bottom: none;
   }
 
   &:hover {
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.white};
   }
 
   
@@ -61,24 +61,28 @@ export const Post = styled(Link)`
       margin-bottom: ${theme.space[5]};
     }
 
-    &__content {}
-
-    &__meta {
-    display: flex;
-    justify-content: space-between;
-    margin-top: ${theme.space[7]};
-    
-    font-size: calc(${theme.fontSizes[1]} / 1.15);
-    font-family: ${theme.fonts.code};
-
-    span {
-      transition: ${theme.transition.all};
-
-      svg {
-        width: 24px;
-        /* fill: ${theme.colors.text}; */
+    &__content {
+      h4 {
+        font-size: calc(${theme.fontSizes[1]} * 1.75);
       }
     }
-  }
+
+    &__meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: ${theme.space[7]};
+      
+      font-size: calc(${theme.fontSizes[1]} / 1.15);
+      font-family: ${theme.fonts.code};
+
+      span {
+        transition: ${theme.transition.all};
+
+        svg {
+          width: 24px;
+          /* fill: ${theme.colors.text}; */
+        }
+      }
+    }
   }
 `

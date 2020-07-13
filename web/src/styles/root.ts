@@ -37,7 +37,7 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 1.1;
+    --heading-line-height: 1;
     --body-line-height: 1.5;
   }
 

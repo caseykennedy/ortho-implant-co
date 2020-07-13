@@ -3,101 +3,137 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
-import { Grid, Cell } from 'styled-css-grid'
 
+// Libraries
+import Swiper from 'react-id-swiper'
+
+// Components
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
 import ImgMatch from '../../../ImgMatch'
 import Icon from '../../../Icons'
 
+// Hooks
+import usePost from '../../../../hooks/usePost'
+
+// Elements
 import Button from '../../../../elements/Button'
 import { Box, Flex, Heading, Text } from '../../../../elements'
 
+// Theme
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const Blog = () => {
-  // const data: MantraSectionQueryShape = useStaticQuery(graphql`
-  //   query MantraSectionQuery {
-  //     allSanityHomeMantra {
-  //       edges {
-  //         node {
-  //           heading
-  //           linkTitle
-  //           linkTo
-  //           title
-  //           _rawMessage
-  //           image {
-  //             asset {
-  //               fluid(maxWidth: 1080) {
-  //                 src
-  //                 aspectRatio
-  //                 base64
-  //                 sizes
-  //                 srcSet
-  //                 srcSetWebp
-  //                 srcWebp
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const query = data.allSanityHomeMantra.edges[0].node
-  // console.log('---_- Mantra -_---')
-  // console.log(query)
-  return (
-    <Section bg="primary" color="text" border={true}>
-      <Heading as="h4">What's Happening</Heading>
-      <S.CardHolder width={1}>
-        <S.CardColumn width={[1, '47%', '30%']}>
-          <S.Card bg={theme.colors.background}>
-            <Box className="card__image">
-              <ImgMatch src="blog.jpg" altText="blog" />
-            </Box>
-            <Flex className="card__content">
-              <Box>
-                <Heading as="h5" color="tertiary">
-                  value
-                </Heading>
-                <Text as="p">
-                  We create better value for the implants you already know and
-                  use on an everyday basis.
-                </Text>
-              </Box>
-              <Text as="p" className="card__meta">
-                BLOG — Apr 19, 2020
-                <Icon name="nextArrow" />
-              </Text>
-            </Flex>
-          </S.Card>
-        </S.CardColumn>
+const Swipe: React.FC = ({ children }) => {
+  const params = {
+    freeMode: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        grabCursor: true
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grabCursor: true
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: -2,
+        grabCursor: true
+      }
+    }
+  }
+  return <Swiper {...params}>{children}</Swiper>
+}
 
-        <S.CardColumn width={[1, '47%', '30%']}>
-          <S.Card bg={theme.colors.black} color={theme.colors.white}>
-            <Box className="card__image">
-              <ImgMatch src="blog.jpg" altText="blog" />
-            </Box>
-            <Flex className="card__content">
-              <Box>
-                <Heading as="h5">value</Heading>
-                <Text as="p">
-                  We create better value for the implants you already know and
-                  use on an everyday basis.
-                </Text>
-              </Box>
-              <Text as="p" className="card__meta">
-                BLOG — Apr 19, 2020
-                <Icon name="nextArrow" color="white" />
-              </Text>
-            </Flex>
-          </S.Card>
+const Blog = () => {
+  const posts = usePost()
+  console.log('-----_- Posts -_-----')
+  console.log(posts)
+
+  return (
+    <Section bg="quinary" color="text" border={true}>
+      <Heading as="h4">What's Happening</Heading>
+
+      <S.CardHolder width={1}>
+        <Swipe>
+          {posts.map(({ node: post }, idx) => (
+            <Link to={`/blog/${post.slug.current}`} key={idx}>
+              <S.Card bg={theme.colors.background}>
+                <Box className="card__image">
+                  {post.mainImage && (
+                    <Img
+                      fluid={post.mainImage.asset.fluid}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                      alt={post.title}
+                      className="article__img"
+                    />
+                  )}
+                </Box>
+                <Flex className="card__content">
+                  <Box>
+                    <Heading as="h3" className="t--uppercase">
+                      {post.title}
+                    </Heading>
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
+                    )}
+                  </Box>
+                  <Text as="p" className="card__meta  t--uppercase">
+                    {post.categories[0].title} — {post.publishedAt}
+                    <Icon name="nextArrow" />
+                  </Text>
+                </Flex>
+              </S.Card>
+            </Link>
+          ))}
+        </Swipe>
+
+        {/* <S.CardColumn width={[1, '47%', '30%']}>
+          {posts.slice(4, 5).map(({ node: post }, idx) => (
+            <Link to={`/blog/${post.slug.current}`} key={idx}>
+              <S.Card bg={theme.colors.secondary} color="white" key={idx}>
+                <Box className="card__image">
+                  {post.mainImage && (
+                    <Img
+                      fluid={post.mainImage.asset.fluid}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                      alt={post.title}
+                      className="article__img"
+                    />
+                  )}
+                </Box>
+                <Flex className="card__content">
+                  <Box>
+                    <Heading as="h3" className="t--uppercase">
+                      {post.title}
+                    </Heading>
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
+                    )}
+                  </Box>
+                  <Text as="p" className="card__meta  t--uppercase">
+                    {post.categories[0].title} — {post.publishedAt}
+                    <Icon name="nextArrow" />
+                  </Text>
+                </Flex>
+              </S.Card>
+            </Link>
+          ))}
         </S.CardColumn>
 
         <S.CardColumn width={[1, 1, '30%']}>
@@ -132,7 +168,7 @@ const Blog = () => {
               </Text>
             </Flex>
           </S.Card>
-        </S.CardColumn>
+        </S.CardColumn> */}
       </S.CardHolder>
     </Section>
   )
