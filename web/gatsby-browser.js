@@ -18,11 +18,7 @@ const LoadAnimation = ({ children }) => {
     to: { opacity: 1 }
   })
 
-  return !loading ? (
-    <AnimatedBox style={pageAnimation}>{children}</AnimatedBox>
-  ) : (
-    <Loading />
-  )
+  return !loading && <AnimatedBox style={pageAnimation}>{children}</AnimatedBox>
 }
 
 export const wrapRootElement = ({ element }) => (
