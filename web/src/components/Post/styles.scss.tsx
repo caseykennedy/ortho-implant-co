@@ -16,11 +16,18 @@ export const Post = styled(Flex)`
   flex-wrap: wrap;
   width: 100%;
 
+  .article__img {
+    border-bottom: ${theme.border};
+    height: 50vh;
+    min-height: 333px;
+  }
+
   @media ${theme.mq.tablet} {
   }
 `
 
 export const Article = styled(Box)`
+  margin-top: -${theme.space[8]};
   width: 100%;
 
   background: ${theme.colors.background};
@@ -29,14 +36,10 @@ export const Article = styled(Box)`
   }
 
   .article {
-    &__img {
-      border-bottom: ${theme.border};
-      max-height: 360px;
-    }
 
     &__lead {
       p {
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        font-size: calc(${theme.fontSizes[2]} * 1.75);
       }
     }
 

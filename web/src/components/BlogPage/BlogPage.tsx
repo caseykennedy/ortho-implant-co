@@ -96,8 +96,8 @@ const BlogPage = () => {
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: 'Blog',
-    title: 'OIC'
+    message: 'Blog &amp Company News',
+    title: 'Orthopaedic Implant Co.'
   }
   return (
     <S.BlogPage>
@@ -105,17 +105,17 @@ const BlogPage = () => {
 
       <Flex width={1}>
         <Flex flexWrap="wrap" mb={'-2px'}>
-            {posts.map(({ node: post }, idx) => (
-              <S.Card key={idx} width={1/3}>
-                <Link to={`/blog/${post.slug.current}`}>
-                  <Box className="card__image">
+          {posts.map(({ node: post }, idx) => (
+            <S.Card key={idx} width={1 / 3}>
+              <Link to={`/blog/${post.slug.current}`}>
+                <Box>
+                  <Box className="card__img">
                     {post.mainImage && (
                       <Img
                         fluid={post.mainImage.asset.fluid}
                         objectFit="cover"
                         objectPosition="50% 50%"
                         alt={post.title}
-                        className="article__img"
                       />
                     )}
                   </Box>
@@ -127,16 +127,17 @@ const BlogPage = () => {
                         <BlockContent blocks={post._rawExcerpt || []} />
                       )}
                     </Box>
-                    <Text as="p" className="card__meta  t--uppercase">
-                      <Text as="span" color="tertiary">
-                        {post.publishedAt}
-                      </Text>
-                      <Icon name="nextArrow" />
-                    </Text>
                   </Flex>
-                </Link>
-              </S.Card>
-            ))}
+                </Box>
+                <Text as="p" className="card__meta  t--uppercase">
+                  <Text as="span">
+                    {post.publishedAt}
+                  </Text>
+                  <Icon name="nextArrow" />
+                </Text>
+              </Link>
+            </S.Card>
+          ))}
         </Flex>
       </Flex>
 

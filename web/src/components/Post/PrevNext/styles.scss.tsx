@@ -25,7 +25,7 @@ export const Button = styled(Link)`
   padding: ${theme.space[5]} ${theme.space[5]};
   width: 100%;
 
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.background};
   color: ${theme.colors.text};
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizes[3]};

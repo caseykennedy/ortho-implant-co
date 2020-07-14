@@ -19,16 +19,20 @@ export const BlogPage = styled(Flex)`
   }
 
   a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     color: ${theme.colors.text};
     background: ${theme.colors.white};
+    height: 100%;
 
     &:hover {
-      background: ${theme.colors.quinary};
+      background: ${theme.colors.primary};
     }
   }
 
   .grid__cell {
-    display: flex;
     border-right: ${theme.border};
     border-bottom: ${theme.border};
 
@@ -56,17 +60,24 @@ export const Card = styled(Flex)`
     border-right: none;
   }
 
+  &:hover {
+    .card__img {
+      /* mix-blend-mode: normal; */
+    }
+  }
+
   @media ${theme.mq.tablet} {
   }
 
   .card {
-
-    &__image {
+    &__img {
       max-height: 200px;
       height: 200px;
       overflow: hidden;
       width: 75%;
       padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
+      mix-blend-mode: luminosity;
+      transition: ${theme.transition.all};
     }
 
     &__content {
@@ -80,9 +91,9 @@ export const Card = styled(Flex)`
       }
 
       h3 {
-        font-size: calc(${theme.fontSizes[1]} * 1.75);
-        font-weight: 500;
-        text-transform: uppercase;
+        font-size: ${theme.fontSizes[3]};
+        font-weight: 400;
+        /* text-transform: uppercase; */
         margin-top: ${theme.space[7]};
         margin-bottom: ${theme.space[5]};
       }
@@ -92,27 +103,30 @@ export const Card = styled(Flex)`
       }
 
       p {
-        font-size: calc(${theme.fontSizes[1]} * 1);
+        /* font-size: calc(${theme.fontSizes[1]} * 1); */
       }
 
-      .card__meta {
-        display: flex;
-        justify-content: space-between;
-        margin-top: ${theme.space[5]};
-        
-        font-size: calc(${theme.fontSizes[1]} / 1.15);
-        font-family: ${theme.fonts.code};
-
-        span {
-          transition: ${theme.transition.all};
-
-          svg {
-            width: 24px;
-            /* fill: ${theme.colors.text}; */
-          }
-        }
-      }
       
+      
+    }
+  }
+
+  .card__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: ${theme.space[5]};
+    padding:  0 ${theme.space[5]} ${theme.space[5]};
+    
+    font-size: calc(${theme.fontSizes[1]} / 1.15);
+    font-family: ${theme.fonts.code};
+
+    span {
+      transition: ${theme.transition.all};
+
+      svg {
+        width: 24px;
+        /* fill: ${theme.colors.text}; */
+      }
     }
   }
 `

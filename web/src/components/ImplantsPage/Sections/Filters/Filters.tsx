@@ -24,7 +24,7 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
 }) => {
   const slug = implant.node.slug.current
   return (
-    <AnimatedFlex width={[1 / 2, 1 / 3, 1 / 4]} style={transition}>
+    <AnimatedFlex width={[1 / 2, 1 / 3, 1 / 5]} style={transition}>
       <S.Card to={`/implants/${slug}`}>
         <Box className="card__thumb">
           {!implant.node.mainImage ? (
@@ -43,7 +43,7 @@ const ProductCard: React.FC<{ implant: ProductEdges; transition: any }> = ({
         </Box>
         <Box className="card__content">
           <Box mt={3} pr={[5, 7]}>
-            <Heading as="h4" mt={5} color="text">
+            <Heading as="h4">
               {implant.node.shortName}
             </Heading>
 

@@ -44,7 +44,7 @@ export const Post = styled(Link)`
   text-transform: uppercase;
   line-height: 1.25;
 
-  background: ${theme.colors.quinary};
+  background: ${theme.colors.tertiary};
   border-bottom: ${theme.border};
 
   &:last-child {
@@ -52,7 +52,12 @@ export const Post = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.white};
+    background: ${theme.colors.quinary};
+
+    .post__img {
+
+      mix-blend-mode: normal;
+    }
   }
 
   
@@ -65,6 +70,7 @@ export const Post = styled(Link)`
       overflow: hidden;
       margin-bottom: ${theme.space[5]};
       padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
+      mix-blend-mode: luminosity;
     }
 
     &__content {

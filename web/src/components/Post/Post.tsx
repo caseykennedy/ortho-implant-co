@@ -66,7 +66,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     <S.Post>
       <PageTitle {...pageTitle} />
 
-      <S.Article width={[1, 6 / 10]}>
+      <Box width={1}>
         {data.mainImage && (
           <Img
             fluid={data.mainImage.asset.fluid}
@@ -76,8 +76,10 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
             className="article__img"
           />
         )}
+      </Box>
 
-        <Section bg="background" pb={4}>
+      <S.Article width={[1, 7 / 10]}>
+        <Section bg="background" pb={4} pr={[5, 9]}>
           {/* <Heading as="h3" color="" className="t--uppercase">{data.title}</Heading> */}
           <Box className="article__lead">
             {data._rawExcerpt && (
@@ -97,8 +99,10 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Section>
 
-        <Section border={true}>
-          {data._rawBody && <BlockContent blocks={data._rawBody || []} />}
+        <Section pr={[5, 9]} border={true}>
+          <Box>
+            {data._rawBody && <BlockContent blocks={data._rawBody || []} />}
+          </Box>
         </Section>
       </S.Article>
 

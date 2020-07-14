@@ -48,9 +48,8 @@ export const Filter = styled(AnchorLink)`
 
     &__btn {
       font-family: ${theme.fonts.heading};
-      font-size: ${theme.fontSizes[2]};
-      font-weight: 500;
-      text-transform: uppercase;
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
+      text-transform: capitalize;
 
       padding: ${theme.space[2]} ${theme.space[4]};
       margin-bottom: -2px;
@@ -106,7 +105,7 @@ export const Card = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.primary};
   }
 
   &.card {
@@ -137,6 +136,7 @@ export const Card = styled(Link)`
         font-weight: 400;
         text-transform: capitalize;
         margin-bottom: 0;
+        color: ${theme.colors.text};
         font-size: calc(${theme.fontSizes[3]} / 1.25);
 
         @media ${theme.mq.tablet} {

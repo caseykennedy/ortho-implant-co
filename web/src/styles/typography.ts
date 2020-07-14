@@ -115,7 +115,7 @@ const Typography = css`
   }
 
   html {
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
     border: 0;
     margin: 0;

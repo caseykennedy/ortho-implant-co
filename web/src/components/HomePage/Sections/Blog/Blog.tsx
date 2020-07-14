@@ -69,8 +69,8 @@ const Swipe: React.FC = ({ children }) => {
 
 const Blog = () => {
   const posts = usePost()
-  console.log('-----_- Posts -_-----')
-  console.log(posts)
+  // console.log('-----_- Posts -_-----')
+  // console.log(posts)
 
   const newsPosts = posts.filter(
     ({ node: post }) => 'News' === post.categories[0].title
@@ -80,8 +80,8 @@ const Blog = () => {
     ({ node: post }) => 'Blog' === post.categories[0].title
   )
 
-  console.log('-----_- newsPosts -_-----')
-  console.log(newsPosts)
+  // console.log('-----_- newsPosts -_-----')
+  // console.log(newsPosts)
 
   return (
     <Section bg="quinary" color="text" border={true}>
