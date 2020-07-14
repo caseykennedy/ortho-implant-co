@@ -105,7 +105,7 @@ export const Card = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.quinary};
   }
 
   &.card {
@@ -129,7 +129,7 @@ export const Card = styled(Link)`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
+      margin-top: ${theme.space[7]};
       padding:  ${theme.space[4]};
 
       h4 {
