@@ -37,7 +37,7 @@ const useProduct = () => {
             }
             name
             shortName
-            videoLink
+            videoURL
             categories {
               title
             }

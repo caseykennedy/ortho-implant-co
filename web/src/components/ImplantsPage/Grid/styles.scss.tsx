@@ -1,4 +1,4 @@
-// Filters Styles:
+// Grid Styles:
 
 // ___________________________________________________________________
 
@@ -6,106 +6,28 @@ import { Link } from 'gatsby'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import styled from 'styled-components'
-import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../../elements'
+import theme from '../../../../config/theme'
+import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 
-export const ProductGrid = styled.div`
-  width: 100%;
-  position: relative;
-
-  @media ${theme.mq.tablet} {
-  }
-`
-
-export const Filter = styled(AnchorLink)`
-  display: flex;
-  position: relative;
-  z-index: 999;
-
+export const Grid = styled(Flex)`
+  flex-wrap: wrap;
   background: ${theme.colors.quinary};
-  border-bottom: ${theme.border};
-  color: ${theme.colors.text};
-  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[2]};
   width: 100%;
-
-  @media ${theme.mq.tablet} {
-    padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[5]};
-    position: sticky;
-    top: 0;
-  }
-
-  .filter {
-    &__inner {
-      display: flex;
-      flex-direction: column;
-
-      @media ${theme.mq.tablet} {
-        flex-direction: row;
-      }
-    }
-
-    &__btn {
-      font-family: ${theme.fonts.heading};
-      font-size: calc(${theme.fontSizes[2]} * 1.15);
-      text-transform: capitalize;
-
-      padding: ${theme.space[2]} ${theme.space[4]};
-      margin-bottom: -2px;
-      cursor: pointer;
-
-      &:first-child {
-        @media ${theme.mq.desktop} {
-          padding-left: 0;
-        }
-      }
-
-      &:hover {
-        color: ${theme.colors.tertiary};
-      }
-
-      /* &--all {
-        color: ${theme.colors.primary};
-      } */
-    }
-  }
 `
 
-export const Spacer = styled(Box)`
-  background: ${theme.colors.white};
-
-  @media ${theme.mq.desktop} {
-    min-width: ${theme.logoWidth};
-  }
-`
-
-export const Decorator = styled(Flex)`
-  svg {
-    width: 900px;
-  }
-`
-
-export const Card = styled(Link)`
+export const Card = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 
   border-bottom: ${theme.border};
   border-right: ${theme.border};
   background: ${theme.colors.white};
 
-  @media ${theme.mq.tablet} {
-  }
-
-  &:nth-child(4n) {
-    border-right: none;
-    background: ${theme.colors.primary};
-  }
-
   &:hover {
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.primary};
   }
 
   &.card {
@@ -129,7 +51,7 @@ export const Card = styled(Link)`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-top: ${theme.space[7]};
+      /* margin-top: ${theme.space[5]}; */
       padding:  ${theme.space[4]};
 
       h4 {
@@ -173,12 +95,6 @@ export const Card = styled(Link)`
       
     }
   }
-`
-
-export const CardHolder = styled(Flex)`
-  flex-wrap: wrap;
-  background: ${theme.colors.quinary};
-  width: 100%;
 `
 
 export const CardColumn = styled(Flex)`

@@ -21,15 +21,17 @@ export const Button = styled(Link)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+  
+  background: ${theme.colors.background};
   padding: ${theme.space[5]} ${theme.space[5]};
   width: 100%;
 
-  background: ${theme.colors.background};
   color: ${theme.colors.text};
   font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizes[3]};
+  font-size: ${theme.fontSizes[2]};
   font-weight: 500;
+  line-height: 1.15;
   text-transform: uppercase;
 
   @media ${theme.mq.tablet} {

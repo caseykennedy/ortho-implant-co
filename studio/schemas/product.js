@@ -67,9 +67,9 @@ export default {
       }
     },
     {
-      name: 'videoLink',
+      name: 'videoURL',
       title: 'Video URL',
-      type: 'string'
+      type: 'url'
     },
     {
       name: 'publishedAt',

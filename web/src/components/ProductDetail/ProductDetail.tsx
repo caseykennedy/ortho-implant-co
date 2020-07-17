@@ -2,12 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-
-// Libraries
-import Img from 'gatsby-image/withIEPolyfill'
-import { Grid, Cell } from 'styled-css-grid'
+import React from 'react'
 
 // Components
 import PageTitle from '../PageTitle'
@@ -15,13 +10,12 @@ import Billboard from '../Billboard'
 import BlockContent from '../BlockContent'
 
 // Sections
-import Gallery from './Sections/Gallery'
-import PrevNext from './Sections/PrevNext'
+import Gallery from './Gallery'
+import PrevNext from './PrevNext'
+import Video from './Video'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
-import Divider from '../../elements/Divider'
-import HeadingStroked from '../../elements/HeadingStroked'
 
 // Styles + theme
 import * as S from './styles.scss'
@@ -43,81 +37,63 @@ const billboardProps = {
 
 const ProductDetail: React.FC<ProductContextShape> = ({ pageContext }) => {
   // Page context
-  const implant = pageContext.page
-  const prev = pageContext.prev
-  const next = pageContext.next
+  const product = pageContext.page
 
   // Page title props
   const pageTitle = {
-    altText: implant.name,
+    altText: product.name,
     // image: page.pageTitle.image.asset.fluid,
-    message: implant.name,
-    title: implant.categories[0].title
+    message: product.name,
+    title: product.categories[0].title
   }
   return (
     <S.ProductDetail>
       <PageTitle {...pageTitle} />
+
+      {/* <Box width={[1]}>
+        <S.Resources>
+          <Heading as="h4">Resources</Heading>
+
+          {product._rawAdditionalInfo && (
+            <BlockContent blocks={product._rawAdditionalInfo || []} />
+          )}
+        </S.Resources>
+      </Box> */}
+
+      <S.Details>
+        <Box width={[1, 1 / 2]}>
+          <Gallery product={product} />
+        </Box>
+        <Box width={[1, 1 / 2]} pr={10}>
+          {product._rawDescription && (
+            <BlockContent blocks={product._rawDescription || []} />
+          )}
+        </Box>
+      </S.Details>
+
       <Flex
-        bg="secondary"
-        width={1}
-        style={{ borderBottom: '2px solid black' }}
+        width={[1]}
+        bg="background"
+        flexWrap="wrap"
+        style={{ overflow: 'hidden', borderTop: theme.border }}
       >
-        <Gallery implant={implant} />
-      </Flex>
-      <Flex bg="background" flexWrap="wrap" style={{ overflow: 'hidden' }}>
         <Flex width={1} flexWrap="wrap" flexDirection="row">
-          <Box width={[1, 1 / 2]}>
-            <Box p={theme.gutter.axis}>
-              <Heading as="h3" color="tertiary" className="t--uppercase">
-                {implant.shortName}
-              </Heading>
+          <Box bg="" p={theme.gutter.axis} width={[1]}>
+            <Heading as="h4">Features</Heading>
 
-              {implant._rawDescription && (
-                <BlockContent blocks={implant._rawDescription || []} />
-              )}
-              {/* <HeadingStroked
-              as="h3"
-              strokeColor={theme.colors.tertiary}
-              strokeWidth="1px"
-              className="t--uppercase"
-              fontSize={6}
-            >
-              {implant.shortName}
-            </HeadingStroked> */}
-            </Box>
-
-            <S.AdditionalInfo>
-              <Heading as="h4">
-                Additional Info
-              </Heading>
-
-              {implant._rawAdditionalInfo && (
-                <BlockContent blocks={implant._rawAdditionalInfo || []} />
-              )}
-            </S.AdditionalInfo>
-          </Box>
-
-          <Box
-            bg="secondary"
-            color="white"
-            p={theme.gutter.axis}
-            width={[1, 1 / 2]}
-          >
-            <Heading as="h4" color="primary">
-              Features
-            </Heading>
-
-            {implant._rawFeatures && (
-              <BlockContent blocks={implant._rawFeatures || []} />
+            {product._rawFeatures && (
+              <BlockContent blocks={product._rawFeatures || []} />
             )}
           </Box>
         </Flex>
       </Flex>
 
-      {/* <PrevNext pageContext={pageContext} /> */}
+      {product.videoURL && <Video src={product.videoURL} />}
 
-      <Billboard {...billboardProps} />
-      {/* <Prefooter /> */}
+      <PrevNext pageContext={pageContext} />
+
+      {/* <Billboard {...billboardProps} /> */}
+      <Prefooter />
     </S.ProductDetail>
   )
 }

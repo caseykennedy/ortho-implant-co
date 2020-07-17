@@ -11,48 +11,48 @@ import { Grid, Cell } from 'styled-css-grid'
 import Swiper from 'react-id-swiper'
 
 // Components
-import Lightbox from '../../../Lightbox'
+import Lightbox from '../../Lightbox'
 
 // Elements
-import { AnimatedBox, Box, Flex, Heading, Text } from '../../../../elements'
+import { AnimatedBox, Box, Flex, Heading, Text } from '../../../elements'
 
 import * as S from './styles.scss'
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 import 'swiper/css/swiper.css'
 
 // ___________________________________________________________________
 
 type GalleryShape = {
-  implant: ProductNode
+  product: ProductNode
 }
 
 const ImageSwiper: React.FC = ({ children }) => {
   const params = {
-    freeMode: true,
-    slidesPerView: 4,
-    spaceBetween: 2,
+    freeMode: false,
+    slidesPerView: 1,
+    spaceBetween: 1,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
     breakpoints: {
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 2
+        slidesPerView: 1,
+        spaceBetween: 1
       },
       768: {
-        slidesPerView: 3,
-        spaceBetween: 2,
+        slidesPerView: 1,
+        spaceBetween: 1,
         grabCursor: true
       },
       640: {
-        slidesPerView: 2,
-        spaceBetween: 2,
+        slidesPerView: 1,
+        spaceBetween: 1,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 2,
+        spaceBetween: 1,
         grabCursor: true
       }
     }
@@ -60,11 +60,11 @@ const ImageSwiper: React.FC = ({ children }) => {
   return <Swiper {...params}>{children}</Swiper>
 }
 
-const Gallery: React.FC<GalleryShape> = ({ implant }) => {
+const Gallery: React.FC<GalleryShape> = ({ product }) => {
   // Map gallery images
-  const galleryImages = implant.gallery.map(img => img.asset.fluid.src)
+  const galleryImages = product.gallery.map(img => img.asset.fluid.src)
 
-  console.log(implant.gallery)
+  console.log(product.gallery)
 
   // Toggle and set index for lightbox
   const [isOpen, setOpen] = useState(false)
@@ -73,7 +73,7 @@ const Gallery: React.FC<GalleryShape> = ({ implant }) => {
     <S.Gallery>
       <Box>
         <ImageSwiper>
-          {implant.gallery.map((img, idx) => (
+          {product.gallery.map((img, idx) => (
             <Box
               key={idx}
               onClick={() => {
@@ -86,7 +86,7 @@ const Gallery: React.FC<GalleryShape> = ({ implant }) => {
                 fluid={img.asset.fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
-                alt={implant.shortName}
+                alt={product.shortName}
               />
             </Box>
           ))}

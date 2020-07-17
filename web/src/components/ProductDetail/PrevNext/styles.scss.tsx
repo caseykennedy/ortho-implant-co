@@ -6,9 +6,9 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex, Heading } from '../../../../elements'
+import { Box, Flex, Heading } from '../../../elements'
 
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -25,7 +25,7 @@ export const Button = styled(Link)`
   padding: ${theme.space[5]} ${theme.space[5]};
   width: 100%;
 
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.primary};
   color: ${theme.colors.text};
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizes[3]};
@@ -39,7 +39,7 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.tertiary};
     color: ${theme.colors.text};
   }
 

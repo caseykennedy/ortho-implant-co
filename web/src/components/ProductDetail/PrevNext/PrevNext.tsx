@@ -6,14 +6,14 @@
 import React from 'react'
 
 // Components
-import Icon from '../../../Icons'
+import Icon from '../../Icons'
 
 // Elements
-import { Heading, Box, Flex } from '../../../../elements'
+import { Heading, Box, Flex } from '../../../elements'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

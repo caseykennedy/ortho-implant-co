@@ -28,7 +28,7 @@ export const BlogPage = styled(Flex)`
     height: 100%;
 
     &:hover {
-      background: ${theme.colors.primary};
+      background: ${theme.colors.quinary};
     }
   }
 
@@ -62,7 +62,7 @@ export const Card = styled(Flex)`
 
   &:hover {
     .card__img {
-      /* mix-blend-mode: normal; */
+      mix-blend-mode: normal;
     }
   }
 

@@ -5,7 +5,7 @@
 import React, { useState } from 'react'
 
 import PageTitle from '../PageTitle'
-import Filters from './Sections/Filters'
+import Filter from './Filter'
 import Billboard from '../Billboard'
 import Section from '../Section'
 
@@ -35,7 +35,7 @@ const ImplantsPage = () => {
   return (
     <S.ImplantsPage>
       <PageTitle {...pageTitle} />
-      <Filters />
+      <Filter />
       <Box
         bg="secondary"
         mt="-2px"

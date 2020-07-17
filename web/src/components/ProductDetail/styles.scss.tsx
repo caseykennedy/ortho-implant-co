@@ -11,7 +11,7 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const ProductDetail = styled(Box)`
+export const ProductDetail = styled(Flex)`
   flex-wrap: wrap;
   width: 100%;
 
@@ -28,12 +28,17 @@ export const ProductDetail = styled(Box)`
       list-style: none;
       margin-bottom: ${theme.space[7]};
       width: 46%;
-      color: ${theme.colors.quinary};
     }
   }
 `
 
-export const AdditionalInfo = styled(Flex)`
+export const Details = styled(Flex)`
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+`
+
+export const Resources = styled(Flex)`
   flex-direction: column;
   padding: ${theme.space[5]};
 
