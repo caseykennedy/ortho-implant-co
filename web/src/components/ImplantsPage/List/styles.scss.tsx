@@ -22,6 +22,7 @@ export const List = styled(Flex)`
 
 export const Item = styled(AnimatedFlex)`
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: space-between;
   padding: ${theme.space[5]};
   width: 100%;
@@ -31,11 +32,15 @@ export const Item = styled(AnimatedFlex)`
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[5]} ${theme.space[7]};
+    flex-direction: row;
+  }
+
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[4]} ${theme.space[7]} ${theme.space[4]} 0;
   }
 
   &:hover {
-    background: ${theme.colors.quaternary};
+    background: ${theme.colors.primary};
 
     h5 {
       color: ${theme.colors.text};
@@ -65,13 +70,17 @@ export const Item = styled(AnimatedFlex)`
   }
 
   .meta {
-    display: flex;
+    display: none;
     justify-content: space-between;
     
     font-size: calc(${theme.fontSizes[1]} / 1.1);
     font-family: ${theme.fonts.code};
     color: ${theme.colors.tertiary};
     text-transform: uppercase;
+
+    @media ${theme.mq.tablet} {
+      display: flex;
+    }
 
     span {
       transition: ${theme.transition.all};
@@ -86,9 +95,15 @@ export const Item = styled(AnimatedFlex)`
   }
 
   .thumb {
-    width: 4%;
+    width: 120px;
     height: auto;
-    margin-right: ${theme.space[5]};
+    padding: 0 ${theme.space[5]} 0 ${theme.space[5]};
+
+    @media ${theme.mq.tablet} {
+      width: ${theme.logoWidth};
+      margin-right: ${theme.space[5]};
+      padding: 0 ${theme.space[5]} 0 ${theme.space[7]};
+    }
 
     img {
       /* mix-blend-mode: luminosity; */

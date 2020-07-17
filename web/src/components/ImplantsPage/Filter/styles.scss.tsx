@@ -31,7 +31,7 @@ export const Navigation = styled(AnchorLink)`
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[3]} 0 ${theme.space[3]} calc(${theme.space[5]} + 6px);
+    padding: ${theme.space[3]} 0 ${theme.space[3]} calc(${theme.space[5]});
     position: sticky;
     top: 0;
   }
