@@ -54,7 +54,7 @@ const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
 const Post: React.FC<PostContextShape> = ({ pageContext }) => {
   const data = pageContext.page
 
-  console.log(pageContext)
+  // console.log(pageContext)
 
   const pageTitle = {
     // altText: data.title,

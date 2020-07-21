@@ -21,6 +21,7 @@ export const Filter = styled.div`
 
 export const Navigation = styled(AnchorLink)`
   display: flex;
+  align-items: center;
   position: relative;
   z-index: 999;
 
@@ -63,6 +64,37 @@ export const Navigation = styled(AnchorLink)`
 
       &:hover {
         color: ${theme.colors.tertiary};
+      }
+
+      /* &--all {
+        color: ${theme.colors.primary};
+      } */
+    }
+
+    &__toggle-btn {
+      font-family: ${theme.fonts.heading};
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
+      text-transform: capitalize;
+
+      margin-bottom: -4px;
+      margin-left: ${theme.space[3]};
+      cursor: pointer;
+
+      &:first-child {
+        @media ${theme.mq.desktop} {
+          padding-left: 0;
+        }
+      }
+
+      svg {
+        fill: ${theme.colors.tertiary};
+      }
+
+      &:hover,
+      &--active {
+        svg {
+          fill: ${theme.colors.black};
+        }
       }
 
       /* &--all {

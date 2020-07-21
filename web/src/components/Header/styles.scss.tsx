@@ -112,6 +112,6 @@ export const Cta = styled(Box)`
   display: none;
 
   @media ${theme.mq.tablet} {
-    display: flex;
+    display: initial;
   }
 `

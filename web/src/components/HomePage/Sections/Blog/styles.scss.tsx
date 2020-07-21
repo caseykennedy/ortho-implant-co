@@ -35,9 +35,9 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       }
 
       h3 {
-        font-size: calc(${theme.fontSizes[1]} * 1.5);
-        font-weight: 500;
-        text-transform: uppercase;
+        font-size: calc(${theme.fontSizes[1]} * 2);
+        font-weight: 400;
+        /* text-transform: uppercase; */
         margin-top: ${theme.space[7]};
         margin-bottom: ${theme.space[5]};
       }

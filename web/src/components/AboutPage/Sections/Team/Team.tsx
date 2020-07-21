@@ -95,8 +95,10 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   const people = data.people.edges
   const boardMembers = people.filter(person => person.node.boardMember)
   const staffMembers = people.filter(person => !person.node.boardMember)
-  // console.log('—————|— isBoardMember —|—————')
-  // console.log(boardMembers)
+  const humanStaff = staffMembers.filter(person => person.node.name !== 'Ortho Bot')
+
+  // console.log('—————|— Human —|—————')
+  // console.log(humanStaff)
 
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
@@ -164,7 +166,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
         Team
       </Heading>
       <TeamSwiper>
-        {staffMembers.map(({ node: person }, idx) => (
+        {humanStaff.map(({ node: person }, idx) => (
           <S.Card key={idx}>
             <Box width={[7 / 10]} className="card__headshot">
               {person.headshot && (

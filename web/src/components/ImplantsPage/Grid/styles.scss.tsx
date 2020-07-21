@@ -17,9 +17,7 @@ export const Grid = styled(Flex)`
   width: 100%;
 `
 
-export const Card = styled(Box)`
-  display: flex;
-  flex-direction: column;
+export const Card = styled(Flex)`
   justify-content: space-between;
 
   border-bottom: ${theme.border};
@@ -28,6 +26,12 @@ export const Card = styled(Box)`
 
   &:hover {
     background: ${theme.colors.primary};
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &.card {

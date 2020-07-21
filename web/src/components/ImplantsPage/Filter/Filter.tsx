@@ -13,19 +13,11 @@ import useProduct from '../../../hooks/useProduct'
 import useCategory from '../../../hooks/useCategory'
 
 // Elements
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  AnimatedFlex,
-  AnimatedBox
-} from '../../../elements'
+import { Box, Flex, Heading } from '../../../elements'
 
 // Components
 import Grid from '../Grid'
 import List from '../List'
-
 import Icon from '../../Icons'
 import ImgMatch from '../../ImgMatch'
 
@@ -52,7 +44,7 @@ const Filter = () => {
 
   // Toggle Grid/List views
   const [gridView, setGridView] = useState(true)
-  function toggle() {
+  function toggleView() {
     setGridView(!gridView)
   }
   return (
@@ -73,12 +65,28 @@ const Filter = () => {
             className="filter__btn filter__btn--all"
             onClick={() => resetFilteredItems()}
           >
-            See all
-          </Box>
-          <Box className="filter__btn" onClick={() => toggle()}>
-            TOGGLE
+            All
           </Box>
         </div>
+
+        <Flex ml="auto" mr={theme.gutter.axis}>
+          <Box
+            className={`filter__toggle-btn ${
+              gridView ? '' : 'filter__toggle-btn--active'
+            }`}
+            onClick={() => toggleView()}
+          >
+            <Icon name="listView" />
+          </Box>
+          <Box
+            className={`filter__toggle-btn ${
+              !gridView ? '' : 'filter__toggle-btn--active'
+            }`}
+            onClick={() => toggleView()}
+          >
+            <Icon name="gridView" />
+          </Box>
+        </Flex>
       </S.Navigation>
 
       {gridView ? (

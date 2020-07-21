@@ -90,39 +90,38 @@ const Blog = () => {
       <S.CardHolder width={1}>
         <Box width={[1, '47%', '65%']}>
           <Swipe>
-            {posts.slice(4, 9).map(({ node: post }, idx) => (
-              <Link to={`/blog/${post.slug.current}`} key={idx}>
-                <S.Card bg={theme.colors.background} border={true}>
-                  <Box className="card__image">
-                    {post.mainImage && (
-                      <Img
-                        fluid={post.mainImage.asset.fluid}
-                        objectFit="cover"
-                        objectPosition="50% 50%"
-                        alt={post.title}
-                        className="article__img"
-                      />
+            {newsPosts.map(({ node: post }, idx) => (
+              <Link to={`/blog/${post.slug.current}`} key={idx} className="card--highlight">
+              <S.Card width={[1, 1 / 2, 1]} border={true} mb={'-2px'}>
+                <Flex className="card__content">
+                  <Box>
+                    <Heading as="h5">{post.categories[0].title}</Heading>
+                    <Heading as="h3">{post.title}</Heading>
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
                     )}
+                    <br />
                   </Box>
-                  <Flex className="card__content">
-                    <Box>
-                      <Heading as="h5">
-                        {post.categories[0].title}
-                      </Heading>
-                      <Heading as="h3">{post.title}</Heading>
-                      {post._rawExcerpt && (
-                        <BlockContent blocks={post._rawExcerpt || []} />
-                      )}
-                    </Box>
-                    <Text as="p" className="card__meta  t--uppercase">
-                      <Text as="span" color="tertiary">
-                        {post.publishedAt}
-                      </Text>
-                      <Icon name="nextArrow" />
+                <Box className="card__image">
+                  {post.mainImage && (
+                    <Img
+                      fluid={post.mainImage.asset.fluid}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                      alt={post.title}
+                      className="article__img"
+                    />
+                  )}
+                </Box>
+                  <Text as="p" className="card__meta  t--uppercase">
+                    <Text as="span" color="tertiary">
+                      {post.publishedAt}
                     </Text>
-                  </Flex>
-                </S.Card>
-              </Link>
+                    <Icon name="nextArrow" />
+                  </Text>
+                </Flex>
+              </S.Card>
+            </Link>
             ))}
           </Swipe>
         </Box>
@@ -163,16 +162,13 @@ const Blog = () => {
         </S.CardColumn> */}
 
         <S.CardColumn width={[1, 1, '30%']}>
-          {newsPosts.map(({ node: post }, idx) => (
+          {blogPosts.slice(4, 6).map(({ node: post }, idx) => (
             <Link to={`/blog/${post.slug.current}`} key={idx} className="card--highlight">
               <S.Card width={[1, 1 / 2, 1]} border={true} mb={'-2px'}>
                 <Flex className="card__content">
                   <Box>
                     <Heading as="h5">{post.categories[0].title}</Heading>
-                    {/* <Heading as="h3">{post.title}</Heading> */}
-                    {post._rawExcerpt && (
-                      <BlockContent blocks={post._rawExcerpt || []} />
-                    )}
+                    <Heading as="h3">{post.title}</Heading>
                   </Box>
                   <Text as="p" className="card__meta  t--uppercase">
                     <Text as="span" color="tertiary">

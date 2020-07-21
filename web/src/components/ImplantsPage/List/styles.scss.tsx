@@ -27,7 +27,7 @@ export const Item = styled(AnimatedFlex)`
   padding: ${theme.space[5]};
   width: 100%;
 
-  border-bottom: 2px solid ${theme.colors.quaternary};
+  border-bottom: 2px solid ${theme.colors.black};
   color: ${theme.colors.text};
   transition: ${theme.transition.all};
 
@@ -44,6 +44,14 @@ export const Item = styled(AnimatedFlex)`
 
     h5 {
       color: ${theme.colors.text};
+    }
+
+    .meta {
+      color: ${theme.colors.text};
+
+      svg {
+        fill: ${theme.colors.black};
+      }
     }
   }
 
@@ -77,6 +85,7 @@ export const Item = styled(AnimatedFlex)`
     font-family: ${theme.fonts.code};
     color: ${theme.colors.tertiary};
     text-transform: uppercase;
+    transition: ${theme.transition.all};
 
     @media ${theme.mq.tablet} {
       display: flex;
