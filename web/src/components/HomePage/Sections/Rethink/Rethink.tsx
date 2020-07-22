@@ -152,6 +152,7 @@ const Rethink = () => {
       </Box>
       <S.Learn width={1} mt={12}>
         {/* <TabsPanel panels={query.tabPanels} /> */}
+        <Box py={13} />
         <Box py={10} />
       </S.Learn>
       <S.Decorator>

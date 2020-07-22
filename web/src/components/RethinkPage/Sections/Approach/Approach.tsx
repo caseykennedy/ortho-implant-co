@@ -56,7 +56,7 @@ const Approach = () => {
           </Heading>
 
           <Heading as="h3" fontWeight={400}>
-            Yesterday’s rules were created for just that, yesterday.
+            "Give me something that is different, for there is a chance of it being better..."
           </Heading>
 
           <Flex width={1} mt={`calc(${theme.space[3]} * 22)`} flexWrap="wrap">

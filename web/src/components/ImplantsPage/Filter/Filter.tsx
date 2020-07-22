@@ -27,9 +27,42 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
+type TogglerProps = {
+  gridView: boolean
+  setGridView: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Toggler: React.FC<TogglerProps> = ({ gridView, setGridView }) => {
+  function toggleView() {
+    setGridView(!gridView)
+  }
+  return (
+    <S.Toggler>
+      <Box
+        className={`toggler__btn ${
+          !gridView ? '' : 'active'
+        }`}
+        onClick={() => toggleView()}
+      >
+        <Icon name="gridView" />
+      </Box>
+      <Box
+        className={`toggler__btn ${
+          gridView ? '' : 'active'
+        }`}
+        onClick={() => toggleView()}
+      >
+        <Icon name="listView" />
+      </Box>
+    </S.Toggler>
+  )
+}
+
 const Filter = () => {
   const implants = useProduct()
   const categories = useCategory()
+
+  // Filter implants
   const [items, setItems] = useState(implants)
   const setFilteredItems = (category: string) => {
     setItems(
@@ -39,14 +72,10 @@ const Filter = () => {
   function resetFilteredItems() {
     setItems(implants)
   }
-  // console.log('—————|— filterCategory —|—————')
-  // console.log(items)
 
   // Toggle Grid/List views
   const [gridView, setGridView] = useState(true)
-  function toggleView() {
-    setGridView(!gridView)
-  }
+
   return (
     <S.Filter id="product-grid">
       <S.Navigation href="#product-grid">
@@ -69,24 +98,7 @@ const Filter = () => {
           </Box>
         </div>
 
-        <Flex ml="auto" mr={theme.gutter.axis}>
-          <Box
-            className={`filter__toggle-btn ${
-              gridView ? '' : 'filter__toggle-btn--active'
-            }`}
-            onClick={() => toggleView()}
-          >
-            <Icon name="listView" />
-          </Box>
-          <Box
-            className={`filter__toggle-btn ${
-              !gridView ? '' : 'filter__toggle-btn--active'
-            }`}
-            onClick={() => toggleView()}
-          >
-            <Icon name="gridView" />
-          </Box>
-        </Flex>
+        <Toggler gridView={gridView} setGridView={setGridView} />
       </S.Navigation>
 
       {gridView ? (

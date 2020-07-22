@@ -65,41 +65,42 @@ export const Navigation = styled(AnchorLink)`
       &:hover {
         color: ${theme.colors.tertiary};
       }
+    }
+  }
+`
 
-      /* &--all {
-        color: ${theme.colors.primary};
-      } */
+export const Toggler = styled(Flex)`
+  margin-right: ${theme.space[5]};
+  margin-left: auto;
+
+  @media ${theme.mq.tablet} {
+    margin-right: ${theme.space[7]};
+  }
+
+  .toggler__btn {
+    font-family: ${theme.fonts.heading};
+    font-size: calc(${theme.fontSizes[2]} * 1.15);
+    text-transform: capitalize;
+
+    margin-bottom: -4px;
+    margin-left: ${theme.space[3]};
+    cursor: pointer;
+
+    &:first-child {
+      @media ${theme.mq.desktop} {
+        padding-left: 0;
+      }
     }
 
-    &__toggle-btn {
-      font-family: ${theme.fonts.heading};
-      font-size: calc(${theme.fontSizes[2]} * 1.15);
-      text-transform: capitalize;
+    svg {
+      fill: ${theme.colors.tertiary};
+    }
 
-      margin-bottom: -4px;
-      margin-left: ${theme.space[3]};
-      cursor: pointer;
-
-      &:first-child {
-        @media ${theme.mq.desktop} {
-          padding-left: 0;
-        }
-      }
-
+    &:hover,
+    &.active {
       svg {
-        fill: ${theme.colors.tertiary};
+        fill: ${theme.colors.black};
       }
-
-      &:hover,
-      &--active {
-        svg {
-          fill: ${theme.colors.black};
-        }
-      }
-
-      /* &--all {
-        color: ${theme.colors.primary};
-      } */
     }
   }
 `

@@ -12,6 +12,7 @@ import Mantra from './Sections/Mantra'
 import Blog from './Sections/Blog'
 import Prefooter from '../Footer/Prefooter'
 
+import { Box, Flex, Heading } from '../../elements'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
@@ -30,7 +31,8 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
       <Rethink />
-      <Implants />
+      {/* <Box bg="black" py={8} /> */}
+      {/* <Implants /> */}
       <Reviews />
       <Mantra />
       <Blog />

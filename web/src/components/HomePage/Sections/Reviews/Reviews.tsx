@@ -60,11 +60,11 @@ const Reviews = () => {
   }
   return (
     <>
-      <S.Decorator>
+      {/* <S.Decorator>
         <div className="pixels">
           <Pixels {...decoratorProps} />
         </div>
-      </S.Decorator>
+      </S.Decorator> */}
       <Box bg="tertiary">
         <Box>
           <Img

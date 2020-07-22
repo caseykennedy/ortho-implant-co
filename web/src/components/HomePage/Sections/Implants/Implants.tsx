@@ -24,44 +24,6 @@ const Product = () => {
 // ___________________________________________________________________
 
 const Implants = () => {
-  // const data: RethinkSectionQueryShape = useStaticQuery(graphql`
-  //   query ImplantsSectionQuery {
-  //     allSanityHomeRethink {
-  //       edges {
-  //         node {
-  //           heading
-  //           title
-  //           linkTitle
-  //           linkTo
-  //           id
-  //           tabPanels {
-  //             linkTo
-  //             linkTitle
-  //             tag
-  //             title
-  //             image {
-  //               asset {
-  //                 fluid(maxWidth: 1080) {
-  //                   src
-  //                   aspectRatio
-  //                   base64
-  //                   sizes
-  //                   srcSet
-  //                   srcSetWebp
-  //                   srcWebp
-  //                 }
-  //               }
-  //             }
-  //             _rawMessage
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const query = data.allSanityHomeRethink.edges[0].node
-  // console.log('---_- Rethink -_---')
-  // console.log(query)
   const params = {
     pagination: {
       el: '.swiper-pagination',
@@ -93,7 +55,7 @@ const Implants = () => {
     }
   }
   return (
-    <Section bg="secondary" color="white" overflow="hidden">
+    <Section bg="background" color="white" overflow="hidden">
       <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box>
