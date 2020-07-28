@@ -169,6 +169,7 @@ const Typography = css`
   h1,
   .text--xxl {
     font-size: calc(${theme.root.font.lg} * 1.15);
+    font-weight: 400;
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.xl};

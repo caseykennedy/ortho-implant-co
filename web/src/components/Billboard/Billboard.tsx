@@ -3,9 +3,8 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
 
 import ImgMatch from '../ImgMatch'
 import Section from '../Section'
@@ -41,7 +40,7 @@ const Intro: React.FC<Props> = ({
   src
 }) => {
   return (
-    <Section bg={bg} border={true} color={color} overflow="hidden">
+    <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
       {src && altText && (
         <S.Figure>
           <ImgMatch src={src} altText={altText} />
@@ -54,16 +53,18 @@ const Intro: React.FC<Props> = ({
         </Button>
       </div>
 
-      <S.Billboard>
-        <h4>{title}</h4>
+      <S.BillboardInner color={color}>
+        <Link to="/">
+          <h4>{title}</h4>
 
-        {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
-      </S.Billboard>
+          {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
+        </Link>
+      </S.BillboardInner>
 
       {/* <S.Illustration>
         <IllustrationOne />
       </S.Illustration> */}
-    </Section>
+    </S.Billboard>
   )
 }
 

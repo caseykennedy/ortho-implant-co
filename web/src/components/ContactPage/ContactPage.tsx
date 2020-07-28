@@ -28,7 +28,7 @@ import Prefooter from '../Footer/Prefooter'
 const billboardProps = {
   bg: theme.colors.primary,
   btnText: 'See our implants',
-  color: theme.colors.text,
+  color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
   invert: true,

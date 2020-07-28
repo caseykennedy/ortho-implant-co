@@ -9,7 +9,15 @@ import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const Billboard = styled(Flex)`
+export const Billboard = styled(Section)`
+  div {
+    .cta {
+      border-bottom: 2px solid yellow !important;
+    }
+  }
+`
+
+export const BillboardInner = styled(Flex)<{ color?: string }>`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
@@ -20,17 +28,21 @@ export const Billboard = styled(Flex)`
     padding-bottom: calc(120px - ${theme.space[5]});
   }
 
-  h3 {
-    text-transform: uppercase;
-    margin-top: ${theme.space[10]};
-    margin-bottom: 0;
+  a {
+    color: ${p => (!p.color ? theme.colors.text : p.color)};
 
-    @media ${theme.mq.tablet} {
-      margin-top: ${theme.space[12]};
-    }
+    h3 {
+      text-transform: uppercase;
+      margin-top: ${theme.space[10]};
+      margin-bottom: 0;
 
-    @media ${theme.mq.desktop} {
-      margin-top: ${theme.space[13]};
+      @media ${theme.mq.tablet} {
+        margin-top: ${theme.space[12]};
+      }
+
+      @media ${theme.mq.desktop} {
+        margin-top: ${theme.space[13]};
+      }
     }
   }
 `
