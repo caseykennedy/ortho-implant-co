@@ -9,6 +9,7 @@ import blockContent from './blockContent'
 import blockText from './blockText'
 import postCategory from './postCategory'
 import productCategory from './productCategory'
+import productResources from './productResources'
 import figure from './figure'
 import jobPost from './jobPost'
 import mainImage from './mainImage'
@@ -53,6 +54,7 @@ export default createSchema({
     postCategory,
     product,
     productCategory,
+    productResources,
     rethinkTabs,
     review,
     siteSettings,

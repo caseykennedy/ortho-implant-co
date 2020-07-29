@@ -41,6 +41,11 @@ const useProduct = () => {
             categories {
               title
             }
+            resources {
+              title
+              url
+              _id
+            }
           }
           previous {
             name

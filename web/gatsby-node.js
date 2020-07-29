@@ -3,8 +3,72 @@
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const ProductTemplate = require.resolve('./src/templates/product.tsx')
+  const CategoryTemplate = require.resolve('./src/templates/category.tsx')
   const JobPostTemplate = require.resolve('./src/templates/job-post.tsx')
   const PostTemplate = require.resolve('./src/templates/post.tsx')
+
+  // Category pages
+  // ___________________________________________________________________
+  const category = graphql(`
+    {
+      categories: allSanityProductCategory {
+        edges {
+          node {
+            _id
+            description
+            title
+            slug {
+              current
+            }
+            image {
+              asset {
+                fluid(maxWidth: 1080) {
+                  aspectRatio
+                  base64
+                  sizes
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                }
+              }
+            }
+          }
+          next {
+            _id
+            title
+            slug {
+              current
+            }
+          }
+          previous {
+            _id
+            title
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      Promise.reject(result.errors)
+    }
+    result.data.categories.edges.forEach(edge => {
+      createPage({
+        path: `/implants/${edge.node.slug.current}`,
+        component: CategoryTemplate,
+        context: {
+          slug: edge.node.title,
+          title: edge.node.title,
+          image: edge.node.image,
+          next: edge.next,
+          prev: edge.previous
+        }
+      })
+    })
+  })
 
   // Department pages
   // ___________________________________________________________________
@@ -199,5 +263,5 @@ exports.createPages = ({ graphql, actions }) => {
   })
 
   // Return a Promise which will wait for all queries to resolve
-  return Promise.all([product, jobPost, post])
+  return Promise.all([category, product, jobPost, post])
 }

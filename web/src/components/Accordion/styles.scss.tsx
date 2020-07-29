@@ -39,7 +39,7 @@ export const AccordionInner = styled.div`
 `
 
 export const AccordionToggle = styled(Flex)<{ bg: string, colorActive: string, color: string }>`
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   background: ${p => p.bg};
   color: ${p => p.color};
@@ -83,12 +83,12 @@ export const AccordionContent = styled(Box)`
   transition: max-height 0.3s ease;
 `
 
-export const Carat = styled(Icon)<{ chevronColor: string }>`
-  margin-right: ${theme.space[2]};
+export const Carat = styled(Icon)<{ chevronColor: string, chevronWidth?: string }>`
+  /* margin-right: ${theme.space[2]}; */
   transition: transform 0.3s ease;
 
   @media ${theme.mq.tablet} {
-    margin-right: ${theme.space[4]};
+    margin-right: ${theme.space[3]};
   }
 
   svg {
@@ -96,7 +96,7 @@ export const Carat = styled(Icon)<{ chevronColor: string }>`
     width: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      width: ${theme.space[6]};
+      width: ${p => !p.chevronWidth ? theme.space[6] : p.chevronWidth};
     }
   }
 `

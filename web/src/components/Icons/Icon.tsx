@@ -11,6 +11,7 @@ import IconStyle from './styles.scss'
 // Icons
 import Hamburger from './SVG/Hamburger'
 import Carat from './SVG/Carat'
+import Pdf from './SVG/Pdf'
 import Pin from './SVG/Pin'
 import Facebook from './SVG/Facebook'
 import LinkedIn from './SVG/LinkedIn'
@@ -18,6 +19,7 @@ import Instagram from './SVG/Instagram'
 import Twitter from './SVG/Twitter'
 import NextArrow from './SVG/NextArrow'
 import Document from './SVG/Document'
+import Download from './SVG/Download'
 
 import GridView from './SVG/GridView'
 import ListView from './SVG/ListView'
@@ -45,6 +47,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Document />
         </IconStyle>
       )
+    case 'download':
+      return (
+        <IconStyle color={color} className={className}>
+          <Download />
+        </IconStyle>
+      )
     case 'facebook':
       return (
         <IconStyle color={color} className="ico ico__facebook">
@@ -69,6 +77,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Instagram />
         </IconStyle>
       )
+    case 'linkedIn':
+      return (
+        <IconStyle color={color} className="ico ico__linkedin">
+          <LinkedIn />
+        </IconStyle>
+      )
     case 'listView':
       return (
         <IconStyle color={color} className="ico ico__list-view">
@@ -81,10 +95,10 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <NextArrow />
         </IconStyle>
       )
-    case 'linkedIn':
+    case 'pdf':
       return (
-        <IconStyle color={color} className="ico ico__linkedin">
-          <LinkedIn />
+        <IconStyle className="ico ico__pdf">
+          <Pdf />
         </IconStyle>
       )
     case 'pin':

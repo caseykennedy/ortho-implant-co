@@ -50,6 +50,12 @@ export default {
       type: 'blockContent'
     },
     {
+      name: 'resources',
+      title: 'Resources',
+      type: 'array',
+      of: [{type: 'productResources'}]
+    },
+    {
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',

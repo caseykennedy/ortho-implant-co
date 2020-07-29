@@ -16,6 +16,7 @@ type Props = {
   title: string
   color: string
   chevronColor: string
+  chevronWidth?: string
   borderColor: string
   colorActive: string
   bg: string
@@ -33,6 +34,7 @@ const Accordion: React.FC<Props> = ({
   bg,
   borderColor,
   chevronColor,
+  chevronWidth,
   children,
   color,
   colorActive,
@@ -79,21 +81,32 @@ const Accordion: React.FC<Props> = ({
           pl={pl}
         >
           <S.AccordionToggleInner width={2 / 3}>
-            <Heading as="h3" fontSize={fontSize} mb={0} width={1 / 2}>
+            <Heading
+              as="h3"
+              fontSize={fontSize}
+              mb={0}
+              width={!subTitle ? 1 : 1 / 2}
+            >
               {title}
             </Heading>
-            <Text as="span" mb={0}>
-              {subTitle}
-            </Text>
+            {subTitle && (
+              <Text as="span" mb={0}>
+                {subTitle}
+              </Text>
+            )}
           </S.AccordionToggleInner>
           <S.Carat
             name="nextArrow"
             color="white"
             className={setRotate}
             chevronColor={chevronColor}
+            chevronWidth={chevronWidth}
           />
         </S.AccordionToggle>
-        <S.AccordionContent ref={refContent} style={{ maxHeight: `${setHeight}` }}>
+        <S.AccordionContent
+          ref={refContent}
+          style={{ maxHeight: `${setHeight}` }}
+        >
           <Box>{children}</Box>
         </S.AccordionContent>
       </S.AccordionInner>

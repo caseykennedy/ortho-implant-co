@@ -40,12 +40,35 @@ type PersonShape = {
 // ___________________________________________________________________
 
 type CategoryNode = {
+  _id: string
   title: string
   description: string
+  slug: {
+    current: string
+  }
+  image: {
+    asset: {
+      fluid: ImageShape
+    }
+  }
 }
 
 type CategoryEdges = {
   node: CategoryNode
+  previous: {
+    _id: string
+    title: string
+    slug: {
+      current: string
+    }
+  }
+  next: {
+    _id: string
+    title: string
+    slug: {
+      current: string
+    }
+  }
 }
 
 type CategoryShape = {
@@ -80,6 +103,11 @@ type ProductNode = {
   shortName: string
   videoURL: string
   categories: {
+    title: string
+  }[]
+  resources: {
+    _id: string
+    url: string
     title: string
   }[]
 }
