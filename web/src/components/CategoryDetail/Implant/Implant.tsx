@@ -6,6 +6,8 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 // Libraries
+import { useSpring, config } from 'react-spring'
+import { useInView } from 'react-intersection-observer'
 
 // Sections
 import Gallery from '../Gallery'
@@ -56,47 +58,57 @@ const AdditionalInfo: React.FC<ImplantNode> = ({ implant }) => {
 }
 
 const Implant: React.FC<ImplantNode> = ({ implant }) => {
+  // Only show item when in view
+  const [manifestoRef, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-200px 0px'
+  })
+  const manifestoSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
+  })
   return (
-    <Section bg="white" border={true}>
-      <Flex flexWrap="wrap">
-        <Box width={[1, 4 / 10]} pr={[0, 7]}>
-          <Gallery product={implant} />
-        </Box>
-        <Box width={[1, 6 / 10]} pt={[3, 4]}>
-          <Heading as="h2">{implant.name}</Heading>
+    <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
+      <Section bg="white" border={true}>
+        <Flex flexWrap="wrap">
+          <Box width={[1, 4 / 10]} pr={[0, 8]}>
+            <Gallery product={implant} />
+          </Box>
+          <Box width={[1, 6 / 10]} pt={[3, 4]}>
+            <Heading as="h2">{implant.shortName}</Heading>
 
-          {implant._rawDescription && (
-            <BlockContent blocks={implant._rawDescription || []} />
-          )}
-
-          <S.Resources mt={7} mb={7}>
-            <Heading as="h4">
-              <mark>Resources</mark>
-            </Heading>
-
-            {implant.resources.map((resource, idx) => (
-              <a href={resource.url} key={idx} target="_blank">
-                {resource.title}
-                <Icon name="pdf" />
-              </a>
-            ))}
-          </S.Resources>
-
-          <Accordion title="Features" {...AccordionProps}>
-            {implant._rawFeatures && (
-              <Box mt={3}>
-                <BlockContent blocks={implant._rawFeatures || []} />
-              </Box>
+            {implant._rawDescription && (
+              <BlockContent blocks={implant._rawDescription || []} />
             )}
-          </Accordion>
 
-          {implant.videoURL && (
-            <Accordion title="Video" {...AccordionProps}>
-              <Video src={implant.videoURL} />
+            <S.Resources mt={7} mb={7}>
+              <Heading as="h4">
+                <mark>Resources:</mark>
+              </Heading>
+
+              {implant.resources.map((resource, idx) => (
+                <a href={resource.url} key={idx} target="_blank">
+                  {resource.title}
+                  <Icon name="pdf" />
+                </a>
+              ))}
+            </S.Resources>
+
+            <Accordion title="Features" {...AccordionProps}>
+              {implant._rawFeatures && (
+                <Box mt={3}>
+                  <BlockContent blocks={implant._rawFeatures || []} />
+                </Box>
+              )}
             </Accordion>
-          )}
 
-          {/* <Box width={[1]}>
+            {implant.videoURL && (
+              <Accordion title="Video" {...AccordionProps}>
+                <Video src={implant.videoURL} />
+              </Accordion>
+            )}
+
+            {/* <Box width={[1]}>
             <S.Resources>
               <Heading as="h4">{implant.name}</Heading>
 
@@ -105,7 +117,7 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
               )}
             </S.Resources>
           </Box> */}
-          {/* <Flex
+            {/* <Flex
             width={[1]}
             bg="background"
             flexWrap="wrap"
@@ -121,9 +133,10 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
               </Box>
             </Flex>
           </Flex> */}
-        </Box>
-      </Flex>
-    </Section>
+          </Box>
+        </Flex>
+      </Section>
+    </AnimatedBox>
   )
 }
 

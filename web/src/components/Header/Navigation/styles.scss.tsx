@@ -101,7 +101,6 @@ export const Nav = styled.nav`
       min-width: 200px;
 
       background: ${theme.colors.background};
-      border: ${theme.border};
 
       display: none;
       opacity: 0;
@@ -115,13 +114,13 @@ export const Nav = styled.nav`
 
         display: block;
         margin: 0;
-        padding: calc(${theme.space[2]} * 1.2) ${theme.space[3]};
+        padding: calc(${theme.space[1]} * 1) 0;
         white-space: nowrap;
 
         &.active,
         &:hover {
-          background: ${theme.colors.primary};
-          /* color: ${theme.colors.white}; */
+          /* background: ${theme.colors.primary}; */
+          color: ${theme.colors.primary};
         }
       }
     }

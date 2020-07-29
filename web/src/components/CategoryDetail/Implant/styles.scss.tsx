@@ -19,7 +19,7 @@ export const Resources = styled(Box)`
   h4 {
     mark {
       background-color: ${theme.colors.primary};
-      padding: ${theme.space[2]} ${theme.space[4]} ${theme.space[1]} ${theme.space[2]};
+      padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
     }
   }
 
