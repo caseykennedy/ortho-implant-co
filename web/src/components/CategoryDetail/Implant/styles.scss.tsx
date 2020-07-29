@@ -15,8 +15,12 @@ import theme from '../../../../config/theme'
 
 export const Implant = styled(Box)``
 
-export const Resources = styled(Box)`
+export const Resources = styled(Flex)`
+  flex-wrap: wrap;
+
   h4 {
+    margin-top: ${theme.space[5]};
+
     mark {
       background-color: ${theme.colors.primary};
       padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};

@@ -61,7 +61,7 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-200px 0px'
+    rootMargin: '-222px 0px'
   })
   const manifestoSpring = useSpring({
     opacity: inView ? 1 : 0,
@@ -75,23 +75,27 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
             <Gallery product={implant} />
           </Box>
           <Box width={[1, 6 / 10]} pt={[3, 4]}>
-            <Heading as="h2">{implant.shortName}</Heading>
+            <Heading as="h3">{implant.shortName}</Heading>
 
             {implant._rawDescription && (
               <BlockContent blocks={implant._rawDescription || []} />
             )}
 
             <S.Resources mt={7} mb={7}>
-              <Heading as="h4">
-                <mark>Resources:</mark>
-              </Heading>
+              <Box width={[1, 1, 1 / 3]}>
+                <Heading as="h4">
+                  <mark>Resources:</mark>
+                </Heading>
+              </Box>
 
-              {implant.resources.map((resource, idx) => (
-                <a href={resource.url} key={idx} target="_blank">
-                  {resource.title}
-                  <Icon name="pdf" />
-                </a>
-              ))}
+              <Box width={[1, 1, 2 / 3]}>
+                {implant.resources.map((resource, idx) => (
+                  <a href={resource.url} key={idx} target="_blank">
+                    {resource.title}
+                    <Icon name="pdf" />
+                  </a>
+                ))}
+              </Box>
             </S.Resources>
 
             <Accordion title="Features" {...AccordionProps}>

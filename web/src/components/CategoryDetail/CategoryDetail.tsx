@@ -69,8 +69,8 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
       {/* <PrevNext pageContext={pageContext} /> */}
 
-      <Billboard {...billboardProps} />
-      {/* <Prefooter /> */}
+      {/* <Billboard {...billboardProps} /> */}
+      <Prefooter />
     </S.CategoryDetail>
   )
 }

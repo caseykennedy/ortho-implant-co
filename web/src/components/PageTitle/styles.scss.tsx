@@ -49,7 +49,8 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
   z-index: 9;
 
   @media ${theme.mq.desktop} {
-    padding: ${theme.space[7]} ${theme.space[10]} ${theme.space[2]} ${theme.space[5]};
+    padding: ${theme.space[7]} ${theme.space[10]} ${theme.space[2]}
+      ${theme.space[5]};
     border-left: ${theme.border};
   }
 
@@ -62,8 +63,10 @@ export const Figure = styled(Box)`
   position: relative;
   width: 100%;
   background: ${theme.colors.tertiary};
+  margin-top: -${theme.space[7]};
 
   @media ${theme.mq.tablet} {
+    margin-top: 0;
   }
 
   img {
