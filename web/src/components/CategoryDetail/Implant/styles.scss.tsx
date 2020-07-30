@@ -38,8 +38,11 @@ export const Resources = styled(Flex)`
     padding: calc(${theme.space[4]} + 4px) ${theme.space[3]} ${theme.space[2]} 0;
     width: 100%;
 
+    span {
+      /* background: ${theme.colors.primary}; */
+    }
     svg {
-      fill: ${theme.colors.tertiary};
+      fill: ${theme.colors.black};
       width: ${theme.space[4]};
     }
 

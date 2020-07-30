@@ -38,6 +38,7 @@ type NotionData = {
 
 const AccordionProps = {
   chevronColor: theme.colors.text,
+  chevronWidth: '2rem',
   color: theme.colors.text,
   colorActive: theme.colors.text,
   borderColor: theme.colors.secondary,

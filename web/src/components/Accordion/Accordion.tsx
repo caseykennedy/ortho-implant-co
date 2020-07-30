@@ -6,6 +6,8 @@ import React, { useState, useRef } from 'react'
 
 import { Box, Flex, Text, Heading } from '../../elements'
 
+import Icon from '../Icons'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -96,12 +98,12 @@ const Accordion: React.FC<Props> = ({
             )}
           </S.AccordionToggleInner>
           <S.Carat
-            name="nextArrow"
-            color="white"
             className={setRotate}
             chevronColor={chevronColor}
             chevronWidth={chevronWidth}
-          />
+          >
+            <Icon name="plus" color="black" />
+          </S.Carat>
         </S.AccordionToggle>
         <S.AccordionContent
           ref={refContent}

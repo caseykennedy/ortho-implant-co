@@ -95,12 +95,15 @@ export const Nav = styled.nav`
     }
 
     .sub-nav {
+      background: ${theme.colors.background};
+      border-left: 1px solid ${theme.colors.black};
+      border-bottom: 1px solid ${theme.colors.black};
+
+      padding: ${theme.space[3]} 0 0.2rem ${theme.space[3]};
       position: absolute;
-      /* top: ${theme.space[6]}; */
+      left: -1.15rem;
       width: auto;
       min-width: 200px;
-
-      background: ${theme.colors.background};
 
       display: none;
       opacity: 0;
@@ -108,9 +111,10 @@ export const Nav = styled.nav`
 
       a {
         color: ${theme.colors.text};
+        font-family: ${theme.fonts.body};
         font-size: calc(${theme.fontSizes[1]} / 1.1);
-        text-transform: uppercase;
-        letter-spacing: 0;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
 
         display: block;
         margin: 0;
@@ -121,6 +125,7 @@ export const Nav = styled.nav`
         &:hover {
           /* background: ${theme.colors.primary}; */
           color: ${theme.colors.primary};
+          margin-left: ${theme.space[1]};
         }
       }
     }

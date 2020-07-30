@@ -6,8 +6,6 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import Icon from '../Icons'
-
 // Theme
 import theme from '../../../config/theme'
 
@@ -34,7 +32,7 @@ export const AccordionInner = styled.div`
   flex-direction: column;
 
   .rotate {
-    transform: rotate(90deg);
+    transform: rotate(45deg);
   }
 `
 
@@ -83,7 +81,7 @@ export const AccordionContent = styled(Box)`
   transition: max-height 0.3s ease;
 `
 
-export const Carat = styled(Icon)<{ chevronColor: string, chevronWidth?: string }>`
+export const Carat = styled(Box)<{ chevronColor: string, chevronWidth?: string }>`
   /* margin-right: ${theme.space[2]}; */
   transition: transform 0.3s ease;
 

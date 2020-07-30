@@ -9,10 +9,9 @@ import React from 'react'
 import IconStyle from './styles.scss'
 
 // Icons
+// TODO: alphabetize
 import Hamburger from './SVG/Hamburger'
 import Carat from './SVG/Carat'
-import Pdf from './SVG/Pdf'
-import Pin from './SVG/Pin'
 import Facebook from './SVG/Facebook'
 import LinkedIn from './SVG/LinkedIn'
 import Instagram from './SVG/Instagram'
@@ -23,6 +22,10 @@ import Download from './SVG/Download'
 
 import GridView from './SVG/GridView'
 import ListView from './SVG/ListView'
+
+import Pdf from './SVG/Pdf'
+import Plus from './SVG/Plus'
+import Pin from './SVG/Pin'
 
 // ___________________________________________________________________
 
@@ -99,6 +102,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle className="ico ico__pdf">
           <Pdf />
+        </IconStyle>
+      )
+    case 'plus':
+      return (
+        <IconStyle className="ico ico__pdf">
+          <Plus />
         </IconStyle>
       )
     case 'pin':
