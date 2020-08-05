@@ -80,6 +80,12 @@ export const Figure = styled(Box)`
   margin-top: 0;
   position: relative;
   width: 100%;
+  background: ${theme.colors.primary};
+  max-height: 600px;
+
+  img {
+    /* mix-blend-mode: luminosity; */
+  }
 
   @media ${theme.mq.tablet} {
     margin-top: -${theme.space[8]};

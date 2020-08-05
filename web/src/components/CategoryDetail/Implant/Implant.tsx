@@ -61,15 +61,15 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-222px 0px'
+    rootMargin: '-40% 0px'
   })
   const manifestoSpring = useSpring({
     opacity: inView ? 1 : 0,
     transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
   return (
-    <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
-      <Section bg="white" border={true}>
+    <Section bg="white" border={true}>
+      <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
         <Flex flexWrap="wrap">
           <Box width={[1, 4 / 10]} pr={[0, 8]}>
             <Gallery product={implant} />
@@ -139,8 +139,8 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
           </Flex> */}
           </Box>
         </Flex>
-      </Section>
-    </AnimatedBox>
+      </AnimatedBox>
+    </Section>
   )
 }
 

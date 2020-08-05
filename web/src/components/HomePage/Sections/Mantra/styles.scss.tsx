@@ -18,7 +18,7 @@ export const Panel = styled.div`
   z-index: 99;
 
   img {
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   /* .content {

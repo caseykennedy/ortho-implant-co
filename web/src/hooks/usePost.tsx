@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const usePost = () => {
   const data = useStaticQuery<PostShape>(graphql`
     query PostQuery {
-      posts: allSanityPost {
+      posts: allSanityPost(sort: { order: DESC, fields: publishedAt }) {
         edges {
           node {
             title

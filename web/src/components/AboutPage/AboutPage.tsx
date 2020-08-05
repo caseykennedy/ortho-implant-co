@@ -23,7 +23,7 @@ const billboardProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
-  src: 'operating-room.jpg',
+  src: 'nail-tips.png',
   altText: 'Doctors in the operating room.'
 }
 

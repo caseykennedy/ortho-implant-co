@@ -51,7 +51,7 @@ const Mantra = () => {
   // console.log(query)
   return (
     <>
-      <Section bg="primary" color="text" overflow="visible">
+      <Section bg="quinary" color="text" overflow="visible">
         <S.Panel>
           <Box width={[1, 1, 1 / 2]}>
             {query.image && (
@@ -82,7 +82,7 @@ const Mantra = () => {
                 <BlockContent blocks={query._rawMessage || []} />
               )}
               <Box mb={[-5, -7]}>
-                <Button to={`/${query.linkTo}`} invert={true}>
+                <Button to={`/${query.linkTo}`}>
                   {query.linkTitle}
                 </Button>
               </Box>

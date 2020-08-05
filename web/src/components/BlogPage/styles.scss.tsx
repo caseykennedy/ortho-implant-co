@@ -28,7 +28,7 @@ export const BlogPage = styled(Flex)`
     height: 100%;
 
     &:hover {
-      background: ${theme.colors.quinary};
+      background: ${theme.colors.primary};
     }
   }
 
@@ -76,7 +76,7 @@ export const Card = styled(Flex)`
       overflow: hidden;
       width: 75%;
       padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
-      mix-blend-mode: luminosity;
+      /* mix-blend-mode: luminosity; */
       transition: ${theme.transition.all};
     }
 

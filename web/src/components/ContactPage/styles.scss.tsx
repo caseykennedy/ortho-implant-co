@@ -17,6 +17,14 @@ export const ContactPage = styled(Flex)`
   @media ${theme.mq.tablet} {
   }
 
+  a {
+    color: ${theme.colors.text};
+
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+  }
+
   .map {
     background: ${theme.colors.quinary};
     min-height: 40vh;

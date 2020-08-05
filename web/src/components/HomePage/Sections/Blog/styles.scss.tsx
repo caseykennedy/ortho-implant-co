@@ -79,10 +79,18 @@ export const CardHolder = styled(Flex)`
   width: 100%;
 
   a {
+    display: flex;
+    justify-content: stretch;
     color: ${theme.colors.text};
 
-    &.card--highlight {
-      &:first-child {
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+
+    &:first-child {
+      &.card--highlight div {
         background: ${theme.colors.secondary};
         color: ${theme.colors.white};
       }
@@ -101,6 +109,8 @@ export const CardHolder = styled(Flex)`
     }
 
     .swiper-wrapper {
+      padding-bottom: 4px;
+
       .swiper-slide {
         transition: ${theme.transition.all};
         

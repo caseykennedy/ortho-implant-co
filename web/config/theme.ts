@@ -150,13 +150,13 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  // Base
-  // ___________________________________________________________________
-
   maxWidth: '1680px',
   siteWidth: '100vw',
   logoWidth: '225px',
   headerHeight: '180px',
+
+  // Base
+  // ___________________________________________________________________
 
   grid: {
     gap: '0.5rem'
