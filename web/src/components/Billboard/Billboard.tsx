@@ -26,6 +26,7 @@ type Props = {
   invert?: boolean
   message?: string
   title?: string
+  to: string
   src?: string
 }
 
@@ -37,6 +38,7 @@ const Intro: React.FC<Props> = ({
   invert,
   message,
   title,
+  to,
   src
 }) => {
   return (
@@ -48,14 +50,16 @@ const Intro: React.FC<Props> = ({
       )}
 
       <div className="cta">
-        <Button to={`/implants`} invert={!invert ? undefined : invert}>
+        <Button to={to} invert={!invert ? undefined : invert}>
           {btnText}
         </Button>
       </div>
 
       <S.BillboardInner color={color}>
-        <Link to="/">
-          <h4>{title}</h4>
+        <Link to={to}>
+          <h4>
+            <mark>{title}</mark>
+          </h4>
 
           {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
         </Link>
@@ -77,7 +81,8 @@ const defaultProps = {
   btnText: 'Talk to us',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
-  color: 'white'
+  color: 'white',
+  to: '/'
 }
 
 Intro.defaultProps = defaultProps

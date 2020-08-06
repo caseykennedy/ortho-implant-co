@@ -80,9 +80,10 @@ const Blog = () => {
   )
 
   return (
-    <Section bg="white" color="text">
-      <Heading as="h4">What's Happening</Heading>
-
+    <Box bg="white" color="text">
+      {/* <Box p={theme.gutter.axis}>
+        <Heading as="h4">What's Happening</Heading>
+      </Box> */}
       <S.CardHolder width={1}>
         <Box width={[1, '47%', '65%']}>
           <Swipe>
@@ -92,7 +93,19 @@ const Blog = () => {
                 key={idx}
                 className="card--highlight"
               >
-                <S.Card width={[1, 1 / 2, 1]} border={true} mb={'-2px'}>
+                <S.Card width={[1, 1 / 2, 1]} border={true} className="card">
+                  <Box className="card__img">
+                    {post.mainImage && (
+                      <Img
+                        fluid={post.mainImage.asset.fluid}
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                        alt={post.title}
+                        className="article__img"
+                      />
+                    )}
+                  </Box>
+
                   <Flex className="card__content">
                     <Box>
                       <Heading as="h5">{post.categories[0].title}</Heading>
@@ -102,24 +115,13 @@ const Blog = () => {
                       )}
                       <br />
                     </Box>
-                    <Box className="card__image">
-                      {post.mainImage && (
-                        <Img
-                          fluid={post.mainImage.asset.fluid}
-                          objectFit="cover"
-                          objectPosition="50% 50%"
-                          alt={post.title}
-                          className="article__img"
-                        />
-                      )}
-                    </Box>
-                    <Text as="p" className="card__meta  t--uppercase">
-                      <Text as="span" color="tertiary">
-                        {post.publishedAt}
-                      </Text>
-                      <Icon name="nextArrow" />
-                    </Text>
                   </Flex>
+
+                  <Text as="p" className="card__meta  t--uppercase">
+                    <Text as="span">{post.publishedAt}</Text>
+                    read more
+                    <Icon name="nextArrow" />
+                  </Text>
                 </S.Card>
               </Link>
             ))}
@@ -161,26 +163,27 @@ const Blog = () => {
           ))}
         </S.CardColumn> */}
 
-        <S.CardColumn width={[1, 1, '30%']}>
+        <S.CardColumn width={[1, 1, '35%']}>
           {blogPosts.slice(4, 6).map(({ node: post }, idx) => (
             <Link
               to={`/blog/${post.slug.current}`}
               key={idx}
               className="card--highlight"
             >
-              <S.Card width={[1, 1 / 2, 1]} border={true} mb={'-2px'}>
+              <S.Card width={[1, 1 / 2, 1]} border={true} className="card">
                 <Flex className="card__content">
                   <Box>
-                    <Heading as="h5" mb={7}>{post.categories[0].title}</Heading>
+                    <Heading as="h5" mb={7}>
+                      {post.categories[0].title}
+                    </Heading>
                     <Heading as="h3">{post.title}</Heading>
                   </Box>
-                  <Text as="p" className="card__meta  t--uppercase">
-                    <Text as="span" color="tertiary">
-                      {post.publishedAt}
-                    </Text>
-                    <Icon name="nextArrow" />
-                  </Text>
                 </Flex>
+                <Text as="p" className="card__meta  t--uppercase">
+                  <Text as="span">{post.publishedAt}</Text>
+                  read more
+                  <Icon name="nextArrow" />
+                </Text>
               </S.Card>
             </Link>
           ))}
@@ -202,7 +205,7 @@ const Blog = () => {
           </S.Card> */}
         </S.CardColumn>
       </S.CardHolder>
-    </Section>
+    </Box>
   )
 }
 

@@ -9,20 +9,33 @@ import { Box, Flex } from '../../../../elements'
 // ___________________________________________________________________
 
 export const Card = styled(Flex)<{ border?: boolean }>`
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: stretch;
+
   /* background: ${theme.colors.white}; */
-  border: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border-right: ${p =>
+    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   @media ${theme.mq.tablet} {
   }
 
   .card {
-
-    &__image {
-      max-height: 333px;
+    &__img {
+      max-height: 200px;
+      height: 200px;
       overflow: hidden;
       width: 75%;
-      /* padding:  ${theme.space[3]} 0 0 ${theme.space[3]}; */
+      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
+      /* mix-blend-mode: luminosity; */
+      transition: ${theme.transition.all};
+
+      &--small {
+        max-height: 40px;
+        img {
+          max-height: 40px;
+        }
+      }
     }
 
     &__content {
@@ -30,12 +43,14 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       flex-direction: column;
       justify-content: space-between;
       padding:  ${theme.space[5]};
+      background: transparent;
+      width: 100%;
 
       @media ${theme.mq.tablet} {
       }
 
       h3 {
-        font-size: calc(${theme.fontSizes[1]} * 2);
+        font-size: ${theme.fontSizes[3]};
         font-weight: 400;
         /* text-transform: uppercase; */
         margin-top: ${theme.space[7]};
@@ -47,27 +62,29 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       }
 
       p {
-        font-size: calc(${theme.fontSizes[1]} * 1);
+        /* font-size: calc(${theme.fontSizes[1]} * 1); */
       }
+    }
+  }
 
-      .card__meta {
-        display: flex;
-        justify-content: space-between;
-        margin-top: ${theme.space[5]};
-        
-        font-size: calc(${theme.fontSizes[1]} / 1.15);
-        font-family: ${theme.fonts.code};
+  .card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: ${theme.space[5]};
+    padding:  0 ${theme.space[5]} ${theme.space[5]};
+    width: 100%;
+    
+    font-size: calc(${theme.fontSizes[1]} / 1.15);
+    font-family: ${theme.fonts.code};
 
-        span {
-          transition: ${theme.transition.all};
+    span {
+      transition: ${theme.transition.all};
 
-          svg {
-            width: 24px;
-            /* fill: ${theme.colors.text}; */
-          }
-        }
+      svg {
+        width: 24px;
+        /* fill: ${theme.colors.text}; */
       }
-      
     }
   }
 `
@@ -83,16 +100,27 @@ export const CardHolder = styled(Flex)`
     justify-content: stretch;
     color: ${theme.colors.text};
 
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
+    &:first-child {
+      &.card--highlight {
+        background: ${theme.colors.primary};
+        color: ${theme.colors.text};
+      }
     }
 
-    &:first-child {
-      &.card--highlight div {
-        background: ${theme.colors.secondary};
-        color: ${theme.colors.white};
+    &:last-child {
+      background: ${theme.colors.secondary};
+      color: ${theme.colors.white};
+
+      svg {
+        fill: ${theme.colors.white};
+      }
+    }
+
+    &:hover {
+      svg {
+        position: relative;
+        right: -1rem;
+        transition: ${theme.transition.all};
       }
     }
   }
@@ -109,7 +137,7 @@ export const CardHolder = styled(Flex)`
     }
 
     .swiper-wrapper {
-      padding-bottom: 4px;
+      /* padding-bottom: 2px; */
 
       .swiper-slide {
         transition: ${theme.transition.all};
@@ -143,25 +171,51 @@ export const CardHolder = styled(Flex)`
         }
       }
     }
-  }Î
-
+  }
 `
 
 export const CardColumn = styled(Flex)`
-  flex-direction: column;
-  /* justify-content: space-between; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
   margin-bottom: ${theme.space[5]};
 
   @media ${theme.mq.desktop} {
     margin-bottom: 0;
   }
 
-  div {
+  a {
+    width: 100%;
+    
+    &:first-child {
+      &.card--highlight div {
+        background: ${theme.colors.quinary};
+        /* color: ${theme.colors.white}; */
+      }
+    }
+
+    .card {
+      &:last-child {
+        border-right: none;
+      }
+    
+      &:last-child {
+        background: ${theme.colors.white};
+        color: ${theme.colors.text};
+
+        svg {
+          fill: ${theme.colors.text};
+        }
+      }
+    }
+  }
+
+  /* div {
     margin-top: ${theme.space[5]};
     width: 100%;
 
     &:first-child {
       margin-top: 0;
     }
-  }
+  } */
 `

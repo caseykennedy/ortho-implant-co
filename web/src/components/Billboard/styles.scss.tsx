@@ -32,6 +32,8 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
     color: ${p => (!p.color ? theme.colors.text : p.color)};
 
     h3 {
+      font-size: calc(${theme.fontSizes[4]} * 1.15);
+      font-weight: 400;
       text-transform: uppercase;
       margin-top: ${theme.space[10]};
       margin-bottom: 0;
@@ -42,6 +44,14 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
 
       @media ${theme.mq.desktop} {
         margin-top: ${theme.space[13]};
+      }
+    }
+
+    h4 {
+      mark {
+        background-color: ${theme.colors.white};
+        color: ${theme.colors.black};
+        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
       }
     }
   }

@@ -77,6 +77,26 @@ type CategoryShape = {
   }
 }
 
+type CategoryontextShape = {
+  pageContext: {
+    page: CategoryNode
+    prev: {
+      _id: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+    next: {
+      _id: string
+      title: string
+      slug: {
+        current: string
+      }
+    }
+  }
+}
+
 // Product shape
 // ___________________________________________________________________
 

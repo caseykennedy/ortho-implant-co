@@ -21,7 +21,7 @@ const Navigation = () => {
           {!item.link ? (
             <span className="nav-link__title">
               {item.name}
-              {item.subPage && <Icon name="carat" />}
+              {/* {item.subPage && <Icon name="carat" />} */}
             </span>
           ) : (
             <Link
@@ -68,7 +68,6 @@ const data = [
   },
   {
     name: 'implants',
-    link: '/implants',
     subPage: [
       {
         name: 'External Fixation',
@@ -93,7 +92,7 @@ const data = [
     ]
   },
   {
-    name: 'blog',
+    name: 'news',
     link: '/blog'
   },
   {

@@ -20,11 +20,12 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: 'primary',
+  bg: theme.colors.tertiary,
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
-  src: 'nail-tips.png',
-  altText: 'Doctors in the operating room.'
+  src: 'screws.jpg',
+  altText: 'Doctors in the operating room.',
+  to: '/contact'
 }
 
 const AboutPage = () => {

@@ -32,6 +32,7 @@ const Footer: React.FC = () => {
       </S.Decorator>
       <S.Footer as="footer">
         <S.Nav as="nav">
+          <Link to="/">Home</Link>
           <Link to="/rethink">Rethink</Link>
           <Link to="/about">About OIC</Link>
           <Link to="/implants">Implants</Link>

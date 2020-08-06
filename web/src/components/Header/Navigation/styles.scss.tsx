@@ -89,6 +89,7 @@ export const Nav = styled.nav`
         svg {
           transform: rotate(90deg);
           width: 8px;
+          margin-top: -${theme.space[1]};
           margin-left: ${theme.space[2]};
         }
       }
@@ -118,7 +119,7 @@ export const Nav = styled.nav`
 
         display: block;
         margin: 0;
-        padding: calc(${theme.space[1]} * 1) 0;
+        padding: calc(${theme.space[1]} / 2) 0;
         white-space: nowrap;
 
         &.active,

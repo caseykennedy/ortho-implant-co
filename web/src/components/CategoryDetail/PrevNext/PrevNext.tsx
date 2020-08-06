@@ -17,7 +17,7 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const PrevNext: React.FC<ProductContextShape> = ({ pageContext }) => {
+const PrevNext: React.FC<CategoryontextShape> = ({ pageContext }) => {
   const page = pageContext.page
   const prev = pageContext.prev
   const next = pageContext.next
@@ -27,7 +27,7 @@ const PrevNext: React.FC<ProductContextShape> = ({ pageContext }) => {
   return (
     <S.PrevNext width={1}>
       {!prev ? (
-        <S.Button to="/implants">All implants</S.Button>
+        <S.Button to="/" />
       ) : (
         <S.Button to={`/implants/${prev.slug.current}`}>
           <Flex className="button__title">
@@ -37,14 +37,14 @@ const PrevNext: React.FC<ProductContextShape> = ({ pageContext }) => {
             </span>
           </Flex>
 
-          {prev.shortName}
+          {prev.title}
         </S.Button>
       )}
       {!next ? (
         <S.Button to="/implants">All implants</S.Button>
       ) : (
         <S.Button to={`/implants/${next.slug.current}`}>
-          {next.shortName}
+          {next.title}
           <Flex className="button__title button__title--next">
             next
             <span>

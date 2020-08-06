@@ -27,6 +27,7 @@ import * as S from './styles.scss'
 const TestiSwiper: React.FC = ({ children }) => {
   const params = {
     freeMode: false,
+    // effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 50,
     pagination: {
@@ -117,8 +118,8 @@ const Reviews = () => {
       <Section bg="secondary" color="white" pt={8} pb={10} border={false}>
         <Box>
           <TestiSwiper>
-            {query.reviews.map(review => (
-              <Box key={review.position}>
+            {query.reviews.map((review, idx) => (
+              <Box key={idx}>
                 <Heading as="h5" mb={0} fontWeight={500}>
                   {review.position}
                 </Heading>

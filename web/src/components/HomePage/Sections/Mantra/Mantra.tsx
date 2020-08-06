@@ -82,14 +82,17 @@ const Mantra = () => {
                 <BlockContent blocks={query._rawMessage || []} />
               )}
               <Box mb={[-5, -7]}>
-                <Button to={`/${query.linkTo}`}>
-                  {query.linkTitle}
-                </Button>
+                <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
               </Box>
             </Box>
           </Flex>
         </S.Panel>
       </Section>
+      {/* <Section bg="quinary" color="text" overflow="visible" pt={9} pb={10}>
+        <Text as="p" fontSize={'1.5rem'} fontWeight={400} textAlign="center" px={10}>
+          We believe that the way that orthopaedic implants are priced and supplied is flawed to the detriment of everyone. Our purpose is to rethink and change that system.
+        </Text>
+      </Section> */}
     </>
   )
 }

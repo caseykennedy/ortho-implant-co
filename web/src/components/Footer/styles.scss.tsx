@@ -26,12 +26,16 @@ export const Nav = styled(Flex)`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+
   margin-bottom: ${theme.space[5]};
+  position: relative;
   width: 100%;
+  z-index: 999;
 
   @media ${theme.mq.desktop} {
     flex-direction: row;
     width: 55%;
+    top: -${theme.space[5]};
   }
 
   a {
@@ -148,6 +152,7 @@ export const Decorator = styled(Flex)`
     flex: 1;
     margin-top: -40px;
     background: ${theme.colors.secondary};
+    border-top: 2px solid #333;
 
     @media ${theme.mq.tablet} {
       margin-top: -60px;

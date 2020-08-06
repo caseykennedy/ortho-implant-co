@@ -52,53 +52,42 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
     // }
   }
   return (
-    <Swiper {...params}>
-      {panels.map(panel => (
-        <S.Panel key={panel.title}>
-          <Flex width={[1, 1 / 2]} p={theme.gutter.axis} className="content">
-            <div>
-              <Heading
-                as="h3"
-                fontSize={[5, 5, `calc(${theme.fontSizes[5]} * 1.2)`]}
-                lineHeight={1}
-                mb={0}
-                ml={-1}
-                style={{ textTransform: 'uppercase' }}
-              >
-                {panel.tag}
-              </Heading>
-              <Heading as="h4" fontSize={3} mt={-3} mb={0}>
-                <Box as="span">For</Box> {panel.title}
-              </Heading>
-            </div>
-            <div>
-              {panel._rawMessage && (
-                <BlockContent blocks={panel._rawMessage || []} />
-              )}
-              {/* <Box mb={[-5, -7]}>
-                <Button to={`/${panel.linkTo}`} invert={true}>
-                  {panel.linkTitle}
-                </Button>
-              </Box> */}
-            </div>
-          </Flex>
-          <Box
-            width={[1, 1 / 2]}
-            m={[5, 0, 0]}
-            style={{ maxHeight: '75vh', overflow: 'hidden' }}
-          >
-            {panel.image && (
-              <Img
-                fluid={panel.image.asset.fluid}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={`Affordable Implants for ${panel.title}`}
-              />
+    <>
+      {panels.map((panel, idx) => (
+        <Box width={[1, 1 / 2]} mb={7} className="content" key={idx}>
+          <div>
+            <Heading as="h3" mb={1}>{panel.tag}</Heading>
+            <Heading as="h4">
+              <Box as="span">For</Box> {panel.title}
+            </Heading>
+          </div>
+          <div>
+            {panel._rawMessage && (
+              <BlockContent blocks={panel._rawMessage || []} />
             )}
-          </Box>
-        </S.Panel>
+            {/* <Box mb={[-5, -7]}>
+            <Button to={`/${panel.linkTo}`} invert={true}>
+              {panel.linkTitle}
+            </Button>
+          </Box> */}
+          </div>
+          {/* <Box
+        width={[1, 1 / 2]}
+        m={[5, 0, 0]}
+        style={{ maxHeight: '75vh', overflow: 'hidden' }}
+      >
+        {panel.image && (
+          <Img
+            fluid={panel.image.asset.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt={`Affordable Implants for ${panel.title}`}
+          />
+        )}
+      </Box> */}
+        </Box>
       ))}
-    </Swiper>
+    </>
   )
 }
 
@@ -151,9 +140,7 @@ const Rethink = () => {
         </Heading>
       </Box>
       <S.Learn width={1} mt={12}>
-        {/* <TabsPanel panels={query.tabPanels} /> */}
-        <Box py={13} />
-        <Box py={10} />
+        <TabsPanel panels={query.tabPanels} />
       </S.Learn>
       <S.Decorator>
         <Hexagons />

@@ -9,6 +9,7 @@ import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import BlockContent from '../BlockContent'
 import Implant from './Implant'
+import PrevNext from './PrevNext'
 
 // Hooks
 import useProduct from '../../hooks/useProduct'
@@ -24,13 +25,14 @@ import Prefooter from '../Footer/Prefooter'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: theme.colors.primary,
-  btnText: 'See our implants',
+  bg: theme.colors.black,
+  btnText: 'Mantra',
   color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
   invert: false,
-  src: 'operating-room.jpg',
+  to: '/contact',
+  src: 'sports.jpg',
   altText: 'Doctors in the operating room.'
 }
 
@@ -67,10 +69,10 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
       {/* {implant.videoURL && <Video src={implant.videoURL} />} */}
 
-      {/* <PrevNext pageContext={pageContext} /> */}
+      <PrevNext pageContext={pageContext} />
 
-      {/* <Billboard {...billboardProps} /> */}
-      <Prefooter />
+      <Billboard {...billboardProps} />
+      {/* <Prefooter /> */}
     </S.CategoryDetail>
   )
 }
