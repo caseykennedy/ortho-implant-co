@@ -12,7 +12,6 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 export const HomePage = styled(Box)`
-  flex-wrap: wrap;
   width: 100%;
   background: ${theme.colors.secondary};
 

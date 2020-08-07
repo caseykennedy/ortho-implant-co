@@ -11,6 +11,8 @@ import { Box, Flex } from '../../../../elements'
 const pixelHeight = '200px'
 
 export const Reviews = styled(Box)`
+  border-top: ${theme.border};
+  
   p {
     line-height: 1.4;
   }

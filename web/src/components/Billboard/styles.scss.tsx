@@ -33,7 +33,7 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
 
     h3 {
       font-size: calc(${theme.fontSizes[4]} * 1.15);
-      font-weight: 400;
+      font-weight: 500;
       text-transform: uppercase;
       margin-top: ${theme.space[10]};
       margin-bottom: 0;

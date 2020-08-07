@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // Libraries
@@ -16,78 +16,42 @@ import Button from '../../../../elements/Button'
 import Hexagons from '../../../Hexagons'
 
 // Theme
-import { Box, Flex, Heading } from '../../../../elements'
+import { Box, Flex, Heading, Text } from '../../../../elements'
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
 const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
-  const Titles = () => {
-    return (
-      <span>
-        {panels.map((tab, idx) => (
-          <p key={idx}>{tab.title}</p>
-        ))}
-      </span>
-    )
-  }
-  // Swiper paramaters
-  const params = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    effect: 'fade',
-    slidesPerView: 1,
-    spaceBetween: 0,
-    freeMode: true
-    // autoplay: {
-    //   delay: 8000,
-    //   disableOnInteraction: true
-    // }
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // }
-  }
+  const [values, setValues] = useState(panels[0])
+
   return (
-    <>
-      {panels.map((panel, idx) => (
-        <Box width={[1, 1 / 2]} mb={7} className="content" key={idx}>
-          <div>
-            <Heading as="h3" mb={1}>{panel.tag}</Heading>
-            <Heading as="h4">
-              <Box as="span">For</Box> {panel.title}
-            </Heading>
-          </div>
-          <div>
+    <Flex alignItems="center" width={1}>
+      <S.ButtonGroup>
+        {panels.map((panel, idx) => (
+          <S.Tab
+            key={idx}
+            active={values === panel}
+            onClick={() => setValues(panel)}
+          >
+            <Heading as="h4">{panel.title}</Heading>
             {panel._rawMessage && (
               <BlockContent blocks={panel._rawMessage || []} />
             )}
-            {/* <Box mb={[-5, -7]}>
-            <Button to={`/${panel.linkTo}`} invert={true}>
-              {panel.linkTitle}
-            </Button>
-          </Box> */}
-          </div>
-          {/* <Box
-        width={[1, 1 / 2]}
-        m={[5, 0, 0]}
-        style={{ maxHeight: '75vh', overflow: 'hidden' }}
-      >
-        {panel.image && (
-          <Img
-            fluid={panel.image.asset.fluid}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt={`Affordable Implants for ${panel.title}`}
-          />
-        )}
-      </Box> */}
-        </Box>
-      ))}
-    </>
+          </S.Tab>
+        ))}
+        {/* <Box width={1 / 6}>
+          {values && (
+            <Img
+              fluid={values.image.asset.fluid}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={`Affordable Implants for`}
+            />
+          )}
+        </Box> */}
+      </S.ButtonGroup>
+    </Flex>
   )
 }
 
@@ -127,25 +91,25 @@ const Rethink = () => {
   // console.log('---_- Rethink -_---')
   // console.log(query)
   return (
-    <Section overflow="hidden" bg="background">
-      <Box className="cta">
-        <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
+    <S.Rethink bg="background" style={{ position: 'relative', zIndex: 99 }}>
+      <Box width={[1, 1 / 2]} className="rethink__message">
+        <div className="sticky">
+          <Heading as="h5" color="tertiary">
+            {query.title}
+          </Heading>
+          <Heading as="h2" fontSize={3}>
+            {query.heading}
+          </Heading>
+          {/* <S.Decorator>
+          <Hexagons />
+        </S.Decorator> */}
+        </div>
       </Box>
-      <Box width={[1, 1 / 2]} mt={[8, 0]}>
-        <Heading as="h5" color="tertiary">
-          {query.title}
-        </Heading>
-        <Heading as="h2" fontSize={3}>
-          {query.heading}
-        </Heading>
-      </Box>
-      <S.Learn width={1} mt={12}>
+
+      <Box width={[1, 1 / 2]} className="rethink__values">
         <TabsPanel panels={query.tabPanels} />
-      </S.Learn>
-      <S.Decorator>
-        <Hexagons />
-      </S.Decorator>
-    </Section>
+      </Box>
+    </S.Rethink>
   )
 }
 

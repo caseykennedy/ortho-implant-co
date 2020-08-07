@@ -28,7 +28,8 @@ const billboardProps = {
   title: 'Mantra',
   invert: false,
   src: 'nail.jpg',
-  altText: 'Doctors in the operating room.'
+  altText: 'Doctors in the operating room.',
+  to: '/'
 }
 
 const RethinkPage = () => {
@@ -47,7 +48,7 @@ const RethinkPage = () => {
       <Approach />
       <Purpose />
       <Rethink />
-      <Section border={true}>
+      {/* <Section border={true}>
         <Box py={7} width={[1, 2 / 3, 1 / 2]}>
           <Heading as="h4" color="primary">
             good for all
@@ -63,7 +64,7 @@ const RethinkPage = () => {
             into a better system, one that will actually be good for all.
           </Text>
         </Box>
-      </Section>
+      </Section> */}
       <Billboard {...billboardProps} />
     </S.RethinkPage>
   )

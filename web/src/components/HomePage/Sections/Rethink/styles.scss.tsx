@@ -8,10 +8,36 @@ import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
+export const Rethink = styled(Flex)`
+  flex-wrap: wrap;
+
+  .rethink {
+    &__message {
+
+      border-top: ${theme.border};
+      padding: ${theme.space[5]};
+
+      position: sticky;
+      top: 0;
+
+      @media ${theme.mq.tablet} {
+        border-right: ${theme.border};
+        padding: ${theme.space[7]};
+      }
+    }
+
+    &__values {
+    }
+  }
+
+  .sticky {
+    position: sticky;
+    top: ${theme.space[7]};
+  }
+`
+
 export const Learn = styled(Box)`
   div {
-    border-bottom: none !important;
-
     ul {
       li button {
         font-family: ${theme.fonts.heading};
@@ -97,3 +123,34 @@ export const Decorator = styled(Flex)`
   svg {
   }
 `
+
+export const Tab = styled(Box)<{ active?: any }>`
+  border-top: ${theme.border};
+  cursor: pointer;
+  display: block;
+  /* opacity: 0.5; */
+  padding: ${theme.space[5]};
+
+  ${({ active }) =>
+    active &&
+    `
+    opacity: 1;
+  `}
+
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[7]};
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  h4 {
+    font-size: calc(${theme.fontSizes[2]} * 1.5);
+    margin-bottom: ${theme.space[8]};
+  }
+
+  
+`
+
+export const ButtonGroup = styled(Box)``
