@@ -10,10 +10,12 @@ import Implants from './Sections/Implants'
 import Reviews from './Sections/Reviews'
 import Mantra from './Sections/Mantra'
 import Blog from './Sections/Blog'
+
 import Prefooter from '../Footer/Prefooter'
 import Billboard from '../Billboard'
+import Section from '../Section'
 
-import { Box, Flex, Heading } from '../../elements'
+import { Box, Flex, Heading, Text } from '../../elements'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
@@ -36,17 +38,21 @@ const HomePage: React.FC = () => {
     <S.HomePage>
       <Hero />
       <Rethink />
-      {/* <Box bg="black" py={8} /> */}
-      {/* <Implants /> */}
+      <Implants />
       <Reviews />
       <Mantra />
+
+      <Section bg="quinary" border={true}>
+        <Text as="p">
+          In the news
+        </Text>
+      </Section>
+
       <Blog />
-      {/* <Box bg="black" py={8} /> */}
-      
+
       {/* <Prefooter /> */}
 
       <Billboard {...billboardProps} />
-      {/* <Box bg="black" py={7} /> */}
     </S.HomePage>
   )
 }

@@ -55,10 +55,10 @@ const Implants = () => {
     }
   }
   return (
-    <Section bg="background" color="white" overflow="hidden">
-      <Box className="cta">
+    <Section bg="black" color="white" overflow="hidden" border={true}>
+      {/* <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
-      </Box>
+      </Box> */}
       <Box width={[1, 1 / 2]} mt={[8, 0]}>
         <Heading as="h5" color="primary" fontWeight={500}>
           Implants

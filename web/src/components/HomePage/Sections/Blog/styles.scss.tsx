@@ -102,17 +102,17 @@ export const CardHolder = styled(Flex)`
 
     &:first-child {
       &.card--highlight {
-        background: ${theme.colors.primary};
+        /* background: ${theme.colors.primary}; */
         color: ${theme.colors.text};
       }
     }
 
     &:last-child {
-      background: ${theme.colors.secondary};
-      color: ${theme.colors.white};
+      /* background: ${theme.colors.secondary}; */
+      /* color: ${theme.colors.white}; */
 
       svg {
-        fill: ${theme.colors.white};
+        /* fill: ${theme.colors.white}; */
       }
     }
 
@@ -189,7 +189,7 @@ export const CardColumn = styled(Flex)`
     
     &:first-child {
       &.card--highlight div {
-        background: ${theme.colors.quinary};
+        /* background: ${theme.colors.quinary}; */
         /* color: ${theme.colors.white}; */
       }
     }
@@ -200,11 +200,9 @@ export const CardColumn = styled(Flex)`
       }
     
       &:last-child {
-        background: ${theme.colors.white};
-        color: ${theme.colors.text};
+        background: ${theme.colors.quinary};
 
         svg {
-          fill: ${theme.colors.text};
         }
       }
     }

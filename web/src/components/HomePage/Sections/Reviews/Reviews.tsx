@@ -115,7 +115,7 @@ const Reviews = () => {
           />
         </Box>
       </Box>
-      <Section bg="secondary" color="white" pt={8} pb={10} border={false}>
+      <Section bg="secondary" color="white" pt={8} pb={7} border={false}>
         <Box>
           <TestiSwiper>
             {query.reviews.map((review, idx) => (

@@ -13,7 +13,7 @@ export const Panel = styled.div`
   flex-wrap: wrap;
   
   position: relative;
-  margin-top: calc(${theme.space[7]} * -2);
+  /* margin-top: calc(${theme.space[7]} * -2); */
   background: ${theme.colors.white};  
   z-index: 99;
 
