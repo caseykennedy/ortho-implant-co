@@ -10,6 +10,8 @@ import Swiper from 'react-id-swiper'
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
 import Button from '../../../../elements/Button'
+import Icon from '../../../Icons'
+import ImgMatch from '../../../ImgMatch'
 
 import { Box, Flex, Heading, Text } from '../../../../elements'
 import theme from '../../../../../config/theme'
@@ -60,7 +62,10 @@ const Implants = () => {
     }
   }
   return (
-    <>
+    <div style={{ position: 'relative' }}>
+    <S.Decorator>
+      <ImgMatch src="sports.jpg" altText="Running up stairs" />
+    </S.Decorator>
       <Section color="white" border={true}>
         {/* <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
@@ -79,17 +84,20 @@ const Implants = () => {
         <Swiper {...params}>
           {Products.map(product => (
             <S.Card key={product.category}>
-              <Heading as="h3" fontSize={3}>
-                {product.category}
-              </Heading>
-              <Text as="h4" mb={0}>
-                VIEW ALL
+              <Flex className="card__content">
+                <Heading as="h3">{product.category}</Heading>
+              </Flex>
+
+              <Text as="p" className="card__meta  t--uppercase">
+                <Text as="span">see all</Text>
+
+                <Icon name="nextArrow" />
               </Text>
             </S.Card>
           ))}
         </Swiper>
       </S.Carousel>
-    </>
+    </div>
   )
 }
 
