@@ -74,26 +74,29 @@ export const Card = styled(Flex)`
   justify-content: space-between;
 
   background: ${theme.colors.quinary};
-  min-height: 400px;
 
   color: ${theme.colors.text};
   text-transform: uppercase;
 
+  transition: ${theme.transition.all};
+
+  &:hover {
+    background: ${theme.colors.primary};
+
+    img {
+      mix-blend-mode: normal;
+    }
+  }
+
   .card {
     &__img {
-      max-height: 200px;
-      height: 200px;
-      overflow: hidden;
-      width: 75%;
+      width: 80%;
       padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
       /* mix-blend-mode: luminosity; */
       transition: ${theme.transition.all};
 
-      &--small {
-        max-height: 40px;
-        img {
-          max-height: 40px;
-        }
+      img {
+        mix-blend-mode: luminosity;
       }
     }
 
@@ -104,12 +107,13 @@ export const Card = styled(Flex)`
       padding:  ${theme.space[5]};
       background: transparent;
       width: 75%;
+      min-height: calc(${theme.space[3]} * 14);
 
       @media ${theme.mq.tablet} {
       }
 
       h3 {
-        font-size: ${theme.fontSizes[4]};
+        font-size: ${theme.fontSizes[3]};
         /* font-weight: 400; */
         /* text-transform: uppercase; */
         margin-bottom: ${theme.space[5]};
@@ -156,7 +160,6 @@ export const Decorator = styled(Box)`
   opacity: 0.35;
 
   .img {
-    
     img {
       mix-blend-mode: luminosity;
     }

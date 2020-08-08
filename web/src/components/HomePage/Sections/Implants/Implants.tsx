@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import Swiper from 'react-id-swiper'
 
@@ -12,6 +12,8 @@ import Section from '../../../Section'
 import Button from '../../../../elements/Button'
 import Icon from '../../../Icons'
 import ImgMatch from '../../../ImgMatch'
+
+import useCategory from '../../../../hooks/useCategory'
 
 import { Box, Flex, Heading, Text } from '../../../../elements'
 import theme from '../../../../../config/theme'
@@ -25,47 +27,51 @@ const Product = () => {
 
 // ___________________________________________________________________
 
-const Implants = () => {
-  const params = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
+const params = {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  freeMode: false,
+  slidesPerView: 2,
+  spaceBetween: 2,
+  // centeredSlides: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 2
     },
-    freeMode: false,
-    slidesPerView: 2,
-    spaceBetween: 2,
-    // centeredSlides: true,
-    breakpoints: {
-      1440: {
-        slidesPerView: 4,
-        spaceBetween: 2
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 2
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 2,
-        grabCursor: true
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 2,
-        grabCursor: true
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 2,
-        grabCursor: true
-      }
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 2
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 2,
+      grabCursor: true
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 2,
+      grabCursor: true
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 2,
+      grabCursor: true
     }
   }
+}
+
+const Implants = () => {
+  const categories = useCategory()
+  console.log(categories)
+
   return (
     <div style={{ position: 'relative' }}>
-    <S.Decorator>
-      <ImgMatch src="sports.jpg" altText="Running up stairs" />
-    </S.Decorator>
+      <S.Decorator>
+        <ImgMatch src="sports.jpg" altText="Running up stairs" />
+      </S.Decorator>
       <Section color="white" border={true}>
         {/* <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
@@ -82,18 +88,31 @@ const Implants = () => {
       </Section>
       <S.Carousel>
         <Swiper {...params}>
-          {Products.map(product => (
-            <S.Card key={product.category}>
-              <Flex className="card__content">
-                <Heading as="h3">{product.category}</Heading>
-              </Flex>
+          {categories.map(({ node: cat }, idx) => (
+            <Link to={`/implants/${cat.slug.current}`} key={idx}>
+              <S.Card>
+                <Flex className="card__content">
+                  <Heading as="h3">{cat.title}</Heading>
+                </Flex>
 
-              <Text as="p" className="card__meta  t--uppercase">
-                <Text as="span">see all</Text>
+                <Box className="card__img">
+                  {cat.image && (
+                    <Img
+                      fluid={cat.image.asset.fluid}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                      alt={cat.title}
+                    />
+                  )}
+                </Box>
 
-                <Icon name="nextArrow" />
-              </Text>
-            </S.Card>
+                <Text as="p" className="card__meta  t--uppercase">
+                  <Text as="span">see all</Text>
+
+                  <Icon name="nextArrow" />
+                </Text>
+              </S.Card>
+            </Link>
           ))}
         </Swiper>
       </S.Carousel>

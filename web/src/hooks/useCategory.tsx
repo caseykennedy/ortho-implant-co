@@ -13,8 +13,25 @@ const useCategory = () => {
       categories: allSanityProductCategory(sort: {fields: title, order: ASC}) {
         edges {
           node {
-            title
+            _id
             description
+            title
+            slug {
+              current
+            }
+            image {
+              asset {
+                fluid(maxWidth: 1080) {
+                  aspectRatio
+                  base64
+                  sizes
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                }
+              }
+            }
           }
         }
       }
