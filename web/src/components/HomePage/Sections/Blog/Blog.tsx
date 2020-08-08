@@ -40,7 +40,7 @@ const Swipe: React.FC = ({ children }) => {
     // },
     freeMode: false,
     slidesPerView: 2,
-    spaceBetween: 70,
+    spaceBetween: -2,
     // centeredSlides: true,
     breakpoints: {
       1024: {
@@ -48,13 +48,13 @@ const Swipe: React.FC = ({ children }) => {
         spaceBetween: -2
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 50,
+        slidesPerView: 1,
+        spaceBetween: -2,
         grabCursor: true
       },
       640: {
         slidesPerView: 1,
-        spaceBetween: 40,
+        spaceBetween: -2,
         grabCursor: true
       },
       320: {
@@ -85,7 +85,7 @@ const Blog = () => {
         <Heading as="h4">What's Happening</Heading>
       </Box> */}
       <S.CardHolder width={1}>
-        <Box width={[1, '47%', '65%']}>
+        <Box width={[1, 1 / 2, '65%']}>
           <Swipe>
             {newsPosts.map(({ node: post }, idx) => (
               <Link
@@ -93,7 +93,7 @@ const Blog = () => {
                 key={idx}
                 className="card--highlight"
               >
-                <S.Card width={[1, 1 / 2, 1]} border={true} className="card">
+                <S.Card width={[1, 1, 1]} border={true} className="card">
                   <Box className="card__img">
                     {post.mainImage && (
                       <Img
@@ -163,14 +163,14 @@ const Blog = () => {
           ))}
         </S.CardColumn> */}
 
-        <S.CardColumn width={[1, 1, '35%']}>
+        <S.CardColumn width={[1, 1 / 2, '35%']}>
           {blogPosts.slice(4, 6).map(({ node: post }, idx) => (
             <Link
               to={`/blog/${post.slug.current}`}
               key={idx}
               className="card--highlight"
             >
-              <S.Card width={[1, 1 / 2, 1]} border={true} className="card">
+              <S.Card width={[1, 1, 1]} border={true} className="card">
                 <Flex className="card__content">
                   <Box>
                     <Heading as="h5" mb={7}>

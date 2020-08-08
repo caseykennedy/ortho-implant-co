@@ -7,8 +7,8 @@ import React from 'react'
 import useAboutPage from '../../hooks/useAboutPage'
 
 import PageTitle from '../PageTitle'
-import Intro from './Sections/Intro'
-import Team from './Sections/Team'
+import Intro from './Intro'
+import Team from './Team'
 import Billboard from '../Billboard'
 import JobBoard from '../JobBoard'
 

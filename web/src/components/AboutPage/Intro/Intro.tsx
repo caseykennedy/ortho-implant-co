@@ -7,14 +7,14 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 
-import useHover from '../../../../hooks/useHover'
+import useHover from '../../../hooks/useHover'
 
-import Accordion from '../../../Accordion'
-import ImgMatch from '../../../ImgMatch'
+import Accordion from '../../Accordion'
+import ImgMatch from '../../ImgMatch'
 
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -117,7 +117,7 @@ const positioning = [
   },
   {
     name: 'mission',
-    src: 'microscope.jpg',
+    src: 'AdobeStock_266668857.jpg',
     content:
       'Our mission is to lower the cost of orthopaedic procedures by developing more affordable implants with the perfect balance of quality, service and price for surgeons, hospitals and patients.'
   },

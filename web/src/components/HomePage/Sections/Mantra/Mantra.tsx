@@ -53,21 +53,23 @@ const Mantra = () => {
     <>
       <Box bg="quinary" color="text">
         <S.Panel>
-          <Box width={[1, 1, 1 / 2]}>
+          <Box width={[1, 1 / 2]}>
             {query.image && (
               <Img
                 fluid={query.image.asset.fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
+                className="img"
                 alt={`Affordable Implants for ${query.title}`}
               />
             )}
           </Box>
           <Flex
-            width={[1, 1, 1 / 2]}
+            width={[1, 1 / 2]}
             p={theme.gutter.axis}
             flexDirection="column"
             justifyContent="space-between"
+            className="content"
           >
             <Box>
               <Heading as="h5" color="tertiary">

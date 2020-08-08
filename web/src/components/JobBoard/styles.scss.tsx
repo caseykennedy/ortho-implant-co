@@ -14,6 +14,7 @@ export const JobBoard = styled(Flex)`
   border-top: ${theme.border};
 
   img {
+    border-right: ${theme.border};
     mix-blend-mode: luminosity;
   }
 

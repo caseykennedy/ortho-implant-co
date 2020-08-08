@@ -3,9 +3,9 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import Section from '../../../Section'
-import theme from '../../../../../config/theme'
-import { Box, Flex } from '../../../../elements'
+import Section from '../../Section'
+import theme from '../../../../config/theme'
+import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 

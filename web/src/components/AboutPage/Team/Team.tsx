@@ -9,14 +9,14 @@ import { useTransition, useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import Swiper from 'react-id-swiper'
 
-import useHover from '../../../../hooks/useHover'
-import Section from '../../../Section'
-import Icon from '../../../Icons'
-import Overlay from '../../../Overlay'
+import useHover from '../../../hooks/useHover'
+import Section from '../../Section'
+import Icon from '../../Icons'
+import Overlay from '../../Overlay'
 
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

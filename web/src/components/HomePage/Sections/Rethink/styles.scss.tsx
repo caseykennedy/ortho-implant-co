@@ -145,6 +145,11 @@ export const Tab = styled(Box)<{ active?: any }>`
     opacity: 1;
   }
 
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: ${theme.space[8]};
+  }
+
   h4 {
     font-size: calc(${theme.fontSizes[2]} * 1.5);
     margin-bottom: ${theme.space[8]};

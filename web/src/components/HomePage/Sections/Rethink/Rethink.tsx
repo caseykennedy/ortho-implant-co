@@ -34,7 +34,8 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
             active={values === panel}
             onClick={() => setValues(panel)}
           >
-            <Heading as="h4">{panel.title}</Heading>
+            <Heading as="h4">{panel.tag} for {panel.title}</Heading>
+            {/* <Heading as="h4">For {panel.title}</Heading> */}
             {panel._rawMessage && (
               <BlockContent blocks={panel._rawMessage || []} />
             )}

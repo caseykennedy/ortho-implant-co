@@ -10,8 +10,9 @@ import { Box, Flex } from '../../../../elements'
 // ___________________________________________________________________
 
 export const Carousel = styled(Box)`
-  margin-top: ${theme.space[10]};
-  margin-bottom: ${theme.space[5]};
+  /* background: ${theme.colors.white}; */
+  /* margin-top: ${theme.space[5]}; */
+  /* margin-bottom: ${theme.space[5]}; */
   width: 100%;
 
   .swiper-container {
@@ -23,12 +24,12 @@ export const Carousel = styled(Box)`
 
     .swiper-wrapper {
       .swiper-slide {
-        background: ${theme.colors.quinary};
+        /* background: ${theme.colors.tertiary}; */
         transition: ${theme.transition.all};
 
         &:hover {
-          background: ${theme.colors.primary};
-          /* cursor: pointer; */
+          background: ${theme.colors.tertiary};
+          cursor: pointer;
         }
 
         &.swiper-slide-active {
@@ -39,7 +40,8 @@ export const Carousel = styled(Box)`
 
     .swiper-pagination {
       /* background: ${theme.colors.primary}; */
-      top: -3rem;
+      top: -${theme.space[7]};
+      left: ${theme.space[5]};
       bottom: initial;
 
       text-align: left;
@@ -60,7 +62,7 @@ export const Card = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
 
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.primary};
   padding: ${theme.space[5]};
   min-height: 400px;
 
