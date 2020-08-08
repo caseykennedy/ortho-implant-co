@@ -27,9 +27,15 @@ export const Sideboard = styled(Box)`
   text-orientation: mixed;
 
   background: ${theme.colors.secondary};
+  margin-top: -${theme.space[5]};
   padding: ${theme.space[5]} ${theme.space[3]};
   width: ${theme.logoWidth};
+  height: 95%;
   display: none;
+
+  h5 {
+    transform: rotate(180deg);
+  }
 
   @media ${theme.mq.tablet} {
     display: block;

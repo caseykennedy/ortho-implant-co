@@ -10,13 +10,18 @@ import { Box, Flex } from '../../../../elements'
 // ___________________________________________________________________
 
 export const Carousel = styled(Box)`
-  /* background: ${theme.colors.white}; */
-  /* margin-top: ${theme.space[5]}; */
-  /* margin-bottom: ${theme.space[5]}; */
+  padding-top: ${theme.space[7]};
+  padding-left: ${theme.space[5]};
+  overflow: hidden;
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    padding-left: ${theme.space[7]};
+  }
 
   .swiper-container {
     overflow: visible;
+    position: relative;
 
     .parallax-bg {
       background: yellow;
@@ -36,12 +41,18 @@ export const Carousel = styled(Box)`
           /* background: ${theme.colors.primary}; */
         }
       }
+
+      &:after {
+        content: 'drag';
+        position: relative;
+        right: 0;
+      }
     }
 
     .swiper-pagination {
       /* background: ${theme.colors.primary}; */
       top: -${theme.space[7]};
-      left: ${theme.space[5]};
+      /* left: ${theme.space[5]}; */
       bottom: initial;
 
       text-align: left;

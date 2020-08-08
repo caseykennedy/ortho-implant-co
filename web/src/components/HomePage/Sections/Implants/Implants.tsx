@@ -31,33 +31,37 @@ const Implants = () => {
     },
     freeMode: false,
     slidesPerView: 2,
-    spaceBetween: 0,
-    loop: true,
+    spaceBetween: 2,
+    // centeredSlides: true,
     breakpoints: {
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 2
+      },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 2
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 0,
+        slidesPerView: 3,
+        spaceBetween: 2,
         grabCursor: true
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 0,
+        spaceBetween: 2,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 2,
         grabCursor: true
       }
     }
   }
   return (
     <>
-      <Section color="white" overflow="hidden" border={true}>
+      <Section color="white" border={true}>
         {/* <Box className="cta">
         <Button to={`/implants`}>All Implants</Button>
       </Box> */}

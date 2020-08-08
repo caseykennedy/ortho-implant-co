@@ -39,6 +39,8 @@ const Approach = () => {
         <AnimatedBox
           bg="quinary"
           width={[1, 1 / 3]}
+          ref={manifestoRef}
+          style={manifestoSpring}
         >
           <Parallax className="custom-class" y={[-25, 15]} tagOuter="figure">
             <ImgMatch src="running-stairs.jpg" altText="Running up stairs" />
@@ -56,7 +58,8 @@ const Approach = () => {
           </Heading>
 
           <Heading as="h3" fontWeight={400}>
-            "Give me something that is different, for there is a chance of it being better..."
+            "Give me something that is different, for there is a chance of it
+            being better..."
           </Heading>
 
           <Flex width={1} mt={`calc(${theme.space[3]} * 22)`} flexWrap="wrap">

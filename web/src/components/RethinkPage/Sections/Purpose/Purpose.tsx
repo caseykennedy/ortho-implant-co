@@ -67,7 +67,7 @@ const Purpose = () => {
           </Text>
         </AnimatedBox>
 
-        <AnimatedBox width={[1, 1 / 3]}>
+        <AnimatedBox width={[1, 1 / 3]} ref={manifestoRef} style={manifestoSpring}>
           <ImgMatch
             src="AdobeStock_337125882.jpg"
             altText="Lady climbing bouldeer."
