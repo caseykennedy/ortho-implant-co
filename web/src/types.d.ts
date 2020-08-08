@@ -122,6 +122,7 @@ type ProductNode = {
   name: string
   shortName: string
   videoURL: string
+  videoURL2: string
   categories: {
     title: string
   }[]

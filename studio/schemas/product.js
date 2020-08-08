@@ -78,6 +78,11 @@ export default {
       type: 'url'
     },
     {
+      name: 'videoURL2',
+      title: 'Video URL #2',
+      type: 'url'
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'This can be used to display when the product was published.',

@@ -101,6 +101,7 @@ exports.createPages = ({ graphql, actions }) => {
             name
             shortName
             videoURL
+            videoURL2
             categories {
               title
             }

@@ -38,6 +38,7 @@ const useProduct = () => {
             name
             shortName
             videoURL
+            videoURL2
             categories {
               title
             }

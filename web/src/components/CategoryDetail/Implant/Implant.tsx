@@ -109,6 +109,11 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
             {implant.videoURL && (
               <Accordion title="Video" {...AccordionProps}>
                 <Video src={implant.videoURL} />
+                {implant.videoURL2 && (
+                  <Box mt={5}>
+                    <Video src={implant.videoURL2} />
+                  </Box>
+                )}
               </Accordion>
             )}
 
