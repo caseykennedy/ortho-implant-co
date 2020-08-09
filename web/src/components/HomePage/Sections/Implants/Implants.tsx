@@ -38,7 +38,7 @@ const params = {
   // centeredSlides: true,
   breakpoints: {
     1440: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 2
     },
     1024: {
@@ -73,9 +73,9 @@ const Implants = () => {
         <ImgMatch src="sports.jpg" altText="Running up stairs" />
       </S.Decorator>
       <Section color="white" border={true}>
-        {/* <Box className="cta">
-        <Button to={`/implants`}>All Implants</Button>
-      </Box> */}
+        <Box className="cta">
+          <Button to={`/implants`}>All Implants</Button>
+        </Box>
         <Box width={[1, 1 / 2]} mt={[8, 0]} mb={10}>
           <Heading as="h5" color="primary" fontWeight={500}>
             Implants

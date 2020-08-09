@@ -156,8 +156,9 @@ export const Decorator = styled(Box)`
   top: 0;
   left: 0;
   width: 100%;
-  background: ${theme.colors.primary};
-  opacity: 0.35;
+  background: ${theme.colors.black};
+  opacity: 0.5;
+  height: 100%;
 
   .img {
     img {
