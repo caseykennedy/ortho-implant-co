@@ -123,7 +123,7 @@ const Rethink = () => {
           className="t--uppercase"
         >
           {/* {query.title} */}
-          <Box as="span" color="tertiary">
+          <Box as="span" color="text">
             we need to
           </Box>{' '}
           rethink

@@ -55,10 +55,8 @@ const Purpose = () => {
           </Heading>
 
           <Heading as="h3" fontWeight={400}>
-            <Box as="span" color="tertiary">
-              World-class
-            </Box>{' '}
-            orthopaedic implants and technology <em>are</em> affordable.
+            World-class orthopaedic implants and technology <em>are</em>{' '}
+            affordable.
           </Heading>
 
           <Text as="p">
@@ -67,7 +65,11 @@ const Purpose = () => {
           </Text>
         </AnimatedBox>
 
-        <AnimatedBox width={[1, 1 / 3]} ref={manifestoRef} style={manifestoSpring}>
+        <AnimatedBox
+          width={[1, 1 / 3]}
+          ref={manifestoRef}
+          style={manifestoSpring}
+        >
           <ImgMatch
             src="AdobeStock_337125882.jpg"
             altText="Lady climbing bouldeer."
