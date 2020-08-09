@@ -61,7 +61,7 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-40% 0px'
+    rootMargin: '-25% 0px'
   })
   const manifestoSpring = useSpring({
     opacity: inView ? 1 : 0,

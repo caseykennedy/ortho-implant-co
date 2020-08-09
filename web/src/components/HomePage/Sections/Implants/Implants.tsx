@@ -121,21 +121,3 @@ const Implants = () => {
 }
 
 export default Implants
-
-const Products = [
-  {
-    category: 'hip fractures'
-  },
-  {
-    category: 'plates and screws'
-  },
-  {
-    category: 'external fixation'
-  },
-  {
-    category: 'im nails'
-  },
-  {
-    category: 'sports'
-  }
-]

@@ -73,7 +73,7 @@ export const Card = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
 
-  background: ${theme.colors.quinary};
+  background: ${theme.colors.primary};
 
   color: ${theme.colors.text};
   text-transform: uppercase;
@@ -81,7 +81,7 @@ export const Card = styled(Flex)`
   transition: ${theme.transition.all};
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.tertiary};
 
     img {
       mix-blend-mode: normal;
