@@ -126,7 +126,7 @@ export const Decorator = styled(Flex)`
 
 export const Tab = styled(Box)<{ active?: any }>`
   border-top: ${theme.border};
-  cursor: pointer;
+  /* cursor: pointer; */
   display: block;
   /* opacity: 0.5; */
   padding: ${theme.space[5]};
@@ -143,6 +143,7 @@ export const Tab = styled(Box)<{ active?: any }>`
 
   &:hover {
     opacity: 1;
+    background: ${theme.colors.primary};
   }
 
   h3 {

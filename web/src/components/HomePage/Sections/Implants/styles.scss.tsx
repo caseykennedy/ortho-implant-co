@@ -81,7 +81,7 @@ export const Card = styled(Flex)`
   transition: ${theme.transition.all};
 
   &:hover {
-    background: ${theme.colors.tertiary};
+    background: ${theme.colors.white};
 
     img {
       mix-blend-mode: normal;

@@ -63,6 +63,10 @@ const Purpose = () => {
             OIC is a purpose-driven, forward-thinking company determined to
             change the way implants are manufactured and priced.
           </Text>
+
+          <Text as="p">
+            We do not compromise. Not now. Not ever.
+          </Text>
         </AnimatedBox>
 
         <AnimatedBox
