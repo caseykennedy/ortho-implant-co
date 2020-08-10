@@ -5,6 +5,7 @@
 import styled from 'styled-components'
 import theme from '../../../../../config/theme'
 import { Box, Flex } from '../../../../elements'
+import { darken } from 'polished'
 
 // ___________________________________________________________________
 
@@ -117,10 +118,16 @@ export const CardHolder = styled(Flex)`
       }
     }
 
+    svg {
+      transition: ${theme.transition.all};
+    }
+
     &:hover {
+      background: ${theme.colors.quinary};
+
       svg {
         position: relative;
-        right: -1rem;
+        margin-right: -1rem;
         transition: ${theme.transition.all};
       }
     }

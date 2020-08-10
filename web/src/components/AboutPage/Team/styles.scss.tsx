@@ -86,7 +86,7 @@ export const CardHolder = styled(Box)`
         /* height: auto; */ /* For equal slide height */
 
         &:hover {
-          background: ${theme.colors.primary};
+          background: ${theme.colors.quinary};
           cursor: pointer;
         }
 

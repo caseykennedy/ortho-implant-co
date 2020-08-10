@@ -40,26 +40,26 @@ const Swipe: React.FC = ({ children }) => {
     // },
     freeMode: false,
     slidesPerView: 2,
-    spaceBetween: -2,
+    spaceBetween: 0,
     // centeredSlides: true,
     breakpoints: {
       1024: {
         slidesPerView: 2,
-        spaceBetween: -2
+        spaceBetween: 0
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: -2,
+        spaceBetween: 0,
         grabCursor: true
       },
       640: {
         slidesPerView: 1,
-        spaceBetween: -2,
+        spaceBetween: 0,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: -2,
+        spaceBetween: 0,
         grabCursor: true
       }
     }

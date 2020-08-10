@@ -143,7 +143,7 @@ export const Tab = styled(Box)<{ active?: any }>`
 
   &:hover {
     opacity: 1;
-    background: ${theme.colors.primary};
+    background: ${theme.colors.quinary};
   }
 
   h3 {

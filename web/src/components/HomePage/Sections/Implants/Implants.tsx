@@ -73,9 +73,9 @@ const Implants = () => {
         <ImgMatch src="sports.jpg" altText="Running up stairs" />
       </S.Decorator>
       <Section color="white" border={true}>
-        <Box className="cta">
+        {/* <Box className="cta">
           <Button to={`/implants`}>All Implants</Button>
-        </Box>
+        </Box> */}
         <Box width={[1, 1 / 2]} mt={[8, 0]} mb={10}>
           <Heading as="h5" color="primary" fontWeight={500}>
             Implants

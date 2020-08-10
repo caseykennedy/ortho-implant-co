@@ -43,9 +43,9 @@ const HomePage: React.FC = () => {
       <Mantra />
 
       <Section bg="quinary" border={true}>
-        <Text as="p">
+        <Heading as="h4" mb={0}>
           In the news
-        </Text>
+        </Heading>
       </Section>
 
       <Blog />

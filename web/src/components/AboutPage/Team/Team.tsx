@@ -68,7 +68,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
 }) => {
   const data: PeopleShape = useStaticQuery(graphql`
     query PeopleQuery {
-      people: allSanityPerson {
+      people: allSanityPerson(sort: { fields: name, order: ASC }) {
         edges {
           node {
             _rawBio
@@ -82,7 +82,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             }
             headshot {
               asset {
-                fluid(maxWidth: 1080) {
+                fluid(maxWidth: 400) {
                   ...GatsbySanityImageFluid
                 }
               }
