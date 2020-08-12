@@ -1,4 +1,4 @@
-// Reviews Section:
+// Testimonials Section:
 
 // ___________________________________________________________________
 
@@ -62,7 +62,7 @@ const TestiSwiper: React.FC = ({ children }) => {
   return <Swiper {...params}>{children}</Swiper>
 }
 
-const Reviews = () => {
+const Testimonials = () => {
   const data = useHomePage()
 
   const decoratorProps = {
@@ -72,12 +72,12 @@ const Reviews = () => {
     fillD: theme.colors.tertiary
   }
   return (
-    <S.Reviews>
-      {/* <S.Decorator>
+    <S.Testimonials>
+      <S.Decorator>
         <div className="pixels">
           <Pixels {...decoratorProps} />
         </div>
-      </S.Decorator> */}
+      </S.Decorator>
       <Box bg="tertiary">
         <Box>
           <Img
@@ -99,7 +99,7 @@ const Reviews = () => {
                 <Heading as="h5" color="primary" fontWeight={500}>
                   {review.location}
                 </Heading>
-                <Text fontSize={3} fontWeight={300}>
+                <Text fontSize={[`1.5rem`, 3]} fontWeight={300}>
                   {review._rawQuote && (
                     <BlockContent blocks={review._rawQuote || []} />
                   )}
@@ -109,8 +109,8 @@ const Reviews = () => {
           </TestiSwiper>
         </Box>
       </Section>
-    </S.Reviews>
+    </S.Testimonials>
   )
 }
 
-export default Reviews
+export default Testimonials

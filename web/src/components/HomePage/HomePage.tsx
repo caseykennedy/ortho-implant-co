@@ -10,7 +10,7 @@ import useHomePage from '../../hooks/useHomePage'
 import Rethink from './Sections/Rethink'
 import Hero from './Sections/Hero'
 import Implants from './Sections/Implants'
-import Reviews from './Sections/Reviews'
+import Testimonials from './Sections/Testimonials'
 import Mantra from './Sections/Mantra'
 import Blog from './Sections/Blog'
 
@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <Rethink />
       <Implants />
-      <Reviews />
+      <Testimonials />
       {/* <Mantra /> */}
 
       <Section bg="quinary" border={true}>

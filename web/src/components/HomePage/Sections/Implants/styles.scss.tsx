@@ -12,8 +12,37 @@ import { Box, Flex } from '../../../../elements'
 export const Categories = styled(Box)`
   a {
     color: ${theme.colors.white};
-    font-size: ${theme.fontSizes[4]};
+    font-size: ${theme.fontSizes[3]};
     display: block;
+    /* border-bottom: 1px solid ${theme.colors.tertiary}; */
+  }
+
+  .tip {
+    color: white;
+    font-size: 3rem;
+
+    position: absolute;
+    padding-left: ${theme.space[7]};
+    top: 0;
+    right: 0;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, 32);
+    transition: ${theme.transition.all};
+
+    /* mix-blend-mode: lighten; */
+
+    box-shadow: ${theme.space[10]} ${theme.space[7]} ${theme.space[10]} black;
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
   }
 `
 
@@ -162,15 +191,19 @@ export const Card = styled(Flex)`
 export const Decorator = styled(Box)`
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
-  background: ${theme.colors.black};
   opacity: 0.5;
   height: 100%;
+  z-index: 0;
 
-  .img {
+  @media ${theme.mq.tablet} {
+    width: 50%;
+  }
+
+  /* .img {
     img {
       mix-blend-mode: luminosity;
     }
-  }
+  } */
 `

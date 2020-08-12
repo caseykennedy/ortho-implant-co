@@ -1,4 +1,4 @@
-// Reviews Styles:
+// Testimonials Styles:
 
 // ___________________________________________________________________
 
@@ -10,7 +10,7 @@ import { Box, Flex } from '../../../../elements'
 
 const pixelHeight = '200px'
 
-export const Reviews = styled(Box)`
+export const Testimonials = styled(Box)`
   border-top: ${theme.border};
   
   p {

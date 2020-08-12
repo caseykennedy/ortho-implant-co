@@ -164,7 +164,7 @@ const Blog = () => {
         </S.CardColumn> */}
 
         <S.CardColumn width={[1, 1 / 2, '35%']}>
-          {blogPosts.slice(4, 6).map(({ node: post }, idx) => (
+          {blogPosts.slice(2, 4).map(({ node: post }, idx) => (
             <Link
               to={`/blog/${post.slug.current}`}
               key={idx}

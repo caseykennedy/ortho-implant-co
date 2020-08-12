@@ -34,6 +34,11 @@ export default {
         hotspot: true
       }
     },
+    {
+      name: 'illustration',
+      title: 'Illustration',
+      type: 'mainImage',
+    },
   ],
   liveEdit: false
 }

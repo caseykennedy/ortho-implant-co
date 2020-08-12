@@ -5,12 +5,16 @@
 import React, { useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
+
+// Libraries
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Parallax } from 'react-scroll-parallax'
 
+// Components
 import ImgMatch from '../../../ImgMatch'
 
+// UI + Styles
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
 import theme from '../../../../../config/theme'
