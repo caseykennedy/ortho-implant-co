@@ -27,7 +27,7 @@ type Props = {
   message?: string
   title?: string
   to: string
-  src?: string
+  src?: object
 }
 
 const Intro: React.FC<Props> = ({
@@ -43,9 +43,16 @@ const Intro: React.FC<Props> = ({
 }) => {
   return (
     <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
-      {src && altText && (
+      {src && (
         <S.Figure>
-          <ImgMatch src={src} altText={altText} />
+          {/* <ImgMatch src={src} altText={altText} /> */}
+          <Img
+            fluid={src}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt={altText}
+            className="img"
+          />
         </S.Figure>
       )}
 

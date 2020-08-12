@@ -11,6 +11,18 @@ type Props = {
   aboutPage: {
     edges: {
       node: {
+        billboard: {
+          title: string
+          message: string
+          linkTo: string
+          linkTitle: string
+          figure: {
+            asset: {
+              fluid: ImageShape
+              title: string
+            }
+          }
+        }
         pageTitle: {
           image: {
             asset: {
@@ -32,10 +44,24 @@ const useAboutPage = () => {
       aboutPage: allSanityAboutPage {
         edges {
           node {
+            billboard {
+              title
+              message
+              linkTo
+              linkTitle
+              figure {
+                asset {
+                  fluid(maxWidth: 1440) {
+                    ...GatsbySanityImageFluid
+                  }
+                  title
+                }
+              }
+            }
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 1440) {
                     ...GatsbySanityImageFluid
                   }
                 }

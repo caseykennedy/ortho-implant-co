@@ -69,7 +69,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
       {/* {implant.videoURL && <Video src={implant.videoURL} />} */}
 
-      <PrevNext pageContext={pageContext} />
+      {/* <PrevNext pageContext={pageContext} /> */}
 
       <Billboard {...billboardProps} />
       {/* <Prefooter /> */}

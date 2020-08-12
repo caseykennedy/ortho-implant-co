@@ -286,6 +286,11 @@ const Typography = css`
     }
   }
 
+  mark {
+    background-color: ${theme.colors.primary};
+    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[0]} ${theme.space[2]};
+  }
+
   .t--link {
     position: relative;
 

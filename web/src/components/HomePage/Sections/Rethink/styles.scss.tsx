@@ -17,12 +17,11 @@ export const Rethink = styled(Flex)`
       border-top: ${theme.border};
       padding: ${theme.space[5]};
 
-      position: sticky;
-      top: 0;
-
       @media ${theme.mq.tablet} {
         border-right: ${theme.border};
         padding: ${theme.space[7]};
+        position: sticky;
+        top: 0;
       }
     }
 
@@ -143,7 +142,7 @@ export const Tab = styled(Box)<{ active?: any }>`
 
   &:hover {
     opacity: 1;
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.primary};
   }
 
   h3 {

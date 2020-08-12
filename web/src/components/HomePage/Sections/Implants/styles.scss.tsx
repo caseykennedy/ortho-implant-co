@@ -9,6 +9,14 @@ import { Box, Flex } from '../../../../elements'
 
 // ___________________________________________________________________
 
+export const Categories = styled(Box)`
+  a {
+    color: ${theme.colors.white};
+    font-size: ${theme.fontSizes[4]};
+    display: block;
+  }
+`
+
 export const Carousel = styled(Box)`
   padding-top: ${theme.space[7]};
   padding-left: ${theme.space[5]};
@@ -73,7 +81,7 @@ export const Card = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
 
-  background: ${theme.colors.primary};
+  background: ${theme.colors.white};
 
   color: ${theme.colors.text};
   text-transform: uppercase;
@@ -81,7 +89,7 @@ export const Card = styled(Flex)`
   transition: ${theme.transition.all};
 
   &:hover {
-    background: ${theme.colors.white};
+    background: ${theme.colors.primary};
 
     img {
       mix-blend-mode: normal;

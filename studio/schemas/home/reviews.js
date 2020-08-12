@@ -10,7 +10,7 @@ export default {
       name: 'reviews',
       title: 'Reviews',
       type: 'array',
-      of: [{type: 'review'}]
+      of: [{type: 'testimonial'}]
     },
     {
       name: 'image',

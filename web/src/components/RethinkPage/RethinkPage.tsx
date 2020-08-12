@@ -20,27 +20,28 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-const billboardProps = {
-  bg: theme.colors.black,
-  btnText: 'See our implants',
-  color: theme.colors.white,
-  message: 'we make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
-  invert: false,
-  src: 'nail.jpg',
-  altText: 'Doctors in the operating room.',
-  to: '/'
-}
-
 const RethinkPage = () => {
   const page = useRethinkPage()
   // console.log('Rethink Page')
   // console.log(page)
+
+  // Page Title
   const pageTitle = {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.fluid,
     message: `Rethink<br /><span style="color:#9D9FA2;">orthopaedic implants</span>`,
     title: page.pageTitle.title
+  }
+
+  // Billboard
+  const billboardProps = {
+    bg: theme.colors.tertiary,
+    message: page.billboard.message,
+    title: page.billboard.title,
+    src: page.billboard.figure.asset.fluid,
+    altText: page.billboard.figure.asset.title,
+    btnText: page.billboard.linkTitle,
+    to: page.billboard.linkTo
   }
   return (
     <S.RethinkPage>

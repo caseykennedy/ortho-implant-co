@@ -17,5 +17,10 @@ export default {
       type: 'array',
       of: [{type: 'notion'}]
     },
+    {
+      name: 'billboard',
+      title: 'Billboard',
+      type: 'billboard'
+    },
   ]
 }

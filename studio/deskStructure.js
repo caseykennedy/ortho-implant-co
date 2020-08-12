@@ -31,67 +31,18 @@ export default () =>
       // Home page
       // _________________________________________________________________
 
+     
+
+      // Rethink page
+      // _________________________________________________________________
+
       S.listItem()
         .title("Home Page")
         .child(
-          S.list()
-            .title("Sections")
-            .items([
-              // Hero
-              S.listItem()
-                .title("Hero")
-                .child(
-                  S.editor()
-                    .id("homeHero")
-                    .schemaType("homeHero")
-                    .documentId("homeHero")
-                )
-                .icon(MdViewDay),
-
-              // Rethink
-              S.listItem()
-                .title("Rethink")
-                .child(
-                  S.editor()
-                    .id("homeRethink")
-                    .schemaType("homeRethink")
-                    .documentId("homeRethink")
-                )
-                .icon(MdViewDay),
-
-              // Implants
-              S.listItem()
-                .title("Implants")
-                .child(
-                  S.editor()
-                    .id("homeImplants")
-                    .schemaType("homeImplants")
-                    .documentId("homeImplants")
-                )
-                .icon(MdViewDay),
-
-              // Reviews
-              S.listItem()
-                .title("Reviews")
-                .child(
-                  S.editor()
-                    .id("homeReviews")
-                    .schemaType("homeReviews")
-                    .documentId("homeReviews")
-                )
-                .icon(MdViewDay),
-
-              // Mantra
-              S.listItem()
-                .title("Mantra")
-                .child(
-                  S.editor()
-                    .id("homeMantra")
-                    .schemaType("homeMantra")
-                    .documentId("homeMantra")
-                )
-                .icon(MdViewDay)
-            ])
+          S.editor()
+            .id("homePage")
+            .schemaType("homePage")
+            .documentId("homePage")
         )
         .icon(MdFolder),
 

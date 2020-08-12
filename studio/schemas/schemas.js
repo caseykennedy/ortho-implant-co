@@ -5,11 +5,13 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
+import billboard from './billboard'
 import blockContent from './blockContent'
 import blockText from './blockText'
 import postCategory from './postCategory'
 import productCategory from './productCategory'
 import productResources from './productResources'
+import homePage from './homePage'
 import figure from './figure'
 import jobPost from './jobPost'
 import mainImage from './mainImage'
@@ -19,7 +21,7 @@ import person from './person'
 import post from './post'
 import product from './product'
 import rethinkTabs from './rethinkTabs'
-import review from './review'
+import testimonial from './testimonial'
 import siteSettings from './siteSettings'
 
 import homeImplants from './home/implants'
@@ -44,6 +46,7 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
+    billboard,
     figure,
     jobPost,
     mainImage,
@@ -56,17 +59,15 @@ export default createSchema({
     productCategory,
     productResources,
     rethinkTabs,
-    review,
+    testimonial,
     siteSettings,
 
-    homeHero,
-    homeImplants,
     homeRethink,
     homeReviews,
     homeMantra,
 
+    homePage,
     aboutPage,
-
     rethinkPage,
     
     //////////////////////// REMOVE

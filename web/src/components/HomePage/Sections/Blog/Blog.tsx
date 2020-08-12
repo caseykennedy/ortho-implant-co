@@ -85,7 +85,7 @@ const Blog = () => {
         <Heading as="h4">What's Happening</Heading>
       </Box> */}
       <S.CardHolder width={1}>
-        <Box width={[1, 1 / 2, '65%']}>
+        <Flex width={[1, 1 / 2, '65%']}>
           <Swipe>
             {newsPosts.map(({ node: post }, idx) => (
               <Link
@@ -126,7 +126,7 @@ const Blog = () => {
               </Link>
             ))}
           </Swipe>
-        </Box>
+        </Flex>
 
         {/* <S.CardColumn width={[1, '47%', '30%']}>
           {posts.slice(4, 5).map(({ node: post }, idx) => (
@@ -177,6 +177,9 @@ const Blog = () => {
                       {post.categories[0].title}
                     </Heading>
                     <Heading as="h3">{post.title}</Heading>
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
+                    )}
                   </Box>
                 </Flex>
                 <Text as="p" className="card__meta  t--uppercase">

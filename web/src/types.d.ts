@@ -265,7 +265,7 @@ type RethinkPanelShape = {
       }
     }
   }
-  _rawMessage: string
+  _rawMessage: object
 }[]
 
 // Reviews section shape

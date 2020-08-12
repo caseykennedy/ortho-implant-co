@@ -6,6 +6,9 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
+// Hooks
+import useHomePage from '../../../../hooks/useHomePage'
+
 // Libraries
 import Swiper from 'react-id-swiper'
 
@@ -60,38 +63,8 @@ const TestiSwiper: React.FC = ({ children }) => {
 }
 
 const Reviews = () => {
-  const data: ReviewsSectionQueryShape = useStaticQuery(graphql`
-    query ReviewsSectionQuery {
-      allSanityHomeReviews {
-        edges {
-          node {
-            image {
-              asset {
-                fluid(maxWidth: 1080) {
-                  src
-                  aspectRatio
-                  base64
-                  sizes
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-            }
-            reviews {
-              _rawQuote
-              location
-              position
-            }
-            _key
-          }
-        }
-      }
-    }
-  `)
-  const query = data.allSanityHomeReviews.edges[0].node
-  // console.log('---_- Reviews -_---')
-  // console.log(query)
+  const data = useHomePage()
+
   const decoratorProps = {
     fillA: theme.colors.primary,
     fillB: theme.colors.secondary,
@@ -108,7 +81,7 @@ const Reviews = () => {
       <Box bg="tertiary">
         <Box>
           <Img
-            fluid={query.image.asset.fluid}
+            fluid={data.testimonialsFigure.asset.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
             alt="Healthy people jogging in the mountains."
@@ -118,7 +91,7 @@ const Reviews = () => {
       <Section bg="secondary" color="white" pt={8} pb={7} border={false}>
         <Box>
           <TestiSwiper>
-            {query.reviews.map((review, idx) => (
+            {data.testimonials.map((review, idx) => (
               <Box key={idx}>
                 <Heading as="h5" mb={0} fontWeight={500}>
                   {review.position}

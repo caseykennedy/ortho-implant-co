@@ -4,6 +4,9 @@
 
 import React from 'react'
 
+// Hooks
+import useHomePage from '../../hooks/useHomePage'
+
 import Rethink from './Sections/Rethink'
 import Hero from './Sections/Hero'
 import Implants from './Sections/Implants'
@@ -21,30 +24,30 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-const billboardProps = {
-  bg: theme.colors.tertiary,
-  // btnText: 'See our implants',
-  to: '/contact',
-  color: theme.colors.white,
-  message: "Let's schedule<br />a one-to-one",
-  title: 'Ready to chat?',
-  invert: false,
-  src: 'sports.jpg',
-  altText: 'Doctors in the operating room.'
-}
-
 const HomePage: React.FC = () => {
+  const data = useHomePage()
+
+  // Billboard
+  const billboardProps = {
+    bg: theme.colors.tertiary,
+    message: data.billboard.message,
+    title: data.billboard.title,
+    src: data.billboard.figure.asset.fluid,
+    altText: data.billboard.figure.asset.title,
+    btnText: data.billboard.linkTitle,
+    to: data.billboard.linkTo
+  }
   return (
     <S.HomePage>
       <Hero />
       <Rethink />
       <Implants />
       <Reviews />
-      <Mantra />
+      {/* <Mantra /> */}
 
       <Section bg="quinary" border={true}>
         <Heading as="h4" mb={0}>
-          In the news
+          <mark>In the news</mark>
         </Heading>
       </Section>
 

@@ -8,6 +8,8 @@ import { useSpring, config } from 'react-spring'
 import Img from 'gatsby-image/withIEPolyfill'
 import { Parallax } from 'react-scroll-parallax'
 
+import useHomePage from '../../../../hooks/useHomePage'
+
 import * as S from './styles.scss'
 import { Box, Flex, AnimatedBox, Heading } from '../../../../elements'
 import theme from '../../../../../config/theme'
@@ -15,35 +17,8 @@ import theme from '../../../../../config/theme'
 // ___________________________________________________________________
 
 const Hero = () => {
-  const data: HomeHeroQueryShape = useStaticQuery(graphql`
-    query HomeHeroQuery {
-      allSanityHomeHero {
-        nodes {
-          hero {
-            title
-            message
-            image {
-              asset {
-                fluid(maxWidth: 1080) {
-                  src
-                  aspectRatio
-                  base64
-                  sizes
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
-              }
-            }
-            link
-          }
-        }
-      }
-    }
-  `)
-  const query = data.allSanityHomeHero.nodes[0].hero
-  // console.log('---_- Hero -_---')
-  // console.log(query)
+  const data = useHomePage()
+
   const fadeAnimation = useSpring({
     config: config.molasses,
     delay: 260,
@@ -54,7 +29,7 @@ const Hero = () => {
     <>
       <S.Hero>
         <S.Sideboard>
-          <Heading as="h5">{query.title}</Heading>
+          <Heading as="h5">{data.hero.title}</Heading>
         </S.Sideboard>
         <S.Billboard>
           <AnimatedBox style={fadeAnimation}>
@@ -64,7 +39,7 @@ const Hero = () => {
             <Heading
               as="h1"
               mb={0}
-              dangerouslySetInnerHTML={{ __html: query.message }}
+              dangerouslySetInnerHTML={{ __html: data.hero.message }}
             />
           </AnimatedBox>
         </S.Billboard>
@@ -72,10 +47,10 @@ const Hero = () => {
       <Parallax y={[-9, 17]}>
         <S.Figure>
           <Img
-            fluid={query.image.asset.fluid}
+            fluid={data.hero.image.asset.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
-            alt={query.message}
+            alt={data.hero.message}
           />
         </S.Figure>
       </Parallax>

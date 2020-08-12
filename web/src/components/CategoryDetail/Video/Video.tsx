@@ -25,7 +25,7 @@ const Video: React.FC<Props> = ({ src }) => {
     <S.Video>
       <ResponsiveEmbed
         src={src}
-        allowfullscreen={true}
+        allowFullScreen={true}
       />
     </S.Video>
   )

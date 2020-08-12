@@ -34,7 +34,9 @@ const PageTitle: React.FC<Props> = ({ altText, border, image, message, title }) 
   return (
     <>
       <S.PageTitle image={image}>
-        {/* <S.Sideboard border={border} /> */}
+        {/* <S.Sideboard>
+          <Heading as="h5">Orthopaedic Implant Co.</Heading>
+        </S.Sideboard> */}
 
         <S.Billboard border={border}>
           <AnimatedBox style={fadeAnimation}>

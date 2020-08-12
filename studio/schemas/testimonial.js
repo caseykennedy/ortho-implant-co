@@ -1,8 +1,8 @@
 import { MdContacts } from "react-icons/md";
 
 export default {
-  name: 'review',
-  title: 'Review',
+  name: 'testimonial',
+  title: 'Testimonial',
   type: 'document',
   icon: MdContacts,
   liveEdit: false,
