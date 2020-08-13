@@ -95,9 +95,9 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
     }
   `)
   const persons = data.people.edges
-  const boardMembers = persons.filter(person => person.node.boardMember)
-  const staffMembers = persons.filter(person => !person.node.boardMember)
-  const humanStaff = staffMembers.filter(
+  // const boardMembers = persons.filter(person => person.node.boardMember)
+  const nonBoard = persons.filter(person => !person.node.boardMember)
+  const humanStaff = nonBoard.filter(
     person => person.node.name !== 'Ortho Bot'
   )
 
@@ -106,11 +106,11 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   // const toggleModal = () => setNavOpen(!isNavOpen)
 
   // Only show item when in view
-  const [manifestoRef, inView] = useInView({
+  const [interRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: '-100px 0px'
   })
-  const manifestoSpring = useSpring({
+  const interSpring = useSpring({
     opacity: inView ? 1 : 0,
     transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
@@ -128,24 +128,10 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
         asdf
       </Overlay> */}
 
-      <AnimatedBox style={manifestoSpring} ref={manifestoRef}>
-        <Heading as="p" mb={[5, 7]}>
-          Board of Directors
-        </Heading>
-        <Grid
-          columns={`repeat(auto-fit, minmax(300px, 1fr))`}
-          gap={theme.space[5]}
-        >
-          {boardMembers.map(({ node: person }, idx) => (
-            <People person={person} key={idx} />
-          ))}
-        </Grid>
-      </AnimatedBox>
-
-      <AnimatedBox style={manifestoSpring} ref={manifestoRef}>
-        <Heading as="p" my={[5, 7]}>
+      <AnimatedBox style={interSpring} ref={interRef}>
+        {/* <Heading as="p" my={[5, 7]}>
           Crew
-        </Heading>
+        </Heading> */}
         <Grid
           columns={`repeat(auto-fit, minmax(300px, 1fr))`}
           gap={theme.space[5]}
