@@ -5,9 +5,13 @@
 import React, { useState, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
+
+// Libraries
 import { useTransition, useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import Swiper from 'react-id-swiper'
+
+import { Grid, Cell } from 'styled-css-grid'
 
 import useHover from '../../../hooks/useHover'
 import Section from '../../Section'
@@ -36,7 +40,7 @@ type PeopleShape = {
 const TeamSwiper: React.FC = ({ children }) => {
   const params = {
     freeMode: false,
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     breakpoints: {
       1024: {
@@ -82,7 +86,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             }
             headshot {
               asset {
-                fluid(maxWidth: 400) {
+                fluid(maxWidth: 600) {
                   ...GatsbySanityImageFluid
                 }
               }
@@ -95,7 +99,9 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   const people = data.people.edges
   const boardMembers = people.filter(person => person.node.boardMember)
   const staffMembers = people.filter(person => !person.node.boardMember)
-  const humanStaff = staffMembers.filter(person => person.node.name !== 'Ortho Bot')
+  const humanStaff = staffMembers.filter(
+    person => person.node.name !== 'Ortho Bot'
+  )
 
   // console.log('—————|— Human —|—————')
   // console.log(humanStaff)
@@ -130,71 +136,85 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
         Board of Directors
       </Heading>
 
-      <TeamSwiper>
+      <Grid
+        columns={`repeat(auto-fit, minmax(300px, 1fr))`}
+        gap={theme.space[5]}
+      >
         {boardMembers.map(({ node: person }, idx) => (
-          // <TeamMate key={idx} person={person} />
-          <S.Card key={idx} onClick={toggleModal} aria-label="toggle team bio">
-            <Box width={[7 / 10]} className="card__headshot">
-              {person.headshot && (
-                <Img
-                  fluid={person.headshot.asset.fluid}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={person.name}
-                />
-              )}
-            </Box>
-
-            <div className="card__content">
-              <Box mt={3}>
-                <Heading as="h4">{person.name}</Heading>
-                <Text as="h5" className="t--small">
-                  {person.jobTitle}
-                </Text>
+          <Cell key={idx}>
+            {/* <TeamMate key={idx} person={person} /> */}
+            <S.Card
+              onClick={toggleModal}
+              aria-label="read bio"
+            >
+              <Box width={[7 / 10]} className="card__headshot">
+                {person.headshot && (
+                  <Img
+                    fluid={person.headshot.asset.fluid}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt={person.name}
+                  />
+                )}
               </Box>
 
-              <Text as="p" mt={8} className="card__meta  t--uppercase">
-                read bio
-                <Icon name="nextArrow" />
-              </Text>
-            </div>
-          </S.Card>
+              <div className="card__content">
+                <Box mt={3}>
+                  <Heading as="h4">{person.name}</Heading>
+                  <Text as="h5" className="t--small">
+                    {person.jobTitle}
+                  </Text>
+                </Box>
+
+                <Text as="p" mt={8} className="card__meta  t--uppercase">
+                  read bio
+                  <Icon name="nextArrow" />
+                </Text>
+              </div>
+            </S.Card>
+          </Cell>
         ))}
-      </TeamSwiper>
+      </Grid>
 
       <Heading as="p" my={[5, 7]}>
-        Team
+        Crew
       </Heading>
-      <TeamSwiper>
-        {humanStaff.map(({ node: person }, idx) => (
-          <S.Card key={idx}>
-            <Box width={[7 / 10]} className="card__headshot">
-              {person.headshot && (
-                <Img
-                  fluid={person.headshot.asset.fluid}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={person.name}
-                />
-              )}
-            </Box>
 
-            <div className="card__content">
-              <Box mt={3}>
-                <Heading as="h4">{person.name}</Heading>
-                <Text as="h5" className="t--small">
-                  {person.jobTitle}
-                </Text>
+      <Grid
+        columns={`repeat(auto-fit, minmax(300px, 1fr))`}
+        gap={theme.space[3]}
+      >
+        {humanStaff.map(({ node: person }, idx) => (
+          <Cell key={idx}>
+            <S.Card>
+              <Box width={[7 / 10]} className="card__headshot">
+                {person.headshot && (
+                  <Img
+                    fluid={person.headshot.asset.fluid}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt={person.name}
+                  />
+                )}
               </Box>
 
-              <Text as="span" mt={8} className="card__meta  t--uppercase">
-                read bio
-                <Icon name="nextArrow" />
-              </Text>
-            </div>
-          </S.Card>
+              <div className="card__content">
+                <Box mt={3}>
+                  <Heading as="h4">{person.name}</Heading>
+                  <Text as="h5" className="t--small">
+                    {person.jobTitle}
+                  </Text>
+                </Box>
+
+                <Text as="span" mt={8} className="card__meta  t--uppercase">
+                  read bio
+                  <Icon name="nextArrow" />
+                </Text>
+              </div>
+            </S.Card>
+          </Cell>
         ))}
-      </TeamSwiper>
+      </Grid>
     </>
   )
 }

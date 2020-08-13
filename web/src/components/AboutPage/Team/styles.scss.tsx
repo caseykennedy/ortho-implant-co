@@ -13,19 +13,28 @@ export const Team = styled(Box)``
 export const Card = styled(AnimatedFlex)`
   flex-direction: column;
   justify-content: space-between;
-  /* max-width: 333px; */
-  /* background: ${theme.colors.white}; */
-  border: ${theme.border};
 
-  @media ${theme.mq.tablet} {
+  border: ${theme.border};
+  cursor: pointer;
+  transition: ${theme.transition.all};
+
+  &:hover {
+    background: ${theme.colors.primary};
+
+    .card__content h5 {
+      color: ${theme.colors.white};
+    }
   }
 
   .card {
     &__headshot {
-      width: 50%;
+      /* padding:  ${theme.space[4]} 0 0 ${theme.space[4]}; */
+
+      @media ${theme.mq.tablet} {
+      }
 
       img {
-        mix-blend-mode: luminosity;
+        /* mix-blend-mode: luminosity; */
       }
     }
 
