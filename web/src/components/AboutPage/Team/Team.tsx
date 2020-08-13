@@ -32,11 +32,19 @@ type Person = {
 }
 
 const People: React.FC<Person> = ({ person }) => {
+  // Only show item when in view
+  const [interRef, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-333px 0px'
+  })
+  const interSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
+  })
   return (
     <Cell>
-      {/* <TeamMate key={idx} person={person} /> */}
       <S.Card aria-label="read bio">
-        <Box width={[8 / 10, 6 / 10]} className="card__headshot">
+        <Box width={8 / 10} className="card__headshot">
           {person.headshot && (
             <Img
               fluid={person.headshot.asset.fluid}
@@ -55,10 +63,10 @@ const People: React.FC<Person> = ({ person }) => {
             </Text>
           </Box>
 
-          <Text as="p" mt={8} className="card__meta  t--uppercase">
-            read bio
+          <Box mt={5} className="card__meta">
+            <span>read bio</span>
             <Icon name="nextArrow" />
-          </Text>
+          </Box>
         </div>
       </S.Card>
     </Cell>
@@ -108,7 +116,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   // Only show item when in view
   const [interRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-100px 0px'
+    rootMargin: '-333px 0px'
   })
   const interSpring = useSpring({
     opacity: inView ? 1 : 0,

@@ -19,10 +19,18 @@ export const Card = styled(AnimatedFlex)`
   transition: ${theme.transition.all};
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.quinary};
 
-    .card__content h5 {
-      color: ${theme.colors.white};
+    .card__content {
+      h5 {
+        color: ${theme.colors.text};
+      }
+
+      .card__meta {
+        &:after {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -60,9 +68,30 @@ export const Card = styled(AnimatedFlex)`
         display: flex;
         justify-content: space-between;
         
+        border-top: 1px solid black;
+        padding-top: ${theme.space[4]};
+        position: relative;
+        
         font-size: calc(${theme.fontSizes[1]} / 1.1);
         font-family: ${theme.fonts.code};
         color: ${theme.colors.text};
+        text-transform: uppercase;
+        
+        span {
+          z-index: 1;
+        }
+
+        &:after {
+          background: ${theme.colors.primary};
+          content: '';
+          width: 0%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          transition: ${theme.transition.all};
+        }
 
         span {
           transition: ${theme.transition.all};
