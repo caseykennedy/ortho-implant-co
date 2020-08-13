@@ -333,7 +333,7 @@ const Typography = css`
       transition: ${theme.transition.all};
 
       svg {
-        width: 24px;
+        width: ${theme.iconWidth};
       }
     }
 

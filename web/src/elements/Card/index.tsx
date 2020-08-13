@@ -60,7 +60,7 @@ export const Card = styled(AnimatedBox)`
           transition: ${theme.transition.all};
 
           svg {
-            width: 24px;
+            width: ${theme.iconWidth};
             /* fill: ${theme.colors.text}; */
           }
         }

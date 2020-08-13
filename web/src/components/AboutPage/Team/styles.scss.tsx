@@ -28,7 +28,7 @@ export const Card = styled(AnimatedFlex)`
 
   .card {
     &__headshot {
-      /* padding:  ${theme.space[4]} 0 0 ${theme.space[4]}; */
+      overflow: hidden;
 
       @media ${theme.mq.tablet} {
       }
@@ -68,7 +68,7 @@ export const Card = styled(AnimatedFlex)`
           transition: ${theme.transition.all};
 
           svg {
-            width: 24px;
+            width: ${theme.iconWidth};
             /* fill: ${theme.colors.text}; */
           }
         }

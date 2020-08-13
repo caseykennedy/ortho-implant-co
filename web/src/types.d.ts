@@ -11,7 +11,7 @@ type ImageShape = {
   srcSetWebp: string
 }
 
-type PersonShape = {
+type PersonNode = {
   _rawBio: string
   _rawLead: string
   name: string
@@ -33,6 +33,16 @@ type PersonShape = {
         srcWebp: string
       }
     }
+  }
+}
+
+type PersonEdges = {
+  node: PersonNode
+}
+
+type PersonShape = {
+  people: {
+    edges: PersonEdges[]
   }
 }
 

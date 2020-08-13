@@ -91,7 +91,7 @@ export const Card = styled(Flex)`
           transition: ${theme.transition.all};
 
           svg {
-            width: 24px;
+            width: ${theme.iconWidth};
             /* fill: ${theme.colors.text}; */
           }
         }

@@ -63,7 +63,7 @@ export const Button = styled(Link)`
       font-size: ${theme.fontSizes[0]};
 
       svg {
-        width: 24px;
+        width: ${theme.iconWidth};
         transform: rotate(-180deg);
       }
 

@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 18px;
+  width: ${theme.iconWidth};
   height: 18px;
   background-color: #000;
   border: 2px solid #fff;

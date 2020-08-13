@@ -52,7 +52,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
     transition: ${theme.transition.all};
 
     svg {
-      width: 24px;
+      width: ${theme.iconWidth};
       fill: ${p => p.invert ? theme.colors.white : theme.colors.secondary};
     }
   }

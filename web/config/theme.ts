@@ -30,6 +30,7 @@ type ThemeShape = {
   siteWidth: string
   logoWidth: string
   headerHeight: string
+  iconWidth: string
   grid: {
     [key: string]: string
   }
@@ -154,6 +155,7 @@ const theme: ThemeShape = {
   siteWidth: '100vw',
   logoWidth: '225px',
   headerHeight: '180px',
+  iconWidth: '18px',
 
   // Base
   // ___________________________________________________________________
