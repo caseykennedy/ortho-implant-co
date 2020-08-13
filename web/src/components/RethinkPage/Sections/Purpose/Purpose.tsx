@@ -69,7 +69,7 @@ const Purpose = () => {
           </Text>
 
           <Text as="p">
-            <mark>We do not compromise. Not now. Not ever.</mark>
+            <mark>We do not compromise.</mark> Not now. Not ever.
           </Text>
         </AnimatedBox>
 

@@ -5,6 +5,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
+import { Parallax } from 'react-scroll-parallax'
 
 import ImgMatch from '../ImgMatch'
 import Section from '../Section'
@@ -46,13 +47,15 @@ const Intro: React.FC<Props> = ({
       {src && (
         <S.Figure>
           {/* <ImgMatch src={src} altText={altText} /> */}
-          <Img
-            fluid={src}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt={altText}
-            className="img"
-          />
+          <Parallax y={[-25, 10]}>
+            <Img
+              fluid={src}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={altText}
+              className="img"
+            />
+          </Parallax>
         </S.Figure>
       )}
 
