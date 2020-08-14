@@ -18,11 +18,11 @@ export const Overlay = styled(Flex)`
   flex-direction: column;
 
   width: ${overlayWidth};
-  height: calc(100vh - ${theme.headerHeight} + 3.45rem);
+  height: 100vh;
   overflow: auto;
+  padding: ${theme.space[5]};
 
   position: fixed;
-  /* top: 69px; */
   right: 0;
   bottom: 0;
 
@@ -34,8 +34,8 @@ export const Overlay = styled(Flex)`
   z-index: 9999;
 
   @media ${theme.mq.tablet} {
+    padding: ${theme.space[7]};
     /* top: calc(77px + ${theme.space[2]}); */
-    height: calc(100vh - ${theme.headerHeight});
   }
 
   /* @media ${theme.mq.tablet} {

@@ -97,8 +97,8 @@ const BlogPage = () => {
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: 'Blog &amp Company News',
-    title: 'Orthopaedic Implant Co.'
+    message: 'News | Press | Blog',
+    title: 'OIC'
   }
   return (
     <>

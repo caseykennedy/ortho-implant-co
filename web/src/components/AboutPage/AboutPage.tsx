@@ -21,7 +21,7 @@ import theme from '../../../config/theme'
 
 const AboutPage = () => {
   const page = useAboutPage()
-  console.log(page)
+  // console.log(page)
 
   // Page Title
   const pageTitle = {

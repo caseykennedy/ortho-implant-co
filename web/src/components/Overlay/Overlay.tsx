@@ -29,7 +29,7 @@ type Props = {
 
 const Overlay: React.FC<Props> = ({
   children,
-  id = 'nav-root',
+  id,
   root,
   isOpen,
   handleExit,

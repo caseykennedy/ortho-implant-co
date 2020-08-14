@@ -29,9 +29,10 @@ import theme from '../../../../config/theme'
 type Person = {
   person: PersonNode
   mainRef?: React.RefObject<HTMLDivElement>
+  toggleModal: () => any
 }
 
-const People: React.FC<Person> = ({ person }) => {
+const People: React.FC<Person> = ({ person, toggleModal }) => {
   // Only show item when in view
   const [interRef, inView] = useInView({
     triggerOnce: true,
@@ -43,7 +44,7 @@ const People: React.FC<Person> = ({ person }) => {
   })
   return (
     <Cell>
-      <S.Card aria-label="read bio">
+      <S.Card onClick={toggleModal} aria-label="read bio">
         <Box width={8 / 10} className="card__headshot">
           {person.headshot && (
             <Img
@@ -105,13 +106,15 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   const persons = data.people.edges
   // const boardMembers = persons.filter(person => person.node.boardMember)
   const nonBoard = persons.filter(person => !person.node.boardMember)
-  const humanStaff = nonBoard.filter(
-    person => person.node.name !== 'Ortho Bot'
-  )
+  const humanStaff = nonBoard.filter(person => person.node.name !== 'Ortho Bot')
+
+  const [bio, setBio] = useState(humanStaff[0].node)
+
+  // console.log(bio)
 
   // Navigation toggle
-  // const [isNavOpen, setNavOpen] = useState(false)
-  // const toggleModal = () => setNavOpen(!isNavOpen)
+  const [isModalOpen, setModalOpen] = useState(false)
+  const toggleModal = () => setModalOpen(!isModalOpen)
 
   // Only show item when in view
   const [interRef, inView] = useInView({
@@ -125,16 +128,34 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
 
   return (
     <>
-      {/* <Overlay
-        id="nav-root"
+      <Overlay
+        id="overlay-root"
         root="root"
-        isOpen={isNavOpen}
-        handleExit={() => setNavOpen(false)}
+        isOpen={isModalOpen}
+        handleExit={() => setModalOpen(false)}
         mainRef={mainRef}
-        className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
+        className={`nav-bg ${isModalOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
-        asdf
-      </Overlay> */}
+        {isModalOpen && (
+          <Box>
+            <Box>{bio.name} ✌️</Box>
+            <Box>{bio.jobTitle}</Box>
+            <Box width="333px">
+              {bio.headshot && (
+                <Img
+                  fluid={bio.headshot.asset.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={bio.name}
+                />
+              )}
+            </Box>
+            <Box mt={7} onClick={() => setModalOpen(false)}>
+              Close
+            </Box>
+          </Box>
+        )}
+      </Overlay>
 
       <AnimatedBox style={interSpring} ref={interRef}>
         {/* <Heading as="p" my={[5, 7]}>
@@ -145,7 +166,9 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
           gap={theme.space[5]}
         >
           {humanStaff.map(({ node: person }, idx) => (
-            <People person={person} key={idx} />
+            <Box onClick={() => setBio(person)} key={idx}>
+              <People person={person} toggleModal={toggleModal} />
+            </Box>
           ))}
         </Grid>
       </AnimatedBox>

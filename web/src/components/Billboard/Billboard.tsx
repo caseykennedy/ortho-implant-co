@@ -47,7 +47,7 @@ const Intro: React.FC<Props> = ({
       {src && (
         <S.Figure>
           {/* <ImgMatch src={src} altText={altText} /> */}
-          <Parallax y={[-25, 10]}>
+          <Parallax y={[-15, 3]}>
             <Img
               fluid={src}
               objectFit="cover"
