@@ -182,7 +182,7 @@ const Team = () => {
 
   return (
     <Section overflow="visible">
-      <Box width={[1, 2 / 3]} mb={[7, 8]} ref={mainRef}>
+      <Box width={[1, 2 / 3]} mb={[7, 8]}>
         <Heading as="h5" color="tertiary">
           Team
         </Heading>
