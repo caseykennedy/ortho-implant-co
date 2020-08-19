@@ -11,7 +11,7 @@ import theme from '../../../config/theme'
 // Begin Styles
 // ___________________________________________________________________
 
-const overlayWidth = '100vw'
+const overlayWidth = '100%'
 
 export const Overlay = styled(Flex)`
   justify-content: flex-start;
@@ -33,6 +33,10 @@ export const Overlay = styled(Flex)`
   transition: all 0.333s ease-in-out;
   z-index: 9999;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media ${theme.mq.tablet} {
     padding: ${theme.space[7]};
     /* top: calc(77px + ${theme.space[2]}); */
@@ -50,5 +54,14 @@ export const Overlay = styled(Flex)`
   &.nav-bg--open {
     visibility: visible;
     opacity: 1;
+  }
+`
+
+export const Exit = styled(Box)`
+  position: fixed;
+  top: ${theme.space[5]};
+  right: ${theme.space[5]};
+
+  @media ${theme.mq.tablet} {
   }
 `

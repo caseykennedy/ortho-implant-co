@@ -18,6 +18,8 @@ import useHover from '../../../hooks/useHover'
 import Section from '../../Section'
 import Icon from '../../Icons'
 import Overlay from '../../Overlay'
+import BlockContent from '../../BlockContent'
+import Bio from '../Bio'
 
 // UI + Styles
 import * as S from './styles.scss'
@@ -58,9 +60,9 @@ const People: React.FC<Person> = ({ person, toggleModal }) => {
 
         <div className="card__content">
           <Box mt={3}>
-            <Heading as="h4">{person.name}</Heading>
+            <Heading as="h4">{person && person.name}</Heading>
             <Text as="h5" className="t--small">
-              {person.jobTitle}
+              {person && person.jobTitle}
             </Text>
           </Box>
 
@@ -93,7 +95,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             }
             headshot {
               asset {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 800) {
                   ...GatsbySanityImageFluid
                 }
               }
@@ -119,7 +121,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   // Only show item when in view
   const [interRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-333px 0px'
+    rootMargin: '-222px 0px'
   })
   const interSpring = useSpring({
     opacity: inView ? 1 : 0,
@@ -137,23 +139,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
         className={`nav-bg ${isModalOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
         {isModalOpen && (
-          <Box>
-            <Box>{bio.name} ✌️</Box>
-            <Box>{bio.jobTitle}</Box>
-            <Box width="333px">
-              {bio.headshot && (
-                <Img
-                  fluid={bio.headshot.asset.fluid}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={bio.name}
-                />
-              )}
-            </Box>
-            <Box mt={7} onClick={() => setModalOpen(false)}>
-              Close
-            </Box>
-          </Box>
+          <Bio bio={bio} setModalOpen={setModalOpen} />
         )}
       </Overlay>
 

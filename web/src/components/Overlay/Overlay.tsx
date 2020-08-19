@@ -130,7 +130,12 @@ const Overlay: React.FC<Props> = ({
 
   if (overlay.current) {
     return ReactDOM.createPortal(
-      <S.Overlay className={className}>{children}</S.Overlay>,
+      (
+      <S.Overlay className={className}>
+        <S.Exit onClick={handleExit}>Close</S.Exit>
+        {children}
+      </S.Overlay>
+      ),
       overlay.current
     )
   }
