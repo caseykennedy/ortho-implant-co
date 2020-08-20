@@ -74,11 +74,7 @@ const Filter = () => {
 
   return (
     <S.Filter id="product-grid">
-      <Box className="view">
-        <List items={items} />
-      </Box>
-      
-      {/* <S.Navigation href="#product-grid">
+      <S.Navigation href="#product-grid">
         <Box width={[0, 0, theme.logoWidth]} />
         <div className="filter__inner">
           {categories.map(({ node: cat }, idx) => (
@@ -98,8 +94,12 @@ const Filter = () => {
           </Box>
         </div>
 
-        <Toggler gridView={gridView} setGridView={setGridView} />
-      </S.Navigation> */}
+        {/* <Toggler gridView={gridView} setGridView={setGridView} /> */}
+      </S.Navigation>
+
+      <Box className="view">
+        <List items={items} />
+      </Box>
 
       {/* {gridView ? (
         <Flex style={{ marginRight: '-2px' }}>

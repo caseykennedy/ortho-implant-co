@@ -34,7 +34,7 @@ const Item: React.FC<{ item: ProductEdges; transition: any }> = ({
   }
   return (
     <Link to={`/implants/${categorySlug()}/#${slug}`}>
-      <S.Item style={transition}>
+      <S.Item>
         <Box className="thumb">
           {!item.node.mainImage ? (
             <ImgMatch
@@ -83,7 +83,7 @@ const List: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
       leave: {
         opacity: 1
       },
-      trail: 175,
+      trail: 0,
       unique: false
     }
   )
