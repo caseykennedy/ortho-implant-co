@@ -68,7 +68,7 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
     transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
   return (
-    <Section bg="white" border={true}>
+    <Section id={implant.slug.current} bg="white" border={true}>
       <AnimatedBox ref={manifestoRef} style={manifestoSpring}>
         <Flex flexWrap="wrap">
           <Box width={[1, 4 / 10]} pr={[0, 8]}>

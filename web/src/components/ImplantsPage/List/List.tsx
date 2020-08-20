@@ -27,8 +27,13 @@ const Item: React.FC<{ item: ProductEdges; transition: any }> = ({
   transition
 }) => {
   const slug = item.node.slug.current
+  const categorySlug = () => {
+    const toLowerCase = item.node.categories[0].title.toLowerCase()
+    const dashCat = toLowerCase.replace(/\s/g, '-')
+    return dashCat
+  }
   return (
-    <Link to={`/implants/${slug}`}>
+    <Link to={`/implants/${categorySlug()}/#${slug}`}>
       <S.Item>
         <Box className="thumb">
           {!item.node.mainImage ? (

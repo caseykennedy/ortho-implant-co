@@ -13,7 +13,7 @@ import Section from '../Section'
 import BlockContent from '../BlockContent'
 import Marker from './Marker'
 
-import useRethinkPage from '../../hooks/useRethinkPage'
+import useContactPage from '../../hooks/useContactPage'
 
 // Elements
 import { AnimatedBox, Box, Heading, Text } from '../../elements'
@@ -25,28 +25,32 @@ import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
-const billboardProps = {
-  bg: theme.colors.black,
-  btnText: 'See our implants',
-  color: theme.colors.white,
-  message: 'we make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
-  to: '/',
-  src: 'operating-room.jpg',
-  altText: 'Doctors in the operating room.'
-}
-
 // Map coordinates
 // 316 California Ave ste. 701, Reno, NV 89509
 const lat = 39.4795277
 const long = -119.7890783
 
 const ContactPage = () => {
+  const page = useContactPage()
+
+  // Page title
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: 'Talk to us',
-    title: 'Contact'
+    message: page.pageTitle.message,
+    title: page.pageTitle.title
+  }
+
+  // Billboard
+  const billboardProps = {
+    bg: theme.colors.black,
+    btnText: page.billboard.linkTitle,
+    color: theme.colors.white,
+    message: page.billboard.message,
+    title: page.billboard.title,
+    to: page.billboard.linkTo,
+    src: page.billboard.figure.asset.fluid,
+    altText: page.billboard.figure.asset.title
   }
   return (
     <>

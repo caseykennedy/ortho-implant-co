@@ -9,7 +9,6 @@ import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import BlockContent from '../BlockContent'
 import Implant from './Implant'
-import PrevNext from './PrevNext'
 
 // Hooks
 import useProduct from '../../hooks/useProduct'
@@ -24,23 +23,14 @@ import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
-const billboardProps = {
-  bg: theme.colors.black,
-  btnText: 'Mantra',
-  color: theme.colors.white,
-  message: 'we make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
-  invert: false,
-  to: '/contact',
-  src: 'sports.jpg',
-  altText: 'Doctors in the operating room.'
-}
-
 const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   pageContext
 }) => {
   // Page context
   const page = pageContext
+
+  // console.log('----|- Page -|----')
+  // console.log(page)
 
   // Product Data
   const products = useProduct()
@@ -50,6 +40,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
   const implants = filteredProducts
 
+  // console.log('----|- products -|----')
   // console.log(implants)
 
   // Page title props
@@ -59,6 +50,19 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     message: page.title,
     title: 'Category'
   }
+
+  // Billboard props
+  const billboardProps = {
+    bg: theme.colors.black,
+    btnText: 'Mantra',
+    color: theme.colors.white,
+    message: 'we make orthopaedic implants<br />that are good for all.',
+    title: 'Mantra',
+    invert: false,
+    to: '/contact',
+    src: page.image.asset.fluid,
+    altText: 'Doctors in the operating room.'
+  }
   return (
     <S.CategoryDetail>
       <PageTitle {...pageTitle} />
@@ -67,12 +71,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
         <Implant implant={implant} key={idx} />
       ))}
 
-      {/* {implant.videoURL && <Video src={implant.videoURL} />} */}
-
-      {/* <PrevNext pageContext={pageContext} /> */}
-
       <Billboard {...billboardProps} />
-      {/* <Prefooter /> */}
     </S.CategoryDetail>
   )
 }

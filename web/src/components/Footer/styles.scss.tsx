@@ -42,7 +42,7 @@ export const Nav = styled(Flex)`
     color: ${theme.colors.tertiary};
     font-family: ${theme.fonts.heading};
     font-weight: 400;
-    font-size: calc(${theme.fontSizes[2]} * 1.25);
+    font-size: calc(${theme.fontSizes[2]});
     letter-spacing: 0.5px;
     text-transform: uppercase;
 

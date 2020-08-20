@@ -86,7 +86,6 @@ const Accordion: React.FC<Props> = ({
             <Heading
               as="h3"
               fontSize={fontSize}
-              mb={0}
               width={!subTitle ? 1 : 1 / 2}
             >
               {title}

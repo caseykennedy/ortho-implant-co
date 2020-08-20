@@ -12,8 +12,10 @@ import { Box, Flex } from '../../../elements'
 export const Intro = styled(Box)`
   width: 100%;
   position: relative;
+  margin-top: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
+    margin-top: 0;
   }
 `
 

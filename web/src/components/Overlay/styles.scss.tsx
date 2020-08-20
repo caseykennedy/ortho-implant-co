@@ -39,17 +39,7 @@ export const Overlay = styled(Flex)`
 
   @media ${theme.mq.tablet} {
     padding: ${theme.space[7]};
-    /* top: calc(77px + ${theme.space[2]}); */
   }
-
-  /* @media ${theme.mq.tablet} {
-    width: calc(${overlayWidth} / 2);
-    right: calc(-${overlayWidth} / 2);
-    border-left: ${theme.border};
-
-    visibility: visible;
-    opacity: 1;
-  } */
 
   &.nav-bg--open {
     visibility: visible;
@@ -61,6 +51,7 @@ export const Exit = styled(Box)`
   position: fixed;
   top: ${theme.space[5]};
   right: ${theme.space[5]};
+  cursor: pointer;
 
   @media ${theme.mq.tablet} {
   }

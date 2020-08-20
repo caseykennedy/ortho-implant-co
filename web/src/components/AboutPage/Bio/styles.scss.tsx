@@ -10,15 +10,25 @@ import { Box, Flex, AnimatedFlex, AnimatedBox } from '../../../elements'
 
 export const Bio = styled(Flex)`
   flex-wrap: wrap;
+  padding-bottom: ${theme.space[7]};
 
   @media ${theme.mq.tablet} {
-    max-width: calc(${theme.maxWidth} / 1.25);
+    max-width: calc(${theme.maxWidth} / 1.5);
+    padding-bottom: 0;
+  }
+
+  .bio {
+    &__figure {
+      @media ${theme.mq.tablet} {
+        position: sticky;
+        top: 0;
+      }
+    }
   }
 `
 
 export const Social = styled(Flex)`
-  margin-top: ${theme.space[7]};
-  margin-bottom: ${theme.space[7]};
+  margin-top: ${theme.space[5]};
 
   a {
     margin-left: ${theme.space[3]};
@@ -28,7 +38,7 @@ export const Social = styled(Flex)`
     }
 
     svg {
-      fill: ${theme.colors.white};
+      fill: ${theme.colors.tertiary};
     }
 
     &:hover {
@@ -43,6 +53,7 @@ export const Exit = styled(Box)`
   position: absolute;
   top: -${theme.space[3]};
   right: 0;
+  cursor: pointer;
 
   @media ${theme.mq.tablet} {
   }

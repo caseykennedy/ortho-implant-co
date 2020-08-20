@@ -31,11 +31,6 @@ export default () =>
       // Home page
       // _________________________________________________________________
 
-     
-
-      // Rethink page
-      // _________________________________________________________________
-
       S.listItem()
         .title("Home Page")
         .child(
@@ -43,19 +38,6 @@ export default () =>
             .id("homePage")
             .schemaType("homePage")
             .documentId("homePage")
-        )
-        .icon(MdFolder),
-
-      // Rethink page
-      // _________________________________________________________________
-
-      S.listItem()
-        .title("Rethink Page")
-        .child(
-          S.editor()
-            .id("rethinkPage")
-            .schemaType("rethinkPage")
-            .documentId("rethinkPage")
         )
         .icon(MdFolder),
 
@@ -69,6 +51,32 @@ export default () =>
             .id("aboutPage")
             .schemaType("aboutPage")
             .documentId("aboutPage")
+        )
+        .icon(MdFolder),
+
+        // Contact page
+      // _________________________________________________________________
+
+      S.listItem()
+      .title("Contact Page")
+      .child(
+        S.editor()
+          .id("contactPage")
+          .schemaType("contactPage")
+          .documentId("contactPage")
+      )
+      .icon(MdFolder),
+
+      // Rethink page
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Rethink Page")
+        .child(
+          S.editor()
+            .id("rethinkPage")
+            .schemaType("rethinkPage")
+            .documentId("rethinkPage")
         )
         .icon(MdFolder),
 

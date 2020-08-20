@@ -42,7 +42,7 @@ const Position = ({ item }: PositionProps) => {
   }
   return (
     // @ts-ignore: Unreachable code error
-    <div ref={hoverRef} style={{ position: 'relative' }}>
+    <>
       <Accordion title={item.name} {...AccordionProps}>
         <Box bg="background" pt={6} p={[5, 7]}>
           <Text as="p" color="black">
@@ -50,11 +50,7 @@ const Position = ({ item }: PositionProps) => {
           </Text>
         </Box>
       </Accordion>
-
-      <Box width="460px" p={6} className={`popup  ${isHovered ? 'show' : ''}`}>
-        <ImgMatch src={item.src} altText="core37" />
-      </Box>
-    </div>
+    </>
   )
 }
 

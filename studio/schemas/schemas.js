@@ -24,13 +24,13 @@ import rethinkTabs from './rethinkTabs'
 import testimonial from './testimonial'
 import siteSettings from './siteSettings'
 
-import homeImplants from './home/implants'
 import homeRethink from './home/rethink'
-import homeHero from './home/hero'
 import homeReviews from './home/reviews'
 import homeMantra from './home/mantra'
 
 import aboutPage from './aboutPage'
+
+import contactPage from './contactPage'
 
 import rethinkPage from './rethinkPage'
 import rethinkNotions from './rethink/rethink'
@@ -62,15 +62,17 @@ export default createSchema({
     testimonial,
     siteSettings,
 
+    // Need to move these into the homePage schema type
     homeRethink,
     homeReviews,
     homeMantra,
 
     homePage,
     aboutPage,
+    contactPage,
     rethinkPage,
     
-    //////////////////////// REMOVE
+    // Need to move these into the rethinkPage schema type
     rethinkNotions
 
     // When added to this list, object types can be used as

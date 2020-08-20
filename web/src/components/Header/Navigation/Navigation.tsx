@@ -68,6 +68,7 @@ const data = [
   },
   {
     name: 'implants',
+    link: '/implants',
     subPage: [
       {
         name: 'External Fixation',
@@ -84,6 +85,10 @@ const data = [
       {
         name: 'Plates and Screws',
         link: '/implants/plates-and-screws'
+      },
+      {
+        name: 'Cannulated Screws',
+        link: '/implants/cannulated-screws'
       },
       {
         name: 'Sports Medicine',

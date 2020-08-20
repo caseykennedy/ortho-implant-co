@@ -66,12 +66,10 @@ export const AccordionToggleInner = styled(Flex)`
   }
 
   h3 {
-    line-height: 0.6;
     text-transform: uppercase;
-    margin-bottom: ${theme.space[3]};
+    margin-bottom: -${theme.space[2]};
 
     @media ${theme.mq.desktop} {
-      margin-bottom: 0;
     }
   }
 `

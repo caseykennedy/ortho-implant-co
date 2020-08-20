@@ -39,17 +39,13 @@ const Toggler: React.FC<TogglerProps> = ({ gridView, setGridView }) => {
   return (
     <S.Toggler>
       <Box
-        className={`toggler__btn ${
-          !gridView ? '' : 'active'
-        }`}
+        className={`toggler__btn ${!gridView ? '' : 'active'}`}
         onClick={() => toggleView()}
       >
         <Icon name="gridView" />
       </Box>
       <Box
-        className={`toggler__btn ${
-          gridView ? '' : 'active'
-        }`}
+        className={`toggler__btn ${gridView ? '' : 'active'}`}
         onClick={() => toggleView()}
       >
         <Icon name="listView" />
@@ -78,7 +74,11 @@ const Filter = () => {
 
   return (
     <S.Filter id="product-grid">
-      <S.Navigation href="#product-grid">
+      <Box className="view">
+        <List items={items} />
+      </Box>
+      
+      {/* <S.Navigation href="#product-grid">
         <Box width={[0, 0, theme.logoWidth]} />
         <div className="filter__inner">
           {categories.map(({ node: cat }, idx) => (
@@ -99,9 +99,9 @@ const Filter = () => {
         </div>
 
         <Toggler gridView={gridView} setGridView={setGridView} />
-      </S.Navigation>
+      </S.Navigation> */}
 
-      {gridView ? (
+      {/* {gridView ? (
         <Flex style={{ marginRight: '-2px' }}>
           <Grid items={items} />
         </Flex>
@@ -109,7 +109,7 @@ const Filter = () => {
         <Box className="view">
           <List items={items} />
         </Box>
-      )}
+      )} */}
     </S.Filter>
   )
 }

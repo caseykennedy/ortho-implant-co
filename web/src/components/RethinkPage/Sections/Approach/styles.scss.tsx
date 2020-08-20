@@ -15,4 +15,12 @@ export const Approach = styled(Flex)`
   @media ${theme.mq.tablet} {
     /* height: calc(30vh - ${theme.headerHeight}); */
   }
+
+  figure {
+    display: none;
+   
+    @media ${theme.mq.tablet} {
+      display: initial;
+    }
+  }
 `
