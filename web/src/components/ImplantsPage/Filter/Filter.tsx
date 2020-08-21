@@ -71,7 +71,6 @@ const Filter = () => {
 
   // Toggle Grid/List views
   const [gridView, setGridView] = useState(true)
-
   return (
     <S.Filter id="product-grid">
       <S.Navigation href="#product-grid">
