@@ -35,7 +35,7 @@ const RethinkPage = () => {
 
   // Billboard
   const billboardProps = {
-    bg: theme.colors.tertiary,
+    bg: theme.colors.black,
     message: page.billboard.message,
     title: page.billboard.title,
     src: page.billboard.figure.asset.fluid,

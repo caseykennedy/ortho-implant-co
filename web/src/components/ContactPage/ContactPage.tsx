@@ -44,11 +44,11 @@ const ContactPage = () => {
   // Billboard
   const billboardProps = {
     bg: theme.colors.black,
-    btnText: page.billboard.linkTitle,
     color: theme.colors.white,
     message: page.billboard.message,
     title: page.billboard.title,
     to: page.billboard.linkTo,
+    btnText: page.billboard.linkTitle,
     src: page.billboard.figure.asset.fluid,
     altText: page.billboard.figure.asset.title
   }

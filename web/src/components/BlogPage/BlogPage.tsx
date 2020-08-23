@@ -33,57 +33,6 @@ import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
-const billboardProps = {
-  bg: theme.colors.black,
-  btnText: 'See our implants',
-  color: theme.colors.white,
-  message: 'we make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
-  invert: false,
-  to: '/',
-  src: 'im-nail.jpg',
-  altText: 'Doctors in the operating room.'
-}
-
-const Swipe: React.FC = ({ children }) => {
-  const params = {
-    // autoplay: {
-    //   delay: 25000,
-    //   disableOnInteraction: false
-    // },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    freeMode: true,
-    slidesPerView: 2,
-    spaceBetween: 70,
-    // centeredSlides: true,
-    breakpoints: {
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: -2
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 50,
-        grabCursor: true
-      },
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-        grabCursor: true
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: -2,
-        grabCursor: true
-      }
-    }
-  }
-  return <Swiper {...params}>{children}</Swiper>
-}
-
 const BlogPage = () => {
   const posts = usePost()
   const newsPosts = posts.filter(
@@ -97,7 +46,7 @@ const BlogPage = () => {
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: 'News | Press | Blog',
+    message: 'News | Blog',
     title: 'OIC'
   }
   return (
@@ -105,10 +54,10 @@ const BlogPage = () => {
       <S.BlogPage>
         <PageTitle {...pageTitle} />
 
-        <Flex width={1}>
+        <Flex width={2/3}>
           <Flex flexWrap="wrap" mb={'-2px'}>
-            {posts.map(({ node: post }, idx) => (
-              <S.Card key={idx} width={1 / 3}>
+            {newsPosts.map(({ node: post }, idx) => (
+              <S.Card key={idx} width={1 / 2}>
                 <Link to={`/blog/${post.slug.current}`}>
                   <Box>
                     <Box className="card__img">
@@ -149,3 +98,17 @@ const BlogPage = () => {
 }
 
 export default BlogPage
+
+// ___________________________________________________________________
+
+const billboardProps = {
+  bg: theme.colors.black,
+  color: theme.colors.white,
+  message: 'We make orthopaedic implants<br />that are good for all',
+  title: 'mantra',
+  invert: false,
+  btnText: 'See our implants',
+  to: '/implants',
+  // src: 'im-nail.jpg',
+  // altText: 'Doctors in the operating room.'
+}

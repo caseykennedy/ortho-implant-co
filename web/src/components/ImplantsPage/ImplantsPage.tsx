@@ -18,11 +18,16 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 const billboardProps = {
-  bg: 'primary',
-  message: "Let's schedule<br />a one-to-one",
-  title: 'Ready to chat?',
-  src: 'operating-room.jpg',
-  altText: 'Doctors in the operating room.'
+  bg: theme.colors.black,
+  color: theme.colors.white,
+  message:
+    'World-class orthopaedic implants<br />and technology are affordable.',
+  title: 'Rethink',
+  invert: false,
+  btnText: 'Learn how',
+  to: '/rethink'
+  // src: 'im-nail.jpg',
+  // altText: 'Doctors in the operating room.'
 }
 
 const ImplantsPage = () => {

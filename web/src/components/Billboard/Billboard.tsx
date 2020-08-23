@@ -27,7 +27,7 @@ type Props = {
   invert?: boolean
   message?: string
   title?: string
-  to: string
+  to?: string
   src?: object
 }
 
@@ -66,20 +66,32 @@ const Intro: React.FC<Props> = ({
         </S.Figure>
       )}
 
-      <div className="cta">
-        <Button to={to} invert={!invert ? undefined : invert}>
-          {btnText}
-        </Button>
-      </div>
+      {to && (
+        <div className="cta">
+          <Button to={!to ? '/' : to} invert={!invert ? undefined : invert}>
+            {btnText}
+          </Button>
+        </div>
+      )}
 
       <S.BillboardInner color={color}>
-        <Link to={to}>
-          <h4>
-            <mark>{title}</mark>
-          </h4>
+        {!to ? (
+          <Box>
+            <h4>
+              <mark>{title}</mark>
+            </h4>
 
-          {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
-        </Link>
+            {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
+          </Box>
+        ) : (
+          <Link to={to}>
+            <h4>
+              <mark>{title}</mark>
+            </h4>
+
+            {message && <h3 dangerouslySetInnerHTML={{ __html: message }} />}
+          </Link>
+        )}
       </S.BillboardInner>
 
       {/* <S.Illustration>
@@ -95,11 +107,11 @@ export default Intro
 
 const defaultProps = {
   bg: 'primary',
-  btnText: 'Talk to us',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
   color: 'white',
-  to: '/'
+  // btnText: 'Talk to us',
+  // to: '/'
 }
 
 Intro.defaultProps = defaultProps
