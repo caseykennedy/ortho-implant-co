@@ -29,13 +29,13 @@ const Category: React.FC<{ cat: CategoryNode }> = ({ cat }) => {
     <Box my={4} ref={hoverRef}>
       <Link to={`/implants/${cat.slug.current}`}>{cat.title}</Link>
       <Box
-        width={[2 / 3, 1 / 2]}
+        width={[1 / 3, 1 / 4]}
         p={0}
         className={`tip  ${isHovered ? 'tip--visible' : null}`}
       >
-        {cat.image && (
+        {cat.illustration && (
           <Img
-            fluid={cat.image.asset.fluid}
+            fluid={cat.illustration.asset.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
             alt={cat.title}
@@ -73,9 +73,9 @@ const Implants = () => {
           <Category cat={cat} key={idx} />
         ))}
       </S.Categories>
-      <S.Decorator width={[1 / 2]}>
+      {/* <S.Decorator width={[1 / 2]}>
         <ImgMatch src="ill-exfix.png" altText="Lady climbing bouldeer." />
-      </S.Decorator>
+      </S.Decorator> */}
     </Section>
   )
 }

@@ -23,20 +23,20 @@ export const Categories = styled(Box)`
 
     position: absolute;
     padding-left: ${theme.space[7]};
-    top: 0;
-    right: 0;
+    top: ${theme.space[10]};
+    right: ${theme.space[7]};
 
     pointer-events: none;
     z-index: 99999;
 
     visibility: hidden;
     opacity: 0;
-    transform: matrix(1, 0, 0, 1, 0, 32);
+    transform: matrix(1, 0, 0, 1, 0, -32);
     transition: ${theme.transition.all};
 
     /* mix-blend-mode: lighten; */
 
-    box-shadow: ${theme.space[10]} ${theme.space[7]} ${theme.space[10]} black;
+    /* box-shadow: ${theme.space[10]} ${theme.space[7]} ${theme.space[10]} black; */
 
     &--visible {
       visibility: visible;
