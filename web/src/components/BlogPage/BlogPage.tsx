@@ -36,7 +36,7 @@ import Prefooter from '../Footer/Prefooter'
 const BlogPage = () => {
   const posts = usePost()
   const newsPosts = posts.filter(
-    ({ node: post }) => 'News' === post.categories[0].title
+    ({ node: post }) => post.categories[0].title === 'News'
   )
 
   const blogPosts = posts.filter(
@@ -54,41 +54,68 @@ const BlogPage = () => {
       <S.BlogPage>
         <PageTitle {...pageTitle} />
 
-        <Flex width={2/3}>
-          <Flex flexWrap="wrap" mb={'-2px'}>
-            {newsPosts.map(({ node: post }, idx) => (
-              <S.Card key={idx} width={1 / 2}>
-                <Link to={`/blog/${post.slug.current}`}>
-                  <Box>
-                    <Box className="card__img">
-                      {post.mainImage && (
-                        <Img
-                          fluid={post.mainImage.asset.fluid}
-                          objectFit="cover"
-                          objectPosition="50% 50%"
-                          alt={post.title}
-                        />
+        <Flex width={[1, 1 / 2, '65%']} flexWrap="wrap">
+          {newsPosts.map(({ node: post }, idx) => (
+            <S.Card key={idx} width={1 / 2} border={true}>
+              <Link to={`/blog/${post.slug.current}`}>
+                <Box>
+                  <Box className="card__img">
+                    {post.mainImage && (
+                      <Img
+                        fluid={post.mainImage.asset.fluid}
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                        alt={post.title}
+                      />
+                    )}
+                  </Box>
+                  <Flex className="card__content">
+                    <Box>
+                      <Heading as="h5">{post.categories[0].title}</Heading>
+                      <Heading as="h3">{post.title}</Heading>
+                      {post._rawExcerpt && (
+                        <BlockContent blocks={post._rawExcerpt || []} />
                       )}
                     </Box>
-                    <Flex className="card__content">
-                      <Box>
-                        <Heading as="h5">{post.categories[0].title}</Heading>
-                        <Heading as="h3">{post.title}</Heading>
-                        {post._rawExcerpt && (
-                          <BlockContent blocks={post._rawExcerpt || []} />
-                        )}
-                      </Box>
-                    </Flex>
-                  </Box>
-                  <Text as="p" className="card__meta  t--uppercase">
-                    <Text as="span">{post.publishedAt}</Text>
-                    <Icon name="nextArrow" />
-                  </Text>
-                </Link>
-              </S.Card>
-            ))}
-          </Flex>
+                  </Flex>
+                </Box>
+                <Text as="p" className="card__meta  t--uppercase">
+                  <Text as="span">{post.publishedAt}</Text>
+                  <Icon name="nextArrow" />
+                </Text>
+              </Link>
+            </S.Card>
+          ))}
         </Flex>
+
+        <S.CardColumn width={[1, 1 / 2, '35%']}>
+          {blogPosts.map(({ node: post }, idx) => (
+            <S.Card width={[1, 1, 1]} className="card" border={true} key={idx}>
+              <Link
+                to={`/blog/${post.slug.current}`}
+                key={idx}
+                className="card--highlight"
+              >
+                <Flex className="card__content">
+                  <Box>
+                    <Heading as="h5" mb={7}>
+                      {post.categories[0].title}
+                    </Heading>
+                    <Heading as="h3">{post.title}</Heading>
+                    {post._rawExcerpt && (
+                      <BlockContent blocks={post._rawExcerpt || []} />
+                    )}
+                  </Box>
+                </Flex>
+                <Text as="p" className="card__meta  t--uppercase">
+                  <Text as="span">{post.publishedAt}</Text>
+                  read more
+                  <Icon name="nextArrow" />
+                </Text>
+              </Link>
+            </S.Card>
+          ))}
+        </S.CardColumn>
 
         {/* <Prefooter /> */}
       </S.BlogPage>
@@ -108,7 +135,7 @@ const billboardProps = {
   title: 'mantra',
   invert: false,
   btnText: 'See our implants',
-  to: '/implants',
+  to: '/implants'
   // src: 'im-nail.jpg',
   // altText: 'Doctors in the operating room.'
 }

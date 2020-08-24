@@ -25,7 +25,6 @@ export const BlogPage = styled(Flex)`
 
     color: ${theme.colors.text};
     background: ${theme.colors.white};
-    height: 100%;
 
     &:hover {
       background: ${theme.colors.primary};
@@ -50,21 +49,14 @@ export const BlogPage = styled(Flex)`
   }
 `
 
-export const Card = styled(Flex)`
-  flex-direction: column;
+export const Card = styled(Flex)<{ border?: boolean }>`
+  flex-wrap: wrap;
+  justify-content: stretch;
+  max-height: 800px;
+
   /* background: ${theme.colors.white}; */
-  border-right: ${theme.border};
-  border-bottom: ${theme.border};
-
-  &:nth-child(3n) {
-    border-right: none;
-  }
-
-  &:hover {
-    .card__img {
-      mix-blend-mode: normal;
-    }
-  }
+  border-right: ${p =>
+    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   @media ${theme.mq.tablet} {
   }
@@ -78,6 +70,13 @@ export const Card = styled(Flex)`
       padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
       /* mix-blend-mode: luminosity; */
       transition: ${theme.transition.all};
+
+      &--small {
+        max-height: 40px;
+        img {
+          max-height: 40px;
+        }
+      }
     }
 
     &__content {
@@ -86,6 +85,7 @@ export const Card = styled(Flex)`
       justify-content: space-between;
       padding:  ${theme.space[5]};
       background: transparent;
+      width: 100%;
 
       @media ${theme.mq.tablet} {
       }
@@ -105,17 +105,16 @@ export const Card = styled(Flex)`
       p {
         /* font-size: calc(${theme.fontSizes[1]} * 1); */
       }
-
-      
-      
     }
   }
 
   .card__meta {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: ${theme.space[5]};
     padding:  0 ${theme.space[5]} ${theme.space[5]};
+    width: 100%;
     
     font-size: calc(${theme.fontSizes[1]} / 1.15);
     font-family: ${theme.fonts.code};
@@ -135,15 +134,41 @@ export const CardHolder = styled(Flex)`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  overflow: hidden;
   width: 100%;
 
   a {
+    display: flex;
+    justify-content: stretch;
     color: ${theme.colors.text};
 
-    &.card--highlight {
-      &:first-child {
-        background: ${theme.colors.secondary};
-        color: ${theme.colors.white};
+    &:first-child {
+      &.card--highlight {
+        /* background: ${theme.colors.primary}; */
+        color: ${theme.colors.text};
+      }
+    }
+
+    &:last-child {
+      /* background: ${theme.colors.secondary}; */
+      /* color: ${theme.colors.white}; */
+
+      svg {
+        /* fill: ${theme.colors.white}; */
+      }
+    }
+
+    svg {
+      transition: ${theme.transition.all};
+    }
+
+    &:hover {
+      background: ${theme.colors.quinary};
+
+      svg {
+        position: relative;
+        margin-right: -1rem;
+        transition: ${theme.transition.all};
       }
     }
   }
@@ -155,7 +180,13 @@ export const CardHolder = styled(Flex)`
       overflow: hidden;
     }
 
+    .parallax-bg {
+      background: yellow;
+    }
+
     .swiper-wrapper {
+      /* padding-bottom: 2px; */
+
       .swiper-slide {
         transition: ${theme.transition.all};
         
@@ -188,25 +219,49 @@ export const CardHolder = styled(Flex)`
         }
       }
     }
-  }Î
-
+  }
 `
 
 export const CardColumn = styled(Flex)`
-  flex-direction: column;
-  /* justify-content: space-between; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
   margin-bottom: ${theme.space[5]};
 
   @media ${theme.mq.desktop} {
     margin-bottom: 0;
   }
 
-  div {
+  a {
+    width: 100%;
+    
+    &:first-child {
+      &.card--highlight div {
+        /* background: ${theme.colors.quinary}; */
+        /* color: ${theme.colors.white}; */
+      }
+    }
+
+    .card {
+      &:last-child {
+        border-right: none;
+      }
+    
+      &:last-child {
+        background: ${theme.colors.quinary};
+
+        svg {
+        }
+      }
+    }
+  }
+
+  /* div {
     margin-top: ${theme.space[5]};
     width: 100%;
 
     &:first-child {
       margin-top: 0;
     }
-  }
+  } */
 `

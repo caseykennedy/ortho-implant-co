@@ -98,7 +98,7 @@ const data = [
   },
   {
     name: 'news',
-    link: '/blog'
+    link: '/news'
   },
   {
     name: 'contact',

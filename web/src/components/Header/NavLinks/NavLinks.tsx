@@ -92,8 +92,8 @@ const navData = [
     link: '/implants'
   },
   {
-    name: 'blog',
-    link: '/blog'
+    name: 'news',
+    link: '/news'
   },
   {
     name: 'contact',

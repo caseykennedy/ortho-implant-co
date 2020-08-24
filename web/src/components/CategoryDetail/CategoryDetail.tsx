@@ -35,7 +35,8 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   // Product Data
   const products = useProduct()
   const filteredProducts = products.filter(
-    product => product.node.categories[0].title === page.title
+    product =>
+      product.node.categories[0].title.includes(page.title)
   )
 
   const implants = filteredProducts
@@ -55,7 +56,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   const billboardProps = {
     bg: theme.colors.primary,
     color: theme.colors.white,
-    message: 'Let\'s schedule<br />a one-to-one',
+    message: "Let's schedule<br />a one-to-one",
     title: 'Ready to chat?',
     invert: false,
     to: '/contact',

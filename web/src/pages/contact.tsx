@@ -11,6 +11,9 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import ContactPage from '../components/ContactPage'
 
+// Hooks
+import useContactPage from '../hooks/useContactPage'
+
 // Elements
 import { AnimatedBox } from '../elements'
 
@@ -20,6 +23,8 @@ import theme from '../../config/theme'
 // ___________________________________________________________________
 
 const Contact = () => {
+  const page = useContactPage()
+
   // Page animation
   const pageAnimation = useSpring({
     config: config.molasses,
@@ -29,7 +34,13 @@ const Contact = () => {
   })
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/contact`}
+        title={`Contact us | Orthopaedic Implant Co.`}
+        desc={page.pageTitle.message}
+        banner={page.billboard.figure.asset.fluid.src}
+        individual={true}
+      />
       <AnimatedBox>
         <ContactPage />
       </AnimatedBox>

@@ -56,6 +56,13 @@ type CategoryNode = {
   slug: {
     current: string
   }
+  illustration: {
+    asset: {
+      fluid: ImageShape
+      title
+    }
+    alt
+  }
   image: {
     asset: {
       fluid: ImageShape

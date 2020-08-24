@@ -1,4 +1,4 @@
-// Blog page
+// News page
 
 // ___________________________________________________________________
 
@@ -19,7 +19,7 @@ import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
-const Blog = () => {
+const News = () => {
   // Page animation
   const pageAnimation = useSpring({
     config: config.molasses,
@@ -29,7 +29,12 @@ const Blog = () => {
   })
   return (
     <Layout>
-      <SEO />
+    <SEO
+      pathname={`/news`}
+      title={`News | Orthopaedic Implant Co.`}
+      desc={`Find company news, press and blog posts.`}
+      individual={false}
+    />
       <AnimatedBox>
         <BlogPage />
       </AnimatedBox>
@@ -37,6 +42,6 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default News
 
 // ___________________________________________________________________

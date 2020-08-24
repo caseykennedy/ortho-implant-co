@@ -29,7 +29,12 @@ const Implants = () => {
   })
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/implants`}
+        title={`Contact us | Orthopaedic Implant Co.`}
+        desc={`Ready to chat? Talk to us.`}
+        individual={true}
+      />
       <AnimatedBox>
         <ImplantsPage />
       </AnimatedBox>
