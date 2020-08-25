@@ -7,6 +7,8 @@ import Section from '../Section'
 import theme from '../../../config/theme'
 import { Box, Flex } from '../../elements'
 
+import BillboardBG from '../../images/bg-billboard.png'
+
 // ___________________________________________________________________
 
 export const Billboard = styled(Section)`
@@ -51,7 +53,8 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
       mark {
         background-color: ${theme.colors.white};
         color: ${theme.colors.black};
-        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
+        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]}
+          ${theme.space[2]};
       }
     }
   }
@@ -64,6 +67,7 @@ export const Figure = styled(Box)`
   bottom: 0;
   left: 0;
 
+  background-image: url(${BillboardBG});
   mix-blend-mode: luminosity;
 
   .img {

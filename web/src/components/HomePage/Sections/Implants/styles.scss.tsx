@@ -14,7 +14,28 @@ export const Categories = styled(Box)`
     color: ${theme.colors.white};
     font-size: ${theme.fontSizes[3]};
     display: block;
-    /* border-bottom: 1px solid ${theme.colors.tertiary}; */
+
+    /* &::before {
+      position: absolute;
+      content: '';
+      background: ${theme.colors.primary};
+      width: 0;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+
+      transition: width 0.222s ease-in-out;
+    } */
+
+    &.active,
+    &:hover {
+      color: ${theme.colors.primary};
+
+      /* &::before {
+        width: 100%;
+      } */
+    }
   }
 
   .tip {
@@ -23,7 +44,7 @@ export const Categories = styled(Box)`
 
     position: absolute;
     padding-left: ${theme.space[7]};
-    top: ${theme.space[10]};
+    top: 0;
     right: ${theme.space[7]};
 
     pointer-events: none;

@@ -29,7 +29,7 @@ const Category: React.FC<{ cat: CategoryNode }> = ({ cat }) => {
     <Box my={4} ref={hoverRef}>
       <Link to={`/implants/${cat.slug.current}`}>{cat.title}</Link>
       <Box
-        width={[1 / 3, 1 / 4]}
+        width={[1 / 3, 4 / 10]}
         p={0}
         className={`tip  ${isHovered ? 'tip--visible' : null}`}
       >
@@ -68,7 +68,7 @@ const Implants = () => {
           everyday basis.
         </Heading>
       </Box>
-      <S.Categories width={[1, 1 / 2]}>
+      <S.Categories width={[1/2]}>
         {categories.map(({ node: cat }, idx) => (
           <Category cat={cat} key={idx} />
         ))}

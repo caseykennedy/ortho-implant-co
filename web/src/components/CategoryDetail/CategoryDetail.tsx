@@ -54,15 +54,15 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
   // Billboard props
   const billboardProps = {
-    bg: theme.colors.primary,
+    bg: theme.colors.secondary,
     color: theme.colors.white,
     message: "Let's schedule<br />a one-to-one",
     title: 'Ready to chat?',
     invert: false,
     to: '/contact',
     btnText: 'talk to us',
-    src: page.image.asset.fluid,
-    altText: 'Doctors in the operating room.'
+    // src: page.image.asset.fluid,
+    // altText: 'Doctors in the operating room.'
   }
   return (
     <S.CategoryDetail>

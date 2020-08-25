@@ -44,10 +44,11 @@ const Intro: React.FC<Props> = ({
 }) => {
   return (
     <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
-      {src && (
-        <S.Figure>
-          {/* <ImgMatch src={src} altText={altText} /> */}
-          {/* <Parallax y={[-15, 3]}>
+      <S.Figure>
+        {src && (
+          <>
+            {/* <ImgMatch src={src} altText={altText} /> */}
+            {/* <Parallax y={[-15, 3]}>
             <Img
               fluid={src}
               objectFit="cover"
@@ -56,15 +57,16 @@ const Intro: React.FC<Props> = ({
               className="img"
             />
           </Parallax> */}
-          <Img
-            fluid={src}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt={altText}
-            className="img"
-          />
-        </S.Figure>
-      )}
+            <Img
+              fluid={src}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={altText}
+              className="img"
+            />
+          </>
+        )}
+      </S.Figure>
 
       {to && (
         <div className="cta">
@@ -109,7 +111,7 @@ const defaultProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-to-one",
   title: 'Ready to chat?',
-  color: 'white',
+  color: 'white'
   // btnText: 'Talk to us',
   // to: '/'
 }
