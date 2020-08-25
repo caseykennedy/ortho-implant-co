@@ -32,6 +32,7 @@ export const Rethink = styled(Flex)`
   .sticky {
     position: sticky;
     top: ${theme.space[7]};
+    padding-bottom: ${theme.space[9]};
   }
 `
 

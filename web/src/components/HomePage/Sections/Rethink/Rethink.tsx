@@ -15,10 +15,10 @@ import Swiper from 'react-id-swiper'
 // Components
 import BlockContent from '../../../BlockContent'
 import Section from '../../../Section'
-import Button from '../../../../elements/Button'
 import Hexagons from '../../../Hexagons'
 
 // Theme
+import Button from '../../../../elements/Button'
 import { Box, Flex, Heading, Text } from '../../../../elements'
 import theme from '../../../../../config/theme'
 import * as S from './styles.scss'
@@ -88,6 +88,11 @@ const Rethink = () => {
           <Hexagons />
         </S.Decorator> */}
         </div>
+        <Box style={{ position: 'absolute', bottom: theme.space[7] }}>
+          <Button to={`/rethink`} invert={true}>
+            Rethink Ortho
+          </Button>
+        </Box>
       </Box>
 
       <Box width={[1, 1 / 2]} className="rethink__values">
