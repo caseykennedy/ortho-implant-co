@@ -44,7 +44,7 @@ export const Categories = styled(Box)`
 
     position: absolute;
     padding-left: ${theme.space[7]};
-    top: 0;
+    bottom: ${theme.space[7]};
     right: ${theme.space[7]};
 
     pointer-events: none;
