@@ -23,16 +23,17 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 }) => {
   // Page context
   const page = pageContext
+  const category = page.title
 
-  // Product Data
+  // Product + Filter products that match the page title (category)
   const products = useProduct()
   const filteredProducts = products.filter(product => {
-    if (product.node.categories[0].title.includes(page.title)) {
+    if (product.node.categories[0].title.includes(category)) {
       return product
     }
     if (
       product.node.categories[1] &&
-      product.node.categories[1].title.includes(page.title)
+      product.node.categories[1].title.includes(category)
     ) {
       return product
     }

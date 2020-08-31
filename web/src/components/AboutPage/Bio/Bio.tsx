@@ -51,7 +51,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
         </Box>
       </Box>
 
-      <Box width={[1, 2 / 3]} pt={[5, 7]} pl={[0, 7]}>
+      <Box width={[1, 2 / 3]} pt={[5, 7]} pb={7} pl={[0, 7]}>
         <Heading
           as="h2"
           fontSize={[4, 5]}

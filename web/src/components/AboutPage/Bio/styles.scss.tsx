@@ -14,7 +14,6 @@ export const Bio = styled(Flex)`
 
   @media ${theme.mq.tablet} {
     max-width: calc(${theme.maxWidth} / 1.5);
-    padding-bottom: 0;
   }
 
   .bio {
@@ -46,15 +45,5 @@ export const Social = styled(Flex)`
         fill: ${theme.colors.primary};
       }
     }
-  }
-`
-
-export const Exit = styled(Box)`
-  position: absolute;
-  top: -${theme.space[3]};
-  right: 0;
-  cursor: pointer;
-
-  @media ${theme.mq.tablet} {
   }
 `

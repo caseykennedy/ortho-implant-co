@@ -62,7 +62,17 @@ const Filter = () => {
   const [items, setItems] = useState(implants)
   const setFilteredItems = (category: string) => {
     setItems(
-      implants.filter(item => item.node.categories[0].title === category)
+      implants.filter(item => {
+        if (item.node.categories[0].title.includes(category)) {
+          return item
+        }
+        if (
+          item.node.categories[1] &&
+          item.node.categories[1].title.includes(category)
+        ) {
+          return item
+        }
+      })
     )
   }
   function resetFilteredItems() {
