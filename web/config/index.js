@@ -5,10 +5,10 @@ module.exports = {
 
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'Orthopaedic Implant Co.', // Navigation and Site Title
-  siteTitleAlt: 'Orthopaedic Implant Co.', // Alternative Site title for SEO
+  siteTitle: 'Orthopaedic Implant Co. | Value you can trust', // Navigation and Site Title
+  siteTitleAlt: 'Orthopaedic Implant Co. | ', // Alternative Site title for SEO
   siteTitleShort: 'Orthopaedic Implant Co.', // short_name for manifest
-  siteHeadline: 'Orthopaedic Implant Co.', // Headline for schema.org JSONLD
+  siteHeadline: 'Orthopaedic implants you can trust', // Headline for schema.org JSONLD
   siteUrl: 'http://orthoimplantcompany.com/', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
@@ -19,7 +19,7 @@ module.exports = {
   userTwitter: '', // Twitter Username
   ogSiteName: '', // Facebook Site Name
   ogLanguage: 'en_US', // og:language
-  googleAnalyticsID: 'UA-56063719-7',
+  googleAnalyticsID: 'UA-34718102-1',
 
   // Manifest and Progress color
   themeColor: '#FFC907',

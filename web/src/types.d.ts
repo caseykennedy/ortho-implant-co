@@ -17,6 +17,7 @@ type PersonNode = {
   name: string
   jobTitle: string
   boardMember: boolean
+  order: number
   slug: {
     _key: string
     current: string

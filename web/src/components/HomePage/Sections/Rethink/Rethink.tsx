@@ -2,20 +2,13 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 // Hooks
 import useHomePage from '../../../../hooks/useHomePage'
 
-// Libraries
-import Img from 'gatsby-image/withIEPolyfill'
-import Swiper from 'react-id-swiper'
-
 // Components
 import BlockContent from '../../../BlockContent'
-import Section from '../../../Section'
-import Hexagons from '../../../Hexagons'
 
 // Theme
 import Button from '../../../../elements/Button'
@@ -26,17 +19,11 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
-  const [values, setValues] = useState(panels[0])
-
   return (
-    <Flex alignItems="center" width={1}>
+    <Flex width={1}>
       <S.ButtonGroup>
         {panels.map((panel, idx) => (
-          <S.Tab
-            key={idx}
-            active={values === panel}
-            onClick={() => setValues(panel)}
-          >
+          <S.Tab key={idx}>
             <Heading as="h4">
               <mark>{panel.tag}</mark>{' '}
               <Text
@@ -48,22 +35,11 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
                 for {panel.title}
               </Text>
             </Heading>
-            {/* <Heading as="h4">For {panel.title}</Heading> */}
             {panel._rawMessage && (
               <BlockContent blocks={panel._rawMessage || []} />
             )}
           </S.Tab>
         ))}
-        {/* <Box width={1 / 6}>
-          {values && (
-            <Img
-              fluid={values.image.asset.fluid}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={`Affordable Implants for`}
-            />
-          )}
-        </Box> */}
       </S.ButtonGroup>
     </Flex>
   )

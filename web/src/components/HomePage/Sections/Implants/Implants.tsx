@@ -68,7 +68,7 @@ const Implants = () => {
           everyday basis.
         </Heading>
       </Box>
-      <S.Categories width={[1/2]}>
+      <S.Categories width={[1]}>
         {categories.map(({ node: cat }, idx) => (
           <Category cat={cat} key={idx} />
         ))}

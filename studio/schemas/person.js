@@ -18,9 +18,14 @@ export default {
       type: 'string'
     },
     {
-      title: 'Board Member',
       name: 'boardMember',
+      title: 'Board Member',
       type: 'boolean'
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number'
     },
     {
       name: 'slug',

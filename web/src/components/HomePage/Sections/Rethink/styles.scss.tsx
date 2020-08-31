@@ -13,15 +13,14 @@ export const Rethink = styled(Flex)`
 
   .rethink {
     &__message {
-
       border-top: ${theme.border};
       padding: ${theme.space[5]};
+
+      transform: translate3d(0, 0, 0);
 
       @media ${theme.mq.tablet} {
         border-right: ${theme.border};
         padding: ${theme.space[7]};
-        position: sticky;
-        top: 0;
       }
     }
 
@@ -30,9 +29,12 @@ export const Rethink = styled(Flex)`
   }
 
   .sticky {
-    position: sticky;
-    top: ${theme.space[7]};
     padding-bottom: ${theme.space[9]};
+
+    @media ${theme.mq.tablet} {
+      position: sticky;
+      top: ${theme.space[7]};
+    }
   }
 `
 

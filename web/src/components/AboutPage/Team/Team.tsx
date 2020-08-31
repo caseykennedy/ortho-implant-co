@@ -81,7 +81,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
 }) => {
   const data: PersonShape = useStaticQuery(graphql`
     query PeopleQuery {
-      people: allSanityPerson(sort: { fields: name, order: ASC }) {
+      people: allSanityPerson(sort: { fields: order, order: ASC }) {
         edges {
           node {
             _rawBio
@@ -89,6 +89,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             name
             jobTitle
             boardMember
+            order
             slug {
               _key
               current
