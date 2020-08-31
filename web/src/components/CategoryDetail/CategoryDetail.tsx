@@ -7,19 +7,14 @@ import React from 'react'
 // Components
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
-import BlockContent from '../BlockContent'
 import Implant from './Implant'
 
 // Hooks
 import useProduct from '../../hooks/useProduct'
 
-// Elements
-import { AnimatedBox, Box, Flex, Heading, Text } from '../../elements'
-
 // Styles + theme
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
@@ -29,19 +24,23 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   // Page context
   const page = pageContext
 
-  // console.log('----|- Page -|----')
-  // console.log(page)
-
   // Product Data
   const products = useProduct()
-  const filteredProducts = products.filter(
-    product =>
-      product.node.categories[0].title.includes(page.title)
-  )
+  const filteredProducts = products.filter(product => {
+    if (product.node.categories[0].title.includes(page.title)) {
+      return product
+    }
+    if (
+      product.node.categories[1] &&
+      product.node.categories[1].title.includes(page.title)
+    ) {
+      return product
+    }
+  })
 
   const implants = filteredProducts
 
-  // console.log('----|- products -|----')
+  // console.log('----|- implants -|----')
   // console.log(implants)
 
   // Page title props
@@ -60,7 +59,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     title: 'Ready to chat?',
     invert: false,
     to: '/contact',
-    btnText: 'talk to us',
+    btnText: 'talk to us'
     // src: page.image.asset.fluid,
     // altText: 'Doctors in the operating room.'
   }

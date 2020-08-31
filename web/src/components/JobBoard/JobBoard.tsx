@@ -35,7 +35,10 @@ const JobBoard = () => {
   return (
     <S.JobBoard as="section">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
-        <ImgMatch src="office-space.png" altText="OIC office" />
+        <ImgMatch
+          src="picking-orders.jpg"
+          altText="Andres picking orders in the warehouse."
+        />
       </Box>
 
       <Box p={theme.gutter.axis} width={[1, 8 / 10, 6 / 8]}>
@@ -47,7 +50,9 @@ const JobBoard = () => {
             At OIC, it's about working with us – being part of the team.
           </Heading>
           <Text as="p" fontSize={2}>
-            We are currently seeking to fill the following positions:
+            {!jobPosts[0].node.title
+              ? 'We are not currently hiring.'
+              : 'We are currently seeking to fill the following positions:'}
           </Text>
         </Box>
 

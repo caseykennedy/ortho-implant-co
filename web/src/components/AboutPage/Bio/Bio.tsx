@@ -37,7 +37,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
               alt={bio.name}
             />
           )}
-          <S.Social width={[1, 2 / 3]}>
+          {/* <S.Social width={[1, 2 / 3]}>
             <a href="/" target="__blank" rel="noopener">
               <Icon name="facebook" />
             </a>
@@ -47,7 +47,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
             <a href="/" target="__blank" rel="noopener">
               <Icon name="twitter" />
             </a>
-          </S.Social>
+          </S.Social> */}
         </Box>
       </Box>
 
