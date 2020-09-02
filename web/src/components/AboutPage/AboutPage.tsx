@@ -12,8 +12,6 @@ import Team from './Team'
 import Billboard from '../Billboard'
 import JobBoard from '../JobBoard'
 
-import Divider from '../../elements/Divider'
-
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 

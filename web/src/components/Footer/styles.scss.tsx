@@ -106,7 +106,7 @@ export const Social = styled(Flex)`
 
     svg {
       fill: ${theme.colors.white};
-      width: 20px;
+      width: 30px;
     }
   }
 `

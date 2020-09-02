@@ -7,11 +7,10 @@ import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
 import BlockContent from '../../BlockContent'
-import Icon from '../../Icons'
 
 // UI + Styles
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import { Box, Heading, Text } from '../../../elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
@@ -37,17 +36,6 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
               alt={bio.name}
             />
           )}
-          {/* <S.Social width={[1, 2 / 3]}>
-            <a href="/" target="__blank" rel="noopener">
-              <Icon name="facebook" />
-            </a>
-            <a href="/" target="__blank" rel="noopener">
-              <Icon name="linkedIn" />
-            </a>
-            <a href="/" target="__blank" rel="noopener">
-              <Icon name="twitter" />
-            </a>
-          </S.Social> */}
         </Box>
       </Box>
 
