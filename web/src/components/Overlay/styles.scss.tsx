@@ -13,7 +13,7 @@ import theme from '../../../config/theme'
 
 const overlayWidth = '100%'
 
-export const Overlay = styled(Flex)`
+export const Overlay = styled(Box)`
   justify-content: flex-start;
   flex-direction: column;
 

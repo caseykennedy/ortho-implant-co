@@ -10,6 +10,7 @@ import { Text, Heading, Box, Flex } from '../../elements'
 import Icon from '../Icons'
 import Prefooter from './Prefooter'
 import Pixels from '../Pixels'
+import AmedCert from '../AmedCert'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -80,6 +81,12 @@ const Footer: React.FC = () => {
             <a href="/" target="__blank" rel="noopener">
               <Icon name="twitter" />
             </a>
+            <div className="amed-cert">
+              <Flex className="inner">
+                <AmedCert />
+                <span>AMED Certified</span>
+              </Flex>
+            </div>
           </S.Social>
           <S.Legal width={[1, 1 / 3]}>
             <ul>

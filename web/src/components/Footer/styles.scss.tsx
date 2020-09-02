@@ -67,6 +67,7 @@ export const Nav = styled(Flex)`
 export const Social = styled(Flex)`
   a {
     margin-left: ${theme.space[3]};
+    max-height: 20px;
 
     &:first-child {
       margin-left: 0;
@@ -80,6 +81,32 @@ export const Social = styled(Flex)`
       svg {
         fill: ${theme.colors.primary};
       }
+    }
+  }
+
+  .amed-cert {
+    border-left: 1px solid ${theme.colors.tertiary};
+    margin-left: ${theme.space[3]};
+    padding-left: ${theme.space[3]};
+
+    @media ${theme.mq.tablet} {
+      margin-left: ${theme.space[5]};
+    padding-left: ${theme.space[5]};
+    }
+
+    .inner {
+      align-items: center;
+    }
+    
+    span {
+      margin-left: ${theme.space[3]};
+      color: ${theme.colors.white};
+      font-size: calc(${theme.fontSizes[1]} / 1.25);
+    }
+
+    svg {
+      fill: ${theme.colors.white};
+      width: 20px;
     }
   }
 `
