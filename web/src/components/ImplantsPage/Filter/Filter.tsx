@@ -75,7 +75,9 @@ const Filter = () => {
       })
     )
   }
-  function resetFilteredItems() {
+
+  // Reset / Show all
+  const resetFilteredItems = () => {
     setItems(implants)
   }
 
@@ -97,7 +99,7 @@ const Filter = () => {
           ))}
           <Box
             className="filter__btn filter__btn--all"
-            onClick={() => resetFilteredItems()}
+            onClick={resetFilteredItems}
           >
             All
           </Box>
