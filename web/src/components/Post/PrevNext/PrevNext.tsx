@@ -17,7 +17,7 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const path = 'blog'
+const path = 'news'
 
 const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
   const page = pageContext.page
@@ -43,7 +43,7 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
         </S.Button>
       )}
       {!next ? (
-        <S.Button to={`/${path}`}>Blog</S.Button>
+        <S.Button to={`/${path}`}>News</S.Button>
       ) : (
         <S.Button to={`/${path}/${next.slug.current}`}>
           {next.title}

@@ -35,9 +35,14 @@ import Prefooter from '../Footer/Prefooter'
 
 const BlogPage = () => {
   const posts = usePost()
-  const newsPosts = posts.filter(
-    ({ node: post }) => post.categories[0].title === 'News'
-  )
+  const newsPosts = posts.filter(({ node: post }) => {
+    if (post.categories[0].title.includes('News')) {
+      return post
+    }
+    if (post.categories[0] && post.categories[0].title.includes('Press')) {
+      return post
+    }
+  })
 
   const blogPosts = posts.filter(
     ({ node: post }) => 'Blog' === post.categories[0].title
@@ -54,7 +59,7 @@ const BlogPage = () => {
       <S.BlogPage>
         <PageTitle {...pageTitle} />
 
-        <Flex width={[1, 1 / 2, '65%']} flexWrap="wrap">
+        <S.NewsBox width={[1, 1 / 2, '65%']}>
           {newsPosts.map(({ node: post }, idx) => (
             <S.Card key={idx} width={1 / 2} border={true}>
               <Link to={`/blog/${post.slug.current}`}>
@@ -86,10 +91,10 @@ const BlogPage = () => {
               </Link>
             </S.Card>
           ))}
-        </Flex>
+        </S.NewsBox>
 
         <S.CardColumn width={[1, 1 / 2, '35%']}>
-          {blogPosts.map(({ node: post }, idx) => (
+          {blogPosts.slice(2, 7).map(({ node: post }, idx) => (
             <S.Card width={[1, 1, 1]} className="card" border={true} key={idx}>
               <Link
                 to={`/blog/${post.slug.current}`}

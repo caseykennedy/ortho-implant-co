@@ -49,19 +49,25 @@ export const BlogPage = styled(Flex)`
   }
 `
 
+export const NewsBox = styled(Flex)`
+  flex-wrap: wrap;
+  justify-content: stretch;
+`
+
 export const Card = styled(Flex)<{ border?: boolean }>`
   flex-wrap: wrap;
   justify-content: stretch;
   max-height: 800px;
 
   /* background: ${theme.colors.white}; */
-  border-right: ${p =>
+  border-bottom: ${p =>
     !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   @media ${theme.mq.tablet} {
   }
 
   .card {
+
     &__img {
       max-height: 200px;
       height: 200px;
