@@ -15,13 +15,13 @@ export const Filter = styled.div`
   @media ${theme.mq.tablet} {
   }
 
-  a {
+  .anchor-link {
     display: flex;
     align-items: center;
     position: relative;
     z-index: 999;
 
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.background};
     border-top: ${theme.border};
     border-bottom: ${theme.border};
     color: ${theme.colors.text};

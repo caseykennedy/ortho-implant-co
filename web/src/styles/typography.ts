@@ -139,10 +139,6 @@ const Typography = css`
     font-variant-ligatures: discretionary-ligatures;
   }
 
-  mark {
-    background-color: ${theme.colors.quinary};
-  }
-
   h1,
   h2,
   h3,
@@ -288,7 +284,7 @@ const Typography = css`
 
   mark {
     background-color: ${theme.colors.primary};
-    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[0]} ${theme.space[2]};
+    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
   }
 
   .t--link {

@@ -4,7 +4,6 @@
 
 import React, { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Img from 'gatsby-image/withIEPolyfill'
 
 // Libraries
 
@@ -15,8 +14,6 @@ import usePost from '../../../hooks/usePost'
 import { Box, Flex, Heading } from '../../../elements'
 
 // Components
-import Icon from '../../Icons'
-import ImgMatch from '../../ImgMatch'
 import Posts from '../Posts'
 
 // Theme
@@ -56,7 +53,7 @@ const Filter = () => {
 
   return (
     <S.Filter id="product-grid">
-      <AnchorLink href="#product-grid">
+      <AnchorLink href="#product-grid" className="anchor-link">
         <div className="filter__inner">
           {categories.map((cat, idx) => (
             <Heading

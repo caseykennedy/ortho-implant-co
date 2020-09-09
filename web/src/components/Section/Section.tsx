@@ -53,7 +53,7 @@ const Section: React.FC<Props> = ({
     width={width}
     overflow={overflow}
   >
-    <Box width={1} maxWidth={theme.maxWidth} pr={pr} pl={pl} m="0 auto">
+    <Box width={1} pr={pr} pl={pl} m="0 auto">
       {children}
     </Box>
   </Container>

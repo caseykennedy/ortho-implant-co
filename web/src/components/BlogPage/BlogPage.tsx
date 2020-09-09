@@ -12,8 +12,6 @@ import Billboard from '../Billboard'
 import BlockContent from '../BlockContent'
 import Icon from '../Icons'
 import Section from '../Section'
-import ImgMatch from '../ImgMatch'
-import Aside from '../Post/Aside'
 import Filter from './Filter'
 
 // Hooks
@@ -23,6 +21,7 @@ import usePost from '../../hooks/usePost'
 import { Flex, Box, Heading, Text } from '../../elements'
 import Button from '../../elements/Button'
 
+// Theme + Styles
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
@@ -80,10 +79,6 @@ const BlogPage = () => {
     }
   })
 
-  const blogPosts = posts.filter(
-    ({ node: post }) => 'Blog' === post.categories[0].title
-  )
-
   const pageTitle = {
     // altText: page.pageTitle.message,
     // image: page.pageTitle.image.asset.fluid,
@@ -94,79 +89,12 @@ const BlogPage = () => {
     <>
       <S.BlogPage>
         <PageTitle {...pageTitle} />
-
         <Box width={1} bg="black" py={9} />
-
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
           <RecentNews post={post} key={idx} />
         ))}
-
-        {/* <S.CardColumn width={[1, 1 / 2, '35%']}>
-          {blogPosts.slice(0, 1).map(({ node: post }, idx) => (
-            <S.Card width={[1, 1, 1]} className="card" border={true} key={idx}>
-              <Link
-                to={`/news/${post.slug.current}`}
-                key={idx}
-                className="card--highlight"
-              >
-                <Flex className="card__content">
-                  <Box>
-                    <Heading as="h5" mb={7}>
-                      {post.categories[0].title}
-                    </Heading>
-                    <Heading as="h3">{post.title}</Heading>
-                    {post._rawExcerpt && (
-                      <BlockContent blocks={post._rawExcerpt || []} />
-                    )}
-                  </Box>
-                </Flex>
-                <Text as="p" className="card__meta  t--uppercase">
-                  <Text as="span">{post.publishedAt}</Text>
-                  read more
-                  <Icon name="nextArrow" />
-                </Text>
-              </Link>
-            </S.Card>
-          ))}
-        </S.CardColumn> */}
       </S.BlogPage>
       <Filter />
-
-      {/* <Section border={true}>
-        <S.NewsBox width={1}>
-          {blogPosts.map(({ node: post }, idx) => (
-            <S.Card key={idx} width={1 / 3}>
-              <Link to={`/news/${post.slug.current}`}>
-                <Box>
-                  <Box className="card__img">
-                    {post.mainImage && (
-                      <Img
-                        fluid={post.mainImage.asset.fluid}
-                        objectFit="cover"
-                        objectPosition="50% 50%"
-                        alt={post.title}
-                      />
-                    )}
-                  </Box>
-                  <Flex className="card__content">
-                    <Box>
-                      <Heading as="h5">{post.categories[0].title}</Heading>
-                      <Heading as="h3">{post.title}</Heading>
-                      {post._rawExcerpt && (
-                        <BlockContent blocks={post._rawExcerpt || []} />
-                      )}
-                    </Box>
-                  </Flex>
-                </Box>
-                <Text as="p" className="card__meta  t--uppercase">
-                  <Text as="span">{post.publishedAt}</Text>
-                  <Icon name="nextArrow" />
-                </Text>
-              </Link>
-            </S.Card>
-          ))}
-        </S.NewsBox>
-      </Section> */}
       <Billboard {...billboardProps} />
     </>
   )

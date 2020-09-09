@@ -27,18 +27,9 @@ import * as S from './styles.scss'
 
 const Swipe: React.FC = ({ children }) => {
   const params = {
-    // autoplay: {
-    //   delay: 25000,
-    //   disableOnInteraction: false
-    // },
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true
-    // },
     freeMode: false,
     slidesPerView: 2,
     spaceBetween: 0,
-    // centeredSlides: true,
     breakpoints: {
       1024: {
         slidesPerView: 2,
@@ -78,9 +69,6 @@ const Blog = () => {
 
   return (
     <Box bg="white" color="text">
-      {/* <Box p={theme.gutter.axis}>
-        <Heading as="h4">What's Happening</Heading>
-      </Box> */}
       <S.CardHolder width={1}>
         <Flex width={[1, 1 / 2, '65%']}>
           <Swipe>
@@ -125,41 +113,6 @@ const Blog = () => {
           </Swipe>
         </Flex>
 
-        {/* <S.CardColumn width={[1, '47%', '30%']}>
-          {posts.slice(4, 5).map(({ node: post }, idx) => (
-            <Link to={`/blog/${post.slug.current}`} key={idx}>
-              <S.Card bg={theme.colors.background}>
-                <Box className="card__image">
-                  {post.mainImage && (
-                    <Img
-                      fluid={post.mainImage.asset.fluid}
-                      objectFit="cover"
-                      objectPosition="50% 50%"
-                      alt={post.title}
-                      className="article__img"
-                    />
-                  )}
-                </Box>
-                <Flex className="card__content">
-                  <Box>
-                    <Text as="p" className="lead">
-                      {post.title}
-                    </Text>
-                    {post._rawExcerpt && (
-                      <BlockContent blocks={post._rawExcerpt || []} />
-                    )}
-                  </Box>
-                  <Text as="p" className="card__meta  t--uppercase">
-                    {post.categories[0].title} —{' '}
-                    <Text as="span" color="tertiary"></Text>
-                    <Icon name="nextArrow" />
-                  </Text>
-                </Flex>
-              </S.Card>
-            </Link>
-          ))}
-        </S.CardColumn> */}
-
         <S.CardColumn width={[1, 1 / 2, '35%']}>
           {blogPosts.slice(2, 4).map(({ node: post }, idx) => (
             <Link
@@ -187,22 +140,6 @@ const Blog = () => {
               </S.Card>
             </Link>
           ))}
-
-          {/* <S.Card width={[1, 1 / 2, 1]} border={true}>
-            <Flex className="card__content">
-              <Box>
-                <Heading as="h5">value</Heading>
-                <Text as="p">
-                  We create better value for the implants you already know and
-                  use on an everyday basis.
-                </Text>
-              </Box>
-              <Text as="p" className="card__meta">
-                BLOG — Apr 19, 2020
-                <Icon name="nextArrow" />
-              </Text>
-            </Flex>
-          </S.Card> */}
         </S.CardColumn>
       </S.CardHolder>
     </Box>

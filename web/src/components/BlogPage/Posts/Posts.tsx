@@ -28,28 +28,42 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
   item,
   transition
 }) => {
-  const slug = item.node.slug.current
-  const categorySlug = () => {
-    const toLowerCase = item.node.categories[0].title.toLowerCase()
-    const dashCat = toLowerCase.replace(/\s/g, '-')
-    return dashCat
-  }
-
   const post = item.node
   return (
     <Cell>
-      <S.Item>
-        <Box>
+      <S.Post>
+        <Link to={`/news/${post.slug.current}`}>
+          <Box className="post__img">
+            {post.mainImage && (
+              <Img
+                fluid={post.mainImage.asset.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.title}
+              />
+            )}
+          </Box>
+
           <Heading as="h5" mb={7}>
-            {post.categories[0].title}
+            <Box
+              as="mark"
+              bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
+            >
+              {post.categories[0].title}
+            </Box>
           </Heading>
-          <Heading as="h5">{post.title}</Heading>
+
+          <Heading as="h4" fontSize={[2]}>
+            {post.title}
+          </Heading>
+
+          <Text as="p" className="card__meta  t--uppercase">
+            <Text as="span">{post.publishedAt}</Text>
+          </Text>
+
           {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
-        </Box>
-      </S.Item>
-      <Text as="p" className="card__meta  t--uppercase">
-        <Text as="span">{post.publishedAt}</Text>
-      </Text>
+        </Link>
+      </S.Post>
     </Cell>
   )
 }
@@ -76,7 +90,10 @@ const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
 
   return (
     <S.Posts width={1}>
-      <Grid columns={`repeat(auto-fit, minmax(400px, 1fr))`} gap="2rem">
+      <Grid
+        columns={`repeat(auto-fit, minmax(400px, 1fr))`}
+        gap={theme.space[5]}
+      >
         {itemTransitions.map(({ item, props, key }) => (
           <Post item={item} transition={props} key={key} />
         ))}

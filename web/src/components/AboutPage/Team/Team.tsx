@@ -11,14 +11,10 @@ import { useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Grid, Cell } from 'styled-css-grid'
 
-// Hooks
-import useHover from '../../../hooks/useHover'
-
 // Components
 import Section from '../../Section'
 import Icon from '../../Icons'
 import Overlay from '../../Overlay'
-import BlockContent from '../../BlockContent'
 import Bio from '../Bio'
 
 // UI + Styles
@@ -35,15 +31,6 @@ type Person = {
 }
 
 const People: React.FC<Person> = ({ person, toggleModal }) => {
-  // Only show item when in view
-  const [interRef, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-333px 0px'
-  })
-  const interSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
-  })
   return (
     <Cell>
       <S.Card onClick={toggleModal} aria-label="read bio">
