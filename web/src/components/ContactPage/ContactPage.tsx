@@ -3,25 +3,20 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 import GoogleMapReact from 'google-map-react'
 
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
-import Section from '../Section'
-import BlockContent from '../BlockContent'
 import Marker from './Marker'
 
 import useContactPage from '../../hooks/useContactPage'
 
 // Elements
-import { AnimatedBox, Box, Heading, Text } from '../../elements'
-import Divider from '../../elements/Divider'
+import { Box, Heading } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 

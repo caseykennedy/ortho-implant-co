@@ -32,7 +32,7 @@ const Aside = () => {
         Recent Posts
       </Heading> */}
           {posts.slice(5, 8).map(({ node: post }, idx) => (
-            <S.Post to={`/blog/${post.slug.current}`} key={idx}>
+            <S.Post to={`/news/${post.slug.current}`} key={idx}>
               <Box className="post__img">
                 {post.mainImage && (
                   <Img

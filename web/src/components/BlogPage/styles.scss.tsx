@@ -27,7 +27,7 @@ export const BlogPage = styled(Flex)`
     background: ${theme.colors.white};
 
     &:hover {
-      background: ${theme.colors.primary};
+      /* background: ${theme.colors.primary}; */
     }
   }
 
@@ -45,6 +45,37 @@ export const BlogPage = styled(Flex)`
 
     &--news {
       background: ${theme.colors.primary};
+    }
+  }
+`
+
+export const RecentNews = styled(Flex)`
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: stretch; */
+
+  @media ${theme.mq.tablet} {
+    flex-direction: row-reverse;
+  }
+  
+
+  .card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: ${theme.space[3]} 0;
+    width: 100%;
+    
+    font-size: calc(${theme.fontSizes[1]} / 1.15);
+    font-family: ${theme.fonts.code};
+
+    span {
+      transition: ${theme.transition.all};
+
+      svg {
+        width: ${theme.iconWidth};
+        /* fill: ${theme.colors.text}; */
+      }
     }
   }
 `
@@ -110,6 +141,11 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
       p {
         /* font-size: calc(${theme.fontSizes[1]} * 1); */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
       }
     }
   }
@@ -142,42 +178,6 @@ export const CardHolder = styled(Flex)`
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-
-  a {
-    display: flex;
-    justify-content: stretch;
-    color: ${theme.colors.text};
-
-    &:first-child {
-      &.card--highlight {
-        /* background: ${theme.colors.primary}; */
-        color: ${theme.colors.text};
-      }
-    }
-
-    &:last-child {
-      /* background: ${theme.colors.secondary}; */
-      /* color: ${theme.colors.white}; */
-
-      svg {
-        /* fill: ${theme.colors.white}; */
-      }
-    }
-
-    svg {
-      transition: ${theme.transition.all};
-    }
-
-    &:hover {
-      background: ${theme.colors.quinary};
-
-      svg {
-        position: relative;
-        margin-right: -1rem;
-        transition: ${theme.transition.all};
-      }
-    }
-  }
 
   .swiper-container {
     overflow: visible;

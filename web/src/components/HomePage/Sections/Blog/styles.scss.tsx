@@ -11,7 +11,7 @@ import { darken } from 'polished'
 
 export const Card = styled(Flex)<{ border?: boolean }>`
   flex-wrap: wrap;
-  justify-content: stretch;
+  justify-content: flex-start;
 
   /* background: ${theme.colors.white}; */
   border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
@@ -64,14 +64,22 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
       p {
         /* font-size: calc(${theme.fontSizes[1]} * 1); */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
       }
     }
   }
 
   .card__meta {
+    max-height: 70px;
+      height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-self: flex-end;
     margin-top: ${theme.space[5]};
     padding:  0 ${theme.space[5]} ${theme.space[5]};
     width: 100%;

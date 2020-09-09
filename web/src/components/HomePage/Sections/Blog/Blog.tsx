@@ -11,15 +11,12 @@ import Swiper from 'react-id-swiper'
 
 // Components
 import BlockContent from '../../../BlockContent'
-import Section from '../../../Section'
-import ImgMatch from '../../../ImgMatch'
 import Icon from '../../../Icons'
 
 // Hooks
 import usePost from '../../../../hooks/usePost'
 
 // Elements
-import Button from '../../../../elements/Button'
 import { Box, Flex, Heading, Text } from '../../../../elements'
 
 // Theme
@@ -89,7 +86,7 @@ const Blog = () => {
           <Swipe>
             {newsPosts.map(({ node: post }, idx) => (
               <Link
-                to={`/blog/${post.slug.current}`}
+                to={`/news/${post.slug.current}`}
                 key={idx}
                 className="card--highlight"
               >
@@ -166,7 +163,7 @@ const Blog = () => {
         <S.CardColumn width={[1, 1 / 2, '35%']}>
           {blogPosts.slice(2, 4).map(({ node: post }, idx) => (
             <Link
-              to={`/blog/${post.slug.current}`}
+              to={`/news/${post.slug.current}`}
               key={idx}
               className="card--highlight"
             >

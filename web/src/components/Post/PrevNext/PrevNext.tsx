@@ -9,7 +9,7 @@ import React from 'react'
 import Icon from '../../Icons'
 
 // Elements
-import { Heading, Box, Flex } from '../../../elements'
+import { Flex } from '../../../elements'
 
 // Theme
 import * as S from './styles.scss'
@@ -29,7 +29,7 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
   return (
     <S.PrevNext width={1}>
       {!prev ? (
-        <S.Button to={`/${path}`}>Blog</S.Button>
+        <S.Button to={`/${path}`}>View all</S.Button>
       ) : (
         <S.Button to={`/${path}/${prev.slug.current}`}>
           <Flex className="button__title">
@@ -43,7 +43,7 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
         </S.Button>
       )}
       {!next ? (
-        <S.Button to={`/${path}`}>News</S.Button>
+        <S.Button to={`/${path}`}>View all</S.Button>
       ) : (
         <S.Button to={`/${path}/${next.slug.current}`}>
           {next.title}

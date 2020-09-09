@@ -44,7 +44,7 @@ export const Post = styled(Link)`
   text-transform: uppercase;
   line-height: 1.25;
 
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
 
   &:last-child {
@@ -52,7 +52,7 @@ export const Post = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.quinary};
+    background: ${theme.colors.white};
 
     .post__img {
 

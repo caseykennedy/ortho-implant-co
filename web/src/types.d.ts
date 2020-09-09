@@ -399,10 +399,12 @@ type CareersContextShape = {
 
 type PostShape = {
   posts: {
-    edges: {
-      node: PostQuery
-    }[]
+    edges: PostEdges[]
   }
+}
+
+type PostEdges = {
+  node: PostQuery
 }
 
 type PostData = {
