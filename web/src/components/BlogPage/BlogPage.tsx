@@ -16,6 +16,7 @@ import Filter from './Filter'
 
 // Hooks
 import usePost from '../../hooks/usePost'
+import useNewsPage from '../../hooks/useNewsPage'
 
 // Elements
 import { Flex, Box, Heading, Text } from '../../elements'
@@ -79,17 +80,22 @@ const BlogPage = () => {
     }
   })
 
+  const page = useNewsPage()
+
+  console.log(page)
+
+  // Page title
   const pageTitle = {
-    // altText: page.pageTitle.message,
-    // image: page.pageTitle.image.asset.fluid,
-    message: 'News | Blog',
-    title: 'OIC'
+    altText: page.pageTitle.title,
+    image: page.pageTitle.image.asset.fluid,
+    message: page.pageTitle.message,
+    title: page.pageTitle.title
   }
   return (
     <>
+    <PageTitle {...pageTitle} />
       <S.BlogPage>
-        <PageTitle {...pageTitle} />
-        <Box width={1} bg="black" py={9} />
+        
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
           <RecentNews post={post} key={idx} />
         ))}

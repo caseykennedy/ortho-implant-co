@@ -54,18 +54,31 @@ export default () =>
         )
         .icon(MdFolder),
 
-        // Contact page
+      // Contact page
       // _________________________________________________________________
 
       S.listItem()
-      .title("Contact Page")
-      .child(
-        S.editor()
-          .id("contactPage")
-          .schemaType("contactPage")
-          .documentId("contactPage")
-      )
-      .icon(MdFolder),
+        .title("Contact Page")
+        .child(
+          S.editor()
+            .id("contactPage")
+            .schemaType("contactPage")
+            .documentId("contactPage")
+        )
+        .icon(MdFolder),
+
+      // News page
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("News Page")
+        .child(
+          S.editor()
+            .id("newsPage")
+            .schemaType("newsPage")
+            .documentId("newsPage")
+        )
+        .icon(MdFolder),
 
       // Rethink page
       // _________________________________________________________________

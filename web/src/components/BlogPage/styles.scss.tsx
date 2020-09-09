@@ -13,7 +13,10 @@ import theme from '../../../config/theme'
 
 export const BlogPage = styled(Flex)`
   flex-wrap: wrap;
+  background: ${theme.colors.background};
+  position: relative;
   width: 100%;
+  z-index: 9;
 
   @media ${theme.mq.tablet} {
   }

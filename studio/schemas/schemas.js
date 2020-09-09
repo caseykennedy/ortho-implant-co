@@ -31,6 +31,7 @@ import homeMantra from './home/mantra'
 import aboutPage from './aboutPage'
 
 import contactPage from './contactPage'
+import newsPage from './newsPage'
 
 import rethinkPage from './rethinkPage'
 import rethinkNotions from './rethink/rethink'
@@ -70,6 +71,7 @@ export default createSchema({
     homePage,
     aboutPage,
     contactPage,
+    newsPage,
     rethinkPage,
     
     // Need to move these into the rethinkPage schema type
