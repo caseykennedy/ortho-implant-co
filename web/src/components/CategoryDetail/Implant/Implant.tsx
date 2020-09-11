@@ -106,42 +106,13 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
               )}
             </Accordion>
 
-            {implant.videoURL && (
+            {implant.videos[0] && (
               <Accordion title="Video" {...AccordionProps}>
-                <Video src={implant.videoURL} />
-                {implant.videoURL2 && (
-                  <Box mt={5}>
-                    <Video src={implant.videoURL2} />
-                  </Box>
-                )}
+                {implant.videos.map((video, idx) => (
+                  <Video src={video.url} key={idx} />
+                ))}
               </Accordion>
             )}
-
-            {/* <Box width={[1]}>
-            <S.Resources>
-              <Heading as="h4">{implant.name}</Heading>
-
-              {implant._rawAdditionalInfo && (
-                <BlockContent blocks={implant._rawAdditionalInfo || []} />
-              )}
-            </S.Resources>
-          </Box> */}
-            {/* <Flex
-            width={[1]}
-            bg="background"
-            flexWrap="wrap"
-            style={{ overflow: 'hidden', borderTop: theme.border }}
-          >
-            <Flex width={1} flexWrap="wrap" flexDirection="row">
-              <Box bg="" p={theme.gutter.axis} width={[1]}>
-                <Heading as="h4">Features</Heading>
-
-                {implant._rawFeatures && (
-                  <BlockContent blocks={implant._rawFeatures || []} />
-                )}
-              </Box>
-            </Flex>
-          </Flex> */}
           </Box>
         </Flex>
       </AnimatedBox>

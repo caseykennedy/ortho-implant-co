@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdAssignment, MdStop, MdSettings, MdViewDay, MdFolder } from "react-icons/md";
+import { MdAssignment, MdStop, MdSettings, MdLibraryBooks, MdFolder, MdViewQuilt } from "react-icons/md";
 import { GoFile } from "react-icons/go";
 
 const hiddenTypes = [
@@ -93,7 +93,33 @@ export default () =>
         )
         .icon(MdFolder),
 
-      // Person
+      // Legal statements
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Legal Statements")
+        .child(
+          S.editor()
+            .id("legalStatements")
+            .schemaType("legalStatements")
+            .documentId("legalStatements")
+        )
+        .icon(MdLibraryBooks),
+
+      // Terms & Conditions
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Terms & Conditions")
+        .child(
+          S.editor()
+            .id("termsConditions")
+            .schemaType("termsConditions")
+            .documentId("termsConditions")
+        )
+        .icon(MdLibraryBooks),
+
+      // People
       // _________________________________________________________________
 
       S.listItem()
@@ -149,7 +175,7 @@ export default () =>
         .schemaType("product")
         .child(S.documentTypeList("product").title("Product"))
 
-        .icon(MdStop)
+        .icon(MdViewQuilt)
 
       // End
       // _________________________________________________________________

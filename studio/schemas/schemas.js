@@ -8,28 +8,30 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import billboard from './billboard'
 import blockContent from './blockContent'
 import blockText from './blockText'
-import postCategory from './postCategory'
-import productCategory from './productCategory'
-import productResources from './productResources'
 import homePage from './homePage'
 import figure from './figure'
 import jobPost from './jobPost'
+import legalStatements from './legalStatements'
 import mainImage from './mainImage'
 import notion from './notion'
 import pageTitle from './pageTitle'
+import postCategory from './postCategory'
+import productCategory from './productCategory'
+import productResources from './productResources'
 import person from './person'
 import post from './post'
 import product from './product'
 import rethinkTabs from './rethinkTabs'
-import testimonial from './testimonial'
 import siteSettings from './siteSettings'
+import termsConditions from './termsConditions'
+import testimonial from './testimonial'
+import videoURL from './videoURL'
 
 import homeRethink from './home/rethink'
 import homeReviews from './home/reviews'
 import homeMantra from './home/mantra'
 
 import aboutPage from './aboutPage'
-
 import contactPage from './contactPage'
 import newsPage from './newsPage'
 
@@ -50,6 +52,7 @@ export default createSchema({
     billboard,
     figure,
     jobPost,
+    legalStatements,
     mainImage,
     notion,
     pageTitle,
@@ -60,8 +63,10 @@ export default createSchema({
     productCategory,
     productResources,
     rethinkTabs,
-    testimonial,
     siteSettings,
+    termsConditions,
+    testimonial,
+    videoURL,
 
     // Need to move these into the homePage schema type
     homeRethink,

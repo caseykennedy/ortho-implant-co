@@ -73,14 +73,10 @@ export default {
       }
     },
     {
-      name: 'videoURL',
-      title: 'Video URL',
-      type: 'url'
-    },
-    {
-      name: 'videoURL2',
-      title: 'Video URL #2',
-      type: 'url'
+      name: 'videos',
+      title: 'Videos',
+      type: 'array',
+      of: [{type: 'videoURL'}]
     },
     {
       name: 'publishedAt',

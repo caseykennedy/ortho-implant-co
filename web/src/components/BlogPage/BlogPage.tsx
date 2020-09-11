@@ -93,9 +93,8 @@ const BlogPage = () => {
   }
   return (
     <>
-    <PageTitle {...pageTitle} />
+      <PageTitle {...pageTitle} />
       <S.BlogPage>
-        
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
           <RecentNews post={post} key={idx} />
         ))}

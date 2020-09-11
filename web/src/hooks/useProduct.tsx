@@ -10,7 +10,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useProduct = () => {
   const data = useStaticQuery<ProductShape>(graphql`
     query ProductsQuery {
-      products: allSanityProduct(sort: {fields: categories___title, order: DESC}) {
+      products: allSanityProduct(
+        sort: { fields: categories___title, order: DESC }
+      ) {
         edges {
           node {
             _rawAdditionalInfo
@@ -37,8 +39,10 @@ const useProduct = () => {
             }
             name
             shortName
-            videoURL
-            videoURL2
+            videos {
+              title
+              url
+            }
             categories {
               title
             }

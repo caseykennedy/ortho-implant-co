@@ -11,6 +11,9 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import TermsPage from '../components/TermsPage'
 
+// Hooks
+import useTerms from '../hooks/useTerms'
+
 // Elements
 import { AnimatedBox } from '../elements'
 
@@ -20,16 +23,14 @@ import theme from '../../config/theme'
 // ___________________________________________________________________
 
 const Terms = () => {
-  // Page animation
-  const pageAnimation = useSpring({
-    config: config.molasses,
-    delay: 0,
-    from: { opacity: 0 },
-    to: { opacity: 1 }
-  })
+  const page = useTerms()
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname="/terms"
+        title={page.pageTitle.message}
+        individual={true}
+      />
       <AnimatedBox>
         <TermsPage />
       </AnimatedBox>
