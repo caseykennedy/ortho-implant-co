@@ -89,6 +89,8 @@ export const Nav = styled(Flex)`
 `
 
 export const Social = styled(Flex)`
+  flex-wrap: wrap;
+
   a {
     margin-left: ${theme.space[3]};
     max-height: 20px;
@@ -98,6 +100,7 @@ export const Social = styled(Flex)`
     }
 
     svg {
+      margin-top: ${theme.space[1]};
       fill: ${theme.colors.white};
     }
 
@@ -109,28 +112,34 @@ export const Social = styled(Flex)`
   }
 
   .amed-cert {
-    border-left: 1px solid ${theme.colors.tertiary};
-    margin-left: ${theme.space[3]};
-    padding-left: ${theme.space[3]};
-
-    @media ${theme.mq.tablet} {
+    margin-top: ${theme.space[6]};
+    width: 100%;
+    
+    @media ${theme.mq.desktop} {
+      border-left: 1px solid ${theme.colors.tertiary};
+      margin-top: 0;
       margin-left: ${theme.space[5]};
       padding-left: ${theme.space[5]};
+      width: initial;
     }
 
     .inner {
       align-items: center;
     }
 
-    span {
+    span a {
       margin-left: ${theme.space[3]};
       color: ${theme.colors.white};
-      font-size: calc(${theme.fontSizes[1]} / 1.25);
+      font-size: calc(${theme.fontSizes[1]} / 1.15);
+
+      &:hover {
+        color: ${theme.colors.primary};
+      }
     }
 
     svg {
       fill: ${theme.colors.white};
-      width: 30px;
+      width: 44px;
     }
   }
 `

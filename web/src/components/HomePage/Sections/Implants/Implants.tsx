@@ -29,7 +29,7 @@ const Category: React.FC<{ cat: CategoryNode }> = ({ cat }) => {
     <Box my={4} ref={hoverRef}>
       <Link to={`/implants/${cat.slug.current}`}>{cat.title}</Link>
       <Box
-        width={[1 / 3, 4 / 10]}
+        width={[1, 1, 1]}
         p={0}
         className={`tip  ${isHovered ? 'tip--visible' : null}`}
       >
@@ -50,7 +50,7 @@ const Implants = () => {
   const categories = useCategory()
 
   return (
-    <Section color="white" border={true}>
+    <Section color="white" border={true} overflow="hidden">
       {/* <Box className="cta">
           <Button to={`/implants`}>All Implants</Button>
         </Box> */}

@@ -25,7 +25,7 @@ module.exports = {
   themeColor: '#FFC907',
   backgroundColor: '#000000',
 
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+  // pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   // siteTitle: settings.siteTitle, // Navigation and Site Title
   // siteTitleAlt: settings.siteTitleAlt, // Alternative Site title for SEO

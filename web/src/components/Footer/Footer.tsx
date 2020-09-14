@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
           <Box width={[1, 1 / 3]} mt={[5, 0]}>
             <Link to="/contact" className="t--link">
               <Heading as="h4" color="primary" fontWeight={500}>
-                Schedule a metting
+                Schedule a meeting
                 <Icon name="nextArrow" color={theme.colors.primary} />
               </Heading>
             </Link>
@@ -83,7 +83,17 @@ const Footer: React.FC = () => {
             </a>
             <div className="amed-cert">
               <Flex className="inner">
-              <Link to="/about#careers" className="footer-link">Careers</Link>
+                <AmedCert />
+                <span>
+                  <a
+                    href="//www.advamed.org/issues/code-ethics/code-certifying-companies"
+                    target="__blank"
+                    rel="noopener"
+                    aria-label="learn more about AdvaMED"
+                  >
+                    AdvaMed Code of Ethics Certified
+                  </a>
+                </span>
               </Flex>
             </div>
           </S.Social>

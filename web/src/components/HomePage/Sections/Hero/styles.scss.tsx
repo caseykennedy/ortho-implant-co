@@ -25,6 +25,7 @@ export const Sideboard = styled(Box)`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
+  text-align: right;
 
   background: ${theme.colors.secondary};
   margin-top: -${theme.space[5]};
