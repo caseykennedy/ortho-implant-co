@@ -31,7 +31,7 @@ const AboutPage = () => {
 
   // Billboard
   const billboardProps = {
-    bg: theme.colors.tertiary,
+    bg: theme.colors.white,
     message: page.billboard.message,
     title: page.billboard.title,
     src: page.billboard.figure.asset.fluid,

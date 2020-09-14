@@ -9,10 +9,13 @@ import Img from 'gatsby-image/withIEPolyfill'
 // Libraries
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import { Parallax } from 'react-scroll-parallax'
 
 // Components
 import ImgMatch from '../../../ImgMatch'
+import BlockContent from '../../../BlockContent'
+
+// Hooks
+import useRethinkPage from '../../../../hooks/useRethinkPage'
 
 // UI + Styles
 import * as S from './styles.scss'
@@ -22,6 +25,7 @@ import theme from '../../../../../config/theme'
 // ___________________________________________________________________
 
 const Purpose = () => {
+  const page = useRethinkPage()
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
@@ -55,18 +59,24 @@ const Purpose = () => {
           style={fadeSpring}
         >
           <Heading as="h4" color="primary">
-            purpose
+            {page.purpose.title && page.purpose.title}
           </Heading>
 
-          <Heading as="h3" fontWeight={400}>
-            World-class orthopaedic implants and technology <em>are</em>{' '}
-            affordable.
-          </Heading>
+          {page.purpose.heading && (
+            <Heading
+              as="h3"
+              fontWeight={400}
+              dangerouslySetInnerHTML={{ __html: page.purpose.heading }}
+            />
+          )}
 
-          <Text as="p">
-            OIC is a purpose-driven, forward-thinking company determined to
-            change the way implants are manufactured and priced.
-          </Text>
+          {page.purpose._rawLead && (
+            <BlockContent blocks={page.purpose._rawLead || []} />
+          )}
+
+          {/* {page.purpose._rawBody && (
+            <BlockContent blocks={page.purpose._rawBody || []} />
+          )} */}
 
           <Text as="p">
             <mark>We do not compromise.</mark> Not now. Not ever.

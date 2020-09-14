@@ -52,7 +52,7 @@ export const BlogPage = styled(Flex)`
   }
 `
 
-export const RecentNews = styled(Flex)`
+export const Featured = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
   /* justify-content: stretch; */

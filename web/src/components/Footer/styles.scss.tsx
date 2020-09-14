@@ -20,6 +20,30 @@ export const Footer = styled(Flex)`
   @media ${theme.mq.tablet} {
     padding: 0 ${theme.space[7]} ${theme.space[7]};
   }
+
+  .footer-link {
+    color: ${theme.colors.white};
+    font-family: ${theme.fonts.heading};
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    padding-left: ${theme.space[2]};
+    margin-left: ${theme.space[2]};
+
+    @media ${theme.mq.tablet} {
+    }
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+  }
 `
 
 export const Nav = styled(Flex)`
@@ -91,13 +115,13 @@ export const Social = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       margin-left: ${theme.space[5]};
-    padding-left: ${theme.space[5]};
+      padding-left: ${theme.space[5]};
     }
 
     .inner {
       align-items: center;
     }
-    
+
     span {
       margin-left: ${theme.space[3]};
       color: ${theme.colors.white};

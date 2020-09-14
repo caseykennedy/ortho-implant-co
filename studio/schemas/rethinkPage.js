@@ -12,6 +12,16 @@ export default {
       type: 'pageTitle'
     },
     {
+      name: 'approach',
+      title: 'Approach',
+      type: 'approach'
+    },
+    {
+      name: 'purpose',
+      title: 'Purpose',
+      type: 'purpose'
+    },
+    {
       name: 'rethinkNotions',
       title: 'Rethink Notions',
       type: 'array',

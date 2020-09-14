@@ -78,11 +78,11 @@ const ContactPage = () => {
             </Heading>
             <p>
               <a href={`mailto:info@orthoimplantco.com`}>
-                info@orthoimplantco.com
+                info@orthoimplantcompany.com
               </a>
               <br />
               <a href={`mailto:help@orthoimplantco.com`}>
-                help@orthoimplantco.com
+                help@orthoimplantcompany.com
               </a>
             </p>
           </Box>

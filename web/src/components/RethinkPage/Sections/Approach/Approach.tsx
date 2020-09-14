@@ -4,12 +4,18 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
+// Libraries
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Parallax } from 'react-scroll-parallax'
 
-import ImgMatch from '../../../ImgMatch'
+// Components
+import BlockContent from '../../../BlockContent'
+
+// Hooks
+import useRethinkPage from '../../../../hooks/useRethinkPage'
 
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
@@ -18,6 +24,8 @@ import theme from '../../../../../config/theme'
 // ___________________________________________________________________
 
 const Approach = () => {
+  const page = useRethinkPage()
+
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: '-360px 0px'
@@ -43,7 +51,14 @@ const Approach = () => {
           style={manifestoSpring}
         >
           <Parallax className="custom-class" y={[-25, 15]} tagOuter="figure">
-            <ImgMatch src="running-stairs.jpg" altText="Running up stairs" />
+            {page.approach.figure && (
+              <Img
+                fluid={page.approach.figure.asset.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={page.approach.figure.asset.title}
+              />
+            )}
           </Parallax>
         </AnimatedBox>
 
@@ -54,25 +69,24 @@ const Approach = () => {
           style={fadeAnimation}
         >
           <Heading as="h4" color="primary">
-            a new approach
+            {page.approach.title && page.approach.title}
           </Heading>
 
           <Heading as="h3" fontWeight={400}>
-            "Give me something that is different, for there is a chance of it
-            being better..."
+            {page.approach.heading && page.approach.heading}
           </Heading>
 
           <Flex width={1} mt={`calc(${theme.space[3]} * 22)`} flexWrap="wrap">
             <Box width={[1, 1 / 3]}>
-              <Text as="p">Today calls for a whole new approach...</Text>
+              {page.approach._rawLead && (
+                <BlockContent blocks={page.approach._rawLead || []} />
+              )}
             </Box>
 
             <Box width={[1, 2 / 3]} pl={[0, 7]}>
-              <Text as="p">
-                To not only do what’s best for your patients clinically, but
-                also help them along financially. It’s time to rethink your
-                options and rise to the challenge of a better tomorrow.
-              </Text>
+              {page.approach._rawBody && (
+                <BlockContent blocks={page.approach._rawBody || []} />
+              )}
             </Box>
           </Flex>
         </AnimatedBox>

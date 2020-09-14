@@ -68,7 +68,7 @@ export const Figure = styled(Box)`
   left: 0;
 
   background-image: url(${BillboardBG});
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
 
   .img {
     height: 100%;

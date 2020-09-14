@@ -64,7 +64,17 @@ const data = [
   },
   {
     name: 'about oic',
-    link: '/about'
+    link: '/about',
+    subPage: [
+      {
+        name: 'Team',
+        link: '/about#team'
+      },
+      {
+        name: 'Careers',
+        link: '/about#careers'
+      }
+    ]
   },
   {
     name: 'implants',

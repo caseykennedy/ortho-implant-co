@@ -155,7 +155,7 @@ const Team = () => {
   const mainRef = useRef<HTMLDivElement>(null)
 
   return (
-    <Section overflow="visible">
+    <Section overflow="visible" id="team">
       <Box width={[1, 2 / 3]} mb={[7, 8]}>
         <Heading as="h5" color="tertiary">
           Team

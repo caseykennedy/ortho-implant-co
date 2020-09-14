@@ -33,7 +33,7 @@ const JobBoard = () => {
   // console.log('---_- Notions -_---')
   // console.log(jobPosts)
   return (
-    <S.JobBoard as="section">
+    <S.JobBoard as="section" id="careers">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
         <ImgMatch
           src="picking-orders.jpg"

@@ -11,6 +11,30 @@ type Props = {
   rethinkPage: {
     edges: {
       node: {
+        approach: {
+          _rawBody: string
+          _rawLead: string
+          figure: {
+            asset: {
+              fluid: ImageShape
+              title: string
+            }
+          }
+          heading: string
+          title: string
+        }
+        purpose: {
+          _rawBody: string
+          _rawLead: string
+          figure: {
+            asset: {
+              fluid: ImageShape
+              title: string
+            }
+          }
+          heading: string
+          title: string
+        }
         billboard: {
           title: string
           message: string
@@ -55,6 +79,34 @@ const useRethinkPage = () => {
       rethinkPage: allSanityRethinkPage {
         edges {
           node {
+            approach {
+              _rawBody
+              _rawLead
+              figure {
+                asset {
+                  fluid(maxWidth: 800) {
+                    ...GatsbySanityImageFluid
+                  }
+                  title
+                }
+              }
+              heading
+              title
+            }
+            purpose {
+              _rawBody
+              _rawLead
+              figure {
+                asset {
+                  fluid(maxWidth: 800) {
+                    ...GatsbySanityImageFluid
+                  }
+                  title
+                }
+              }
+              heading
+              title
+            }
             billboard {
               title
               message

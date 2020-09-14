@@ -83,8 +83,7 @@ const Footer: React.FC = () => {
             </a>
             <div className="amed-cert">
               <Flex className="inner">
-                <AmedCert />
-                <span>AMED Certified</span>
+              <Link to="/about#careers" className="footer-link">Careers</Link>
               </Flex>
             </div>
           </S.Social>

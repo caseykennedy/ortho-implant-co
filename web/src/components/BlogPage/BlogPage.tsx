@@ -28,10 +28,10 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-const RecentNews: React.FC<{ post: PostQuery }> = ({ post }) => {
+const FeaturedNews: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
     <Section pt={8} pb={8} border={true}>
-      <S.RecentNews>
+      <S.Featured>
         <Box width={[1, 1 / 2]} mb={7}>
           {post.mainImage && (
             <Img
@@ -46,7 +46,7 @@ const RecentNews: React.FC<{ post: PostQuery }> = ({ post }) => {
           <Flex flexDirection="column" pr={[0, 8]}>
             <Box>
               <Heading as="h5">
-                <mark>Recent {post.categories[0].title}</mark>
+                <mark>Featured {post.categories[0].title}</mark>
               </Heading>
               <Heading as="h3">{post.title}</Heading>
               <Box className="card__meta  t--uppercase">
@@ -64,7 +64,48 @@ const RecentNews: React.FC<{ post: PostQuery }> = ({ post }) => {
             </Box>
           </Flex>
         </Box>
-      </S.RecentNews>
+      </S.Featured>
+    </Section>
+  )
+}
+
+const FeaturedBlog: React.FC<{ post: PostQuery }> = ({ post }) => {
+  return (
+    <Section pt={8} pb={8} border={true}>
+      <S.Featured>
+        <Box width={[1, 1 / 2]} mb={7}>
+          {post.mainImage && (
+            <Img
+              fluid={post.mainImage.asset.fluid}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={post.title}
+            />
+          )}
+        </Box>
+        <Box width={[1, 1 / 2]}>
+          <Flex flexDirection="column" pr={[0, 8]}>
+            <Box>
+              <Heading as="h5">
+                <mark>Featured {post.categories[0].title}</mark>
+              </Heading>
+              <Heading as="h3">{post.title}</Heading>
+              <Box className="card__meta  t--uppercase">
+                <Text as="span">{post.publishedAt}</Text>
+              </Box>
+              {post._rawExcerpt && (
+                <BlockContent blocks={post._rawExcerpt || []} />
+              )}
+            </Box>
+
+            <Box mt={7}>
+              <Button to={`/news/${post.slug.current}`} invert={true}>
+                Full article
+              </Button>
+            </Box>
+          </Flex>
+        </Box>
+      </S.Featured>
     </Section>
   )
 }
@@ -76,6 +117,11 @@ const BlogPage = () => {
       return post
     }
     if (post.categories[0] && post.categories[0].title.includes('Press')) {
+      return post
+    }
+  })
+  const blogPosts = posts.filter(({ node: post }) => {
+    if (post.categories[0].title.includes('Blog')) {
       return post
     }
   })
@@ -96,7 +142,10 @@ const BlogPage = () => {
       <PageTitle {...pageTitle} />
       <S.BlogPage>
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
-          <RecentNews post={post} key={idx} />
+          <FeaturedNews post={post} key={idx} />
+        ))}
+        {blogPosts.slice(0, 1).map(({ node: post }, idx) => (
+          <FeaturedBlog post={post} key={idx} />
         ))}
       </S.BlogPage>
       <Filter />
