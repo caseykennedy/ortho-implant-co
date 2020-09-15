@@ -35,7 +35,7 @@ export const Logo = styled(Box)`
 
   /* border-bottom: 4px solid ${theme.colors.primary}; */
 
-  @media (min-width: 400px) {
+  @media (min-width: 900px) {
     display: flex;
   }
 
@@ -110,6 +110,7 @@ export const Toggle = styled.div`
 
 export const Cta = styled(Box)`
   display: none;
+  width: 288px;
 
   @media ${theme.mq.tablet} {
     display: initial;

@@ -79,7 +79,7 @@ const useHomePage = () => {
               linkTitle
               figure {
                 asset {
-                  fluid(maxWidth: 1440) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                   title
@@ -89,7 +89,7 @@ const useHomePage = () => {
             hero {
               image {
                 asset {
-                  fluid(maxWidth: 1440) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                 }
@@ -106,7 +106,7 @@ const useHomePage = () => {
               tabPanels {
                 image {
                   asset {
-                    fluid(maxWidth: 1024) {
+                    fluid(maxWidth: 800) {
                       ...GatsbySanityImageFluid
                     }
                   }
@@ -125,7 +125,7 @@ const useHomePage = () => {
             }
             testimonialsFigure {
               asset {
-                fluid(maxWidth: 1024) {
+                fluid(maxWidth: 1080) {
                   ...GatsbySanityImageFluid
                 }
               }

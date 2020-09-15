@@ -4,7 +4,6 @@
 
 // Libraries
 import React from 'react'
-import { useSpring, config } from 'react-spring'
 
 // Components
 import Layout from '../components/Layout'
@@ -39,5 +38,3 @@ const Terms = () => {
 }
 
 export default Terms
-
-// ___________________________________________________________________

@@ -8,8 +8,6 @@ import { Link } from 'gatsby'
 
 import { Parallax } from 'react-scroll-parallax'
 
-import { Box, Flex, Text, Heading } from '../../elements'
-
 import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
@@ -43,14 +41,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       </Overlay>
 
       <S.Header as="header">
-        <S.Logo
-          // className={
-          //   typeof window !== 'undefined' && location.pathname !== '/'
-          //     ? 'logo--dark'
-          //     : null
-          // }
-          className="logo--dark"
-        >
+        <S.Logo className="logo--dark">
           <Parallax y={[5, 10]}>
             <Link to="/" aria-label="Ortho Implant Co., back to home">
               <Logo />

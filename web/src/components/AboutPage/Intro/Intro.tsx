@@ -21,7 +21,7 @@ import theme from '../../../../config/theme'
 type PositionProps = {
   item: {
     name: string
-    src: string
+    // src: string
     content: string
   }
 }
@@ -55,12 +55,6 @@ const Position = ({ item }: PositionProps) => {
 }
 
 const Intro = () => {
-  const fadeAnimation = useSpring({
-    config: config.molasses,
-    delay: 260,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
   return (
     <S.Intro>
       <S.About width={[1, 8 / 10, 2 / 3]}>
@@ -87,17 +81,6 @@ const Intro = () => {
           ))}
         </Box>
       </S.About>
-
-      {/* <S.Values>
-        <Box width={[1, 1 / 3]}>
-          <ImgMatch
-            src="girl-climbing-boulder.jpg"
-            altText="Lady climbing bouldeer."
-          />
-        </Box>
-
-        <Box width={[1, 2 / 3]}>asdf</Box>
-      </S.Values> */}
     </S.Intro>
   )
 }
@@ -107,19 +90,16 @@ export default Intro
 const positioning = [
   {
     name: 'purpose',
-    src: 'skeleton.jpg',
     content:
       'We believe that the way orthopaedic implants are priced and supplied is flawed to the detriment of everyone. Our purpose is to rethink and change that system.'
   },
   {
     name: 'mission',
-    src: 'AdobeStock_266668857.jpg',
     content:
       'Our mission is to lower the cost of orthopaedic procedures by developing more affordable implants with the perfect balance of quality, service and price for surgeons, hospitals and patients.'
   },
   {
     name: 'vision',
-    src: 'ledge-think.jpg',
     content:
       'Because of our forward thinking view of the way healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
   }

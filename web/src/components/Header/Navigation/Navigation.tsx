@@ -5,9 +5,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Icon from '../../Icons'
 import { Box } from '../../../elements'
-
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
@@ -63,7 +61,7 @@ const data = [
     link: '/rethink'
   },
   {
-    name: 'about oic',
+    name: 'about',
     link: '/about',
     subPage: [
       {

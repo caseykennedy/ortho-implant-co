@@ -54,7 +54,7 @@ const useLegal = () => {
               link
               image {
                 asset {
-                  fluid(maxWidth: 1200) {
+                  fluid(maxWidth: 800) {
                     srcWebp
                     srcSetWebp
                     srcSet

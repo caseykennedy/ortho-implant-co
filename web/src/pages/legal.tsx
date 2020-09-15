@@ -4,7 +4,6 @@
 
 // Libraries
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 
 // Components
 import Layout from '../components/Layout'
@@ -39,5 +38,3 @@ const Legal = () => {
 }
 
 export default Legal
-
-// ___________________________________________________________________

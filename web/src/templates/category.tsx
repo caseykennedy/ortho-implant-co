@@ -4,12 +4,9 @@
 
 // Libraries
 import React from 'react'
-import { Link } from 'gatsby'
-import { useSpring, config } from 'react-spring'
 
 // Elements
-import { AnimatedBox, Box, Heading } from '../elements'
-import Divider from '../elements/Divider'
+import { AnimatedBox } from '../elements'
 
 // Components
 import Layout from '../components/Layout'
@@ -25,16 +22,6 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
   pageContext
 }) => {
   const page = pageContext
-  // console.log('—————|— Category —|—————')
-  // console.log(page)
-
-  // Page animation
-  const pageAnimation = useSpring({
-    config: config.molasses,
-    delay: 0,
-    from: { opacity: 0 },
-    to: { opacity: 1 }
-  })
   return (
     <Layout>
       <SEO

@@ -8,7 +8,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 // ___________________________________________________________________
 
 type Props = {
-  legal: {
+  terms: {
     edges: {
       node: {
         _id: string
@@ -54,7 +54,7 @@ const useTerms = () => {
               link
               image {
                 asset {
-                  fluid(maxWidth: 1200) {
+                  fluid(maxWidth: 800) {
                     srcWebp
                     srcSetWebp
                     srcSet
@@ -70,7 +70,7 @@ const useTerms = () => {
             billboard {
               figure {
                 asset {
-                  fluid(maxWidth: 1200) {
+                  fluid(maxWidth: 800) {
                     srcWebp
                     srcSetWebp
                     srcSet

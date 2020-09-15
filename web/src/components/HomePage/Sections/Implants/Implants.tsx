@@ -8,7 +8,6 @@ import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
 import Section from '../../../Section'
-import ImgMatch from '../../../ImgMatch'
 
 // Hooks
 import useHover from '../../../../hooks/useHover'

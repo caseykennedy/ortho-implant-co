@@ -4,7 +4,6 @@
 
 // Libraries
 import React from 'react'
-import { useSpring, config } from 'react-spring'
 
 // Components
 import Layout from '../components/Layout'
@@ -20,13 +19,6 @@ import theme from '../../config/theme'
 // ___________________________________________________________________
 
 const Implants = () => {
-  // Page animation
-  const pageAnimation = useSpring({
-    config: config.molasses,
-    delay: 0,
-    from: { opacity: 0 },
-    to: { opacity: 1 }
-  })
   return (
     <Layout>
       <SEO
@@ -43,5 +35,3 @@ const Implants = () => {
 }
 
 export default Implants
-
-// ___________________________________________________________________

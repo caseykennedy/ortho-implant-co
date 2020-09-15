@@ -114,7 +114,7 @@ const useRethinkPage = () => {
               linkTitle
               figure {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                   title
@@ -128,7 +128,7 @@ const useRethinkPage = () => {
               title
               image {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                 }
@@ -137,7 +137,7 @@ const useRethinkPage = () => {
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                 }

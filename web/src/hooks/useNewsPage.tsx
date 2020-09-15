@@ -51,7 +51,7 @@ const useNewsPage = () => {
               linkTitle
               figure {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                   title
@@ -61,7 +61,7 @@ const useNewsPage = () => {
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 1080) {
+                  fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
                   }
                 }

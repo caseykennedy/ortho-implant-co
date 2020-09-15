@@ -21,14 +21,14 @@ const useProduct = () => {
             _rawFeatures
             gallery {
               asset {
-                fluid(maxWidth: 1080) {
+                fluid(maxWidth: 800) {
                   ...GatsbySanityImageFluid
                 }
               }
             }
             mainImage {
               asset {
-                fluid(maxWidth: 1080) {
+                fluid(maxWidth: 800) {
                   ...GatsbySanityImageFluid
                 }
               }

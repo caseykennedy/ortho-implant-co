@@ -38,7 +38,7 @@ const useCategory = () => {
             }
             image {
               asset {
-                fluid(maxWidth: 1080) {
+                fluid(maxWidth: 800) {
                   aspectRatio
                   base64
                   sizes

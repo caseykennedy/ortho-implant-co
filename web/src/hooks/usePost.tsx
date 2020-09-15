@@ -23,7 +23,7 @@ const usePost = () => {
             }
             mainImage {
               asset {
-                fluid(maxWidth: 1080) {
+                fluid(maxWidth: 800) {
                   srcWebp
                   srcSetWebp
                   srcSet

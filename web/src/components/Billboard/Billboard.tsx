@@ -5,13 +5,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
-import { Parallax } from 'react-scroll-parallax'
 
-import ImgMatch from '../ImgMatch'
-import Section from '../Section'
 import Button from '../../elements/Button'
-
-import IllustrationOne from '../IllustrationOne'
 
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../elements'
@@ -47,16 +42,6 @@ const Intro: React.FC<Props> = ({
       <S.Figure>
         {src && (
           <>
-            {/* <ImgMatch src={src} altText={altText} /> */}
-            {/* <Parallax y={[-15, 3]}>
-            <Img
-              fluid={src}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={altText}
-              className="img"
-            />
-          </Parallax> */}
             <Img
               fluid={src}
               objectFit="cover"
@@ -95,10 +80,6 @@ const Intro: React.FC<Props> = ({
           </Link>
         )}
       </S.BillboardInner>
-
-      {/* <S.Illustration>
-        <IllustrationOne />
-      </S.Illustration> */}
     </S.Billboard>
   )
 }
