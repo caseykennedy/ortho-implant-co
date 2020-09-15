@@ -58,6 +58,7 @@ export const Billboard = styled(Flex)`
   h1 {
     font-size: calc(${theme.fontSizes[5]} / 1.25);
     text-transform: uppercase;
+    line-height: 1;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[5]} / 1.25);
@@ -65,6 +66,7 @@ export const Billboard = styled(Flex)`
 
     @media ${theme.mq.desktop} {
       margin-top: -${theme.space[7]};
+      font-size: calc(${theme.fontSizes[5]} * 1);
     }
   }
 `
