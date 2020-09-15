@@ -30,12 +30,8 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
-  @media ${theme.mq.tablet} {
-    width: 300px;
-  }
-
   @media ${theme.mq.desktop} {
-    width: 300px;
+    width: calc(${theme.space[7]} * 4);
   }
 
   &:hover {
