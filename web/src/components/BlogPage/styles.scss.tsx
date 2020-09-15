@@ -3,9 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
 
-import { Box, Flex, Heading } from '../../elements'
+import { Flex } from '../../elements'
 
 import theme from '../../../config/theme'
 
@@ -18,9 +17,6 @@ export const BlogPage = styled(Flex)`
   width: 100%;
   z-index: 9;
 
-  @media ${theme.mq.tablet} {
-  }
-
   a {
     display: flex;
     flex-direction: column;
@@ -28,10 +24,6 @@ export const BlogPage = styled(Flex)`
 
     color: ${theme.colors.text};
     background: ${theme.colors.white};
-
-    &:hover {
-      /* background: ${theme.colors.primary}; */
-    }
   }
 
   .grid__cell {
@@ -55,12 +47,10 @@ export const BlogPage = styled(Flex)`
 export const Featured = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: stretch; */
 
   @media ${theme.mq.tablet} {
     flex-direction: row-reverse;
   }
-  
 
   .card__meta {
     display: flex;
@@ -68,7 +58,7 @@ export const Featured = styled(Flex)`
     align-items: center;
     padding: ${theme.space[3]} 0;
     width: 100%;
-    
+
     font-size: calc(${theme.fontSizes[1]} / 1.15);
     font-family: ${theme.fonts.code};
 
@@ -77,7 +67,6 @@ export const Featured = styled(Flex)`
 
       svg {
         width: ${theme.iconWidth};
-        /* fill: ${theme.colors.text}; */
       }
     }
   }
@@ -93,22 +82,16 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   justify-content: stretch;
   max-height: 800px;
 
-  /* background: ${theme.colors.white}; */
   border-bottom: ${p =>
     !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
-  @media ${theme.mq.tablet} {
-  }
-
   .card {
-
     &__img {
       max-height: 200px;
       height: 200px;
       overflow: hidden;
       width: 75%;
-      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
-      /* mix-blend-mode: luminosity; */
+      padding: ${theme.space[5]} 0 0 ${theme.space[5]};
       transition: ${theme.transition.all};
 
       &--small {
@@ -123,7 +106,7 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding:  ${theme.space[5]};
+      padding: ${theme.space[5]};
       background: transparent;
       width: 100%;
 
@@ -133,7 +116,6 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       h3 {
         font-size: ${theme.fontSizes[3]};
         font-weight: 400;
-        /* text-transform: uppercase; */
         margin-top: ${theme.space[7]};
         margin-bottom: ${theme.space[5]};
       }
@@ -143,7 +125,6 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       }
 
       p {
-        /* font-size: calc(${theme.fontSizes[1]} * 1); */
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -158,9 +139,9 @@ export const Card = styled(Flex)<{ border?: boolean }>`
     justify-content: space-between;
     align-items: center;
     margin-top: ${theme.space[5]};
-    padding:  0 ${theme.space[5]} ${theme.space[5]};
+    padding: 0 ${theme.space[5]} ${theme.space[5]};
     width: 100%;
-    
+
     font-size: calc(${theme.fontSizes[1]} / 1.15);
     font-family: ${theme.fonts.code};
 
@@ -169,7 +150,6 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
       svg {
         width: ${theme.iconWidth};
-        /* fill: ${theme.colors.text}; */
       }
     }
   }
@@ -194,29 +174,18 @@ export const CardHolder = styled(Flex)`
     }
 
     .swiper-wrapper {
-      /* padding-bottom: 2px; */
-
       .swiper-slide {
         transition: ${theme.transition.all};
-        
+
         height: auto; /* For equal slide height */
 
         &:hover {
-          /* background: ${theme.colors.primary}; */
           cursor: pointer;
-        }
-
-        &.swiper-slide-active {
-          /* background: ${theme.colors.primary}; */
         }
       }
     }
 
     .swiper-pagination {
-      /* background: ${theme.colors.primary}; */
-      /* top: -3rem; */
-      /* bottom: initial; */
-
       text-align: left;
 
       &.swiper-pagination-bullets {
@@ -243,34 +212,15 @@ export const CardColumn = styled(Flex)`
 
   a {
     width: 100%;
-    
-    &:first-child {
-      &.card--highlight div {
-        /* background: ${theme.colors.quinary}; */
-        /* color: ${theme.colors.white}; */
-      }
-    }
 
     .card {
       &:last-child {
         border-right: none;
       }
-    
+
       &:last-child {
         background: ${theme.colors.quinary};
-
-        svg {
-        }
       }
     }
   }
-
-  /* div {
-    margin-top: ${theme.space[5]};
-    width: 100%;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  } */
 `

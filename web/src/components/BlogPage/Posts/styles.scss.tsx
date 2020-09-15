@@ -2,9 +2,6 @@
 
 // ___________________________________________________________________
 
-import { Link } from 'gatsby'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex, AnimatedFlex } from '../../../elements'
@@ -15,8 +12,12 @@ export const Posts = styled(Flex)`
   flex-wrap: wrap;
 
   background: ${theme.colors.quinary};
-  padding: ${theme.space[5]};
+  padding: ${theme.space[3]};
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[5]};
+  }
 
   a {
     width: 100%;

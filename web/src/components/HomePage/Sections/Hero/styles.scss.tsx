@@ -50,13 +50,17 @@ export const Billboard = styled(Flex)`
 
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
-  border-left: ${theme.border};
-  padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
+  padding: ${theme.space[3]} ${theme.space[3]} ${theme.space[2]};
   position: relative;
   z-index: 9;
 
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
+    border-left: ${theme.border};
+  }
+
   h1 {
-    font-size: calc(${theme.fontSizes[5]} / 1.25);
+    font-size: calc(${theme.fontSizes[5]} / 1.5);
     text-transform: uppercase;
     line-height: 1;
 

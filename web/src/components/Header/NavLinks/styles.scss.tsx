@@ -16,6 +16,7 @@ import { Flex, AnimatedFlex } from '../../../elements'
 export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: ${theme.space[7]};
   width: 100%;
 `
 

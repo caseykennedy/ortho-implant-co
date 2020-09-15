@@ -91,7 +91,7 @@ const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
   return (
     <S.Posts width={1}>
       <Grid
-        columns={`repeat(auto-fit, minmax(400px, 1fr))`}
+        columns={`repeat(auto-fit, minmax(320px, 1fr))`}
         gap={theme.space[5]}
       >
         {itemTransitions.map(({ item, props, key }) => (

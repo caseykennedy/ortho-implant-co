@@ -14,8 +14,10 @@ import { Box, Flex } from '../../../elements'
 export const Filter = styled.div`
   width: 100%;
   position: relative;
+  margin-top: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
+    margin-top: 0;
   }
 `
 

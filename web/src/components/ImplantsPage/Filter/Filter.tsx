@@ -3,10 +3,6 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
-
-// Libraries
-import { useTransition } from 'react-spring'
 
 // Hooks
 import useProduct from '../../../hooks/useProduct'
@@ -16,10 +12,8 @@ import useCategory from '../../../hooks/useCategory'
 import { Box, Flex, Heading } from '../../../elements'
 
 // Components
-import Grid from '../Grid'
 import List from '../List'
 import Icon from '../../Icons'
-import ImgMatch from '../../ImgMatch'
 
 // Theme
 import * as S from './styles.scss'

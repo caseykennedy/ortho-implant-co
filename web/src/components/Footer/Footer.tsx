@@ -1,5 +1,4 @@
 // Footer:
-// TODO:
 
 // ___________________________________________________________________
 
@@ -8,7 +7,6 @@ import { Link } from 'gatsby'
 
 import { Text, Heading, Box, Flex } from '../../elements'
 import Icon from '../Icons'
-import Prefooter from './Prefooter'
 import Pixels from '../Pixels'
 import AmedCert from '../AmedCert'
 
@@ -72,13 +70,25 @@ const Footer: React.FC = () => {
         </S.Row>
         <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
-            <a href="/" target="__blank" rel="noopener">
+            <a
+              href="//www.facebook.com/OrthoImplantCompany"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="facebook" />
             </a>
-            <a href="/" target="__blank" rel="noopener">
+            <a
+              href="//www.linkedin.com/company/the-orthopaedic-implant-company"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="linkedIn" />
             </a>
-            <a href="/" target="__blank" rel="noopener">
+            <a
+              href="//twitter.com/orthoimplantco"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="twitter" />
             </a>
             <div className="amed-cert">

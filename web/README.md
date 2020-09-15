@@ -1,6 +1,6 @@
 # Orthopaedic Implant Co. Marketing Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8eef4c51-ad30-48f9-9dd4-169a5d568132/deploy-status)](https://app.netlify.com/sites/trusting-wiles-38de65/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d3cf9eda-d5b1-4eb2-a6dd-6750ca89e81c/deploy-status)](https://app.netlify.com/sites/oic/deploys)
 
 ## Features
 

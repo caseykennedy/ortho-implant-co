@@ -3,14 +3,12 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import BlockContent from '../BlockContent'
-import Icon from '../Icons'
 import Section from '../Section'
 import Filter from './Filter'
 
@@ -28,50 +26,9 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-const FeaturedNews: React.FC<{ post: PostQuery }> = ({ post }) => {
+const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
-    <Section pt={8} pb={8} border={true}>
-      <S.Featured>
-        <Box width={[1, 1 / 2]} mb={7}>
-          {post.mainImage && (
-            <Img
-              fluid={post.mainImage.asset.fluid}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={post.title}
-            />
-          )}
-        </Box>
-        <Box width={[1, 1 / 2]}>
-          <Flex flexDirection="column" pr={[0, 8]}>
-            <Box>
-              <Heading as="h5">
-                <mark>Featured {post.categories[0].title}</mark>
-              </Heading>
-              <Heading as="h3">{post.title}</Heading>
-              <Box className="card__meta  t--uppercase">
-                <Text as="span">{post.publishedAt}</Text>
-              </Box>
-              {post._rawExcerpt && (
-                <BlockContent blocks={post._rawExcerpt || []} />
-              )}
-            </Box>
-
-            <Box mt={7}>
-              <Button to={`/news/${post.slug.current}`} invert={true}>
-                Full article
-              </Button>
-            </Box>
-          </Flex>
-        </Box>
-      </S.Featured>
-    </Section>
-  )
-}
-
-const FeaturedBlog: React.FC<{ post: PostQuery }> = ({ post }) => {
-  return (
-    <Section pt={8} pb={8} border={true}>
+    <Section border={true}>
       <S.Featured>
         <Box width={[1, 1 / 2]} mb={7}>
           {post.mainImage && (
@@ -127,9 +84,6 @@ const BlogPage = () => {
   })
 
   const page = useNewsPage()
-
-  console.log(page)
-
   // Page title
   const pageTitle = {
     altText: page.pageTitle.title,
@@ -142,10 +96,10 @@ const BlogPage = () => {
       <PageTitle {...pageTitle} />
       <S.BlogPage>
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
-          <FeaturedNews post={post} key={idx} />
+          <Featured post={post} key={idx} />
         ))}
         {blogPosts.slice(0, 1).map(({ node: post }, idx) => (
-          <FeaturedBlog post={post} key={idx} />
+          <Featured post={post} key={idx} />
         ))}
       </S.BlogPage>
       <Filter />

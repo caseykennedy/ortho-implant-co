@@ -2,8 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import React from 'react'
 
 // Libraries
 import { useSpring, config } from 'react-spring'
@@ -11,7 +10,6 @@ import { useInView } from 'react-intersection-observer'
 
 // Sections
 import Gallery from '../Gallery'
-import PrevNext from '../PrevNext'
 import Video from '../Video'
 
 // Components

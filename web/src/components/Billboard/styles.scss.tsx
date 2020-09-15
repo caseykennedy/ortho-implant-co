@@ -23,7 +23,7 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  padding-bottom: calc(60px - ${theme.space[5]});
+  padding-bottom: calc(100px - ${theme.space[5]});
   z-index: 9;
 
   @media ${theme.mq.desktop} {
@@ -50,6 +50,12 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
     }
 
     h4 {
+      display: none;
+
+      @media ${theme.mq.desktop} {
+        display: initial;
+      }
+
       mark {
         background-color: ${theme.colors.white};
         color: ${theme.colors.black};

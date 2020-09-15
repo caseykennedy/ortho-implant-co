@@ -49,14 +49,21 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
   border-left: none;
-  padding: ${theme.space[5]} ${theme.space[5]} ${theme.space[3]};
+
+  margin-bottom: ${theme.space[5]};
+  padding: ${theme.space[4]} ${theme.space[4]} ${theme.space[2]};
   position: relative;
+
   z-index: 9;
 
-  @media ${theme.mq.desktop} {
+  @media ${theme.mq.tablet} {
     padding: ${theme.space[7]} ${theme.space[10]} ${theme.space[2]}
       ${theme.space[5]};
+  }
+
+  @media ${theme.mq.desktop} {
     border-left: ${theme.border};
+    margin-bottom: 0;
   }
 
   h1 {
