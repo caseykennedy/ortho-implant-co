@@ -35,7 +35,7 @@ const AboutPage = () => {
     message: page.billboard.message,
     title: page.billboard.title,
     src: page.billboard.figure.asset.fluid,
-    altText: page.billboard.figure.asset.title,
+    altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
     to: page.billboard.linkTo
   }

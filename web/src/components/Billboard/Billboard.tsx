@@ -9,7 +9,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 import Button from '../../elements/Button'
 
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../elements'
+import { Box } from '../../elements'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________

@@ -2,13 +2,9 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
-
-import * as S from './styles.scss'
-import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 

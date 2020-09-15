@@ -25,14 +25,13 @@ import theme from '../../../config/theme'
 
 const HomePage: React.FC = () => {
   const data = useHomePage()
-
   // Billboard
   const billboardProps = {
     bg: theme.colors.tertiary,
     message: data.billboard.message,
     title: data.billboard.title,
     src: data.billboard.figure.asset.fluid,
-    altText: data.billboard.figure.asset.title,
+    altText: data.billboard.figure.alt,
     btnText: data.billboard.linkTitle,
     to: data.billboard.linkTo
   }

@@ -45,7 +45,7 @@ const ContactPage = () => {
     to: page.billboard.linkTo,
     btnText: page.billboard.linkTitle,
     src: page.billboard.figure.asset.fluid,
-    altText: page.billboard.figure.asset.title
+    altText: page.billboard.figure.alt
   }
   return (
     <>

@@ -17,6 +17,7 @@ type Props = {
           linkTo: string
           linkTitle: string
           figure: {
+            alt: string
             asset: {
               fluid: ImageShape
               title: string
@@ -78,6 +79,7 @@ const useHomePage = () => {
               linkTo
               linkTitle
               figure {
+                alt
                 asset {
                   fluid(maxWidth: 800) {
                     ...GatsbySanityImageFluid
