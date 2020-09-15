@@ -16,7 +16,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   justify-content: space-between;
   align-items: flex-end;
 
-  width: 100%;
+  width: calc(${theme.space[7]} * 4);
   padding: calc(${theme.space[5]}) ${theme.space[3]} ${theme.space[3]};
 
   color: ${p => p.invert ? theme.colors.white : theme.colors.text};
@@ -31,6 +31,10 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {
+    width: 300px;
+  }
+
+  @media ${theme.mq.desktop} {
     width: 300px;
   }
 
