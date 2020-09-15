@@ -5,14 +5,14 @@ module.exports = {
 
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'Orthopaedic Implant Co. | Value you can trust', // Navigation and Site Title
-  siteTitleAlt: 'Orthopaedic Implant Co.', // Alternative Site title for SEO
-  siteTitleShort: 'Orthopaedic Implant Co.', // short_name for manifest
-  siteHeadline: 'Orthopaedic implants you can trust', // Headline for schema.org JSONLD
+  siteTitle: 'Orthopaedic Implant Company | Value Based, Clinically Proven Implants for Doctors, Hospitals and Patients', // Navigation and Site Title
+  siteTitleAlt: 'Orthopaedic Implant Company | Value Based, Clinically Proven Implants', // Alternative Site title for SEO
+  siteTitleShort: 'Orthopaedic Implant Co. | Clinically Proven Implants', // short_name for manifest
+  siteHeadline: 'Value Based, Clinically Proven Implants for Doctors, Hospitals and Patients', // Headline for schema.org JSONLD
   siteUrl: 'http://orthoimplantcompany.com/', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Orthopaedic Implant Co.',
+  siteDescription: 'OIC is the leading manufacturer of high value orthopaedic implants. OIC implants cost 50 to 60 percent less than the average market price.',
   author: 'Casey Kennedy', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
