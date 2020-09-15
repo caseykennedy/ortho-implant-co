@@ -70,7 +70,7 @@ const Prefooter = () => {
         </S.Billboard>
       </S.Prefooter>
       <S.Figure>
-        <ImgMatch src="rafting.jpg" altText="People rafting" />
+        {/* <ImgMatch src="rafting.jpg" altText="People rafting" /> */}
         {/* <Img
           fluid={query.image.asset.fluid}
           objectFit="cover"

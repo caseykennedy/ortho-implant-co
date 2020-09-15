@@ -72,9 +72,6 @@ const Implants = () => {
           <Category cat={cat} key={idx} />
         ))}
       </S.Categories>
-      {/* <S.Decorator width={[1 / 2]}>
-        <ImgMatch src="ill-exfix.png" altText="Lady climbing bouldeer." />
-      </S.Decorator> */}
     </Section>
   )
 }
