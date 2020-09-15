@@ -14,7 +14,7 @@ export const Hero = styled(Flex)`
   position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
-  max-height: 333px;
+  min-height: calc(${theme.space[3]} * 18);
 
   @media ${theme.mq.tablet} {
     height: calc(57vh - ${theme.headerHeight});
