@@ -6,13 +6,12 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
-import BlockContent from '../../../BlockContent'
-import Section from '../../../Section'
+import BlockContent from '../../BlockContent'
 
-import Button from '../../../../elements/Button'
-import { Box, Flex, Heading, Text } from '../../../../elements'
+import Button from '../../../elements/Button'
+import { Box, Flex, Heading, Text } from '../../../elements'
 
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

@@ -5,15 +5,15 @@
 import React from 'react'
 
 // Hooks
-import useHomePage from '../../../../hooks/useHomePage'
+import useHomePage from '../../../hooks/useHomePage'
 
 // Components
-import BlockContent from '../../../BlockContent'
+import BlockContent from '../../BlockContent'
 
 // Theme
-import Button from '../../../../elements/Button'
-import { Box, Flex, Heading, Text } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import Button from '../../../elements/Button'
+import { Box, Flex, Heading, Text } from '../../../elements'
+import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

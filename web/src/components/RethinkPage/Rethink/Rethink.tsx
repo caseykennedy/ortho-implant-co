@@ -3,20 +3,18 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
-import BlockContent from '../../../BlockContent'
-import ImgMatch from '../../../ImgMatch'
-import Accordion from '../../../Accordion'
+import BlockContent from '../../BlockContent'
+import Accordion from '../../Accordion'
 
-import useRethinkPage from '../../../../hooks/useRethinkPage'
+import useRethinkPage from '../../../hooks/useRethinkPage'
 
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

@@ -3,26 +3,24 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Hooks
-import useHomePage from '../../../../hooks/useHomePage'
+import useHomePage from '../../../hooks/useHomePage'
 
 // Libraries
 import Swiper from 'react-id-swiper'
 
 // Components
-import BlockContent from '../../../BlockContent'
-import Section from '../../../Section'
-import ImgMatch from '../../../ImgMatch'
-import Pixels from '../../../Pixels'
+import BlockContent from '../../BlockContent'
+import Section from '../../Section'
+import Pixels from '../../Pixels'
 
 // UI
-import { Box, Flex, Heading, Text } from '../../../../elements'
+import { Box, Flex, Heading, Text } from '../../../elements'
 
 // Theme
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

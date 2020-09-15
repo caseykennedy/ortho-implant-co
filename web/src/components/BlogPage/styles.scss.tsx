@@ -3,9 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-
 import { Flex } from '../../elements'
-
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________

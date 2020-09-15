@@ -10,15 +10,15 @@ import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
 // Components
-import BlockContent from '../../../BlockContent'
+import BlockContent from '../../BlockContent'
 
 // Hooks
-import useRethinkPage from '../../../../hooks/useRethinkPage'
+import useRethinkPage from '../../../hooks/useRethinkPage'
 
 // UI + Styles
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

@@ -7,15 +7,17 @@ import React from 'react'
 // Hooks
 import useHomePage from '../../hooks/useHomePage'
 
-import Rethink from './Sections/Rethink'
-import Hero from './Sections/Hero'
-import Implants from './Sections/Implants'
-import Testimonials from './Sections/Testimonials'
-import Blog from './Sections/Blog'
+// Sections
+import Rethink from './Rethink'
+import Hero from './Hero'
+import Implants from './Implants'
+import Testimonials from './Testimonials'
+import Blog from './Blog'
 
+// Components
 import Billboard from '../Billboard'
 
-import { Box, Flex, Heading, Text } from '../../elements'
+// Theme
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 

@@ -11,11 +11,9 @@ import { useTransition } from 'react-spring'
 import { Grid, Cell } from 'styled-css-grid'
 
 // Elements
-import { Box, Flex, Heading, Text, AnimatedFlex } from '../../../elements'
+import { Box, Heading, Text } from '../../../elements'
 
 // Components
-import Icon from '../../Icons'
-import ImgMatch from '../../ImgMatch'
 import BlockContent from '../../BlockContent'
 
 // Theme

@@ -10,18 +10,18 @@ import Img from 'gatsby-image/withIEPolyfill'
 import Swiper from 'react-id-swiper'
 
 // Components
-import BlockContent from '../../../BlockContent'
-import Icon from '../../../Icons'
-import Section from '../../../Section'
+import BlockContent from '../../BlockContent'
+import Icon from '../../Icons'
+import Section from '../../Section'
 
 // Hooks
-import usePost from '../../../../hooks/usePost'
+import usePost from '../../../hooks/usePost'
 
 // Elements
-import { Box, Flex, Heading, Text } from '../../../../elements'
+import { Box, Flex, Heading, Text } from '../../../elements'
 
 // Theme
-import theme from '../../../../../config/theme'
+import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

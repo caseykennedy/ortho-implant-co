@@ -6,9 +6,9 @@ import React from 'react'
 
 import PageTitle from '../PageTitle'
 import Section from '../Section'
-import Approach from './Sections/Approach'
-import Purpose from './Sections/Purpose'
-import Rethink from './Sections/Rethink'
+import Approach from './Approach'
+import Purpose from './Purpose'
+import Rethink from './Rethink'
 import Billboard from '../Billboard'
 
 import useRethinkPage from '../../hooks/useRethinkPage'

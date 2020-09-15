@@ -7,15 +7,15 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
-import Section from '../../../Section'
+import Section from '../../Section'
 
 // Hooks
-import useHover from '../../../../hooks/useHover'
-import useCategory from '../../../../hooks/useCategory'
+import useHover from '../../../hooks/useHover'
+import useCategory from '../../../hooks/useCategory'
 
 // UI + Styles
-import { Box, Flex, Heading, Text } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, Heading, Text } from '../../../elements'
+import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

@@ -3,16 +3,15 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { useSpring, config } from 'react-spring'
 import Img from 'gatsby-image/withIEPolyfill'
 import { Parallax } from 'react-scroll-parallax'
 
-import useHomePage from '../../../../hooks/useHomePage'
+import useHomePage from '../../../hooks/useHomePage'
 
 import * as S from './styles.scss'
-import { Box, Flex, AnimatedBox, Heading } from '../../../../elements'
-import theme from '../../../../../config/theme'
+import { Box, Flex, AnimatedBox, Heading } from '../../../elements'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
