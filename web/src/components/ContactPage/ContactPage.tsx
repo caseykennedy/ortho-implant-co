@@ -110,7 +110,7 @@ const ContactPage = () => {
         <Box bg="black" width={[1, 1 / 2, 6 / 10]} className="map">
           <GoogleMapReact
             bootstrapURLKeys={{
-              key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
+              key: 'AIzaSyD8wi_5Gfo2TS8UcisEYQAV73CMsAtxw1s'
             }}
             defaultCenter={{
               lat,

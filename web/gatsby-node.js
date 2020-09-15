@@ -69,82 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
-
-  // Department pages
-  // ___________________________________________________________________
-  const product = graphql(`
-    {
-      products: allSanityProduct(sort: { fields: name, order: ASC }) {
-        edges {
-          node {
-            _rawAdditionalInfo
-            _rawDescription
-            _rawExcerpt
-            _rawFeatures
-            gallery {
-              asset {
-                fluid(maxWidth: 1080) {
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                  base64
-                  srcWebp
-                  srcSetWebp
-                }
-              }
-            }
-            publishedAt(formatString: "dddd, MMMM yyyy")
-            slug {
-              current
-            }
-            name
-            shortName
-            videos {
-              title
-              url
-            }
-            categories {
-              title
-            }
-          }
-          previous {
-            name
-            shortName
-            slug {
-              current
-            }
-            _rawExcerpt
-          }
-          next {
-            name
-            shortName
-            slug {
-              current
-            }
-            _rawExcerpt
-          }
-        }
-      }
-    }
-  `).then(result => {
-    if (result.errors) {
-      Promise.reject(result.errors)
-    }
-    result.data.products.edges.forEach(edge => {
-      createPage({
-        path: `/implants/${edge.node.slug.current}`,
-        component: ProductTemplate,
-        context: {
-          slug: edge.node.slug.current,
-          page: edge.node,
-          next: edge.next,
-          prev: edge.previous
-        }
-      })
-    })
-  })
-
+  
   // Job Post
   // ___________________________________________________________________
   const jobPost = graphql(`
@@ -266,5 +191,5 @@ exports.createPages = ({ graphql, actions }) => {
   })
 
   // Return a Promise which will wait for all queries to resolve
-  return Promise.all([category, product, jobPost, post])
+  return Promise.all([category, jobPost, post])
 }
