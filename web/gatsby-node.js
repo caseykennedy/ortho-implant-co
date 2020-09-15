@@ -2,7 +2,6 @@
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const ProductTemplate = require.resolve('./src/templates/product.tsx')
   const CategoryTemplate = require.resolve('./src/templates/category.tsx')
   const JobPostTemplate = require.resolve('./src/templates/job-post.tsx')
   const PostTemplate = require.resolve('./src/templates/post.tsx')
