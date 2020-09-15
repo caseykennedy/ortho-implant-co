@@ -110,7 +110,7 @@ export const Toggle = styled.div`
 
 export const Cta = styled(Box)`
   display: none;
-  width: 288px;
+  width: 250px;
 
   @media ${theme.mq.tablet} {
     display: initial;

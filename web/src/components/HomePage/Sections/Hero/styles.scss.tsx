@@ -14,6 +14,7 @@ export const Hero = styled(Flex)`
   position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
+  max-height: calc(${theme.space[3]} * 18);
   min-height: calc(${theme.space[3]} * 18);
 
   @media ${theme.mq.tablet} {
@@ -55,7 +56,16 @@ export const Billboard = styled(Flex)`
   z-index: 9;
 
   h1 {
+    font-size: calc(${theme.fontSizes[5]} / 1.25);
     text-transform: uppercase;
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[5]} / 1.25);
+    }
+
+    @media ${theme.mq.desktop} {
+      margin-top: -${theme.space[7]};
+    }
   }
 `
 

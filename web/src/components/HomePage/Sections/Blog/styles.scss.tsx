@@ -9,6 +9,16 @@ import { darken } from 'polished'
 
 // ___________________________________________________________________
 
+export const Blog = styled(Flex)`
+  display: none;
+  flex-direction: column;
+
+  @media ${theme.mq.tablet} {
+    display: flex;
+  }
+
+`
+
 export const Card = styled(Flex)<{ border?: boolean }>`
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -17,9 +27,6 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
   border-right: ${p =>
     !p.border ? 'none' : `2px solid ${theme.colors.black}`};
-
-  @media ${theme.mq.tablet} {
-  }
 
   .card {
     &__img {
