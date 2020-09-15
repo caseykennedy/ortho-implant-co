@@ -2,3 +2,23 @@
   base = "web/"
   command = "npm run build"
   publish = "public/"
+
+[[redirects]]
+  from = "/blog"
+  to = "/news"
+  status = 301
+
+[[redirects]]
+  from = "/products"
+  to = "/implants"
+  status = 301
+
+[[redirects]]
+  from = "/our-team"
+  to = "/about#team"
+  status = 301
+
+[[redirects]]
+  from = "/careers"
+  to = "/about#careers"
+  status = 301
