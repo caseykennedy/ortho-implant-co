@@ -23,6 +23,7 @@ import productResources from './productResources'
 import person from './person'
 import post from './post'
 import product from './product'
+import resource from './resource'
 import rethinkTabs from './rethinkTabs'
 import siteSettings from './siteSettings'
 import termsConditions from './termsConditions'
@@ -66,6 +67,7 @@ export default createSchema({
     product,
     productCategory,
     productResources,
+    resource,
     rethinkTabs,
     siteSettings,
     termsConditions,

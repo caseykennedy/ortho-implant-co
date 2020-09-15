@@ -89,9 +89,9 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
               </Box>
 
               <Box width={[1, 1, 2 / 3]}>
-                {implant.resources.map((resource, idx) => (
-                  <a href={resource.url} key={idx} target="_blank">
-                    {resource.title}
+                {implant.resources.map((item, idx) => (
+                  <a href={item.resource.asset.url} key={idx} target="_blank">
+                    {item.title}
                     <Icon name="pdf" />
                   </a>
                 ))}

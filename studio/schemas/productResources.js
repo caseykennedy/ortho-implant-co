@@ -1,21 +1,21 @@
-import { MdApps } from 'react-icons/md'
+import { MdApps } from "react-icons/md";
 
 export default {
-  name: 'productResources',
-  title: 'Category',
-  type: 'document',
+  name: "productResources",
+  title: "Resources",
+  type: "document",
   icon: MdApps,
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: "title",
+      title: "Title",
+      type: "string"
     },
     {
-      name: 'url',
-      title: 'URL',
-      type: 'string'
-    },
+      name: "resource",
+      title: "Resource",
+      type: "file"
+    }
   ],
-  liveEdit: false
-}
+  liveEdit: true
+};

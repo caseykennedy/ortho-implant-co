@@ -48,8 +48,11 @@ const useProduct = () => {
             }
             resources {
               title
-              url
-              _id
+              resource {
+                asset {
+                  url
+                }
+              }
             }
           }
           previous {

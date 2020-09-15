@@ -147,9 +147,12 @@ type ProductNode = {
     title: string
   }[]
   resources: {
-    _id: string
-    url: string
     title: string
+    resource: {
+      asset: {
+        url: string
+      }
+    }
   }[]
 }
 
