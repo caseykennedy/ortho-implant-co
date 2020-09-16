@@ -13,7 +13,7 @@ import Marker from './Marker'
 import useContactPage from '../../hooks/useContactPage'
 
 // Elements
-import { Box, Heading } from '../../elements'
+import { Box, Text, Heading } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -22,6 +22,7 @@ import theme from '../../../config/theme'
 
 const ContactPage = () => {
   const page = useContactPage()
+  console.log(page)
 
   // Map coordinates
   // 316 California Ave ste. 701, Reno, NV 89509
@@ -83,13 +84,11 @@ const ContactPage = () => {
               Email
             </Heading>
             <p>
-              <a href={`mailto:info@orthoimplantco.com`}>
-                info@orthoimplantcompany.com
-              </a>
-              <br />
-              <a href={`mailto:help@orthoimplantco.com`}>
-                help@orthoimplantcompany.com
-              </a>
+              {page.emails.map((email, idx) => (
+                <Text as="a" href={`mailto:${email}`} key={idx} rel="noopener">
+                  {email}
+                </Text>
+              ))}
             </p>
           </Box>
           <Box bg="quinary" p={theme.gutter.axis}>

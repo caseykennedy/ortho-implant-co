@@ -12,13 +12,13 @@ type Props = {
     edges: {
       node: {
         companyName: string
-        emails: string
+        emails: string[]
         location: {
           lat: number
           lng: number
         }
-        mailingAddress: string
-        officeAddress: string
+        addressMailing: string
+        addressOffice: string
         telDirect: string
         telFax: string
         telTollFree: string
@@ -62,8 +62,8 @@ const useContactPage = () => {
               lat
               lng
             }
-            mailingAddress
-            officeAddress
+            addressMailing
+            addressOffice
             telDirect
             telFax
             telTollFree

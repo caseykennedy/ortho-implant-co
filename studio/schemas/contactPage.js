@@ -27,13 +27,13 @@ export default {
       type: "string"
     },
     {
-      name: "mailingAddress",
-      title: "Mailing Address",
+      name: "addressMailing",
+      title: "Address: Mailing",
       type: "string"
     },
     {
-      name: "officeAddress",
-      title: "Office Address",
+      name: "addressOffice",
+      title: "Address: Office",
       type: "string"
     },
     {
