@@ -11,6 +11,17 @@ type Props = {
   contactPage: {
     edges: {
       node: {
+        companyName: string
+        emails: string
+        location: {
+          lat: number
+          lng: number
+        }
+        mailingAddress: string
+        officeAddress: string
+        telDirect: string
+        telFax: string
+        telTollFree: string
         billboard: {
           title: string
           message: string
@@ -45,6 +56,17 @@ const useContactPage = () => {
       contactPage: allSanityContactPage {
         edges {
           node {
+            companyName
+            emails
+            location {
+              lat
+              lng
+            }
+            mailingAddress
+            officeAddress
+            telDirect
+            telFax
+            telTollFree
             billboard {
               title
               message

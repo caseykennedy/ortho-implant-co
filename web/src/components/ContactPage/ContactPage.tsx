@@ -20,13 +20,13 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-// Map coordinates
-// 316 California Ave ste. 701, Reno, NV 89509
-const lat = 39.4795277
-const long = -119.7890783
-
 const ContactPage = () => {
   const page = useContactPage()
+
+  // Map coordinates
+  // 316 California Ave ste. 701, Reno, NV 89509
+  const lat = page.location.lat
+  const lng = page.location.lng
 
   // Page title
   const pageTitle = {
@@ -58,17 +58,23 @@ const ContactPage = () => {
               Telephone | Fax
             </Heading>
             <p>
-              <a href={`tel:800-619-2797`}>+1 800 619-2797</a>{' '}
+              <a href={`tel:${page.telTollFree}`}>
+                +1 {page.telTollFree && page.telTollFree}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — toll free
               </Box>
               <br />
-              <a href={`tel:775-636-8281`}>+1 775 636-8281</a>{' '}
+              <a href={`tel:${page.telDirect}`}>
+                +1 {page.telDirect && page.telDirect}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — direct
               </Box>
               <br />
-              <a href={`tel:775-636-8284`}>+1 775 636-8284</a>{' '}
+              <a href={`tel:${page.telFax}`}>
+                +1 {page.telFax && page.telFax}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — fax
               </Box>
@@ -90,20 +96,12 @@ const ContactPage = () => {
             <Heading as="h4" mb={3} className="t--uppercase">
               Mailing
             </Heading>
-            <p>
-              316 California Ave #701,
-              <br />
-              Reno, NV 89509
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: page.mailingAddress }} />
 
             <Heading as="h4" mt={7} mb={3} className="t--uppercase">
               Office
             </Heading>
-            <p>
-              770 Smithridge Dr.
-              <br />
-              STE 400, Reno NV 89502
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: page.officeAddress }} />
           </Box>
         </Box>
 
@@ -114,12 +112,12 @@ const ContactPage = () => {
             }}
             defaultCenter={{
               lat,
-              lng: long
+              lng
             }}
             defaultZoom={10}
             yesIWantToUseGoogleMapApiInternals={true}
           >
-            <Marker lat={lat} lng={long} text="Test" />
+            <Marker lat={lat} lng={lng} text="Test" />
           </GoogleMapReact>
         </Box>
       </S.ContactPage>

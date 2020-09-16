@@ -1,10 +1,10 @@
+import { MdSettings } from "react-icons/md";
+
 export default {
-  name: 'contactPage',
-  title: 'Contact Page',
-  type: 'document',
-  liveEdit: false,
-  // You probably want to uncomment the next line once you've made the pages documents in the Studio. This will remove the pages document type from the create-menus.
-  // __experimental_actions: ['update', 'publish', /* 'create', 'delete' */],
+  name: "company",
+  title: "Company Info",
+  type: "document",
+  icon: MdSettings,
   fields: [
     {
       name: "companyName",
@@ -47,15 +47,5 @@ export default {
       title: "Map Location",
       type: "geopoint"
     },
-    {
-      name: 'pageTitle',
-      title: 'Page Title',
-      type: 'pageTitle'
-    },
-    {
-      name: 'billboard',
-      title: 'Billboard',
-      type: 'billboard'
-    },
   ]
-}
+};

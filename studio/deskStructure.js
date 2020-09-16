@@ -1,5 +1,12 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdAssignment, MdStop, MdSettings, MdLibraryBooks, MdFolder, MdViewQuilt } from "react-icons/md";
+import {
+  MdAssignment,
+  MdStop,
+  MdSettings,
+  MdLibraryBooks,
+  MdFolder,
+  MdViewQuilt
+} from "react-icons/md";
 import { GoFile } from "react-icons/go";
 
 const hiddenTypes = [
@@ -16,6 +23,18 @@ export default () =>
   S.list()
     .title("OIC Content")
     .items([
+      // Company
+      // _________________________________________________________________
+      S.listItem()
+        .title("Company Info")
+        .child(
+          S.editor()
+            .id("company")
+            .schemaType("company")
+            .documentId("company")
+        )
+        .icon(MdSettings),
+
       // Settings
       // _________________________________________________________________
       S.listItem()

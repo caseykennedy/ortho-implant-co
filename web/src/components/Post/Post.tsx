@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
@@ -11,18 +10,13 @@ import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import Section from '../Section'
 import BlockContent from '../BlockContent'
-import Icon from '../Icons'
 
 import Aside from './Aside'
 import PrevNext from './PrevNext'
 import SocialShare from './SocialShare'
 
-// Hooks
-import useRethinkPage from '../../hooks/useRethinkPage'
-
 // Elements
 import { Box, Flex, Heading, Text } from '../../elements'
-import Divider from '../../elements/Divider'
 
 // Theme
 import * as S from './styles.scss'
@@ -52,27 +46,27 @@ const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
 }
 
 const Post: React.FC<PostContextShape> = ({ pageContext }) => {
-  const data = pageContext.page
+  const page = pageContext.page
 
   // console.log(pageContext)
 
   const pageTitle = {
-    // altText: data.title,
+    // altText: page.title,
     // image: page.pageTitle.image.asset.fluid,
-    message: data.title,
-    title: data.publishedAt
+    message: page.title,
+    title: page.publishedAt
   }
   return (
     <S.Post>
       <PageTitle {...pageTitle} />
 
       <Box width={1}>
-        {data.mainImage && (
+        {page.mainImage && (
           <Img
-            fluid={data.mainImage.asset.fluid}
+            fluid={page.mainImage.asset.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
-            alt={data.title}
+            alt={page.title}
             className="article__img"
           />
         )}
@@ -80,28 +74,33 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
       <S.Article width={[1, 7 / 10]}>
         <Section bg="background" pb={4} pr={[5, 9]}>
-          {/* <Heading as="h3" color="" className="t--uppercase">{data.title}</Heading> */}
+          {/* <Heading as="h3" color="" className="t--uppercase">{page.title}</Heading> */}
           <Box className="article__lead">
-            {data._rawExcerpt && (
-              <BlockContent blocks={data._rawExcerpt || []} />
+            {page._rawExcerpt && (
+              <BlockContent blocks={page._rawExcerpt || []} />
             )}
           </Box>
           <Box className="article__meta">
             <Box width={1 / 2} className="author">
-              {data.authors && <Author author={data.authors} />}
+              {page.authors && <Author author={page.authors} />}
             </Box>
             <Flex width={1 / 2} className="social-share">
               <p>Share:</p>
-              <SocialShare name="facebook" slug={data.slug.current} />
-              <SocialShare name="linkedIn" slug={data.slug.current} />
-              <SocialShare name="twitter" slug={data.slug.current} />
+              <SocialShare name="facebook" slug={page.slug.current} />
+              <SocialShare name="linkedIn" slug={page.slug.current} />
+              <SocialShare name="twitter" slug={page.slug.current} />
             </Flex>
           </Box>
         </Section>
 
         <Section pr={[5, 9]} border={true}>
+          {page.publishedAt && (
+            <Text as="p" color="tertiary">
+              <small>{page.publishedAt}</small>
+            </Text>
+          )}
           <Box>
-            {data._rawBody && <BlockContent blocks={data._rawBody || []} />}
+            {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
           </Box>
         </Section>
       </S.Article>

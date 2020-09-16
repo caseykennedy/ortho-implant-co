@@ -10,6 +10,7 @@ import approach from './approach'
 import billboard from './billboard'
 import blockContent from './blockContent'
 import blockText from './blockText'
+import company from './company'
 import homePage from './homePage'
 import figure from './figure'
 import jobPost from './jobPost'
@@ -57,6 +58,7 @@ export default createSchema({
     blockContent,
     blockText,
     billboard,
+    company,
     figure,
     jobPost,
     legalStatements,
