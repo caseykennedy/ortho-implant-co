@@ -19,6 +19,7 @@ module.exports = {
     titleAlt: config.siteTitleAlt,
     description: config.siteDescription,
     logo: config.siteLogo,
+    defaultBanner: config.banner,
     headline: config.siteHeadline,
     siteLanguage: config.siteLanguage,
     ogLanguage: config.ogLanguage,

@@ -26,8 +26,8 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
     <Layout>
       <SEO
         pathname={`/implants/${page.slug.current}`}
-        title={`${page.title} | `}
-        desc={`${page.title} | `}
+        title={`${page.title}`}
+        desc={`${page.title}`}
         individual={false}
       />
       <AnimatedBox>

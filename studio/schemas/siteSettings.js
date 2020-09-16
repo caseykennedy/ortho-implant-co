@@ -7,6 +7,11 @@ export default {
   icon: MdSettings,
   fields: [
     {
+      name: "siteName",
+      title: "Site Name",
+      type: "string",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",
@@ -25,6 +30,11 @@ export default {
       name: "headline",
       title: "Headline",
       type: "string",
+    },
+    {
+      name: "banner",
+      title: "Banner",
+      type: "figure",
     },
     {
       name: "url",

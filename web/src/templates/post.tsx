@@ -24,8 +24,9 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
     <Layout>
       <SEO
         pathname={`/implants/${page.slug.current}`}
-        title={`${page.title} | `}
-        desc={`${page.title} | `}
+        title={`${page.title}`}
+        desc={`${page.title}`}
+        banner={`${page.mainImage.asset.fluid.src}`}
         individual={false}
       />
       <AnimatedBox>
