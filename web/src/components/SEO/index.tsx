@@ -14,11 +14,12 @@ import Twitter from './twitter'
 
 // ___________________________________________________________________
 
-type Props = {} & typeof defaultProps
+type Props = {
+  banner?: string
+} & typeof defaultProps
 const defaultProps = {
   title: '',
   desc: '',
-  banner: '',
   pathname: '',
   node: {
     modifiedTime: '',
@@ -34,7 +35,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
   const { buildTime } = site
 
   const seo = {
-    title: `${title} | ${settings.siteName}` || settings.titleAlt,
+    title: `${title}` || settings.titleAlt,
     description: desc || settings.description,
     image: `${banner || settings.banner.asset.fluid.src}`,
     url: `${settings.url}${pathname || ''}`
@@ -139,7 +140,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.url}${settings.banner.asset.fluid.src}`
+          url: `${settings.banner.asset.fluid.src}`
         }
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',
