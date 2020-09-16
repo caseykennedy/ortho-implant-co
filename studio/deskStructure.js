@@ -23,18 +23,6 @@ export default () =>
   S.list()
     .title("OIC Content")
     .items([
-      // Company
-      // _________________________________________________________________
-      S.listItem()
-        .title("Company Info")
-        .child(
-          S.editor()
-            .id("company")
-            .schemaType("company")
-            .documentId("company")
-        )
-        .icon(MdSettings),
-
       // Settings
       // _________________________________________________________________
       S.listItem()

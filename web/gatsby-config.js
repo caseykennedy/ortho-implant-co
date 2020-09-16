@@ -76,9 +76,25 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-twitter-pixel',
       options: {
-        color: `goldenrod`,
+        pixelId: 'o4kit'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-linkedin-insight',
+      options: {
+        partnerId: `2715889`,
+
+        // Include LinkedIn Insight in development.
+        // Defaults to false meaning LinkedIn Insight will only be loaded in production.
+        includeInDevelopment: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: 'goldenrod',
         showSpinner: false
       }
     },
