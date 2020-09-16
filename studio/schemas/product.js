@@ -45,11 +45,6 @@ export default {
       type: 'blockContent'
     },
     {
-      name: 'additionalInfo',
-      title: 'Additional Info',
-      type: 'blockContent'
-    },
-    {
       name: 'resources',
       title: 'Resources',
       type: 'array',

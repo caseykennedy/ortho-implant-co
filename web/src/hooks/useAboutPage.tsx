@@ -24,6 +24,25 @@ type Props = {
             }
           }
         }
+        intro: {
+          _rawBody: string
+          _rawLead: string
+          heading: string
+          title: string
+          positioning: {
+            _rawBody: string
+            figure: {
+              asset: {
+                fluid: {
+                  fluid: ImageShape
+                }
+              }
+              alt: string
+            }
+            lead: string
+            title: string
+          }[]
+        }
         pageTitle: {
           image: {
             asset: {
@@ -58,6 +77,25 @@ const useAboutPage = () => {
                   }
                   title
                 }
+              }
+            }
+            intro {
+              _rawBody
+              _rawLead
+              heading
+              title
+              positioning {
+                _rawBody
+                figure {
+                  asset {
+                    fluid(maxWidth: 600) {
+                      ...GatsbySanityImageFluid
+                    }
+                  }
+                  alt
+                }
+                lead
+                title
               }
             }
             pageTitle {

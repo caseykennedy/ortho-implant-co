@@ -3,32 +3,40 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
-import { useSpring, config } from 'react-spring'
 
-import useHover from '../../../hooks/useHover'
+// Hooks
+import useAboutPage from '../../../hooks/useAboutPage'
 
+// Components
 import Accordion from '../../Accordion'
-import ImgMatch from '../../ImgMatch'
+import BlockContent from '../../BlockContent'
 
+// UI
+import { Box, Heading } from '../../../elements'
+
+// Theme
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-type PositionProps = {
+type PageShape = {
   item: {
-    name: string
-    // src: string
-    content: string
+    _rawBody: string
+    figure: {
+      asset: {
+        fluid: {
+          fluid: ImageShape
+        }
+      }
+      alt: string
+    }
+    lead: string
+    title: string
   }
 }
 
-const Position = ({ item }: PositionProps) => {
-  const [hoverRef, isHovered] = useHover()
-
+const Position = ({ item }: PageShape) => {
   const AccordionProps = {
     chevronColor: theme.colors.secondary,
     color: theme.colors.secondary,
@@ -42,41 +50,38 @@ const Position = ({ item }: PositionProps) => {
   }
   return (
     // @ts-ignore: Unreachable code error
-    <>
-      <Accordion title={item.name} {...AccordionProps}>
-        <Box bg="background" pt={6} p={[5, 7]}>
-          <Text as="p" color="black">
-            {item.content}
-          </Text>
-        </Box>
-      </Accordion>
-    </>
+    <Accordion title={item.title} {...AccordionProps}>
+      <Box bg="background" color="text" pt={6} p={[5, 7]}>
+        {item._rawBody && <BlockContent blocks={item._rawBody || []} />}
+      </Box>
+    </Accordion>
   )
 }
 
 const Intro = () => {
+  const page = useAboutPage()
+
   return (
     <S.Intro>
       <S.About width={[1, 8 / 10, 2 / 3]}>
         <Box bg="primary" mt={[0]}>
           <Box p={theme.gutter.axis} bg="secondary" color="white">
             <Heading as="h5" color="primary">
-              work smarter
+              {page.intro.title && page.intro.title}
             </Heading>
 
             <Heading as="h2" fontSize={3}>
-              We love the sound of rules breaking. It’s what we are trying to do
-              to make ‘value’ a possibility in the orthopaedic implant industry.
+              {page.intro.heading && page.intro.heading}
             </Heading>
 
-            <Text as="p" mt={12} width={1}>
-              We shattered the myth that high value is a result of
-              commoditization. Simply put, we have found a smarter way to create
-              implants.
-            </Text>
+            <Box mt={12}>
+              {page.intro._rawBody && (
+                <BlockContent blocks={page.intro._rawBody || []} />
+              )}
+            </Box>
           </Box>
 
-          {positioning.map((item, idx) => (
+          {page.intro.positioning.map((item, idx) => (
             <Position key={idx} item={item} />
           ))}
         </Box>
@@ -86,21 +91,3 @@ const Intro = () => {
 }
 
 export default Intro
-
-const positioning = [
-  {
-    name: 'purpose',
-    content:
-      'We believe that the way orthopaedic implants are priced and supplied is flawed to the detriment of everyone. Our purpose is to rethink and change that system.'
-  },
-  {
-    name: 'mission',
-    content:
-      'Our mission is to lower the cost of orthopaedic procedures by developing more affordable implants with the perfect balance of quality, service and price for surgeons, hospitals and patients.'
-  },
-  {
-    name: 'vision',
-    content:
-      'Because of our forward thinking view of the way healthcare items should be sourced and implants developed and services, our vision is to play a role in making a more fair and equitable healthcare environment.'
-  }
-]

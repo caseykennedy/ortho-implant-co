@@ -5,6 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
+import aboutIntro from './aboutIntro'
 import approach from './approach'
 import billboard from './billboard'
 import blockContent from './blockContent'
@@ -21,6 +22,7 @@ import purpose from './purpose'
 import productCategory from './productCategory'
 import productResources from './productResources'
 import person from './person'
+import position from './position'
 import post from './post'
 import product from './product'
 import resource from './resource'
@@ -50,6 +52,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    aboutIntro,
     approach,
     blockContent,
     blockText,
@@ -61,6 +64,7 @@ export default createSchema({
     notion,
     pageTitle,
     person,
+    position,
     post,
     postCategory,
     purpose,

@@ -12,6 +12,11 @@ export default {
       type: 'pageTitle'
     },
     {
+      name: 'intro',
+      title: 'Intro',
+      type: 'aboutIntro'
+    },
+    {
       name: 'billboard',
       title: 'Billboard',
       type: 'billboard'

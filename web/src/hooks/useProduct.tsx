@@ -15,7 +15,6 @@ const useProduct = () => {
       ) {
         edges {
           node {
-            _rawAdditionalInfo
             _rawDescription
             _rawExcerpt
             _rawFeatures
