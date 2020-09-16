@@ -22,12 +22,6 @@ import theme from '../../../config/theme'
 
 const ContactPage = () => {
   const page = useContactPage()
-  console.log(page)
-
-  // Map coordinates
-  // 316 California Ave ste. 701, Reno, NV 89509
-  const lat = page.location.lat
-  const lng = page.location.lng
 
   // Page title
   const pageTitle = {
@@ -36,7 +30,6 @@ const ContactPage = () => {
     message: page.pageTitle.message,
     title: page.pageTitle.title
   }
-
   // Billboard
   const billboardProps = {
     bg: theme.colors.black,
@@ -48,6 +41,10 @@ const ContactPage = () => {
     src: page.billboard.figure.asset.fluid,
     altText: page.billboard.figure.alt
   }
+
+  // Map coordinates
+  const lat = page.location.lat
+  const lng = page.location.lng
   return (
     <>
       <S.ContactPage>
@@ -95,12 +92,12 @@ const ContactPage = () => {
             <Heading as="h4" mb={3} className="t--uppercase">
               Mailing
             </Heading>
-            <p dangerouslySetInnerHTML={{ __html: page.mailingAddress }} />
+            <p dangerouslySetInnerHTML={{ __html: page.addressMailing }} />
 
             <Heading as="h4" mt={7} mb={3} className="t--uppercase">
               Office
             </Heading>
-            <p dangerouslySetInnerHTML={{ __html: page.officeAddress }} />
+            <p dangerouslySetInnerHTML={{ __html: page.addressOffice }} />
           </Box>
         </Box>
 
