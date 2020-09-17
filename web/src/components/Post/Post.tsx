@@ -121,10 +121,10 @@ export default Post
 const billboardProps = {
   bg: theme.colors.black,
   btnText: 'See our implants',
+  to: '/about',
   color: theme.colors.white,
   message: 'We make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: true
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }

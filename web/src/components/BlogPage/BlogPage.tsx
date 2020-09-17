@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Components
@@ -32,12 +33,14 @@ const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
       <S.Featured>
         <Box width={[1, 1 / 2]} mb={7}>
           {post.mainImage && (
-            <Img
-              fluid={post.mainImage.asset.fluid}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={post.title}
-            />
+            <Link to={`/news/${post.slug.current}`}>
+              <Img
+                fluid={post.mainImage.asset.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.title}
+              />
+            </Link>
           )}
         </Box>
         <Box width={[1, 1 / 2]}>
