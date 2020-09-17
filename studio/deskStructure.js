@@ -46,7 +46,7 @@ export default () =>
             .schemaType("homePage")
             .documentId("homePage")
         )
-        .icon(MdFolder),
+        .icon(MdViewQuilt),
 
       // About page
       // _________________________________________________________________
@@ -59,7 +59,7 @@ export default () =>
             .schemaType("aboutPage")
             .documentId("aboutPage")
         )
-        .icon(MdFolder),
+        .icon(MdViewQuilt),
 
       // Contact page
       // _________________________________________________________________
@@ -72,7 +72,7 @@ export default () =>
             .schemaType("contactPage")
             .documentId("contactPage")
         )
-        .icon(MdFolder),
+        .icon(MdViewQuilt),
 
       // News page
       // _________________________________________________________________
@@ -85,7 +85,7 @@ export default () =>
             .schemaType("newsPage")
             .documentId("newsPage")
         )
-        .icon(MdFolder),
+        .icon(MdViewQuilt),
 
       // Rethink page
       // _________________________________________________________________
@@ -98,7 +98,7 @@ export default () =>
             .schemaType("rethinkPage")
             .documentId("rethinkPage")
         )
-        .icon(MdFolder),
+        .icon(MdViewQuilt),
 
       // Legal statements
       // _________________________________________________________________
@@ -182,7 +182,7 @@ export default () =>
         .schemaType("product")
         .child(S.documentTypeList("product").title("Product"))
 
-        .icon(MdViewQuilt)
+        .icon(MdFolder)
 
       // End
       // _________________________________________________________________

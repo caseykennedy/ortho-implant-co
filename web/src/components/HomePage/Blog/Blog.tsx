@@ -61,12 +61,19 @@ const Blog = () => {
   // console.log('-----_- Posts -_-----')
   // console.log(posts)
 
-  const newsPosts = posts.filter(
-    ({ node: post }) => 'News' === post.categories[0].title
-  )
-  const blogPosts = posts.filter(
-    ({ node: post }) => 'Blog' === post.categories[0].title
-  )
+  const newsPosts = posts.filter(({ node: post }) => {
+    if (post.categories[0].title.includes('News')) {
+      return post
+    }
+    if (post.categories[0] && post.categories[0].title.includes('Press')) {
+      return post
+    }
+  })
+  const blogPosts = posts.filter(({ node: post }) => {
+    if (post.categories[0].title.includes('Blog')) {
+      return post
+    }
+  })
 
   return (
     <>
