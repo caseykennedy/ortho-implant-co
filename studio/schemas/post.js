@@ -6,7 +6,8 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
+      validation: Rule => Rule.required()
     },
     {
       name: 'featured',
@@ -17,44 +18,51 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the post',
+      description: 'Set the page URL',
       options: {
         source: 'title',
         maxLength: 96
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule post where you show them',
-      type: 'datetime'
+      type: 'datetime',
+      validation: Rule => Rule.required()
     },
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'blockText'
+      type: 'blockText',
+      validation: Rule => Rule.required()
     },
     {
       name: 'authors',
       title: 'Authors',
       type: 'reference',
-      to: [{ type: 'person' }]
+      to: [{ type: 'person' }],
+      validation: Rule => Rule.required()
     },
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'mainImage'
+      type: 'mainImage',
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'postCategory' } }]
+      of: [{ type: 'reference', to: { type: 'postCategory' } }],
+      validation: Rule => Rule.required()
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
+      type: 'blockContent',
+      validation: Rule => Rule.required()
     }
   ],
   orderings: [

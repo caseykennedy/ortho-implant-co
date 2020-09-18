@@ -27,15 +27,13 @@ import theme from '../../../config/theme'
 const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
   return (
     <S.Author>
-      {author.headshot.asset.fluid && (
-        <Img
-          fluid={author.headshot.asset.fluid}
-          objectFit="cover"
-          objectPosition="50% 50%"
-          alt={author.name}
-          className="author__img"
-        />
-      )}
+      <Img
+        fluid={author.headshot.asset.fluid}
+        objectFit="cover"
+        objectPosition="50% 50%"
+        alt={author.name}
+        className="author__img"
+      />
       <Box className="author__name">
         {author.name}
         <br />
@@ -124,7 +122,7 @@ const billboardProps = {
   to: '/about',
   color: theme.colors.white,
   message: 'We make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
+  title: 'Mantra'
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }

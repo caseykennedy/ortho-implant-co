@@ -6,33 +6,38 @@ export default {
     {
       name: 'name',
       title: 'Name',
-      type: 'string'
+      type: 'string',
+      validation: Rule => Rule.required()
     },
     {
       name: 'shortName',
       title: 'Short Name',
-      type: 'string'
+      type: 'string',
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the project',
+      description: 'Set the page URL',
       options: {
         source: 'title',
         maxLength: 96
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'productCategory' } }]
+      of: [{ type: 'reference', to: { type: 'productCategory' } }],
+      validation: Rule => Rule.required()
     },
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'blockText'
+      type: 'blockText',
+      validation: Rule => Rule.required()
     },
     {
       name: 'description',
@@ -56,7 +61,8 @@ export default {
       type: 'image',
       options: {
         hotspot: true
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'gallery',

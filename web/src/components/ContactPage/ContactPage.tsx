@@ -55,7 +55,7 @@ const ContactPage = () => {
             <Heading as="h4" mb={3} className="t--uppercase">
               Telephone | Fax
             </Heading>
-            <p>
+            <Text as="p" fontSize={`calc(${theme.fontSizes[2]} * 1.25)`}>
               <a href={`tel:${page.telTollFree}`}>
                 +1 {page.telTollFree && page.telTollFree}
               </a>{' '}
@@ -76,7 +76,7 @@ const ContactPage = () => {
               <Box as="span" color="tertiary">
                 — fax
               </Box>
-            </p>
+            </Text>
             <Heading as="h4" mt={7} mb={3} className="t--uppercase">
               Email
             </Heading>
