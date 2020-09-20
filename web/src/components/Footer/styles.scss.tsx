@@ -21,6 +21,10 @@ export const Footer = styled(Flex)`
     padding: 0 ${theme.space[7]} ${theme.space[7]};
   }
 
+  a {
+    color: ${theme.colors.white};
+  }
+
   .footer-link {
     color: ${theme.colors.white};
     font-family: ${theme.fonts.heading};

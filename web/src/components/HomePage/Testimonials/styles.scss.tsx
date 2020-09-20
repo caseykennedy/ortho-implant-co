@@ -44,13 +44,22 @@ export const Testimonials = styled(Box)`
       /* margin-left: auto; */
       /* bottom: initial; */
       text-align: right;
+      display: none;
+
+      @media ${theme.mq.tablet} {
+        display: inherit;
+      }
 
       &.swiper-pagination-bullets {
         span {
           cursor: pointer;
           background: ${theme.colors.white} !important;
-          padding: ${theme.space[3]};
+          padding: ${theme.space[2]};
           border-radius: 0;
+
+          @media ${theme.mq.tablet} {
+            padding: ${theme.space[3]};
+          }
         }
       }
     }

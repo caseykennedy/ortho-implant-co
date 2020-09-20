@@ -45,15 +45,15 @@ const AccordionProps = {
   fontSize: 2
 }
 
-const AdditionalInfo: React.FC<ImplantNode> = ({ implant }) => {
-  return (
-    <Accordion title="Additional Info" {...AccordionProps}>
-      {implant._rawAdditionalInfo && (
-        <BlockContent blocks={implant._rawAdditionalInfo || []} />
-      )}
-    </Accordion>
-  )
-}
+// const AdditionalInfo: React.FC<ImplantNode> = ({ implant }) => {
+//   return (
+//     <Accordion title="Additional Info" {...AccordionProps}>
+//       {implant._rawAdditionalInfo && (
+//         <BlockContent blocks={implant._rawAdditionalInfo || []} />
+//       )}
+//     </Accordion>
+//   )
+// }
 
 const Implant: React.FC<ImplantNode> = ({ implant }) => {
   // Only show item when in view
@@ -107,7 +107,7 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
             {implant.videos[0] && (
               <Accordion title="Video" {...AccordionProps}>
                 {implant.videos.map((video, idx) => (
-                  <Video src={video.url} key={idx} />
+                  <Video src={video.url} title={video.title} key={idx} />
                 ))}
               </Accordion>
             )}

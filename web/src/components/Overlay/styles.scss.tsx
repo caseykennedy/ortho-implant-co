@@ -48,10 +48,9 @@ export const Overlay = styled(Box)`
 `
 
 export const Exit = styled(Box)`
-  position: fixed;
-  top: ${theme.space[5]};
-  right: ${theme.space[5]};
   cursor: pointer;
+  text-align: right;
+  z-index: 9999;
 
   @media ${theme.mq.tablet} {
   }

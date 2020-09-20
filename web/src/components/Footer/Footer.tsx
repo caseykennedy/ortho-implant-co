@@ -10,6 +10,8 @@ import Icon from '../Icons'
 import Pixels from '../Pixels'
 import AmedCert from '../AmedCert'
 
+import useContactPage from '../../hooks/useContactPage'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -20,6 +22,8 @@ const Year = () => {
 }
 
 const Footer: React.FC = () => {
+  const contact = useContactPage()
+
   return (
     <>
       {/* <Prefooter /> */}
@@ -40,23 +44,38 @@ const Footer: React.FC = () => {
         </S.Nav>
         <S.Row>
           <Box width={[1, 1 / 4]} mr={[0, 7]}>
-            <Heading as="h4">Mailing Address</Heading>
-            <Text>316 California Ave #701, Reno, NV 89509</Text>
+            <Heading as="h4">Mailing</Heading>
+            <p dangerouslySetInnerHTML={{ __html: contact.addressMailing }} />
           </Box>
           <Box width={[1, 1 / 4]} mr={[0, 7]} mt={[5, 0]}>
             <Heading as="h4">Office</Heading>
-            <Text>770 Smithridge Dr. STE 400, Reno NV 89502</Text>
+            <p dangerouslySetInnerHTML={{ __html: contact.addressOffice }} />
           </Box>
         </S.Row>
         <S.Row>
           <Box width={[1, 2 / 3]}>
             <Heading as="h4">tel | fax</Heading>
-            <Text>
-              +1 (800) 619-2797 — toll free
+            <Text as="p">
+              <a href={`tel:${contact.telTollFree}`}>
+                +1 {contact.telTollFree && contact.telTollFree}
+              </a>{' '}
+              <Box as="span" color="tertiary">
+                — toll free
+              </Box>
               <br />
-              +1 (775) 636-8281 — direct
+              <a href={`tel:${contact.telDirect}`}>
+                +1 {contact.telDirect && contact.telDirect}
+              </a>{' '}
+              <Box as="span" color="tertiary">
+                — direct
+              </Box>
               <br />
-              +1 (775) 636-8284 — fax
+              <a href={`tel:${contact.telFax}`}>
+                +1 {contact.telFax && contact.telFax}
+              </a>{' '}
+              <Box as="span" color="tertiary">
+                — fax
+              </Box>
             </Text>
           </Box>
           <Box width={[1, 1 / 3]} mt={[5, 0]}>

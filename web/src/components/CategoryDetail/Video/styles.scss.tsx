@@ -12,9 +12,7 @@ import theme from '../../../../config/theme'
 // ___________________________________________________________________
 
 export const Video = styled(Box)`
-  background: ${theme.colors.secondary};
-  border-top: ${theme.border};
-  padding: 0;
+  padding: ${theme.space[5]} 0;
   width: 100%;
 
   @media ${theme.mq.desktop} {

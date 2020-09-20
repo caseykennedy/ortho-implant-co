@@ -18,15 +18,16 @@ import theme from '../../../../config/theme'
 
 type Props = {
   src: string
+  title: string
 }
 
-const Video: React.FC<Props> = ({ src }) => {
+const Video: React.FC<Props> = ({ src, title }) => {
   return (
     <S.Video>
-      <ResponsiveEmbed
-        src={src}
-        allowFullScreen={true}
-      />
+      <p>
+        <small>{title}</small>
+      </p>
+      <ResponsiveEmbed src={src} allowFullScreen={true} />
     </S.Video>
   )
 }
@@ -36,7 +37,8 @@ export default Video
 // ___________________________________________________________________
 
 const defaultProps = {
-  src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+  src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  title: 'Placeholder'
 }
 
 Video.defaultProps = defaultProps

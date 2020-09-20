@@ -15,6 +15,7 @@ import useCategory from '../../../hooks/useCategory'
 
 // UI + Styles
 import { Box, Flex, Heading, Text } from '../../../elements'
+import Button from '../../../elements/Button'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
@@ -49,17 +50,17 @@ const Implants = () => {
   const categories = useCategory()
 
   return (
-    <Section color="white" border={true} overflow="hidden">
-      {/* <Box className="cta">
-          <Button to={`/implants`}>All Implants</Button>
-        </Box> */}
+    <S.Implants color="white" border={true} overflow="hidden">
+      <Box className="cta">
+        <Button to={`/implants`}>All Implants</Button>
+      </Box>
       <Box
         width={[1, 1 / 2]}
         mb={10}
         pr={[0, 7]}
         style={{ position: 'relative', zIndex: 1 }}
       >
-        <Heading as="h5" color="primary" fontWeight={500}>
+        <Heading as="h5" color="primary" fontWeight={500} mt={[7, 0]}>
           Implants
         </Heading>
         <Heading as="h3" fontSize={3} fontWeight={400}>
@@ -67,12 +68,12 @@ const Implants = () => {
           everyday basis.
         </Heading>
       </Box>
-      <S.Categories width={[1]}>
+      <S.Categories width={1}>
         {categories.map(({ node: cat }, idx) => (
           <Category cat={cat} key={idx} />
         ))}
       </S.Categories>
-    </Section>
+    </S.Implants>
   )
 }
 
