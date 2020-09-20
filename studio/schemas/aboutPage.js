@@ -17,6 +17,11 @@ export default {
       type: 'aboutIntro'
     },
     {
+      name: 'jobBoardFigure',
+      title: 'Job Board Figure',
+      type: 'figure'
+    },
+    {
       name: 'billboard',
       title: 'Billboard',
       type: 'billboard'

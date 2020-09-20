@@ -36,8 +36,8 @@ const JobBoard = () => {
     <S.JobBoard as="section" id="careers">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
         <ImgMatch
-          src="picking-orders.jpg"
-          altText="Andres picking orders in the warehouse."
+          src="landon-engineer.jpg"
+          altText="An OIC engineer in his natural habitat."
         />
       </Box>
 
