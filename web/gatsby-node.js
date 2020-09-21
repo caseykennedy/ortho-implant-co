@@ -78,7 +78,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             _rawExcerpt
             _rawBody
-            publishedAt(formatString: "dddd, MMMM yyyy")
+            publishedAt(formatString: "MMMM DD, yyyy")
             title
             slug {
               current
@@ -116,7 +116,7 @@ exports.createPages = ({ graphql, actions }) => {
             _rawExcerpt
             _rawBody
             _id
-            publishedAt(formatString: "dddd, MMMM yyyy")
+            publishedAt(formatString: "MMMM DD, yyyy")
             slug {
               current
             }

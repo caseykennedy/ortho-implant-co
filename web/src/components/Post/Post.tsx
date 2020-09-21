@@ -92,11 +92,6 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section pr={[5, 9]} border={true}>
-          {page.publishedAt && (
-            <Text as="p" color="tertiary">
-              <small>{page.publishedAt}</small>
-            </Text>
-          )}
           <Box>
             {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
           </Box>
