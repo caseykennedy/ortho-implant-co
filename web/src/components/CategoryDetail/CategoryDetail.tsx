@@ -56,7 +56,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   const billboardProps = {
     bg: theme.colors.secondary,
     color: theme.colors.white,
-    message: "Let's schedule<br />a one-to-one",
+    message: "Let's schedule<br />a one-on-one",
     title: 'Ready to chat?',
     invert: false,
     to: '/contact',

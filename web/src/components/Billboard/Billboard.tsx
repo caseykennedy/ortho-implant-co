@@ -90,7 +90,7 @@ export default Intro
 
 const defaultProps = {
   bg: 'primary',
-  message: "Let's schedule<br />a one-to-one",
+  message: "Let's schedule<br />a one-on-one",
   title: 'Ready to chat?',
   color: 'white'
   // btnText: 'Talk to us',
