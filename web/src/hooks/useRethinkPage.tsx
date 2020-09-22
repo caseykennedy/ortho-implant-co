@@ -34,6 +34,7 @@ type Props = {
           }
           heading: string
           title: string
+          statement: string
         }
         billboard: {
           title: string
@@ -107,6 +108,7 @@ const useRethinkPage = () => {
               }
               heading
               title
+              statement
             }
             billboard {
               title

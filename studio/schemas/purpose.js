@@ -29,6 +29,11 @@ export default {
       type: 'blockContent'
     },
     {
+      name: 'statement',
+      title: 'Statement',
+      type: 'string'
+    },
+    {
       name: "figure",
       title: "Figure",
       type: "mainImage",

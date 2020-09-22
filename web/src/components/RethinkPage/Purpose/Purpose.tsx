@@ -58,9 +58,7 @@ const Purpose = () => {
             <BlockContent blocks={page.purpose._rawBody || []} />
           )} */}
 
-          <Text as="p">
-            <mark>We do not compromise.</mark> Not now. Not ever.
-          </Text>
+          <p dangerouslySetInnerHTML={{ __html: page.purpose.statement }} />
         </Box>
 
         <AnimatedBox
