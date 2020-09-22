@@ -57,9 +57,11 @@ const Rethink = () => {
           <Heading as="h5" color="tertiary">
             {data.rethink.title}
           </Heading>
-          <Heading as="h2" fontSize={3}>
-            {data.rethink.heading}
-          </Heading>
+          <Heading
+            as="h2"
+            fontSize={3}
+            dangerouslySetInnerHTML={{ __html: data.rethink.heading }}
+          />
           {/* <S.Decorator>
           <Hexagons />
         </S.Decorator> */}
