@@ -32,6 +32,14 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
       <S.Post>
         <Link to={`/news/${post.slug.current}`}>
           <div>
+          <Heading as="h5" mb={7}>
+              <Box
+                as="mark"
+                bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
+              >
+                {post.categories[0].title}
+              </Box>
+            </Heading>
             <Box className="post__img">
               {post.mainImage && (
                 <Img
@@ -42,15 +50,6 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
                 />
               )}
             </Box>
-
-            <Heading as="h5" mb={7}>
-              <Box
-                as="mark"
-                bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
-              >
-                {post.categories[0].title}
-              </Box>
-            </Heading>
 
             <Heading as="h4" fontSize={[2]}>
               {post.title}

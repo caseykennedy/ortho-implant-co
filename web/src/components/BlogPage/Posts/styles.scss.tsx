@@ -39,7 +39,7 @@ export const Post = styled(Flex)`
     max-height: 150px;
     height: 150px;
     overflow: hidden;
-    width: 50%;
+    width: 63%;
     margin-bottom: ${theme.space[5]};
   }
 
@@ -47,6 +47,7 @@ export const Post = styled(Flex)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     color: ${theme.colors.text};
     padding: ${theme.space[5]};
     height: inherit;
@@ -75,8 +76,7 @@ export const Post = styled(Flex)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: ${theme.space[5]};
-    padding: ${theme.space[5]} 0 0 0;
+    /* padding: ${theme.space[5]} 0 0 0; */
     width: 100%;
     
     font-size: calc(${theme.fontSizes[1]} / 1.15);
