@@ -96,7 +96,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   const persons = data.people.edges
   // const boardMembers = persons.filter(person => person.node.boardMember)
   const nonBoard = persons.filter(person => !person.node.boardMember)
-  const humanStaff = nonBoard.filter(person => person.node.name !== 'Ortho Bot')
+  const humanStaff = nonBoard.filter(person => person.node.name !== 'Outside Press')
 
   const [bio, setBio] = useState(humanStaff[0].node)
 

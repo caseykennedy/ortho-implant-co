@@ -16,6 +16,7 @@ export const Card = styled(AnimatedFlex)`
 
   border: ${theme.border};
   cursor: pointer;
+  height: 100%;
   transition: ${theme.transition.all};
 
   &:hover {
