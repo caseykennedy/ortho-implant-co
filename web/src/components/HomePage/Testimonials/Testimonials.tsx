@@ -98,9 +98,11 @@ const Testimonials = () => {
                   {review.location}
                 </Heading>
                 <Text fontSize={[`1.5rem`, 3]} fontWeight={300}>
+                  "
                   {review._rawQuote && (
                     <BlockContent blocks={review._rawQuote || []} />
                   )}
+                  "
                 </Text>
               </Box>
             ))}

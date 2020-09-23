@@ -24,11 +24,12 @@ import Prefooter from '../Footer/Prefooter'
 
 const billboardProps = {
   bg: theme.colors.primary,
-  btnText: 'See our implants',
-  color: theme.colors.text,
+  btnText: 'Meet the team',
+  to: '/about',
+  color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: true
+  invert: false
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }
