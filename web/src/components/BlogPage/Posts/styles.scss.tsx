@@ -44,6 +44,9 @@ export const Post = styled(Flex)`
   }
 
   a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: ${theme.colors.text};
     padding: ${theme.space[5]};
     height: inherit;

@@ -31,35 +31,41 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
     <Cell>
       <S.Post>
         <Link to={`/news/${post.slug.current}`}>
-          <Box className="post__img">
-            {post.mainImage && (
-              <Img
-                fluid={post.mainImage.asset.fluid}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={post.title}
-              />
-            )}
-          </Box>
-
-          <Heading as="h5" mb={7}>
-            <Box
-              as="mark"
-              bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
-            >
-              {post.categories[0].title}
+          <div>
+            <Box className="post__img">
+              {post.mainImage && (
+                <Img
+                  fluid={post.mainImage.asset.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={post.title}
+                />
+              )}
             </Box>
-          </Heading>
 
-          <Heading as="h4" fontSize={[2]}>
-            {post.title}
-          </Heading>
+            <Heading as="h5" mb={7}>
+              <Box
+                as="mark"
+                bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
+              >
+                {post.categories[0].title}
+              </Box>
+            </Heading>
 
-          <Text as="p" className="card__meta  t--uppercase">
-            <Text as="span">{post.publishedAt}</Text>
-          </Text>
+            <Heading as="h4" fontSize={[2]}>
+              {post.title}
+            </Heading>
+          </div>
 
-          {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
+          <div>
+            <Text as="p" className="card__meta  t--uppercase">
+              <Text as="span">{post.publishedAt}</Text>
+            </Text>
+
+            {post._rawExcerpt && (
+              <BlockContent blocks={post._rawExcerpt || []} />
+            )}
+          </div>
         </Link>
       </S.Post>
     </Cell>
