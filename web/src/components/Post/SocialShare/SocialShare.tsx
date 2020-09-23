@@ -13,17 +13,17 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const siteDomain = 'http://orthoimplantcompany.com'
-
 const SocialShare: React.FC<{ name: string; slug: string }> = ({
   name,
   slug
 }) => {
+  const shareSlug = `https://orthoimplantcompany.com/${slug}`
+
   switch (name) {
     case 'facebook':
       return (
         <a
-          href={`//www.facebook.com/sharer.php?u=${siteDomain}/${slug}`}
+          href={`//www.facebook.com/sharer.php?u=${shareSlug}`}
           target="_blank"
         >
           <Icon name={name} />
@@ -32,7 +32,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
     case 'twitter':
       return (
         <a
-          href={`//twitter.com/share?url=${siteDomain}/${slug}`}
+          href={`//twitter.com/share?url=${shareSlug}`}
           target="_blank"
         >
           <Icon name={name} />
@@ -41,7 +41,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
     case 'linkedIn':
       return (
         <a
-          href={`//www.linkedin.com/shareArticle?mini=true&url=${siteDomain}/${slug}`}
+          href={`//www.linkedin.com/shareArticle?mini=true&url=${shareSlug}&title=${slug}`}
           target="_blank"
         >
           <Icon name={name} />
