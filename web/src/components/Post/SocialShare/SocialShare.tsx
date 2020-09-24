@@ -41,7 +41,7 @@ const SocialShare: React.FC<{ name: string; slug: string }> = ({
     case 'linkedIn':
       return (
         <a
-          href={`//www.linkedin.com/shareArticle?mini=true&url=${shareSlug}&title=${slug}`}
+          href={`//www.linkedin.com/shareArticle?mini=true&url=${shareSlug}`}
           target="_blank"
         >
           <Icon name={name} />

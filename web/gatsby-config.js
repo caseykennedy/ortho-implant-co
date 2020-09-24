@@ -29,6 +29,17 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `UA-34718102-1`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
@@ -69,12 +80,6 @@ module.exports = {
     //     instagram_id: process.env.BUSINESS_ID,
     //   }
     // },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID
-      }
-    },
     {
       resolve: 'gatsby-plugin-twitter-pixel',
       options: {
