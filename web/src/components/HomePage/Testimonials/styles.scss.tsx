@@ -5,6 +5,7 @@
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '../../../elements'
+import { transparentize } from 'polished'
 
 // ___________________________________________________________________
 
@@ -12,6 +13,22 @@ const pixelHeight = '200px'
 
 export const Testimonials = styled(Box)`
   border-top: ${theme.border};
+
+  .quotation {
+    color: ${transparentize(0.5, theme.colors.tertiary)};
+    font-size: ${theme.fontSizes[7]};
+    font-family: ${theme.fonts.body};
+    margin-bottom: 0;
+    height: 100px;
+    line-height: 1;
+
+    &:after {
+      content: '"';
+      position: absolute;
+      top: ${theme.space[8]};
+      left: 0;
+    }
+  }
   
   p {
     line-height: 1.4;

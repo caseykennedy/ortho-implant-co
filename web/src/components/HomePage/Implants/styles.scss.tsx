@@ -57,7 +57,7 @@ export const Categories = styled(Box)`
     }
 
     pointer-events: none;
-    z-index: 99999;
+    z-index: 9;
 
     visibility: hidden;
     opacity: 0;

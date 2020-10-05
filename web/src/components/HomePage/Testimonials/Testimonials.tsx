@@ -87,7 +87,7 @@ const Testimonials = () => {
         </Box>
       </Box>
       <Section bg="secondary" color="white" pt={8} pb={7} border={false}>
-        <Box>
+        <Box position="relative">
           <TestiSwiper>
             {data.testimonials.map((review, idx) => (
               <Box key={idx}>
@@ -98,15 +98,14 @@ const Testimonials = () => {
                   {review.location}
                 </Heading>
                 <Text fontSize={[`1.5rem`, 3]} fontWeight={300}>
-                  "
                   {review._rawQuote && (
                     <BlockContent blocks={review._rawQuote || []} />
                   )}
-                  "
                 </Text>
               </Box>
             ))}
           </TestiSwiper>
+          <span className="quotation" />
         </Box>
       </Section>
     </S.Testimonials>

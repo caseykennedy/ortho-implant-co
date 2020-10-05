@@ -1,6 +1,3 @@
-// import * as useSiteSettings from '../src/hooks/useSiteSettings'
-// const settings = useSiteSettings
-
 const settings = require.resolve('../src/hooks/useSiteSettings.tsx')
 
 module.exports = {
