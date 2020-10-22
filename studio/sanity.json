@@ -16,7 +16,8 @@
     "@sanity/desk-tool",
     "@sanity/dashboard",
     "@sanity/vision",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "asset-source-unsplash"
   ],
   "parts": [
     {
