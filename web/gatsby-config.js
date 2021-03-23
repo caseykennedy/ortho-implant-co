@@ -27,17 +27,35 @@ module.exports = {
     twitter: config.userTwitter,
     facebook: config.ogSiteName
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true, FAST_REFRESH: true, FAST_DEV: true },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-gtag',
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        // your google analytics tracking id
-        trackingId: config.googleAnalyticsID,
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // enable ip anonymization
-        anonymize: true
+        id: config.googleTagID,
+
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: 'gatsby' }
+
+        // Specify optional GTM environment details.
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        // dataLayerName: "YOUR_DATA_LAYER_NAME",
+
+        // Name of the event that is triggered
+        // on every Gatsby route change.
+        //
+        // Defaults to gatsby-route-change
+        // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
       }
     },
     'gatsby-plugin-sharp',
@@ -71,29 +89,6 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`
-      }
-    },
-    // {
-    //   resolve: 'gatsby-source-instagram',
-    //   options: {
-    //     access_token: process.env.ACCESS_TOKEN,
-    //     instagram_id: process.env.BUSINESS_ID,
-    //   }
-    // },
-    {
-      resolve: 'gatsby-plugin-twitter-pixel',
-      options: {
-        pixelId: 'o4kit'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-linkedin-insight',
-      options: {
-        partnerId: `2715889`,
-
-        // Include LinkedIn Insight in development.
-        // Defaults to false meaning LinkedIn Insight will only be loaded in production.
-        includeInDevelopment: false
       }
     },
     {

@@ -48,7 +48,7 @@ module.exports = {
   ogSiteName: settings.ogSiteName, // Facebook Site Name
   ogLanguage: settings.ogLanguage, // og:language
   googleAnalyticsID: 'UA-34718102-1',
-  // googleAnalyticsID: settings.googleAnalyticsID,
+  googleTagID: 'GTM-5Q9TDRN',
 
   // Manifest and Progress color
   themeColor: settings.themeColor,
