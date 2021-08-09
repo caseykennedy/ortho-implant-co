@@ -27,13 +27,13 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
 
   // Product + Filter products that match the page title (category)
   const products = useProduct()
-  const filteredProducts = products.filter(product => {
-    if (product.node.categories[0].title.includes(category)) {
+  const filteredProducts = products.node.products.filter(product => {
+    if (product.categories[0].title.includes(category)) {
       return product
     }
     if (
-      product.node.categories[1] &&
-      product.node.categories[1].title.includes(category)
+      product.categories[1] &&
+      product.categories[1].title.includes(category)
     ) {
       return product
     }
@@ -68,7 +68,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     <S.CategoryDetail>
       <PageTitle {...pageTitle} />
 
-      {implants.map(({ node: implant }, idx) => (
+      {implants.map((implant, idx) => (
         <Implant implant={implant} key={idx} />
       ))}
 

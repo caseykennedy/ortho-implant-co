@@ -53,16 +53,16 @@ const Filter = () => {
   const categories = useCategory()
 
   // Filter implants
-  const [items, setItems] = useState(implants)
+  const [items, setItems] = useState(implants.node.products)
   const setFilteredItems = (category: string) => {
     setItems(
-      implants.filter(item => {
-        if (item.node.categories[0].title.includes(category)) {
+      implants.node.products.filter(item => {
+        if (item.categories[0].title.includes(category)) {
           return item
         }
         if (
-          item.node.categories[1] &&
-          item.node.categories[1].title.includes(category)
+          item.categories[1] &&
+          item.categories[1].title.includes(category)
         ) {
           return item
         }
@@ -72,7 +72,7 @@ const Filter = () => {
 
   // Reset / Show all
   const resetFilteredItems = () => {
-    setItems(implants)
+    setItems(implants.node.products)
   }
 
   // Toggle Grid/List views

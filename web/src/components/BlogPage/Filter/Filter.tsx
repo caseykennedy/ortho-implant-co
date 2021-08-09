@@ -49,8 +49,6 @@ const Filter = () => {
     setItems(posts)
   }
 
-  
-
   return (
     <S.Filter id="product-grid">
       <AnchorLink href="#product-grid" className="anchor-link">

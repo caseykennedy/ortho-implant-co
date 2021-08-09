@@ -23,8 +23,7 @@ const Implants = () => {
     <Layout>
       <SEO
         pathname={`/implants`}
-        title={`Contact us | Orthopaedic Implant Co.`}
-        desc={`Ready to chat? Talk to us.`}
+        title={`Implants | Orthopaedic Implant Co.`}
         individual={true}
       />
       <AnimatedBox>

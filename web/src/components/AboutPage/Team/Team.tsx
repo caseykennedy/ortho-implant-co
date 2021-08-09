@@ -37,10 +37,11 @@ const People: React.FC<Person> = ({ person, toggleModal }) => {
         <Box width={8 / 10} className="card__headshot">
           {person.headshot && (
             <Img
-              fluid={person.headshot.asset.fluid}
+              fluid={{ ...person.headshot.asset.fluid, aspectRatio: 2 / 3 }}
               objectFit="cover"
               objectPosition="50% 50%"
               alt={person.name}
+              aspectRatio={16 / 9}
             />
           )}
         </Box>
@@ -84,7 +85,13 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
             headshot {
               asset {
                 fluid(maxWidth: 800) {
-                  ...GatsbySanityImageFluid
+                  srcWebp
+                  srcSetWebp
+                  srcSet
+                  src
+                  sizes
+                  base64
+                  aspectRatio
                 }
               }
             }
@@ -96,7 +103,9 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
   const persons = data.people.edges
   // const boardMembers = persons.filter(person => person.node.boardMember)
   const nonBoard = persons.filter(person => !person.node.boardMember)
-  const humanStaff = nonBoard.filter(person => person.node.name !== 'Outside Press')
+  const humanStaff = nonBoard.filter(
+    person => person.node.name !== 'Outside Press'
+  )
 
   const [bio, setBio] = useState(humanStaff[0].node)
 
@@ -126,9 +135,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
         mainRef={mainRef}
         className={`nav-bg ${isModalOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
-        {isModalOpen && (
-          <Bio bio={bio} setModalOpen={setModalOpen} />
-        )}
+        {isModalOpen && <Bio bio={bio} setModalOpen={setModalOpen} />}
       </Overlay>
 
       <AnimatedBox style={interSpring} ref={interRef}>

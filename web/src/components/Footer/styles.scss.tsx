@@ -15,7 +15,7 @@ export const Footer = styled(Flex)`
 
   background: ${theme.colors.secondary};
   color: ${theme.colors.background};
-  padding: 0 ${theme.space[5]} ${theme.space[5]};
+  padding: 0 ${theme.space[4]} ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
     padding: 0 ${theme.space[7]} ${theme.space[7]};
@@ -143,7 +143,7 @@ export const Social = styled(Flex)`
 
     svg {
       fill: ${theme.colors.white};
-      width: 44px;
+      width: 36px;
     }
   }
 `

@@ -157,7 +157,9 @@ type ProductNode = {
 }
 
 type ProductEdges = {
-  node: ProductNode
+  node: {
+    products: ProductNode[]
+  }
   previous: {
     name: string
     shortName: string
@@ -177,7 +179,7 @@ type ProductEdges = {
 }
 
 type ProductShape = {
-  products: {
+  productsOrder: {
     edges: ProductEdges[]
   }
 }

@@ -22,13 +22,13 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const Item: React.FC<{ item: ProductEdges; transition: any }> = ({
+const Item: React.FC<{ item: ProductNode; transition: any }> = ({
   item,
   transition
 }) => {
-  const slug = item.node.slug.current
+  const slug = item.slug.current
   const categorySlug = () => {
-    const toLowerCase = item.node.categories[0].title.toLowerCase()
+    const toLowerCase = item.categories[0].title.toLowerCase()
     const dashCat = toLowerCase.replace(/\s/g, '-')
     return dashCat
   }
@@ -36,27 +36,27 @@ const Item: React.FC<{ item: ProductEdges; transition: any }> = ({
     <Link to={`/implants/${categorySlug()}/#${slug}`}>
       <S.Item>
         <Box className="thumb">
-          {!item.node.mainImage ? (
+          {!item.mainImage ? (
             <ImgMatch
               src="DRP-3-Hole-Narrow-Left 1.png"
               altText="placeholder"
             />
           ) : (
             <Img
-              fluid={item.node.mainImage.asset.fluid}
+              fluid={item.mainImage.asset.fluid}
               objectFit="cover"
               objectPosition="50% 50%"
-              alt={item.node.name}
+              alt={item.name}
             />
           )}
         </Box>
 
         <Heading as="h3" fontSize="2rem" mb={0}>
-          {item.node.shortName}
+          {item.shortName}
         </Heading>
 
         <Heading as="h5" className="t--small" mb={0}>
-          {item.node.categories[0].title}
+          {item.categories[0].title}
         </Heading>
 
         <span className="meta">
@@ -68,11 +68,11 @@ const Item: React.FC<{ item: ProductEdges; transition: any }> = ({
   )
 }
 
-const List: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
+const List: React.FC<{ items: ProductNode[] }> = ({ items }) => {
   // Card enter/exit trail animation
   const itemTransitions = useTransition(
     items ? items : [],
-    item => item.node.name,
+    item => item.name,
     {
       from: {
         opacity: 0

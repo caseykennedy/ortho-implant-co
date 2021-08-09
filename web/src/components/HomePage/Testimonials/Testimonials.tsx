@@ -105,7 +105,7 @@ const Testimonials = () => {
               </Box>
             ))}
           </TestiSwiper>
-          <span className="quotation" />
+          {/* <span className="quotation" /> */}
         </Box>
       </Section>
     </S.Testimonials>

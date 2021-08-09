@@ -16,7 +16,7 @@ import { Flex, AnimatedFlex } from '../../../elements'
 export const NavLinks = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: ${theme.space[7]};
+  padding-top: ${theme.space[5]};
   width: 100%;
 `
 
@@ -28,7 +28,7 @@ export const NavLink = styled(AnimatedFlex)`
   .nav-mobile {
     &__link {
       color: ${theme.colors.white};
-      font-size: ${theme.fontSizes[2]};
+      font-size: ${theme.fontSizes[3]};
       text-transform: uppercase;
       padding: ${theme.space[4]};
     }

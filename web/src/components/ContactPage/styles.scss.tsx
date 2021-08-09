@@ -25,6 +25,17 @@ export const ContactPage = styled(Flex)`
     }
   }
 
+  .mailing {
+    flex: 1;
+    border-left: none;
+    border-top: ${theme.border};
+
+    @media ${theme.mq.tablet} {
+      border-left: ${theme.border};
+      border-top: none;
+    }
+  }
+
   .map {
     background: ${theme.colors.quinary};
     min-height: 40vh;

@@ -115,7 +115,7 @@ const theme: ThemeShape = {
   gutter: {
     tablet: '2rem',
     desktop: '4rem',
-    axis: [5, 7],
+    axis: [4, 7],
   },
 
   // Typography

@@ -13,7 +13,7 @@ import Marker from './Marker'
 import useContactPage from '../../hooks/useContactPage'
 
 // Elements
-import { Box, Text, Heading } from '../../elements'
+import { Box, Flex, Text, Heading } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -50,8 +50,8 @@ const ContactPage = () => {
       <S.ContactPage>
         <PageTitle {...pageTitle} />
 
-        <Box width={[1, 1 / 2, 4 / 10]}>
-          <Box p={theme.gutter.axis} style={{ borderBottom: theme.border }}>
+        <Flex flexDirection={['column', 'row']} width={1}>
+          <Box p={theme.gutter.axis} flex={1}>
             <Heading as="h4" mb={3} className="t--uppercase">
               Telephone | Fax
             </Heading>
@@ -88,7 +88,7 @@ const ContactPage = () => {
               ))}
             </p>
           </Box>
-          <Box bg="quinary" p={theme.gutter.axis}>
+          <Box bg="quinary" p={theme.gutter.axis} className="mailing">
             <Heading as="h4" mb={3} className="t--uppercase">
               Mailing
             </Heading>
@@ -99,12 +99,12 @@ const ContactPage = () => {
             </Heading>
             <p dangerouslySetInnerHTML={{ __html: page.addressOffice }} />
           </Box>
-        </Box>
+        </Flex>
 
-        <Box bg="black" width={[1, 1 / 2, 6 / 10]} className="map">
+        {/* <Box bg="black" width={[1, 1 / 2, 6 / 10]} className="map">
           <GoogleMapReact
             bootstrapURLKeys={{
-              key: 'AIzaSyD8wi_5Gfo2TS8UcisEYQAV73CMsAtxw1s'
+              key: 'AIzaSyBPCKI-A2y0zk_-4AyMxyCGokpcSXvHQYY'
             }}
             defaultCenter={{
               lat,
@@ -115,7 +115,7 @@ const ContactPage = () => {
           >
             <Marker lat={lat} lng={lng} text="Test" />
           </GoogleMapReact>
-        </Box>
+        </Box> */}
       </S.ContactPage>
       <Billboard {...billboardProps} />
     </>

@@ -30,7 +30,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
         <Box width={[2 / 3, 1]} className="bio__figure">
           {bio.headshot && (
             <Img
-              fluid={bio.headshot.asset.fluid}
+              fluid={{ ...bio.headshot.asset.fluid, aspectRatio: 2 / 3 }}
               objectFit="cover"
               objectPosition="50% 50%"
               alt={bio.name}

@@ -90,6 +90,7 @@ export const Toggle = styled.div`
   display: flex;
   align-items: flex-start;
   box-sizing: content-box;
+  margin-left: auto;
   padding: ${theme.space[5]};
 
   color: ${theme.colors.text};

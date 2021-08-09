@@ -21,6 +21,7 @@ import pageTitle from './pageTitle'
 import postCategory from './postCategory'
 import purpose from './purpose'
 import productCategory from './productCategory'
+import productsOrder from './ProductsOrder'
 import productResources from './productResources'
 import person from './person'
 import position from './position'
@@ -69,6 +70,7 @@ export default createSchema({
     position,
     post,
     postCategory,
+    productsOrder,
     purpose,
     product,
     productCategory,
@@ -90,7 +92,7 @@ export default createSchema({
     contactPage,
     newsPage,
     rethinkPage,
-    
+
     // Need to move these into the rethinkPage schema type
     rethinkNotions
 
