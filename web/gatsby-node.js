@@ -224,7 +224,6 @@ exports.createPages = ({ graphql, actions }) => {
             }
             intro {
               _rawBody
-              _rawLead
               heading
               title
               positioning {
@@ -261,7 +260,6 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                 }
               }
-              link
               message
               title
             }

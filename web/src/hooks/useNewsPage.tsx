@@ -68,7 +68,6 @@ const useNewsPage = () => {
                   }
                 }
               }
-              link
               message
               title
             }

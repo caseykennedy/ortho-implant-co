@@ -51,7 +51,6 @@ const useTerms = () => {
             pageTitle {
               title
               message
-              link
               image {
                 asset {
                   fluid(maxWidth: 800) {

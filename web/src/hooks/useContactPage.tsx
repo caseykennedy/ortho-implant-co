@@ -90,7 +90,6 @@ const useContactPage = () => {
                   }
                 }
               }
-              link
               message
               title
             }

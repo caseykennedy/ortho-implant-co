@@ -30,7 +30,7 @@ type Props = {
               fluid: ImageShape
             }
           }
-          link: string
+
           message: string
           title: string
         }
@@ -96,7 +96,6 @@ const useHomePage = () => {
                   }
                 }
               }
-              link
               message
               title
             }

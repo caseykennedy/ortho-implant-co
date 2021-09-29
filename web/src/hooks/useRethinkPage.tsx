@@ -146,7 +146,6 @@ const useRethinkPage = () => {
                   }
                 }
               }
-              link
               message
               title
             }

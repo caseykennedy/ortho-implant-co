@@ -26,7 +26,6 @@ type Props = {
         }
         intro: {
           _rawBody: string
-          _rawLead: string
           heading: string
           title: string
           positioning: {
@@ -81,7 +80,6 @@ const useAboutPage = () => {
             }
             intro {
               _rawBody
-              _rawLead
               heading
               title
               positioning {
@@ -106,7 +104,6 @@ const useAboutPage = () => {
                   }
                 }
               }
-              link
               message
               title
             }
