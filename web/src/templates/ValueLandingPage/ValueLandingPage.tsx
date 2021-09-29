@@ -22,10 +22,15 @@ import ContactForm from '../../components/ContactForm'
 const Aside = () => {
   return (
     <S.Aside>
-      <Heading as="h2" color="tertiary" fontSize={3} mb={7}>
+      <Heading as="h2" color="black" fontSize={3} mb={5}>
         Value based implants required an average 10.8 less operative time
         compared to conventional implants.
       </Heading>
+
+      <Text as="p" mb={7}>
+        Smarter solutions, reduced inventory and simplified instrumentation with
+        a <mark>high average cost savings</mark>.
+      </Text>
 
       <div className="stats">
         {statsData.map((stats, key) => (
@@ -36,9 +41,8 @@ const Aside = () => {
                 fontSize={2}
                 mb={2}
                 style={{ textTransform: 'uppercase' }}
-              >
-                {stats.product}
-              </Text>
+                dangerouslySetInnerHTML={{ __html: stats.product }}
+              />
             </div>
             <div className="savings">
               <Text
@@ -49,7 +53,7 @@ const Aside = () => {
                 {stats.average}%
               </Text>
               <Text as="h4" fontSize={1} lineHeight={1} mb={0}>
-                average savings
+                avg. savings
               </Text>
             </div>
           </div>
@@ -92,7 +96,10 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
       <S.ValueLandingPage>
         <PageTitle {...pageTitle} />
 
-        <Flex flexDirection={['column', 'row', 'row']} style={{position: 'relative'}}>
+        <Flex
+          flexDirection={['column', 'row', 'row']}
+          style={{ position: 'relative' }}
+        >
           <Box flex={[1, 0.65]}>
             <S.Intro p={theme.gutter.axis}>
               <Heading as="h4" color="primary">
@@ -122,7 +129,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
             pt={[6, 8, 9]}
             p={theme.gutter.axis}
             flex={[1, 0.35]}
-            style={{ borderTop: theme.border }}
+            className="aside"
           >
             <Aside />
           </Box>
@@ -153,19 +160,19 @@ export default ValueLandingPage
 
 const statsData = [
   {
-    product: 'Locking Plates',
+    product: 'Locking<br />Plates',
     average: 56
   },
   {
-    product: 'Cannulated Screws',
+    product: 'Cannulated<br />Screws',
     average: 70
   },
   {
-    product: 'IM Nails',
+    product: 'IM<br />Nails',
     average: 51
   },
   {
-    product: 'External Fixation',
+    product: 'External<br />Fixation',
     average: 65
   }
 ]

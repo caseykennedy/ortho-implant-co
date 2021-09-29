@@ -15,7 +15,12 @@ export const ValueLandingPage = styled(Box)`
   flex-wrap: wrap;
   width: 100%;
 
-  @media ${theme.mq.tablet} {
+  .aside {
+    border-top: ${theme.border};
+
+    @media ${theme.mq.tablet} {
+      border-top: none;
+    }
   }
 `
 
@@ -53,7 +58,6 @@ export const Aside = styled.div`
       justify-content: center;
       flex-direction: column;
       padding: ${theme.space[2]};
-      margin-bottom: ${theme.space[4]};
       width: 50%;
 
       @media ${theme.mq.desktop} {
@@ -74,13 +78,12 @@ export const Aside = styled.div`
         justify-content: center;
 
         background: ${theme.colors.primary};
-        border-radius: 999px;
-        padding: ${theme.space[4]};
+        clip-path: circle(40%);
+        min-height: 180px;
         width: 100%;
 
         @media ${theme.mq.tablet} {
-          padding: ${theme.space[5]};
-          min-height: 200px;
+          min-height: 222px;
         }
       }
     }

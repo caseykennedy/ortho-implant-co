@@ -266,6 +266,10 @@ const Typography = css`
     letter-spacing: 0.5px;
   }
 
+  strong {
+    font-weight: 600;
+  }
+
   a {
     text-decoration: none;
     position: relative;
@@ -278,7 +282,7 @@ const Typography = css`
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.05, `${theme.colors.secondary}`)};
+      color: ${darken(0.05, theme.colors.secondary)};
     }
   }
 
