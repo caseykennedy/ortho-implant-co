@@ -8,16 +8,10 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import LegalPage from '../components/LegalPage'
-
-// Elements
-import { AnimatedBox } from '../elements'
+import LegalPage from '../templates/LegalPage'
 
 // Hooks
 import useLegal from '../hooks/useLegal'
-
-// Theme
-import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
@@ -30,9 +24,7 @@ const Legal = () => {
         title={page.pageTitle.message}
         individual={true}
       />
-      <AnimatedBox>
-        <LegalPage />
-      </AnimatedBox>
+      <LegalPage />
     </Layout>
   )
 }

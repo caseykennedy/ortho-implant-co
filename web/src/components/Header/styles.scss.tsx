@@ -2,10 +2,7 @@
 
 // ___________________________________________________________________
 
-// Core
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { readableColor, darken } from 'polished'
 
 // Theme
 import theme from '../../../config/theme'

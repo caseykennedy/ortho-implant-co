@@ -19,11 +19,6 @@ export default {
       type: "string"
     },
     {
-      name: "lead",
-      title: "Lead",
-      type: "blockContent"
-    },
-    {
       name: "body",
       title: "Body",
       type: "blockContent"

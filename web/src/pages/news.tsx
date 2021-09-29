@@ -8,13 +8,7 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import BlogPage from '../components/BlogPage'
-
-// Elements
-import { AnimatedBox } from '../elements'
-
-// Theme
-import theme from '../../config/theme'
+import BlogPage from '../templates/BlogPage'
 
 // ___________________________________________________________________
 
@@ -27,9 +21,7 @@ const News = () => {
       desc={`Find company news, press and blog posts.`}
       individual={false}
     />
-      <AnimatedBox>
-        <BlogPage />
-      </AnimatedBox>
+    <BlogPage />
     </Layout>
   )
 }

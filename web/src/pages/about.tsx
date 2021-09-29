@@ -8,16 +8,10 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import AboutPage from '../components/AboutPage'
+import AboutPage from '../templates/AboutPage'
 
 // Hooks
 import useAboutPage from '../hooks/useAboutPage'
-
-// Elements
-import { AnimatedBox } from '../elements'
-
-// Theme
-import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
@@ -32,9 +26,7 @@ const About = () => {
         banner={page.pageTitle.image.asset.fluid.src}
         individual={true}
       />
-      <AnimatedBox>
-        <AboutPage />
-      </AnimatedBox>
+      <AboutPage />
     </Layout>
   )
 }

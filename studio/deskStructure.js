@@ -48,6 +48,16 @@ export default () =>
         )
         .icon(MdViewQuilt),
 
+      // Landing page
+      // _________________________________________________________________
+
+      S.listItem()
+        .title('Landing Pages')
+        .schemaType('landingPage')
+        .child(S.documentTypeList('landingPage').title('Landers'))
+
+        .icon(MdViewQuilt),
+
       // About page
       // _________________________________________________________________
 

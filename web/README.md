@@ -12,7 +12,6 @@
 - [x] Create your projects by creating a folder full of images and adding an entry to a .yaml file
 - [x] Shows your Instagram posts
 - [x] TypeScript
-- [x] Cypress for End-to-End testing
 - [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
 - [x] react-spring animations
 - [x] styled-components + styled-system + rebass for styling

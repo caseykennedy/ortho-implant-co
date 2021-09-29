@@ -8,16 +8,10 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import RethinkPage from '../components/RethinkPage'
+import RethinkPage from '../templates/RethinkPage'
 
 // Hooks
 import useRethinkPage from '../hooks/useRethinkPage'
-
-// Elements
-import { AnimatedBox } from '../elements'
-
-// Theme
-import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
@@ -32,9 +26,7 @@ const Rethink = () => {
         banner={page.billboard.figure.asset.fluid.src}
         individual={true}
       />
-      <AnimatedBox>
-        <RethinkPage />
-      </AnimatedBox>
+      <RethinkPage />
     </Layout>
   )
 }

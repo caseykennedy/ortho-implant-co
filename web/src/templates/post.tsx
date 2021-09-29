@@ -5,16 +5,10 @@
 // Libraries
 import React from 'react'
 
-// Elements
-import { AnimatedBox } from '../elements'
-
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Post from '../components/Post'
-
-// Theme
-import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
@@ -29,9 +23,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
         banner={`${page.mainImage.asset.fluid.src}`}
         individual={false}
       />
-      <AnimatedBox>
-        <Post pageContext={pageContext} />
-      </AnimatedBox>
+      <Post pageContext={pageContext} />
     </Layout>
   )
 }

@@ -483,3 +483,75 @@ type PostContextShape = {
     }
   }
 }
+
+// Landing Page shape
+// ___________________________________________________________________
+
+type LandingPageShape = {
+  landingPage: {
+    edges: LandingPageEdges[]
+  }
+}
+
+type LandingPageEdges = {
+  node: LandingPageQuery
+}
+
+type LandingPageData = {
+  landingPage: LandingPageQuery
+}
+
+type LandingPageQuery = {
+  title: string
+  slug: {
+    current: string
+  }
+  billboard: {
+    title: string
+    message: string
+    linkTo: string
+    linkTitle: string
+    figure: {
+      alt: string
+      asset: {
+        fluid: ImageShape
+        title: string
+      }
+    }
+  }
+  intro: {
+    _rawBody: string
+    _rawLead: string
+    heading: string
+    title: string
+    positioning: {
+      _rawBody: string
+      figure: {
+        asset: {
+          fluid: {
+            fluid: ImageShape
+          }
+        }
+        alt: string
+      }
+      lead: string
+      title: string
+    }[]
+  }
+  pageTitle: {
+    image: {
+      asset: {
+        fluid: ImageShape
+      }
+    }
+    link: string
+    message: string
+    title: string
+  }
+}
+
+type LandingPageContextShape = {
+  pageContext: {
+    page: LandingPageQuery
+  }
+}

@@ -14,6 +14,7 @@ import company from './company'
 import homePage from './homePage'
 import figure from './figure'
 import jobPost from './jobPost'
+import landingPage from './landingPage'
 import legalStatements from './legalStatements'
 import mainImage from './mainImage'
 import notion from './notion'
@@ -62,6 +63,7 @@ export default createSchema({
     company,
     figure,
     jobPost,
+    landingPage,
     legalStatements,
     mainImage,
     notion,

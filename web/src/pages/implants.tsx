@@ -8,13 +8,7 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ImplantsPage from '../components/ImplantsPage'
-
-// Elements
-import { AnimatedBox } from '../elements'
-
-// Theme
-import theme from '../../config/theme'
+import ImplantsPage from '../templates/ImplantsPage'
 
 // ___________________________________________________________________
 
@@ -26,9 +20,7 @@ const Implants = () => {
         title={`Implants | Orthopaedic Implant Co.`}
         individual={true}
       />
-      <AnimatedBox>
-        <ImplantsPage />
-      </AnimatedBox>
+      <ImplantsPage />
     </Layout>
   )
 }
