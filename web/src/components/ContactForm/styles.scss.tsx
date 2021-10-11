@@ -90,11 +90,9 @@ export const Form = styled.form`
     align-items: center;
     justify-content: center;
 
-    background: ${theme.colors.black};
+    background: ${theme.colors.primary};
     border: none;
-    border-bottom: ${theme.border};
-    border-color: ${theme.colors.tertiary};
-    color: ${theme.colors.tertiary};
+    color: ${theme.colors.text};
     cursor: pointer;
     font-family: ${theme.fonts.heading};
     font-size: calc(${theme.fontSizes[2]} * 1.15);
@@ -102,9 +100,8 @@ export const Form = styled.form`
     padding: ${theme.space[4]} ${theme.space[3]} ${theme.space[3]};
     
     &:hover {
-      background: ${theme.colors.primary};
+      background: ${theme.colors.tertiary};
       color: ${theme.colors.black};
-      border-color: ${theme.colors.primary};
     }
   }
 `
