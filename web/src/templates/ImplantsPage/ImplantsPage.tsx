@@ -7,9 +7,7 @@ import React, { useState } from 'react'
 import PageTitle from '../../components/PageTitle'
 import Filter from './Filter'
 import Billboard from '../../components/Billboard'
-import Section from '../../components/Section'
 
-import Divider from '../../elements/Divider'
 import { Box, Text } from '../../elements'
 
 import * as S from './styles.scss'
@@ -33,7 +31,7 @@ const billboardProps = {
 const ImplantsPage = () => {
   const pageTitle = {
     altText: 'asdf',
-    message: `implants <span style="color:#9D9FA2;">that are<br />good for all</span>`,
+    message: `implants that are<br /><span style="color:#9D9FA2;">good for all</span>`,
     title: 'quality + value',
     border: true
   }

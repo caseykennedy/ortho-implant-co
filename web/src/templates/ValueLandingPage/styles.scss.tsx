@@ -66,9 +66,20 @@ export const Aside = styled.div`
       }
 
       .title {
+
         border-bottom: ${theme.border};
         margin-bottom: ${theme.space[3]};
         width: 100%;
+
+        a {
+          color: ${theme.colors.text};
+          font-size: calc(${theme.fontSizes[1]} / 1.25);
+          float: right;
+
+          svg {
+            margin-left: ${theme.space[1]};
+          }
+        }
       }
 
       .savings {

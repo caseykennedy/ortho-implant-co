@@ -35,8 +35,10 @@ export const Form = styled.form`
       background: transparent;
       border: 0;
       border-bottom: ${theme.border};
+      border-color: ${theme.colors.tertiary};
       border-radius: 0;
 
+      color: ${theme.colors.white};
       font-weight: 400;
       letter-spacing: ${theme.root.font.baseLetterSpacing};
       margin: 0;
@@ -91,7 +93,8 @@ export const Form = styled.form`
     background: ${theme.colors.black};
     border: none;
     border-bottom: ${theme.border};
-    color: ${theme.colors.white};
+    border-color: ${theme.colors.tertiary};
+    color: ${theme.colors.tertiary};
     cursor: pointer;
     font-family: ${theme.fonts.heading};
     font-size: calc(${theme.fontSizes[2]} * 1.15);
@@ -101,6 +104,7 @@ export const Form = styled.form`
     &:hover {
       background: ${theme.colors.primary};
       color: ${theme.colors.black};
+      border-color: ${theme.colors.primary};
     }
   }
 `

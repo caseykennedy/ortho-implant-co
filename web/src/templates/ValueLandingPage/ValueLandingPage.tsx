@@ -16,17 +16,13 @@ import Billboard from '../../components/Billboard'
 import BlockContent from '../../components/BlockContent'
 import Section from '../../components/Section'
 import ContactForm from '../../components/ContactForm'
+import Icon from '../../components/Icons'
 
 // ___________________________________________________________________
 
 const Aside = () => {
   return (
     <S.Aside>
-      <Heading as="h2" color="black" fontSize={3} mb={5}>
-        Value based implants required an average 10.8 less operative time
-        compared to conventional implants.
-      </Heading>
-
       <Text as="p" mb={7}>
         Smarter solutions, reduced inventory and simplified instrumentation with
         a <mark>high average cost savings</mark>.
@@ -39,10 +35,14 @@ const Aside = () => {
               <Text
                 as="h4"
                 fontSize={2}
-                mb={2}
+                mb={0}
                 style={{ textTransform: 'uppercase' }}
                 dangerouslySetInnerHTML={{ __html: stats.product }}
               />
+              <a href={stats.url} target="_blank">
+                source
+                <Icon name="external-link" />
+              </a>
             </div>
             <div className="savings">
               <Text
@@ -53,7 +53,7 @@ const Aside = () => {
                 {stats.average}%
               </Text>
               <Text as="h4" fontSize={1} lineHeight={1} mb={0}>
-                avg. savings
+                avg. $ savings
               </Text>
             </div>
           </div>
@@ -67,7 +67,6 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
   pageContext
 }) => {
   const page = pageContext.page
-  console.log(page)
 
   const pageTitle = {
     altText: page.title,
@@ -102,7 +101,16 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
         >
           <Box flex={[1, 0.65]}>
             <S.Intro p={theme.gutter.axis}>
-              <Heading as="h4" color="primary">
+              <Box>
+                <Heading as="h3" fontWeight={400}>
+                  Reach out to us
+                </Heading>
+                <ContactForm />
+              </Box>
+            </S.Intro>
+
+            <Box p={theme.gutter.axis}>
+              <Heading as="h4" color="tertiary">
                 {page.intro.title && page.intro.title}
               </Heading>
 
@@ -115,13 +123,6 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
                   <BlockContent blocks={page.intro._rawBody || []} />
                 )}
               </Box>
-            </S.Intro>
-
-            <Box p={theme.gutter.axis}>
-              <Heading as="h3" fontWeight={400}>
-                Reach out to us
-              </Heading>
-              <ContactForm />
             </Box>
           </Box>
 
@@ -161,18 +162,26 @@ export default ValueLandingPage
 const statsData = [
   {
     product: 'Locking<br />Plates',
-    average: 56
+    average: 56,
+    url:
+      'https://journals.lww.com/jorthotrauma/Fulltext/2016/12001/The_Clinical_and_Economic_Impact_of_Generic.7.aspx'
   },
   {
     product: 'Cannulated<br />Screws',
-    average: 70
+    average: 70,
+    url:
+      'https://cdn.mdedge.com/files/s3fs-public/Document/September-2017/ajo043090405.pdf'
   },
   {
     product: 'IM<br />Nails',
-    average: 51
+    average: 51,
+    url:
+      'https://www.sciencedirect.com/science/article/abs/pii/S0030589818300804?via%3Dihub'
   },
   {
     product: 'External<br />Fixation',
-    average: 65
+    average: 65,
+    url:
+      'https://journaloei.scholasticahq.com/article/18255-the-clinical-and-economic-impact-of-high-value-external-fixation-utilization-at-a-level-ii-trauma-center'
   }
 ]
