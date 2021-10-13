@@ -101,6 +101,12 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
         >
           <Box flex={[1, 0.65]}>
             <S.Intro p={theme.gutter.axis}>
+              <Text as="p" mb={6}>
+                We're here because we believe our approach to supplying
+                orthopaedic implants is the first step toward a healthcare
+                system that's more affordable, more equitable, and better for
+                all.
+              </Text>
               <Box>
                 <Heading as="h3" fontWeight={400}>
                   Reach out to us

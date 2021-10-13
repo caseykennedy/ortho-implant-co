@@ -57,7 +57,7 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
   z-index: 9;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]} ${theme.space[10]} ${theme.space[2]}
+    padding: 0 ${theme.space[10]} ${theme.space[2]}
       ${theme.space[5]};
   }
 

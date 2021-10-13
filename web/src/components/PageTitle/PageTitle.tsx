@@ -24,7 +24,13 @@ type Props = {
   title?: string
 }
 
-const PageTitle: React.FC<Props> = ({ altText, border, image, message, title }) => {
+const PageTitle: React.FC<Props> = ({
+  altText,
+  border,
+  image,
+  message,
+  title
+}) => {
   const fadeAnimation = useSpring({
     config: config.molasses,
     delay: 260,
@@ -49,6 +55,15 @@ const PageTitle: React.FC<Props> = ({ altText, border, image, message, title }) 
               mb={0}
               dangerouslySetInnerHTML={{ __html: message }}
             />
+
+            {/* <Box width={[1, 8 / 10, 2 / 3]}>
+              <Text as="p">
+                We're here because we believe our approach to supplying
+                orthopaedic implants is the first step toward a healthcare
+                system that's more affordable, more equitable, and better for
+                all.
+              </Text>
+            </Box> */}
           </AnimatedBox>
         </S.Billboard>
       </S.PageTitle>
