@@ -142,7 +142,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
           </Box>
         </Flex>
 
-        <Section bg="primary" color="black" border={true} pb={7}>
+        {/* <Section bg="primary" color="black" border={true} pb={7}>
           <Box width={[1, 8 / 10, 2 / 3]}>
             <Heading as="h4" mb={6}>
               Better for all
@@ -153,7 +153,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
               that's more affordable, more equitable, and better for all.
             </Heading>
           </Box>
-        </Section>
+        </Section> */}
 
         <Billboard {...billboardProps} />
       </S.ValueLandingPage>
