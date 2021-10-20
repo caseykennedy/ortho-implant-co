@@ -27,7 +27,7 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
   z-index: 9;
 
   @media ${theme.mq.desktop} {
-    padding-bottom: calc(100px - ${theme.space[5]});
+    padding-bottom: calc(120px - ${theme.space[5]});
   }
 
   a {
