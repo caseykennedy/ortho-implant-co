@@ -22,7 +22,7 @@ const ContactPage = () => {
   // Page title
   const pageTitle = {
     // altText: data.title,
-    // image: page.pageTitle.image.asset.fluid,
+    // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title
   }
@@ -34,7 +34,7 @@ const ContactPage = () => {
     title: page.billboard.title,
     to: page.billboard.linkTo,
     btnText: page.billboard.linkTitle,
-    src: page.billboard.figure.asset.fluid,
+    src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt
   }
 

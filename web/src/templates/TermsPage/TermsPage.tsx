@@ -34,7 +34,7 @@ const TermsPage = () => {
   const page = useTerms()
   const pageTitle = {
     // altText: data.title,
-    // image: page.pageTitle.image.asset.fluid,
+    // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title
   }

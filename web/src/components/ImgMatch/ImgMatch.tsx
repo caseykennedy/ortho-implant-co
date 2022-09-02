@@ -1,16 +1,16 @@
 // Dynamic query variables in GraphQl queries for Gatsby-Image
 // https://github.com/gatsbyjs/gatsby/issues/10482#issuecomment-485349612
 
-import React, { useMemo } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import React, { useMemo } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 type Props = {
-  src: string
-  altText: string
-  objectFit?: string
-  objectPosition?: string
-}
+  src: string;
+  altText: string;
+  objectFit?: string;
+  objectPosition?: string;
+};
 
 const ImgMatch: React.FC<Props> = ({
   src,
@@ -34,7 +34,7 @@ const ImgMatch: React.FC<Props> = ({
         }
       }
     }
-  `)
+  `);
 
   const match = useMemo(
     () =>
@@ -42,18 +42,18 @@ const ImgMatch: React.FC<Props> = ({
         ({ node }: { node: any }) => src === node.relativePath
       ),
     [data, src]
-  )
+  );
 
   return (
-    <Img
+    <GatsbyImage
       className="img"
-      objectFit={objectFit ? objectFit : 'cover'}
+      // objectFit={objectFit ? objectFit : 'cover'}
       objectPosition={objectPosition ? objectPosition : '50% 50%'}
-      alt={altText ? altText : null}
-      fluid={match.node.childImageSharp.fluid}
+      alt={altText ? altText : ''}
+      image={match.node.childImageSharp.fluid}
       {...props}
     />
-  )
-}
+  );
+};
 
-export default ImgMatch
+export default ImgMatch;

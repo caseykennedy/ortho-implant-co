@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // Libraries
 import { useSpring, config } from 'react-spring'
@@ -67,11 +67,11 @@ const Purpose = () => {
           style={manifestoSpring}
         >
           {page.purpose.figure && (
-            <Img
-              fluid={page.purpose.figure.asset.fluid}
+            <GatsbyImage
+              image={page.purpose.figure.asset.gatsbyImageData}
               objectFit="cover"
               objectPosition="50% 50%"
-              alt={page.purpose.figure.asset.title}
+              alt={page.purpose.figure.alt}
             />
           )}
         </AnimatedBox>

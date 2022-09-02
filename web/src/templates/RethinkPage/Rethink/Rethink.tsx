@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
@@ -26,8 +26,9 @@ type NotionData = {
     title: string
     image: {
       asset: {
-        fluid: ImageShape
-      }
+        gatsbyImageData: IGatsbyImageData;
+        url: string;
+      };
     }
   }
 }
@@ -93,8 +94,8 @@ const Notion: React.FC<NotionData> = ({ data }) => {
 
           <Box width={[1, 1, 2 / 8]} className="image">
             {data.image && (
-              <Img
-                fluid={data.image.asset.fluid}
+              <GatsbyImage
+                image={data.image.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={data.title}

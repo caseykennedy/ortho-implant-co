@@ -5,6 +5,7 @@
 import React from 'react'
 import { useSpring, config } from 'react-spring'
 import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { Parallax } from 'react-scroll-parallax'
 
 import useHomePage from '../../../hooks/useHomePage'
@@ -45,8 +46,8 @@ const Hero = () => {
       </S.Hero>
       <Parallax y={[-9, 17]}>
         <S.Figure>
-          <Img
-            fluid={data.hero.image.asset.fluid}
+          <GatsbyImage
+            image={data.hero.image.asset.gatsbyImageData}
             objectFit="cover"
             objectPosition="50% 50%"
             alt={data.hero.message}

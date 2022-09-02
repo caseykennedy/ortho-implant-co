@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // Components
 import Section from '../../../components/Section'
@@ -34,8 +34,8 @@ const Category: React.FC<{ cat: CategoryNode }> = ({ cat }) => {
         className={`tip  ${isHovered ? 'tip--visible' : null}`}
       >
         {cat.illustration && (
-          <Img
-            fluid={cat.illustration.asset.fluid}
+          <GatsbyImage
+            image={cat.illustration.asset.gatsbyImageData}
             objectFit="cover"
             objectPosition="50% 50%"
             alt={cat.title}

@@ -24,7 +24,7 @@ const RethinkPage = () => {
   // Page Title
   const pageTitle = {
     altText: page.pageTitle.message,
-    image: page.pageTitle.image.asset.fluid,
+    image: page.pageTitle.image.asset.gatsbyImageData,
     message: `Rethink<br /><span style="color:#9D9FA2;">orthopaedic implants</span>`,
     title: page.pageTitle.title
   }
@@ -34,7 +34,7 @@ const RethinkPage = () => {
     bg: theme.colors.black,
     message: page.billboard.message,
     title: page.billboard.title,
-    src: page.billboard.figure.asset.fluid,
+    src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
     to: page.billboard.linkTo

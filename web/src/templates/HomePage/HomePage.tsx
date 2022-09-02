@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
     bg: theme.colors.tertiary,
     message: data.billboard.message,
     title: data.billboard.title,
-    src: data.billboard.figure.asset.fluid,
+    src: data.billboard.figure.asset.gatsbyImageData,
     altText: data.billboard.figure.alt,
     btnText: data.billboard.linkTitle,
     to: data.billboard.linkTo

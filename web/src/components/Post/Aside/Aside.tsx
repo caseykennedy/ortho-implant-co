@@ -5,6 +5,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Components
 import { Card } from '../../../elements/Card'
@@ -35,8 +36,8 @@ const Aside = () => {
             <S.Post to={`/news/${post.slug.current}`} key={idx}>
               <Box className="post__img">
                 {post.mainImage && (
-                  <Img
-                    fluid={post.mainImage.asset.fluid}
+                  <GatsbyImage
+                    image={post.mainImage.asset.gatsbyImageData}
                     objectFit="cover"
                     objectPosition="50% 50%"
                     alt={post.title}

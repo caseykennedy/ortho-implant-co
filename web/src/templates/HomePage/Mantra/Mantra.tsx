@@ -2,17 +2,17 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image/withIEPolyfill';
 
-import BlockContent from '../../../components/BlockContent'
+import BlockContent from '../../../components/BlockContent';
 
-import Button from '../../../elements/Button'
-import { Box, Flex, Heading, Text } from '../../../elements'
+import Button from '../../../elements/Button';
+import { Box, Flex, Heading, Text } from '../../../elements';
 
-import theme from '../../../../config/theme'
-import * as S from './styles.scss'
+import theme from '../../../../config/theme';
+import * as S from './styles.scss';
 
 // ___________________________________________________________________
 
@@ -29,23 +29,22 @@ const Mantra = () => {
             _rawMessage
             image {
               asset {
-                fluid(maxWidth: 1080) {
-                  src
-                  aspectRatio
-                  base64
-                  sizes
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
+                url
               }
             }
           }
         }
       }
     }
-  `)
-  const query = data.allSanityHomeMantra.edges[0].node
+  `);
+  const query = data.allSanityHomeMantra.edges[0].node;
   // console.log('---_- Mantra -_---')
   // console.log(query)
   return (
@@ -55,7 +54,7 @@ const Mantra = () => {
           <Box width={[1, 1 / 2]}>
             {query.image && (
               <Img
-                fluid={query.image.asset.fluid}
+                image={query.image.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 className="img"
@@ -95,7 +94,7 @@ const Mantra = () => {
         </Text>
       </Section> */}
     </>
-  )
-}
+  );
+};
 
-export default Mantra
+export default Mantra;

@@ -4,7 +4,7 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   // Banner
-  // banner: settings.banner.asset.fluid.src,
+  // banner: settings.banner.asset.gatsbyImageData.src,
   banner: '',
   
   siteTitle: settings.title, // Navigation and Site Title

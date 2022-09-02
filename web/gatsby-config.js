@@ -38,6 +38,7 @@ module.exports = {
         defaultDataLayer: { platform: 'gatsby' }
       }
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',

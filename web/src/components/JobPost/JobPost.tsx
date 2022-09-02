@@ -14,11 +14,9 @@ import useRethinkPage from '../../hooks/useRethinkPage'
 
 // Elements
 import { AnimatedBox, Box, Heading } from '../../elements'
-import Divider from '../../elements/Divider'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-import Prefooter from '../Footer/Prefooter'
 
 // ___________________________________________________________________
 
@@ -39,7 +37,7 @@ const JobPost: React.FC<CareersContextShape> = ({ pageContext }) => {
 
   const pageTitle = {
     // altText: data.title,
-    // image: page.pageTitle.image.asset.fluid,
+    // image: page.pageTitle.image.asset.gatsbyImageData,
     message: data.title,
     title: data.publishedAt
   }

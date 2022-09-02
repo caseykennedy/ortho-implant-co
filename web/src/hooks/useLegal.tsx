@@ -3,7 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -11,34 +12,35 @@ type Props = {
   legal: {
     edges: {
       node: {
-        _id: string
-        _rawBody: string
+        _id: string;
+        _rawBody: string;
         billboard: {
-          title: string
-          message: string
-          linkTo: string
-          linkTitle: string
+          title: string;
+          message: string;
+          linkTo: string;
+          linkTitle: string;
           figure: {
             asset: {
-              fluid: ImageShape
-              title: string
-            }
-          }
-        }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+        };
         pageTitle: {
           image: {
             asset: {
-              fluid: ImageShape
-            }
-          }
-          link: string
-          message: string
-          title: string
-        }
-      }
-    }[]
-  }
-}
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+          link: string;
+          message: string;
+          title: string;
+        };
+      };
+    }[];
+  };
+};
 
 const useLegal = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -53,32 +55,26 @@ const useLegal = () => {
               message
               image {
                 asset {
-                  fluid(maxWidth: 800) {
-                    srcWebp
-                    srcSetWebp
-                    srcSet
-                    sizes
-                    base64
-                    src
-                    aspectRatio
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
             }
             billboard {
               figure {
                 asset {
-                  fluid(maxWidth: 1200) {
-                    srcWebp
-                    srcSetWebp
-                    srcSet
-                    src
-                    sizes
-                    base64
-                    aspectRatio
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               linkTitle
@@ -90,9 +86,9 @@ const useLegal = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.legal.edges[0].node
-}
+  return data.legal.edges[0].node;
+};
 
-export default useLegal
+export default useLegal;

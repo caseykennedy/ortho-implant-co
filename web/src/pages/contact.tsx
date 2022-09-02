@@ -23,7 +23,7 @@ const Contact = () => {
         pathname={`/contact`}
         title={`Contact us | Orthopaedic Implant Co.`}
         desc={page.pageTitle.message}
-        banner={page.billboard.figure.asset.fluid.src}
+        banner={page.billboard.figure.asset.gatsbyImageData.src}
         individual={true}
       />
       <ContactPage />

@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // Hooks
 import useHomePage from '../../../hooks/useHomePage'
@@ -78,8 +78,8 @@ const Testimonials = () => {
       </S.Decorator>
       <Box bg="tertiary">
         <Box>
-          <Img
-            fluid={data.testimonialsFigure.asset.fluid}
+          <GatsbyImage
+            image={data.testimonialsFigure.asset.gatsbyImageData}
             objectFit="cover"
             objectPosition="50% 50%"
             alt="Healthy people jogging in the mountains."

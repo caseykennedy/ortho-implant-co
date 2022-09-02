@@ -3,10 +3,9 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 
 // Libraries
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Parallax } from 'react-scroll-parallax'
@@ -52,11 +51,11 @@ const Approach = () => {
         >
           <Parallax className="custom-class" y={[-25, 15]} tagOuter="figure">
             {page.approach.figure && (
-              <Img
-                fluid={page.approach.figure.asset.fluid}
+              <GatsbyImage
+                image={page.approach.figure.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
-                alt={page.approach.figure.asset.title}
+                alt={page.approach.figure.alt}
               />
             )}
           </Parallax>

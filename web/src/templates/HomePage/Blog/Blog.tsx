@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Libraries
 import Swiper from 'react-id-swiper'
@@ -58,9 +58,6 @@ const Swipe: React.FC = ({ children }) => {
 
 const Blog = () => {
   const posts = usePost()
-  // console.log('-----_- Posts -_-----')
-  // console.log(posts)
-
   const newsPosts = posts.filter(({ node: post }) => {
     if (post.categories[0].title.includes('News')) {
       return post
@@ -95,8 +92,8 @@ const Blog = () => {
                   <S.Card width={[1, 1, 1]} border={true} className="card">
                     <Box className="card__img">
                       {post.mainImage && (
-                        <Img
-                          fluid={post.mainImage.asset.fluid}
+                        <GatsbyImage
+                          image={post.mainImage.asset.gatsbyImageData}
                           objectFit="cover"
                           objectPosition="50% 50%"
                           alt={post.title}

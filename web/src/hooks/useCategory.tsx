@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
 // ___________________________________________________________________
 
@@ -23,39 +23,36 @@ const useCategory = () => {
             }
             illustration {
               asset {
-                fluid {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
-                title
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
+                url
               }
               alt
             }
             image {
               asset {
-                fluid(maxWidth: 800) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
+                url
               }
             }
           }
         }
       }
     }
-  `)
+  `);
 
-  return data.categories.edges
-}
+  return data.categories.edges;
+};
 
-export default useCategory
+export default useCategory;

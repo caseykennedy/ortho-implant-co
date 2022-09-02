@@ -3,12 +3,10 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { Link } from 'gatsby'
 
 import ImgMatch from '../ImgMatch'
 import Icon from '../Icons'
-import BlockContent from '../BlockContent'
 
 import useJobPost from '../../hooks/useJobPost'
 

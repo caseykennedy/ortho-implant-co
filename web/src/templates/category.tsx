@@ -28,7 +28,7 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
         pathname={`/implants/${page.slug.current}`}
         title={`${page.title}`}
         desc={`${page.title}`}
-        banner={`${page.image.asset.fluid.src}`}
+        banner={`${page.image.asset.gatsbyImageData.src}`}
         individual={false}
       />
       <AnimatedBox>

@@ -4,6 +4,7 @@
 
 import React, { useRef } from 'react'
 import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Components
 import BlockContent from '../../../components/BlockContent'
@@ -29,8 +30,8 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
       <Box width={[1, 1 / 3]} mb={[7, 0]} position="relative">
         <Box width={[2 / 3, 1]} className="bio__figure">
           {bio.headshot && (
-            <Img
-              fluid={{ ...bio.headshot.asset.fluid, aspectRatio: 2 / 3 }}
+            <GatsbyImage
+              image={{ ...bio.headshot.asset.gatsbyImageData, aspectRatio: 2 / 3 }}
               objectFit="cover"
               objectPosition="50% 50%"
               alt={bio.name}

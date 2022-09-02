@@ -2,29 +2,30 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import React from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image/withIEPolyfill';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
-import Button from '../../elements/Button'
+import Button from '../../elements/Button';
 
-import * as S from './styles.scss'
-import { Box } from '../../elements'
-import theme from '../../../config/theme'
+import * as S from './styles.scss';
+import { Box } from '../../elements';
+import theme from '../../../config/theme';
 
 // ___________________________________________________________________
 
 type Props = {
-  altText?: string
-  bg?: string
-  btnText?: string
-  color?: string
-  invert?: boolean
-  message?: string
-  title?: string
-  to?: string
-  src?: object
-}
+  altText?: string;
+  bg?: string;
+  btnText?: string;
+  color?: string;
+  invert?: boolean;
+  message?: string;
+  title?: string;
+  to?: string;
+  src?: IGatsbyImageData;
+};
 
 const Intro: React.FC<Props> = ({
   altText,
@@ -35,18 +36,18 @@ const Intro: React.FC<Props> = ({
   message,
   title,
   to,
-  src
+  src,
 }) => {
   return (
     <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
       <S.Figure>
         {src && (
           <>
-            <Img
-              fluid={src}
+            <GatsbyImage
+              image={src}
               objectFit="cover"
               objectPosition="50% 50%"
-              alt={altText}
+              alt={altText || ''}
               className="img"
             />
           </>
@@ -81,10 +82,10 @@ const Intro: React.FC<Props> = ({
         )}
       </S.BillboardInner>
     </S.Billboard>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;
 
 // ___________________________________________________________________
 
@@ -92,9 +93,9 @@ const defaultProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-on-one",
   title: 'Ready to chat?',
-  color: 'white'
+  color: 'white',
   // btnText: 'Talk to us',
   // to: '/'
-}
+};
 
-Intro.defaultProps = defaultProps
+Intro.defaultProps = defaultProps;

@@ -3,7 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -11,44 +12,45 @@ type Props = {
   contactPage: {
     edges: {
       node: {
-        companyName: string
-        emails: string[]
+        companyName: string;
+        emails: string[];
         location: {
-          lat: number
-          lng: number
-        }
-        addressMailing: string
-        addressOffice: string
-        telDirect: string
-        telFax: string
-        telTollFree: string
+          lat: number;
+          lng: number;
+        };
+        addressMailing: string;
+        addressOffice: string;
+        telDirect: string;
+        telFax: string;
+        telTollFree: string;
         billboard: {
-          title: string
-          message: string
-          linkTo: string
-          linkTitle: string
+          title: string;
+          message: string;
+          linkTo: string;
+          linkTitle: string;
           figure: {
-            alt: string
+            alt: string;
             asset: {
-              fluid: ImageShape
-              title: string
-            }
-          }
-        }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+        };
         pageTitle: {
           image: {
             asset: {
-              fluid: ImageShape
-            }
-          }
-          link: string
-          message: string
-          title: string
-        }
-      }
-    }[]
-  }
-}
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+          link: string;
+          message: string;
+          title: string;
+        };
+      };
+    }[];
+  };
+};
 
 const useContactPage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -75,19 +77,26 @@ const useContactPage = () => {
               figure {
                 alt
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
             }
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               message
@@ -97,9 +106,9 @@ const useContactPage = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.contactPage.edges[0].node
-}
+  return data.contactPage.edges[0].node;
+};
 
-export default useContactPage
+export default useContactPage;

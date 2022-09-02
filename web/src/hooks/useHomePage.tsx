@@ -3,7 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -12,60 +13,63 @@ type Props = {
     edges: {
       node: {
         billboard: {
-          title: string
-          message: string
-          linkTo: string
-          linkTitle: string
+          title: string;
+          message: string;
+          linkTo: string;
+          linkTitle: string;
           figure: {
-            alt: string
+            alt: string;
             asset: {
-              fluid: ImageShape
-              title: string
-            }
-          }
-        }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+        };
         hero: {
           image: {
             asset: {
-              fluid: ImageShape
-            }
-          }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
 
-          message: string
-          title: string
-        }
+          message: string;
+          title: string;
+        };
         rethink: {
-          heading: string
-          title: string
-          linkTo: string
-          linkTitle: string
+          heading: string;
+          title: string;
+          linkTo: string;
+          linkTitle: string;
           tabPanels: {
             image: {
               asset: {
-                fluid: ImageShape
-              }
-            }
-            _rawMessage: object
-            linkTitle: string
-            linkTo: string
-            tag: string
-            title: string
-          }[]
-        }
+                gatsbyImageData: IGatsbyImageData;
+                url: string;
+              };
+            };
+            _rawMessage: object;
+            linkTitle: string;
+            linkTo: string;
+            tag: string;
+            title: string;
+          }[];
+        };
         testimonials: {
-          _rawQuote: object
-          location: string
-          position: string
-        }[]
+          _rawQuote: object;
+          location: string;
+          position: string;
+        }[];
         testimonialsFigure: {
           asset: {
-            fluid: ImageShape
-          }
-        }
-      }
-    }[]
-  }
-}
+            gatsbyImageData: IGatsbyImageData;
+            url: string;
+          };
+        };
+      };
+    }[];
+  };
+};
 
 const useHomePage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -81,19 +85,26 @@ const useHomePage = () => {
               figure {
                 alt
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
             }
             hero {
               image {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               message
@@ -107,9 +118,14 @@ const useHomePage = () => {
               tabPanels {
                 image {
                   asset {
-                    fluid(maxWidth: 800) {
-                      ...GatsbySanityImageFluid
-                    }
+                    gatsbyImageData(
+                      fit: FILLMAX
+                      layout: FULL_WIDTH
+                      placeholder: BLURRED
+                      formats: [AUTO, AVIF, WEBP]
+                      aspectRatio: 1
+                    )
+                    url
                   }
                 }
                 _rawMessage
@@ -126,18 +142,23 @@ const useHomePage = () => {
             }
             testimonialsFigure {
               asset {
-                fluid(maxWidth: 1080) {
-                  ...GatsbySanityImageFluid
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
+                url
               }
             }
           }
         }
       }
     }
-  `)
+  `);
 
-  return data.homePage.edges[0].node
-}
+  return data.homePage.edges[0].node;
+};
 
-export default useHomePage
+export default useHomePage;

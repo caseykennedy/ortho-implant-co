@@ -37,7 +37,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
   const seo = {
     title: `${title}` || settings.titleAlt,
     description: desc || settings.description,
-    image: `${banner || settings.banner.asset.fluid.src}`,
+    image: `${banner || settings.banner.asset.url}`,
     url: `${settings.url}${pathname || ''}`
   }
 
@@ -140,7 +140,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.banner.asset.fluid.src}`
+          url: `${settings.banner.asset.gatsbyImageData.src}`
         }
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',

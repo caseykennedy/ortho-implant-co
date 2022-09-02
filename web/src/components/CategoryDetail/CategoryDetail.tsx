@@ -47,7 +47,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
   // Page title props
   const pageTitle = {
     altText: page.title,
-    image: page.image.asset.fluid,
+    image: page.image.asset.gatsbyImageData,
     message: page.title,
     title: 'Category'
   }
@@ -61,7 +61,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     invert: false,
     to: '/contact',
     btnText: 'talk to us'
-    // src: page.image.asset.fluid,
+    // src: page.image.asset.gatsbyImageData,
     // altText: 'Doctors in the operating room.'
   }
   return (

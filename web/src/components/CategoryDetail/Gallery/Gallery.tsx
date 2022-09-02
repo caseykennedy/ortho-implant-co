@@ -3,21 +3,18 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 
 // Libraries
-import Img from 'gatsby-image/withIEPolyfill'
-import { Grid, Cell } from 'styled-css-grid'
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Swiper from 'react-id-swiper'
 
 // Components
 import Lightbox from '../../Lightbox'
 
 // Elements
-import { AnimatedBox, Box, Flex, Heading, Text } from '../../../elements'
+import { Box } from '../../../elements'
 
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
 import 'swiper/css/swiper.css'
 
 // ___________________________________________________________________
@@ -62,7 +59,7 @@ const ImageSwiper: React.FC = ({ children }) => {
 
 const Gallery: React.FC<GalleryShape> = ({ product }) => {
   // Map gallery images
-  const galleryImages = product.gallery.map(img => img.asset.fluid.src)
+  const galleryImages = product.gallery.map(img => img.asset.gatsbyImageData.src)
 
   // console.log(product.gallery)
 
@@ -82,8 +79,8 @@ const Gallery: React.FC<GalleryShape> = ({ product }) => {
               }}
               bg="white"
             >
-              <Img
-                fluid={img.asset.fluid}
+              <GatsbyImage
+                image={img.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={product.shortName}

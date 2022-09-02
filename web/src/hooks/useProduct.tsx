@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
 // ___________________________________________________________________
 
@@ -19,16 +19,24 @@ const useProduct = () => {
               _rawFeatures
               gallery {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               mainImage {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               publishedAt
@@ -57,9 +65,9 @@ const useProduct = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.productsOrder.edges[0]
-}
+  return data.productsOrder.edges[0];
+};
 
-export default useProduct
+export default useProduct;

@@ -24,7 +24,7 @@ const AboutPage = () => {
   // Page Title
   const pageTitle = {
     altText: page.pageTitle.message,
-    image: page.pageTitle.image.asset.fluid,
+    image: page.pageTitle.image.asset.gatsbyImageData,
     message: `<span style="color:#9D9FA2;">We aim to</span><br />change the system`,
     // title: 'Needs title'
   }
@@ -34,7 +34,7 @@ const AboutPage = () => {
     bg: theme.colors.white,
     message: page.billboard.message,
     title: page.billboard.title,
-    src: page.billboard.figure.asset.fluid,
+    src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
     to: page.billboard.linkTo

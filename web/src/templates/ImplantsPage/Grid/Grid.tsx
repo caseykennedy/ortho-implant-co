@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // Libraries
 import { useTransition } from 'react-spring'
@@ -37,8 +37,8 @@ const Card: React.FC<{ implant: ProductEdges; transition: object }> = ({
               altText="placeholder"
             />
           ) : (
-            <Img
-              fluid={implant.node.mainImage.asset.fluid}
+            <GatsbyImage
+              image={implant.node.mainImage.asset.gatsbyImageData}
               objectFit="cover"
               objectPosition="50% 50%"
               alt={implant.node.name}

@@ -3,8 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
-import GatsbyImage from 'gatsby-image'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -12,31 +12,32 @@ type Props = {
   settings: {
     edges: {
       node: {
-        author: string
-        backgroundColor: string
+        author: string;
+        backgroundColor: string;
         banner: {
           asset: {
-            fluid: ImageShape
-          }
-        }
-        description: string
-        googleAnalyticsID: string
-        headline: string
-        language: string
-        logo: string
-        ogLanguage: string
-        ogSiteName: string
-        siteName: string
-        themeColor: string
-        title: string
-        titleAlt: string
-        titleShort: string
-        url: string
-        userTwitter: string
-      }
-    }[]
-  }
-}
+            gatsbyImageData: IGatsbyImageData;
+            url: string;
+          };
+        };
+        description: string;
+        googleAnalyticsID: string;
+        headline: string;
+        language: string;
+        logo: string;
+        ogLanguage: string;
+        ogSiteName: string;
+        siteName: string;
+        themeColor: string;
+        title: string;
+        titleAlt: string;
+        titleShort: string;
+        url: string;
+        userTwitter: string;
+      };
+    }[];
+  };
+};
 
 const useSiteSettings = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -48,15 +49,14 @@ const useSiteSettings = () => {
             backgroundColor
             banner {
               asset {
-                fluid {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
-                  aspectRatio
-                }
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1
+                )
+                url
               }
             }
             description
@@ -77,9 +77,9 @@ const useSiteSettings = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.settings.edges[0].node
-}
+  return data.settings.edges[0].node;
+};
 
-export default useSiteSettings
+export default useSiteSettings;

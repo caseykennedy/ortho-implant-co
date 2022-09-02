@@ -13,6 +13,8 @@ import blockText from './blockText'
 import company from './company'
 import homePage from './homePage'
 import figure from './figure'
+import ifuDoc from './ifuDoc'
+import ifuOrder from './ifuOrder'
 import jobPost from './jobPost'
 import landingPage from './landingPage'
 import legalStatements from './legalStatements'
@@ -22,7 +24,7 @@ import pageTitle from './pageTitle'
 import postCategory from './postCategory'
 import purpose from './purpose'
 import productCategory from './productCategory'
-import productsOrder from './ProductsOrder'
+import productsOrder from './productsOrder'
 import productResources from './productResources'
 import person from './person'
 import position from './position'
@@ -62,6 +64,8 @@ export default createSchema({
     billboard,
     company,
     figure,
+    ifuDoc,
+    ifuOrder,
     jobPost,
     landingPage,
     legalStatements,

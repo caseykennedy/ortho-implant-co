@@ -70,7 +70,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
 
   const pageTitle = {
     altText: page.title,
-    image: page.pageTitle.image.asset.fluid,
+    image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title && page.pageTitle.title
   }
@@ -79,7 +79,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
     bg: theme.colors.black,
     message: page.billboard.message,
     title: page.billboard.title,
-    src: page.billboard.figure.asset.fluid,
+    src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
     to: page.billboard.linkTo

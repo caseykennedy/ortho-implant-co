@@ -27,7 +27,7 @@ const LegalPage = () => {
   const page = useLegal()
   const pageTitle = {
     // altText: data.title,
-    // image: page.pageTitle.image.asset.fluid,
+    // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title
   }
@@ -35,7 +35,7 @@ const LegalPage = () => {
     bg: theme.colors.tertiary,
     message: page.billboard.message,
     title: page.billboard.title,
-    src: page.billboard.figure.asset.fluid,
+    src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
     to: page.billboard.linkTo

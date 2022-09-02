@@ -3,7 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -12,50 +13,50 @@ type Props = {
     edges: {
       node: {
         billboard: {
-          title: string
-          message: string
-          linkTo: string
-          linkTitle: string
+          title: string;
+          message: string;
+          linkTo: string;
+          linkTitle: string;
           figure: {
-            alt: string
+            alt: string;
             asset: {
-              fluid: ImageShape
-              title: string
-            }
-          }
-        }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+        };
         intro: {
-          _rawBody: string
-          heading: string
-          title: string
+          _rawBody: string;
+          heading: string;
+          title: string;
           positioning: {
-            _rawBody: string
+            _rawBody: string;
             figure: {
               asset: {
-                fluid: {
-                  fluid: ImageShape
-                }
-              }
-              alt: string
-            }
-            lead: string
-            title: string
-          }[]
-        }
+                gatsbyImageData: IGatsbyImageData;
+                url: string;
+              };
+              alt: string;
+            };
+            lead: string;
+            title: string;
+          }[];
+        };
         pageTitle: {
           image: {
             asset: {
-              fluid: ImageShape
-            }
-          }
-          link: string
-          message: string
-          title: string
-        }
-      }
-    }[]
-  }
-}
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+          link: string;
+          message: string;
+          title: string;
+        };
+      };
+    }[];
+  };
+};
 
 const useAboutPage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -71,10 +72,13 @@ const useAboutPage = () => {
               figure {
                 alt
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
             }
@@ -86,9 +90,13 @@ const useAboutPage = () => {
                 _rawBody
                 figure {
                   asset {
-                    fluid(maxWidth: 600) {
-                      ...GatsbySanityImageFluid
-                    }
+                    gatsbyImageData(
+                      fit: FILLMAX
+                      layout: FULL_WIDTH
+                      placeholder: BLURRED
+                      formats: [AUTO, AVIF, WEBP]
+                    )
+                    url
                   }
                   alt
                 }
@@ -99,9 +107,13 @@ const useAboutPage = () => {
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               message
@@ -111,9 +123,9 @@ const useAboutPage = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.aboutPage.edges[0].node
-}
+  return data.aboutPage.edges[0].node;
+};
 
-export default useAboutPage
+export default useAboutPage;

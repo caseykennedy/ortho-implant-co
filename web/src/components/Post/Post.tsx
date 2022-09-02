@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Components
 import PageTitle from '../PageTitle'
@@ -27,8 +27,8 @@ import theme from '../../../config/theme'
 const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
   return (
     <S.Author>
-      <Img
-        fluid={author.headshot.asset.fluid}
+      <GatsbyImage
+        image={author.headshot.asset.gatsbyImageData}
         objectFit="cover"
         objectPosition="50% 50%"
         alt={author.name}
@@ -50,7 +50,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
   const pageTitle = {
     // altText: page.title,
-    // image: page.pageTitle.image.asset.fluid,
+    // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.title,
     title: page.publishedAt
   }
@@ -60,8 +60,8 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
       <Box width={1}>
         {page.mainImage && (
-          <Img
-            fluid={page.mainImage.asset.fluid}
+          <GatsbyImage
+            image={page.mainImage.asset.gatsbyImageData}
             objectFit="cover"
             objectPosition="50% 50%"
             alt={page.title}

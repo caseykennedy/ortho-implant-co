@@ -3,7 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 // ___________________________________________________________________
 
@@ -12,32 +13,33 @@ type Props = {
     edges: {
       node: {
         billboard: {
-          title: string
-          message: string
-          linkTo: string
-          linkTitle: string
+          title: string;
+          message: string;
+          linkTo: string;
+          linkTitle: string;
           figure: {
-            alt: string
+            alt: string;
             asset: {
-              fluid: ImageShape
-              title: string
-            }
-          }
-        }
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+        };
         pageTitle: {
           image: {
             asset: {
-              fluid: ImageShape
-            }
-          }
-          link: string
-          message: string
-          title: string
-        }
-      }
-    }[]
-  }
-}
+              gatsbyImageData: IGatsbyImageData;
+              url: string;
+            };
+          };
+          link: string;
+          message: string;
+          title: string;
+        };
+      };
+    }[];
+  };
+};
 
 const useNewsPage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -53,19 +55,26 @@ const useNewsPage = () => {
               figure {
                 alt
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
-                  title
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
             }
             pageTitle {
               image {
                 asset {
-                  fluid(maxWidth: 800) {
-                    ...GatsbySanityImageFluid
-                  }
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
+                  url
                 }
               }
               message
@@ -75,9 +84,9 @@ const useNewsPage = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.newsPage.edges[0].node
-}
+  return data.newsPage.edges[0].node;
+};
 
-export default useNewsPage
+export default useNewsPage;

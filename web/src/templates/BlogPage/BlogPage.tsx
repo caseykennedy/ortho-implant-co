@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Components
 import PageTitle from '../../components/PageTitle'
@@ -34,8 +34,8 @@ const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
         <Box width={[1, 1 / 2]} mb={7}>
           {post.mainImage && (
             <Link to={`/news/${post.slug.current}`}>
-              <Img
-                fluid={post.mainImage.asset.fluid}
+              <GatsbyImage
+                image={post.mainImage.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
                 alt={post.title}
@@ -90,7 +90,7 @@ const BlogPage = () => {
   // Page title
   const pageTitle = {
     altText: page.pageTitle.title,
-    image: page.pageTitle.image.asset.fluid,
+    image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title
   }
