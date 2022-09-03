@@ -140,7 +140,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.banner.asset.gatsbyImageData.src}`
+          url: `${settings.banner.asset.url}`
         }
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',

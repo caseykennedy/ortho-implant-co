@@ -23,7 +23,7 @@ const About = () => {
         pathname={`/about`}
         title={`About us | Orthopaedic Implant Co.`}
         desc={page.pageTitle.message}
-        banner={page.pageTitle.image.asset.gatsbyImageData.src}
+        banner={page.pageTitle.image.asset.url}
         individual={true}
       />
       <AboutPage />

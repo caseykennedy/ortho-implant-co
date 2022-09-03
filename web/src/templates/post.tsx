@@ -20,7 +20,7 @@ const PostTemplate: React.FC<PostContextShape> = ({ pageContext }) => {
         pathname={`/implants/${page.slug.current}`}
         title={`${page.title}`}
         desc={`${page.title}`}
-        banner={`${page.mainImage.asset.gatsbyImageData.src}`}
+        banner={`${page.mainImage.asset.url}`}
         individual={false}
       />
       <Post pageContext={pageContext} />

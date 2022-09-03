@@ -23,7 +23,7 @@ const Rethink = () => {
         pathname={`/rethink`}
         title={`Rethink Orthopaedic Implants | Orthopaedic Implant Co.`}
         desc={page.pageTitle.message}
-        banner={page.billboard.figure.asset.gatsbyImageData.src}
+        banner={page.billboard.figure.asset.url}
         individual={true}
       />
       <RethinkPage />
