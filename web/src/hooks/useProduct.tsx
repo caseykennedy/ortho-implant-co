@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby";
 
 // ___________________________________________________________________
 
@@ -57,6 +57,16 @@ const useProduct = () => {
                 resource {
                   asset {
                     url
+                  }
+                }
+              }
+              resourceDocs {
+                title
+                resource {
+                  document {
+                    asset {
+                      url
+                    }
                   }
                 }
               }

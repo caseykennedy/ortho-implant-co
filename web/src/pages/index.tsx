@@ -3,15 +3,12 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from 'react'
-
-// Elements
-import { AnimatedBox } from '../elements'
+import React from "react";
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import HomePage from '../templates/HomePage'
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import HomePage from "../views/HomePage";
 
 // ___________________________________________________________________
 
@@ -21,7 +18,7 @@ const Index = () => {
       <SEO />
       <HomePage />
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

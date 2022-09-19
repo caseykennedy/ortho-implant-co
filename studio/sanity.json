@@ -17,7 +17,8 @@
     "@sanity/dashboard",
     "@sanity/vision",
     "dashboard-widget-netlify",
-    "asset-source-unsplash"
+    "asset-source-unsplash",
+    "dark-mode"
   ],
   "parts": [
     {

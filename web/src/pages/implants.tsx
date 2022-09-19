@@ -3,12 +3,12 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from 'react'
+import React from "react";
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import ImplantsPage from '../templates/ImplantsPage'
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import ImplantsPage from "../views/ImplantsPage";
 
 // ___________________________________________________________________
 
@@ -22,7 +22,7 @@ const Implants = () => {
       />
       <ImplantsPage />
     </Layout>
-  )
-}
+  );
+};
 
-export default Implants
+export default Implants;

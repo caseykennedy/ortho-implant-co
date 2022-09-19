@@ -123,7 +123,6 @@ const useHomePage = () => {
                       layout: FULL_WIDTH
                       placeholder: BLURRED
                       formats: [AUTO, AVIF, WEBP]
-                      aspectRatio: 1
                     )
                     url
                   }
@@ -147,7 +146,6 @@ const useHomePage = () => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  aspectRatio: 1
                 )
                 url
               }

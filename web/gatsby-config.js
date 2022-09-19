@@ -27,7 +27,6 @@ module.exports = {
     twitter: config.userTwitter,
     facebook: config.ogSiteName
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true, FAST_REFRESH: true, FAST_DEV: true },
   plugins: [
     'gatsby-plugin-react-helmet',
     {

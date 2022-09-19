@@ -4,6 +4,7 @@ import {
   MdStop,
   MdSettings,
   MdLibraryBooks,
+  MdList,
   MdFolder,
   MdViewQuilt,
 } from "react-icons/md";
@@ -207,29 +208,30 @@ export default () =>
             .documentId("productsOrder")
         )
 
-        .icon(MdFolder),
+        .icon(MdList),
 
-      // IFU Document
+      // Resources
       // _________________________________________________________________
 
       S.listItem()
-        .title("IFU Document")
-        .schemaType("ifuDoc")
-        .child(S.documentTypeList("ifuDoc").title("IFU Document"))
-
-        .icon(MdFolder),
-
-      // IFU Order
-      // _________________________________________________________________
-
-      S.listItem()
-        .title("IFU Order")
+        .title("Resource Types")
         .child(
-          S.editor()
-            .title("IFU Order")
-            .id("ifuOrder")
-            .schemaType("ifuOrder")
-            .documentId("ifuOrder")
+          S.documentTypeList("resourceType")
+            .title("Resource Type")
+            .schemaType("resourceType")
+        )
+
+        .icon(MdFolder),
+
+      // Resources
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Resources")
+        .child(
+          S.documentTypeList("resource")
+            .title("Resources")
+            .schemaType("resource")
         )
 
         .icon(MdFolder),

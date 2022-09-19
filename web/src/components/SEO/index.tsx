@@ -1,6 +1,4 @@
 // SEO Component
-// ref: https://www.
-
 // ___________________________________________________________________
 
 import React from 'react'

@@ -18,7 +18,7 @@ export const Nav = styled.nav`
 
   width: 100%;
   height: ${theme.headerHeight};
-  padding: ${theme.space[5]} ${theme.space[5]};
+  padding: ${theme.space[4]} ${theme.space[5]};
   background: ${theme.colors.background};
 
   @media ${theme.mq.desktop} {

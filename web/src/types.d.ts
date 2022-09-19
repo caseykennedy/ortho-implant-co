@@ -139,6 +139,16 @@ type ProductNode = {
       };
     };
   }[];
+  resourceDocs: {
+    title: string;
+    resource: {
+      document: {
+        asset: {
+          url: string;
+        };
+      };
+    };
+  }[];
 };
 
 type ProductEdges = {
@@ -489,5 +499,37 @@ type LandingPageQuery = {
 type LandingPageContextShape = {
   pageContext: {
     page: LandingPageQuery;
+  };
+};
+
+// Landing Page shape
+// ___________________________________________________________________
+
+type ResourceDocShape = {
+  category: string;
+  document: {
+    asset: {
+      url: string;
+    };
+  };
+  title: string;
+};
+
+type ResourceTypeShape = {
+  resourceTypes: {
+    edges: {
+      node: {
+        title: string;
+        resourceDocs: DocumentShape[];
+      };
+    }[];
+  };
+};
+
+type ResourcesShape = {
+  resources: {
+    edges: {
+      node: ResourceDocShape[];
+    }[];
   };
 };

@@ -82,11 +82,6 @@
   "bugs": {
     "url": "https://github.com/caseykennedy/oic/issues"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.yaml": [
       "prettier --write",

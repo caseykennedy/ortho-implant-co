@@ -2,13 +2,13 @@
 
 // ___________________________________________________________________
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-import theme from '../../config/theme'
+import theme from "../../config/theme";
 
-import RootVars from './root'
-import Reset from './reset'
-import Typography from './typography'
+import RootVars from "./root";
+import Reset from "./reset";
+import Typography from "./typography";
 
 // ___________________________________________________________________
 
@@ -26,9 +26,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     /* overflow-x: hidden; */
 
-    &::-webkit-scrollbar {
+    /* &::-webkit-scrollbar {
       display: none;
-    }
+    } */
   }
 
   .img {
@@ -73,8 +73,8 @@ const GlobalStyles = createGlobalStyle`
       transform: matrix(1, 0, 0, 1, 0, 0);
     }
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
 
 // ___________________________________________________________________

@@ -1,10 +1,10 @@
-import { MdApps } from "react-icons/md";
+import { MdList } from "react-icons/md";
 
 export default {
   name: "productsOrder",
   title: "Products Order",
   type: "document",
-  icon: MdApps,
+  icon: MdList,
   fields: [
     {
       name: "products",

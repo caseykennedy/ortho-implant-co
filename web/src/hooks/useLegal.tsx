@@ -20,6 +20,7 @@ type Props = {
           linkTo: string;
           linkTitle: string;
           figure: {
+            alt: string;
             asset: {
               gatsbyImageData: IGatsbyImageData;
               url: string;
@@ -67,6 +68,7 @@ const useLegal = () => {
             }
             billboard {
               figure {
+                alt
                 asset {
                   gatsbyImageData(
                     fit: FILLMAX

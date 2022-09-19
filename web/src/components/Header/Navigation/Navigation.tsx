@@ -102,6 +102,10 @@ const data = [
         name: 'Sports Medicine',
         link: '/implants/sports-medicine'
       },
+      {
+        name: 'Resources',
+        link: '/resources'
+      },
     ]
   },
   {
