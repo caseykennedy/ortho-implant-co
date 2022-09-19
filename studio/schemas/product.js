@@ -51,7 +51,7 @@ export default {
     },
     {
       name: "resources",
-      title: "Resources",
+      title: "Resources OLD",
       type: "array",
       of: [{ type: "productResources" }],
     },
