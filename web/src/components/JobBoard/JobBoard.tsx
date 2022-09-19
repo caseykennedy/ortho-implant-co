@@ -2,40 +2,41 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
-import ImgMatch from '../ImgMatch'
-import Icon from '../Icons'
+import ImgMatch from "../ImgMatch";
+import Icon from "../Icons";
 
-import useJobPost from '../../hooks/useJobPost'
+import useJobPost from "../../hooks/useJobPost";
 
-import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../elements'
-import theme from '../../../config/theme'
+import * as S from "./styles.scss";
+import { Box, Flex, Heading, Text, AnimatedBox } from "../../elements";
+import theme from "../../../config/theme";
 
 // ___________________________________________________________________
 
 const JobPost: React.FC<JobData> = ({ job }) => {
-  const slug = job.slug.current
+  const slug = job.slug.current;
   return (
     <Link to={`/careers/${slug}`} className="t--link">
       {job.title}
       <Icon name="nextArrow" />
     </Link>
-  )
-}
+  );
+};
 
 const JobBoard = () => {
-  const jobPosts = useJobPost()
+  const jobPosts = useJobPost();
   // console.log('---_- Notions -_---')
   // console.log(jobPosts)
   return (
     <S.JobBoard as="section" id="careers">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
-        <ImgMatch
+        <StaticImage
           src="landon-engineer.jpg"
-          altText="An OIC engineer in his natural habitat."
+          alt="An OIC engineer in his natural habitat."
         />
       </Box>
 
@@ -49,8 +50,8 @@ const JobBoard = () => {
           </Heading>
           <Text as="p" fontSize={2}>
             {!jobPosts[0].node.title
-              ? 'We are not currently hiring.'
-              : 'We are currently seeking to fill the following positions:'}
+              ? "We are not currently hiring."
+              : "We are currently seeking to fill the following positions:"}
           </Text>
         </Box>
 
@@ -61,7 +62,7 @@ const JobBoard = () => {
         </Box>
       </Box>
     </S.JobBoard>
-  )
-}
+  );
+};
 
-export default JobBoard
+export default JobBoard;

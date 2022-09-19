@@ -2,39 +2,31 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React from "react";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
-// Hooks
-import useAboutPage from '../../../hooks/useAboutPage'
+import useAboutPage from "../../../hooks/useAboutPage";
 
 // Components
-import Accordion from '../../../components/Accordion'
-import BlockContent from '../../../components/BlockContent'
+import Accordion from "../../../components/Accordion";
+import BlockContent from "../../../components/BlockContent";
 
 // UI
-import { Box, Heading } from '../../../elements'
+import { Box, Heading } from "../../../elements";
 
 // Theme
-import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import * as S from "./styles.scss";
+import theme from "../../../../config/theme";
 
 // ___________________________________________________________________
 
 type PageShape = {
   item: {
-    _rawBody: string
-    figure: {
-      asset: {
-        fluid: {
-          fluid: ImageShape
-        }
-      }
-      alt: string
-    }
-    lead: string
-    title: string
-  }
-}
+    _rawBody: string;
+    lead: string;
+    title: string;
+  };
+};
 
 const Position = ({ item }: PageShape) => {
   const AccordionProps = {
@@ -42,12 +34,12 @@ const Position = ({ item }: PageShape) => {
     color: theme.colors.secondary,
     colorActive: theme.colors.secondary,
     borderColor: theme.colors.secondary,
-    bg: 'transparent',
+    bg: "transparent",
     pt: [5, 6],
     pb: [5, 6],
     pr: [5],
-    pl: [5, 7]
-  }
+    pl: [5, 7],
+  };
   return (
     // @ts-ignore: Unreachable code error
     <Accordion title={item.title} {...AccordionProps}>
@@ -55,11 +47,11 @@ const Position = ({ item }: PageShape) => {
         {item._rawBody && <BlockContent blocks={item._rawBody || []} />}
       </Box>
     </Accordion>
-  )
-}
+  );
+};
 
 const Intro = () => {
-  const page = useAboutPage()
+  const page = useAboutPage();
 
   return (
     <S.Intro>
@@ -87,7 +79,7 @@ const Intro = () => {
         </Box>
       </S.About>
     </S.Intro>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

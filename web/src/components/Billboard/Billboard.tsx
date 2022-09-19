@@ -4,7 +4,6 @@
 
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image/withIEPolyfill';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 import Button from '../../elements/Button';

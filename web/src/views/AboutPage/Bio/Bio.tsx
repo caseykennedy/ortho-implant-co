@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 // Components
