@@ -2,12 +2,12 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 
-import { Box } from '../../../elements'
-import theme from '../../../../config/theme'
-import * as S from './styles.scss'
+import { Box } from "../../../elements";
+import theme from "../../../../config/theme";
+import * as S from "./styles.scss";
 
 // ___________________________________________________________________
 
@@ -48,72 +48,72 @@ const Navigation = () => {
         </Box>
       ))}
     </S.Nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
 
 // ___________________________________________________________________
 
 const data = [
   {
-    name: 'rethink',
-    link: '/rethink'
+    name: "rethink",
+    link: "/rethink",
   },
   {
-    name: 'about',
-    link: '/about',
+    name: "implants",
+    link: "/implants",
     subPage: [
       {
-        name: 'Team',
-        link: '/about#team'
+        name: "External Fixation",
+        link: "/implants/external-fixation",
       },
       {
-        name: 'Careers',
-        link: '/about#careers'
-      }
-    ]
+        name: "Hip Fractures",
+        link: "/implants/hip-fractures",
+      },
+      {
+        name: "IM Nails",
+        link: "/implants/im-nails",
+      },
+      {
+        name: "Plates and Screws",
+        link: "/implants/plates-and-screws",
+      },
+      {
+        name: "Cannulated Screws",
+        link: "/implants/cannulated-screws",
+      },
+      {
+        name: "Sports Medicine",
+        link: "/implants/sports-medicine",
+      },
+    ],
   },
   {
-    name: 'implants',
-    link: '/implants',
+    name: "about",
+    link: "/about",
     subPage: [
       {
-        name: 'External Fixation',
-        link: '/implants/external-fixation'
+        name: "Team",
+        link: "/about#team",
       },
       {
-        name: 'Hip Fractures',
-        link: '/implants/hip-fractures'
+        name: "Careers",
+        link: "/about#careers",
       },
-      {
-        name: 'IM Nails',
-        link: '/implants/im-nails'
-      },
-      {
-        name: 'Plates and Screws',
-        link: '/implants/plates-and-screws'
-      },
-      {
-        name: 'Cannulated Screws',
-        link: '/implants/cannulated-screws'
-      },
-      {
-        name: 'Sports Medicine',
-        link: '/implants/sports-medicine'
-      },
-      {
-        name: 'Resources',
-        link: '/resources'
-      },
-    ]
+    ],
   },
   {
-    name: 'news',
-    link: '/news'
+    name: "news",
+    link: "/news",
   },
   {
-    name: 'contact',
-    link: '/contact'
-  }
-]
+    name: "resources",
+    link: "/resources",
+  },
+  {
+    name: "contact",
+    link: "/contact",
+  },
+];

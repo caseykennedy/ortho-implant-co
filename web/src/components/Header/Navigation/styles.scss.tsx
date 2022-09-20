@@ -2,12 +2,9 @@
 
 // ___________________________________________________________________
 
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-
-import { Box, Flex, Text } from '../../../elements'
-
-import theme from '../../../../config/theme'
+import styled from "styled-components";
+import { Link } from "gatsby";
+import theme from "../../../../config/theme";
 
 // ___________________________________________________________________
 
@@ -21,9 +18,6 @@ export const Nav = styled.nav`
   padding: ${theme.space[4]} ${theme.space[5]};
   background: ${theme.colors.background};
 
-  @media ${theme.mq.desktop} {
-  }
-
   .nav-link {
     font-family: ${theme.fonts.heading};
     font-size: ${theme.fontSizes[2]};
@@ -31,7 +25,7 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
-    margin-left: ${theme.space[5]};
+    margin-left: calc(${theme.space[4]} * 1.25);
     position: relative;
     cursor: pointer;
 
@@ -51,7 +45,7 @@ export const Nav = styled.nav`
 
     a {
       &::before {
-        content: '';
+        content: "";
         background: ${theme.colors.tertiary};
         width: 0;
         height: 2px;
@@ -68,10 +62,6 @@ export const Nav = styled.nav`
       &.active,
       &:hover {
         color: ${theme.colors.primary};
-
-        /* &::before {
-          width: 100%;
-        } */
       }
     }
 
@@ -124,14 +114,13 @@ export const Nav = styled.nav`
 
         &.active,
         &:hover {
-          /* background: ${theme.colors.primary}; */
           color: ${theme.colors.primary};
           margin-left: ${theme.space[1]};
         }
       }
     }
   }
-`
+`;
 
 export const SignIn = styled(Link)`
   color: ${theme.colors.text};
@@ -155,4 +144,4 @@ export const SignIn = styled(Link)`
     color: ${theme.colors.white};
     background: ${theme.colors.bloodshot};
   }
-`
+`;

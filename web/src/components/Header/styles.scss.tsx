@@ -65,12 +65,14 @@ export const Tools = styled(Flex)`
   border-left: ${theme.border};
 `
 
+const showNav = `(min-width: 1115px)`
+
 export const Nav = styled(Flex)`
   flex: 1;
   display: none;
   justify-content: flex-end;
 
-  @media ${theme.mq.desktop} {
+  @media ${showNav} {
     display: flex;
   }
 
@@ -95,7 +97,7 @@ export const Toggle = styled.div`
   font-weight: 400;
   cursor: pointer;
 
-  @media ${theme.mq.desktop} {
+  @media ${showNav} {
     display: none;
   }
 

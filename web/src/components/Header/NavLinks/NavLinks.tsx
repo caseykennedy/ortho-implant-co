@@ -3,27 +3,27 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
-import { Link } from 'gatsby'
-import { useTransition } from 'react-spring'
+import React from "react";
+import { Link } from "gatsby";
+import { useTransition } from "react-spring";
 
-import { Box, Text } from '../../../elements'
+import { Box, Text } from "../../../elements";
 
-import theme from '../../../../config/theme'
-import * as S from './styles.scss'
+import theme from "../../../../config/theme";
+import * as S from "./styles.scss";
 
 // ___________________________________________________________________
 
 type LinkProps = {
-  item: any
-  transition: any
-  handleExitOnClick: () => any
-}
+  item: any;
+  transition: any;
+  handleExitOnClick: () => any;
+};
 
 type NavLinksProps = {
-  handleExit: () => any
-  isNavOpen: boolean
-}
+  handleExit: () => any;
+  isNavOpen: boolean;
+};
 
 // ___________________________________________________________________
 
@@ -39,27 +39,27 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
         </Link>
       </Box>
     </S.NavLink>
-  )
-}
+  );
+};
 
 const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
   const navTransitions = useTransition(
     isNavOpen ? navData : [],
-    item => item.name,
+    (item) => item.name,
     {
       from: {
-        opacity: 0
+        opacity: 0,
       },
       enter: {
-        opacity: 1
+        opacity: 1,
       },
       leave: {
-        opacity: 0
+        opacity: 0,
       },
-      trail: 160,
-      unique: true
+      trail: 60,
+      unique: true,
     }
-  )
+  );
   return (
     <S.NavLinks>
       {navTransitions.map(({ item, key, props }) => (
@@ -71,32 +71,36 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
         />
       ))}
     </S.NavLinks>
-  )
-}
+  );
+};
 
-export default NavLinks
+export default NavLinks;
 
 // ___________________________________________________________________
 
 const navData = [
   {
-    name: 'rethink',
-    link: '/rethink'
+    name: "rethink",
+    link: "/rethink",
   },
   {
-    name: 'about oic',
-    link: '/about'
+    name: "implants",
+    link: "/implants",
   },
   {
-    name: 'implants',
-    link: '/implants'
+    name: "about oic",
+    link: "/about",
   },
   {
-    name: 'news',
-    link: '/news'
+    name: "news",
+    link: "/news",
   },
   {
-    name: 'contact',
-    link: '/contact'
-  }
-]
+    name: "resources",
+    link: "/resources",
+  },
+  {
+    name: "contact",
+    link: "/contact",
+  },
+];
