@@ -9,7 +9,6 @@ import React from 'react'
 import { AnimatedBox } from '../elements'
 
 // Components
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import CategoryDetail from '../components/CategoryDetail'
 
@@ -23,7 +22,7 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
 }) => {
   const page = pageContext
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/implants/${page.slug.current}`}
         title={`${page.title}`}
@@ -34,7 +33,7 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
       <AnimatedBox>
         <CategoryDetail pageContext={pageContext} />
       </AnimatedBox>
-    </Layout>
+    </>
   )
 }
 

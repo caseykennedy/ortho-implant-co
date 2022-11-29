@@ -14,14 +14,14 @@ import ImplantsPage from "../views/ImplantsPage";
 
 const Implants = () => {
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/implants`}
         title={`Implants | Orthopaedic Implant Co.`}
         individual={true}
       />
       <ImplantsPage />
-    </Layout>
+    </>
   );
 };
 

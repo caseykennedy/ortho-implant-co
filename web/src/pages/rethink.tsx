@@ -18,7 +18,7 @@ import useRethinkPage from "../hooks/useRethinkPage";
 const Rethink = () => {
   const page = useRethinkPage();
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/rethink`}
         title={`Rethink Orthopaedic Implants | Orthopaedic Implant Co.`}
@@ -27,7 +27,7 @@ const Rethink = () => {
         individual={true}
       />
       <RethinkPage />
-    </Layout>
+    </>
   );
 };
 

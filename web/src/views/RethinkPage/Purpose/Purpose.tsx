@@ -37,7 +37,7 @@ const Purpose = () => {
   return (
     <S.Purpose pt={[7, 8]} pb={[7, 8]}>
       <div className="purpose-inner">
-        <Box width={[1, 2 / 3]} pr={[0, 8, 12]} mb={[7, 0]}>
+        <Box width={[1, 2 / 3]} pr={[0, 8]} mb={[7, 0]}>
           <Heading as="h4" color="primary">
             {page.purpose.title && page.purpose.title}
           </Heading>

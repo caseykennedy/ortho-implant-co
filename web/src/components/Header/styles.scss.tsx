@@ -13,14 +13,14 @@ import { Box, Flex, AnimatedFlex } from '../../elements'
 // ___________________________________________________________________
 
 export const Header = styled(Flex)`
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   position: relative;
   z-index: 99;
 
   background: ${theme.colors.background};
 
   @media ${theme.mq.tablet} {
+    flex-flow: row nowrap;
   }
 `
 
@@ -65,7 +65,7 @@ export const Tools = styled(Flex)`
   border-left: ${theme.border};
 `
 
-const showNav = `(min-width: 1115px)`
+const showNav = `(min-width: 1024px)`
 
 export const Nav = styled(Flex)`
   flex: 1;

@@ -91,18 +91,18 @@ const Footer: React.FC = () => {
         <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
             <a
-              href="//www.facebook.com/OrthoImplantCompany"
-              target="__blank"
-              rel="noopener"
-            >
-              <Icon name="facebook" />
-            </a>
-            <a
               href="//www.linkedin.com/company/the-orthopaedic-implant-company"
               target="__blank"
               rel="noopener"
             >
               <Icon name="linkedIn" />
+            </a>
+            <a
+              href="//www.facebook.com/OrthoImplantCompany"
+              target="__blank"
+              rel="noopener"
+            >
+              <Icon name="facebook" />
             </a>
             <a
               href="//twitter.com/orthoimplantco"

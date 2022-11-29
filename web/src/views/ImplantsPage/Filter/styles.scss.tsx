@@ -2,12 +2,12 @@
 
 // ___________________________________________________________________
 
-import { Link } from "gatsby";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from 'gatsby'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-import styled from "styled-components";
-import theme from "../../../../config/theme";
-import { Box, Flex } from "../../../elements";
+import styled from 'styled-components'
+import theme from '../../../../config/theme'
+import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 
@@ -19,7 +19,7 @@ export const Filter = styled.div`
   @media ${theme.mq.tablet} {
     margin-top: 0;
   }
-`;
+`
 
 export const Navigation = styled(AnchorLink)`
   display: flex;
@@ -44,7 +44,7 @@ export const Navigation = styled(AnchorLink)`
       display: flex;
       flex-direction: column;
 
-      @media ${theme.mq.tablet} {
+      @media ${theme.mq.desktop} {
         flex-direction: row;
       }
     }
@@ -57,6 +57,7 @@ export const Navigation = styled(AnchorLink)`
       padding: ${theme.space[2]} ${theme.space[4]};
       margin-bottom: -2px;
       cursor: pointer;
+      white-space: nowrap;
 
       &:first-child {
         @media ${theme.mq.desktop} {
@@ -69,7 +70,7 @@ export const Navigation = styled(AnchorLink)`
       }
     }
   }
-`;
+`
 
 export const Toggler = styled(Flex)`
   margin-right: ${theme.space[5]};
@@ -105,4 +106,4 @@ export const Toggler = styled(Flex)`
       }
     }
   }
-`;
+`

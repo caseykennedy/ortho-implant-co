@@ -83,9 +83,9 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
               {page.authors && <Author author={page.authors} />}
             </Box>
             <Flex width={1 / 2} className="social-share">
-              <p>Share:</p>
-              <SocialShare name="facebook" slug={page.slug.current} />
+              <div className="title">Share:</div>
               <SocialShare name="linkedIn" slug={page.slug.current} />
+              <SocialShare name="facebook" slug={page.slug.current} />
               <SocialShare name="twitter" slug={page.slug.current} />
             </Flex>
           </Box>

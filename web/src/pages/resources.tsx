@@ -14,14 +14,14 @@ import IfuPage from "../views/ResourcesPage";
 
 const Resources = () => {
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/resources`}
         title={`Resources | Orthopaedic Implant Co.`}
         individual={true}
       />
       <IfuPage />
-    </Layout>
+    </>
   );
 };
 

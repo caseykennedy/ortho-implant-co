@@ -16,6 +16,7 @@ import Facebook from './SVG/Facebook'
 import GridView from './SVG/GridView'
 import Hamburger from './SVG/Hamburger'
 import Instagram from './SVG/Instagram'
+import LinkedIn from './SVG/LinkedIn'
 import ListView from './SVG/ListView'
 import NextArrow from './SVG/NextArrow'
 import Pdf from './SVG/Pdf'
@@ -86,6 +87,12 @@ const Icon: React.FC<Props> = ({ className, color, fas, name }) => {
       return (
         <S.Icon color={color} className={className}>
           <Instagram />
+        </S.Icon>
+      )
+    case 'linkedIn':
+      return (
+        <S.Icon color={color} className={className}>
+          <LinkedIn />
         </S.Icon>
       )
     case 'listView':

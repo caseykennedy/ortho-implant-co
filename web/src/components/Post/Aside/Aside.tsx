@@ -45,7 +45,7 @@ const Aside = () => {
                 )}
               </Box>
 
-              <Box width={7 / 10} className="post__content">
+              <Box width={1} className="post__content">
                 <Heading as="h4">{post.title}</Heading>
               </Box>
 

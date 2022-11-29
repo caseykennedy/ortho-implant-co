@@ -67,13 +67,12 @@ export const Article = styled(Box)`
         justify-content: flex-end;
         align-items: center;
 
-        p {
+        .title {
           color: ${theme.colors.tertiary};
-          font-size: calc(${theme.fontSizes[1]} / 1.15);
-          margin: 0 ${theme.space[3]} 0 0;
+          font-size: ${theme.fontSizes[1]};
         }
 
-        .ico {
+        span {
           margin-left: ${theme.space[2]};
         }
       }

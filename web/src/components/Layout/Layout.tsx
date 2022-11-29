@@ -4,14 +4,10 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from '../Header'
 import Footer from '../Footer'
 
-import theme from '../../../config/theme'
-import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
 import 'swiper/css/swiper.css'
 
@@ -40,16 +36,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     `background: #FFC907; color: #000000`
   )
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <ParallaxProvider>
-        <S.Wrapper>
-          <Header mainRef={mainRef} />
-          <S.Main ref={mainRef}>{children}</S.Main>
-          <Footer />
-        </S.Wrapper>
-      </ParallaxProvider>
-    </ThemeProvider>
+    <S.Wrapper>
+      <Header mainRef={mainRef} />
+      <S.Main ref={mainRef}>{children}</S.Main>
+      <Footer />
+    </S.Wrapper>
   )
 }
 

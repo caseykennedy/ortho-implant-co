@@ -14,7 +14,7 @@ import BlogPage from "../views/BlogPage";
 
 const News = () => {
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/news`}
         title={`News | Orthopaedic Implant Co.`}
@@ -22,7 +22,7 @@ const News = () => {
         individual={false}
       />
       <BlogPage />
-    </Layout>
+    </>
   );
 };
 

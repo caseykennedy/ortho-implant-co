@@ -36,11 +36,9 @@ export const Post = styled(Flex)`
   }
 
   .post__img {
-    max-height: 150px;
-    height: 150px;
+    background: ${theme.colors.quinary};
     overflow: hidden;
-    width: 63%;
-    margin-bottom: ${theme.space[5]};
+    margin-bottom: ${theme.space[4]};
   }
 
   a {
@@ -49,7 +47,7 @@ export const Post = styled(Flex)`
     justify-content: space-between;
 
     color: ${theme.colors.text};
-    padding: ${theme.space[5]};
+    padding: ${theme.space[4]};
     height: inherit;
    
     &:hover {

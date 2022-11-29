@@ -18,10 +18,10 @@ import useTerms from "../hooks/useTerms";
 const Terms = () => {
   const page = useTerms();
   return (
-    <Layout>
+    <>
       <SEO pathname="/terms" title={page.pageTitle.message} individual={true} />
       <TermsPage />
-    </Layout>
+    </>
   );
 };
 

@@ -18,10 +18,10 @@ import useLegal from "../hooks/useLegal";
 const Legal = () => {
   const page = useLegal();
   return (
-    <Layout>
+    <>
       <SEO pathname="/legal" title={page.pageTitle.message} individual={true} />
       <LegalPage />
-    </Layout>
+    </>
   );
 };
 

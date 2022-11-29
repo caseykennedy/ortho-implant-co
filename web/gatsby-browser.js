@@ -1,15 +1,19 @@
-// // gatsby-browser
+import React from 'react'
+import Layout from './src/components/Layout'
+import GlobalStyles from './src/styles/global'
+import { ThemeProvider } from 'styled-components'
+import theme from './config/theme'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
-// import React, { useState, useEffect } from 'react'
+export const wrapPageElement = ({ element, props }) => (
+  // props provide same data to Layout as Page element will get
+  // including location, data, etc - you don't need to pass it
+  <ParallaxProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Layout {...props}>{element}</Layout>
+    </ThemeProvider>
+  </ParallaxProvider>
+)
 
-// // ___________________________________________________________________
-
-// const LoadAnimation = ({ children }) => {
-//   const [loading, stillLoading] = useState(true)
-//   useEffect(() => stillLoading(false))
-//   return !loading && <div>{children}</div>
-// }
-
-// export const wrapRootElement = ({ element }) => (
-//   <LoadAnimation>{element}</LoadAnimation>
-// )
+export const wrapRootElement = ({ element }) => element

@@ -46,14 +46,14 @@ const People: React.FC<Person> = ({ person, toggleModal }) => {
         </Box>
 
         <div className="card__content">
-          <Box mt={3}>
+          <Box mt={0}>
             <Heading as="h4">{person && person.name}</Heading>
             <Text as="h5" className="t--small">
               {person && person.jobTitle}
             </Text>
           </Box>
 
-          <Box mt={5} className="card__meta">
+          <Box mt={0} className="card__meta">
             <span>read bio</span>
             <Icon name="nextArrow" />
           </Box>

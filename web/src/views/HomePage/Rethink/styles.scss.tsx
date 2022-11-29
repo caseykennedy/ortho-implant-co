@@ -15,6 +15,7 @@ export const Rethink = styled(Flex)`
     &__message {
       border-top: ${theme.border};
       padding: ${theme.space[5]};
+      position: relative;
 
       transform: translate3d(0, 0, 0);
 

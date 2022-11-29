@@ -14,10 +14,10 @@ import HomePage from "../views/HomePage";
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <HomePage />
-    </Layout>
+    </>
   );
 };
 

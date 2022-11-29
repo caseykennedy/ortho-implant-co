@@ -102,7 +102,7 @@ const theme: ThemeShape = {
     '1.5rem',     // 4
     '2rem',       // 5
     '3rem',       // 6
-    '4rem',       // 7
+    '3rem',       // 7
     '6rem',       // 8
     '10rem',      // 9
     '12rem',      // 10
@@ -152,7 +152,7 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   maxWidth: '1680px',
-  siteWidth: '100vw',
+  siteWidth: '100%',
   logoWidth: '225px',
   headerHeight: '180px',
   iconWidth: '18px',

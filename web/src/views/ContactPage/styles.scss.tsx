@@ -21,7 +21,7 @@ export const ContactPage = styled(Flex)`
     color: ${theme.colors.text};
 
     &:hover {
-      color: ${theme.colors.primary};
+      color: ${theme.colors.tertiary};
     }
   }
 

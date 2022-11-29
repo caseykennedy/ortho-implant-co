@@ -86,7 +86,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
   }
 
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/${page.slug.current}`}
         title={`${page.title} | Orthopaedic Implant Co.`}
@@ -157,7 +157,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
 
         <Billboard {...billboardProps} />
       </S.ValueLandingPage>
-    </Layout>
+    </>
   )
 }
 

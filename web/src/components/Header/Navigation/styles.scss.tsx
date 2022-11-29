@@ -2,9 +2,9 @@
 
 // ___________________________________________________________________
 
-import styled from "styled-components";
-import { Link } from "gatsby";
-import theme from "../../../../config/theme";
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -25,7 +25,7 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
-    margin-left: calc(${theme.space[4]} * 1.25);
+    margin-left: ${theme.space[4]};
     position: relative;
     cursor: pointer;
 
@@ -45,7 +45,7 @@ export const Nav = styled.nav`
 
     a {
       &::before {
-        content: "";
+        content: '';
         background: ${theme.colors.tertiary};
         width: 0;
         height: 2px;
@@ -120,7 +120,7 @@ export const Nav = styled.nav`
       }
     }
   }
-`;
+`
 
 export const SignIn = styled(Link)`
   color: ${theme.colors.text};
@@ -144,4 +144,4 @@ export const SignIn = styled(Link)`
     color: ${theme.colors.white};
     background: ${theme.colors.bloodshot};
   }
-`;
+`

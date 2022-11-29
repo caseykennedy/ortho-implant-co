@@ -18,7 +18,7 @@ import useContactPage from "../hooks/useContactPage";
 const Contact = () => {
   const page = useContactPage();
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/contact`}
         title={`Contact us | Orthopaedic Implant Co.`}
@@ -27,7 +27,7 @@ const Contact = () => {
         individual={true}
       />
       <ContactPage />
-    </Layout>
+    </>
   );
 };
 

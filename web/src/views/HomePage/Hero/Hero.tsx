@@ -44,7 +44,7 @@ const Hero = () => {
           </AnimatedBox>
         </S.Billboard>
       </S.Hero>
-      <Parallax y={[-9, 17]}>
+      <Parallax y={[-12, 17]}>
         <S.Figure>
           <GatsbyImage
             image={data.hero.image.asset.gatsbyImageData}

@@ -2,37 +2,37 @@
 
 // ___________________________________________________________________
 
-import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import React from 'react'
+import { Link } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Libraries
-import { useTransition } from 'react-spring';
-import { Grid, Cell } from 'styled-css-grid';
+import { useTransition } from 'react-spring'
+import { Grid, Cell } from 'styled-css-grid'
 
 // Elements
-import { Box, Heading, Text } from '../../../elements';
+import { Box, Heading, Text } from '../../../elements'
 
 // Components
-import BlockContent from '../../../components/BlockContent';
+import BlockContent from '../../../components/BlockContent'
 
 // Theme
-import * as S from './styles.scss';
-import theme from '../../../../config/theme';
+import * as S from './styles.scss'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
 const Post: React.FC<{ item: PostEdges; transition: any }> = ({
   item,
-  transition,
+  transition
 }) => {
-  const post = item.node;
+  const post = item.node
   return (
     <Cell>
       <S.Post>
         <Link to={`/news/${post.slug.current}`}>
           <div>
-            <Heading as="h5" mb={7}>
+            <Heading as="h5" mb={4}>
               <Box
                 as="mark"
                 bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
@@ -40,6 +40,7 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
                 {post.categories[0].title}
               </Box>
             </Heading>
+
             <Box className="post__img">
               {post.mainImage && (
                 <GatsbyImage
@@ -68,41 +69,41 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
         </Link>
       </S.Post>
     </Cell>
-  );
-};
+  )
+}
 
 const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
   // Card enter/exit trail animation
   const itemTransitions = useTransition(
     items ? items : [],
-    (item) => item.node.title,
+    item => item.node.title,
     {
       from: {
-        opacity: 0,
+        opacity: 0
       },
       enter: {
-        opacity: 1,
+        opacity: 1
       },
       leave: {
-        opacity: 1,
+        opacity: 1
       },
       trail: 0,
-      unique: false,
+      unique: false
     }
-  );
+  )
 
   return (
     <S.Posts width={1}>
       <Grid
         columns={`repeat(auto-fit, minmax(320px, 1fr))`}
-        gap={theme.space[5]}
+        gap={theme.space[3]}
       >
         {itemTransitions.map(({ item, props, key }) => (
           <Post item={item} transition={props} key={key} />
         ))}
       </Grid>
     </S.Posts>
-  );
-};
+  )
+}
 
-export default Posts;
+export default Posts
