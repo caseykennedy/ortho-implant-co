@@ -68,11 +68,6 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
 
   h1 {
     text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-    -webkit-box-orient: vertical;
   }
 `
 

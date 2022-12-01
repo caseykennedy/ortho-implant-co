@@ -101,9 +101,9 @@ const BlogPage = () => {
         {newsPosts.slice(0, 1).map(({ node: post }, idx) => (
           <Featured post={post} key={idx} />
         ))}
-        {blogPosts.slice(0, 1).map(({ node: post }, idx) => (
+        {/* {blogPosts.slice(0, 1).map(({ node: post }, idx) => (
           <Featured post={post} key={idx} />
-        ))}
+        ))} */}
       </S.BlogPage>
       <Filter />
       <Billboard {...billboardProps} />
