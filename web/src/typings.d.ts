@@ -5,7 +5,7 @@ declare module '*.otf'
 declare module '*.woff'
 declare module '*.woff2'
 
-declare module 'gatsby-image/withIEPolyfill'
+declare module 'react-netlify-forms'
 declare module 'react-anchor-link-smooth-scroll'
 declare module '@sanity/block-content-to-react'
 declare module '@feuer/react-tabs'

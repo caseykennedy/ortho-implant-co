@@ -10,7 +10,7 @@ import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const Form = styled.form`
+export const Form = styled.div`
   margin: 0 auto;
   width: 100%;
 
