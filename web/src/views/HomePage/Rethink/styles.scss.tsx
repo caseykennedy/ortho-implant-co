@@ -10,9 +10,13 @@ import { Box, Flex } from '../../../elements'
 
 export const Rethink = styled(Flex)`
   flex-wrap: wrap;
+      position: relative;
 
   .rethink {
     &__message {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
       border-top: ${theme.border};
       padding: ${theme.space[5]};
       position: relative;
@@ -156,7 +160,7 @@ export const Tab = styled(Box)<{ active?: any }>`
 
   h4 {
     font-size: calc(${theme.fontSizes[2]} * 1.5);
-    margin-bottom: ${theme.space[8]};
+    margin-bottom: ${theme.space[4]};
   }
 
   

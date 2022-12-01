@@ -58,19 +58,18 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     <S.Post>
       <PageTitle {...pageTitle} />
 
-      <Box width={1} style={{ maxHeight: '400px' }}>
+      <Box className="article__img">
         {page.mainImage && (
           <GatsbyImage
             image={page.mainImage.asset.gatsbyImageData}
             objectFit="cover"
             objectPosition="50% 50%"
             alt={page.title}
-            className="article__img"
           />
         )}
       </Box>
 
-      <S.Article width={[1, 7 / 10]}>
+      <S.Article>
         <Section bg="background" pb={4} pr={[5, 9]}>
           {/* <Heading as="h3" color="" className="t--uppercase">{page.title}</Heading> */}
           <Box className="article__lead">
@@ -91,14 +90,14 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
           </Box>
         </Section>
 
-        <Section pr={[5, 9]} border={true}>
-          <Box>
+        <Section border={true}>
+          <Box maxWidth="800px">
             {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
           </Box>
         </Section>
       </S.Article>
 
-      <Aside />
+      {/* <Aside /> */}
 
       <PrevNext pageContext={pageContext} />
 

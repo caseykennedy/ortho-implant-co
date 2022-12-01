@@ -8,7 +8,8 @@ import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
-export const PageTitle = styled(Flex)<{ image?: object }>`
+export const PageTitle = styled.div<{ image?: object }>`
+  display: flex;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
@@ -22,7 +23,7 @@ export const PageTitle = styled(Flex)<{ image?: object }>`
   }
 `
 
-export const Sideboard = styled(Box)`
+export const Sideboard = styled.div`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
@@ -42,7 +43,8 @@ export const Sideboard = styled(Box)`
   }
 `
 
-export const Billboard = styled(Flex)<{ border?: boolean }>`
+export const Billboard = styled.div<{ border?: boolean }>`
+  display: flex;
   align-items: flex-end;
   flex: 1;
 
@@ -67,11 +69,15 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
 
   h1 {
     text-transform: uppercase;
-    font-size: calc(${theme.fontSizes[5]} / 1.15);
+    font-size: calc(${theme.fontSizes[3]} / 1);
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[5]} / 1.15);
+    }
   }
 `
 
-export const Figure = styled(Box)`
+export const Figure = styled.div`
   position: relative;
   width: 100%;
   background: ${theme.colors.secondary};
@@ -80,6 +86,4 @@ export const Figure = styled(Box)`
   @media ${theme.mq.tablet} {
     margin-top: 0;
   }
-
-  
 `

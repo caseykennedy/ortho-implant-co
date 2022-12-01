@@ -52,7 +52,7 @@ const Rethink = () => {
 
   return (
     <S.Rethink bg="background" style={{ position: 'relative', zIndex: 99 }}>
-      <Box width={[1, 1 / 2]} className="rethink__message">
+      <Flex width={[1, 1 / 2]} className="rethink__message">
         <div className="sticky">
           <Heading as="h5" color="tertiary">
             {data.rethink.title}
@@ -66,12 +66,12 @@ const Rethink = () => {
           <Hexagons />
         </S.Decorator> */}
         </div>
-        <Box style={{ position: 'absolute', bottom: theme.space[7] }}>
+        <Box>
           <Button to={`/rethink`} invert={true}>
             Rethink Ortho
           </Button>
         </Box>
-      </Box>
+      </Flex>
 
       <Box width={[1, 1 / 2]} className="rethink__values">
         <TabsPanel panels={data.rethink.tabPanels} />

@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '../../elements'
 
@@ -11,22 +10,24 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const Post = styled(Flex)`
+export const Post = styled.div`
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 
   .article__img {
     border-bottom: ${theme.border};
-    height: 50vh;
-    min-height: 333px;
+    max-height: 444px;
+    overflow: hidden;
+    width: 100%;
   }
 
   @media ${theme.mq.tablet} {
   }
 `
 
-export const Article = styled(Box)`
+export const Article = styled.div`
   margin-top: -${theme.space[8]};
   width: 100%;
 
@@ -39,7 +40,8 @@ export const Article = styled(Box)`
 
     &__lead {
       p {
-        /* font-size: calc(${theme.fontSizes[2]} * 1.25); */
+        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        line-height: 1.5;
 
         /* @media ${theme.mq.tablet} {
           font-size: calc(${theme.fontSizes[2]} * 1.75);
@@ -80,7 +82,8 @@ export const Article = styled(Box)`
   }
 `
 
-export const Author = styled(Flex)`
+export const Author = styled.div`
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
