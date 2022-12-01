@@ -16,7 +16,7 @@ export const Intro = styled(Box)`
 
   @media ${theme.mq.tablet} {
     margin-top: 0;
-    top: -8rem;
+    top: -2rem;
   }
 
   @media ${theme.mq.desktop} {

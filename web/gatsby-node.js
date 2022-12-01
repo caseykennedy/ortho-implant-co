@@ -29,7 +29,6 @@ exports.createPages = ({ graphql, actions }) => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  aspectRatio: 1.75
                 )
                 url
               }
@@ -129,6 +128,7 @@ exports.createPages = ({ graphql, actions }) => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
+                  aspectRatio: 1.75
                 )
                 url
               }

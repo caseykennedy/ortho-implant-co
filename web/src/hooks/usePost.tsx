@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
 // ___________________________________________________________________
 
@@ -28,7 +28,7 @@ const usePost = () => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  aspectRatio: 1
+                  aspectRatio: 1.75
                 )
                 url
               }
@@ -69,9 +69,9 @@ const usePost = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.posts.edges
-}
+  return data.posts.edges;
+};
 
-export default usePost
+export default usePost;

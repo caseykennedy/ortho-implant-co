@@ -91,8 +91,7 @@ const BlogPage = () => {
   const pageTitle = {
     altText: page.pageTitle.title,
     image: page.pageTitle.image.asset.gatsbyImageData,
-    message: page.pageTitle.message,
-    title: page.pageTitle.title
+    message: page.pageTitle.message
     // parallaxY: [30, 10]
   }
   return (

@@ -17,7 +17,7 @@ export const PageTitle = styled.div<{ image?: object }>`
   min-height: calc(${theme.space[3]} * 10);
   background: ${theme.colors.secondary};
 
-  @media ${theme.mq.desktop} {
+  @media ${theme.mq.tablet} {
     padding-left: ${theme.logoWidth};
     position: ${p => (!p.image ? 'relative' : 'absolute')};
   }
@@ -58,12 +58,12 @@ export const Billboard = styled.div<{ border?: boolean }>`
   z-index: 9;
 
   @media ${theme.mq.tablet} {
-    padding: 0 ${theme.space[10]} ${theme.space[2]} ${theme.space[5]};
+    border-left: ${theme.border};
+    border-bottom: ${theme.border};
+    padding: ${theme.space[2]} ${theme.space[5]} ${theme.space[2]} ${theme.space[5]};
   }
 
   @media ${theme.mq.desktop} {
-    border-left: ${theme.border};
-    border-bottom: ${theme.border};
     margin-bottom: 0;
   }
 
