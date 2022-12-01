@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Components
 import PageTitle from '../../components/PageTitle'
@@ -93,6 +93,7 @@ const BlogPage = () => {
     image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
     title: page.pageTitle.title
+    // parallaxY: [30, 10]
   }
   return (
     <>

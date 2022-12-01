@@ -164,11 +164,15 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg} * 1);
+    font-size: ${theme.fontSizes[4]};
     font-weight: 500;
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.xl};
+      font-size: ${theme.fontSizes[4]};
+    }
+
+    @media ${theme.mq.desktop} {
+      font-size: ${theme.fontSizes[5]};
     }
   }
 
@@ -284,7 +288,9 @@ const Typography = css`
 
   mark {
     background-color: ${theme.colors.primary};
-    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
+    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${
+  theme.space[2]
+};
   }
 
   .t--link {

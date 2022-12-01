@@ -44,7 +44,7 @@ const RootVariables = css`
   @media ${theme.mq.tablet} {
     :root {
       --root-size: 8rem;
-      --text-base-size: 1.1em;
+      --text-base-size: 1em;
     }
   }
 `

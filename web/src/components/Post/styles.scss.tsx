@@ -50,7 +50,7 @@ export const Article = styled(Box)`
     &__meta {
       display: flex;
       align-items: center;
-      margin: ${theme.space[8]} 0 0 0;
+      margin: ${theme.space[4]} 0 0 0;
       /* padding: ${theme.space[3]} ${theme.space[5]}; */
 
       /* background: ${theme.colors.quinary}; */

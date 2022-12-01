@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Components
 import PageTitle from '../PageTitle'
@@ -58,7 +58,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     <S.Post>
       <PageTitle {...pageTitle} />
 
-      <Box width={1}>
+      <Box width={1} style={{ maxHeight: '400px' }}>
         {page.mainImage && (
           <GatsbyImage
             image={page.mainImage.asset.gatsbyImageData}

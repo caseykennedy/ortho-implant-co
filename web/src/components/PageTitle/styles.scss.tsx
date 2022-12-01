@@ -13,7 +13,7 @@ export const PageTitle = styled(Flex)<{ image?: object }>`
   position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
-  min-height: calc(${theme.space[3]} * 15);
+  min-height: calc(${theme.space[3]} * 10);
   background: ${theme.colors.secondary};
 
   @media ${theme.mq.desktop} {
@@ -47,41 +47,39 @@ export const Billboard = styled(Flex)<{ border?: boolean }>`
   flex: 1;
 
   background: ${theme.colors.background};
-  border-bottom: ${theme.border};
   border-left: none;
 
-  margin-bottom: ${theme.space[5]};
+  /* margin-bottom: ${theme.space[5]}; */
   padding: ${theme.space[4]} ${theme.space[4]} ${theme.space[2]};
   position: relative;
 
   z-index: 9;
 
   @media ${theme.mq.tablet} {
-    padding: 0 ${theme.space[10]} ${theme.space[2]}
-      ${theme.space[5]};
+    padding: 0 ${theme.space[10]} ${theme.space[2]} ${theme.space[5]};
   }
 
   @media ${theme.mq.desktop} {
     border-left: ${theme.border};
+    border-bottom: ${theme.border};
     margin-bottom: 0;
   }
 
   h1 {
     text-transform: uppercase;
+    font-size: calc(${theme.fontSizes[5]} / 1.15);
   }
 `
 
 export const Figure = styled(Box)`
   position: relative;
   width: 100%;
-  background: ${theme.colors.tertiary};
-  margin-top: -${theme.space[7]};
+  background: ${theme.colors.secondary};
+  top: -${theme.space[2]};
 
   @media ${theme.mq.tablet} {
     margin-top: 0;
   }
 
-  img {
-    mix-blend-mode: hard-light;
-  }
+  
 `
