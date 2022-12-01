@@ -16,11 +16,16 @@ export const Post = styled.div`
   flex-wrap: wrap;
   width: 100%;
 
-  .article__img {
+  .post__img {
+    background: ${theme.colors.quinary};
     border-bottom: ${theme.border};
-    max-height: 444px;
-    overflow: hidden;
+    padding: ${theme.space[5]};
     width: 100%;
+
+    .gatsby-image-wrapper {
+      max-height: 400px;
+      overflow: hidden;
+    }
   }
 
   @media ${theme.mq.tablet} {
@@ -28,10 +33,8 @@ export const Post = styled.div`
 `
 
 export const Article = styled.div`
-  margin-top: -${theme.space[8]};
-  width: 100%;
-
   background: ${theme.colors.background};
+  width: 100%;  
 
   @media ${theme.mq.tablet} {
   }
@@ -39,13 +42,16 @@ export const Article = styled.div`
   .article {
 
     &__lead {
+      display: flex;
+
       p {
         font-size: calc(${theme.fontSizes[2]} * 1.25);
         line-height: 1.5;
+        max-width: 800px;
 
-        /* @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[2]} * 1.75);
-        } */
+        @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[2]} * 1.5);
+        }
       }
     }
 

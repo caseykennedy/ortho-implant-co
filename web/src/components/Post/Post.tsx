@@ -58,7 +58,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     <S.Post>
       <PageTitle {...pageTitle} />
 
-      <Box className="article__img">
+      <Box className="post__img">
         {page.mainImage && (
           <GatsbyImage
             image={page.mainImage.asset.gatsbyImageData}
@@ -70,13 +70,13 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
       </Box>
 
       <S.Article>
-        <Section bg="background" pb={4} pr={[5, 9]}>
+        <Section>
           {/* <Heading as="h3" color="" className="t--uppercase">{page.title}</Heading> */}
-          <Box className="article__lead">
+          <div className="article__lead">
             {page._rawExcerpt && (
               <BlockContent blocks={page._rawExcerpt || []} />
             )}
-          </Box>
+          </div>
           <Box className="article__meta">
             <Box width={1 / 2} className="author">
               {page.authors && <Author author={page.authors} />}

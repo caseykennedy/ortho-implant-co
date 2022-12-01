@@ -2,20 +2,22 @@
 
 // ___________________________________________________________________
 
-import styled from "styled-components";
-import theme from "../../../../config/theme";
-import { Box, Flex } from "../../../elements";
+import styled from 'styled-components'
+import theme from '../../../../config/theme'
+import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 
-export const Blog = styled(Flex)`
+export const Blog = styled.div`
   display: none;
   flex-direction: column;
+  background: ${theme.colors.white};
+  color: ${theme.colors.text};
 
   @media ${theme.mq.tablet} {
     display: flex;
   }
-`;
+`
 
 export const Card = styled(Flex)<{ border?: boolean }>`
   display: flex;
@@ -23,27 +25,17 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   justify-content: space-between;
 
   /* background: ${theme.colors.white}; */
-  border-top: ${(p) =>
-    !p.border ? "none" : `2px solid ${theme.colors.black}`};
-  border-right: ${(p) =>
-    !p.border ? "none" : `2px solid ${theme.colors.black}`};
+  border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border-right: ${p =>
+    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   .card {
     &__img {
-      max-height: 250px;
-      height: 250px;
+      background: ${theme.colors.quinary};
       overflow: hidden;
-      width: 75%;
-      padding:  ${theme.space[5]} 0 0 ${theme.space[5]};
+      padding:  ${theme.space[5]};
       /* mix-blend-mode: luminosity; */
       transition: ${theme.transition.all};
-
-      &--small {
-        max-height: 40px;
-        img {
-          max-height: 40px;
-        }
-      }
     }
 
     &__content {
@@ -57,11 +49,10 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       }
 
       h3 {
-        font-size: ${theme.fontSizes[3]};
-        font-weight: 400;
-        /* text-transform: uppercase; */
-        margin-top: ${theme.space[5]};
-        margin-bottom: ${theme.space[5]};
+        font-size: calc(${theme.fontSizes[3]} / 1.25);
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 0;
       }
 
       .lead {
@@ -86,7 +77,6 @@ export const Card = styled(Flex)<{ border?: boolean }>`
     justify-content: space-between;
     align-items: center;
     align-self: flex-end;
-    margin-top: ${theme.space[5]};
     padding:  0 ${theme.space[5]} ${theme.space[5]};
     width: 100%;
     
@@ -102,7 +92,7 @@ export const Card = styled(Flex)<{ border?: boolean }>`
       }
     }
   }
-`;
+`
 
 export const CardHolder = styled(Flex)`
   flex-wrap: wrap;
@@ -113,7 +103,7 @@ export const CardHolder = styled(Flex)`
 
   a {
     display: flex;
-    justify-content: stretch;
+    /* justify-content: stretch; */
     color: ${theme.colors.text};
 
     &:first-child {
@@ -194,7 +184,7 @@ export const CardHolder = styled(Flex)`
       }
     }
   }
-`;
+`
 
 export const CardColumn = styled(Flex)`
   flex-direction: row;
@@ -238,4 +228,4 @@ export const CardColumn = styled(Flex)`
       margin-top: 0;
     }
   } */
-`;
+`
