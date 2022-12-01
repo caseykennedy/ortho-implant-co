@@ -2,19 +2,18 @@
 
 // ___________________________________________________________________
 
-import { darken } from 'polished'
 import styled from 'styled-components'
-
 import theme from '../../../config/theme'
-import { Box, Flex, Heading } from '../../elements'
 
 // ___________________________________________________________________
 
-export const CapturePage = styled(Flex)`
-  flex-wrap: wrap;
+export const CapturePage = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%;
 
   @media ${theme.mq.tablet} {
+    flex-flow: row nowrap;
   }
 
   a {

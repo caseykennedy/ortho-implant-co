@@ -6,9 +6,10 @@ import React from 'react'
 import PageTitle from '../../components/PageTitle'
 import Billboard from '../../components/Billboard'
 
+import ContactForm from './ContactForm'
+
 import useContactPage from '../../hooks/useContactPage'
 
-// Elements
 import { Box, Flex, Text, Heading } from '../../elements'
 
 import * as S from './styles.scss'
@@ -39,21 +40,20 @@ const CapturePage = () => {
   }
   return (
     <>
+      <PageTitle {...pageTitle} />
       <S.CapturePage>
-        <PageTitle {...pageTitle} />
+        <Box p={theme.gutter.axis} flex={2}>
+          <Heading as="h4" mb={3} className="t--uppercase">
+            Get in touch
+          </Heading>
 
-        <Flex flexDirection={['column', 'row']} width={1}>
-          <Box p={theme.gutter.axis} flex={1}>
-            <Heading as="h4" mb={3} className="t--uppercase">
-              Telephone | Fax
-            </Heading>
-          </Box>
-          <Box bg="quinary" p={theme.gutter.axis} className="mailing">
-            <Heading as="h4" mb={3} className="t--uppercase">
-              Mailing
-            </Heading>
-          </Box>
-        </Flex>
+          <ContactForm />
+        </Box>
+        <Box bg="quinary" p={theme.gutter.axis} flex={1} className="mailing">
+          <Heading as="h4" mb={3} className="t--uppercase">
+            Message
+          </Heading>
+        </Box>
       </S.CapturePage>
       <Billboard {...billboardProps} />
     </>
