@@ -31,7 +31,7 @@ const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
     <Section border={true}>
       <S.Featured>
-        <Box width={[1, 1 / 2]} mb={7}>
+        <Box width={[1, 1 / 3, 1 / 2]} mb={7}>
           {post.mainImage && (
             <Link to={`/news/${post.slug.current}`}>
               <GatsbyImage
@@ -43,7 +43,7 @@ const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
             </Link>
           )}
         </Box>
-        <Box width={[1, 1 / 2]}>
+        <Box width={[1, 2 / 3, 1 / 2]}>
           <Flex flexDirection="column" pr={[0, 8]}>
             <Box>
               <Heading as="h5">

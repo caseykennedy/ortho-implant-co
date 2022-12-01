@@ -23,9 +23,9 @@ import Icon from '../../components/Icons'
 const Aside = () => {
   return (
     <S.Aside>
-      <Text as="p" mb={7}>
-        Smarter solutions, reduced inventory, and simplified instrumentation with
-        a <mark>high average cost savings</mark>.
+      <Text as="p" mb={6}>
+        Smarter solutions, reduced inventory, and simplified instrumentation
+        with a <mark>high average cost savings</mark>.
       </Text>
 
       <div className="stats">
@@ -72,7 +72,7 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
     altText: page.title,
     image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
-    title: page.pageTitle.title && page.pageTitle.title
+    title: page.intro.title
   }
 
   const billboardProps = {
@@ -92,55 +92,52 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
         title={`${page.title} | Orthopaedic Implant Co.`}
         individual={true}
       />
+      <PageTitle {...pageTitle} />
       <S.ValueLandingPage>
-        <PageTitle {...pageTitle} />
-
-        <Flex
-          flexDirection={['column', 'row', 'row']}
-          style={{ position: 'relative' }}
-        >
-          <Box flex={[1, 0.65]}>
-            <S.Intro p={theme.gutter.axis}>
-              <Text as="p" mb={6}>
-                We're here because our approach to supplying
-                orthopaedic implants is the first step toward a healthcare
-                system that's more affordable, more equitable, and better for
-                all.
-              </Text>
-              <Box>
-                <Heading as="h3" fontWeight={400}>
-                  Reach out to us
-                </Heading>
-                <ContactForm />
-              </Box>
-            </S.Intro>
-
-            <Box p={theme.gutter.axis}>
-              <Heading as="h4" color="tertiary">
-                {page.intro.title && page.intro.title}
+        <Flex flexDirection={['column', 'row']}>
+          <S.Intro>
+            {/* <Text as="p" mb={6}>
+                We're here because our approach to supplying orthopaedic
+                implants is the first step toward a healthcare system that's
+                more affordable, more equitable, and better for all.
+              </Text> */}
+            <Box>
+              <Heading as="h4" fontSize={3} fontWeight={400}>
+                Reach out to us
               </Heading>
+              <ContactForm />
+            </Box>
+          </S.Intro>
 
-              <Heading as="h2" fontSize={4}>
+          <Box p={theme.gutter.axis} flex={1} mt={5} bg="background">
+            {/* <Aside /> */}
+            <Box>
+              {/* <Heading as="h4" color="tertiary">
+                {page.intro.title && page.intro.title}
+              </Heading> */}
+
+              <Heading as="h2" fontSize={3} mb={4}>
                 {page.intro.heading && page.intro.heading}
               </Heading>
 
-              <Box mt={8}>
+              <Text as="p">
+                We're here because our approach to supplying orthopaedic
+                implants is the first step toward a healthcare system that's
+                more affordable, more equitable, and better for all.
+              </Text>
+
+              <Box>
                 {page.intro._rawBody && (
                   <BlockContent blocks={page.intro._rawBody || []} />
                 )}
               </Box>
             </Box>
           </Box>
-
-          <Box
-            pt={[6, 8, 9]}
-            p={theme.gutter.axis}
-            flex={[1, 0.35]}
-            className="aside"
-          >
-            <Aside />
-          </Box>
         </Flex>
+
+        <Section border={true}>
+          <Aside />
+        </Section>
 
         {/* <Section bg="primary" color="black" border={true} pb={7}>
           <Box width={[1, 8 / 10, 2 / 3]}>

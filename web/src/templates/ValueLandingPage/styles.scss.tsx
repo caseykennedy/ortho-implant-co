@@ -8,29 +8,26 @@ import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const ValueLandingPage = styled(Box)`
-  flex-wrap: wrap;
+export const ValueLandingPage = styled.div`
+  position: relative;
+  z-index: 999999999;
   width: 100%;
-
-  .aside {
-    border-top: ${theme.border};
-
-    @media ${theme.mq.tablet} {
-      border-top: none;
-    }
-  }
 `
 
-export const Intro = styled(Flex)`
+export const Intro = styled.div`
+  flex: 1;
+  display: flex;
   flex-direction: column;
   background: ${theme.colors.black};
   color: ${theme.colors.white};
   width: 100%;
   position: relative;
   margin-top: ${theme.space[3]};
+  padding: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
     margin-top: 0;
+    padding: ${theme.space[6]};
   }
 `
 
@@ -44,33 +41,33 @@ export const Values = styled.div`
 export const Aside = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   .stats {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column nowrap;
+    gap: ${theme.space[6]};
+    width: 100%;
+
+    @media ${theme.mq.tablet} {
+      flex-flow: row wrap;
+    }
 
     &__panel {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      padding: ${theme.space[2]};
-      width: 50%;
-
-      @media ${theme.mq.desktop} {
-        padding: ${theme.space[3]};
-        width: 50%;
-      }
 
       .title {
-
         border-bottom: ${theme.border};
         margin-bottom: ${theme.space[3]};
         width: 100%;
 
         a {
           color: ${theme.colors.text};
-          font-size: calc(${theme.fontSizes[1]} / 1.25);
+          font-size: calc(${theme.fontSizes[1]} / 1);
           float: right;
 
           svg {
