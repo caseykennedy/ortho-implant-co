@@ -8,7 +8,8 @@ import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const Hero = styled.div`
+  display: flex;
   flex-wrap: wrap;
   background: ${theme.colors.black};
   position: relative;
@@ -22,7 +23,7 @@ export const Hero = styled(Flex)`
   }
 `
 
-export const Sideboard = styled(Box)`
+export const Sideboard = styled.div`
   color: ${theme.colors.tertiary};
   writing-mode: vertical-lr;
   text-orientation: mixed;
@@ -44,7 +45,8 @@ export const Sideboard = styled(Box)`
   }
 `
 
-export const Billboard = styled(Flex)`
+export const Billboard = styled.div`
+  display: flex;
   align-items: flex-end;
   flex: 1;
 
@@ -75,7 +77,7 @@ export const Billboard = styled(Flex)`
   }
 `
 
-export const Figure = styled(Box)`
+export const Figure = styled.div`
   /* margin-top: -${theme.space[2]}; */
   position: relative;
   width: 100%;

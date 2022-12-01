@@ -52,6 +52,11 @@ const GlobalStyles = createGlobalStyle`
     z-index: 100;
   }
 
+  /* .parallax-outer {
+    position: relative;
+    top: -4rem;
+  } */
+
   /* hover popup: need to find a new home for this */
   .popup {
     color: white;

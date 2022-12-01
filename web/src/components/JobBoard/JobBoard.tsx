@@ -6,7 +6,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-import ImgMatch from "../ImgMatch";
 import Icon from "../Icons";
 
 import useJobPost from "../../hooks/useJobPost";
@@ -35,7 +34,7 @@ const JobBoard = () => {
     <S.JobBoard as="section" id="careers">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
         <StaticImage
-          src="landon-engineer.jpg"
+          src="../../images/landon-engineer.jpg"
           alt="An OIC engineer in his natural habitat."
         />
       </Box>

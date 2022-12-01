@@ -28,6 +28,7 @@ module.exports = {
     facebook: config.ogSiteName
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
@@ -38,9 +39,19 @@ module.exports = {
       }
     },
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          backgroundColor: 'transparent',
+          placeholder: 'dominantColor',
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920]
+        }
+      }
+    },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',

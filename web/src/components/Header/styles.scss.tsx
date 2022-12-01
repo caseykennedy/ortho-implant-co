@@ -28,7 +28,7 @@ export const Logo = styled(Box)`
   background: ${theme.colors.primary};
   width: calc(${theme.logoWidth} / 1.75);
   height: calc(${theme.headerHeight} / 1.5);
-  padding: calc(${theme.space[3]} * 3) ${theme.space[4]} ${theme.space[3]};
+  padding: calc(${theme.space[3]} * 1) ${theme.space[4]} ${theme.space[3]};
 
   /* border-bottom: 4px solid ${theme.colors.primary}; */
 
@@ -40,7 +40,7 @@ export const Logo = styled(Box)`
     font-size: 1.4rem;
     width: ${theme.logoWidth};
     height: ${theme.headerHeight};
-    padding: calc(${theme.space[3]} * 5) ${theme.space[4]} ${theme.space[3]};
+    padding: calc(${theme.space[3]} * 3) ${theme.space[4]} ${theme.space[3]};
   }
 
   &.logo--dark {
@@ -90,7 +90,7 @@ export const Toggle = styled.div`
   align-items: flex-start;
   box-sizing: content-box;
   margin-left: auto;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[4]};
 
   color: ${theme.colors.text};
   font-size: calc(${theme.fontSizes[2]});

@@ -49,7 +49,7 @@ export const Card = styled(AnimatedFlex)`
       flex-direction: column;
       justify-content: space-between;
 
-      padding:  ${theme.space[4]};
+      padding: ${theme.space[4]};
 
       h4 {
         font-weight: 500;
@@ -65,16 +65,16 @@ export const Card = styled(AnimatedFlex)`
       .card__meta {
         display: flex;
         justify-content: space-between;
-        
+
         border-top: 1px solid black;
         padding-top: ${theme.space[4]};
         position: relative;
-        
+
         font-size: calc(${theme.fontSizes[1]} / 1.1);
         font-family: ${theme.fonts.code};
         color: ${theme.colors.text};
         text-transform: uppercase;
-        
+
         span {
           z-index: 1;
         }
@@ -96,17 +96,33 @@ export const Card = styled(AnimatedFlex)`
 
           svg {
             width: ${theme.iconWidth};
-            /* fill: ${theme.colors.text}; */
           }
         }
       }
-      
     }
   }
 `
 
-export const CardHolder = styled(Box)`
+export const CardHolder = styled.div`
+  display: flex;
   width: 100%;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    gap: ${theme.space[3]};
+
+    width: 100%;
+
+    @media ${theme.mq.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media ${theme.mq.desktop} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
   .swiper-container {
     overflow: visible;
@@ -118,8 +134,6 @@ export const CardHolder = styled(Box)`
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
-        
-        /* height: auto; */ /* For equal slide height */
 
         &:hover {
           background: ${theme.colors.quinary};
@@ -127,7 +141,6 @@ export const CardHolder = styled(Box)`
         }
 
         &.swiper-slide-active {
-          /* background: ${theme.colors.primary}; */
         }
       }
     }

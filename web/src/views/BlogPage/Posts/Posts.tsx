@@ -8,7 +8,6 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Libraries
 import { useTransition } from 'react-spring'
-import { Grid, Cell } from 'styled-css-grid'
 
 // Elements
 import { Box, Heading, Text } from '../../../elements'
@@ -28,47 +27,43 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
 }) => {
   const post = item.node
   return (
-    <Cell>
-      <S.Post>
-        <Link to={`/news/${post.slug.current}`}>
-          <div>
-            <Heading as="h5" mb={4}>
-              <Box
-                as="mark"
-                bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
-              >
-                {post.categories[0].title}
-              </Box>
-            </Heading>
-
-            <Box className="post__img">
-              {post.mainImage && (
-                <GatsbyImage
-                  image={post.mainImage.asset.gatsbyImageData}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt={post.title}
-                />
-              )}
+    <S.Post>
+      <Link to={`/news/${post.slug.current}`}>
+        <div>
+          <Heading as="h5" mb={4}>
+            <Box
+              as="mark"
+              bg={post.categories[0].title !== 'News' ? 'quinary' : 'primary'}
+            >
+              {post.categories[0].title}
             </Box>
+          </Heading>
 
-            <Heading as="h4" fontSize={[2]}>
-              {post.title}
-            </Heading>
-          </div>
-
-          <div>
-            <Text as="p" className="card__meta  t--uppercase">
-              <Text as="span">{post.publishedAt}</Text>
-            </Text>
-
-            {post._rawExcerpt && (
-              <BlockContent blocks={post._rawExcerpt || []} />
+          <Box className="post__img">
+            {post.mainImage && (
+              <GatsbyImage
+                image={post.mainImage.asset.gatsbyImageData}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={post.title}
+              />
             )}
-          </div>
-        </Link>
-      </S.Post>
-    </Cell>
+          </Box>
+
+          <Heading as="h4" fontSize={[2]}>
+            {post.title}
+          </Heading>
+        </div>
+
+        <div>
+          <Text as="p" className="card__meta  t--uppercase">
+            <Text as="span">{post.publishedAt}</Text>
+          </Text>
+
+          {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
+        </div>
+      </Link>
+    </S.Post>
   )
 }
 
@@ -94,14 +89,11 @@ const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
 
   return (
     <S.Posts width={1}>
-      <Grid
-        columns={`repeat(auto-fit, minmax(320px, 1fr))`}
-        gap={theme.space[3]}
-      >
+      <div className="grid">
         {itemTransitions.map(({ item, props, key }) => (
           <Post item={item} transition={props} key={key} />
         ))}
-      </Grid>
+      </div>
     </S.Posts>
   )
 }
