@@ -94,7 +94,7 @@ export const Item = styled(AnimatedFlex)`
       margin-left: ${theme.space[3]};
 
       svg {
-        width: 20px;
+        width: ${theme.iconWidth};
         fill: ${theme.colors.tertiary};
       }
     }

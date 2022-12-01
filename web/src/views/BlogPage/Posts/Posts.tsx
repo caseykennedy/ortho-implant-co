@@ -14,6 +14,7 @@ import { Box, Heading, Text } from '../../../elements'
 
 // Components
 import BlockContent from '../../../components/BlockContent'
+import Icon from '../../../components/Icons'
 
 // Theme
 import * as S from './styles.scss'
@@ -50,17 +51,14 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
             )}
           </Box>
 
-          <Heading as="h4">
-            {post.title}
-          </Heading>
+          <Heading as="h4">{post.title}</Heading>
         </div>
 
-        <div>
-          <Text as="p" className="card__meta  t--uppercase">
+        <div className="card__meta">
+          <Text className="t--uppercase">
             <span>{post.publishedAt}</span>
           </Text>
-
-          {/* {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />} */}
+          <Icon name="arrow" />
         </div>
       </Link>
     </S.Post>

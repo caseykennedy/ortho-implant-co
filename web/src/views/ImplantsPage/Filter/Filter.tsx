@@ -60,10 +60,7 @@ const Filter = () => {
         if (item.categories[0].title.includes(category)) {
           return item
         }
-        if (
-          item.categories[1] &&
-          item.categories[1].title.includes(category)
-        ) {
+        if (item.categories[1] && item.categories[1].title.includes(category)) {
           return item
         }
       })
@@ -80,8 +77,14 @@ const Filter = () => {
   return (
     <S.Filter id="product-grid">
       <S.Navigation href="#product-grid">
-        <Box width={[0, 0, theme.logoWidth]} />
+        {/* <Box width={[0, 0, theme.logoWidth]} /> */}
         <div className="filter__inner">
+          <Box
+            className="filter__btn filter__btn--all"
+            onClick={resetFilteredItems}
+          >
+            All
+          </Box>
           {categories.map(({ node: cat }, idx) => (
             <Heading
               className="filter__btn"
@@ -91,12 +94,6 @@ const Filter = () => {
               {cat.title}
             </Heading>
           ))}
-          <Box
-            className="filter__btn filter__btn--all"
-            onClick={resetFilteredItems}
-          >
-            All
-          </Box>
         </div>
 
         {/* <Toggler gridView={gridView} setGridView={setGridView} /> */}

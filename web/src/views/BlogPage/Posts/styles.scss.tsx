@@ -68,13 +68,13 @@ export const Post = styled.div`
   }
 
   h4 {
-    font-size: calc(${theme.fontSizes[3]} / 1.5);
+    font-size: calc(${theme.fontSizes[3]} / 1.25);
     font-weight: 500;
     text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-line-clamp: 5; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
 
@@ -89,7 +89,9 @@ export const Post = styled.div`
 
   .card__meta {
     display: flex;
-    align-items: flex-end;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
     /* padding: ${theme.space[5]} 0 0 0; */
     width: 100%;
     

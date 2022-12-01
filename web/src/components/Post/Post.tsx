@@ -10,8 +10,6 @@ import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import Section from '../Section'
 import BlockContent from '../BlockContent'
-
-import Aside from './Aside'
 import PrevNext from './PrevNext'
 import SocialShare from './SocialShare'
 

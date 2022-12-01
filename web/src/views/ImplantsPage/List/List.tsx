@@ -61,7 +61,7 @@ const Item: React.FC<{ item: ProductNode; transition: any }> = ({
 
         <span className="meta">
           details
-          <Icon name="nextArrow" />
+          <Icon name="arrow" />
         </span>
       </S.Item>
     </Link>

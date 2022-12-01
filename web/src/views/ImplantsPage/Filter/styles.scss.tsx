@@ -30,11 +30,11 @@ export const Navigation = styled(AnchorLink)`
   background: ${theme.colors.quinary};
   border-bottom: ${theme.border};
   color: ${theme.colors.text};
-  padding: ${theme.space[4]} 0 ${theme.space[4]} ${theme.space[2]};
+  padding: ${theme.space[4]};
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[3]} 0 ${theme.space[3]} calc(${theme.space[5]});
+    padding: ${theme.space[4]} ${theme.space[5]};
     position: sticky;
     top: 0;
   }
@@ -42,11 +42,7 @@ export const Navigation = styled(AnchorLink)`
   .filter {
     &__inner {
       display: flex;
-      flex-direction: column;
-
-      @media ${theme.mq.desktop} {
-        flex-direction: row;
-      }
+      flex-flow: row wrap;
     }
 
     &__btn {
