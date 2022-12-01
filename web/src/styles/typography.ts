@@ -228,13 +228,9 @@ const Typography = css`
   }
 
   p {
-    font-size: ${theme.root.font.baseSize};
+    /* font-size: ${theme.fontSizes[4]}; */
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.5em;
-
-    @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[2]};
-    }
 
     &:last-child {
       margin-bottom: 0;

@@ -39,11 +39,11 @@ export const Article = styled(Box)`
 
     &__lead {
       p {
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        /* font-size: calc(${theme.fontSizes[2]} * 1.25); */
 
-        @media ${theme.mq.tablet} {
+        /* @media ${theme.mq.tablet} {
           font-size: calc(${theme.fontSizes[2]} * 1.75);
-        }
+        } */
       }
     }
 

@@ -50,17 +50,17 @@ const Post: React.FC<{ item: PostEdges; transition: any }> = ({
             )}
           </Box>
 
-          <Heading as="h4" fontSize={[2]}>
+          <Heading as="h4">
             {post.title}
           </Heading>
         </div>
 
         <div>
           <Text as="p" className="card__meta  t--uppercase">
-            <Text as="span">{post.publishedAt}</Text>
+            <span>{post.publishedAt}</span>
           </Text>
 
-          {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
+          {/* {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />} */}
         </div>
       </Link>
     </S.Post>
@@ -88,7 +88,7 @@ const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
   )
 
   return (
-    <S.Posts width={1}>
+    <S.Posts>
       <div className="grid">
         {itemTransitions.map(({ item, props, key }) => (
           <Post item={item} transition={props} key={key} />

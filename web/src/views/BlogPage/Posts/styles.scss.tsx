@@ -8,7 +8,8 @@ import { Box, Flex, AnimatedFlex } from '../../../elements'
 
 // ___________________________________________________________________
 
-export const Posts = styled(Flex)`
+export const Posts = styled.div`
+  display: flex;
   flex-wrap: wrap;
 
   background: ${theme.colors.quinary};
@@ -19,21 +20,33 @@ export const Posts = styled(Flex)`
     padding: ${theme.space[5]};
   }
 
-  a {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    gap: ${theme.space[3]};
+
     width: 100%;
+
+    @media ${theme.mq.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media ${theme.mq.desktop} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    a {
+      width: 100%;
+    }
   }
 `
 
-export const Post = styled(Flex)`
-  flex-direction: column;
-
+export const Post = styled.div`
+  display: flex;
   background: ${theme.colors.white};
   border-bottom: ${theme.border};
   height: inherit;
-
-  @media ${theme.mq.tablet} {
-
-  }
 
   .post__img {
     background: ${theme.colors.quinary};
@@ -48,7 +61,6 @@ export const Post = styled(Flex)`
 
     color: ${theme.colors.text};
     padding: ${theme.space[4]};
-    height: inherit;
    
     &:hover {
       background: ${theme.colors.primary};
@@ -56,9 +68,14 @@ export const Post = styled(Flex)`
   }
 
   h4 {
-    font-size: calc(${theme.fontSizes[3]} / 1.25);
-    font-weight: 400;
-    text-transform: none;
+    font-size: calc(${theme.fontSizes[3]} / 1.5);
+    font-weight: 500;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
 
   p {
@@ -72,8 +89,7 @@ export const Post = styled(Flex)`
 
   .card__meta {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     /* padding: ${theme.space[5]} 0 0 0; */
     width: 100%;
     
