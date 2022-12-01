@@ -3,13 +3,12 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import Section from '../../../components/Section'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '../../../elements'
 
 // ___________________________________________________________________
 
-export const Intro = styled(Box)`
+export const Intro = styled.div`
   width: 100%;
   position: relative;
   top: -1rem;
