@@ -118,7 +118,7 @@ const ContactForm = () => {
                       type="tel"
                       name="phone"
                       id="phone"
-                      placeholder="Phone"
+                      placeholder="Phone (optional)"
                       required={false}
                       maxLength={11}
                       onChange={handleChange}
