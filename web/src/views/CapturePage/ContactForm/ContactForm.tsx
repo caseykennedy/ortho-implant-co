@@ -120,7 +120,7 @@ const ContactForm = () => {
                       id="phone"
                       placeholder="Phone"
                       required={false}
-                      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                      maxLength={11}
                       onChange={handleChange}
                     />
                   </Box>
