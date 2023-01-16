@@ -38,7 +38,7 @@ export const Form = styled.div`
       font-weight: 400;
       letter-spacing: ${theme.root.font.baseLetterSpacing};
       margin: 0;
-      padding: ${theme.space[4]} 0 ${theme.space[2]};
+      padding: ${theme.space[5]} 0 ${theme.space[2]};
       width: 100%;
 
       &:focus {
@@ -51,12 +51,31 @@ export const Form = styled.div`
       }
     }
 
+    .radio-group {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin-bottom: ${theme.space[2]};
+
+      input {
+        display: flex;
+        align-items: center;
+        margin-right: ${theme.space[2]};
+        height: 20px;
+        width: 20px;
+      }
+
+      label {
+        display: inline;
+      }
+    }
+
     .form-group {
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
 
-      @media ${theme.mq.tablet} {
+      @media ${theme.mq.desktop} {
         padding-bottom: ${theme.space[3]};
       }
 
@@ -65,7 +84,7 @@ export const Form = styled.div`
           padding-left: 0;
         }
 
-        @media ${theme.mq.tablet} {
+        @media ${theme.mq.desktop} {
           padding-bottom: 0;
           padding-left: ${theme.space[3]};
         }
@@ -95,7 +114,7 @@ export const Form = styled.div`
     font-weight: 500;
     text-transform: uppercase;
     padding: ${theme.space[4]} ${theme.space[3]} ${theme.space[3]};
-    
+
     &:hover {
       background: ${theme.colors.tertiary};
       color: ${theme.colors.black};

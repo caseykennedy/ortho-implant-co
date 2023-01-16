@@ -7,9 +7,15 @@ import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 
 // Theme + ui
 import * as S from './styles.scss'
-import { Box, Flex } from '../../../elements'
+import { Box, Flex, Text } from '../../../elements'
 
 // ___________________________________________________________________
+
+type NetlifyFormTypes = {
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  success: boolean
+  error: boolean
+}
 
 const ContactForm = () => {
   return (
@@ -19,10 +25,15 @@ const ContactForm = () => {
         // action="/thanks"
         honeypotName="bot-field"
       >
-        {({ handleChange, success, error }) => (
+        {({ handleChange, success, error }: NetlifyFormTypes) => (
           <>
             <Honeypot />
-            {success && <p>Thanks for contacting us!</p>}
+            {success && (
+              <div>
+                <p>Thanks for contacting us!</p>
+                <p>Download PDF</p>
+              </div>
+            )}
             {error && (
               <p>Sorry, something went wrong. Please refresh and try again.</p>
             )}
@@ -30,8 +41,48 @@ const ContactForm = () => {
               <fieldset>
                 <Box width={1} className="form-group">
                   <Box width={[1, 1, 1 / 2]} className="form-group__box">
+                    <p>Are you a Doctor or a Patient?</p>
+
+                    <Flex className="radio-group">
+                      <div>
+                        <input
+                          type="radio"
+                          name="user_type"
+                          id="doctor"
+                          value="Doctor"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="doctor" className="radio">
+                          <Text pt={1}>Doctor</Text>
+                        </label>
+                      </div>
+                    </Flex>
+
+                    <Flex className="radio-group">
+                      <div>
+                        <input
+                          type="radio"
+                          name="user_type"
+                          id="patient"
+                          value="Patient"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="patient" className="radio">
+                          <Text pt={1}>Patient</Text>
+                        </label>
+                      </div>
+                    </Flex>
+                  </Box>
+                </Box>
+
+                <Box width={1} className="form-group">
+                  <Box width={[1, 1, 1 / 2]} className="form-group__box">
                     <label htmlFor="name">
-                      Name:{' '}
+                      Full name:
                       <abbr title="required" aria-label="required">
                         *
                       </abbr>
@@ -41,8 +92,35 @@ const ContactForm = () => {
                       type="text"
                       name="name"
                       id="name"
-                      placeholder="Name"
+                      placeholder="Full name"
                       required={true}
+                      onChange={handleChange}
+                    />
+                  </Box>
+                  <Box width={[1, 1, 1 / 2]} className="form-group__box">
+                    <label htmlFor="title">Title:</label>
+
+                    <input
+                      name="title"
+                      placeholder="Title"
+                      type="text"
+                      required={false}
+                      onChange={handleChange}
+                    />
+                  </Box>
+                </Box>
+
+                <Box width={1} className="form-group">
+                  <Box width={[1, 1, 1 / 2]} className="form-group__box">
+                    <label htmlFor="phone">Phone:</label>
+
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                      required={false}
+                      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                       onChange={handleChange}
                     />
                   </Box>
@@ -65,6 +143,32 @@ const ContactForm = () => {
                 </Box>
 
                 <Box width={1} className="form-group">
+                  <Box width={[1, 1, 1 / 2]} className="form-group__box">
+                    <label htmlFor="city">City:</label>
+
+                    <input
+                      type="text"
+                      name="city"
+                      id="city"
+                      placeholder="City"
+                      required={false}
+                      onChange={handleChange}
+                    />
+                  </Box>
+                  <Box width={[1, 1, 1 / 2]} className="form-group__box">
+                    <label htmlFor="state">State:</label>
+
+                    <input
+                      name="state"
+                      placeholder="State"
+                      type="state"
+                      required={false}
+                      onChange={handleChange}
+                    />
+                  </Box>
+                </Box>
+
+                {/* <Box width={1} className="form-group">
                   <label htmlFor="comments">Message</label>
                   <textarea
                     name="message"
@@ -73,7 +177,7 @@ const ContactForm = () => {
                     placeholder="Message"
                     onChange={handleChange}
                   />
-                </Box>
+                </Box> */}
 
                 <Flex mt={4} width={1}>
                   <Box as="button" flex={1} type="submit" value="submit">

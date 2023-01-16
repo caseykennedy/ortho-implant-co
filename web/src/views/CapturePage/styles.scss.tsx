@@ -34,16 +34,4 @@ export const CapturePage = styled.div`
       border-top: none;
     }
   }
-
-  .map {
-    background: ${theme.colors.quinary};
-    min-height: 40vh;
-    border-top: ${theme.border};
-    border-left: none;
-
-    @media ${theme.mq.tablet} {
-      border-top: none;
-      border-left: ${theme.border};
-    }
-  }
 `
