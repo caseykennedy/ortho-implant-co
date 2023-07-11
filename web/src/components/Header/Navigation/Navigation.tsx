@@ -69,6 +69,10 @@ const data = [
         link: "/implants/external-fixation",
       },
       {
+        name: "Hand and Wrist",
+        link: "/implants/hand-and-wrist",
+      },
+      {
         name: "Hip Fractures",
         link: "/implants/hip-fractures",
       },
