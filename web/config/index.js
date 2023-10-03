@@ -1,5 +1,6 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+  siteURL: 'http://orthoimplantcompany.com', // Domain of your site. No trailing slash!
 
   // Banner
   banner: 'https://cdn.sanity.io/images/i0abzsfe/production/621fa608ce5cd3145baece63542e86372a51f4fd-1200x630.png',
@@ -9,7 +10,6 @@ module.exports = {
   siteTitleAlt: 'Orthopaedic Implant Company | Value Based, Clinically Proven Implants', // Alternative Site title for SEO
   siteTitleShort: 'Orthopaedic Implant Co. | Clinically Proven Implants', // short_name for manifest
   siteHeadline: 'Value Based, Clinically Proven Implants for Doctors, Hospitals and Patients', // Headline for schema.org JSONLD
-  siteURL: 'https://orthoimplantcompany.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en_US', // Language Tag on <html> element
   siteDescription: 'OIC is the leading manufacturer of high value orthopaedic implants. OIC implants cost 50 to 60 percent less than the average market price.',
 
