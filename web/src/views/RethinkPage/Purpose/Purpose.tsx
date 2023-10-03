@@ -17,7 +17,7 @@ import useRethinkPage from '@/hooks/useRethinkPage'
 
 // UI + Styles
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import { Box, Heading, AnimatedBox } from '@/components/elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
@@ -53,10 +53,6 @@ const Purpose = () => {
           {page.purpose._rawLead && (
             <BlockContent blocks={page.purpose._rawLead || []} />
           )}
-
-          {/* {page.purpose._rawBody && (
-            <BlockContent blocks={page.purpose._rawBody || []} />
-          )} */}
 
           <p dangerouslySetInnerHTML={{ __html: page.purpose.statement }} />
         </Box>

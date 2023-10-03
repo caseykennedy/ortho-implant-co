@@ -5,7 +5,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import { Text, Heading, Box, Flex } from '../../elements'
+import { Text, Heading, Box, Flex } from '@/components/elements'
 import Icon from '../Icons'
 import Pixels from '../Pixels'
 import AmedCert from '../AmedCert'

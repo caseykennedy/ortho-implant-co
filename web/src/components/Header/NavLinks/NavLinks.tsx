@@ -7,7 +7,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { useTransition } from 'react-spring'
 
-import { Box, Text } from '../../../elements'
+import { Box, Text } from '@/components/elements'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
@@ -43,23 +43,32 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 }
 
 const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
-  const navTransitions = useTransition(isNavOpen ? navData : [], item => item.name, {
-    from: {
-      opacity: 0,
-    },
-    enter: {
-      opacity: 1,
-    },
-    leave: {
-      opacity: 0,
-    },
-    trail: 60,
-    unique: true,
-  })
+  const navTransitions = useTransition(
+    isNavOpen ? navData : [],
+    item => item.name,
+    {
+      from: {
+        opacity: 0
+      },
+      enter: {
+        opacity: 1
+      },
+      leave: {
+        opacity: 0
+      },
+      trail: 60,
+      unique: true
+    }
+  )
   return (
     <S.NavLinks>
       {navTransitions.map(({ item, key, props }) => (
-        <NavLink key={key} transition={props} handleExitOnClick={() => handleExit()} item={item} />
+        <NavLink
+          key={key}
+          transition={props}
+          handleExitOnClick={() => handleExit()}
+          item={item}
+        />
       ))}
     </S.NavLinks>
   )
@@ -72,26 +81,26 @@ export default NavLinks
 const navData = [
   {
     name: 'rethink',
-    link: '/rethink',
+    link: '/rethink'
   },
   {
     name: 'implants',
-    link: '/implants',
+    link: '/implants'
   },
   {
     name: 'about oic',
-    link: '/about',
+    link: '/about'
   },
   {
     name: 'news',
-    link: '/news',
+    link: '/news'
   },
   {
     name: 'resources',
-    link: '/resources',
+    link: '/resources'
   },
   {
     name: 'contact',
-    link: '/contact',
-  },
+    link: '/contact'
+  }
 ]

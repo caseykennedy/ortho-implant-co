@@ -6,7 +6,7 @@
 import React from 'react'
 
 // Components
-import SEO from '../components/SEO'
+import SEO from '@/components/SEO'
 import BlogPage from '../views/BlogPage'
 
 // ___________________________________________________________________

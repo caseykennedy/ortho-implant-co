@@ -10,7 +10,7 @@ import BlockContent from '@/components/BlockContent'
 
 // UI + Styles
 import * as S from './styles.scss'
-import { Box, Heading, Text } from '../../../elements'
+import { Box, Heading, Text } from '@/components/elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________

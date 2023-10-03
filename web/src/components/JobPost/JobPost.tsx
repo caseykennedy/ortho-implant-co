@@ -3,17 +3,11 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 import PageTitle from '../PageTitle'
 import Billboard from '../Billboard'
 import Section from '../Section'
 import BlockContent from '../BlockContent'
-
-import useRethinkPage from '@/hooks/useRethinkPage'
-
-// Elements
-import { AnimatedBox, Box, Heading } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'

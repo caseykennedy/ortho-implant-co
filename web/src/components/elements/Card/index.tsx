@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 
-import { Box, Flex, Heading, AnimatedBox } from '../../elements'
+import { Box, Flex, Heading, AnimatedBox } from '../'
 
 import theme from '../../../config/theme'
 

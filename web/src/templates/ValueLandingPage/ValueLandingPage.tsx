@@ -6,7 +6,7 @@ import React from 'react'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-import { Box, Flex, Heading, Text } from '../../elements'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 
 // Components
 import Layout from '@/components/Layout'

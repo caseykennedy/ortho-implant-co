@@ -12,7 +12,6 @@ import Billboard from '@/components/Billboard'
 
 import useRethinkPage from '@/hooks/useRethinkPage'
 
-import { Text, Heading, Box } from '../../elements'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
@@ -45,23 +44,6 @@ const RethinkPage = () => {
       <Approach />
       <Purpose />
       <Rethink />
-      {/* <Section border={true}>
-        <Box py={7} width={[1, 2 / 3, 1 / 2]}>
-          <Heading as="h4" color="primary">
-            good for all
-          </Heading>
-
-          <Heading as="h3" fontWeight={400}>
-            It's good for the surgeon, the hospital, and above all, good for the
-            patient.
-          </Heading>
-          
-          <Text as="p">
-            And because of that, we think we can help turn our healthcare system
-            into a better system, one that will actually be good for all.
-          </Text>
-        </Box>
-      </Section> */}
       <Billboard {...billboardProps} />
     </S.RethinkPage>
   )

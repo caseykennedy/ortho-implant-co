@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import theme from '../../../config/theme'
 
 // Elements
-import { Box, Flex } from '../../elements'
+import { Box, Flex } from '@/components/elements'
 
 // Begin Styles
 // ___________________________________________________________________

@@ -17,7 +17,7 @@ import Section from '@/components/Section'
 import Pixels from '@/components/Pixels'
 
 // UI
-import { Box, Flex, Heading, Text } from '../../../elements'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 
 // Theme
 import theme from '../../../../config/theme'

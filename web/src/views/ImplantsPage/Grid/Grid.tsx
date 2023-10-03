@@ -10,7 +10,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { useTransition } from 'react-spring'
 
 // Elements
-import { Box, Heading, Text, AnimatedFlex } from '../../../elements'
+import { Box, Heading, Text, AnimatedFlex } from '@/components/elements'
 
 // Components
 import Icon from '@/components/Icons'

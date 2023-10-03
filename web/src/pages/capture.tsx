@@ -5,7 +5,7 @@
 import React from 'react'
 
 // Components
-import SEO from '../components/SEO'
+import SEO from '@/components/SEO'
 import CapturePage from '../views/CapturePage'
 
 // ___________________________________________________________________

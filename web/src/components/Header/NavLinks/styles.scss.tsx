@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import theme from '../../../../config/theme'
 
 // Elements
-import { Flex, AnimatedFlex } from '../../../elements'
+import { Flex, AnimatedFlex } from '@/components/elements'
 
 // Begin Styles
 // ___________________________________________________________________

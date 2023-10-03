@@ -18,7 +18,7 @@ import Bio from '../Bio'
 
 // UI + Styles
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'
+import { Box, Flex, Heading, Text, AnimatedBox } from '@/components/elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________

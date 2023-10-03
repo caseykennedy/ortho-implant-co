@@ -9,7 +9,7 @@ import useProduct from '@/hooks/useProduct'
 import useCategory from '@/hooks/useCategory'
 
 // Elements
-import { Box, Flex, Heading } from '../../../elements'
+import { Box, Flex, Heading } from '@/components/elements'
 
 // Components
 import List from '../List'

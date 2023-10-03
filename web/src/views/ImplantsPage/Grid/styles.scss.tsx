@@ -7,7 +7,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
-import { Box, Flex } from '../../../elements'
+import { Box, Flex } from '@/components/elements'
 
 // ___________________________________________________________________
 

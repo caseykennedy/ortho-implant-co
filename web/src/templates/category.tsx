@@ -6,18 +6,17 @@
 import React from 'react'
 
 // Elements
-import { AnimatedBox } from '../elements'
+import { AnimatedBox } from '@/components/elements'
 
 // Components
-import SEO from '../components/SEO'
-import CategoryDetail from '../components/CategoryDetail'
-
-// Theme
-import theme from '../../config/theme'
+import SEO from '@/components/SEO'
+import CategoryDetail from '@/components/CategoryDetail'
 
 // ___________________________________________________________________
 
-const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({ pageContext }) => {
+const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
+  pageContext
+}) => {
   const page = pageContext
   return (
     <>

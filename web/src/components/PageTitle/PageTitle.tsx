@@ -8,7 +8,7 @@ import { useSpring, config } from 'react-spring'
 import { Parallax } from 'react-scroll-parallax'
 
 import * as S from './styles.scss'
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../elements'
+import { Box, Flex, Heading, Text, AnimatedBox } from '@/components/elements'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
@@ -22,12 +22,19 @@ type Props = {
   parallaxY?: number | number[]
 }
 
-const PageTitle: React.FC<Props> = ({ altText, border, image, message, title, parallaxY = [0, 15] }) => {
+const PageTitle: React.FC<Props> = ({
+  altText,
+  border,
+  image,
+  message,
+  title,
+  parallaxY = [0, 15]
+}) => {
   const fadeAnimation = useSpring({
     config: config.molasses,
     delay: 260,
     from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to },
+    to: { opacity: 1, transform: theme.transform.matrix.to }
   })
   return (
     <>
@@ -38,14 +45,25 @@ const PageTitle: React.FC<Props> = ({ altText, border, image, message, title, pa
               {title}
             </Heading>
 
-            <Heading as="h1" mb={0} dangerouslySetInnerHTML={{ __html: message }} />
+            <Heading
+              as="h1"
+              mb={0}
+              dangerouslySetInnerHTML={{ __html: message }}
+            />
           </AnimatedBox>
         </S.Billboard>
       </S.PageTitle>
 
       <Parallax y={parallaxY}>
         <S.Figure>
-          {image && <GatsbyImage image={image} objectFit="cover" objectPosition="50% 50%" alt={altText || message} />}
+          {image && (
+            <GatsbyImage
+              image={image}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={altText || message}
+            />
+          )}
         </S.Figure>
       </Parallax>
     </>

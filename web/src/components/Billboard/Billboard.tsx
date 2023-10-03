@@ -6,11 +6,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import Button from '../../elements/Button'
+import Button from '@/components/elements/Button'
 
 import * as S from './styles.scss'
-import { Box } from '../../elements'
-import theme from '../../../config/theme'
+import { Box } from '@/components/elements'
 
 // ___________________________________________________________________
 
@@ -26,13 +25,29 @@ type Props = {
   src?: IGatsbyImageData
 }
 
-const Intro: React.FC<Props> = ({ altText, bg, btnText, color, invert, message, title, to, src }) => {
+const Intro: React.FC<Props> = ({
+  altText,
+  bg,
+  btnText,
+  color,
+  invert,
+  message,
+  title,
+  to,
+  src
+}) => {
   return (
     <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
       <S.Figure>
         {src && (
           <>
-            <GatsbyImage image={src} objectFit="cover" objectPosition="50% 50%" alt={altText || ''} className="img" />
+            <GatsbyImage
+              image={src}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={altText || ''}
+              className="img"
+            />
           </>
         )}
       </S.Figure>
@@ -76,7 +91,7 @@ const defaultProps = {
   bg: 'primary',
   message: "Let's schedule<br />a one-on-one",
   title: 'Ready to chat?',
-  color: 'white',
+  color: 'white'
   // btnText: 'Talk to us',
   // to: '/'
 }

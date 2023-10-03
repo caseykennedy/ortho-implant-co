@@ -3,17 +3,11 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-
-import { Box, Flex, Heading } from '../../elements'
-
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-export const HomePage = styled(Box)`
+export const HomePage = styled.div`
   width: 100%;
   background: ${theme.colors.secondary};
-
-  @media ${theme.mq.tablet} {
-  }
 `

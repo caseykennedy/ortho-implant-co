@@ -9,8 +9,7 @@ import { useSpring, config } from 'react-spring'
 import Logo from '../Logo'
 
 // Elements
-import { Flex, Box, Heading, Text } from '../../elements'
-import Divider from '../../elements/Divider'
+import { Flex } from '@/components/elements'
 
 // Theme
 import GlobalStyles from '../../styles/global'
@@ -24,7 +23,7 @@ const Loading = () => {
     config: config.molasses,
     delay: 0,
     from: { opacity: 0 },
-    to: { opacity: 1 },
+    to: { opacity: 1 }
   })
   return (
     <>

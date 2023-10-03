@@ -6,8 +6,8 @@
 import React from 'react'
 
 // Components
-import SEO from '../components/SEO'
-import JobPost from '../components/JobPost'
+import SEO from '@/components/SEO'
+import JobPost from '@/components/JobPost'
 
 // ___________________________________________________________________
 

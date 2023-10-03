@@ -9,7 +9,7 @@ import Billboard from '@/components/Billboard'
 import useContactPage from '@/hooks/useContactPage'
 
 // Elements
-import { Box, Flex, Text, Heading } from '../../elements'
+import { Box, Flex, Text, Heading } from '@/components/elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -78,9 +78,9 @@ const ContactPage = () => {
             </Heading>
             <p>
               {page.emails.map((email, idx) => (
-                <Text as="a" href={`mailto:${email}`} key={idx} rel="noopener">
+                <a href={`mailto:${email}`} key={idx} rel="noopener">
                   {email}
-                </Text>
+                </a>
               ))}
             </p>
           </Box>

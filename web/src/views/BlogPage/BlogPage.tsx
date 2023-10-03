@@ -18,8 +18,8 @@ import usePost from '@/hooks/usePost'
 import useNewsPage from '@/hooks/useNewsPage'
 
 // Elements
-import { Flex, Box, Heading, Text } from '../../elements'
-import Button from '../../elements/Button'
+import { Flex, Box, Heading, Text } from '@/components/elements'
+import Button from '@/components/elements/Button'
 
 // Theme + Styles
 import * as S from './styles.scss'

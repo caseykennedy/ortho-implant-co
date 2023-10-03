@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Box } from '../../elements'
+import { Box } from '@/components/elements'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________

@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
-import { Box, Flex } from '../../../elements'
+import { Box, Flex } from '@/components/elements'
 
 // ___________________________________________________________________
 
@@ -26,7 +26,8 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
   /* background: ${theme.colors.white}; */
   border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
-  border-right: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border-right: ${p =>
+    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   .card {
     &__img {

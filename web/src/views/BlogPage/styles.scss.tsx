@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Flex } from '../../elements'
+import { Flex } from '@/components/elements'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
@@ -80,7 +80,8 @@ export const Card = styled(Flex)<{ border?: boolean }>`
   justify-content: stretch;
   max-height: 800px;
 
-  border-bottom: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
+  border-bottom: ${p =>
+    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
 
   .card {
     &__img {

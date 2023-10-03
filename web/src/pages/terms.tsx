@@ -6,8 +6,8 @@
 import React from 'react'
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
 import TermsPage from '../views/TermsPage'
 
 // Hooks

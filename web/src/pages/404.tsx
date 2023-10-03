@@ -6,7 +6,7 @@
 import React from 'react'
 
 // Elements
-import { Box } from '../elements'
+import { Box } from '@/components/elements'
 
 // Theme
 import theme from '../../config/theme'

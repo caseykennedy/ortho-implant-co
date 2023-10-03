@@ -6,8 +6,8 @@
 import React from 'react'
 
 // Components
-import SEO from '../components/SEO'
-import Post from '../components/Post'
+import SEO from '@/components/SEO'
+import Post from '@/components/Post'
 
 // ___________________________________________________________________
 

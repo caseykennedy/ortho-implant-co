@@ -9,7 +9,7 @@ import React from 'react'
 import Icon from '../../Icons'
 
 // Elements
-import { Flex } from '../../../elements'
+import { Flex } from '@/components/elements'
 
 // Theme
 import * as S from './styles.scss'

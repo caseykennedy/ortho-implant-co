@@ -8,7 +8,7 @@ import PageTitle from '@/components/PageTitle'
 import Filter from './Filter'
 import Billboard from '@/components/Billboard'
 
-import { Box, Text } from '../../elements'
+import { Box, Text } from '@/components/elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'

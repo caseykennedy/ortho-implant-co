@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 
-import { AnimatedFlex } from '../../elements'
+import { AnimatedFlex } from '@/components/elements'
 
 import theme from '../../../config/theme'
 

@@ -15,6 +15,7 @@ import Twitter from './twitter'
 type Props = {
   banner?: string
 } & typeof defaultProps
+
 const defaultProps = {
   title: '',
   desc: '',

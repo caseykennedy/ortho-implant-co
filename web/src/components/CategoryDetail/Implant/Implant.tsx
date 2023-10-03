@@ -19,7 +19,7 @@ import Section from '../../Section'
 import Icon from '../../Icons'
 
 // Elements
-import { AnimatedBox, Box, Flex, Heading, Text } from '../../../elements'
+import { AnimatedBox, Box, Flex, Heading, Text } from '@/components/elements'
 
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
@@ -42,7 +42,7 @@ const AccordionProps = {
   pb: [4],
   pr: [0],
   pl: [0],
-  fontSize: 2,
+  fontSize: 2
 }
 
 // const AdditionalInfo: React.FC<ImplantNode> = ({ implant }) => {
@@ -59,11 +59,11 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-25% 0px',
+    rootMargin: '-25% 0px'
   })
   const manifestoSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)',
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
   return (
     <Section id={implant.slug.current} bg="white" border={true}>
@@ -75,7 +75,9 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
           <Box width={[1, 6 / 10]} pt={[3, 4]}>
             <Heading as="h3">{implant.shortName}</Heading>
 
-            {implant._rawDescription && <BlockContent blocks={implant._rawDescription || []} />}
+            {implant._rawDescription && (
+              <BlockContent blocks={implant._rawDescription || []} />
+            )}
 
             {/* <S.Resources mt={7} mb={7}>
               <Box width={[1, 1, 1 / 3]}>
@@ -103,7 +105,11 @@ const Implant: React.FC<ImplantNode> = ({ implant }) => {
 
               <Box width={[1, 1, 2 / 3]}>
                 {implant.resourceDocs.map((item, idx) => (
-                  <a href={item.resource.document.asset.url} key={idx} target="_blank">
+                  <a
+                    href={item.resource.document.asset.url}
+                    key={idx}
+                    target="_blank"
+                  >
                     {item.title}
                     <Icon name="pdf" />
                   </a>

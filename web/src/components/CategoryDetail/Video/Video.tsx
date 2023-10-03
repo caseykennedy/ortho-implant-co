@@ -8,7 +8,7 @@ import React from 'react'
 import ResponsiveEmbed from 'react-responsive-embed'
 
 // Elements
-import { Heading, Box, Flex } from '../../../elements'
+import { Heading, Box, Flex } from '@/components/elements'
 
 // Theme
 import * as S from './styles.scss'
@@ -38,7 +38,7 @@ export default Video
 
 const defaultProps = {
   src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  title: 'Placeholder',
+  title: 'Placeholder'
 }
 
 Video.defaultProps = defaultProps

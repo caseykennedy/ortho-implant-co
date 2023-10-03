@@ -7,7 +7,7 @@ import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 
 // Theme + ui
 import * as S from './styles.scss'
-import { Box, Flex, Text } from '../../../elements'
+import { Box, Flex, Text } from '@/components/elements'
 
 // ___________________________________________________________________
 
@@ -34,7 +34,9 @@ const ContactForm = () => {
                 <p>Download PDF</p>
               </div>
             )}
-            {error && <p>Sorry, something went wrong. Please refresh and try again.</p>}
+            {error && (
+              <p>Sorry, something went wrong. Please refresh and try again.</p>
+            )}
             {!success && !error && (
               <fieldset>
                 <Box width={1} className="form-group">
@@ -43,7 +45,13 @@ const ContactForm = () => {
 
                     <Flex className="radio-group">
                       <div>
-                        <input type="radio" name="user_type" id="doctor" value="Doctor" onChange={handleChange} />
+                        <input
+                          type="radio"
+                          name="user_type"
+                          id="doctor"
+                          value="Doctor"
+                          onChange={handleChange}
+                        />
                       </div>
                       <div>
                         <label htmlFor="doctor" className="radio">
@@ -54,7 +62,13 @@ const ContactForm = () => {
 
                     <Flex className="radio-group">
                       <div>
-                        <input type="radio" name="user_type" id="patient" value="Patient" onChange={handleChange} />
+                        <input
+                          type="radio"
+                          name="user_type"
+                          id="patient"
+                          value="Patient"
+                          onChange={handleChange}
+                        />
                       </div>
                       <div>
                         <label htmlFor="patient" className="radio">
@@ -86,7 +100,13 @@ const ContactForm = () => {
                   <Box width={[1, 1, 1 / 2]} className="form-group__box">
                     <label htmlFor="title">Title:</label>
 
-                    <input name="title" placeholder="Title" type="text" required={false} onChange={handleChange} />
+                    <input
+                      name="title"
+                      placeholder="Title"
+                      type="text"
+                      required={false}
+                      onChange={handleChange}
+                    />
                   </Box>
                 </Box>
 
@@ -112,7 +132,13 @@ const ContactForm = () => {
                       </abbr>
                     </label>
 
-                    <input name="email" placeholder="Email" type="email" required={true} onChange={handleChange} />
+                    <input
+                      name="email"
+                      placeholder="Email"
+                      type="email"
+                      required={true}
+                      onChange={handleChange}
+                    />
                   </Box>
                 </Box>
 
@@ -132,7 +158,13 @@ const ContactForm = () => {
                   <Box width={[1, 1, 1 / 2]} className="form-group__box">
                     <label htmlFor="state">State:</label>
 
-                    <input name="state" placeholder="State" type="state" required={false} onChange={handleChange} />
+                    <input
+                      name="state"
+                      placeholder="State"
+                      type="state"
+                      required={false}
+                      onChange={handleChange}
+                    />
                   </Box>
                 </Box>
 

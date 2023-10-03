@@ -5,11 +5,12 @@
 import styled from 'styled-components'
 
 import theme from '../../../config/theme'
-import { Box, Flex, Heading } from '../../elements'
+import { Box, Flex, Heading } from '@/components/elements'
 
 // ___________________________________________________________________
 
-export const ContactPage = styled(Flex)`
+export const ContactPage = styled.div`
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
 
@@ -20,7 +21,7 @@ export const ContactPage = styled(Flex)`
     color: ${theme.colors.text};
 
     &:hover {
-      color: ${theme.colors.tertiary};
+      text-decoration: underline;
     }
   }
 

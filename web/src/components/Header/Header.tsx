@@ -12,7 +12,7 @@ import Logo from '../Logo'
 import Navigation from './Navigation'
 import NavLinks from './NavLinks'
 import Overlay from '../Overlay'
-import Button from '../../elements/Button'
+import Button from '@/components/elements/Button'
 import Icon from '../Icons'
 
 import theme from '../../../config/theme'

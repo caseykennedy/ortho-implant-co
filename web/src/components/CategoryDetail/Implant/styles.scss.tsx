@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import Icon from '../../Icons'
 
-import { Box, Flex, Heading } from '../../../elements'
+import { Box, Flex, Heading } from '@/components/elements'
 
 import theme from '../../../../config/theme'
 

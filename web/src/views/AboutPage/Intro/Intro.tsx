@@ -12,7 +12,7 @@ import Accordion from '@/components/Accordion'
 import BlockContent from '@/components/BlockContent'
 
 // UI
-import { Box, Heading } from '../../../elements'
+import { Box, Heading } from '@/components/elements'
 
 // Theme
 import * as S from './styles.scss'

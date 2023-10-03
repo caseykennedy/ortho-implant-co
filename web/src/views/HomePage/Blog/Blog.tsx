@@ -18,7 +18,7 @@ import Section from '@/components/Section'
 import usePost from '@/hooks/usePost'
 
 // Elements
-import { Box, Flex, Heading, Text } from '../../../elements'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 
 // Theme
 import theme from '../../../../config/theme'

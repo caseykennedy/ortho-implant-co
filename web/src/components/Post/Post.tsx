@@ -14,7 +14,7 @@ import PrevNext from './PrevNext'
 import SocialShare from './SocialShare'
 
 // Elements
-import { Box, Flex, Heading, Text } from '../../elements'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 
 // Theme
 import * as S from './styles.scss'
@@ -50,7 +50,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
     // altText: page.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.title,
-    title: page.publishedAt,
+    title: page.publishedAt
   }
   return (
     <S.Post>
@@ -70,7 +70,11 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
       <S.Article>
         <Section>
           {/* <Heading as="h3" color="" className="t--uppercase">{page.title}</Heading> */}
-          <div className="article__lead">{page._rawExcerpt && <BlockContent blocks={page._rawExcerpt || []} />}</div>
+          <div className="article__lead">
+            {page._rawExcerpt && (
+              <BlockContent blocks={page._rawExcerpt || []} />
+            )}
+          </div>
           <Box className="article__meta">
             <Box width={1 / 2} className="author">
               {page.authors && <Author author={page.authors} />}
@@ -85,7 +89,9 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section border={true}>
-          <Box maxWidth="800px">{page._rawBody && <BlockContent blocks={page._rawBody || []} />}</Box>
+          <Box maxWidth="800px">
+            {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
+          </Box>
         </Section>
       </S.Article>
 
@@ -108,7 +114,7 @@ const billboardProps = {
   to: '/about',
   color: theme.colors.white,
   message: 'We make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra',
+  title: 'Mantra'
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }

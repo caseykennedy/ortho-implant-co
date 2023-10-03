@@ -10,7 +10,7 @@ import ContactForm from './ContactForm'
 
 import useContactPage from '@/hooks/useContactPage'
 
-import { Box, Flex, Text, Heading } from '../../elements'
+import { Box, Flex, Text, Heading } from '@/components/elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'

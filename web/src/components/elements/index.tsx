@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { animated } from 'react-spring'
 
 // Theme
-import theme from '../../config/theme'
+import theme from '../../../config/theme'
 
 import {
   space,
@@ -47,7 +47,7 @@ import {
   MaxWidthProps,
   DisplayProps,
   PositionProps,
-  OverflowProps,
+  OverflowProps
 } from 'styled-system'
 
 // ___________________________________________________________________
@@ -190,14 +190,6 @@ export const Heading = styled.div<ElementProps>`
 `
 
 Box.displayName = 'Heading'
-
-// export const HeadingStroked = styled(Heading)<ElementProps>`
-//   -webkit-text-fill-color: ${theme.colors.background};
-//   -webkit-text-stroke-width: ${theme.strokeWidth};
-//   -webkit-text-stroke-color: ${theme.colors.text};
-// `
-
-// Box.displayName = 'HeadingStroked'
 
 export const Text = styled.div<ElementProps>`
   box-sizing: border-box;

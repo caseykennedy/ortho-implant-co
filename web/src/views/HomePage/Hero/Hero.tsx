@@ -10,7 +10,7 @@ import { Parallax } from 'react-scroll-parallax'
 import useHomePage from '@/hooks/useHomePage'
 
 import * as S from './styles.scss'
-import { AnimatedBox, Heading } from '../../../elements'
+import { AnimatedBox, Heading } from '@/components/elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________

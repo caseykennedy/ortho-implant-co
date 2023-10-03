@@ -10,7 +10,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { useTransition } from 'react-spring'
 
 // Elements
-import { Box, Heading, Text } from '../../../elements'
+import { Box, Heading, Text } from '@/components/elements'
 
 // Components
 import BlockContent from '@/components/BlockContent'

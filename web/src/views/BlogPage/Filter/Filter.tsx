@@ -11,7 +11,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import usePost from '@/hooks/usePost'
 
 // Elements
-import { Box, Flex, Heading } from '../../../elements'
+import { Box, Flex, Heading } from '@/components/elements'
 
 // Components
 import Posts from '../Posts'

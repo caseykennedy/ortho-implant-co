@@ -13,19 +13,8 @@ const {
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteURL: config.siteUrl + pathPrefix,
     pathPrefix,
-    title: config.siteTitle,
-    titleAlt: config.siteTitleAlt,
-    description: config.siteDescription,
-    logo: config.siteLogo,
-    defaultBanner: config.banner,
-    headline: config.siteHeadline,
-    siteLanguage: config.siteLanguage,
-    ogLanguage: config.ogLanguage,
-    author: config.author,
-    twitter: config.userTwitter,
-    facebook: config.ogSiteName
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -63,7 +52,7 @@ module.exports = {
         dataset,
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
-        token: process.env.GATSBY_SANITY_TOKEN,
+        // token: process.env.GATSBY_SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true
       }
@@ -114,7 +103,7 @@ module.exports = {
 
 function requireConfig(path) {
   try {
-    return require('../studio/sanity.json')
+    return require(path)
   } catch (e) {
     console.error(
       'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'

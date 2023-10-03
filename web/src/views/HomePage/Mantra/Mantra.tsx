@@ -8,8 +8,8 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import BlockContent from '@/components/BlockContent'
 
-import Button from '../../../elements/Button'
-import { Box, Flex, Heading, Text } from '../../../elements'
+import Button from '@/components/elements/Button'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'

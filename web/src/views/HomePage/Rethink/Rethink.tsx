@@ -11,9 +11,8 @@ import useHomePage from '@/hooks/useHomePage'
 import BlockContent from '@/components/BlockContent'
 
 // Theme
-import Button from '../../../elements/Button'
-import { Box, Flex, Heading, Text } from '../../../elements'
-import theme from '../../../../config/theme'
+import Button from '@/components/elements/Button'
+import { Box, Flex, Heading, Text } from '@/components/elements'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

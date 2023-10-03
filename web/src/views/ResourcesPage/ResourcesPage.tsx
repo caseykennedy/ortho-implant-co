@@ -6,7 +6,7 @@ import PageTitle from '@/components/PageTitle'
 import Billboard from '@/components/Billboard'
 import Section from '@/components/Section'
 import Icon from '@/components/Icons'
-import { Box, Heading } from '../../elements'
+import { Box, Heading } from '@/components/elements'
 
 import useResourceTypes from '@/hooks/useResourceTypes'
 import useLegal from '@/hooks/useLegal'

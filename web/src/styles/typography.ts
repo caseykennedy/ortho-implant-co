@@ -218,7 +218,7 @@ const Typography = css`
     margin: 0 0 1em;
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 1.5em;
+      margin: 0 0 1em;
     }
   }
 
@@ -281,7 +281,6 @@ const Typography = css`
     &:hover,
     &:focus {
       text-decoration: none;
-      /* color: ${darken(0.05, theme.colors.secondary)}; */
     }
   }
 

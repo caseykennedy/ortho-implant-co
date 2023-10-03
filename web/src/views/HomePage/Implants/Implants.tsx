@@ -14,9 +14,8 @@ import useHover from '@/hooks/useHover'
 import useCategory from '@/hooks/useCategory'
 
 // UI + Styles
-import { Box, Flex, Heading, Text } from '../../../elements'
-import Button from '../../../elements/Button'
-import theme from '../../../../config/theme'
+import { Box, Flex, Heading, Text } from '@/components/elements'
+import Button from '@/components/elements/Button'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

@@ -6,8 +6,8 @@
 import React from 'react'
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
 import ImplantsPage from '../views/ImplantsPage'
 
 // ___________________________________________________________________
@@ -15,7 +15,11 @@ import ImplantsPage from '../views/ImplantsPage'
 const Implants = () => {
   return (
     <>
-      <SEO pathname={`/implants`} title={`Implants | Orthopaedic Implant Co.`} individual={true} />
+      <SEO
+        pathname={`/implants`}
+        title={`Implants | Orthopaedic Implant Co.`}
+        individual={true}
+      />
       <ImplantsPage />
     </>
   )

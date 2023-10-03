@@ -12,7 +12,7 @@ import Icon from '../../Icons'
 import usePost from '@/hooks/usePost'
 
 // Elements
-import { Flex, Box, Heading, Text } from '../../../elements'
+import { Flex, Box, Heading, Text } from '@/components/elements'
 
 import * as S from './styles.scss'
 
