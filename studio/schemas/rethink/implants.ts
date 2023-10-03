@@ -1,25 +1,25 @@
-import { MdDocument } from 'react-icons/md'
+// import { MdDocument } from 'react-icons/md'
 
 export default {
   name: 'homeImplants',
   title: 'Home Implants',
   type: 'document',
-  icon: MdDocument,
+  // icon: MdDocument,
   fields: [
     {
       name: 'message',
       title: 'Message',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'linkTitle',
       title: 'Link Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'linkTo',
       title: 'Link To',
-      type: 'string'
+      type: 'string',
     },
-  ]
+  ],
 }

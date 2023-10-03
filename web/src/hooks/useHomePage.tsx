@@ -81,7 +81,13 @@ const useHomePage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }
@@ -89,7 +95,13 @@ const useHomePage = () => {
             hero {
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 60vw, 85vw"
+                  )
                   url
                 }
               }
@@ -104,7 +116,12 @@ const useHomePage = () => {
               tabPanels {
                 image {
                   asset {
-                    gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                    gatsbyImageData(
+                      fit: FILLMAX
+                      layout: FULL_WIDTH
+                      placeholder: BLURRED
+                      formats: [AUTO, AVIF, WEBP]
+                    )
                     url
                   }
                 }
@@ -122,7 +139,13 @@ const useHomePage = () => {
             }
             testimonialsFigure {
               asset {
-                gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  sizes: "(max-width: 800px) 50vw, 75vw"
+                )
                 url
               }
             }

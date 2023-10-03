@@ -7,7 +7,7 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
@@ -16,24 +16,24 @@ export default {
       description: 'Set the page URL',
       options: {
         source: 'title',
-        maxLength: 96
+        maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'pageTitle',
       title: 'Page Title',
-      type: 'pageTitle'
+      type: 'pageTitle',
     },
     {
       name: 'intro',
       title: 'Intro',
-      type: 'aboutIntro'
+      type: 'aboutIntro',
     },
     {
       name: 'billboard',
       title: 'Billboard',
-      type: 'billboard'
+      type: 'billboard',
     },
-  ]
+  ],
 }

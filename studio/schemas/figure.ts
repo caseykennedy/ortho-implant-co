@@ -3,25 +3,19 @@ export default {
   title: 'Figure',
   type: 'image',
   options: {
-    hotspot: true
+    hotspot: true,
   },
   fields: [
     {
       name: 'alt',
       title: 'Alternative text (for screen readers)',
       type: 'string',
-      options: {
-        isHighlighted: true
-      },
-      validation: Rule => Rule.required()
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'caption',
       title: 'Caption',
       type: 'string',
-      options: {
-        isHighlighted: true
-      }
-    }
-  ]
+    },
+  ],
 }

@@ -1,6 +1,7 @@
-import { MdAssignment } from "react-icons/md";
+import {defineField, defineType} from 'sanity'
+import {MdAssignment} from 'react-icons/md'
 
-export default {
+export default defineType({
   name: 'jobPost',
   title: 'Job Post',
   type: 'document',
@@ -9,7 +10,7 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
@@ -18,48 +19,48 @@ export default {
       description: 'Set the page URL',
       options: {
         source: 'title',
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
     },
     {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'blockText'
+      type: 'blockText',
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
+      type: 'blockContent',
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       options: {
-        hotspot: true
-      }
-    }
+        hotspot: true,
+      },
+    },
   ],
   preview: {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
-      image: 'image'
+      image: 'image',
     },
-    prepare ({ title = 'No title', publishedAt, image }) {
+    prepare({title = 'No title', publishedAt, image}) {
       return {
         title,
         subtitle: publishedAt
           ? new Date(publishedAt).toLocaleDateString()
           : 'Missing publishing date',
-        media: image
+        media: image,
       }
-    }
-  }
-}
+    },
+  },
+})
