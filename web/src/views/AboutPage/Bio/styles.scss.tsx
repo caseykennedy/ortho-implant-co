@@ -1,12 +1,8 @@
 // Bio Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex, AnimatedFlex, AnimatedBox } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Bio = styled(Flex)`
   flex-wrap: wrap;

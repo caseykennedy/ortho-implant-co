@@ -14,8 +14,6 @@ import useLegal from '@/hooks/useLegal'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 type ResourceListShape = {
   docs: ResourceDocShape[]
   title: string
@@ -28,12 +26,7 @@ const ResourceList = ({ docs, title }: ResourceListShape) => {
         <mark>{title}</mark>
       </Heading>
       {docs.map((doc, idx) => (
-        <a
-          href={doc.document.asset.url}
-          key={idx}
-          target="_blank"
-          rel="noopener"
-        >
+        <a href={doc.document.asset.url} key={idx} target="_blank" rel="noopener">
           {doc.title}
           <Icon name="pdf" />
         </a>
@@ -50,7 +43,7 @@ const ResourcesPage = () => {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     // title: "Downloadable",
-    message: 'Resources'
+    message: 'Resources',
   }
 
   const billboardProps = {
@@ -60,7 +53,7 @@ const ResourcesPage = () => {
     src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
-    to: page.billboard.linkTo
+    to: page.billboard.linkTo,
   }
 
   return (
@@ -69,22 +62,10 @@ const ResourcesPage = () => {
 
       <Section bg="quinary">
         <div className="resource-grid">
-          <ResourceList
-            docs={resourceTypes[2].node.resourceDocs}
-            title={resourceTypes[2].node.title}
-          />
-          <ResourceList
-            docs={resourceTypes[0].node.resourceDocs}
-            title={resourceTypes[0].node.title}
-          />
-          <ResourceList
-            docs={resourceTypes[1].node.resourceDocs}
-            title={resourceTypes[1].node.title}
-          />
-          <ResourceList
-            docs={resourceTypes[3].node.resourceDocs}
-            title={resourceTypes[3].node.title}
-          />
+          <ResourceList docs={resourceTypes[2].node.resourceDocs} title={resourceTypes[2].node.title} />
+          <ResourceList docs={resourceTypes[0].node.resourceDocs} title={resourceTypes[0].node.title} />
+          <ResourceList docs={resourceTypes[1].node.resourceDocs} title={resourceTypes[1].node.title} />
+          <ResourceList docs={resourceTypes[3].node.resourceDocs} title={resourceTypes[3].node.title} />
 
           {/* {resourceTypes.map(({ node: item }, idx) => (
             <ResourceList

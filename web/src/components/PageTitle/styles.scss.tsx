@@ -1,11 +1,7 @@
 // PageTitle Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const PageTitle = styled.div<{ image?: object }>`
   display: flex;

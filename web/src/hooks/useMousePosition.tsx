@@ -3,12 +3,8 @@
 // https://gist.github.com/whoisryosuke/99f23c9957d90e8cc3eb7689ffa5757c
 // const { x, y } = useMousePosition()
 
-// ___________________________________________________________________
-
 // Core
 import { useState, useEffect } from 'react'
-
-// ___________________________________________________________________
 
 type Props = {}
 
@@ -29,5 +25,3 @@ const useMousePosition = () => {
 }
 
 export default useMousePosition
-
-// ___________________________________________________________________

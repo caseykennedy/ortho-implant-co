@@ -1,11 +1,7 @@
 // usePost hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const usePost = () => {
   const data = useStaticQuery<PostShape>(graphql`

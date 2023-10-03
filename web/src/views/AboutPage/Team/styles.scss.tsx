@@ -1,11 +1,8 @@
 // Team Styles:
-// ___________________________________________________________________
 
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex, AnimatedFlex } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Card = styled(AnimatedFlex)`
   flex-direction: column;

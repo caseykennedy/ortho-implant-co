@@ -60,16 +60,14 @@ const breakpoints: string[] = ['768px', '1024px']
 
 const theme: ThemeShape = {
   // Breakpoints
-  // ___________________________________________________________________
 
   breakpoints,
   mq: {
     tablet: `(min-width: ${breakpoints[0]})`,
-    desktop: `(min-width: ${breakpoints[1]})`
+    desktop: `(min-width: ${breakpoints[1]})`,
   },
 
   // Color palette
-  // ___________________________________________________________________
 
   colors: {
     text: '#000000',
@@ -82,11 +80,10 @@ const theme: ThemeShape = {
     quinary: '#ebebeb',
 
     black: '#000000',
-    white: '#ffffff'
+    white: '#ffffff',
   },
 
   // Space
-  // ___________________________________________________________________
 
   space: [
     '0', // 0
@@ -102,23 +99,22 @@ const theme: ThemeShape = {
     '12rem', // 10
     '14rem', // 11
     '16rem', // 12
-    '18rem' // 13
+    '18rem', // 13
   ],
 
   // Left/Right gutter
   gutter: {
     tablet: '2rem',
     desktop: '4rem',
-    axis: [4, 6, 7]
+    axis: [4, 6, 7],
   },
 
   // Typography
-  // ___________________________________________________________________
 
   fonts: {
     body: `"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     heading: `"HelveticaCondensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`
+    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
   fontSizes: [
@@ -129,7 +125,7 @@ const theme: ThemeShape = {
     'var(--text-lg)', // 4
     'var(--text-xl)', // 5
     'var(--text-xxl)', // 6
-    'var(--text-xxxl)' // 7
+    'var(--text-xxxl)', // 7
   ],
 
   Heading: {},
@@ -139,7 +135,7 @@ const theme: ThemeShape = {
     regular: 400,
     medium: 500,
     bold: 600,
-    black: 700
+    black: 700,
   },
 
   strokeWidth: '2px',
@@ -151,21 +147,20 @@ const theme: ThemeShape = {
   iconWidth: '18px',
 
   // Base
-  // ___________________________________________________________________
 
   grid: {
-    gap: '0.5rem'
+    gap: '0.5rem',
   },
 
   transition: {
-    all: 'all 0.222s ease-in-out'
+    all: 'all 0.222s ease-in-out',
   },
 
   transform: {
     matrix: {
       from: 'matrix(1, 0, 0, 1, 24, 0)',
-      to: 'matrix(1, 0, 0, 1, 0, 0)'
-    }
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
   },
 
   border: '2px solid #000000',
@@ -192,9 +187,9 @@ const theme: ThemeShape = {
 
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
-      bodyLineHeight: 'var(--body-line-height)'
-    }
-  }
+      bodyLineHeight: 'var(--body-line-height)',
+    },
+  },
 }
 
 export default theme

@@ -1,10 +1,7 @@
 // ResourcesPage Styles:
-// ___________________________________________________________________
 
 import styled from 'styled-components'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const ResourcesPage = styled.div`
   .resource-grid {

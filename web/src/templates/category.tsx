@@ -1,7 +1,5 @@
 // Category template
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -12,11 +10,7 @@ import { AnimatedBox } from '@/components/elements'
 import SEO from '@/components/SEO'
 import CategoryDetail from '@/components/CategoryDetail'
 
-// ___________________________________________________________________
-
-const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
-  pageContext
-}) => {
+const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({ pageContext }) => {
   const page = pageContext
   return (
     <>
@@ -35,5 +29,3 @@ const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
 }
 
 export default CategoryTemplate
-
-// ___________________________________________________________________

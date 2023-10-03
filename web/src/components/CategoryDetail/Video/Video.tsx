@@ -1,7 +1,5 @@
 // Video
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Libraries
@@ -13,8 +11,6 @@ import { Heading, Box, Flex } from '@/components/elements'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 type Props = {
   src: string
@@ -34,11 +30,9 @@ const Video: React.FC<Props> = ({ src, title }) => {
 
 export default Video
 
-// ___________________________________________________________________
-
 const defaultProps = {
   src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  title: 'Placeholder'
+  title: 'Placeholder',
 }
 
 Video.defaultProps = defaultProps

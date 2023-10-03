@@ -1,7 +1,5 @@
 // Rethink Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { useSpring, config } from 'react-spring'
@@ -15,8 +13,6 @@ import useRethinkPage from '@/hooks/useRethinkPage'
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '@/components/elements'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 type NotionData = {
   data: {
@@ -33,8 +29,6 @@ type NotionData = {
   }
 }
 
-// ___________________________________________________________________
-
 const AccordionProps = {
   chevronColor: theme.colors.text,
   chevronWidth: '2rem',
@@ -42,26 +36,22 @@ const AccordionProps = {
   colorActive: theme.colors.text,
   borderColor: theme.colors.secondary,
   fontSize: [3, 3, 4],
-  bg: 'quinary'
+  bg: 'quinary',
 }
 
 const Notion: React.FC<NotionData> = ({ data }) => {
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-200px 0px'
+    rootMargin: '-200px 0px',
   })
   const manifestoSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)',
   })
   return (
     <S.Notion ref={manifestoRef} style={manifestoSpring}>
-      <Accordion
-        title={data.title}
-        subTitle={data.subTitle}
-        {...AccordionProps}
-      >
+      <Accordion title={data.title} subTitle={data.subTitle} {...AccordionProps}>
         <Flex
           flexDirection="row-reverse"
           flexWrap="wrap"
@@ -79,17 +69,11 @@ const Notion: React.FC<NotionData> = ({ data }) => {
             className="content"
           >
             {data.lead && (
-              <Heading
-                as="h3"
-                fontSize={[`1.75rem`, `2.5rem`]}
-                fontWeight={400}
-              >
+              <Heading as="h3" fontSize={[`1.75rem`, `2.5rem`]} fontWeight={400}>
                 {data.lead}
               </Heading>
             )}
-            {data._rawContent && (
-              <BlockContent blocks={data._rawContent || []} />
-            )}
+            {data._rawContent && <BlockContent blocks={data._rawContent || []} />}
           </Flex>
 
           <Box width={[1, 1, 2 / 8]} className="image">
@@ -114,13 +98,7 @@ const Rethink = () => {
   return (
     <S.Rethink>
       <Box px={theme.gutter.axis}>
-        <Heading
-          as="h3"
-          color="primary"
-          fontWeight={400}
-          fontSize={'1.75rem'}
-          className="t--uppercase"
-        >
+        <Heading as="h3" color="primary" fontWeight={400} fontSize={'1.75rem'} className="t--uppercase">
           {/* {query.title} */}
           <Box as="span" color="text">
             we need to

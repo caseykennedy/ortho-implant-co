@@ -1,11 +1,7 @@
 // useProduct hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const useProduct = () => {
   const data = useStaticQuery<ProductShape>(graphql`

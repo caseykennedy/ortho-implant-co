@@ -1,7 +1,5 @@
 // JobPost:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 import PageTitle from '../PageTitle'
@@ -12,8 +10,6 @@ import BlockContent from '../BlockContent'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const billboardProps = {
   bg: theme.colors.primary,
   btnText: 'Meet the team',
@@ -21,7 +17,7 @@ const billboardProps = {
   color: theme.colors.white,
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
-  invert: false
+  invert: false,
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }
@@ -33,7 +29,7 @@ const JobPost: React.FC<CareersContextShape> = ({ pageContext }) => {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: data.title,
-    title: data.publishedAt
+    title: data.publishedAt,
   }
   return (
     <S.JobPost>

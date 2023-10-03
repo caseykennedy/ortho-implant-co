@@ -1,7 +1,5 @@
 // Typography
 
-// ___________________________________________________________________
-
 import { css } from 'styled-components'
 import theme from '../../config/theme'
 
@@ -34,8 +32,6 @@ import HelveticaMonospacedProRgEot from './fonts/HelveticaMonospacedPro-Rg.eot'
 import HelveticaMonospacedProRgWoff2 from './fonts/HelveticaMonospacedPro-Rg.woff2'
 import HelveticaMonospacedProRgWoff from './fonts/HelveticaMonospacedPro-Rg.woff'
 import HelveticaMonospacedProRgOtf from './fonts/HelveticaMonospacedPro-Rg.otf'
-
-// ___________________________________________________________________
 
 const Typography = css`
   /* Helvetica Neue Condensed Regular */
@@ -357,5 +353,3 @@ const Typography = css`
 `
 
 export default Typography
-
-// ___________________________________________________________________

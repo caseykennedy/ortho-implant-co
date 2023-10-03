@@ -1,7 +1,5 @@
 // Rethink page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -12,8 +10,6 @@ import RethinkPage from '../views/RethinkPage'
 
 // Hooks
 import useRethinkPage from '../hooks/useRethinkPage'
-
-// ___________________________________________________________________
 
 const Rethink = () => {
   const page = useRethinkPage()

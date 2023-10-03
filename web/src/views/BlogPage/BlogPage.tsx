@@ -1,7 +1,5 @@
 // BlogPage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
@@ -24,8 +22,6 @@ import Button from '@/components/elements/Button'
 // Theme + Styles
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
   return (
@@ -53,9 +49,7 @@ const Featured: React.FC<{ post: PostQuery }> = ({ post }) => {
               <Box className="card__meta  t--uppercase">
                 <Text as="span">{post.publishedAt}</Text>
               </Box>
-              {post._rawExcerpt && (
-                <BlockContent blocks={post._rawExcerpt || []} />
-              )}
+              {post._rawExcerpt && <BlockContent blocks={post._rawExcerpt || []} />}
             </Box>
 
             <Box mt={7}>
@@ -91,7 +85,7 @@ const BlogPage = () => {
   const pageTitle = {
     altText: page.pageTitle.title,
     image: page.pageTitle.image.asset.gatsbyImageData,
-    message: page.pageTitle.message
+    message: page.pageTitle.message,
     // parallaxY: [30, 10]
   }
   return (
@@ -113,8 +107,6 @@ const BlogPage = () => {
 
 export default BlogPage
 
-// ___________________________________________________________________
-
 const billboardProps = {
   bg: theme.colors.black,
   color: theme.colors.white,
@@ -122,7 +114,7 @@ const billboardProps = {
   title: 'mantra',
   invert: false,
   btnText: 'See our implants',
-  to: '/implants'
+  to: '/implants',
   // src: 'im-nail.jpg',
   // altText: 'Doctors in the operating room.'
 }

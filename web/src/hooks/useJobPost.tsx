@@ -1,11 +1,7 @@
 // useJobPost hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const useJobPost = () => {
   const data: JobPostShape = useStaticQuery(graphql`

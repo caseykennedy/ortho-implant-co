@@ -1,15 +1,11 @@
 // ImplantsPage Styles:
 
-// ___________________________________________________________________
-
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { Box, AnimatedBox, Flex, Heading } from '@/components/elements'
 
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 const cardBorder = `1px solid ${theme.colors.black}`
 

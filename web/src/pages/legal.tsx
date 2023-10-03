@@ -1,7 +1,5 @@
 // Legal page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -12,8 +10,6 @@ import LegalPage from '../views/LegalPage'
 
 // Hooks
 import useLegal from '../hooks/useLegal'
-
-// ___________________________________________________________________
 
 const Legal = () => {
   const page = useLegal()

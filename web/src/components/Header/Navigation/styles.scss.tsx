@@ -1,12 +1,8 @@
 // Navigation Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Nav = styled.nav`
   display: flex;

@@ -1,12 +1,8 @@
 // Lightbox:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
-
-// ___________________________________________________________________
 
 type LightboxShape = {
   currentImageIndex: number

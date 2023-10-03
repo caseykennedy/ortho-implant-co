@@ -1,12 +1,8 @@
 // Pixels
 // Decorator with fill props
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 import theme from '../../config/theme'
-
-// ___________________________________________________________________
 
 type Props = {
   fillA?: string
@@ -33,7 +29,5 @@ const Pixels: React.FC<Props> = ({ fillA, fillB, fillC, fillD }) => (
 )
 
 export default Pixels
-
-// ___________________________________________________________________
 
 Pixels.defaultProps = defaultProps

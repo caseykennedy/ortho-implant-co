@@ -1,7 +1,5 @@
 // CardGrid Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -20,22 +18,14 @@ import ImgMatch from '@/components/ImgMatch'
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
-const Card: React.FC<{ implant: ProductEdges; transition: object }> = ({
-  implant,
-  transition
-}) => {
+const Card: React.FC<{ implant: ProductEdges; transition: object }> = ({ implant, transition }) => {
   const slug = implant.node.slug.current
   return (
     <S.Card width={[1 / 2, 1 / 3, 1 / 5]}>
       <Link to={`/implants/${slug}`}>
         <Box className="card__thumb">
           {!implant.node.mainImage ? (
-            <ImgMatch
-              src="DRP-3-Hole-Narrow-Left 1.png"
-              altText="placeholder"
-            />
+            <ImgMatch src="DRP-3-Hole-Narrow-Left 1.png" altText="placeholder" />
           ) : (
             <GatsbyImage
               image={implant.node.mainImage.asset.gatsbyImageData}
@@ -66,23 +56,19 @@ const Card: React.FC<{ implant: ProductEdges; transition: object }> = ({
 
 const Grid: React.FC<{ items: ProductEdges[] }> = ({ items }) => {
   // Card enter/exit trail animation
-  const implantTransitions = useTransition(
-    items ? items : [],
-    item => item.node.name,
-    {
-      from: {
-        opacity: 0
-      },
-      enter: {
-        opacity: 1
-      },
-      leave: {
-        opacity: 1
-      },
-      trail: 0,
-      unique: false
-    }
-  )
+  const implantTransitions = useTransition(items ? items : [], item => item.node.name, {
+    from: {
+      opacity: 0,
+    },
+    enter: {
+      opacity: 1,
+    },
+    leave: {
+      opacity: 1,
+    },
+    trail: 0,
+    unique: false,
+  })
 
   return (
     <S.Grid width={1}>

@@ -1,12 +1,8 @@
 // Marker
 
-// ___________________________________________________________________
-
 import React from 'react'
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 type MarkerProps = {
   lat: number

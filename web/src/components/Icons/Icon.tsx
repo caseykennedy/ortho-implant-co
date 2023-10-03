@@ -2,8 +2,6 @@
 // https://fontawesome.com/icons/
 // Add custom icons via 'case'.
 
-// ___________________________________________________________________
-
 import React from 'react'
 import * as S from './styles.scss'
 
@@ -23,8 +21,6 @@ import Pdf from './SVG/Pdf'
 import Plus from './SVG/Plus'
 import Pin from './SVG/Pin'
 import Twitter from './SVG/Twitter'
-
-// ___________________________________________________________________
 
 type Props = {
   name: string
@@ -135,5 +131,3 @@ const Icon: React.FC<Props> = ({ className, color, fas, name }) => {
 }
 
 export default Icon
-
-// ___________________________________________________________________

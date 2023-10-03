@@ -1,8 +1,6 @@
 // Header:
 // Site Header with logo
 
-// ___________________________________________________________________
-
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
@@ -17,8 +15,6 @@ import Icon from '../Icons'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
 

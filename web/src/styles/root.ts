@@ -1,14 +1,10 @@
 // Root variables
 
-// ___________________________________________________________________
-
 // Core
 import { css } from 'styled-components'
 
 // Theme
 import theme from '../../config/theme'
-
-// ___________________________________________________________________
 
 const RootVariables = css`
   :root {
@@ -50,5 +46,3 @@ const RootVariables = css`
 `
 
 export default RootVariables
-
-// ___________________________________________________________________

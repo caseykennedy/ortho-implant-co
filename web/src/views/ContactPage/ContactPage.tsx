@@ -1,7 +1,5 @@
 // ContactPage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import PageTitle from '@/components/PageTitle'
 import Billboard from '@/components/Billboard'
@@ -14,8 +12,6 @@ import { Box, Flex, Text, Heading } from '@/components/elements'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const ContactPage = () => {
   const page = useContactPage()
 
@@ -24,7 +20,7 @@ const ContactPage = () => {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
-    title: page.pageTitle.title
+    title: page.pageTitle.title,
   }
   // Billboard
   const billboardProps = {
@@ -35,7 +31,7 @@ const ContactPage = () => {
     to: page.billboard.linkTo,
     btnText: page.billboard.linkTitle,
     src: page.billboard.figure.asset.gatsbyImageData,
-    altText: page.billboard.figure.alt
+    altText: page.billboard.figure.alt,
   }
 
   // Map coordinates
@@ -52,23 +48,17 @@ const ContactPage = () => {
               Telephone | Fax
             </Heading>
             <Text as="p" fontSize={`calc(${theme.fontSizes[2]} * 1.25)`}>
-              <a href={`tel:${page.telTollFree}`}>
-                +1 {page.telTollFree && page.telTollFree}
-              </a>{' '}
+              <a href={`tel:${page.telTollFree}`}>+1 {page.telTollFree && page.telTollFree}</a>{' '}
               <Box as="span" color="tertiary">
                 — toll free
               </Box>
               <br />
-              <a href={`tel:${page.telDirect}`}>
-                +1 {page.telDirect && page.telDirect}
-              </a>{' '}
+              <a href={`tel:${page.telDirect}`}>+1 {page.telDirect && page.telDirect}</a>{' '}
               <Box as="span" color="tertiary">
                 — direct
               </Box>
               <br />
-              <a href={`tel:${page.telFax}`}>
-                +1 {page.telFax && page.telFax}
-              </a>{' '}
+              <a href={`tel:${page.telFax}`}>+1 {page.telFax && page.telFax}</a>{' '}
               <Box as="span" color="tertiary">
                 — fax
               </Box>

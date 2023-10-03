@@ -3,8 +3,6 @@
 
 import { useState } from 'react'
 
-// ___________________________________________________________________
-
 const useToggle = () => {
   const [isShowing, setIsShowing] = useState(false)
 

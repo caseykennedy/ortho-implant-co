@@ -1,7 +1,5 @@
 // ValueLandingPage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 import * as S from './styles.scss'
@@ -18,14 +16,12 @@ import Section from '@/components/Section'
 import ContactForm from '@/components/ContactForm'
 import Icon from '@/components/Icons'
 
-// ___________________________________________________________________
-
 const Aside = () => {
   return (
     <S.Aside>
       <Text as="p" mb={6}>
-        Smarter solutions, reduced inventory, and simplified instrumentation
-        with a <mark>high average cost savings</mark>.
+        Smarter solutions, reduced inventory, and simplified instrumentation with a{' '}
+        <mark>high average cost savings</mark>.
       </Text>
 
       <div className="stats">
@@ -45,11 +41,7 @@ const Aside = () => {
               </a>
             </div>
             <div className="savings">
-              <Text
-                fontSize={4}
-                mb={0}
-                style={{ marginBottom: `calc(${theme.space[2]} * -1)` }}
-              >
+              <Text fontSize={4} mb={0} style={{ marginBottom: `calc(${theme.space[2]} * -1)` }}>
                 {stats.average}%
               </Text>
               <Text as="h4" fontSize={1} lineHeight={1} mb={0}>
@@ -63,16 +55,14 @@ const Aside = () => {
   )
 }
 
-const ValueLandingPage: React.FC<LandingPageContextShape> = ({
-  pageContext
-}) => {
+const ValueLandingPage: React.FC<LandingPageContextShape> = ({ pageContext }) => {
   const page = pageContext.page
 
   const pageTitle = {
     altText: page.title,
     image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
-    title: page.intro.title
+    title: page.intro.title,
   }
 
   const billboardProps = {
@@ -82,16 +72,12 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
     src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
-    to: page.billboard.linkTo
+    to: page.billboard.linkTo,
   }
 
   return (
     <>
-      <SEO
-        pathname={`/${page.slug.current}`}
-        title={`${page.title} | Orthopaedic Implant Co.`}
-        individual={true}
-      />
+      <SEO pathname={`/${page.slug.current}`} title={`${page.title} | Orthopaedic Implant Co.`} individual={true} />
       <PageTitle {...pageTitle} />
       <S.ValueLandingPage>
         <Flex flexDirection={['column', 'row']}>
@@ -121,16 +107,11 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
               </Heading>
 
               <Text as="p">
-                We're here because our approach to supplying orthopaedic
-                implants is the first step toward a healthcare system that's
-                more affordable, more equitable, and better for all.
+                We're here because our approach to supplying orthopaedic implants is the first step toward a healthcare
+                system that's more affordable, more equitable, and better for all.
               </Text>
 
-              <Box>
-                {page.intro._rawBody && (
-                  <BlockContent blocks={page.intro._rawBody || []} />
-                )}
-              </Box>
+              <Box>{page.intro._rawBody && <BlockContent blocks={page.intro._rawBody || []} />}</Box>
             </Box>
           </Box>
         </Flex>
@@ -160,31 +141,26 @@ const ValueLandingPage: React.FC<LandingPageContextShape> = ({
 
 export default ValueLandingPage
 
-// ___________________________________________________________________
-
 const statsData = [
   {
     product: 'Locking<br />Plates',
     average: 56,
-    url:
-      'https://journals.lww.com/jorthotrauma/Fulltext/2016/12001/The_Clinical_and_Economic_Impact_of_Generic.7.aspx'
+    url: 'https://journals.lww.com/jorthotrauma/Fulltext/2016/12001/The_Clinical_and_Economic_Impact_of_Generic.7.aspx',
   },
   {
     product: 'Cannulated<br />Screws',
     average: 70,
-    url:
-      'https://cdn.mdedge.com/files/s3fs-public/Document/September-2017/ajo043090405.pdf'
+    url: 'https://cdn.mdedge.com/files/s3fs-public/Document/September-2017/ajo043090405.pdf',
   },
   {
     product: 'IM<br />Nails',
     average: 51,
-    url:
-      'https://www.sciencedirect.com/science/article/abs/pii/S0030589818300804?via%3Dihub'
+    url: 'https://www.sciencedirect.com/science/article/abs/pii/S0030589818300804?via%3Dihub',
   },
   {
     product: 'External<br />Fixation',
     average: 58,
     url:
-      'https://journaloei.scholasticahq.com/article/18255-the-clinical-and-economic-impact-of-high-value-external-fixation-utilization-at-a-level-ii-trauma-center'
-  }
+      'https://journaloei.scholasticahq.com/article/18255-the-clinical-and-economic-impact-of-high-value-external-fixation-utilization-at-a-level-ii-trauma-center',
+  },
 ]

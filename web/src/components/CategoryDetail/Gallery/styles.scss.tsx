@@ -1,14 +1,10 @@
 // Gallery Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import { Box, Flex, Heading } from '@/components/elements'
 
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Gallery = styled(Box)`
   flex-wrap: wrap;

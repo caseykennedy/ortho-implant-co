@@ -1,12 +1,12 @@
 // // useNavigation utility hook
 // // Hook for querying navigation data
 
-// // ___________________________________________________________________
+//
 
 // // Core
 // import { graphql, useStaticQuery } from 'gatsby'
 
-// // ___________________________________________________________________
+//
 
 // type Props = {
 //   navigation: {
@@ -37,5 +37,3 @@
 // }
 
 // export default useNavigation
-
-// ___________________________________________________________________

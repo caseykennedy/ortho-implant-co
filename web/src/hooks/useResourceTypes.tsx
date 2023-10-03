@@ -2,8 +2,6 @@
 
 import { graphql, useStaticQuery } from 'gatsby'
 
-// ___________________________________________________________________
-
 const useResourceTypes = () => {
   const data = useStaticQuery<ResourceTypeShape>(graphql`
     query ResourceTypesQuery {

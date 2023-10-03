@@ -1,7 +1,5 @@
 // Bio portal:
 
-// ___________________________________________________________________
-
 import React, { useRef } from 'react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
@@ -12,8 +10,6 @@ import BlockContent from '@/components/BlockContent'
 import * as S from './styles.scss'
 import { Box, Heading, Text } from '@/components/elements'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 type Props = {
   bio: PersonNode
@@ -32,7 +28,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
             <GatsbyImage
               image={{
                 ...bio.headshot.asset.gatsbyImageData,
-                aspectRatio: 2 / 3
+                aspectRatio: 2 / 3,
               }}
               objectFit="cover"
               objectPosition="50% 50%"
@@ -43,13 +39,7 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
       </Box>
 
       <Box width={[1, 2 / 3]} pt={[5, 7]} pb={7} pl={[0, 7]}>
-        <Heading
-          as="h2"
-          fontSize={[4, 5]}
-          fontWeight={500}
-          mb={0}
-          className="t--uppercase"
-        >
+        <Heading as="h2" fontSize={[4, 5]} fontWeight={500} mb={0} className="t--uppercase">
           {bio && bio.name}
         </Heading>
         <Text as="p" color="">

@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-// ___________________________________________________________________
-
 const ArrowRightAngle = () => (
   <svg width="80" viewBox="0 0 75 30">
     <g>

@@ -4,8 +4,6 @@
 // Core
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Carat = () => (
   <svg width="100%" viewBox="0 0 13 22">
     <g fillRule="evenodd">

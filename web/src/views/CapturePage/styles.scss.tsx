@@ -1,11 +1,7 @@
 // CapturePage Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const CapturePage = styled.div`
   display: flex;

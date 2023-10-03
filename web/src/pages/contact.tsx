@@ -1,7 +1,5 @@
 // Contact page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -12,8 +10,6 @@ import ContactPage from '../views/ContactPage'
 
 // Hooks
 import useContactPage from '../hooks/useContactPage'
-
-// ___________________________________________________________________
 
 const Contact = () => {
   const page = useContactPage()

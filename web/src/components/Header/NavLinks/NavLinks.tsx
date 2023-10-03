@@ -1,18 +1,36 @@
 // NavLinks:
-// Navigation links
-
-// ___________________________________________________________________
 
 import React from 'react'
 import { Link } from 'gatsby'
 import { useTransition } from 'react-spring'
-
-import { Box, Text } from '@/components/elements'
-
-import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
+const navData = [
+  {
+    name: 'rethink',
+    link: '/rethink'
+  },
+  {
+    name: 'implants',
+    link: '/implants'
+  },
+  {
+    name: 'about oic',
+    link: '/about'
+  },
+  {
+    name: 'news',
+    link: '/news'
+  },
+  {
+    name: 'resources',
+    link: '/resources'
+  },
+  {
+    name: 'contact',
+    link: '/contact'
+  }
+]
 
 type LinkProps = {
   item: any
@@ -25,19 +43,17 @@ type NavLinksProps = {
   isNavOpen: boolean
 }
 
-// ___________________________________________________________________
-
 const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   // console.log('—————|— Navigation —|—————')
   // console.log(item.subPage)
 
   return (
     <S.NavLink onClick={handleExitOnClick} style={transition}>
-      <Box className="nav-mobile-sub">
+      <div className="nav-mobile-sub">
         <Link to={item.link} className="nav-mobile__link">
           {item.name}
         </Link>
-      </Box>
+      </div>
     </S.NavLink>
   )
 }
@@ -75,32 +91,3 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
 }
 
 export default NavLinks
-
-// ___________________________________________________________________
-
-const navData = [
-  {
-    name: 'rethink',
-    link: '/rethink'
-  },
-  {
-    name: 'implants',
-    link: '/implants'
-  },
-  {
-    name: 'about oic',
-    link: '/about'
-  },
-  {
-    name: 'news',
-    link: '/news'
-  },
-  {
-    name: 'resources',
-    link: '/resources'
-  },
-  {
-    name: 'contact',
-    link: '/contact'
-  }
-]

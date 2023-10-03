@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex, AnimatedFlex } from '@/components/elements'
 
-// ___________________________________________________________________
-
 export const List = styled.div`
   display: flex;
   flex-wrap: wrap;

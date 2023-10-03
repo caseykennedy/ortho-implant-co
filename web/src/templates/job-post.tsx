@@ -1,15 +1,11 @@
 // Job Post template
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
 // Components
 import SEO from '@/components/SEO'
 import JobPost from '@/components/JobPost'
-
-// ___________________________________________________________________
 
 const JobPostTemplate: React.FC<CareersContextShape> = ({ pageContext }) => {
   const page = pageContext.page

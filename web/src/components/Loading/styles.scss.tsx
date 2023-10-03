@@ -1,14 +1,10 @@
 // Loading Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import { AnimatedFlex } from '@/components/elements'
 
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Loading = styled(AnimatedFlex)`
   flex-wrap: wrap;

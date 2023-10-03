@@ -1,7 +1,5 @@
 // Hero Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { useSpring, config } from 'react-spring'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -13,8 +11,6 @@ import * as S from './styles.scss'
 import { AnimatedBox, Heading } from '@/components/elements'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
 const Hero = () => {
   const data = useHomePage()
 
@@ -22,7 +18,7 @@ const Hero = () => {
     config: config.molasses,
     delay: 260,
     from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
+    to: { opacity: 1, transform: theme.transform.matrix.to },
   })
   return (
     <>
@@ -35,11 +31,7 @@ const Hero = () => {
             {/* <Heading as="h5" color="tertiary">
               {query.title}
             </Heading> */}
-            <Heading
-              as="h1"
-              mb={0}
-              dangerouslySetInnerHTML={{ __html: data.hero.message }}
-            />
+            <Heading as="h1" mb={0} dangerouslySetInnerHTML={{ __html: data.hero.message }} />
           </AnimatedBox>
         </S.Billboard>
       </S.Hero>

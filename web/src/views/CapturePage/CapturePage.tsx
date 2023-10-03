@@ -1,7 +1,5 @@
 // CapturePage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import PageTitle from '@/components/PageTitle'
 import Billboard from '@/components/Billboard'
@@ -15,8 +13,6 @@ import { Box, Flex, Text, Heading } from '@/components/elements'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const CapturePage = () => {
   const page = useContactPage()
 
@@ -25,7 +21,7 @@ const CapturePage = () => {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: 'Help us get to know you',
-    title: ''
+    title: '',
   }
   // Billboard
   const billboardProps = {
@@ -36,7 +32,7 @@ const CapturePage = () => {
     to: page.billboard.linkTo,
     btnText: page.billboard.linkTitle,
     src: page.billboard.figure.asset.gatsbyImageData,
-    altText: page.billboard.figure.alt
+    altText: page.billboard.figure.alt,
   }
   return (
     <>

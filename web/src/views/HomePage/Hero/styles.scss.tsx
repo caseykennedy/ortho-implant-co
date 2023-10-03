@@ -1,12 +1,8 @@
 // Rethink Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Hero = styled.div`
   display: flex;

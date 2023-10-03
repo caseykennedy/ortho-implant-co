@@ -1,9 +1,7 @@
 // Post:
 
-// ___________________________________________________________________
-
 import React from 'react'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Components
 import PageTitle from '../PageTitle'
@@ -14,13 +12,11 @@ import PrevNext from './PrevNext'
 import SocialShare from './SocialShare'
 
 // Elements
-import { Box, Flex, Heading, Text } from '@/components/elements'
+import { Box, Flex } from '@/components/elements'
 
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
   return (
@@ -44,13 +40,11 @@ const Author: React.FC<{ author: PostAuthor }> = ({ author }) => {
 const Post: React.FC<PostContextShape> = ({ pageContext }) => {
   const page = pageContext.page
 
-  // console.log(pageContext)
-
   const pageTitle = {
     // altText: page.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.title,
-    title: page.publishedAt
+    title: page.publishedAt,
   }
   return (
     <S.Post>
@@ -69,12 +63,7 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
       <S.Article>
         <Section>
-          {/* <Heading as="h3" color="" className="t--uppercase">{page.title}</Heading> */}
-          <div className="article__lead">
-            {page._rawExcerpt && (
-              <BlockContent blocks={page._rawExcerpt || []} />
-            )}
-          </div>
+          <div className="article__lead">{page._rawExcerpt && <BlockContent blocks={page._rawExcerpt || []} />}</div>
           <Box className="article__meta">
             <Box width={1 / 2} className="author">
               {page.authors && <Author author={page.authors} />}
@@ -89,13 +78,9 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
         </Section>
 
         <Section border={true}>
-          <Box maxWidth="800px">
-            {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
-          </Box>
+          <Box maxWidth="800px">{page._rawBody && <BlockContent blocks={page._rawBody || []} />}</Box>
         </Section>
       </S.Article>
-
-      {/* <Aside /> */}
 
       <PrevNext pageContext={pageContext} />
 
@@ -106,15 +91,13 @@ const Post: React.FC<PostContextShape> = ({ pageContext }) => {
 
 export default Post
 
-// ___________________________________________________________________
-
 const billboardProps = {
   bg: theme.colors.black,
   btnText: 'See our implants',
   to: '/about',
   color: theme.colors.white,
   message: 'We make orthopaedic implants<br />that are good for all.',
-  title: 'Mantra'
+  title: 'Mantra',
   // src: 'operating-room.jpg',
   // altText: 'Doctors in the operating room.'
 }

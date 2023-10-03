@@ -1,15 +1,11 @@
 // Navigation
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 
 import { Box } from '@/components/elements'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 const Navigation = () => {
   return (
@@ -22,24 +18,14 @@ const Navigation = () => {
               {/* {item.subPage && <Icon name="carat" />} */}
             </span>
           ) : (
-            <Link
-              to={item.link}
-              className="nav-link__title"
-              activeClassName="active"
-              partiallyActive={true}
-            >
+            <Link to={item.link} className="nav-link__title" activeClassName="active" partiallyActive={true}>
               {item.name}
             </Link>
           )}
           {item.subPage && (
             <Box className="sub-nav">
               {item.subPage.map((subItem, idx) => (
-                <Link
-                  to={subItem.link}
-                  key={idx}
-                  activeClassName="active"
-                  partiallyActive={true}
-                >
+                <Link to={subItem.link} key={idx} activeClassName="active" partiallyActive={true}>
                   {subItem.name}
                 </Link>
               ))}
@@ -53,12 +39,10 @@ const Navigation = () => {
 
 export default Navigation
 
-// ___________________________________________________________________
-
 const data = [
   {
     name: 'rethink',
-    link: '/rethink'
+    link: '/rethink',
   },
   {
     name: 'implants',
@@ -66,33 +50,33 @@ const data = [
     subPage: [
       {
         name: 'External Fixation',
-        link: '/implants/external-fixation'
+        link: '/implants/external-fixation',
       },
       {
         name: 'Hand and Wrist',
-        link: '/implants/hand-and-wrist'
+        link: '/implants/hand-and-wrist',
       },
       {
         name: 'Hip Fractures',
-        link: '/implants/hip-fractures'
+        link: '/implants/hip-fractures',
       },
       {
         name: 'IM Nails',
-        link: '/implants/im-nails'
+        link: '/implants/im-nails',
       },
       {
         name: 'Plates and Screws',
-        link: '/implants/plates-and-screws'
+        link: '/implants/plates-and-screws',
       },
       {
         name: 'Cannulated Screws',
-        link: '/implants/cannulated-screws'
+        link: '/implants/cannulated-screws',
       },
       {
         name: 'Sports Medicine',
-        link: '/implants/sports-medicine'
-      }
-    ]
+        link: '/implants/sports-medicine',
+      },
+    ],
   },
   {
     name: 'about',
@@ -100,24 +84,24 @@ const data = [
     subPage: [
       {
         name: 'Team',
-        link: '/about#team'
+        link: '/about#team',
       },
       {
         name: 'Careers',
-        link: '/about#careers'
-      }
-    ]
+        link: '/about#careers',
+      },
+    ],
   },
   {
     name: 'news',
-    link: '/news'
+    link: '/news',
   },
   {
     name: 'resources',
-    link: '/resources'
+    link: '/resources',
   },
   {
     name: 'contact',
-    link: '/contact'
-  }
+    link: '/contact',
+  },
 ]

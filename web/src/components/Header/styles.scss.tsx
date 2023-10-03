@@ -1,7 +1,5 @@
 // Header Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 // Theme
@@ -9,8 +7,6 @@ import theme from '../../../config/theme'
 
 // Elements
 import { Box, Flex, AnimatedFlex } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Header = styled(Flex)`
   flex-flow: row wrap;

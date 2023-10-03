@@ -1,7 +1,5 @@
 // Aside:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
@@ -15,8 +13,6 @@ import usePost from '@/hooks/usePost'
 import { Flex, Box, Heading, Text } from '@/components/elements'
 
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 const Aside = () => {
   const posts = usePost()

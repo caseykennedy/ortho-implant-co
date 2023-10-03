@@ -1,7 +1,5 @@
 // Global styles
 
-// ___________________________________________________________________
-
 import { createGlobalStyle } from 'styled-components'
 
 import theme from '../../config/theme'
@@ -9,8 +7,6 @@ import theme from '../../config/theme'
 import RootVars from './root'
 import Reset from './reset'
 import Typography from './typography'
-
-// ___________________________________________________________________
 
 const GlobalStyles = createGlobalStyle`
   ${RootVars}
@@ -80,5 +76,3 @@ const GlobalStyles = createGlobalStyle`
 `
 
 export default GlobalStyles
-
-// ___________________________________________________________________

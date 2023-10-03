@@ -1,7 +1,5 @@
 // Button:
 
-// ___________________________________________________________________
-
 // Core
 import * as React from 'react'
 import { Link } from 'gatsby'
@@ -10,15 +8,13 @@ import Icon from '@/components/Icons'
 
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
-
 type Props = {
   children?: React.ReactNode
   invert?: boolean
 } & typeof defaultProps
 
 const defaultProps = {
-  to: '/'
+  to: '/',
 }
 
 const Button: React.FC<Props> = ({ children, to, invert }) => {
@@ -33,7 +29,5 @@ const Button: React.FC<Props> = ({ children, to, invert }) => {
 }
 
 export default Button
-
-// ___________________________________________________________________
 
 Button.defaultProps = defaultProps

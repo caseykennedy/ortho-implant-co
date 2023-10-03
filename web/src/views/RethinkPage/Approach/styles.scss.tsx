@@ -1,12 +1,8 @@
 // Approach Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Approach = styled(Flex)`
   flex-wrap: wrap;

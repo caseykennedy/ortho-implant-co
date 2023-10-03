@@ -1,15 +1,11 @@
 // News page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
 // Components
 import SEO from '@/components/SEO'
 import BlogPage from '../views/BlogPage'
-
-// ___________________________________________________________________
 
 const News = () => {
   return (

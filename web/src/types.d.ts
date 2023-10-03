@@ -1,274 +1,269 @@
 // TODO: More consistent naming / nesting
 
 type PersonNode = {
-  _rawBio: string;
-  _rawLead: string;
-  name: string;
-  jobTitle: string;
-  boardMember: boolean;
-  order: number;
+  _rawBio: string
+  _rawLead: string
+  name: string
+  jobTitle: string
+  boardMember: boolean
+  order: number
   slug: {
-    _key: string;
-    current: string;
-  };
+    _key: string
+    current: string
+  }
   headshot: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
-};
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+}
 
 type PersonEdges = {
-  node: PersonNode;
-};
+  node: PersonNode
+}
 
 type PersonShape = {
   people: {
-    edges: PersonEdges[];
-  };
-};
+    edges: PersonEdges[]
+  }
+}
 
 // Category shape
-// ___________________________________________________________________
 
 type CategoryNode = {
-  _id: string;
-  title: string;
-  description: string;
+  _id: string
+  title: string
+  description: string
   slug: {
-    current: string;
-  };
+    current: string
+  }
   illustration: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-    alt;
-  };
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+    alt
+  }
   image: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
-};
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+}
 
 type CategoryEdges = {
-  node: CategoryNode;
+  node: CategoryNode
   previous: {
-    _id: string;
-    title: string;
+    _id: string
+    title: string
     slug: {
-      current: string;
-    };
-  };
+      current: string
+    }
+  }
   next: {
-    _id: string;
-    title: string;
+    _id: string
+    title: string
     slug: {
-      current: string;
-    };
-  };
-};
+      current: string
+    }
+  }
+}
 
 type CategoryShape = {
   categories: {
-    edges: CategoryEdges[];
-  };
-};
+    edges: CategoryEdges[]
+  }
+}
 
 type CategoryontextShape = {
   pageContext: {
-    page: CategoryNode;
+    page: CategoryNode
     prev: {
-      _id: string;
-      title: string;
+      _id: string
+      title: string
       slug: {
-        current: string;
-      };
-    };
+        current: string
+      }
+    }
     next: {
-      _id: string;
-      title: string;
+      _id: string
+      title: string
       slug: {
-        current: string;
-      };
-    };
-  };
-};
+        current: string
+      }
+    }
+  }
+}
 
 // Product shape
-// ___________________________________________________________________
 
 type ProductNode = {
-  _rawAdditionalInfo: string;
-  _rawDescription: string;
-  _rawExcerpt: string;
-  _rawFeatures: string;
+  _rawAdditionalInfo: string
+  _rawDescription: string
+  _rawExcerpt: string
+  _rawFeatures: string
   gallery: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  }[];
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }[]
   mainImage: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
-  publishedAt: string;
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+  publishedAt: string
   slug: {
-    current: string;
-  };
-  name: string;
-  shortName: string;
+    current: string
+  }
+  name: string
+  shortName: string
   videos: {
-    title: string;
-    url: string;
-  }[];
+    title: string
+    url: string
+  }[]
   categories: {
-    title: string;
-  }[];
+    title: string
+  }[]
   resources: {
-    title: string;
+    title: string
     resource: {
       asset: {
-        url: string;
-      };
-    };
-  }[];
+        url: string
+      }
+    }
+  }[]
   resourceDocs: {
-    title: string;
+    title: string
     resource: {
       document: {
         asset: {
-          url: string;
-        };
-      };
-    };
-  }[];
-};
+          url: string
+        }
+      }
+    }
+  }[]
+}
 
 type ProductEdges = {
   node: {
-    products: ProductNode[];
-  };
+    products: ProductNode[]
+  }
   previous: {
-    name: string;
-    shortName: string;
+    name: string
+    shortName: string
     slug: {
-      current: string;
-    };
-    _rawExcerpt: string;
-  };
+      current: string
+    }
+    _rawExcerpt: string
+  }
   next: {
-    name: string;
-    shortName: string;
+    name: string
+    shortName: string
     slug: {
-      current: string;
-    };
-    _rawExcerpt: string;
-  };
-};
+      current: string
+    }
+    _rawExcerpt: string
+  }
+}
 
 type ProductShape = {
   productsOrder: {
-    edges: ProductEdges[];
-  };
-};
+    edges: ProductEdges[]
+  }
+}
 
 type ProductContextShape = {
   pageContext: {
-    page: ProductNode;
+    page: ProductNode
     prev: {
-      name: string;
-      shortName: string;
+      name: string
+      shortName: string
       slug: {
-        current: string;
-      };
-      _rawExcerpt: string;
-    };
+        current: string
+      }
+      _rawExcerpt: string
+    }
     next: {
-      name: string;
-      shortName: string;
-      shortName: string;
+      name: string
+      shortName: string
+      shortName: string
       slug: {
-        current: string;
-      };
-      _rawExcerpt: string;
-    };
-  };
-};
+        current: string
+      }
+      _rawExcerpt: string
+    }
+  }
+}
 
 // Home Hero shape
-// ___________________________________________________________________
 
 type HomeHeroQueryShape = {
   allSanityHomeHero: {
     nodes: {
       hero: {
-        title: string;
-        message: string;
+        title: string
+        message: string
         image: {
           asset: {
-            gatsbyImageData: IGatsbyImageData;
-            url: string;
-          };
-        };
-        link;
-      };
-    }[];
-  };
-};
+            gatsbyImageData: IGatsbyImageData
+            url: string
+          }
+        }
+        link
+      }
+    }[]
+  }
+}
 
 // Rethink section shape
-// ___________________________________________________________________
 
 type RethinkSectionQueryShape = {
   allSanityHomeRethink: {
     edges: {
       node: {
-        heading: string;
-        title: string;
-        linkTitle: string;
-        linkTo: string;
-        id: string;
+        heading: string
+        title: string
+        linkTitle: string
+        linkTo: string
+        id: string
         tabPanels: {
-          linkTo: string;
-          linkTitle: string;
-          tag: string;
-          title: string;
+          linkTo: string
+          linkTitle: string
+          tag: string
+          title: string
           image: {
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-          _rawMessage: string;
-        }[];
-      };
-    }[];
-  };
-};
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+          _rawMessage: string
+        }[]
+      }
+    }[]
+  }
+}
 
 type RethinkPanelShape = {
-  linkTo: string;
-  linkTitle: string;
-  tag: string;
-  title: string;
+  linkTo: string
+  linkTitle: string
+  tag: string
+  title: string
   image: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
-  _rawMessage: object;
-}[];
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+  _rawMessage: object
+}[]
 
 // Reviews section shape
-// ___________________________________________________________________
 
 type ReviewsSectionQueryShape = {
   allSanityHomeReviews: {
@@ -276,23 +271,22 @@ type ReviewsSectionQueryShape = {
       node: {
         image: {
           asset: {
-            gatsbyImageData: IGatsbyImageData;
-            url: string;
-          };
-        };
+            gatsbyImageData: IGatsbyImageData
+            url: string
+          }
+        }
         reviews: {
-          _rawQuote: string;
-          location: string;
-          position: string;
-        }[];
-        _key: string;
-      };
-    }[];
-  };
-};
+          _rawQuote: string
+          location: string
+          position: string
+        }[]
+        _key: string
+      }
+    }[]
+  }
+}
 
 // Mantra section shape
-// ___________________________________________________________________
 
 type MantraSectionQueryShape = {
   allSanityHomeMantra: {
@@ -300,236 +294,232 @@ type MantraSectionQueryShape = {
       node: {
         image: {
           asset: {
-            gatsbyImageData: IGatsbyImageData;
-            url: string;
-          };
-        };
-        heading: string;
-        linkTitle: string;
-        linkTo: string;
-        title: string;
-        _rawMessage: string;
-      };
-    }[];
-  };
-};
+            gatsbyImageData: IGatsbyImageData
+            url: string
+          }
+        }
+        heading: string
+        linkTitle: string
+        linkTo: string
+        title: string
+        _rawMessage: string
+      }
+    }[]
+  }
+}
 
 // Job post shape
-// ___________________________________________________________________
 
 type JobPostShape = {
   jobs: {
     edges: {
-      node: JobPostQuery;
-    }[];
-  };
-};
+      node: JobPostQuery
+    }[]
+  }
+}
 
 type JobData = {
-  job: JobPostQuery;
-};
+  job: JobPostQuery
+}
 
 type JobPostQuery = {
-  _rawExcerpt: string;
-  _rawBody: string;
-  publishedAt: string;
-  title: string;
+  _rawExcerpt: string
+  _rawBody: string
+  publishedAt: string
+  title: string
 
   slug: {
-    current: string;
-  };
-};
+    current: string
+  }
+}
 
 type CareersContextShape = {
   pageContext: {
-    page: JobPostQuery;
+    page: JobPostQuery
     prev: {
-      name: string;
+      name: string
       slug: {
-        current: string;
-      };
-      _rawExcerpt: string;
-    };
+        current: string
+      }
+      _rawExcerpt: string
+    }
     next: {
-      name: string;
-      shortName: string;
+      name: string
+      shortName: string
       slug: {
-        current: string;
-      };
-      _rawExcerpt: string;
-    };
-  };
-};
+        current: string
+      }
+      _rawExcerpt: string
+    }
+  }
+}
 
 // Post shape
-// ___________________________________________________________________
 
 type PostShape = {
   posts: {
-    edges: PostEdges[];
-  };
-};
+    edges: PostEdges[]
+  }
+}
 
 type PostEdges = {
-  node: PostQuery;
-};
+  node: PostQuery
+}
 
 type PostData = {
-  post: PostQuery;
-};
+  post: PostQuery
+}
 
 type PostQuery = {
-  title: string;
-  _rawExcerpt: string;
-  _rawBody: string;
-  _id: string;
-  publishedAt: string;
+  title: string
+  _rawExcerpt: string
+  _rawBody: string
+  _id: string
+  publishedAt: string
   slug: {
-    current: string;
-  };
+    current: string
+  }
   mainImage: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
   categories: {
-    title: string;
-  }[];
-  authors: PostAuthor;
-};
+    title: string
+  }[]
+  authors: PostAuthor
+}
 
 type PostAuthor = {
-  name: string;
-  jobTitle: string;
+  name: string
+  jobTitle: string
   headshot: {
     asset: {
-      gatsbyImageData: IGatsbyImageData;
-      url: string;
-    };
-  };
-};
+      gatsbyImageData: IGatsbyImageData
+      url: string
+    }
+  }
+}
 
 type PostContextShape = {
   pageContext: {
-    page: PostQuery;
+    page: PostQuery
     prev: {
-      _rawExcerpt: string;
-      title: string;
+      _rawExcerpt: string
+      title: string
       slug: {
-        current: string;
-      };
-    };
+        current: string
+      }
+    }
     next: {
-      _rawExcerpt: string;
-      title: string;
+      _rawExcerpt: string
+      title: string
       slug: {
-        current: string;
-      };
-    };
-  };
-};
+        current: string
+      }
+    }
+  }
+}
 
 // Landing Page shape
-// ___________________________________________________________________
 
 type LandingPageShape = {
   landingPage: {
-    edges: LandingPageEdges[];
-  };
-};
+    edges: LandingPageEdges[]
+  }
+}
 
 type LandingPageEdges = {
-  node: LandingPageQuery;
-};
+  node: LandingPageQuery
+}
 
 type LandingPageData = {
-  landingPage: LandingPageQuery;
-};
+  landingPage: LandingPageQuery
+}
 
 type LandingPageQuery = {
-  title: string;
+  title: string
   slug: {
-    current: string;
-  };
+    current: string
+  }
   billboard: {
-    title: string;
-    message: string;
-    linkTo: string;
-    linkTitle: string;
+    title: string
+    message: string
+    linkTo: string
+    linkTitle: string
     figure: {
-      alt: string;
+      alt: string
       asset: {
-        gatsbyImageData: IGatsbyImageData;
-        url: string;
-      };
-    };
-  };
+        gatsbyImageData: IGatsbyImageData
+        url: string
+      }
+    }
+  }
   intro: {
-    _rawBody: string;
-    _rawLead: string;
-    heading: string;
-    title: string;
+    _rawBody: string
+    _rawLead: string
+    heading: string
+    title: string
     positioning: {
-      _rawBody: string;
+      _rawBody: string
       figure: {
         asset: {
-          gatsbyImageData: IGatsbyImageData;
-          url: string;
-        };
-        alt: string;
-      };
-      lead: string;
-      title: string;
-    }[];
-  };
+          gatsbyImageData: IGatsbyImageData
+          url: string
+        }
+        alt: string
+      }
+      lead: string
+      title: string
+    }[]
+  }
   pageTitle: {
     image: {
       asset: {
-        gatsbyImageData: IGatsbyImageData;
-        url: string;
-      };
-    };
-    link: string;
-    message: string;
-    title: string;
-  };
-};
+        gatsbyImageData: IGatsbyImageData
+        url: string
+      }
+    }
+    link: string
+    message: string
+    title: string
+  }
+}
 
 type LandingPageContextShape = {
   pageContext: {
-    page: LandingPageQuery;
-  };
-};
+    page: LandingPageQuery
+  }
+}
 
 // Landing Page shape
-// ___________________________________________________________________
 
 type ResourceDocShape = {
-  category: string;
+  category: string
   document: {
     asset: {
-      url: string;
-    };
-  };
-  title: string;
-};
+      url: string
+    }
+  }
+  title: string
+}
 
 type ResourceTypeShape = {
   resourceTypes: {
     edges: {
       node: {
-        title: string;
-        resourceDocs: DocumentShape[];
-      };
-    }[];
-  };
-};
+        title: string
+        resourceDocs: DocumentShape[]
+      }
+    }[]
+  }
+}
 
 type ResourcesShape = {
   resources: {
     edges: {
-      node: ResourceDocShape[];
-    }[];
-  };
-};
+      node: ResourceDocShape[]
+    }[]
+  }
+}

@@ -1,7 +1,5 @@
 // About page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -11,8 +9,6 @@ import AboutPage from '../views/AboutPage'
 
 // Hooks
 import useAboutPage from '../hooks/useAboutPage'
-
-// ___________________________________________________________________
 
 const About = () => {
   const page = useAboutPage()

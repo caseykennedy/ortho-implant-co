@@ -1,26 +1,18 @@
 // Navigation Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
-
-// Theme
+import { animated } from 'react-spring'
 import theme from '../../../../config/theme'
 
-// Elements
-import { Flex, AnimatedFlex } from '@/components/elements'
-
-// Begin Styles
-// ___________________________________________________________________
-
-export const NavLinks = styled(Flex)`
+export const NavLinks = styled.div`
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: ${theme.space[5]};
   width: 100%;
 `
 
-export const NavLink = styled(AnimatedFlex)`
+export const NavLink = styled(animated.div)`
   flex-direction: column;
   width: 100%;
   /* padding: ${theme.space[2]} 0; */
@@ -46,5 +38,3 @@ export const NavLink = styled(AnimatedFlex)`
     }
   }
 `
-
-// ___________________________________________________________________ Styles

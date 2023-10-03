@@ -1,7 +1,5 @@
 // Accordion Styles:
 
-// ___________________________________________________________________
-
 // Core
 import styled from 'styled-components'
 
@@ -12,7 +10,6 @@ import theme from '../../../config/theme'
 import { Box, Flex } from '@/components/elements'
 
 // Begin Styles
-// ___________________________________________________________________
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 

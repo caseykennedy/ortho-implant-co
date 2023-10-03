@@ -1,8 +1,6 @@
 // Previous / Next pre-footer
 // TODO: button bg image
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Components
@@ -10,8 +8,6 @@ import Icon from '../../Icons'
 
 // Theme
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 const SocialShare: React.FC<{ name: string; slug: string }> = ({ name, slug }) => {
   const shareSlug = `https://orthoimplantcompany.com/${slug}`

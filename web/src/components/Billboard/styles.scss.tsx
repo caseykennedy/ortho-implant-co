@@ -1,15 +1,11 @@
 // Billboard Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import Section from '../Section'
 import theme from '../../../config/theme'
 import { Box, Flex } from '@/components/elements'
 
 import BillboardBG from '../../images/bg-billboard.png'
-
-// ___________________________________________________________________
 
 export const Billboard = styled(Section)`
   div {
@@ -59,8 +55,7 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
       mark {
         background-color: ${theme.colors.white};
         color: ${theme.colors.black};
-        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]}
-          ${theme.space[2]};
+        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
       }
     }
   }

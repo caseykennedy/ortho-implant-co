@@ -1,7 +1,5 @@
 // Intro Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
@@ -17,8 +15,6 @@ import { Box, Heading } from '@/components/elements'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 type PageShape = {
   item: {
@@ -38,7 +34,7 @@ const Position = ({ item }: PageShape) => {
     pt: [5, 6],
     pb: [5, 6],
     pr: [5],
-    pl: [5, 7]
+    pl: [5, 7],
   }
   return (
     // @ts-ignore: Unreachable code error
@@ -66,11 +62,7 @@ const Intro = () => {
               {page.intro.heading && page.intro.heading}
             </Heading>
 
-            <Box mt={12}>
-              {page.intro._rawBody && (
-                <BlockContent blocks={page.intro._rawBody || []} />
-              )}
-            </Box>
+            <Box mt={12}>{page.intro._rawBody && <BlockContent blocks={page.intro._rawBody || []} />}</Box>
           </Box>
 
           {page.intro.positioning.map((item, idx) => (

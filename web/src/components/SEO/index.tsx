@@ -1,5 +1,4 @@
 // SEO Component
-// ___________________________________________________________________
 
 import React from 'react'
 import Helmet from 'react-helmet'
@@ -9,8 +8,6 @@ import useSiteSettings from '@/hooks/useSiteSettings'
 
 import Facebook from './facebook'
 import Twitter from './twitter'
-
-// ___________________________________________________________________
 
 type Props = {
   banner?: string
@@ -22,9 +19,9 @@ const defaultProps = {
   pathname: '',
   node: {
     modifiedTime: '',
-    birthTime: ''
+    birthTime: '',
   },
-  individual: false
+  individual: false,
 }
 
 const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
@@ -37,7 +34,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     title: title || settings.titleAlt,
     description: desc || settings.description,
     image: banner || settings.banner.asset.url,
-    url: `${settings.url}${pathname}` || ''
+    url: `${settings.url}${pathname}` || '',
   }
 
   // schema.org in JSONLD format
@@ -55,27 +52,27 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     name: settings.title,
     author: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     copyrightHolder: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     copyrightYear: '2019',
     creator: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     publisher: {
       '@type': 'Person',
-      name: settings.author
+      name: settings.author,
     },
     datePublished: '2019-03-10T10:30:00+01:00',
     dateModified: buildTime,
     image: {
       '@type': 'ImageObject',
-      url: `${settings.banner}`
-    }
+      url: `${settings.banner}`,
+    },
   }
 
   // Initial breadcrumb list
@@ -85,34 +82,34 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': settings.url,
-        name: 'Homepage'
+        name: 'Homepage',
       },
-      position: 1
+      position: 1,
     },
     {
       '@type': 'ListItem',
       item: {
         '@id': `${settings.url}/rethink`,
-        name: 'Rethink'
+        name: 'Rethink',
       },
-      position: 2
+      position: 2,
     },
     {
       '@type': 'ListItem',
       item: {
         '@id': `${settings.url}/about`,
-        name: 'About'
+        name: 'About',
       },
-      position: 3
+      position: 3,
     },
     {
       '@type': 'ListItem',
       item: {
         '@id': `${settings.url}/implants`,
-        name: 'Implants'
+        name: 'Implants',
       },
-      position: 4
-    }
+      position: 4,
+    },
   ]
 
   let schemaArticle = null
@@ -123,24 +120,24 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'Article',
       author: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       copyrightHolder: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       copyrightYear: '2019',
       creator: {
         '@type': 'Person',
-        name: settings.author
+        name: settings.author,
       },
       publisher: {
         '@type': 'Organization',
         name: settings.author,
         logo: {
           '@type': 'ImageObject',
-          url: `${settings.banner.asset.url}`
-        }
+          url: `${settings.banner.asset.url}`,
+        },
       },
       datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',
       dateModified: node ? node.modifiedTime : '2019-03-10T10:30:00+01:00',
@@ -151,18 +148,18 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       name: seo.title,
       image: {
         '@type': 'ImageObject',
-        url: seo.image
+        url: seo.image,
       },
-      mainEntityOfPage: seo.url
+      mainEntityOfPage: seo.url,
     }
     // Push current blogpost into breadcrumb list
     itemListElement.push({
       '@type': 'ListItem',
       item: {
         '@id': seo.url,
-        name: seo.title
+        name: seo.title,
       },
-      position: 5
+      position: 5,
     })
   }
 
@@ -171,7 +168,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     '@type': 'BreadcrumbList',
     description: 'Breadcrumbs list',
     name: 'Breadcrumbs',
-    itemListElement
+    itemListElement,
   }
 
   return (
@@ -182,16 +179,8 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         <meta name="image" content={seo.image} />
         <meta name={seo.title} content={seo.description} />
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-        {!individual && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaOrgWebPage)}
-          </script>
-        )}
-        {individual && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaArticle)}
-          </script>
-        )}
+        {!individual && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
+        {individual && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
       <Facebook
@@ -203,12 +192,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         locale={settings.language}
         name={settings.ogSiteName}
       />
-      <Twitter
-        title={seo.title}
-        image={seo.image}
-        desc={seo.description}
-        username={settings.userTwitter}
-      />
+      <Twitter title={seo.title} image={seo.image} desc={seo.description} username={settings.userTwitter} />
     </>
   )
 }

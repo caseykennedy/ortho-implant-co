@@ -1,7 +1,5 @@
 // Approach Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Libraries
@@ -20,35 +18,28 @@ import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '@/components/elements'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
 const Approach = () => {
   const page = useRethinkPage()
 
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-360px 0px'
+    rootMargin: '-360px 0px',
   })
   const manifestoSpring = useSpring({
     config: config.molasses,
     opacity: !inView ? 0 : 1,
-    transform: !inView ? theme.transform.matrix.from : theme.transform.matrix.to
+    transform: !inView ? theme.transform.matrix.from : theme.transform.matrix.to,
   })
   const fadeAnimation = useSpring({
     config: config.molasses,
     // delay: 160,
     from: { transform: theme.transform.matrix.from },
-    to: { transform: theme.transform.matrix.to }
+    to: { transform: theme.transform.matrix.to },
   })
   return (
     <S.Approach>
       <Flex width={1} color="white" flexWrap="wrap" alignItems="flex-end">
-        <AnimatedBox
-          bg="quinary"
-          width={[1, 1 / 3]}
-          ref={manifestoRef}
-          style={manifestoSpring}
-        >
+        <AnimatedBox bg="quinary" width={[1, 1 / 3]} ref={manifestoRef} style={manifestoSpring}>
           <Parallax className="custom-class" y={[-25, 15]} tagOuter="figure">
             {page.approach.figure && (
               <GatsbyImage
@@ -61,12 +52,7 @@ const Approach = () => {
           </Parallax>
         </AnimatedBox>
 
-        <AnimatedBox
-          width={[1, 2 / 3]}
-          bg="secondary"
-          p={theme.gutter.axis}
-          style={fadeAnimation}
-        >
+        <AnimatedBox width={[1, 2 / 3]} bg="secondary" p={theme.gutter.axis} style={fadeAnimation}>
           <Heading as="h4" color="primary">
             {page.approach.title && page.approach.title}
           </Heading>
@@ -77,15 +63,11 @@ const Approach = () => {
 
           <Flex width={1} mt={`calc(${theme.space[3]} * 22)`} flexWrap="wrap">
             <Box width={[1, 1 / 3]}>
-              {page.approach._rawLead && (
-                <BlockContent blocks={page.approach._rawLead || []} />
-              )}
+              {page.approach._rawLead && <BlockContent blocks={page.approach._rawLead || []} />}
             </Box>
 
             <Box width={[1, 2 / 3]} pl={[0, 7]}>
-              {page.approach._rawBody && (
-                <BlockContent blocks={page.approach._rawBody || []} />
-              )}
+              {page.approach._rawBody && <BlockContent blocks={page.approach._rawBody || []} />}
             </Box>
           </Flex>
         </AnimatedBox>

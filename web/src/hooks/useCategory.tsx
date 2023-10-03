@@ -1,11 +1,7 @@
 // useCategory hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
-
-// ___________________________________________________________________
 
 const useCategory = () => {
   const data = useStaticQuery<CategoryShape>(graphql`

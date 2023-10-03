@@ -1,7 +1,5 @@
 // Loading:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { useSpring, config } from 'react-spring'
 
@@ -16,14 +14,12 @@ import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const Loading = () => {
   const pageAnimation = useSpring({
     config: config.molasses,
     delay: 0,
     from: { opacity: 0 },
-    to: { opacity: 1 }
+    to: { opacity: 1 },
   })
   return (
     <>

@@ -1,7 +1,5 @@
 // Testimonials Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
@@ -23,8 +21,6 @@ import { Box, Flex, Heading, Text } from '@/components/elements'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
-
 const TestiSwiper: React.FC = ({ children }) => {
   const params = {
     freeMode: false,
@@ -33,29 +29,29 @@ const TestiSwiper: React.FC = ({ children }) => {
     spaceBetween: 50,
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
+      clickable: true,
     },
     breakpoints: {
       1024: {
         slidesPerView: 1,
-        spaceBetween: 50
+        spaceBetween: 50,
       },
       768: {
         slidesPerView: 1,
         spaceBetween: 50,
-        grabCursor: true
+        grabCursor: true,
       },
       640: {
         slidesPerView: 1,
         spaceBetween: 50,
-        grabCursor: true
+        grabCursor: true,
       },
       320: {
         slidesPerView: 1,
         spaceBetween: 50,
-        grabCursor: true
-      }
-    }
+        grabCursor: true,
+      },
+    },
   }
   return <Swiper {...params}>{children}</Swiper>
 }
@@ -67,7 +63,7 @@ const Testimonials = () => {
     fillA: theme.colors.primary,
     fillB: theme.colors.secondary,
     fillC: theme.colors.secondary,
-    fillD: theme.colors.tertiary
+    fillD: theme.colors.tertiary,
   }
   return (
     <S.Testimonials>
@@ -98,9 +94,7 @@ const Testimonials = () => {
                   {review.location}
                 </Heading>
                 <Text fontSize={[`1.5rem`, 3]} fontWeight={300}>
-                  {review._rawQuote && (
-                    <BlockContent blocks={review._rawQuote || []} />
-                  )}
+                  {review._rawQuote && <BlockContent blocks={review._rawQuote || []} />}
                 </Text>
               </Box>
             ))}

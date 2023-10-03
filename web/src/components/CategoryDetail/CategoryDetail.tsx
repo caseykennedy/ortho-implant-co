@@ -1,7 +1,5 @@
 // Category Detail Page:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Components
@@ -16,11 +14,7 @@ import useProduct from '@/hooks/useProduct'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
-const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
-  pageContext
-}) => {
+const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({ pageContext }) => {
   // Page context
   const page = pageContext
   const category = page.title
@@ -31,10 +25,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     if (product.categories[0].title.includes(category)) {
       return product
     }
-    if (
-      product.categories[1] &&
-      product.categories[1].title.includes(category)
-    ) {
+    if (product.categories[1] && product.categories[1].title.includes(category)) {
       return product
     }
   })
@@ -49,7 +40,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     altText: page.title,
     image: page.image.asset.gatsbyImageData,
     message: page.title,
-    title: 'Category'
+    title: 'Category',
   }
 
   // Billboard props
@@ -60,7 +51,7 @@ const CategoryDetail: React.FC<{ pageContext: CategoryNode }> = ({
     title: 'Ready to chat?',
     invert: false,
     to: '/contact',
-    btnText: 'talk to us'
+    btnText: 'talk to us',
     // src: page.image.asset.gatsbyImageData,
     // altText: 'Doctors in the operating room.'
   }

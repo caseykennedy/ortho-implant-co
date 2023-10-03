@@ -1,14 +1,10 @@
 // Implants Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '@/components/elements'
 
 import Section from '@/components/Section'
-
-// ___________________________________________________________________
 
 export const Implants = styled(Section)``
 

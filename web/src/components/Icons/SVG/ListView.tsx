@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-// ___________________________________________________________________
-
 const ListView = () => (
   <svg width="20" viewBox="0 0 16 16">
     <path

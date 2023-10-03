@@ -1,7 +1,5 @@
 // JobBoard Component:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -13,8 +11,6 @@ import useJobPost from '@/hooks/useJobPost'
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '@/components/elements'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 const JobPost: React.FC<JobData> = ({ job }) => {
   const slug = job.slug.current
@@ -33,10 +29,7 @@ const JobBoard = () => {
   return (
     <S.JobBoard as="section" id="careers">
       <Box bg="black" width={[0, 2 / 10, 2 / 8]}>
-        <StaticImage
-          src="../../images/landon-engineer.jpg"
-          alt="An OIC engineer in his natural habitat."
-        />
+        <StaticImage src="../../images/landon-engineer.jpg" alt="An OIC engineer in his natural habitat." />
       </Box>
 
       <Box p={theme.gutter.axis} width={[1, 8 / 10, 6 / 8]}>

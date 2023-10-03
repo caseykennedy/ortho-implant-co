@@ -1,7 +1,5 @@
 // Filter Section:
 
-// ___________________________________________________________________
-
 import React, { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -20,8 +18,6 @@ import Posts from '../Posts'
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
 const Filter = () => {
   const posts = usePost()
   const categories = [{ title: 'Blog' }, { title: 'News' }]
@@ -34,10 +30,7 @@ const Filter = () => {
         if (item.node.categories[0].title.includes(category)) {
           return item
         }
-        if (
-          item.node.categories[1] &&
-          item.node.categories[1].title.includes(category)
-        ) {
+        if (item.node.categories[1] && item.node.categories[1].title.includes(category)) {
           return item
         }
       })
@@ -54,18 +47,11 @@ const Filter = () => {
       <AnchorLink href="#product-grid" className="anchor-link">
         <div className="filter__inner">
           {categories.map((cat, idx) => (
-            <Heading
-              className="filter__btn"
-              onClick={() => setFilteredItems(cat.title)}
-              key={idx}
-            >
+            <Heading className="filter__btn" onClick={() => setFilteredItems(cat.title)} key={idx}>
               {cat.title}
             </Heading>
           ))}
-          <Box
-            className="filter__btn filter__btn--all"
-            onClick={resetFilteredItems}
-          >
+          <Box className="filter__btn filter__btn--all" onClick={resetFilteredItems}>
             All
           </Box>
         </div>

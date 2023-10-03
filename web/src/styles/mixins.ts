@@ -2,8 +2,6 @@
 
 import { css } from 'styled-components'
 
-// ___________________________________________________________________
-
 export const textCrop = (lineHeight = 1.3, topAdjustment = 0, bottomAdjustment = 0) => {
   const topCrop = 8
   const bottomCrop = 8

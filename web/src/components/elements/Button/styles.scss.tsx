@@ -1,13 +1,9 @@
 // Button Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import { Box } from '../'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Button = styled(Box)<{ invert?: boolean }>`
   display: flex;
@@ -24,8 +20,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   line-height: 0.5;
   text-transform: uppercase;
 
-  background: ${p =>
-    !p.invert ? theme.colors.primary : theme.colors.secondary};
+  background: ${p => (!p.invert ? theme.colors.primary : theme.colors.secondary)};
   border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
@@ -34,8 +29,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   }
 
   &:hover {
-    background: ${p =>
-      !p.invert ? theme.colors.secondary : theme.colors.quaternary};
+    background: ${p => (!p.invert ? theme.colors.secondary : theme.colors.quaternary)};
     color: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
 
     span {

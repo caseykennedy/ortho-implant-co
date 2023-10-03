@@ -1,7 +1,5 @@
 // Navigation Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import { Box, Flex } from '@/components/elements'
@@ -9,7 +7,6 @@ import { Box, Flex } from '@/components/elements'
 import theme from '../../../config/theme'
 
 // Begin Styles
-// ___________________________________________________________________
 
 const overlayWidth = '100%'
 

@@ -1,14 +1,10 @@
 // Card Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import { Box, Flex, Heading, AnimatedBox } from '../'
 
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Card = styled(AnimatedBox)`
   /* max-width: 333px; */

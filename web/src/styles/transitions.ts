@@ -1,14 +1,10 @@
 // Transitoin keyframes
 
-// ___________________________________________________________________
-
 // Core
 import { css, keyframes } from 'styled-components'
 
 // Theme
 import theme from '../../config/theme'
-
-// ___________________________________________________________________
 
 // Slide to Right
 export const SlideToRight = keyframes`
@@ -74,5 +70,3 @@ export const Rotate = keyframes`
     transform: rotate(359deg);
   }
 `
-
-// ___________________________________________________________________

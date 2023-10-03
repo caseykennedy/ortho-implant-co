@@ -3,8 +3,6 @@
 // Core
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Document = () => (
   <svg viewBox="0 0 16 16">
     <defs>

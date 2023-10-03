@@ -1,7 +1,5 @@
 // RethinkPage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 import PageTitle from '@/components/PageTitle'
@@ -15,8 +13,6 @@ import useRethinkPage from '@/hooks/useRethinkPage'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const RethinkPage = () => {
   const page = useRethinkPage()
 
@@ -25,7 +21,7 @@ const RethinkPage = () => {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.gatsbyImageData,
     message: `Rethink<br /><span style="color:#9D9FA2;">orthopaedic implants</span>`,
-    title: page.pageTitle.title
+    title: page.pageTitle.title,
   }
 
   // Billboard
@@ -36,7 +32,7 @@ const RethinkPage = () => {
     src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
-    to: page.billboard.linkTo
+    to: page.billboard.linkTo,
   }
   return (
     <S.RethinkPage>

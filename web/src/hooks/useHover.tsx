@@ -1,11 +1,7 @@
 // useHover hook
 
-// ___________________________________________________________________
-
 // Core
 import { useState, useEffect, useRef } from 'react'
-
-// ___________________________________________________________________
 
 const useHover = () => {
   const [value, setValue] = useState(false)
@@ -35,5 +31,3 @@ const useHover = () => {
 }
 
 export default useHover
-
-// ___________________________________________________________________

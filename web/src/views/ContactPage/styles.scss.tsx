@@ -1,13 +1,9 @@
 // ContactPage Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import theme from '../../../config/theme'
 import { Box, Flex, Heading } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const ContactPage = styled.div`
   display: flex;

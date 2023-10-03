@@ -3,8 +3,6 @@
 // Core
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Pdf = () => (
   <svg width="100%" viewBox="0 0 32 32">
     <path

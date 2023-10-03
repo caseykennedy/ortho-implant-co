@@ -1,7 +1,5 @@
 // Blog Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
@@ -24,8 +22,6 @@ import { Box, Flex, Heading, Text } from '@/components/elements'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
-
 const Swipe: React.FC = ({ children }) => {
   const params = {
     freeMode: false,
@@ -34,24 +30,24 @@ const Swipe: React.FC = ({ children }) => {
     breakpoints: {
       1024: {
         slidesPerView: 2,
-        spaceBetween: 0
+        spaceBetween: 0,
       },
       768: {
         slidesPerView: 1,
         spaceBetween: 0,
-        grabCursor: true
+        grabCursor: true,
       },
       640: {
         slidesPerView: 1,
         spaceBetween: 0,
-        grabCursor: true
+        grabCursor: true,
       },
       320: {
         slidesPerView: 1,
         spaceBetween: 0,
-        grabCursor: true
-      }
-    }
+        grabCursor: true,
+      },
+    },
   }
   return <Swiper {...params}>{children}</Swiper>
 }
@@ -84,11 +80,7 @@ const Blog = () => {
           <Flex width={[1, 1 / 2, '65%']}>
             <Swipe>
               {newsPosts.map(({ node: post }, idx) => (
-                <Link
-                  to={`/news/${post.slug.current}`}
-                  key={idx}
-                  className="card--highlight"
-                >
+                <Link to={`/news/${post.slug.current}`} key={idx} className="card--highlight">
                   <S.Card width={1} border={true}>
                     <div>
                       <Box className="card__img">
@@ -127,11 +119,7 @@ const Blog = () => {
 
           <S.CardColumn width={[1, 1 / 2, '35%']}>
             {blogPosts.slice(2, 4).map(({ node: post }, idx) => (
-              <Link
-                to={`/news/${post.slug.current}`}
-                key={idx}
-                className="card--highlight"
-              >
+              <Link to={`/news/${post.slug.current}`} key={idx} className="card--highlight">
                 <S.Card width={1} border={true} className="card">
                   <Flex className="card__content">
                     <Box>

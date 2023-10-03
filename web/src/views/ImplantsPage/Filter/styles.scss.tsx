@@ -1,15 +1,11 @@
 // Filter Styles:
 
-// ___________________________________________________________________
-
 import { Link } from 'gatsby'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '@/components/elements'
-
-// ___________________________________________________________________
 
 export const Filter = styled.div`
   width: 100%;

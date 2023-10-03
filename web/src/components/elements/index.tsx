@@ -1,8 +1,6 @@
 // Elements:
 // Box and Flex layout components using Styled System
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { animated } from 'react-spring'
 
@@ -47,10 +45,8 @@ import {
   MaxWidthProps,
   DisplayProps,
   PositionProps,
-  OverflowProps
+  OverflowProps,
 } from 'styled-system'
-
-// ___________________________________________________________________
 
 // Box
 
@@ -210,5 +206,4 @@ export const Text = styled.div<ElementProps>`
 
 Box.displayName = 'Text'
 
-// ___________________________________________________________________
 // End Component

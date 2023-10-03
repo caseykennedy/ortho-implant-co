@@ -22,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
   );
 
   // Category pages
-  // ___________________________________________________________________
+
   const category = graphql(`
     {
       categories: allSanityProductCategory {
@@ -83,7 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
   });
 
   // Job Post
-  // ___________________________________________________________________
+
   const jobPost = graphql(`
     {
       job: allSanityJobPost {
@@ -119,7 +119,7 @@ exports.createPages = ({ graphql, actions }) => {
   });
 
   // Post
-  // ___________________________________________________________________
+
   const post = graphql(`
     {
       post: allSanityPost {
@@ -200,7 +200,7 @@ exports.createPages = ({ graphql, actions }) => {
   });
 
   // Landing Page
-  // ___________________________________________________________________
+
   const landingPage = graphql(`
     {
       landingPage: allSanityLandingPage {

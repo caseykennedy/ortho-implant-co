@@ -1,7 +1,5 @@
 // Purpose Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
@@ -20,19 +18,17 @@ import * as S from './styles.scss'
 import { Box, Heading, AnimatedBox } from '@/components/elements'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
 const Purpose = () => {
   const page = useRethinkPage()
   // Only show item when in view
   const [manifestoRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-360px 0px'
+    rootMargin: '-360px 0px',
   })
   const manifestoSpring = useSpring({
     config: config.molasses,
     opacity: !inView ? 0 : 1,
-    transform: !inView ? theme.transform.matrix.from : theme.transform.matrix.to
+    transform: !inView ? theme.transform.matrix.from : theme.transform.matrix.to,
   })
   return (
     <S.Purpose pt={[7, 8]} pb={[7, 8]}>
@@ -43,25 +39,15 @@ const Purpose = () => {
           </Heading>
 
           {page.purpose.heading && (
-            <Heading
-              as="h3"
-              fontWeight={400}
-              dangerouslySetInnerHTML={{ __html: page.purpose.heading }}
-            />
+            <Heading as="h3" fontWeight={400} dangerouslySetInnerHTML={{ __html: page.purpose.heading }} />
           )}
 
-          {page.purpose._rawLead && (
-            <BlockContent blocks={page.purpose._rawLead || []} />
-          )}
+          {page.purpose._rawLead && <BlockContent blocks={page.purpose._rawLead || []} />}
 
           <p dangerouslySetInnerHTML={{ __html: page.purpose.statement }} />
         </Box>
 
-        <AnimatedBox
-          width={[1, 1 / 3]}
-          ref={manifestoRef}
-          style={manifestoSpring}
-        >
+        <AnimatedBox width={[1, 1 / 3]} ref={manifestoRef} style={manifestoSpring}>
           {page.purpose.figure && (
             <GatsbyImage
               image={page.purpose.figure.asset.gatsbyImageData}

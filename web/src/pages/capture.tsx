@@ -1,5 +1,4 @@
 // Capture page
-// ___________________________________________________________________
 
 // Libraries
 import React from 'react'
@@ -7,8 +6,6 @@ import React from 'react'
 // Components
 import SEO from '@/components/SEO'
 import CapturePage from '../views/CapturePage'
-
-// ___________________________________________________________________
 
 const Capture = () => {
   return (

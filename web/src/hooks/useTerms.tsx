@@ -1,12 +1,8 @@
 // useTerms hook
 // Hook for querying data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
-
-// ___________________________________________________________________
 
 type Props = {
   terms: {

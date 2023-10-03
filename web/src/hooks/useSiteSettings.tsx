@@ -1,12 +1,8 @@
 // useSiteSettings hook
 // Hook for querying site settings data
 
-// ___________________________________________________________________
-
 import { graphql, useStaticQuery } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
-
-// ___________________________________________________________________
 
 type Props = {
   settings: {

@@ -1,15 +1,11 @@
 // Video Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 
 import Section from '../../Section'
 import { Box, Flex, Heading } from '@/components/elements'
 
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Video = styled(Box)`
   padding: ${theme.space[5]} 0;

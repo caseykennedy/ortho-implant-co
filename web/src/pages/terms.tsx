@@ -1,7 +1,5 @@
 // Terms page
 
-// ___________________________________________________________________
-
 // Libraries
 import React from 'react'
 
@@ -12,8 +10,6 @@ import TermsPage from '../views/TermsPage'
 
 // Hooks
 import useTerms from '../hooks/useTerms'
-
-// ___________________________________________________________________
 
 const Terms = () => {
   const page = useTerms()

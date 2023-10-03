@@ -1,7 +1,5 @@
 // Footer:
 
-// ___________________________________________________________________
-
 import * as React from 'react'
 import { Link } from 'gatsby'
 
@@ -14,8 +12,6 @@ import useContactPage from '@/hooks/useContactPage'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 const Year = () => {
   return new Date().getFullYear()
@@ -57,23 +53,17 @@ const Footer: React.FC = () => {
           <Box width={[1, 2 / 3]}>
             <Heading as="h4">tel | fax</Heading>
             <Text as="p">
-              <a href={`tel:${contact.telTollFree}`}>
-                +1 {contact.telTollFree && contact.telTollFree}
-              </a>{' '}
+              <a href={`tel:${contact.telTollFree}`}>+1 {contact.telTollFree && contact.telTollFree}</a>{' '}
               <Box as="span" color="tertiary">
                 — toll free
               </Box>
               <br />
-              <a href={`tel:${contact.telDirect}`}>
-                +1 {contact.telDirect && contact.telDirect}
-              </a>{' '}
+              <a href={`tel:${contact.telDirect}`}>+1 {contact.telDirect && contact.telDirect}</a>{' '}
               <Box as="span" color="tertiary">
                 — direct
               </Box>
               <br />
-              <a href={`tel:${contact.telFax}`}>
-                +1 {contact.telFax && contact.telFax}
-              </a>{' '}
+              <a href={`tel:${contact.telFax}`}>+1 {contact.telFax && contact.telFax}</a>{' '}
               <Box as="span" color="tertiary">
                 — fax
               </Box>
@@ -90,25 +80,13 @@ const Footer: React.FC = () => {
         </S.Row>
         <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
-            <a
-              href="//www.linkedin.com/company/the-orthopaedic-implant-company"
-              target="__blank"
-              rel="noopener"
-            >
+            <a href="//www.linkedin.com/company/the-orthopaedic-implant-company" target="__blank" rel="noopener">
               <Icon name="linkedIn" />
             </a>
-            <a
-              href="//www.facebook.com/OrthoImplantCompany"
-              target="__blank"
-              rel="noopener"
-            >
+            <a href="//www.facebook.com/OrthoImplantCompany" target="__blank" rel="noopener">
               <Icon name="facebook" />
             </a>
-            <a
-              href="//twitter.com/orthoimplantco"
-              target="__blank"
-              rel="noopener"
-            >
+            <a href="//twitter.com/orthoimplantco" target="__blank" rel="noopener">
               <Icon name="twitter" />
             </a>
             <div className="amed-cert">

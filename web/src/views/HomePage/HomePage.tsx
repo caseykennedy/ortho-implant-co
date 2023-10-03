@@ -1,7 +1,5 @@
 // HomePage:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Hooks
@@ -21,8 +19,6 @@ import Billboard from '@/components/Billboard'
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
-// ___________________________________________________________________
-
 const HomePage: React.FC = () => {
   const data = useHomePage()
   // Billboard
@@ -33,7 +29,7 @@ const HomePage: React.FC = () => {
     src: data.billboard.figure.asset.gatsbyImageData,
     altText: data.billboard.figure.alt,
     btnText: data.billboard.linkTitle,
-    to: data.billboard.linkTo
+    to: data.billboard.linkTo,
   }
   return (
     <S.HomePage>

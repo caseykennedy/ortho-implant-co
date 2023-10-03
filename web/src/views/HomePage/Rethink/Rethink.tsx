@@ -1,7 +1,5 @@
 // Rethink Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Hooks
@@ -15,8 +13,6 @@ import Button from '@/components/elements/Button'
 import { Box, Flex, Heading, Text } from '@/components/elements'
 import * as S from './styles.scss'
 
-// ___________________________________________________________________
-
 const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
   return (
     <Flex width={1}>
@@ -25,26 +21,17 @@ const TabsPanel: React.FC<{ panels: RethinkPanelShape }> = ({ panels }) => {
           <S.Tab key={idx}>
             <Heading as="h4">
               <mark>{panel.tag}</mark>{' '}
-              <Text
-                as="span"
-                fontFamily="body"
-                fontSize={0}
-                style={{ float: 'right' }}
-              >
+              <Text as="span" fontFamily="body" fontSize={0} style={{ float: 'right' }}>
                 for {panel.title}
               </Text>
             </Heading>
-            {panel._rawMessage && (
-              <BlockContent blocks={panel._rawMessage || []} />
-            )}
+            {panel._rawMessage && <BlockContent blocks={panel._rawMessage || []} />}
           </S.Tab>
         ))}
       </S.ButtonGroup>
     </Flex>
   )
 }
-
-// ___________________________________________________________________
 
 const Rethink = () => {
   const data = useHomePage()
@@ -56,11 +43,7 @@ const Rethink = () => {
           <Heading as="h5" color="tertiary">
             {data.rethink.title}
           </Heading>
-          <Heading
-            as="h2"
-            fontSize={3}
-            dangerouslySetInnerHTML={{ __html: data.rethink.heading }}
-          />
+          <Heading as="h2" fontSize={3} dangerouslySetInnerHTML={{ __html: data.rethink.heading }} />
           {/* <S.Decorator>
           <Hexagons />
         </S.Decorator> */}

@@ -1,7 +1,5 @@
 // Filter Section:
 
-// ___________________________________________________________________
-
 import React, { useState } from 'react'
 
 // Hooks
@@ -19,8 +17,6 @@ import Icon from '@/components/Icons'
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
-// ___________________________________________________________________
-
 type TogglerProps = {
   gridView: boolean
   setGridView: React.Dispatch<React.SetStateAction<boolean>>
@@ -32,16 +28,10 @@ const Toggler: React.FC<TogglerProps> = ({ gridView, setGridView }) => {
   }
   return (
     <S.Toggler>
-      <Box
-        className={`toggler__btn ${!gridView ? '' : 'active'}`}
-        onClick={() => toggleView()}
-      >
+      <Box className={`toggler__btn ${!gridView ? '' : 'active'}`} onClick={() => toggleView()}>
         <Icon name="gridView" />
       </Box>
-      <Box
-        className={`toggler__btn ${gridView ? '' : 'active'}`}
-        onClick={() => toggleView()}
-      >
+      <Box className={`toggler__btn ${gridView ? '' : 'active'}`} onClick={() => toggleView()}>
         <Icon name="listView" />
       </Box>
     </S.Toggler>
@@ -79,18 +69,11 @@ const Filter = () => {
       <S.Navigation href="#product-grid">
         {/* <Box width={[0, 0, theme.logoWidth]} /> */}
         <div className="filter__inner">
-          <Box
-            className="filter__btn filter__btn--all"
-            onClick={resetFilteredItems}
-          >
+          <Box className="filter__btn filter__btn--all" onClick={resetFilteredItems}>
             All
           </Box>
           {categories.map(({ node: cat }, idx) => (
-            <Heading
-              className="filter__btn"
-              onClick={() => setFilteredItems(cat.title)}
-              key={idx}
-            >
+            <Heading className="filter__btn" onClick={() => setFilteredItems(cat.title)} key={idx}>
               {cat.title}
             </Heading>
           ))}

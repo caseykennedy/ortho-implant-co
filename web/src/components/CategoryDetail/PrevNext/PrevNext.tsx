@@ -1,8 +1,6 @@
 // Previous / Next pre-footer
 // TODO: button bg image
 
-// ___________________________________________________________________
-
 import React from 'react'
 
 // Components
@@ -14,8 +12,6 @@ import { Heading, Box, Flex } from '@/components/elements'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 const PrevNext: React.FC<CategoryontextShape> = ({ pageContext }) => {
   const page = pageContext.page

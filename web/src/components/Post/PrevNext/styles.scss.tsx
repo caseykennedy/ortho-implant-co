@@ -1,15 +1,11 @@
 // Staff Styles:
 
-// ___________________________________________________________________
-
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { Box, Flex, Heading } from '@/components/elements'
 
 import theme from '../../../../config/theme'
-
-// ___________________________________________________________________
 
 export const PrevNext = styled(Flex)`
   flex-wrap: wrap;

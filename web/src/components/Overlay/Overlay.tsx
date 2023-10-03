@@ -4,15 +4,9 @@
 
 // TODO: https://upmostly.com/tutorials/modal-components-react-custom-hooks
 
-// ___________________________________________________________________
-
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import theme from '../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 type Props = {
   mainRef?: React.RefObject<HTMLDivElement>
@@ -24,8 +18,6 @@ type Props = {
   handleExit: () => any
   focusAfterExit?: HTMLElement
 }
-
-// ___________________________________________________________________
 
 const Overlay: React.FC<Props> = ({ children, id, root, isOpen, handleExit, focusAfterExit, mainRef, className }) => {
   const [hasUpdated, forceUpdate] = React.useState(false)
@@ -130,5 +122,3 @@ const Overlay: React.FC<Props> = ({ children, id, root, isOpen, handleExit, focu
 }
 
 export default Overlay
-
-// ___________________________________________________________________

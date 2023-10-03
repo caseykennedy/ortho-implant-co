@@ -1,12 +1,5 @@
-// Page Title
-
-// ___________________________________________________________________
-
 import styled from 'styled-components'
-import { Flex } from '@/components/elements'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 type Props = {
   bg?: string

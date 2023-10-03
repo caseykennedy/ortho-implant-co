@@ -1,7 +1,5 @@
 // Mantra Section:
 
-// ___________________________________________________________________
-
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -13,8 +11,6 @@ import { Box, Flex, Heading, Text } from '@/components/elements'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
-
-// ___________________________________________________________________
 
 const Mantra = () => {
   const data: MantraSectionQueryShape = useStaticQuery(graphql`
@@ -78,9 +74,7 @@ const Mantra = () => {
               </Heading>
             </Box>
             <Box>
-              {query._rawMessage && (
-                <BlockContent blocks={query._rawMessage || []} />
-              )}
+              {query._rawMessage && <BlockContent blocks={query._rawMessage || []} />}
               <Box>
                 <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
               </Box>

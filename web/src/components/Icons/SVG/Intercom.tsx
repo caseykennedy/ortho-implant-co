@@ -4,8 +4,6 @@
 // Core
 import React from 'react'
 
-// ___________________________________________________________________
-
 const Intercom = () => (
   <svg width="28px" height="33px" viewBox="0 0 28 33" version="1.1">
     <g fillRule="evenodd">

@@ -1,12 +1,8 @@
 // Layout Styles:
 
-// ___________________________________________________________________
-
 import styled from 'styled-components'
 import { animated } from 'react-spring'
 import theme from '../../../config/theme'
-
-// ___________________________________________________________________
 
 export const Wrapper = styled.div`
   display: flex;
@@ -22,5 +18,3 @@ export const Main = styled(animated.main)`
   max-width: ${theme.siteWidth};
   overflow: hidden;
 `
-
-// ___________________________________________________________________
