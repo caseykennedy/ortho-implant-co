@@ -12,7 +12,7 @@ const {
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteURL: config.siteUrl + pathPrefix,
+    siteUrl: config.siteUrl + pathPrefix,
     pathPrefix,
   },
   plugins: [
