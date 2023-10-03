@@ -1,6 +1,6 @@
 // List View Icon:
 
-import React from 'react';
+import React from 'react'
 
 // ___________________________________________________________________
 

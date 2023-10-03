@@ -2,29 +2,29 @@
 
 // ___________________________________________________________________
 
-import React from "react";
+import React from 'react'
 
-import PageTitle from "../../components/PageTitle";
-import Billboard from "../../components/Billboard";
-import Section from "../../components/Section";
-import BlockContent from "../../components/BlockContent";
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
+import Section from '@/components/Section'
+import BlockContent from '@/components/BlockContent'
 
 // Hooks
-import useLegal from "../../hooks/useLegal";
+import useLegal from '@/hooks/useLegal'
 
-import * as S from "./styles.scss";
-import theme from "../../../config/theme";
+import * as S from './styles.scss'
+import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
 const LegalPage = () => {
-  const page = useLegal();
+  const page = useLegal()
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     message: page.pageTitle.message,
-    title: page.pageTitle.title,
-  };
+    title: page.pageTitle.title
+  }
   const billboardProps = {
     bg: theme.colors.tertiary,
     message: page.billboard.message,
@@ -32,8 +32,8 @@ const LegalPage = () => {
     src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
-    to: page.billboard.linkTo,
-  };
+    to: page.billboard.linkTo
+  }
   return (
     <S.LegalPage>
       <PageTitle {...pageTitle} />
@@ -43,7 +43,7 @@ const LegalPage = () => {
 
       <Billboard {...billboardProps} />
     </S.LegalPage>
-  );
-};
+  )
+}
 
-export default LegalPage;
+export default LegalPage

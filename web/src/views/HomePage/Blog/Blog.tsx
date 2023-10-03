@@ -10,12 +10,12 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import Swiper from 'react-id-swiper'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
-import Icon from '../../../components/Icons'
-import Section from '../../../components/Section'
+import BlockContent from '@/components/BlockContent'
+import Icon from '@/components/Icons'
+import Section from '@/components/Section'
 
 // Hooks
-import usePost from '../../../hooks/usePost'
+import usePost from '@/hooks/usePost'
 
 // Elements
 import { Box, Flex, Heading, Text } from '../../../elements'

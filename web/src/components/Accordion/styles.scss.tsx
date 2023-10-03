@@ -3,14 +3,13 @@
 // ___________________________________________________________________
 
 // Core
-import styled from "styled-components";
-import { darken } from "polished";
+import styled from 'styled-components'
 
 // Theme
-import theme from "../../../config/theme";
+import theme from '../../../config/theme'
 
 // Elements
-import { Box, Flex } from "../../elements";
+import { Box, Flex } from '../../elements'
 
 // Begin Styles
 // ___________________________________________________________________
@@ -20,12 +19,12 @@ import { Box, Flex } from "../../elements";
 export const AccordionContainer = styled.div<{ borderColor: string }>`
   width: 100%;
   position: relative;
-  border-top: 2px solid ${(p) => p.borderColor};
+  border-top: 2px solid ${p => p.borderColor};
 
   /* &:first-child {
     border-top: none;
   } */
-`;
+`
 
 export const AccordionInner = styled.div`
   display: flex;
@@ -34,17 +33,17 @@ export const AccordionInner = styled.div`
   .rotate {
     transform: rotate(45deg);
   }
-`;
+`
 
 export const AccordionToggle = styled(Flex)<{
-  bg: string;
-  colorActive: string;
-  color: string;
+  bg: string
+  colorActive: string
+  color: string
 }>`
   align-items: center;
   justify-content: space-between;
-  background: ${(p) => p.bg};
-  color: ${(p) => p.color};
+  background: ${p => p.bg};
+  color: ${p => p.color};
   cursor: pointer;
 
   border: none;
@@ -57,10 +56,10 @@ export const AccordionToggle = styled(Flex)<{
 
   &:hover,
   &.active {
-    color: ${(p) => p.colorActive};
+    color: ${p => p.colorActive};
     background: ${theme.colors.white};
   }
-`;
+`
 
 export const AccordionToggleInner = styled(Flex)`
   flex-direction: column;
@@ -76,16 +75,16 @@ export const AccordionToggleInner = styled(Flex)`
     @media ${theme.mq.desktop} {
     }
   }
-`;
+`
 
 export const AccordionContent = styled(Box)`
   overflow: hidden;
   transition: max-height 0.3s ease;
-`;
+`
 
 export const Carat = styled(Flex)<{
-  chevronColor: string;
-  chevronWidth?: string;
+  chevronColor: string
+  chevronWidth?: string
 }>`
   /* margin-right: ${theme.space[2]}; */
   transition: transform 0.3s ease;
@@ -95,11 +94,11 @@ export const Carat = styled(Flex)<{
   }
 
   svg {
-    fill: ${(p) => p.chevronColor};
+    fill: ${p => p.chevronColor};
     width: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      width: ${(p) => (!p.chevronWidth ? theme.space[6] : p.chevronWidth)};
+      width: ${p => (!p.chevronWidth ? theme.space[6] : p.chevronWidth)};
     }
   }
-`;
+`

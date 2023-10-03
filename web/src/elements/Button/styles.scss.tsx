@@ -3,10 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { lighten } from 'polished'
 
-import { Box, Flex, Heading } from '../'
+import { Box } from '../'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
@@ -19,14 +17,14 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   width: calc(${theme.space[7]} * 4);
   padding: calc(${theme.space[5]}) ${theme.space[3]} ${theme.space[3]};
 
-  color: ${p => p.invert ? theme.colors.white : theme.colors.text};
+  color: ${p => (p.invert ? theme.colors.white : theme.colors.text)};
   font-family: ${theme.fonts.heading};
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 0.5;
   text-transform: uppercase;
 
-  background: ${p => !p.invert ? theme.colors.primary : theme.colors.secondary};
+  background: ${p => (!p.invert ? theme.colors.primary : theme.colors.secondary)};
   border-bottom: ${theme.border};
   transition: ${theme.transition.all};
 
@@ -35,14 +33,14 @@ export const Button = styled(Box)<{ invert?: boolean }>`
   }
 
   &:hover {
-    background: ${p => !p.invert ? theme.colors.secondary : theme.colors.quaternary};
-    color: ${p => !p.invert ? theme.colors.white : theme.colors.text};
+    background: ${p => (!p.invert ? theme.colors.secondary : theme.colors.quaternary)};
+    color: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
 
     span {
       margin-right: 0;
 
       svg {
-        fill: ${p => !p.invert ? theme.colors.white : theme.colors.text};
+        fill: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
       }
     }
   }
@@ -53,7 +51,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
 
     svg {
       width: ${theme.iconWidth};
-      fill: ${p => p.invert ? theme.colors.white : theme.colors.secondary};
+      fill: ${p => (p.invert ? theme.colors.white : theme.colors.secondary)};
     }
   }
 `

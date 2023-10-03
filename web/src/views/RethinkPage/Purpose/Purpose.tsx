@@ -3,17 +3,17 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Libraries
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
+import BlockContent from '@/components/BlockContent'
 
 // Hooks
-import useRethinkPage from '../../../hooks/useRethinkPage'
+import useRethinkPage from '@/hooks/useRethinkPage'
 
 // UI + Styles
 import * as S from './styles.scss'

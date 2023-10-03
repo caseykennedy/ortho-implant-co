@@ -2,33 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d3cf9eda-d5b1-4eb2-a6dd-6750ca89e81c/deploy-status)](https://app.netlify.com/sites/oic/deploys)
 
-## Features
-
-- [x] Configurable
-  - [x] Use the config to easily change the most important information
-  - [x] Change the theming for styled-components
-  - [x] Navigation powered by a .yaml file
-  - [x] Layout driven by CSS-Grid
-- [x] Create your projects by creating a folder full of images and adding an entry to a .yaml file
-- [x] Shows your Instagram posts
-- [x] TypeScript
-- [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
-- [x] react-spring animations
-- [x] styled-components + styled-system + rebass for styling
-- [x] Polished for cool things
-- [x] Google Analytics support
-- [x] SEO
-  - [x] Sitemap
-  - [x] Schema.org JSONLD
-  - [x] OpenGraph Tags
-  - [x] Twitter Tags
-- [x] Offline Support
-- [x] WebApp Manifest Support
-- [x] Responsive Images
-  - [x] Right image sizes
-  - [x] Blurred loading animation
-  - [x] WebP support
-
 ## Getting Started
 
 Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
@@ -57,6 +30,3 @@ npm run build
 ```
 
 Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
-
-[gae]: https://developers.facebook.com/tools/explorer/
-[atd]: https://developers.facebook.com/tools/debug/accesstoken/

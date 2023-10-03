@@ -7,15 +7,15 @@ import { Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Components
-import PageTitle from '../../components/PageTitle'
-import Billboard from '../../components/Billboard'
-import BlockContent from '../../components/BlockContent'
-import Section from '../../components/Section'
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
+import BlockContent from '@/components/BlockContent'
+import Section from '@/components/Section'
 import Filter from './Filter'
 
 // Hooks
-import usePost from '../../hooks/usePost'
-import useNewsPage from '../../hooks/useNewsPage'
+import usePost from '@/hooks/usePost'
+import useNewsPage from '@/hooks/useNewsPage'
 
 // Elements
 import { Flex, Box, Heading, Text } from '../../elements'

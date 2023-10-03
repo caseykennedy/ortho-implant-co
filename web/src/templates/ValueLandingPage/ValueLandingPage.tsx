@@ -9,14 +9,14 @@ import theme from '../../../config/theme'
 import { Box, Flex, Heading, Text } from '../../elements'
 
 // Components
-import Layout from '../../components/Layout'
-import SEO from '../../components/SEO'
-import PageTitle from '../../components/PageTitle'
-import Billboard from '../../components/Billboard'
-import BlockContent from '../../components/BlockContent'
-import Section from '../../components/Section'
-import ContactForm from '../../components/ContactForm'
-import Icon from '../../components/Icons'
+import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
+import BlockContent from '@/components/BlockContent'
+import Section from '@/components/Section'
+import ContactForm from '@/components/ContactForm'
+import Icon from '@/components/Icons'
 
 // ___________________________________________________________________
 

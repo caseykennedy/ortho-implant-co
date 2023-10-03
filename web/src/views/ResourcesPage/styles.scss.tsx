@@ -1,8 +1,8 @@
 // ResourcesPage Styles:
 // ___________________________________________________________________
 
-import styled from "styled-components";
-import theme from "../../../config/theme";
+import styled from 'styled-components'
+import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -19,7 +19,7 @@ export const ResourcesPage = styled.div`
       grid-template-columns: repeat(2, 1fr);
     }
   }
-`;
+`
 
 export const ResourceList = styled.div`
   flex: 1 0 50%;
@@ -62,4 +62,4 @@ export const ResourceList = styled.div`
       }
     }
   }
-`;
+`

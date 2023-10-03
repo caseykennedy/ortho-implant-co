@@ -3,20 +3,20 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import ContactPage from "../views/ContactPage";
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import ContactPage from '../views/ContactPage'
 
 // Hooks
-import useContactPage from "../hooks/useContactPage";
+import useContactPage from '../hooks/useContactPage'
 
 // ___________________________________________________________________
 
 const Contact = () => {
-  const page = useContactPage();
+  const page = useContactPage()
   return (
     <>
       <SEO
@@ -28,7 +28,7 @@ const Contact = () => {
       />
       <ContactPage />
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

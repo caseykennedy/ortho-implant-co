@@ -23,12 +23,7 @@ const ContactForm = () => {
           <>
             <Honeypot />
             {success && <p>Thanks for contacting us!</p>}
-            {error && (
-              <p>
-                Sorry, we could not reach our servers. Please refresh and try
-                again.
-              </p>
-            )}
+            {error && <p>Sorry, we could not reach our servers. Please refresh and try again.</p>}
             {!success && !error && (
               <fieldset>
                 <Box width={1} className="form-group">
@@ -57,25 +52,13 @@ const ContactForm = () => {
                       </abbr>
                     </label>
 
-                    <input
-                      name="email"
-                      placeholder="Email"
-                      type="email"
-                      required={true}
-                      onChange={handleChange}
-                    />
+                    <input name="email" placeholder="Email" type="email" required={true} onChange={handleChange} />
                   </Box>
                 </Box>
 
                 <Box width={1} className="form-group">
                   <label htmlFor="comments">Message</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={6}
-                    placeholder="Message"
-                    onChange={handleChange}
-                  />
+                  <textarea name="message" id="message" rows={6} placeholder="Message" onChange={handleChange} />
                 </Box>
 
                 <Flex mt={4} width={1}>

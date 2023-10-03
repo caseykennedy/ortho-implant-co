@@ -45,8 +45,8 @@ const serializers = {
         default:
           return <p>{props.children}</p>
       }
-    }
-  }
+    },
+  },
 }
 
 const BlockContent: React.FC<BlockShape> = ({ blocks }) => (

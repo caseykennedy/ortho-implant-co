@@ -59,8 +59,7 @@ export const BillboardInner = styled(Flex)<{ color?: string }>`
       mark {
         background-color: ${theme.colors.white};
         color: ${theme.colors.black};
-        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]}
-          ${theme.space[2]};
+        padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
       }
     }
   }

@@ -38,7 +38,7 @@ export default Video
 
 const defaultProps = {
   src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  title: 'Placeholder'
+  title: 'Placeholder',
 }
 
 Video.defaultProps = defaultProps

@@ -15,7 +15,7 @@ type MarkerProps = {
 } & typeof defaultProps
 
 const defaultProps = {
-  text: 'Marker'
+  text: 'Marker',
 }
 
 const Marker: React.FC<MarkerProps> = ({ text, onClick }) => {

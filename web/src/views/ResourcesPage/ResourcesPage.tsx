@@ -1,25 +1,25 @@
 // ResourcesPage:
 
-import React from "react";
+import React from 'react'
 
-import PageTitle from "../../components/PageTitle";
-import Billboard from "../../components/Billboard";
-import Section from "../../components/Section";
-import Icon from "../../components/Icons";
-import { Box, Heading } from "../../elements";
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
+import Section from '@/components/Section'
+import Icon from '@/components/Icons'
+import { Box, Heading } from '../../elements'
 
-import useResourceTypes from "../../hooks/useResourceTypes";
-import useLegal from "../../hooks/useLegal";
+import useResourceTypes from '@/hooks/useResourceTypes'
+import useLegal from '@/hooks/useLegal'
 
-import * as S from "./styles.scss";
-import theme from "../../../config/theme";
+import * as S from './styles.scss'
+import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
 type ResourceListShape = {
-  docs: ResourceDocShape[];
-  title: string;
-};
+  docs: ResourceDocShape[]
+  title: string
+}
 
 const ResourceList = ({ docs, title }: ResourceListShape) => {
   return (
@@ -39,19 +39,19 @@ const ResourceList = ({ docs, title }: ResourceListShape) => {
         </a>
       ))}
     </S.ResourceList>
-  );
-};
+  )
+}
 
 const ResourcesPage = () => {
-  const page = useLegal();
-  const resourceTypes = useResourceTypes();
+  const page = useLegal()
+  const resourceTypes = useResourceTypes()
 
   const pageTitle = {
     // altText: data.title,
     // image: page.pageTitle.image.asset.gatsbyImageData,
     // title: "Downloadable",
-    message: "Resources",
-  };
+    message: 'Resources'
+  }
 
   const billboardProps = {
     bg: theme.colors.tertiary,
@@ -60,8 +60,8 @@ const ResourcesPage = () => {
     src: page.billboard.figure.asset.gatsbyImageData,
     altText: page.billboard.figure.alt,
     btnText: page.billboard.linkTitle,
-    to: page.billboard.linkTo,
-  };
+    to: page.billboard.linkTo
+  }
 
   return (
     <S.ResourcesPage>
@@ -98,7 +98,7 @@ const ResourcesPage = () => {
 
       <Billboard {...billboardProps} />
     </S.ResourcesPage>
-  );
-};
+  )
+}
 
-export default ResourcesPage;
+export default ResourcesPage

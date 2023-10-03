@@ -29,19 +29,7 @@ type Props = {
   overflow?: string
 }
 
-const Section: React.FC<Props> = ({
-  bg,
-  border,
-  children,
-  color,
-  pt,
-  pb,
-  pr,
-  pl,
-  id,
-  width,
-  overflow
-}) => (
+const Section: React.FC<Props> = ({ bg, border, children, color, pt, pb, pr, pl, id, width, overflow }) => (
   <Container
     as="section"
     border={border}
@@ -68,7 +56,7 @@ const defaultProps = {
   pb: theme.gutter.axis,
   pr: theme.gutter.axis,
   pl: theme.gutter.axis,
-  width: 1
+  width: 1,
 }
 
 Section.defaultProps = defaultProps

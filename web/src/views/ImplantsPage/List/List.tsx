@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Libraries
 import { useTransition } from 'react-spring'
@@ -13,8 +13,8 @@ import { useTransition } from 'react-spring'
 import { Box, Flex, Heading, Text, AnimatedFlex } from '../../../elements'
 
 // Components
-import Icon from '../../../components/Icons'
-import ImgMatch from '../../../components/ImgMatch'
+import Icon from '@/components/Icons'
+import ImgMatch from '@/components/ImgMatch'
 
 // Theme
 import * as S from './styles.scss'
@@ -22,10 +22,7 @@ import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-const Item: React.FC<{ item: ProductNode; transition: any }> = ({
-  item,
-  transition
-}) => {
+const Item: React.FC<{ item: ProductNode; transition: any }> = ({ item }) => {
   const slug = item.slug.current
   const categorySlug = () => {
     const toLowerCase = item.categories[0].title.toLowerCase()
@@ -70,23 +67,19 @@ const Item: React.FC<{ item: ProductNode; transition: any }> = ({
 
 const List: React.FC<{ items: ProductNode[] }> = ({ items }) => {
   // Card enter/exit trail animation
-  const itemTransitions = useTransition(
-    items ? items : [],
-    item => item.name,
-    {
-      from: {
-        opacity: 0
-      },
-      enter: {
-        opacity: 1
-      },
-      leave: {
-        opacity: 1
-      },
-      trail: 0,
-      unique: false
-    }
-  )
+  const itemTransitions = useTransition(items ? items : [], item => item.name, {
+    from: {
+      opacity: 0
+    },
+    enter: {
+      opacity: 1
+    },
+    leave: {
+      opacity: 1
+    },
+    trail: 0,
+    unique: false
+  })
 
   return (
     <S.List>

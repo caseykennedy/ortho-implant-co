@@ -46,7 +46,7 @@ const Accordion: React.FC<Props> = ({
   pb,
   pr,
   pl,
-  title
+  title,
 }) => {
   // Accordion hooks
   const [setActive, setActiveState] = useState('')
@@ -60,13 +60,9 @@ const Accordion: React.FC<Props> = ({
   function toggleAccordion() {
     setActiveState(setActive === '' ? 'active' : '')
     if (null !== refContent.current) {
-      setHeightState(
-        setActive === 'active' ? '0px' : `${refContent.current.scrollHeight}px`
-      )
+      setHeightState(setActive === 'active' ? '0px' : `${refContent.current.scrollHeight}px`)
     }
-    setRotateState(
-      setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate'
-    )
+    setRotateState(setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate')
   }
   return (
     <S.AccordionContainer borderColor={borderColor}>
@@ -83,11 +79,7 @@ const Accordion: React.FC<Props> = ({
           pl={pl}
         >
           <S.AccordionToggleInner width={2 / 3}>
-            <Heading
-              as="h3"
-              fontSize={fontSize}
-              width={!subTitle ? 1 : 1 / 2}
-            >
+            <Heading as="h3" fontSize={fontSize} width={!subTitle ? 1 : 1 / 2}>
               {title}
             </Heading>
             {subTitle && (
@@ -96,18 +88,11 @@ const Accordion: React.FC<Props> = ({
               </Text>
             )}
           </S.AccordionToggleInner>
-          <S.Carat
-            className={setRotate}
-            chevronColor={chevronColor}
-            chevronWidth={chevronWidth}
-          >
+          <S.Carat className={setRotate} chevronColor={chevronColor} chevronWidth={chevronWidth}>
             <Icon name="plus" color="black" />
           </S.Carat>
         </S.AccordionToggle>
-        <S.AccordionContent
-          ref={refContent}
-          style={{ maxHeight: `${setHeight}` }}
-        >
+        <S.AccordionContent ref={refContent} style={{ maxHeight: `${setHeight}` }}>
           <Box>{children}</Box>
         </S.AccordionContent>
       </S.AccordionInner>
@@ -123,7 +108,7 @@ const defaultProps = {
   pt: [7, 8],
   pb: [7, 8],
   pr: [5, 7],
-  pl: [5, 7]
+  pl: [5, 7],
 }
 
 Accordion.defaultProps = defaultProps

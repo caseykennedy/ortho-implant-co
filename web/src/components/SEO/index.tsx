@@ -1,51 +1,51 @@
 // SEO Component
 // ___________________________________________________________________
 
-import React from "react";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import useSiteSettings from "../../hooks/useSiteSettings";
+import useSiteSettings from '@/hooks/useSiteSettings'
 
-import Facebook from "./facebook";
-import Twitter from "./twitter";
+import Facebook from './facebook'
+import Twitter from './twitter'
 
 // ___________________________________________________________________
 
 type Props = {
-  banner?: string;
-} & typeof defaultProps;
+  banner?: string
+} & typeof defaultProps
 const defaultProps = {
-  title: "",
-  desc: "",
-  pathname: "",
+  title: '',
+  desc: '',
+  pathname: '',
   node: {
-    modifiedTime: "",
-    birthTime: "",
+    modifiedTime: '',
+    birthTime: ''
   },
-  individual: false,
-};
+  individual: false
+}
 
 const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
-  const { site } = useStaticQuery(query);
-  const settings = useSiteSettings();
+  const { site } = useStaticQuery(query)
+  const settings = useSiteSettings()
 
-  const { buildTime } = site;
+  const { buildTime } = site
 
   const seo = {
     title: title || settings.titleAlt,
     description: desc || settings.description,
     image: banner || settings.banner.asset.url,
-    url: `${settings.url}${pathname}` || "",
-  };
+    url: `${settings.url}${pathname}` || ''
+  }
 
   // schema.org in JSONLD format
   // https://developers.google.com/search/docs/guides/intro-structured-data
   // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
 
   const schemaOrgWebPage = {
-    "@context": "http://schema.org",
-    "@type": "WebPage",
+    '@context': 'http://schema.org',
+    '@type': 'WebPage',
     url: settings.url,
     headline: settings.headline,
     inLanguage: settings.language,
@@ -53,125 +53,125 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     description: settings.description,
     name: settings.title,
     author: {
-      "@type": "Person",
-      name: settings.author,
+      '@type': 'Person',
+      name: settings.author
     },
     copyrightHolder: {
-      "@type": "Person",
-      name: settings.author,
+      '@type': 'Person',
+      name: settings.author
     },
-    copyrightYear: "2019",
+    copyrightYear: '2019',
     creator: {
-      "@type": "Person",
-      name: settings.author,
+      '@type': 'Person',
+      name: settings.author
     },
     publisher: {
-      "@type": "Person",
-      name: settings.author,
+      '@type': 'Person',
+      name: settings.author
     },
-    datePublished: "2019-03-10T10:30:00+01:00",
+    datePublished: '2019-03-10T10:30:00+01:00',
     dateModified: buildTime,
     image: {
-      "@type": "ImageObject",
-      url: `${settings.banner}`,
-    },
-  };
+      '@type': 'ImageObject',
+      url: `${settings.banner}`
+    }
+  }
 
   // Initial breadcrumb list
 
   const itemListElement = [
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       item: {
-        "@id": settings.url,
-        name: "Homepage",
+        '@id': settings.url,
+        name: 'Homepage'
       },
-      position: 1,
+      position: 1
     },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       item: {
-        "@id": `${settings.url}/rethink`,
-        name: "Rethink",
+        '@id': `${settings.url}/rethink`,
+        name: 'Rethink'
       },
-      position: 2,
+      position: 2
     },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       item: {
-        "@id": `${settings.url}/about`,
-        name: "About",
+        '@id': `${settings.url}/about`,
+        name: 'About'
       },
-      position: 3,
+      position: 3
     },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
       item: {
-        "@id": `${settings.url}/implants`,
-        name: "Implants",
+        '@id': `${settings.url}/implants`,
+        name: 'Implants'
       },
-      position: 4,
-    },
-  ];
+      position: 4
+    }
+  ]
 
-  let schemaArticle = null;
+  let schemaArticle = null
 
   if (individual) {
     schemaArticle = {
-      "@context": "http://schema.org",
-      "@type": "Article",
+      '@context': 'http://schema.org',
+      '@type': 'Article',
       author: {
-        "@type": "Person",
-        name: settings.author,
+        '@type': 'Person',
+        name: settings.author
       },
       copyrightHolder: {
-        "@type": "Person",
-        name: settings.author,
+        '@type': 'Person',
+        name: settings.author
       },
-      copyrightYear: "2019",
+      copyrightYear: '2019',
       creator: {
-        "@type": "Person",
-        name: settings.author,
+        '@type': 'Person',
+        name: settings.author
       },
       publisher: {
-        "@type": "Organization",
+        '@type': 'Organization',
         name: settings.author,
         logo: {
-          "@type": "ImageObject",
-          url: `${settings.banner.asset.url}`,
-        },
+          '@type': 'ImageObject',
+          url: `${settings.banner.asset.url}`
+        }
       },
-      datePublished: node ? node.birthTime : "2019-03-10T10:30:00+01:00",
-      dateModified: node ? node.modifiedTime : "2019-03-10T10:30:00+01:00",
+      datePublished: node ? node.birthTime : '2019-03-10T10:30:00+01:00',
+      dateModified: node ? node.modifiedTime : '2019-03-10T10:30:00+01:00',
       description: seo.description,
       headline: seo.title,
-      inLanguage: "en",
+      inLanguage: 'en',
       url: seo.url,
       name: seo.title,
       image: {
-        "@type": "ImageObject",
-        url: seo.image,
+        '@type': 'ImageObject',
+        url: seo.image
       },
-      mainEntityOfPage: seo.url,
-    };
+      mainEntityOfPage: seo.url
+    }
     // Push current blogpost into breadcrumb list
     itemListElement.push({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       item: {
-        "@id": seo.url,
-        name: seo.title,
+        '@id': seo.url,
+        name: seo.title
       },
-      position: 5,
-    });
+      position: 5
+    })
   }
 
   const breadcrumb = {
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    description: "Breadcrumbs list",
-    name: "Breadcrumbs",
-    itemListElement,
-  };
+    '@context': 'http://schema.org',
+    '@type': 'BreadcrumbList',
+    description: 'Breadcrumbs list',
+    name: 'Breadcrumbs',
+    itemListElement
+  }
 
   return (
     <>
@@ -197,7 +197,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         desc={seo.description}
         image={seo.image}
         title={seo.title}
-        type={individual ? "article" : "website"}
+        type={individual ? 'article' : 'website'}
         url={seo.url}
         locale={settings.language}
         name={settings.ogSiteName}
@@ -209,12 +209,12 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         username={settings.userTwitter}
       />
     </>
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO
 
-SEO.defaultProps = defaultProps;
+SEO.defaultProps = defaultProps
 
 const query = graphql`
   query SEO {
@@ -222,4 +222,4 @@ const query = graphql`
       buildTime(formatString: "YYYY-MM-DD")
     }
   }
-`;
+`

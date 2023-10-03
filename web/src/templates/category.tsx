@@ -17,9 +17,7 @@ import theme from '../../config/theme'
 
 // ___________________________________________________________________
 
-const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({
-  pageContext
-}) => {
+const CategoryTemplate: React.FC<{ pageContext: CategoryNode }> = ({ pageContext }) => {
   const page = pageContext
   return (
     <>

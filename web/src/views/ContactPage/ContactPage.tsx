@@ -3,10 +3,10 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import PageTitle from '../../components/PageTitle'
-import Billboard from '../../components/Billboard'
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
 
-import useContactPage from '../../hooks/useContactPage'
+import useContactPage from '@/hooks/useContactPage'
 
 // Elements
 import { Box, Flex, Text, Heading } from '../../elements'

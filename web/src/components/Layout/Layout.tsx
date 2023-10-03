@@ -31,10 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // const isHome = pathname === '/'
 
   // eslint-disable-next-line no-console
-  console.log(
-    `%c Site by CaseyKennedy.me `,
-    `background: #FFC907; color: #000000`
-  )
+  console.log(`%c Site by CaseyKennedy.me `, `background: #FFC907; color: #000000`)
   return (
     <S.Wrapper>
       <Header mainRef={mainRef} />
@@ -48,9 +45,7 @@ export default Layout
 
 // ___________________________________________________________________
 
-export const withLayout = <P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) =>
+export const withLayout = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
   class WithLayout extends React.Component<P & LayoutProps> {
     render() {
       return (

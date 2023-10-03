@@ -10,7 +10,7 @@ import { Box, Flex } from '../../../elements'
 
 export const Rethink = styled(Flex)`
   flex-wrap: wrap;
-      position: relative;
+  position: relative;
 
   .rethink {
     &__message {

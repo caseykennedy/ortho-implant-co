@@ -3,8 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 // ___________________________________________________________________
 
@@ -13,50 +13,50 @@ type Props = {
     edges: {
       node: {
         billboard: {
-          title: string;
-          message: string;
-          linkTo: string;
-          linkTitle: string;
+          title: string
+          message: string
+          linkTo: string
+          linkTitle: string
           figure: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-        };
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+        }
         intro: {
-          _rawBody: string;
-          heading: string;
-          title: string;
+          _rawBody: string
+          heading: string
+          title: string
           positioning: {
-            _rawBody: string;
+            _rawBody: string
             figure: {
               asset: {
-                gatsbyImageData: IGatsbyImageData;
-                url: string;
-              };
-              alt: string;
-            };
-            lead: string;
-            title: string;
-          }[];
-        };
+                gatsbyImageData: IGatsbyImageData
+                url: string
+              }
+              alt: string
+            }
+            lead: string
+            title: string
+          }[]
+        }
         pageTitle: {
           image: {
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-          link: string;
-          message: string;
-          title: string;
-        };
-      };
-    }[];
-  };
-};
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+          link: string
+          message: string
+          title: string
+        }
+      }
+    }[]
+  }
+}
 
 const useAboutPage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -72,12 +72,7 @@ const useAboutPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -90,12 +85,7 @@ const useAboutPage = () => {
                 _rawBody
                 figure {
                   asset {
-                    gatsbyImageData(
-                      fit: FILLMAX
-                      layout: FULL_WIDTH
-                      placeholder: BLURRED
-                      formats: [AUTO, AVIF, WEBP]
-                    )
+                    gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                     url
                   }
                   alt
@@ -107,12 +97,7 @@ const useAboutPage = () => {
             pageTitle {
               image {
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -123,9 +108,9 @@ const useAboutPage = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.aboutPage.edges[0].node;
-};
+  return data.aboutPage.edges[0].node
+}
 
-export default useAboutPage;
+export default useAboutPage

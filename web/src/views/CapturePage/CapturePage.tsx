@@ -3,12 +3,12 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import PageTitle from '../../components/PageTitle'
-import Billboard from '../../components/Billboard'
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
 
 import ContactForm from './ContactForm'
 
-import useContactPage from '../../hooks/useContactPage'
+import useContactPage from '@/hooks/useContactPage'
 
 import { Box, Flex, Text, Heading } from '../../elements'
 

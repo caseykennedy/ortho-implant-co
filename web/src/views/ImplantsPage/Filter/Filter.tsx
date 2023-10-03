@@ -5,15 +5,15 @@
 import React, { useState } from 'react'
 
 // Hooks
-import useProduct from '../../../hooks/useProduct'
-import useCategory from '../../../hooks/useCategory'
+import useProduct from '@/hooks/useProduct'
+import useCategory from '@/hooks/useCategory'
 
 // Elements
 import { Box, Flex, Heading } from '../../../elements'
 
 // Components
 import List from '../List'
-import Icon from '../../../components/Icons'
+import Icon from '@/components/Icons'
 
 // Theme
 import * as S from './styles.scss'

@@ -19,7 +19,7 @@ const defaultProps = {
   fillA: theme.colors.quinary,
   fillB: theme.colors.quaternary,
   fillC: theme.colors.tertiary,
-  fillD: theme.colors.primary
+  fillD: theme.colors.primary,
 }
 
 const Pixels: React.FC<Props> = ({ fillA, fillB, fillC, fillD }) => (
@@ -28,13 +28,7 @@ const Pixels: React.FC<Props> = ({ fillA, fillB, fillC, fillD }) => (
     <rect width="111" height="111" fill={fillA} />
     <rect x="111" width="111" height="111" fill={fillB} />
     <rect x="333" width="111" height="111" fill={fillC} />
-    <rect
-      x="333"
-      y="111"
-      width="111"
-      height="111"
-      fill={fillD}
-    />
+    <rect x="333" y="111" width="111" height="111" fill={fillD} />
   </svg>
 )
 

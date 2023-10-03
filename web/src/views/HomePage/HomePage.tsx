@@ -5,7 +5,7 @@
 import React from 'react'
 
 // Hooks
-import useHomePage from '../../hooks/useHomePage'
+import useHomePage from '@/hooks/useHomePage'
 
 // Sections
 import Rethink from './Rethink'
@@ -15,7 +15,7 @@ import Testimonials from './Testimonials'
 import Blog from './Blog'
 
 // Components
-import Billboard from '../../components/Billboard'
+import Billboard from '@/components/Billboard'
 
 // Theme
 import * as S from './styles.scss'

@@ -1,24 +1,18 @@
 // Dynamic query variables in GraphQl queries for Gatsby-Image
 // https://github.com/gatsbyjs/gatsby/issues/10482#issuecomment-485349612
 
-import React, { useMemo } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import React, { useMemo } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 type Props = {
-  src: string;
-  altText: string;
-  objectFit?: string;
-  objectPosition?: string;
-};
+  src: string
+  altText: string
+  objectFit?: string
+  objectPosition?: string
+}
 
-const ImgMatch: React.FC<Props> = ({
-  src,
-  altText,
-  objectFit,
-  objectPosition,
-  ...props
-}) => {
+const ImgMatch: React.FC<Props> = ({ src, altText, objectFit, objectPosition, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
@@ -34,15 +28,12 @@ const ImgMatch: React.FC<Props> = ({
         }
       }
     }
-  `);
+  `)
 
-  const match = useMemo(
-    () =>
-      data.allFile.edges.find(
-        ({ node }: { node: any }) => src === node.relativePath
-      ),
-    [data, src]
-  );
+  const match = useMemo(() => data.allFile.edges.find(({ node }: { node: any }) => src === node.relativePath), [
+    data,
+    src,
+  ])
 
   return (
     <GatsbyImage
@@ -53,7 +44,7 @@ const ImgMatch: React.FC<Props> = ({
       image={match.node.childImageSharp.fluid}
       {...props}
     />
-  );
-};
+  )
+}
 
-export default ImgMatch;
+export default ImgMatch

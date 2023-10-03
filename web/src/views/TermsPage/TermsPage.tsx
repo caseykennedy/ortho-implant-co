@@ -3,15 +3,14 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
-import PageTitle from '../../components/PageTitle'
-import Billboard from '../../components/Billboard'
-import Section from '../../components/Section'
-import BlockContent from '../../components/BlockContent'
+import PageTitle from '@/components/PageTitle'
+import Billboard from '@/components/Billboard'
+import Section from '@/components/Section'
+import BlockContent from '@/components/BlockContent'
 
 // Hooks
-import useTerms from '../../hooks/useTerms'
+import useTerms from '@/hooks/useTerms'
 
 // Theme + Styles
 import * as S from './styles.scss'
@@ -26,8 +25,6 @@ const billboardProps = {
   message: 'we make orthopaedic implants<br />that are good for all.',
   title: 'Mantra',
   invert: true
-  // src: 'operating-room.jpg',
-  // altText: 'Doctors in the operating room.'
 }
 
 const TermsPage = () => {

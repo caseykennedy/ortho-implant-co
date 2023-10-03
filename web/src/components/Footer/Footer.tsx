@@ -10,7 +10,7 @@ import Icon from '../Icons'
 import Pixels from '../Pixels'
 import AmedCert from '../AmedCert'
 
-import useContactPage from '../../hooks/useContactPage'
+import useContactPage from '@/hooks/useContactPage'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'

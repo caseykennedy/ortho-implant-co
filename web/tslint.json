@@ -2,8 +2,10 @@
   "extends": [
     "tslint-config-airbnb",
     "tslint-config-prettier",
-    "tslint-react"
+    "tslint-react",
+    "tslint-config-prettier"
   ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
     "prettier": [
       true,
@@ -22,7 +24,6 @@
     "import-name": false,
     "jsx-no-multiline-js": false,
     "jsx-no-lambda": false,
-    "object-shorthand-properties-first": false,
-    "forceConsistentCasingInFileNames": true
+    "object-shorthand-properties-first": false
   }
 }

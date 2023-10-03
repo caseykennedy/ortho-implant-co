@@ -10,7 +10,7 @@ import Billboard from '../Billboard'
 import Section from '../Section'
 import BlockContent from '../BlockContent'
 
-import useRethinkPage from '../../hooks/useRethinkPage'
+import useRethinkPage from '@/hooks/useRethinkPage'
 
 // Elements
 import { AnimatedBox, Box, Heading } from '../../elements'

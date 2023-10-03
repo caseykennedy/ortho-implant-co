@@ -4,9 +4,9 @@
 
 import React, { useState } from 'react'
 
-import PageTitle from '../../components/PageTitle'
+import PageTitle from '@/components/PageTitle'
 import Filter from './Filter'
-import Billboard from '../../components/Billboard'
+import Billboard from '@/components/Billboard'
 
 import { Box, Text } from '../../elements'
 

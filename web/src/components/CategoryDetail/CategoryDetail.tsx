@@ -10,7 +10,7 @@ import Billboard from '../Billboard'
 import Implant from './Implant'
 
 // Hooks
-import useProduct from '../../hooks/useProduct'
+import useProduct from '@/hooks/useProduct'
 
 // Styles + theme
 import * as S from './styles.scss'

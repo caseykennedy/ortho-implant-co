@@ -2,12 +2,12 @@
 
 // ___________________________________________________________________
 
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 
-import { Box } from "../../../elements";
-import theme from "../../../../config/theme";
-import * as S from "./styles.scss";
+import { Box } from '../../../elements'
+import theme from '../../../../config/theme'
+import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
@@ -22,24 +22,14 @@ const Navigation = () => {
               {/* {item.subPage && <Icon name="carat" />} */}
             </span>
           ) : (
-            <Link
-              to={item.link}
-              className="nav-link__title"
-              activeClassName="active"
-              partiallyActive={true}
-            >
+            <Link to={item.link} className="nav-link__title" activeClassName="active" partiallyActive={true}>
               {item.name}
             </Link>
           )}
           {item.subPage && (
             <Box className="sub-nav">
               {item.subPage.map((subItem, idx) => (
-                <Link
-                  to={subItem.link}
-                  key={idx}
-                  activeClassName="active"
-                  partiallyActive={true}
-                >
+                <Link to={subItem.link} key={idx} activeClassName="active" partiallyActive={true}>
                   {subItem.name}
                 </Link>
               ))}
@@ -48,76 +38,76 @@ const Navigation = () => {
         </Box>
       ))}
     </S.Nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
 
 // ___________________________________________________________________
 
 const data = [
   {
-    name: "rethink",
-    link: "/rethink",
+    name: 'rethink',
+    link: '/rethink',
   },
   {
-    name: "implants",
-    link: "/implants",
+    name: 'implants',
+    link: '/implants',
     subPage: [
       {
-        name: "External Fixation",
-        link: "/implants/external-fixation",
+        name: 'External Fixation',
+        link: '/implants/external-fixation',
       },
       {
-        name: "Hand and Wrist",
-        link: "/implants/hand-and-wrist",
+        name: 'Hand and Wrist',
+        link: '/implants/hand-and-wrist',
       },
       {
-        name: "Hip Fractures",
-        link: "/implants/hip-fractures",
+        name: 'Hip Fractures',
+        link: '/implants/hip-fractures',
       },
       {
-        name: "IM Nails",
-        link: "/implants/im-nails",
+        name: 'IM Nails',
+        link: '/implants/im-nails',
       },
       {
-        name: "Plates and Screws",
-        link: "/implants/plates-and-screws",
+        name: 'Plates and Screws',
+        link: '/implants/plates-and-screws',
       },
       {
-        name: "Cannulated Screws",
-        link: "/implants/cannulated-screws",
+        name: 'Cannulated Screws',
+        link: '/implants/cannulated-screws',
       },
       {
-        name: "Sports Medicine",
-        link: "/implants/sports-medicine",
+        name: 'Sports Medicine',
+        link: '/implants/sports-medicine',
       },
     ],
   },
   {
-    name: "about",
-    link: "/about",
+    name: 'about',
+    link: '/about',
     subPage: [
       {
-        name: "Team",
-        link: "/about#team",
+        name: 'Team',
+        link: '/about#team',
       },
       {
-        name: "Careers",
-        link: "/about#careers",
+        name: 'Careers',
+        link: '/about#careers',
       },
     ],
   },
   {
-    name: "news",
-    link: "/news",
+    name: 'news',
+    link: '/news',
   },
   {
-    name: "resources",
-    link: "/resources",
+    name: 'resources',
+    link: '/resources',
   },
   {
-    name: "contact",
-    link: "/contact",
+    name: 'contact',
+    link: '/contact',
   },
-];
+]

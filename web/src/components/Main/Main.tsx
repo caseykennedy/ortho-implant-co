@@ -12,11 +12,12 @@ type Props = {
   bg?: string
 }
 
-const Main = styled(Flex)<Props>`
+const Main = styled.div<Props>`
+  display: flex;
   flex-direction: column;
   padding: ${theme.space[6]} ${theme.space[4]};
 
-  background: ${p => !p.bg ? theme.colors.background : p.bg};
+  background: ${p => (!p.bg ? theme.colors.background : p.bg)};
   border-top: ${theme.border};
   border-right: none;
 

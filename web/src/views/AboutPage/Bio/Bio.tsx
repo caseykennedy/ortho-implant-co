@@ -3,10 +3,10 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
+import BlockContent from '@/components/BlockContent'
 
 // UI + Styles
 import * as S from './styles.scss'
@@ -30,7 +30,10 @@ const Bio: React.FC<Props> = ({ bio, setModalOpen }) => {
         <Box width={[2 / 3, 1]} className="bio__figure">
           {bio.headshot && (
             <GatsbyImage
-              image={{ ...bio.headshot.asset.gatsbyImageData, aspectRatio: 2 / 3 }}
+              image={{
+                ...bio.headshot.asset.gatsbyImageData,
+                aspectRatio: 2 / 3
+              }}
               objectFit="cover"
               objectPosition="50% 50%"
               alt={bio.name}

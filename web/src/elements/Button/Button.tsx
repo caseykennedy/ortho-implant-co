@@ -6,7 +6,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import Icon from '../../components/Icons'
+import Icon from '@/components/Icons'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'

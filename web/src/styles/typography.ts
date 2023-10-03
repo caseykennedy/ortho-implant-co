@@ -4,7 +4,6 @@
 
 import { css } from 'styled-components'
 import theme from '../../config/theme'
-import { darken } from 'polished'
 
 // Helvetica Neue Condensed Regular
 import HelveticaNeueLTStdCnEot from './fonts/HelveticaNeueLTStd-Cn.eot'
@@ -282,15 +281,13 @@ const Typography = css`
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.05, theme.colors.secondary)};
+      /* color: ${darken(0.05, theme.colors.secondary)}; */
     }
   }
 
   mark {
     background-color: ${theme.colors.primary};
-    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${
-  theme.space[2]
-};
+    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
   }
 
   .t--link {

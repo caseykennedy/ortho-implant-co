@@ -27,16 +27,7 @@ type Props = {
 
 // ___________________________________________________________________
 
-const Overlay: React.FC<Props> = ({
-  children,
-  id,
-  root,
-  isOpen,
-  handleExit,
-  focusAfterExit,
-  mainRef,
-  className
-}) => {
+const Overlay: React.FC<Props> = ({ children, id, root, isOpen, handleExit, focusAfterExit, mainRef, className }) => {
   const [hasUpdated, forceUpdate] = React.useState(false)
 
   const exitButton = React.useRef<HTMLButtonElement>(null)
@@ -79,9 +70,7 @@ const Overlay: React.FC<Props> = ({
     // }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
-      const focusableElements = container.querySelectorAll(
-        'button, a, input, textarea, select'
-      )
+      const focusableElements = container.querySelectorAll('button, a, input, textarea, select')
       focusableElements.forEach((element: Element) => {
         if (type === 'on') {
           element.removeAttribute('tabindex')
@@ -130,12 +119,10 @@ const Overlay: React.FC<Props> = ({
 
   if (overlay.current) {
     return ReactDOM.createPortal(
-      (
       <S.Overlay className={className}>
         <S.Exit onClick={handleExit}>Close</S.Exit>
         {children}
-      </S.Overlay>
-      ),
+      </S.Overlay>,
       overlay.current
     )
   }

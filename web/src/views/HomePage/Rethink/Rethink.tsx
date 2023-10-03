@@ -5,10 +5,10 @@
 import React from 'react'
 
 // Hooks
-import useHomePage from '../../../hooks/useHomePage'
+import useHomePage from '@/hooks/useHomePage'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
+import BlockContent from '@/components/BlockContent'
 
 // Theme
 import Button from '../../../elements/Button'

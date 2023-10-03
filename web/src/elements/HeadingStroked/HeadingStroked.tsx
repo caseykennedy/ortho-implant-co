@@ -27,7 +27,7 @@ const HeadingStroked = styled(Heading)<Props>`
 HeadingStroked.defaultProps = {
   fillColor: theme.colors.background,
   strokeColor: theme.colors.text,
-  strokeWidth: '1px'
+  strokeWidth: '1px',
 }
 
 export default HeadingStroked

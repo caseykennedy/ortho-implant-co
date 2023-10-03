@@ -6,13 +6,11 @@ import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '../../../elements'
 
-import Section from '../../../components/Section'
+import Section from '@/components/Section'
 
 // ___________________________________________________________________
 
-export const Implants = styled(Section)`
-  
-`
+export const Implants = styled(Section)``
 
 export const Categories = styled(Box)`
   a {

@@ -2,17 +2,17 @@
 
 // ___________________________________________________________________
 
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image/withIEPolyfill';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-import BlockContent from '../../../components/BlockContent';
+import BlockContent from '@/components/BlockContent'
 
-import Button from '../../../elements/Button';
-import { Box, Flex, Heading, Text } from '../../../elements';
+import Button from '../../../elements/Button'
+import { Box, Flex, Heading, Text } from '../../../elements'
 
-import theme from '../../../../config/theme';
-import * as S from './styles.scss';
+import theme from '../../../../config/theme'
+import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
@@ -43,8 +43,8 @@ const Mantra = () => {
         }
       }
     }
-  `);
-  const query = data.allSanityHomeMantra.edges[0].node;
+  `)
+  const query = data.allSanityHomeMantra.edges[0].node
   // console.log('---_- Mantra -_---')
   // console.log(query)
   return (
@@ -53,7 +53,7 @@ const Mantra = () => {
         <S.Panel>
           <Box width={[1, 1 / 2]}>
             {query.image && (
-              <Img
+              <GatsbyImage
                 image={query.image.asset.gatsbyImageData}
                 objectFit="cover"
                 objectPosition="50% 50%"
@@ -94,7 +94,7 @@ const Mantra = () => {
         </Text>
       </Section> */}
     </>
-  );
-};
+  )
+}
 
-export default Mantra;
+export default Mantra

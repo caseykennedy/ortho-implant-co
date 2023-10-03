@@ -4,7 +4,6 @@
 
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { darken } from 'polished'
 
 import { Box, AnimatedBox, Flex, Heading } from '../../elements'
 

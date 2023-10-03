@@ -2,11 +2,11 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import SEO from "../components/SEO";
-import CapturePage from "../views/CapturePage";
+import SEO from '../components/SEO'
+import CapturePage from '../views/CapturePage'
 
 // ___________________________________________________________________
 
@@ -22,7 +22,7 @@ const Capture = () => {
       />
       <CapturePage />
     </>
-  );
-};
+  )
+}
 
-export default Capture;
+export default Capture

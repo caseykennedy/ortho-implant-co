@@ -2,53 +2,37 @@
 
 // ___________________________________________________________________
 
-import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import React from 'react'
+import { Link } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import Button from '../../elements/Button';
+import Button from '../../elements/Button'
 
-import * as S from './styles.scss';
-import { Box } from '../../elements';
-import theme from '../../../config/theme';
+import * as S from './styles.scss'
+import { Box } from '../../elements'
+import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
 type Props = {
-  altText?: string;
-  bg?: string;
-  btnText?: string;
-  color?: string;
-  invert?: boolean;
-  message?: string;
-  title?: string;
-  to?: string;
-  src?: IGatsbyImageData;
-};
+  altText?: string
+  bg?: string
+  btnText?: string
+  color?: string
+  invert?: boolean
+  message?: string
+  title?: string
+  to?: string
+  src?: IGatsbyImageData
+}
 
-const Intro: React.FC<Props> = ({
-  altText,
-  bg,
-  btnText,
-  color,
-  invert,
-  message,
-  title,
-  to,
-  src,
-}) => {
+const Intro: React.FC<Props> = ({ altText, bg, btnText, color, invert, message, title, to, src }) => {
   return (
     <S.Billboard bg={bg} border={true} color={color} overflow="hidden">
       <S.Figure>
         {src && (
           <>
-            <GatsbyImage
-              image={src}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={altText || ''}
-              className="img"
-            />
+            <GatsbyImage image={src} objectFit="cover" objectPosition="50% 50%" alt={altText || ''} className="img" />
           </>
         )}
       </S.Figure>
@@ -81,10 +65,10 @@ const Intro: React.FC<Props> = ({
         )}
       </S.BillboardInner>
     </S.Billboard>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro
 
 // ___________________________________________________________________
 
@@ -95,6 +79,6 @@ const defaultProps = {
   color: 'white',
   // btnText: 'Talk to us',
   // to: '/'
-};
+}
 
-Intro.defaultProps = defaultProps;
+Intro.defaultProps = defaultProps

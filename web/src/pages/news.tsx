@@ -3,11 +3,11 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import SEO from "../components/SEO";
-import BlogPage from "../views/BlogPage";
+import SEO from '../components/SEO'
+import BlogPage from '../views/BlogPage'
 
 // ___________________________________________________________________
 
@@ -22,7 +22,7 @@ const News = () => {
       />
       <BlogPage />
     </>
-  );
-};
+  )
+}
 
-export default News;
+export default News

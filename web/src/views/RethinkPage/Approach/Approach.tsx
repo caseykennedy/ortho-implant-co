@@ -5,16 +5,16 @@
 import React from 'react'
 
 // Libraries
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { useSpring, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Parallax } from 'react-scroll-parallax'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
+import BlockContent from '@/components/BlockContent'
 
 // Hooks
-import useRethinkPage from '../../../hooks/useRethinkPage'
+import useRethinkPage from '@/hooks/useRethinkPage'
 
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../../elements'

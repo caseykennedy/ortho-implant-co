@@ -5,7 +5,6 @@
 import styled from 'styled-components'
 import theme from '../../../../config/theme'
 import { Box, Flex } from '../../../elements'
-import { transparentize } from 'polished'
 
 // ___________________________________________________________________
 
@@ -15,7 +14,7 @@ export const Testimonials = styled(Box)`
   border-top: ${theme.border};
 
   .quotation {
-    color: ${transparentize(0.5, theme.colors.tertiary)};
+    /* color: ${transparentize(0.5, theme.colors.tertiary)}; */
     font-size: ${theme.fontSizes[7]};
     font-family: ${theme.fonts.body};
     margin-bottom: 0;

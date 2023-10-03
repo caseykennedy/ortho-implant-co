@@ -3,26 +3,26 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import TermsPage from "../views/TermsPage";
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import TermsPage from '../views/TermsPage'
 
 // Hooks
-import useTerms from "../hooks/useTerms";
+import useTerms from '../hooks/useTerms'
 
 // ___________________________________________________________________
 
 const Terms = () => {
-  const page = useTerms();
+  const page = useTerms()
   return (
     <>
       <SEO pathname="/terms" title={page.pageTitle.message} individual={true} />
       <TermsPage />
     </>
-  );
-};
+  )
+}
 
-export default Terms;
+export default Terms

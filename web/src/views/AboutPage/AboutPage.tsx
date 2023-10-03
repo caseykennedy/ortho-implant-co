@@ -4,13 +4,13 @@
 
 import React from 'react'
 
-import useAboutPage from '../../hooks/useAboutPage'
+import useAboutPage from '@/hooks/useAboutPage'
 
-import PageTitle from '../../components/PageTitle'
+import PageTitle from '@/components/PageTitle'
 import Intro from './Intro'
 import Team from './Team'
-import Billboard from '../../components/Billboard'
-import JobBoard from '../../components/JobBoard'
+import Billboard from '@/components/Billboard'
+import JobBoard from '@/components/JobBoard'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -25,7 +25,7 @@ const AboutPage = () => {
   const pageTitle = {
     altText: page.pageTitle.message,
     image: page.pageTitle.image.asset.gatsbyImageData,
-    message: `<span style="color:#9D9FA2;">We aim to</span><br />change the system`,
+    message: `<span style="color:#9D9FA2;">We aim to</span><br />change the system`
     // title: 'Needs title'
   }
 

@@ -14,7 +14,7 @@ const useToggle = () => {
 
   return {
     isShowing,
-    toggle
+    toggle,
   }
 }
 

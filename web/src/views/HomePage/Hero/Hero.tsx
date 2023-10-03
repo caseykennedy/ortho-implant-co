@@ -4,14 +4,13 @@
 
 import React from 'react'
 import { useSpring, config } from 'react-spring'
-import Img from 'gatsby-image/withIEPolyfill'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Parallax } from 'react-scroll-parallax'
 
-import useHomePage from '../../../hooks/useHomePage'
+import useHomePage from '@/hooks/useHomePage'
 
 import * as S from './styles.scss'
-import { Box, Flex, AnimatedBox, Heading } from '../../../elements'
+import { AnimatedBox, Heading } from '../../../elements'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________

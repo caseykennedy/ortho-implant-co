@@ -26,8 +26,7 @@ export const Card = styled(Flex)<{ border?: boolean }>`
 
   /* background: ${theme.colors.white}; */
   border-top: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
-  border-right: ${p =>
-    !p.border ? 'none' : `2px solid ${theme.colors.black}`};
+  border-right: ${p => (!p.border ? 'none' : `2px solid ${theme.colors.black}`)};
 
   .card {
     &__img {

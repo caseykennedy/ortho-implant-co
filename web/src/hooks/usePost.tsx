@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
@@ -41,12 +41,7 @@ const usePost = () => {
               jobTitle
               headshot {
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -69,9 +64,9 @@ const usePost = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.posts.edges;
-};
+  return data.posts.edges
+}
 
-export default usePost;
+export default usePost

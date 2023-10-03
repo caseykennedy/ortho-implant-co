@@ -11,9 +11,9 @@ import { useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
 // Components
-import Section from '../../../components/Section'
-import Icon from '../../../components/Icons'
-import Overlay from '../../../components/Overlay'
+import Section from '@/components/Section'
+import Icon from '@/components/Icons'
+import Overlay from '@/components/Overlay'
 import Bio from '../Bio'
 
 // UI + Styles

@@ -4,7 +4,6 @@
 
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '../../../elements'
 
@@ -22,7 +21,7 @@ export const Button = styled(Link)`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+
   background: ${theme.colors.background};
   padding: ${theme.space[5]} ${theme.space[5]};
   width: 100%;

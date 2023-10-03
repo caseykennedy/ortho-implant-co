@@ -4,14 +4,14 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Components
-import Section from '../../../components/Section'
+import Section from '@/components/Section'
 
 // Hooks
-import useHover from '../../../hooks/useHover'
-import useCategory from '../../../hooks/useCategory'
+import useHover from '@/hooks/useHover'
+import useCategory from '@/hooks/useCategory'
 
 // UI + Styles
 import { Box, Flex, Heading, Text } from '../../../elements'

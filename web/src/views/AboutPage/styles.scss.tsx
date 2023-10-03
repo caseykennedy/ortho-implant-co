@@ -2,9 +2,9 @@
 
 // ___________________________________________________________________
 
-import styled from "styled-components";
-import { Box } from "../../elements";
-import theme from "../../../config/theme";
+import styled from 'styled-components'
+import { Box } from '../../elements'
+import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
@@ -14,4 +14,4 @@ export const AboutPage = styled(Box)`
 
   @media ${theme.mq.tablet} {
   }
-`;
+`

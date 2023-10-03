@@ -47,7 +47,7 @@ import {
   MaxWidthProps,
   DisplayProps,
   PositionProps,
-  OverflowProps
+  OverflowProps,
 } from 'styled-system'
 
 // ___________________________________________________________________

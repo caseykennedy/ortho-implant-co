@@ -71,7 +71,7 @@ const theme: ThemeShape = {
   breakpoints,
   mq: {
     tablet: `(min-width: ${breakpoints[0]})`,
-    desktop: `(min-width: ${breakpoints[1]})`
+    desktop: `(min-width: ${breakpoints[1]})`,
   },
 
   // Color palette
@@ -80,7 +80,7 @@ const theme: ThemeShape = {
   colors: {
     text: '#000000',
     background: '#ffffff',
-    
+
     primary: '#FFC900',
     secondary: '#000000',
     tertiary: '#9D9FA2',
@@ -95,20 +95,20 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   space: [
-    '0',          // 0
-    '0.25rem',    // 1
-    '0.5rem',     // 2
-    '1rem',       // 3
-    '1.5rem',     // 4
-    '2rem',       // 5
-    '3rem',       // 6
-    '3rem',       // 7
-    '6rem',       // 8
-    '10rem',      // 9
-    '12rem',      // 10
-    '14rem',      // 11
-    '16rem',      // 12
-    '18rem'       // 13
+    '0', // 0
+    '0.25rem', // 1
+    '0.5rem', // 2
+    '1rem', // 3
+    '1.5rem', // 4
+    '2rem', // 5
+    '3rem', // 6
+    '3rem', // 7
+    '6rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem', // 13
   ],
 
   // Left/Right gutter
@@ -124,29 +124,28 @@ const theme: ThemeShape = {
   fonts: {
     body: `"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     heading: `"HelveticaCondensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`
+    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
   fontSizes: [
-    'var(--text-xs)',         // 0
-    'var(--text-sm)',         // 1
-    'var(--text-base-size)',  // 2
-    'var(--text-md)',         // 3
-    'var(--text-lg)',         // 4
-    'var(--text-xl)',         // 5
-    'var(--text-xxl)',        // 6
-    'var(--text-xxxl)',       // 7
+    'var(--text-xs)', // 0
+    'var(--text-sm)', // 1
+    'var(--text-base-size)', // 2
+    'var(--text-md)', // 3
+    'var(--text-lg)', // 4
+    'var(--text-xl)', // 5
+    'var(--text-xxl)', // 6
+    'var(--text-xxxl)', // 7
   ],
 
-  Heading: {
-  },
+  Heading: {},
 
   fontWeights: {
     light: 300,
     regular: 400,
     medium: 500,
     bold: 600,
-    black: 700
+    black: 700,
   },
 
   strokeWidth: '2px',
@@ -161,18 +160,18 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   grid: {
-    gap: '0.5rem'
+    gap: '0.5rem',
   },
 
   transition: {
-    all: 'all 0.222s ease-in-out'
+    all: 'all 0.222s ease-in-out',
   },
 
   transform: {
     matrix: {
       from: 'matrix(1, 0, 0, 1, 24, 0)',
-      to: 'matrix(1, 0, 0, 1, 0, 0)'
-    }
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
   },
 
   border: '2px solid #000000',
@@ -187,7 +186,7 @@ const theme: ThemeShape = {
       baseSize: 'var(--text-base-size)',
       scaleRatio: 'var(--text-scale-ratio)',
       baseLetterSpacing: 'var(--text-base-letter-spacing)',
-  
+
       // Type scale
       xs: 'var(--text-xs)',
       sm: 'var(--text-sm)',
@@ -196,12 +195,12 @@ const theme: ThemeShape = {
       xl: 'var(--text-xl)',
       xxl: 'var(--text-xxl)',
       xxxl: 'var(--text-xxxl)',
-  
+
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
-      bodyLineHeight: 'var(--body-line-height)'
-    }
-  }
+      bodyLineHeight: 'var(--body-line-height)',
+    },
+  },
 }
 
 export default theme

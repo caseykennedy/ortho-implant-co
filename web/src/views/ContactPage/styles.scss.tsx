@@ -2,7 +2,6 @@
 
 // ___________________________________________________________________
 
-import { darken } from 'polished'
 import styled from 'styled-components'
 
 import theme from '../../../config/theme'

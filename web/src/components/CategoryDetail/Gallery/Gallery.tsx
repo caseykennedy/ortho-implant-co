@@ -5,7 +5,7 @@
 import React, { useState } from 'react'
 
 // Libraries
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Swiper from 'react-id-swiper'
 
 // Components
@@ -30,29 +30,29 @@ const ImageSwiper: React.FC = ({ children }) => {
     spaceBetween: 1,
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
+      clickable: true,
     },
     breakpoints: {
       1024: {
         slidesPerView: 1,
-        spaceBetween: 1
+        spaceBetween: 1,
       },
       768: {
         slidesPerView: 1,
         spaceBetween: 1,
-        grabCursor: true
+        grabCursor: true,
       },
       640: {
         slidesPerView: 1,
         spaceBetween: 1,
-        grabCursor: true
+        grabCursor: true,
       },
       320: {
         slidesPerView: 1,
         spaceBetween: 1,
-        grabCursor: true
-      }
-    }
+        grabCursor: true,
+      },
+    },
   }
   return <Swiper {...params}>{children}</Swiper>
 }

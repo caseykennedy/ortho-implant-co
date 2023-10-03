@@ -3,20 +3,20 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import RethinkPage from "../views/RethinkPage";
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import RethinkPage from '../views/RethinkPage'
 
 // Hooks
-import useRethinkPage from "../hooks/useRethinkPage";
+import useRethinkPage from '../hooks/useRethinkPage'
 
 // ___________________________________________________________________
 
 const Rethink = () => {
-  const page = useRethinkPage();
+  const page = useRethinkPage()
   return (
     <>
       <SEO
@@ -28,7 +28,7 @@ const Rethink = () => {
       />
       <RethinkPage />
     </>
-  );
-};
+  )
+}
 
-export default Rethink;
+export default Rethink

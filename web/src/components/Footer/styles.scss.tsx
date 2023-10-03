@@ -118,7 +118,7 @@ export const Social = styled(Flex)`
   .amed-cert {
     margin-top: ${theme.space[6]};
     width: 100%;
-    
+
     @media ${theme.mq.desktop} {
       border-left: 1px solid ${theme.colors.tertiary};
       margin-top: 0;

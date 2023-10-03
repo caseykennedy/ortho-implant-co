@@ -3,8 +3,8 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 // ___________________________________________________________________
 
@@ -13,74 +13,74 @@ type Props = {
     edges: {
       node: {
         approach: {
-          _rawBody: string;
-          _rawLead: string;
+          _rawBody: string
+          _rawLead: string
           figure: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-          heading: string;
-          title: string;
-        };
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+          heading: string
+          title: string
+        }
         purpose: {
-          _rawBody: string;
-          _rawLead: string;
+          _rawBody: string
+          _rawLead: string
           figure: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-          heading: string;
-          title: string;
-          statement: string;
-        };
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+          heading: string
+          title: string
+          statement: string
+        }
         billboard: {
-          title: string;
-          message: string;
-          linkTo: string;
-          linkTitle: string;
+          title: string
+          message: string
+          linkTo: string
+          linkTitle: string
           figure: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-        };
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+        }
         rethinkNotions: {
-          _rawContent: string;
-          lead: string;
-          subTitle: string;
-          title: string;
+          _rawContent: string
+          lead: string
+          subTitle: string
+          title: string
           image: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-        }[];
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+        }[]
         pageTitle: {
           image: {
-            alt: string;
+            alt: string
             asset: {
-              gatsbyImageData: IGatsbyImageData;
-              url: string;
-            };
-          };
-          link: string;
-          message: string;
-          title: string;
-        };
-      };
-    }[];
-  };
-};
+              gatsbyImageData: IGatsbyImageData
+              url: string
+            }
+          }
+          link: string
+          message: string
+          title: string
+        }
+      }
+    }[]
+  }
+}
 
 const useRethinkPage = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -94,12 +94,7 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -112,12 +107,7 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -133,12 +123,7 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -150,12 +135,7 @@ const useRethinkPage = () => {
               title
               image {
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -163,12 +143,7 @@ const useRethinkPage = () => {
             pageTitle {
               image {
                 asset {
-                  gatsbyImageData(
-                    fit: FILLMAX
-                    layout: FULL_WIDTH
-                    placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
-                  )
+                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                   url
                 }
               }
@@ -179,9 +154,9 @@ const useRethinkPage = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.rethinkPage.edges[0].node;
-};
+  return data.rethinkPage.edges[0].node
+}
 
-export default useRethinkPage;
+export default useRethinkPage

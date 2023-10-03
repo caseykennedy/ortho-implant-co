@@ -1,6 +1,6 @@
 // useResourceTypes hook:
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
@@ -24,9 +24,9 @@ const useResourceTypes = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.resourceTypes.edges;
-};
+  return data.resourceTypes.edges
+}
 
-export default useResourceTypes;
+export default useResourceTypes

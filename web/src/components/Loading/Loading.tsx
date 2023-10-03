@@ -24,7 +24,7 @@ const Loading = () => {
     config: config.molasses,
     delay: 0,
     from: { opacity: 0 },
-    to: { opacity: 1 }
+    to: { opacity: 1 },
   })
   return (
     <>

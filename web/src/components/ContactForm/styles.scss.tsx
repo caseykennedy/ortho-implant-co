@@ -3,10 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { lighten, darken } from 'polished'
 
 import theme from '../../../config/theme'
-import { Box, Flex } from '../../elements'
 
 // ___________________________________________________________________
 
@@ -98,7 +96,7 @@ export const Form = styled.div`
     font-size: calc(${theme.fontSizes[2]} * 1.15);
     text-transform: uppercase;
     padding: ${theme.space[4]} ${theme.space[3]} ${theme.space[3]};
-    
+
     &:hover {
       background: ${theme.colors.tertiary};
       color: ${theme.colors.black};

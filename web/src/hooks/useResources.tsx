@@ -1,6 +1,6 @@
 // useResources hook:
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
@@ -21,9 +21,9 @@ const useResources = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.resources.edges;
-};
+  return data.resources.edges
+}
 
-export default useResources;
+export default useResources

@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Libraries
 import { useTransition } from 'react-spring'
@@ -13,8 +13,8 @@ import { useTransition } from 'react-spring'
 import { Box, Heading, Text, AnimatedFlex } from '../../../elements'
 
 // Components
-import Icon from '../../../components/Icons'
-import ImgMatch from '../../../components/ImgMatch'
+import Icon from '@/components/Icons'
+import ImgMatch from '@/components/ImgMatch'
 
 // Theme
 import * as S from './styles.scss'

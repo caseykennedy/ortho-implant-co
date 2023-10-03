@@ -3,12 +3,12 @@
 // ___________________________________________________________________
 
 // Libraries
-import React from "react";
+import React from 'react'
 
 // Components
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import HomePage from "../views/HomePage";
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import HomePage from '../views/HomePage'
 
 // ___________________________________________________________________
 
@@ -18,7 +18,7 @@ const Index = () => {
       <SEO />
       <HomePage />
     </>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

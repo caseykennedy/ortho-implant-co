@@ -3,16 +3,14 @@
 
 // ___________________________________________________________________
 
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
 const useCategory = () => {
   const data = useStaticQuery<CategoryShape>(graphql`
     query CategoryQuery {
-      categories: allSanityProductCategory(
-        sort: { fields: title, order: ASC }
-      ) {
+      categories: allSanityProductCategory(sort: { fields: title, order: ASC }) {
         edges {
           node {
             _id
@@ -36,12 +34,7 @@ const useCategory = () => {
             }
             image {
               asset {
-                gatsbyImageData(
-                  fit: FILLMAX
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
-                )
+                gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
                 url
               }
             }
@@ -49,9 +42,9 @@ const useCategory = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data.categories.edges;
-};
+  return data.categories.edges
+}
 
-export default useCategory;
+export default useCategory

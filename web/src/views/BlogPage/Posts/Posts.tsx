@@ -13,8 +13,8 @@ import { useTransition } from 'react-spring'
 import { Box, Heading, Text } from '../../../elements'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
-import Icon from '../../../components/Icons'
+import BlockContent from '@/components/BlockContent'
+import Icon from '@/components/Icons'
 
 // Theme
 import * as S from './styles.scss'

@@ -3,18 +3,18 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Hooks
-import useHomePage from '../../../hooks/useHomePage'
+import useHomePage from '@/hooks/useHomePage'
 
 // Libraries
 import Swiper from 'react-id-swiper'
 
 // Components
-import BlockContent from '../../../components/BlockContent'
-import Section from '../../../components/Section'
-import Pixels from '../../../components/Pixels'
+import BlockContent from '@/components/BlockContent'
+import Section from '@/components/Section'
+import Pixels from '@/components/Pixels'
 
 // UI
 import { Box, Flex, Heading, Text } from '../../../elements'

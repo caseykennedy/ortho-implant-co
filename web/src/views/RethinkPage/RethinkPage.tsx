@@ -4,13 +4,13 @@
 
 import React from 'react'
 
-import PageTitle from '../../components/PageTitle'
+import PageTitle from '@/components/PageTitle'
 import Approach from './Approach'
 import Purpose from './Purpose'
 import Rethink from './Rethink'
-import Billboard from '../../components/Billboard'
+import Billboard from '@/components/Billboard'
 
-import useRethinkPage from '../../hooks/useRethinkPage'
+import useRethinkPage from '@/hooks/useRethinkPage'
 
 import { Text, Heading, Box } from '../../elements'
 import * as S from './styles.scss'
@@ -20,7 +20,7 @@ import theme from '../../../config/theme'
 
 const RethinkPage = () => {
   const page = useRethinkPage()
-  
+
   // Page Title
   const pageTitle = {
     altText: page.pageTitle.message,
