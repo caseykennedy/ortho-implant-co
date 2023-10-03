@@ -12,7 +12,8 @@ const {
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: `${config.siteUrl}${pathPrefix}`,
+    siteUrl: config.siteURL + pathPrefix,
+    pathPrefix,
   },
   plugins: [
     'gatsby-plugin-styled-components',
