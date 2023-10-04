@@ -52,7 +52,13 @@ const useLegal = () => {
               message
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }
@@ -61,7 +67,13 @@ const useLegal = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }

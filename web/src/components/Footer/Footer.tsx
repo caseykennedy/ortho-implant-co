@@ -53,40 +53,65 @@ const Footer: React.FC = () => {
           <Box width={[1, 2 / 3]}>
             <Heading as="h4">tel | fax</Heading>
             <Text as="p">
-              <a href={`tel:${contact.telTollFree}`}>+1 {contact.telTollFree && contact.telTollFree}</a>{' '}
+              <a href={`tel:${contact.telTollFree}`}>
+                +1 {contact.telTollFree && contact.telTollFree}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — toll free
               </Box>
               <br />
-              <a href={`tel:${contact.telDirect}`}>+1 {contact.telDirect && contact.telDirect}</a>{' '}
+              <a href={`tel:${contact.telDirect}`}>
+                +1 {contact.telDirect && contact.telDirect}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — direct
               </Box>
               <br />
-              <a href={`tel:${contact.telFax}`}>+1 {contact.telFax && contact.telFax}</a>{' '}
+              <a href={`tel:${contact.telFax}`}>
+                +1 {contact.telFax && contact.telFax}
+              </a>{' '}
               <Box as="span" color="tertiary">
                 — fax
               </Box>
             </Text>
           </Box>
           <Box width={[1, 1 / 3]} mt={[5, 0]}>
-            <Link to="/contact" className="t--link">
-              <Heading as="h4" color="primary" fontWeight={500}>
-                Schedule a meeting
-                <Icon name="nextArrow" color={theme.colors.primary} />
-              </Heading>
+            <Link
+              to="/contact"
+              className="t--link"
+              style={{
+                color: theme.colors.primary,
+                textTransform: 'uppercase',
+                fontFamily: theme.fonts.heading,
+                fontWeight: 500
+              }}
+            >
+              Schedule a meeting
+              <Icon name="arrow" color={theme.colors.primary} />
             </Link>
           </Box>
         </S.Row>
         <S.Row className="row--border">
           <S.Social width={[1, 2 / 3]}>
-            <a href="//www.linkedin.com/company/the-orthopaedic-implant-company" target="__blank" rel="noopener">
+            <a
+              href="//www.linkedin.com/company/the-orthopaedic-implant-company"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="linkedIn" />
             </a>
-            <a href="//www.facebook.com/OrthoImplantCompany" target="__blank" rel="noopener">
+            <a
+              href="//www.facebook.com/OrthoImplantCompany"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="facebook" />
             </a>
-            <a href="//twitter.com/orthoimplantco" target="__blank" rel="noopener">
+            <a
+              href="//twitter.com/orthoimplantco"
+              target="__blank"
+              rel="noopener"
+            >
               <Icon name="twitter" />
             </a>
             <div className="amed-cert">

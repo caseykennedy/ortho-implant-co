@@ -6,7 +6,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useCategory = () => {
   const data = useStaticQuery<CategoryShape>(graphql`
     query CategoryQuery {
-      categories: allSanityProductCategory(sort: { fields: title, order: ASC }) {
+      categories: allSanityProductCategory(
+        sort: { fields: title, order: ASC }
+      ) {
         edges {
           node {
             _id
@@ -30,7 +32,13 @@ const useCategory = () => {
             }
             image {
               asset {
-                gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                gatsbyImageData(
+                  fit: FILLMAX
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, AVIF, WEBP]
+                  sizes: "(max-width: 800px) 50vw, 75vw"
+                )
                 url
               }
             }

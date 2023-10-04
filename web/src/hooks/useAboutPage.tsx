@@ -68,7 +68,13 @@ const useAboutPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }
@@ -81,7 +87,13 @@ const useAboutPage = () => {
                 _rawBody
                 figure {
                   asset {
-                    gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                    gatsbyImageData(
+                      fit: FILLMAX
+                      layout: FULL_WIDTH
+                      placeholder: BLURRED
+                      formats: [AUTO, AVIF, WEBP]
+                      sizes: "(max-width: 800px) 50vw, 75vw"
+                    )
                     url
                   }
                   alt
@@ -93,7 +105,13 @@ const useAboutPage = () => {
             pageTitle {
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }

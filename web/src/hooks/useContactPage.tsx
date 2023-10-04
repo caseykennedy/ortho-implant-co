@@ -73,7 +73,13 @@ const useContactPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }
@@ -81,7 +87,13 @@ const useContactPage = () => {
             pageTitle {
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }

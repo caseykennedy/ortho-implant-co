@@ -8,17 +8,19 @@ import theme from '../../../../config/theme'
 import { Box, Flex } from '@/components/elements'
 
 export const Filter = styled.div`
+  border-top: ${theme.border};
   width: 100%;
   position: relative;
   margin-top: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
+    border-top: none;
     margin-top: 0;
   }
 `
 
 export const Navigation = styled(AnchorLink)`
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   z-index: 999;
@@ -30,6 +32,7 @@ export const Navigation = styled(AnchorLink)`
   width: 100%;
 
   @media ${theme.mq.tablet} {
+    display: flex;
     padding: ${theme.space[4]} ${theme.space[5]};
     position: sticky;
     top: 0;
@@ -46,8 +49,8 @@ export const Navigation = styled(AnchorLink)`
       font-size: ${theme.fontSizes[2]};
       text-transform: capitalize;
 
-      padding: ${theme.space[2]} ${theme.space[4]};
-      margin-bottom: -2px;
+      padding: ${theme.space[2]} ${theme.space[4]} ${theme.space[1]};
+
       cursor: pointer;
       white-space: nowrap;
 
@@ -64,7 +67,8 @@ export const Navigation = styled(AnchorLink)`
   }
 `
 
-export const Toggler = styled(Flex)`
+export const Toggler = styled.div`
+  display: flex;
   margin-right: ${theme.space[5]};
   margin-left: auto;
 

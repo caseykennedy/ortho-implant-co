@@ -5,7 +5,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useResourceTypes = () => {
   const data = useStaticQuery<ResourceTypeShape>(graphql`
     query ResourceTypesQuery {
-      resourceTypes: allSanityResourceType {
+      resourceTypes: allSanityResourceType(
+        sort: { order: ASC, fields: title }
+      ) {
         edges {
           node {
             title

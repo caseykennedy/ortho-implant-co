@@ -7,7 +7,7 @@ import useProduct from '@/hooks/useProduct'
 import useCategory from '@/hooks/useCategory'
 
 // Elements
-import { Box, Flex, Heading } from '@/components/elements'
+import { Text } from '@/components/elements'
 
 // Components
 import List from '../List'
@@ -28,12 +28,18 @@ const Toggler: React.FC<TogglerProps> = ({ gridView, setGridView }) => {
   }
   return (
     <S.Toggler>
-      <Box className={`toggler__btn ${!gridView ? '' : 'active'}`} onClick={() => toggleView()}>
+      <div
+        className={`toggler__btn ${!gridView ? '' : 'active'}`}
+        onClick={() => toggleView()}
+      >
         <Icon name="gridView" />
-      </Box>
-      <Box className={`toggler__btn ${gridView ? '' : 'active'}`} onClick={() => toggleView()}>
+      </div>
+      <div
+        className={`toggler__btn ${gridView ? '' : 'active'}`}
+        onClick={() => toggleView()}
+      >
         <Icon name="listView" />
-      </Box>
+      </div>
     </S.Toggler>
   )
 }
@@ -69,22 +75,29 @@ const Filter = () => {
       <S.Navigation href="#product-grid">
         {/* <Box width={[0, 0, theme.logoWidth]} /> */}
         <div className="filter__inner">
-          <Box className="filter__btn filter__btn--all" onClick={resetFilteredItems}>
+          <div
+            className="filter__btn filter__btn--all"
+            onClick={resetFilteredItems}
+          >
             All
-          </Box>
+          </div>
           {categories.map(({ node: cat }, idx) => (
-            <Heading className="filter__btn" onClick={() => setFilteredItems(cat.title)} key={idx}>
+            <Text
+              className="filter__btn"
+              onClick={() => setFilteredItems(cat.title)}
+              key={idx}
+            >
               {cat.title}
-            </Heading>
+            </Text>
           ))}
         </div>
 
         {/* <Toggler gridView={gridView} setGridView={setGridView} /> */}
       </S.Navigation>
 
-      <Box className="view">
+      <div className="view">
         <List items={items} />
-      </Box>
+      </div>
 
       {/* {gridView ? (
         <Flex style={{ marginRight: '-2px' }}>

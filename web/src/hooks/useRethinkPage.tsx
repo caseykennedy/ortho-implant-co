@@ -90,7 +90,12 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                  )
                   url
                 }
               }
@@ -103,7 +108,13 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 75vw, 25vw"
+                  )
                   url
                 }
               }
@@ -119,7 +130,13 @@ const useRethinkPage = () => {
               figure {
                 alt
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }
@@ -131,7 +148,13 @@ const useRethinkPage = () => {
               title
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 33vw"
+                  )
                   url
                 }
               }
@@ -139,7 +162,13 @@ const useRethinkPage = () => {
             pageTitle {
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, AVIF, WEBP]
+                    sizes: "(max-width: 800px) 50vw, 75vw"
+                  )
                   url
                 }
               }

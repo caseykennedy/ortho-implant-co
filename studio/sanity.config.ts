@@ -42,11 +42,11 @@ export default defineConfig({
           title: 'Website Deployments',
           sites: [
             {
-              title: 'FreshBakin.com',
-              apiId: '5697a8c2-8ee0-4ec9-98cf-9222e540c319',
-              buildHookId: '611acf1eabf1242664243d88',
-              name: 'freshbakin',
-              url: 'https://freshbakin.com',
+              title: 'OrthoImplantCompany.com',
+              apiId: 'd3cf9eda-d5b1-4eb2-a6dd-6750ca89e81c',
+              buildHookId: '5f91dd8a5121d30fdbc20e6f',
+              name: 'oic',
+              url: 'https://orthoimplantcompany.com',
             },
           ],
         }),
@@ -65,14 +65,67 @@ export default defineConfig({
               .icon(MdSettings),
 
             S.listItem()
-              .title('Home Page')
-              .child(S.editor().id('homePage').schemaType('homePage').documentId('homePage'))
-              .icon(MdViewQuilt),
+              .title('Blog')
+              .schemaType('post')
+              .child(S.documentTypeList('post').title('Post'))
+              .icon(GoFile),
+
+            S.listItem()
+              .title('Blog Categories')
+              .schemaType('postCategory')
+              .child(S.documentTypeList('postCategory').title('Post Category'))
+              .icon(MdStop),
+
+            S.listItem()
+              .title('Resources')
+              .child(
+                S.documentTypeList('resourceType').title('Resource Type').schemaType('resourceType')
+              )
+              .icon(MdFolder),
+
+            S.listItem()
+              .title('Implants')
+              .schemaType('product')
+              .child(S.documentTypeList('product').title('Product'))
+              .icon(MdFolder),
+
+            S.listItem()
+              .title('Implant Categories')
+              .schemaType('productCategory')
+              .child(S.documentTypeList('productCategory').title('Category'))
+              .icon(MdStop),
+
+            S.listItem()
+              .title('Implants Order')
+              .child(
+                S.editor()
+                  .title('Products Order')
+                  .id('productsOrder')
+                  .schemaType('productsOrder')
+                  .documentId('productsOrder')
+              )
+              .icon(MdList),
+
+            S.listItem()
+              .title('Job Posts')
+              .schemaType('jobPost')
+              .child(S.documentTypeList('jobPost').title('Job'))
+              .icon(MdAssignment),
+
+            S.listItem()
+              .title('People')
+              .schemaType('person')
+              .child(S.documentTypeList('person').title('People')),
 
             S.listItem()
               .title('Landing Pages')
               .schemaType('landingPage')
               .child(S.documentTypeList('landingPage').title('Landers'))
+              .icon(MdViewQuilt),
+
+            S.listItem()
+              .title('Home Page')
+              .child(S.editor().id('homePage').schemaType('homePage').documentId('homePage'))
               .icon(MdViewQuilt),
 
             S.listItem()
@@ -119,63 +172,10 @@ export default defineConfig({
               )
               .icon(MdLibraryBooks),
 
-            S.listItem()
-              .title('People')
-              .schemaType('person')
-              .child(S.documentTypeList('person').title('People')),
-
-            S.listItem()
-              .title('Posts')
-              .schemaType('post')
-              .child(S.documentTypeList('post').title('Post'))
-              .icon(GoFile),
-
-            S.listItem()
-              .title('Job Post')
-              .schemaType('jobPost')
-              .child(S.documentTypeList('jobPost').title('Job'))
-              .icon(MdAssignment),
-
-            S.listItem()
-              .title('Post Categories')
-              .schemaType('postCategory')
-              .child(S.documentTypeList('postCategory').title('Post Category'))
-              .icon(MdStop),
-
-            S.listItem()
-              .title('Product Categories')
-              .schemaType('productCategory')
-              .child(S.documentTypeList('productCategory').title('Category'))
-              .icon(MdStop),
-
-            S.listItem()
-              .title('Products')
-              .schemaType('product')
-              .child(S.documentTypeList('product').title('Product'))
-              .icon(MdFolder),
-
-            S.listItem()
-              .title('Products Order')
-              .child(
-                S.editor()
-                  .title('Products Order')
-                  .id('productsOrder')
-                  .schemaType('productsOrder')
-                  .documentId('productsOrder')
-              )
-              .icon(MdList),
-
-            S.listItem()
-              .title('Resource Types')
-              .child(
-                S.documentTypeList('resourceType').title('Resource Type').schemaType('resourceType')
-              )
-              .icon(MdFolder),
-
-            S.listItem()
-              .title('Resources')
-              .child(S.documentTypeList('resource').title('Resources').schemaType('resource'))
-              .icon(MdFolder),
+            // S.listItem()
+            //   .title('Resources')
+            //   .child(S.documentTypeList('resource').title('Resources').schemaType('resource'))
+            //   .icon(MdFolder),
           ]),
     }),
     visionTool(),

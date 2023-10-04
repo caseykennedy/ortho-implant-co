@@ -9,7 +9,7 @@ export const PageTitle = styled.div<{ image?: object }>`
   position: relative;
   width: 100%;
   /* height: calc(20vh - ${theme.headerHeight}); */
-  min-height: calc(${theme.space[3]} * 10);
+  min-height: calc(${theme.space[3]} * 12);
   background: ${theme.colors.secondary};
 
   @media ${theme.mq.tablet} {
@@ -76,7 +76,7 @@ export const Figure = styled.div`
   position: relative;
   width: 100%;
   background: ${theme.colors.secondary};
-  top: -${theme.space[2]};
+  /* top: -${theme.space[2]}; */
 
   @media ${theme.mq.tablet} {
     margin-top: 0;

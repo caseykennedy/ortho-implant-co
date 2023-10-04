@@ -15,7 +15,7 @@ export const Post = styled.div`
   .post__img {
     background: ${theme.colors.quinary};
     border-bottom: ${theme.border};
-    padding: ${theme.space[5]};
+    /* padding: ${theme.space[5]}; */
     width: 100%;
 
     .gatsby-image-wrapper {
