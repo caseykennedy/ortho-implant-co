@@ -8,7 +8,7 @@ import { Parallax } from 'react-scroll-parallax'
 import useHomePage from '@/hooks/useHomePage'
 
 import * as S from './styles.scss'
-import { AnimatedBox, Heading } from '@/components/elements'
+import { AnimatedBox, Heading, Box } from '@/components/elements'
 import theme from '../../../../config/theme'
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
     config: config.molasses,
     delay: 260,
     from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to },
+    to: { opacity: 1, transform: theme.transform.matrix.to }
   })
   return (
     <>
@@ -27,12 +27,16 @@ const Hero = () => {
           <Heading as="h5">{data.hero.title}</Heading>
         </S.Sideboard>
         <S.Billboard>
-          <AnimatedBox style={fadeAnimation}>
-            {/* <Heading as="h5" color="tertiary">
-              {query.title}
-            </Heading> */}
+          {/* <AnimatedBox style={fadeAnimation}>
             <Heading as="h1" mb={0} dangerouslySetInnerHTML={{ __html: data.hero.message }} />
-          </AnimatedBox>
+          </AnimatedBox> */}
+          <Box>
+            <Heading
+              as="h1"
+              mb={0}
+              dangerouslySetInnerHTML={{ __html: data.hero.message }}
+            />
+          </Box>
         </S.Billboard>
       </S.Hero>
       <Parallax y={[-12, 17]}>
@@ -42,6 +46,7 @@ const Hero = () => {
             objectFit="cover"
             objectPosition="50% 50%"
             alt={data.hero.message}
+            loading="eager"
           />
         </S.Figure>
       </Parallax>

@@ -27,11 +27,11 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`],
+          formats: [`webp`, `auto`],
           backgroundColor: 'transparent',
           placeholder: 'dominantColor',
           quality: 50,
-          breakpoints: [750, 1080, 1366, 1920]
+          breakpoints: [750, 1080, 1366]
         }
       }
     },
