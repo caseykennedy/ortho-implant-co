@@ -52,12 +52,6 @@ export default defineType({
       type: 'blockContent',
     },
     {
-      name: 'resources',
-      title: 'Resources OLD',
-      type: 'array',
-      of: [{type: 'productResources'}],
-    },
-    {
       name: 'resourceDocs',
       title: 'Resources',
       type: 'array',

@@ -25,7 +25,7 @@ const usePost = () => {
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1.75
-                  sizes: "(max-width: 800px) 50vw, 75vw"
+                  sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url
               }

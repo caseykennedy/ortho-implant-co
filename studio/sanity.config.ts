@@ -84,19 +84,13 @@ export default defineConfig({
               .icon(MdFolder),
 
             S.listItem()
-              .title('Implants')
+              .title('Products')
               .schemaType('product')
               .child(S.documentTypeList('product').title('Product'))
               .icon(MdFolder),
 
             S.listItem()
-              .title('Implant Categories')
-              .schemaType('productCategory')
-              .child(S.documentTypeList('productCategory').title('Category'))
-              .icon(MdStop),
-
-            S.listItem()
-              .title('Implants Order')
+              .title('Products Order')
               .child(
                 S.editor()
                   .title('Products Order')
@@ -105,6 +99,12 @@ export default defineConfig({
                   .documentId('productsOrder')
               )
               .icon(MdList),
+
+            S.listItem()
+              .title('Product Categories')
+              .schemaType('productCategory')
+              .child(S.documentTypeList('productCategory').title('Category'))
+              .icon(MdStop),
 
             S.listItem()
               .title('Job Posts')

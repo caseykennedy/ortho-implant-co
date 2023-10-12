@@ -25,6 +25,7 @@ const useCategory = () => {
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
+                  sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url
               }
@@ -37,7 +38,7 @@ const useCategory = () => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  sizes: "(max-width: 800px) 50vw, 75vw"
+                  sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url
               }

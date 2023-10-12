@@ -86,7 +86,7 @@ const useHomePage = () => {
                     layout: FULL_WIDTH
                     placeholder: BLURRED
                     formats: [AUTO, AVIF, WEBP]
-                    sizes: "(max-width: 800px) 50vw, 75vw"
+                    sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
                 }
@@ -100,7 +100,7 @@ const useHomePage = () => {
                     layout: FULL_WIDTH
                     placeholder: BLURRED
                     formats: [AUTO, AVIF, WEBP]
-                    sizes: "(max-width: 800px) 60vw, 85vw"
+                    sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
                 }
@@ -114,17 +114,6 @@ const useHomePage = () => {
               linkTo
               linkTitle
               tabPanels {
-                image {
-                  asset {
-                    gatsbyImageData(
-                      fit: FILLMAX
-                      layout: FULL_WIDTH
-                      placeholder: BLURRED
-                      formats: [AUTO, AVIF, WEBP]
-                    )
-                    url
-                  }
-                }
                 _rawMessage
                 linkTitle
                 linkTo
@@ -144,7 +133,7 @@ const useHomePage = () => {
                   layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, AVIF, WEBP]
-                  sizes: "(max-width: 800px) 50vw, 75vw"
+                  sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url
               }
