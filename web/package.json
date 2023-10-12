@@ -15,6 +15,7 @@
     "lint": "tslint -t stylish -p tsconfig.json",
     "lint:fix": "tslint -p tsconfig.json -t stylish --fix",
     "format": "prettier --write content/**/*.yaml",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
@@ -79,10 +80,6 @@
     "url": "https://github.com/caseykennedy/oic/issues"
   },
   "lint-staged": {
-    "*.yaml": [
-      "prettier --write",
-      "git add"
-    ],
     "*.{ts,tsx}": [
       "tslint --fix",
       "git add"
