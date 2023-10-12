@@ -19,7 +19,7 @@ const useProduct = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
+                    formats: [WEBP]
                     sizes: "(max-width: 800px) 33vw, 25vw"
                   )
                   url
@@ -31,7 +31,7 @@ const useProduct = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
+                    formats: [WEBP]
                     sizes: "(max-width: 800px) 33vw, 25vw"
                   )
                   url

@@ -29,7 +29,7 @@ const Mantra = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
+                  formats: [WEBP]
                   aspectRatio: 1
                 )
                 url
@@ -74,7 +74,9 @@ const Mantra = () => {
               </Heading>
             </Box>
             <Box>
-              {query._rawMessage && <BlockContent blocks={query._rawMessage || []} />}
+              {query._rawMessage && (
+                <BlockContent blocks={query._rawMessage || []} />
+              )}
               <Box>
                 <Button to={`/${query.linkTo}`}>{query.linkTitle}</Button>
               </Box>

@@ -85,7 +85,7 @@ const useHomePage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
+                    formats: [WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
@@ -99,7 +99,7 @@ const useHomePage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [AUTO, AVIF, WEBP]
+                    formats: [WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
@@ -132,7 +132,7 @@ const useHomePage = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
+                  formats: [WEBP]
                   sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url

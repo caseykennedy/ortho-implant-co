@@ -23,7 +23,7 @@ const useCategory = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
+                  formats: [WEBP]
                   aspectRatio: 1
                   sizes: "(max-width: 800px) 60vw, 33vw"
                 )
@@ -37,7 +37,7 @@ const useCategory = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
+                  formats: [WEBP]
                   sizes: "(max-width: 800px) 60vw, 33vw"
                 )
                 url

@@ -51,7 +51,12 @@ const useTerms = () => {
               message
               image {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [WEBP]
+                  )
                   url
                 }
               }
@@ -59,7 +64,12 @@ const useTerms = () => {
             billboard {
               figure {
                 asset {
-                  gatsbyImageData(fit: FILLMAX, layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, AVIF, WEBP])
+                  gatsbyImageData(
+                    fit: FILLMAX
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [WEBP]
+                  )
                   url
                 }
               }

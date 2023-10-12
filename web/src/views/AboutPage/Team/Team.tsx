@@ -56,7 +56,9 @@ const People: React.FC<Person> = ({ person, toggleModal }) => {
   )
 }
 
-const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({ mainRef }) => {
+const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
+  mainRef
+}) => {
   const data: PersonShape = useStaticQuery(graphql`
     query PeopleQuery {
       people: allSanityPerson(sort: { fields: order, order: ASC }) {
@@ -78,7 +80,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({ m
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [AUTO, AVIF, WEBP]
+                  formats: [WEBP]
                   aspectRatio: 0.75
                 )
                 url
@@ -92,7 +94,9 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({ m
   const persons = data.people.edges
   // const boardMembers = persons.filter(person => person.node.boardMember)
   const nonBoard = persons.filter(person => !person.node.boardMember)
-  const humanStaff = nonBoard.filter(person => person.node.name !== 'Outside Press')
+  const humanStaff = nonBoard.filter(
+    person => person.node.name !== 'Outside Press'
+  )
 
   const [bio, setBio] = useState(humanStaff[0].node)
 
@@ -105,11 +109,11 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({ m
   // Only show item when in view
   const [interRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-222px 0px',
+    rootMargin: '-222px 0px'
   })
   const interSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)',
+    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
   })
 
   return (
@@ -152,7 +156,8 @@ const Team = () => {
           Team
         </Heading>
         <Heading as="h3" fontSize={3} fontWeight={400}>
-          We may have different departments, but we work together to break conventional organizational boundaries.
+          We may have different departments, but we work together to break
+          conventional organizational boundaries.
         </Heading>
       </Box>
       <S.CardHolder>
