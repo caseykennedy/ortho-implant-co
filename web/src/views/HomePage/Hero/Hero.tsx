@@ -27,16 +27,20 @@ const Hero = () => {
           <Heading as="h5">{data.hero.title}</Heading>
         </S.Sideboard>
         <S.Billboard>
-          {/* <AnimatedBox style={fadeAnimation}>
-            <Heading as="h1" mb={0} dangerouslySetInnerHTML={{ __html: data.hero.message }} />
-          </AnimatedBox> */}
-          <Box>
+          <AnimatedBox style={fadeAnimation}>
             <Heading
               as="h1"
               mb={0}
               dangerouslySetInnerHTML={{ __html: data.hero.message }}
             />
-          </Box>
+          </AnimatedBox>
+          {/* <Box>
+            <Heading
+              as="h1"
+              mb={0}
+              dangerouslySetInnerHTML={{ __html: data.hero.message }}
+            />
+          </Box> */}
         </S.Billboard>
       </S.Hero>
       <Parallax y={[-12, 17]}>
