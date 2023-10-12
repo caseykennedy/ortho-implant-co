@@ -55,7 +55,7 @@ const useTerms = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }
@@ -68,7 +68,7 @@ const useTerms = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }

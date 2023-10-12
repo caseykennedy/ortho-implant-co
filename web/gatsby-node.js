@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [WEBP]
+                  formats: [AUTO, AVIF, WEBP]
                 )
                 url
               }
@@ -139,7 +139,7 @@ exports.createPages = ({ graphql, actions }) => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [WEBP]
+                  formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1.75
                 )
                 url
@@ -157,7 +157,7 @@ exports.createPages = ({ graphql, actions }) => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }
@@ -222,7 +222,7 @@ exports.createPages = ({ graphql, actions }) => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }
@@ -240,7 +240,7 @@ exports.createPages = ({ graphql, actions }) => {
                       fit: FILLMAX
                       layout: FULL_WIDTH
                       placeholder: BLURRED
-                      formats: [WEBP]
+                      formats: [AUTO, AVIF, WEBP]
                     )
                     url
                   }
@@ -257,7 +257,7 @@ exports.createPages = ({ graphql, actions }) => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }

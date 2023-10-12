@@ -49,7 +49,7 @@ const useSiteSettings = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [WEBP]
+                  formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1
                 )
                 url

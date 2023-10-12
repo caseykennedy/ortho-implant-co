@@ -55,7 +55,7 @@ const useNewsPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
@@ -69,7 +69,7 @@ const useNewsPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url

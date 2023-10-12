@@ -23,7 +23,7 @@ const usePost = () => {
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [WEBP]
+                  formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 1.75
                   sizes: "(max-width: 800px) 60vw, 33vw"
                 )
@@ -42,7 +42,7 @@ const usePost = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 20vw, 15vw"
                   )
                   url

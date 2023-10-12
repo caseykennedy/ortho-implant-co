@@ -94,7 +94,7 @@ const useRethinkPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                   )
                   url
                 }
@@ -112,7 +112,7 @@ const useRethinkPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 75vw, 25vw"
                   )
                   url
@@ -134,7 +134,7 @@ const useRethinkPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
@@ -152,7 +152,7 @@ const useRethinkPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url
@@ -166,7 +166,7 @@ const useRethinkPage = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 60vw, 33vw"
                   )
                   url

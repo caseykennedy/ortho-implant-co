@@ -80,7 +80,7 @@ const TeamMembers: React.FC<{ mainRef: React.RefObject<HTMLDivElement> }> = ({
                   fit: FILLMAX
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  formats: [WEBP]
+                  formats: [AUTO, AVIF, WEBP]
                   aspectRatio: 0.75
                 )
                 url

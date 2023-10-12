@@ -56,7 +56,7 @@ const useLegal = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 50vw, 75vw"
                   )
                   url
@@ -71,7 +71,7 @@ const useLegal = () => {
                     fit: FILLMAX
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [WEBP]
+                    formats: [AUTO, AVIF, WEBP]
                     sizes: "(max-width: 800px) 50vw, 75vw"
                   )
                   url
