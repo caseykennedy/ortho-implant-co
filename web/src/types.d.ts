@@ -128,6 +128,9 @@ type ProductNode = {
   }[]
   categories: {
     title: string
+    slug: {
+      current: string
+    }
   }[]
   resources: {
     title: string

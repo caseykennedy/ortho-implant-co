@@ -21,16 +21,20 @@ import theme from '../../../../config/theme'
 const Item: React.FC<{ item: ProductNode; transition: any }> = ({ item }) => {
   const slug = item.slug.current
   const categorySlug = () => {
-    const toLowerCase = item.categories[0].title.toLowerCase()
+    const toLowerCase = item.categories[0].slug.current.toLowerCase()
     const dashCat = toLowerCase.replace(/\s/g, '-')
     return dashCat
   }
+  console.log('categorySlug', categorySlug())
   return (
     <Link to={`/implants/${categorySlug()}/#${slug}`}>
       <S.Item>
         <Box className="thumb">
           {!item.mainImage ? (
-            <ImgMatch src="DRP-3-Hole-Narrow-Left 1.png" altText="placeholder" />
+            <ImgMatch
+              src="DRP-3-Hole-Narrow-Left 1.png"
+              altText="placeholder"
+            />
           ) : (
             <GatsbyImage
               image={item.mainImage.asset.gatsbyImageData}
@@ -62,16 +66,16 @@ const List: React.FC<{ items: ProductNode[] }> = ({ items }) => {
   // Card enter/exit trail animation
   const itemTransitions = useTransition(items ? items : [], item => item.name, {
     from: {
-      opacity: 0,
+      opacity: 0
     },
     enter: {
-      opacity: 1,
+      opacity: 1
     },
     leave: {
-      opacity: 1,
+      opacity: 1
     },
     trail: 0,
-    unique: false,
+    unique: false
   })
 
   return (

@@ -49,6 +49,9 @@ const useProduct = () => {
               }
               categories {
                 title
+                slug {
+                  current
+                }
               }
               resources {
                 title
