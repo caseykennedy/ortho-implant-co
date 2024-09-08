@@ -5,16 +5,11 @@ import theme from '../../../config/theme'
 
 export const ResourcesPage = styled.div`
   .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: auto;
+    display: flex;
+    flex-direction: column;
     gap: ${theme.space[7]};
 
     width: 100%;
-
-    @media ${theme.mq.tablet} {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 `
 
