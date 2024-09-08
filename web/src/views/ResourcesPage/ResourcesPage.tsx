@@ -65,7 +65,7 @@ const ResourcesPage = () => {
 
       <Section bg="quinary">
         <div className="resource-grid">
-          <ResourceList
+          {/* <ResourceList
             docs={resourceTypes[0].node.resourceDocs}
             title={resourceTypes[0].node.title}
           />
@@ -80,15 +80,15 @@ const ResourcesPage = () => {
           <ResourceList
             docs={resourceTypes[3].node.resourceDocs}
             title={resourceTypes[3].node.title}
-          />
+          /> */}
 
-          {/* {resourceTypes.map(({ node: item }, idx) => (
+          {resourceTypes.map(({ node: item }, idx) => (
             <ResourceList
               docs={item.resourceDocs}
               title={item.title}
               key={idx}
             />
-          ))} */}
+          ))}
         </div>
       </Section>
 
